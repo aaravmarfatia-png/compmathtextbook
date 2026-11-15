@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 141</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 141: Unit 141: Combinatorics: counting, invariants and extremal graphs</h1><p class=ref>Book: Djukić et al., The IMO Compendium; Aigner &amp; Ziegler, Proofs from THE BOOK; Gelca &amp; Andreescu, Putnam and Beyond; Andreescu &amp; Enescu, Mathematical Olympiad Treasures (25 problems)<br>Djukić et al., The IMO Compendium, 2.5 (counting, graph theory); Aigner &amp; Ziegler, ch. 25 (pigeon-hole and double counting) and ch. 36 (Turán&#x27;s graph theorem); Gelca &amp; Andreescu 6.1–6.2; Andreescu &amp; Enescu 3.3 (Count Twice!).</p>
+<h2>Reading</h2>
+<h3>1. Counting with structure</h3><p><b>Derangements.</b> D₄ = 9, D₅ = 44. <b>Catalan.</b> Cₙ = C(2n, n)/(n + 1): C₃ = 5 paths from (0,0) to (3,3) staying on or below y = x. <b>Pigeonhole.</b> A set with no two elements differing by 1 or 2 takes at most one number from each block of three consecutive integers, so inside {1,…,9} it has at most 3. <b>Mantel.</b> A triangle-free graph on n vertices has at most ⌊n²/4⌋ edges, achieved by a complete bipartite graph.</p><details class="try"><summary>Try it<p>D₃?</p><p><b>Answer.</b> 2.</p></details><details class="try"><summary>Try it<p>Largest triangle-free graph on 4 vertices?</p><p><b>Answer.</b> 4 edges (the square).</p></details>
+<h3>2. Invariants and parity</h3><p>Lockers toggled by every divisor: locker k ends open iff k has an odd number of divisors, i.e. is a perfect square, so 10 of 100 remain open. Σ C(n,k)² = C(2n, n): for n = 3, 1 + 9 + 9 + 1 = 20 = C(6,3) ✓. Bell numbers count set partitions: B₃ = 5, B₄ = 15.</p><details class="try"><summary>Try it<p>How many lockers out of 36 end open?</p><p><b>Answer.</b> 6.</p></details><details class="try"><summary>Try it<p>Σ C(4,k)²?</p><p><b>Answer.</b> 70.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> How many permutations of 1..5 have no fixed point? <b>Solution.</b> 5!(1 − 1 + 1/2 − 1/6 + 1/24 − 1/120) = 120 − 120 + 60 − 20 + 5 − 1 = 44.</p><p><b>Check.</b> D₅ = 4(D₄ + D₃) = 4(9 + 2) = 44 ✓.</p>
+<h3>4. In the books</h3><p><b>IMO Compendium 2.5.</b> 2.5.1 counting of objects and 2.5.2 graph theory give the standard tools. <b>Aigner &amp; Ziegler.</b> Ch. 36 proves Turán's theorem, which contains Mantel's bound of ⌊n²/4⌋ edges for a triangle-free graph (the case I use). Ch. 25 covers pigeon-hole and double counting, ch. 30 Cayley's formula.</p><p><b>Putnam and Beyond.</b> 6.1 combinatorial arguments (permutations 6.1.2, Euler's formula 6.1.4, Ramsey theory 6.1.5) and 6.2 binomial coefficients and counting (combinatorial identities 6.2.1, generating functions 6.2.2, inclusion–exclusion 6.2.4, which gives derangements). <b>Olympiad Treasures 3.3</b> is &ldquo;Count Twice!&rdquo;. <b>Khurmi</b> Example 3.1.1 is the locker (jail doors) problem.</p><p><b>Honest note.</b> The unit is an introduction. Pigeonhole and double counting are covered only briefly.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> How many permutations of 1, …, 4 have no fixed point?</p><details><summary>Hint</summary>Use inclusion–exclusion or the recurrence D_n = (n − 1)(D_(n−1) + D_(n−2)).</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Inclusion–exclusion</summary><p>D_4 = Σ(−1)^k n!/k! = 9.</p></details>
+<details><summary>Method: Recurrence</summary><p>D_n = (n − 1)(D_(n−1) + D_(n−2)) with D₂ = 1, D₃ = 2 gives D_4 = 9.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> How many permutations of 1, …, 5 have no fixed point?</p><details><summary>Hint</summary>Use inclusion–exclusion or the recurrence D_n = (n − 1)(D_(n−1) + D_(n−2)).</details><details><summary>Answer</summary>44</details>
+<details><summary>Method: Inclusion–exclusion</summary><p>D_5 = Σ(−1)^k n!/k! = 44.</p></details>
+<details><summary>Method: Recurrence</summary><p>D_n = (n − 1)(D_(n−1) + D_(n−2)) with D₂ = 1, D₃ = 2 gives D_5 = 44.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> How many permutations of 1, …, 6 have no fixed point?</p><details><summary>Hint</summary>Use inclusion–exclusion or the recurrence D_n = (n − 1)(D_(n−1) + D_(n−2)).</details><details><summary>Answer</summary>265</details>
+<details><summary>Method: Inclusion–exclusion</summary><p>D_6 = Σ(−1)^k n!/k! = 265.</p></details>
+<details><summary>Method: Recurrence</summary><p>D_n = (n − 1)(D_(n−1) + D_(n−2)) with D₂ = 1, D₃ = 2 gives D_6 = 265.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> How many permutations of 1, …, 7 have no fixed point?</p><details><summary>Hint</summary>Use inclusion–exclusion or the recurrence D_n = (n − 1)(D_(n−1) + D_(n−2)).</details><details><summary>Answer</summary>1854</details>
+<details><summary>Method: Inclusion–exclusion</summary><p>D_7 = Σ(−1)^k n!/k! = 1854.</p></details>
+<details><summary>Method: Recurrence</summary><p>D_n = (n − 1)(D_(n−1) + D_(n−2)) with D₂ = 1, D₃ = 2 gives D_7 = 1854.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> How many lattice paths from (0,0) to (4,4) use steps (1,0) and (0,1) and never go above the line y = x?</p><details><summary>Hint</summary>These are Dyck-path counts (Catalan numbers).</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Formula</summary><p>C(8,4)/(4 + 1) = 14.</p></details>
+<details><summary>Method: Recursion</summary><p>Split by the first return to the diagonal: Cₙ = Σ C_i C_(n−1−i) = 14.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> How many lattice paths from (0,0) to (5,5) use steps (1,0) and (0,1) and never go above the line y = x?</p><details><summary>Hint</summary>These are Dyck-path counts (Catalan numbers).</details><details><summary>Answer</summary>42</details>
+<details><summary>Method: Formula</summary><p>C(10,5)/(5 + 1) = 42.</p></details>
+<details><summary>Method: Recursion</summary><p>Split by the first return to the diagonal: Cₙ = Σ C_i C_(n−1−i) = 42.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> How many lattice paths from (0,0) to (6,6) use steps (1,0) and (0,1) and never go above the line y = x?</p><details><summary>Hint</summary>These are Dyck-path counts (Catalan numbers).</details><details><summary>Answer</summary>132</details>
+<details><summary>Method: Formula</summary><p>C(12,6)/(6 + 1) = 132.</p></details>
+<details><summary>Method: Recursion</summary><p>Split by the first return to the diagonal: Cₙ = Σ C_i C_(n−1−i) = 132.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> In how many ways can 5 different books be split into non-empty unlabelled piles?</p><details><summary>Hint</summary>These are Bell numbers: Bₙ = Σ C(n − 1, k) B_k.</details><details><summary>Answer</summary>52</details>
+<details><summary>Method: Bell recurrence</summary><p>B_(n+1) = Σ C(n, k)B_k gives B_5 = 52.</p></details>
+<details><summary>Method: Stirling numbers</summary><p>Sum the numbers of ways to make k piles for k = 1..5: 52.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> In how many ways can 6 different books be split into non-empty unlabelled piles?</p><details><summary>Hint</summary>These are Bell numbers: Bₙ = Σ C(n − 1, k) B_k.</details><details><summary>Answer</summary>203</details>
+<details><summary>Method: Bell recurrence</summary><p>B_(n+1) = Σ C(n, k)B_k gives B_6 = 203.</p></details>
+<details><summary>Method: Stirling numbers</summary><p>Sum the numbers of ways to make k piles for k = 1..6: 203.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> In how many ways can 7 different books be split into non-empty unlabelled piles?</p><details><summary>Hint</summary>These are Bell numbers: Bₙ = Σ C(n − 1, k) B_k.</details><details><summary>Answer</summary>877</details>
+<details><summary>Method: Bell recurrence</summary><p>B_(n+1) = Σ C(n, k)B_k gives B_7 = 877.</p></details>
+<details><summary>Method: Stirling numbers</summary><p>Sum the numbers of ways to make k piles for k = 1..7: 877.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> What is the largest subset of {1, …, 15} in which no two elements differ by 1 or 2?</p><details><summary>Hint</summary>Look at blocks of three consecutive numbers.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Blocks</summary><p>Each block of 3 consecutive numbers holds at most one element; 15 numbers form ⌈15/3⌉ = 5 blocks, and 1, 4, 7, … achieves it.</p></details>
+<details><summary>Method: Construction</summary><p>Take 1, 4, 7, …: that gives 5 numbers, and no larger set can exist by the block bound.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> What is the largest subset of {1, …, 16} in which no two elements differ by 1 or 2?</p><details><summary>Hint</summary>Look at blocks of three consecutive numbers.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Blocks</summary><p>Each block of 3 consecutive numbers holds at most one element; 16 numbers form ⌈16/3⌉ = 6 blocks, and 1, 4, 7, … achieves it.</p></details>
+<details><summary>Method: Construction</summary><p>Take 1, 4, 7, …: that gives 6 numbers, and no larger set can exist by the block bound.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> What is the largest subset of {1, …, 18} in which no two elements differ by 1 or 2?</p><details><summary>Hint</summary>Look at blocks of three consecutive numbers.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Blocks</summary><p>Each block of 3 consecutive numbers holds at most one element; 18 numbers form ⌈18/3⌉ = 6 blocks, and 1, 4, 7, … achieves it.</p></details>
+<details><summary>Method: Construction</summary><p>Take 1, 4, 7, …: that gives 6 numbers, and no larger set can exist by the block bound.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> Lockers 1, …, 100 start closed. For k = 1, 2, …, 100, person k toggles every kth locker. How many lockers end open?</p><details><summary>Hint</summary>A locker is toggled once per divisor of its number.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Divisors</summary><p>A locker is open iff its number has an odd number of divisors, i.e. is a perfect square: 10 of them.</p></details>
+<details><summary>Method: Simulation</summary><p>Carry out the toggles; exactly 10 lockers are open.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> Lockers 1, …, 200 start closed. For k = 1, 2, …, 200, person k toggles every kth locker. How many lockers end open?</p><details><summary>Hint</summary>A locker is toggled once per divisor of its number.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Divisors</summary><p>A locker is open iff its number has an odd number of divisors, i.e. is a perfect square: 14 of them.</p></details>
+<details><summary>Method: Simulation</summary><p>Carry out the toggles; exactly 14 lockers are open.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> Lockers 1, …, 500 start closed. For k = 1, 2, …, 500, person k toggles every kth locker. How many lockers end open?</p><details><summary>Hint</summary>A locker is toggled once per divisor of its number.</details><details><summary>Answer</summary>22</details>
+<details><summary>Method: Divisors</summary><p>A locker is open iff its number has an odd number of divisors, i.e. is a perfect square: 22 of them.</p></details>
+<details><summary>Method: Simulation</summary><p>Carry out the toggles; exactly 22 lockers are open.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> What is the maximum number of edges in a graph on 5 vertices with no triangle?</p><details><summary>Hint</summary>Mantel's theorem: at most ⌊n²/4⌋; a complete bipartite graph achieves it.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Bipartite example</summary><p>K_(2,3) has 2·3 = 6 edges and no triangle.</p></details>
+<details><summary>Method: Degree bound</summary><p>For an edge uv the neighbours of u and v are disjoint so deg u + deg v ≤ 5; summing over edges gives the bound 6.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> What is the maximum number of edges in a graph on 6 vertices with no triangle?</p><details><summary>Hint</summary>Mantel's theorem: at most ⌊n²/4⌋; a complete bipartite graph achieves it.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Bipartite example</summary><p>K_(3,3) has 3·3 = 9 edges and no triangle.</p></details>
+<details><summary>Method: Degree bound</summary><p>For an edge uv the neighbours of u and v are disjoint so deg u + deg v ≤ 6; summing over edges gives the bound 9.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> What is the maximum number of edges in a graph on 9 vertices with no triangle?</p><details><summary>Hint</summary>Mantel's theorem: at most ⌊n²/4⌋; a complete bipartite graph achieves it.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Bipartite example</summary><p>K_(4,5) has 4·5 = 20 edges and no triangle.</p></details>
+<details><summary>Method: Degree bound</summary><p>For an edge uv the neighbours of u and v are disjoint so deg u + deg v ≤ 9; summing over edges gives the bound 20.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> What is the maximum number of edges in a graph on 10 vertices with no triangle?</p><details><summary>Hint</summary>Mantel's theorem: at most ⌊n²/4⌋; a complete bipartite graph achieves it.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Bipartite example</summary><p>K_(5,5) has 5·5 = 25 edges and no triangle.</p></details>
+<details><summary>Method: Degree bound</summary><p>For an edge uv the neighbours of u and v are disjoint so deg u + deg v ≤ 10; summing over edges gives the bound 25.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> Compute C(5,0)² + C(5,1)² + … + C(5,5)².</p><details><summary>Hint</summary>Count committees: choose k from one group of 5 and 5 − k from another.</details><details><summary>Answer</summary>252</details>
+<details><summary>Method: Vandermonde</summary><p>The sum equals C(10, 5) = 252.</p></details>
+<details><summary>Method: Direct</summary><p>Square and add the 6 binomial coefficients: 252.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> Compute C(6,0)² + C(6,1)² + … + C(6,6)².</p><details><summary>Hint</summary>Count committees: choose k from one group of 6 and 6 − k from another.</details><details><summary>Answer</summary>924</details>
+<details><summary>Method: Vandermonde</summary><p>The sum equals C(12, 6) = 924.</p></details>
+<details><summary>Method: Direct</summary><p>Square and add the 7 binomial coefficients: 924.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> Compute C(7,0)² + C(7,1)² + … + C(7,7)².</p><details><summary>Hint</summary>Count committees: choose k from one group of 7 and 7 − k from another.</details><details><summary>Answer</summary>3432</details>
+<details><summary>Method: Vandermonde</summary><p>The sum equals C(14, 7) = 3432.</p></details>
+<details><summary>Method: Direct</summary><p>Square and add the 8 binomial coefficients: 3432.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> How many lattice paths from (0,0) to (4,4) with steps right and up pass through (2,2)?</p><details><summary>Hint</summary>Split the path at the point.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Multiply</summary><p>C(4,2)·C(4,2) = 36.</p></details>
+<details><summary>Method: Count by sections</summary><p>Paths to (2,2): 6; paths from there to (4,4): 6; product 36.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> How many lattice paths from (0,0) to (5,5) with steps right and up pass through (2,3)?</p><details><summary>Hint</summary>Split the path at the point.</details><details><summary>Answer</summary>100</details>
+<details><summary>Method: Multiply</summary><p>C(5,2)·C(5,3) = 100.</p></details>
+<details><summary>Method: Count by sections</summary><p>Paths to (2,3): 10; paths from there to (5,5): 10; product 100.</p></details>
+<p class=ref>Source: Technique from IMO Compendium §2.5, Aigner &amp; Ziegler ch. 25, 36 (original problem)</p></div>

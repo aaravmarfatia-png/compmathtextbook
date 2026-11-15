@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 98</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 98: Unit 98: Euler&#x27;s formula, polyhedra and the Platonic solids</h1><p class=ref>Book: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids) (25 problems)<br>AoPS Volume 2, chapter 25 (Graph Theory), with Euler&#x27;s formula applied to polyhedra.</p>
+<h2>Reading</h2>
+<h3>1. Euler's formula</h3><p>For any convex polyhedron (or any connected planar graph), <b>V − E + F = 2</b>, where V, E, F count vertices, edges and faces. Examples: tetrahedron 4 − 6 + 4; cube 8 − 12 + 6; octahedron 6 − 12 + 8; dodecahedron 20 − 30 + 12; icosahedron 12 − 30 + 20; all equal 2. A soccer-ball polyhedron (truncated icosahedron) has 12 pentagons and 20 hexagons: F = 32, E = (12 × 5 + 20 × 6)/2 = 90, V = 2 + 90 − 32 = 60 ✓.</p><p><b>Why it works (sketch).</b> Start with a tree (V − E = 1, one face, giving 2). Adding an edge that closes a cycle adds one edge and one face, so V − E + F is unchanged.</p><p><b>Worked example.</b> A convex polyhedron has 10 faces, all triangles or quadrilaterals, with 4 triangles. Then E = (4 × 3 + 6 × 4)/2 = 18 and V = 2 + 18 − 10 = 10.</p>
+<h3>2. The Platonic solids</h3><p>A polyhedron whose faces are all the same regular polygon, with the same number of faces at each vertex, is a <b>Platonic solid</b>. There are exactly five. Suppose each face is a regular p-gon and q faces meet at each vertex. At a vertex the face angles must add to less than 360°: q(1 − 2/p)·180° < 360°, i.e. (p − 2)(q − 2) < 4. The solutions are (p, q) = (3, 3), (3, 4), (3, 5), (4, 3), (5, 3): tetrahedron, octahedron, icosahedron, cube, dodecahedron.</p><p><b>Counting.</b> With p-gon faces and q faces at each vertex: pF = 2E and qV = 2E, so V − E + F = 2E/q − E + 2E/p = 2 gives E = 2/(2/q + 2/p − 1). For the cube p = 4, q = 3: 2/3 + 1/2 − 1 = 1/6, so E = 12 ✓.</p><p><b>Duality.</b> Joining the centres of the faces of a cube gives an octahedron, and vice versa; the dodecahedron and icosahedron are a dual pair; the tetrahedron is self-dual.</p>
+<h3>3. Angle defect and counting</h3><p><b>Descartes' angle defect.</b> At a vertex, the defect is 360° minus the sum of the face angles there. The sum of the defects over all vertices is always 720° for a convex polyhedron. For the cube each vertex has defect 360 − 3 × 90 = 90°, and 8 × 90 = 720 ✓. For a regular tetrahedron: 4 × (360 − 180) = 720 ✓.</p><p><b>Worked example.</b> A polyhedron has only vertices where 3 faces meet. Then 3V = 2E, and Euler's formula gives F = 2 + E/3. If all faces are pentagons or hexagons then there must be exactly 12 pentagons. (Each vertex has defect from face angles; the sum 720° forces 12 pentagons, as in the soccer ball.)</p><p><b>Colouring faces.</b> The faces of a cube cannot be 2-coloured so that adjacent faces differ, because three mutually adjacent faces meet at every corner; three colours are needed.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Counting each edge twice (or once) incorrectly. Applying V − E + F = 2 to a polyhedron with a hole (a torus gives 0). Forgetting that the outer region counts as a face for planar graphs.</p><p><b>Checks.</b> Verify Euler's formula for the cube before using it.</p><p><b>Practice.</b> Use pF = 2E and qV = 2E systematically.</p>
+<h3>Worked examples with Try-its: Euler's formula</h3><p>For a convex polyhedron V − E + F = 2. The five Platonic solids (V, E, F): tetrahedron (4, 6, 4), cube (8, 12, 6), octahedron (6, 12, 8), dodecahedron (20, 30, 12), icosahedron (12, 30, 20); all satisfy it. A soccer ball (truncated icosahedron) has 12 pentagons and 20 hexagons, F = 32, E = (12 · 5 + 20 · 6)/2 = 90 and V = 60, so 60 − 90 + 32 = 2.</p><details class="try"><summary>Try it<p>A polyhedron has 8 faces and 12 vertices. How many edges?</p><p><b>Answer.</b> 12 − E + 8 = 2, so E = 18.</p></details>
+<h3>Worked examples with Try-its: Why only five</h3><p>At each vertex of a regular polyhedron at least 3 faces meet and the face angles must add up to less than 360°. Triangles (60°) allow 3, 4 or 5 per vertex, squares (90°) allow 3, pentagons (108°) allow 3, and hexagons would give exactly 360° (flat). That gives exactly five solids. The <b>angle defect</b> at a vertex is 360° minus the sum of face angles; the total over all vertices is always 720°: for the cube 8 · 90° = 720°.</p><details class="try"><summary>Try it<p>What is the angle defect at a vertex of a regular tetrahedron? How many vertices are there and what is the total?</p><p><b>Answer.</b> 360° − 3 · 60° = 180°; 4 · 180° = 720°.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> A convex polyhedron has 12 pentagonal faces and some hexagonal faces, with 3 faces at every vertex. If it has 32 faces in total how many hexagons are there and how many vertices? <b>Solution.</b> 20 hexagons. Edges: (12 · 5 + 20 · 6)/2 = 90 and vertices 3V = 2E gives V = 60. Check: 60 − 90 + 32 = 2.</p><p><b>Reflection.</b> Count edge–face incidences to get E.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Truncated tetrahedron.</b> V = 12, E = 18, F = 8 (4 triangles and 4 hexagons): 12 − 18 + 8 = 2. <b>Cuboctahedron.</b> V = 12, E = 24, F = 14: 12 − 24 + 14 = 2. A polyhedron with 10 triangular faces has E = 10 · 3/2 = 15 edges and, by Euler's formula, V = 2 + E − F = 7.</p><details class="try"><summary>Try it<p>A polyhedron has 6 vertices and 12 edges. How many faces?</p><p><b>Answer.</b> 2 − 6 + 12 = 8 faces (an octahedron has this count).</p></details><details class="try"><summary>Try it<p>How many edges does a polyhedron with 5 quadrilateral faces have?</p><p><b>Answer.</b> 5 · 4/2 = 10.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Show that no polyhedron has exactly 7 edges. <b>Solution.</b> Each face has at least 3 edges and each edge borders two faces, so 2E ≥ 3F, and each vertex has degree at least 3, so 2E ≥ 3V. With E = 7: F ≤ 4 and V ≤ 4, but V − E + F = 2 requires V + F = 9, impossible.</p><p><b>Reflection.</b> The inequalities 2E ≥ 3F and 2E ≥ 3V together with V − E + F = 2 limit E to 6 or at least 8.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> A convex polyhedron has 8 vertices and 12 edges. How many faces does it have?</p><details><summary>Hint</summary>V − E + F = 2.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Euler</summary><p>F = 2 − 8 + 12 = 6.</p></details>
+<details><summary>Method: Example</summary><p>The cube has 8 vertices, 12 edges and 6 faces.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem p2.</b> An icosahedron has 20 triangular faces. How many edges does it have?</p><details><summary>Hint</summary>3F = 2E.</details><details><summary>Answer</summary>30</details>
+<details><summary>Method: Face sides</summary><p>3 · 20 = 60 = 2E, so E = 30.</p></details>
+<details><summary>Method: Check</summary><p>Each edge borders two faces, so counting face-edges counts every edge twice.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem p3.</b> An icosahedron has 20 faces and 30 edges. How many vertices?</p><details><summary>Hint</summary>V = 2 − F + E.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Euler</summary><p>V = 2 − 20 + 30 = 12.</p></details>
+<details><summary>Method: Degrees</summary><p>Each vertex has degree 5, and 12 · 5 = 60 = 2 · 30.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem p4.</b> A dodecahedron has 12 pentagonal faces. How many vertices does it have?</p><details><summary>Hint</summary>5F = 2E, then Euler.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Edges first</summary><p>E = 5 · 12/2 = 30, so V = 2 − 12 + 30 = 20.</p></details>
+<details><summary>Method: Degrees</summary><p>Each vertex has degree 3 and 20 · 3 = 60 = 2 · 30.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem p5.</b> How many convex regular polyhedra (Platonic solids) are there?</p><details><summary>Hint</summary>Only five face/vertex combinations satisfy Euler's formula.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Classification</summary><p>The tetrahedron, cube, octahedron, dodecahedron and icosahedron: 5.</p></details>
+<details><summary>Method: Reason</summary><p>1/p + 1/q > 1/2 has only the solutions (p, q) = (3,3), (4,3), (3,4), (5,3), (3,5).</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem p6.</b> A graph has degrees 3, 3, 3, 3, 4, 4. How many edges does it have?</p><details><summary>Hint</summary>Handshake.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Handshake</summary><p>12 + 8 = 20 = 2E so E = 10.</p></details>
+<details><summary>Method: Check</summary><p>The degree sum must be even, and 20 is.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem p7.</b> A soccer ball has 12 pentagons and 20 hexagons as faces. How many vertices does it have?</p><details><summary>Hint</summary>Count edges from the face sides, then use Euler.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Euler</summary><p>E = (60 + 120)/2 = 90 and F = 32, so V = 2 + 90 − 32 = 60.</p></details>
+<details><summary>Method: Degrees</summary><p>Each vertex has degree 3, and 60 · 3 = 180 = 2 · 90.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem p8.</b> How many space diagonals does a cube have (segments joining vertices that do not lie on a common face)?</p><details><summary>Hint</summary>Each vertex has one opposite vertex.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Opposites</summary><p>Each vertex pairs with the one opposite it, giving 8/2 = 4.</p></details>
+<details><summary>Method: Count</summary><p>C(8,2) = 28 pairs, minus 12 edges, minus 12 face diagonals, leaves 4.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem p9.</b> How many Hamiltonian cycles does the graph of the cube (vertices are the 8 corners, edges are the 12 cube edges) have, counted as undirected cycles?</p><details><summary>Hint</summary>A search is the safest method.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Search</summary><p>Enumerating the cyclic orders of the corners that use only cube edges and halving for direction gives 6.</p></details>
+<details><summary>Method: Structure</summary><p>The cube graph is bipartite with 4 + 4 vertices, and such cycles alternate between the two sets.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem p10.</b> How many edges does an octahedron have?</p><details><summary>Hint</summary>8 triangular faces.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Count</summary><p>8 · 3/2 = 12.</p></details>
+<details><summary>Method: Euler</summary><p>V = 6 and F = 8 give E = 6 + 8 − 2 = 12.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem p11.</b> An icosahedron has 20 triangular faces and 30 edges. How many vertices does it have?</p><details><summary>Hint</summary>V − E + F = 2.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Euler</summary><p>V = 2 + 30 − 20 = 12.</p></details>
+<details><summary>Method: Degree</summary><p>Each vertex has 5 edges, so V = 2 · 30/5 = 12.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem p12.</b> A convex polyhedron has 8 vertices and 12 edges. How many faces?</p><details><summary>Hint</summary>Euler.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Euler</summary><p>F = 2 − 8 + 12 = 6.</p></details>
+<details><summary>Method: Example</summary><p>A cube is such a polyhedron.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem p13.</b> A convex polyhedron has 6 triangular faces. How many vertices does it have?</p><details><summary>Hint</summary>Edges = 3F/2.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Euler</summary><p>E = 9 and V = 2 − 6 + 9 = 5.</p></details>
+<details><summary>Method: Example</summary><p>A triangular bipyramid has 5 vertices, 9 edges and 6 faces.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem p14.</b> How many space diagonals does a cube have?</p><details><summary>Hint</summary>Join opposite corners.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Pairs</summary><p>C(8, 2) = 28 pairs of vertices, minus 12 edges and 12 face diagonals, leaves 4.</p></details>
+<details><summary>Method: Opposite</summary><p>Each vertex has one opposite vertex, so 8/2 = 4.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem p15.</b> The dual of a cube joins the centres of its faces. How many vertices does the dual have?</p><details><summary>Hint</summary>One per face.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Faces</summary><p>A cube has 6 faces, so its dual (an octahedron) has 6 vertices.</p></details>
+<details><summary>Method: Check</summary><p>The octahedron has 8 faces, matching the cube's 8 vertices.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem p16.</b> A convex polyhedron has 12 pentagonal faces. How many edges does it have?</p><details><summary>Hint</summary>Each edge borders 2 faces.</details><details><summary>Answer</summary>30</details>
+<details><summary>Method: Count</summary><p>12 · 5/2 = 30.</p></details>
+<details><summary>Method: Euler</summary><p>With V = 20, V − E + F = 20 − 30 + 12 = 2.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem p17.</b> A soccer ball has 12 pentagons and 20 hexagons. How many edges does it have?</p><details><summary>Hint</summary>Each edge borders 2 faces.</details><details><summary>Answer</summary>90</details>
+<details><summary>Method: Count</summary><p>(60 + 120)/2 = 90.</p></details>
+<details><summary>Method: Euler</summary><p>Each vertex has 3 edges so V = 60, and 60 − 90 + 32 = 2.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem x18.</b> How many edges does the complete graph K_12 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>66</details>
+<details><summary>Method: Pairs</summary><p>C(12, 2) = 66.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 12 vertices has degree 11, so the edges number 12 · 11/2 = 66.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem x19.</b> Find the sum of the interior angles of a convex 16-gon, in degrees.</p><details><summary>Hint</summary>(n − 2) · 180.</details><details><summary>Answer</summary>2520</details>
+<details><summary>Method: Formula</summary><p>(16 − 2) · 180 = 2520.</p></details>
+<details><summary>Method: Triangles</summary><p>Drawing diagonals from one vertex splits the polygon into 14 triangles of 180° each: 2520.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem x20.</b> How many edges does the complete graph K_15 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>105</details>
+<details><summary>Method: Pairs</summary><p>C(15, 2) = 105.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 15 vertices has degree 14, so the edges number 15 · 14/2 = 105.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem x21.</b> Find the sum of the interior angles of a convex 18-gon, in degrees.</p><details><summary>Hint</summary>(n − 2) · 180.</details><details><summary>Answer</summary>2880</details>
+<details><summary>Method: Formula</summary><p>(18 − 2) · 180 = 2880.</p></details>
+<details><summary>Method: Triangles</summary><p>Drawing diagonals from one vertex splits the polygon into 16 triangles of 180° each: 2880.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem x22.</b> How many edges does the complete graph K_20 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>190</details>
+<details><summary>Method: Pairs</summary><p>C(20, 2) = 190.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 20 vertices has degree 19, so the edges number 20 · 19/2 = 190.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem x23.</b> Find the sum of the interior angles of a convex 20-gon, in degrees.</p><details><summary>Hint</summary>(n − 2) · 180.</details><details><summary>Answer</summary>3240</details>
+<details><summary>Method: Formula</summary><p>(20 − 2) · 180 = 3240.</p></details>
+<details><summary>Method: Triangles</summary><p>Drawing diagonals from one vertex splits the polygon into 18 triangles of 180° each: 3240.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem x24.</b> How many edges does the complete graph K_25 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>300</details>
+<details><summary>Method: Pairs</summary><p>C(25, 2) = 300.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 25 vertices has degree 24, so the edges number 25 · 24/2 = 300.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>
+<div class=p><p><b>Problem x25.</b> Find the sum of the interior angles of a convex 9-gon, in degrees.</p><details><summary>Hint</summary>(n − 2) · 180.</details><details><summary>Answer</summary>1260</details>
+<details><summary>Method: Formula</summary><p>(9 − 2) · 180 = 1260.</p></details>
+<details><summary>Method: Triangles</summary><p>Drawing diagonals from one vertex splits the polygon into 7 triangles of 180° each: 1260.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 25 (Graph Theory: Platonic solids)</p></div>

@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 73</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 73: Unit 73: Sequences, series and recurrences</h1><p class=ref>Book: AoPS Volume 2, sequences and series chapters (25 problems)<br>AoPS Volume 2, chapters on sequences and series: arithmetic and geometric sequences, telescoping sums and linear recurrences.</p>
+<h2>Reading</h2>
+<h3>1. Series and sigma notation</h3><p>The symbol Σ means 'add up': Σₖ₌₁ⁿ aₖ = a₁ + … + aₙ. Useful facts: Σ k = n(n + 1)/2; Σ k² = n(n + 1)(2n + 1)/6; Σ k³ = (n(n + 1)/2)². For n = 10: 55, 385 and 3,025. The sum of a constant c over n terms is nc, and constants and sums can be pulled out: Σ (3k² + 2k) = 3Σk² + 2Σk.</p><p><b>Worked example 1.</b> Compute 1² + 2² + … + 20². 20 × 21 × 41/6 = 17,220/6 = 2,870.</p><p><b>Worked example 2.</b> Compute Σₖ₌₁¹⁰ (2k − 1)² = 4Σk² − 4Σk + 10 = 4 × 385 − 4 × 55 + 10 = 1,540 − 220 + 10 = 1,330. Check directly: 1 + 9 + 25 + 49 + 81 + 121 + 169 + 225 + 289 + 361 = 1,330 ✓.</p><p><b>Why Σk² works.</b> Telescoping: (k + 1)³ − k³ = 3k² + 3k + 1. Adding for k = 1 … n: (n + 1)³ − 1 = 3Σk² + 3Σk + n. Solve for Σk².</p>
+<h3>2. Arithmetic–geometric series and infinite series</h3><p>A sum such as Σ k xᵏ (an arithmetic factor times a geometric one) can be found by the 'multiply and subtract' trick, as for geometric series. For |x| < 1, Σₖ₌₁^∞ k xᵏ = x/(1 − x)². With x = 1/2: 2 ✓ (1/2 + 2/4 + 3/8 + 4/16 + … = 2).</p><p><b>Worked example.</b> Compute 1/3 + 2/9 + 3/27 + … = Σ k/3ᵏ = (1/3)/(1 − 1/3)² = (1/3)/(4/9) = 3/4.</p><p><b>Convergence tests.</b> A series converges if its terms shrink fast enough. The ratio test: if |aₖ₊₁/aₖ| tends to a number below 1, the series converges. Σ 1/k² converges (to π²/6 ≈ 1.6449) but Σ 1/k does not.</p><p><b>Worked example.</b> Σ 1/(k(k + 2)) for k = 1 to ∞ = ½(1 + 1/2) = 3/4 (telescoping, as in Unit 20).</p>
+<h3>3. Recurrence and closed forms</h3><p>To find a closed form for a sum, compute the first terms and see whether the sum is a polynomial in n; then check or prove by induction. The sum of the first n triangular numbers 1, 3, 6, 10 is 1, 4, 10, 20: n(n + 1)(n + 2)/6 (tetrahedral numbers).</p><p><b>Worked example.</b> Σₖ₌₁ⁿ k(k + 1) = n(n + 1)(n + 2)/3 (Unit 20). For n = 4: 2 + 6 + 12 + 20 = 40 = 4 × 5 × 6/3 ✓.</p><p><b>Using sums to solve problems.</b> How many terms of 1 + 2 + 3 + … are needed for the sum to exceed 1,000? n(n + 1)/2 > 1,000: n = 44 gives 990, n = 45 gives 1,035. So 45 terms.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Using the wrong starting index. Applying the infinite geometric formula when |x| ≥ 1. Forgetting that Σ k² ≠ (Σ k)². Using n instead of n − 1 for the number of terms.</p><p><b>Checks.</b> Test the closed form with n = 1, 2, 3.</p><p><b>Practice.</b> Write the first three terms of each sum to be sure of the pattern.</p>
+<h3>Worked examples with Try-its: Arithmetic and geometric sequences</h3><p>An <b>arithmetic</b> sequence adds a constant d: its n-th term is a + (n − 1)d and the sum of n terms is n(first + last)/2, so 1 + 2 + … + 100 = 5050. A <b>geometric</b> sequence multiplies by a ratio r: the sum is a(1 − rⁿ)/(1 − r), and if |r| < 1 the infinite sum is a/(1 − r), so 1 + 1/2 + 1/4 + … = 2. Useful sums: Σk² = n(n + 1)(2n + 1)/6, so the first ten squares total 385.</p><p><b>Telescoping.</b> Since 1/(k(k + 1)) = 1/k − 1/(k + 1), the sum for k = 1 to n is 1 − 1/(n + 1); for n = 10 it is 10/11.</p><details class="try"><summary>Try it</summary><p>Sum of 3 + 7 + 11 + … + 43?</p><p><b>Answer.</b> 11 terms, (3 + 43) · 11/2 = 253.</p></details>
+<h3>Worked examples with Try-its: Recurrences</h3><p>A <b>linear recurrence</b> such as aₙ = 5aₙ₋₁ − 6aₙ₋₂ is solved by trying aₙ = xⁿ, which gives x² = 5x − 6, so x = 2 or 3 and aₙ = A·2ⁿ + B·3ⁿ. With a₀ = 2 and a₁ = 5 we get A = B = 1, so aₙ = 2ⁿ + 3ⁿ (check: a₂ = 25 − 12 = 13 = 4 + 9). Fibonacci numbers satisfy Fₙ = Fₙ₋₁ + Fₙ₋₂ with characteristic roots (1 ± √5)/2.</p><p><b>First-order recurrences.</b> For aₙ₊₁ = 2aₙ + 1 with a₁ = 1, add 1 to both sides: aₙ₊₁ + 1 = 2(aₙ + 1), so aₙ + 1 = 2ⁿ and aₙ = 2ⁿ − 1 (1, 3, 7, 15, 31, 63).</p><details class="try"><summary>Try it</summary><p>Solve aₙ = 3aₙ₋₁ with a₀ = 4, and find a₅.</p><p><b>Answer.</b> aₙ = 4 · 3ⁿ; a₅ = 972.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> The sequence is defined by x₁ = 1, x₂ = 1 and xₙ = xₙ₋₁ + 2xₙ₋₂. Find a closed form and x₁₀.</p><p><b>Solution.</b> Characteristic equation x² = x + 2 has roots 2 and −1, so xₙ = A·2ⁿ + B(−1)ⁿ. From x₁ = 2A − B = 1 and x₂ = 4A + B = 1 we get 6A = 2, A = 1/3, B = −1/3, so xₙ = (2ⁿ − (−1)ⁿ)/3. Then x₁₀ = (1024 − 1)/3 = 341.</p><p><b>Reflection.</b> Always test the formula on the first few terms: the sequence is 1, 1, 3, 5, 11, 21, 43, 85, 171, 341.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Arithmetic.</b> For aₙ = 3n + 2 the first ten terms sum to 10 · (5 + 32)/2 = 185. <b>Geometric.</b> The first five terms of 2, 6, 18, … sum to 2(3⁵ − 1)/2 = 242. <b>Repeated root.</b> For aₙ = 4aₙ₋₁ − 4aₙ₋₂ with a₀ = 1 and a₁ = 4 the characteristic equation has the double root 2, so aₙ = (A + Bn)2ⁿ; the starting values give aₙ = (n + 1)2ⁿ, for example a₂ = 12 = 4 · 4 − 4 · 1.</p><details class="try"><summary>Try it<p>Sum of the infinite series 1/3 + 1/9 + 1/27 + … ?</p><p><b>Answer.</b> (1/3)/(1 − 1/3) = 1/2.</p></details><details class="try"><summary>Try it<p>Find a₁₀ if a₁ = 7 and each term is 4 more than the previous.</p><p><b>Answer.</b> 7 + 9 · 4 = 43.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> The sequence is defined by a₁ = 1 and aₙ₊₁ = aₙ + 2n + 1. Find aₙ. <b>Solution.</b> The differences 3, 5, 7, … are odd numbers, so aₙ = 1 + 3 + 5 + … + (2n − 1) = n². Check: 1, 4, 9, 16.</p><p><b>Reflection.</b> Telescoping the differences gives a closed form directly.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> a₁ = 1 and a_{n+1} = 2a_n + 1. Find a₁₀.</p><details><summary>Hint</summary>Compute a few terms: 1, 3, 7, 15.</details><details><summary>Answer</summary>1023</details>
+<details><summary>Method: Pattern</summary><p>a_n = 2ⁿ − 1, so a₁₀ = 1023.</p></details>
+<details><summary>Method: Compute</summary><p>1, 3, 7, 15, 31, 63, 127, 255, 511, 1023.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem p2.</b> Fibonacci numbers: F₁ = F₂ = 1 and F_{n+2} = F_{n+1} + F_n. Find F₁₂.</p><details><summary>Hint</summary>Add successively.</details><details><summary>Answer</summary>144</details>
+<details><summary>Method: Compute</summary><p>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144.</p></details>
+<details><summary>Method: Identity</summary><p>F₁₂ = F₆·L₆ = 8 · 18 = 144, where L₆ = 18 is the Lucas number.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem p3.</b> Find 3 + 7 + 11 + … with 20 terms.</p><details><summary>Hint</summary>Arithmetic sequence.</details><details><summary>Answer</summary>820</details>
+<details><summary>Method: Formula</summary><p>The 20th term is 3 + 19·4 = 79, so the sum is 20(3 + 79)/2 = 820.</p></details>
+<details><summary>Method: Pairing</summary><p>Pair the first and last terms: 10 pairs each with sum 82.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem p4.</b> Find 1 + 3 + 9 + … + 3⁷.</p><details><summary>Hint</summary>Geometric with ratio 3.</details><details><summary>Answer</summary>3280</details>
+<details><summary>Method: Formula</summary><p>(3⁸ − 1)/(3 − 1) = 6560/2 = 3280.</p></details>
+<details><summary>Method: Doubling trick</summary><p>If S is the sum then 3S − S = 3⁸ − 1, so S = 3280.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem p5.</b> Find 1/(1·2) + 1/(2·3) + … + 1/(99·100), as a fraction.</p><details><summary>Hint</summary>1/(k(k+1)) = 1/k − 1/(k+1).</details><details><summary>Answer</summary>99/100</details>
+<details><summary>Method: Telescoping</summary><p>The sum is (1 − 1/2) + (1/2 − 1/3) + … + (1/99 − 1/100) = 1 − 1/100 = 99/100.</p></details>
+<details><summary>Method: Small cases</summary><p>The sums for n = 1, 2, 3 are 1/2, 2/3, 3/4, so for n = 99 it is 99/100.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem p6.</b> a₀ = 1, a₁ = 2 and a_n = 3a_{n−1} − 2a_{n−2}. Find a₁₀.</p><details><summary>Hint</summary>Try a_n = rⁿ.</details><details><summary>Answer</summary>1024</details>
+<details><summary>Method: Characteristic</summary><p>r² = 3r − 2 gives r = 1 or 2. With a₀ = 1 and a₁ = 2, a_n = 2ⁿ and a₁₀ = 1024.</p></details>
+<details><summary>Method: Compute</summary><p>1, 2, 4, 8, 16, … each term is double the previous, so 2¹⁰ = 1024.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem p7.</b> Find the sum of the first 50 odd positive integers.</p><details><summary>Hint</summary>Each partial sum is a square.</details><details><summary>Answer</summary>2500</details>
+<details><summary>Method: Pattern</summary><p>1, 1 + 3 = 4, 1 + 3 + 5 = 9, so the sum of the first n odd numbers is n² = 2500.</p></details>
+<details><summary>Method: Formula</summary><p>The 50th odd number is 99, so the sum is 50(1 + 99)/2 = 2500.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem p8.</b> a₁ = 2, a₂ = 5 and a_n = a_{n−1} + a_{n−2}. Find a₁₀.</p><details><summary>Hint</summary>Compute the terms.</details><details><summary>Answer</summary>212</details>
+<details><summary>Method: Compute</summary><p>2, 5, 7, 12, 19, 31, 50, 81, 131, 212.</p></details>
+<details><summary>Method: Last step</summary><p>a₁₀ = a₉ + a₈ = 131 + 81 = 212.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem p9.</b> How many terms does 7, 11, 15, …, 403 have?</p><details><summary>Hint</summary>a_n = 7 + 4(n − 1).</details><details><summary>Answer</summary>100</details>
+<details><summary>Method: Formula</summary><p>7 + 4(n − 1) = 403 gives n − 1 = 99, so n = 100.</p></details>
+<details><summary>Method: Fence post</summary><p>(403 − 7)/4 = 99 gaps, so 100 terms.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem p10.</b> An arithmetic sequence has first term 5 and common difference 3. What is the 20th term?</p><details><summary>Hint</summary>a + (n − 1)d.</details><details><summary>Answer</summary>62</details>
+<details><summary>Method: Formula</summary><p>5 + 19 · 3 = 62.</p></details>
+<details><summary>Method: Check</summary><p>Terms 5, 8, 11, … each add 3; the nth is 3n + 2, so n = 20 gives 62.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem p11.</b> Find the sum of the first 30 terms of 4, 7, 10, 13, …</p><details><summary>Hint</summary>n/2 (first + last).</details><details><summary>Answer</summary>1425</details>
+<details><summary>Method: Formula</summary><p>The 30th term is 4 + 29 · 3 = 91, so the sum is 30(4 + 91)/2 = 1425.</p></details>
+<details><summary>Method: Pairing</summary><p>Pair first and last: 15 pairs each summing to 95.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem p12.</b> A geometric sequence has first term 3 and ratio 2. What is the sum of the first 8 terms?</p><details><summary>Hint</summary>a(rⁿ − 1)/(r − 1).</details><details><summary>Answer</summary>765</details>
+<details><summary>Method: Formula</summary><p>3(256 − 1)/1 = 765.</p></details>
+<details><summary>Method: Direct</summary><p>3 + 6 + 12 + 24 + 48 + 96 + 192 + 384 = 765.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem p13.</b> Define a₁ = 2 and aₙ₊₁ = 3aₙ − 1. Find a₅.</p><details><summary>Hint</summary>Compute step by step.</details><details><summary>Answer</summary>122</details>
+<details><summary>Method: Step</summary><p>2, 5, 14, 41, 122: a₅ = 122.</p></details>
+<details><summary>Method: Closed form</summary><p>aₙ = (3ⁿ⁻¹ · 3 + 1)/2, giving a₅ = (243 + 1)/2 = 122.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem p14.</b> The Fibonacci numbers start F₁ = F₂ = 1. Find F₁₂.</p><details><summary>Hint</summary>Add the two previous.</details><details><summary>Answer</summary>144</details>
+<details><summary>Method: List</summary><p>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144.</p></details>
+<details><summary>Method: Identity</summary><p>F₁₂ = F₆ · L₆ = 8 · 18 = 144.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem p15.</b> What is the sum 1 + 1/2 + 1/4 + 1/8 + … to infinity?</p><details><summary>Hint</summary>Infinite geometric series.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Formula</summary><p>a/(1 − r) = 1/(1 − 1/2) = 2.</p></details>
+<details><summary>Method: Partial sums</summary><p>The partial sums 1, 1.5, 1.75, 1.875 approach 2.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem p16.</b> How many terms are in the arithmetic sequence 7, 11, 15, …, 199?</p><details><summary>Hint</summary>(last − first)/d + 1.</details><details><summary>Answer</summary>49</details>
+<details><summary>Method: Formula</summary><p>(199 − 7)/4 + 1 = 49.</p></details>
+<details><summary>Method: Check</summary><p>The kth term is 4k + 3, equal to 199 at k = 49.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem p17.</b> The sum of the first n odd positive integers is 625. Find n.</p><details><summary>Hint</summary>The sum is n².</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Formula</summary><p>n² = 625 so n = 25.</p></details>
+<details><summary>Method: Check</summary><p>The 25th odd number is 49, and 25(1 + 49)/2 = 625.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem x18.</b> An arithmetic sequence has first term 2 and common difference 11. Find term number 18.</p><details><summary>Hint</summary>aₙ = a₁ + (n − 1)d.</details><details><summary>Answer</summary>189</details>
+<details><summary>Method: Formula</summary><p>2 + 17 · 11 = 189.</p></details>
+<details><summary>Method: Linear form</summary><p>The terms are 2, 13, 24, 35, …, so term k equals 11·k + -9; at k = 18 this is 189.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem x19.</b> Find the sum of the first 16 terms of the arithmetic sequence 4, 13, 22, 31, …</p><details><summary>Hint</summary>n(first + last)/2.</details><details><summary>Answer</summary>1144</details>
+<details><summary>Method: Formula</summary><p>The last term is 139, so the sum is 16(4 + 139)/2 = 1144.</p></details>
+<details><summary>Method: Pairing</summary><p>Pair terms from the two ends; each pair sums to 143 and there are 8 pairs, giving 1144.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem x20.</b> Find the sum of the first 6 terms of the geometric sequence 2, 6, 18, …</p><details><summary>Hint</summary>a(rⁿ − 1)/(r − 1).</details><details><summary>Answer</summary>728</details>
+<details><summary>Method: Formula</summary><p>2(3^6 − 1)/(3 − 1) = 728.</p></details>
+<details><summary>Method: Add the terms</summary><p>2 + 6 + 18 + 54 + 162 + 486 = 728.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem x21.</b> A sequence has a₁ = 0 and aₖ₊₁ = 2·aₖ + 1. Find a_8.</p><details><summary>Hint</summary>Compute term by term, or find a closed form.</details><details><summary>Answer</summary>127</details>
+<details><summary>Method: Step by step</summary><p>The terms are 0, 1, 3, 7, 15, 31, 63, 127, so a_8 = 127.</p></details>
+<details><summary>Method: Closed form</summary><p>The fixed point is K = -1, so aₙ = (a₁ − K)·2^(n−1) + K. For n = 8 this is 127.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem x22.</b> The Fibonacci numbers start F₁ = F₂ = 1. Find F_20.</p><details><summary>Hint</summary>Add the previous two.</details><details><summary>Answer</summary>6765</details>
+<details><summary>Method: List</summary><p>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765; so F_20 = 6765.</p></details>
+<details><summary>Method: Splitting identity</summary><p>F_{a+b} = F_a F_{b+1} + F_{a−1} F_b with a = 10, b = 10 gives 55 · 89 + 34 · 55 = 6765.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem x23.</b> An arithmetic sequence has first term 50 and common difference -3. Find term number 16.</p><details><summary>Hint</summary>aₙ = a₁ + (n − 1)d.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Formula</summary><p>50 + 15 · -3 = 5.</p></details>
+<details><summary>Method: Linear form</summary><p>The terms are 50, 47, 44, 41, …, so term k equals -3·k + 53; at k = 16 this is 5.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem x24.</b> Find the sum of the first 18 terms of the arithmetic sequence 6, 12, 18, 24, …</p><details><summary>Hint</summary>n(first + last)/2.</details><details><summary>Answer</summary>1026</details>
+<details><summary>Method: Formula</summary><p>The last term is 108, so the sum is 18(6 + 108)/2 = 1026.</p></details>
+<details><summary>Method: Pairing</summary><p>Pair terms from the two ends; each pair sums to 114 and there are 9 pairs, giving 1026.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>
+<div class=p><p><b>Problem x25.</b> Find the sum of the first 8 terms of the geometric sequence 5, 10, 20, …</p><details><summary>Hint</summary>a(rⁿ − 1)/(r − 1).</details><details><summary>Answer</summary>1275</details>
+<details><summary>Method: Formula</summary><p>5(2^8 − 1)/(2 − 1) = 1275.</p></details>
+<details><summary>Method: Add the terms</summary><p>5 + 10 + 20 + 40 + 80 + 160 + 320 + 640 = 1275.</p></details>
+<p class=ref>Source: AoPS Volume 2, sequences and series chapters</p></div>

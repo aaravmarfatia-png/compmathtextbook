@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 153</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 153: Unit 153: Putnam-style real analysis: limits, series, integrals</h1><p class=ref>Book: Andreescu &amp; Gelca, Putnam and Beyond (25 problems)<br>Putnam and Beyond, ch. 3 (real analysis).</p>
+<h2>Reading</h2>
+<h3>1. Limits, series and recurrences</h3><p>A limit with a square root is usually handled by multiplying by the conjugate: √(n² + n) − n = n/(√(n² + n) + n) → 1/2. A telescoping series cancels in the partial sums: Σ 1/(n(n+1)) = Σ (1/n − 1/(n+1)) = 1. For a recurrence aₙ₊₁ = g(aₙ), if the sequence converges then the limit L satisfies L = g(L); you must still check that it converges (for example, increasing and bounded). Example: a₁ = 1, aₙ₊₁ = √(2 + aₙ) → 2.</p><details class="try"><summary>Try it<p>What is lim (√(n² + 2n) − n)?</p><p><b>Answer.</b> 1.</p></details><details class="try"><summary>Try it<p>What is the sum of 1/(n(n + 2)), n ≥ 1?</p><p><b>Answer.</b> 3/4.</p></details>
+<h3>2. Integrals, Taylor series and the intermediate value theorem</h3><p><b>Wallis.</b> I_n = ∫₀^{π/2} sinⁿ x dx satisfies I_n = ((n−1)/n)I_{n−2}, so I₃ = 2/3 and I₅ = 8/15. <b>Symmetry.</b> If f(x) + f(a − x) = 1 then ∫₀ᵃ f = a/2. <b>Taylor.</b> The coefficient of xⁿ in eˣ/(1 − x) is Σ_{k≤n} 1/k!; for n = 2 it is 1 + 1 + 1/2 = 5/2. <b>IVT.</b> A continuous function that changes sign has a root: x³ − 3x + 1 has f(−2) = −1, f(0) = 1, f(1) = −1, f(2) = 3, so it has three real roots.</p><details class="try"><summary>Try it<p>What is ∫₀^{π/2} sin³ x dx?</p><p><b>Answer.</b> 2/3.</p></details><details class="try"><summary>Try it<p>Coefficient of x² in eˣ/(1 − x)?</p><p><b>Answer.</b> 5/2.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> Evaluate 1·1! + 2·2! + 3·3!. <b>Solution.</b> k·k! = (k + 1)! − k!, so the sum telescopes to 4! − 1! = 23.</p><p><b>Check.</b> 1 + 4 + 18 = 23 ✓.</p>
+<h3>4. In the books</h3><p>Andreescu and Gelca, <i>Putnam and Beyond</i> ch. 3 (real analysis: sequences, series, continuity, derivatives, integrals) is the source for this unit. I only introduce limits, sums, recurrences and integrals with computational problems; the book's proof-style problems are not covered. <b>Honest note:</b> the problems are my own templates, not the book's.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> What is the limit as n → ∞ of √(n² + 1n) − n? (fraction if needed)</p><details><summary>Hint</summary>Multiply and divide by the conjugate.</details><details><summary>Answer</summary>1/2</details>
+<details><summary>Method: Conjugate</summary><p>√(n²+1n) − n = 1n/(√(n²+1n) + n) = 1/(√(1+1/n) + 1) → 1/2.</p></details>
+<details><summary>Method: Binomial expansion</summary><p>√(n²+1n) = n(1 + 1/n)^(1/2) ≈ n + 1/2, so the expression tends to 1/2.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> What is the limit as n → ∞ of √(n² + 3n) − n? (fraction if needed)</p><details><summary>Hint</summary>Multiply and divide by the conjugate.</details><details><summary>Answer</summary>3/2</details>
+<details><summary>Method: Conjugate</summary><p>√(n²+3n) − n = 3n/(√(n²+3n) + n) = 3/(√(1+3/n) + 1) → 3/2.</p></details>
+<details><summary>Method: Binomial expansion</summary><p>√(n²+3n) = n(1 + 3/n)^(1/2) ≈ n + 3/2, so the expression tends to 3/2.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> What is the limit as n → ∞ of √(n² + 5n) − n? (fraction if needed)</p><details><summary>Hint</summary>Multiply and divide by the conjugate.</details><details><summary>Answer</summary>5/2</details>
+<details><summary>Method: Conjugate</summary><p>√(n²+5n) − n = 5n/(√(n²+5n) + n) = 5/(√(1+5/n) + 1) → 5/2.</p></details>
+<details><summary>Method: Binomial expansion</summary><p>√(n²+5n) = n(1 + 5/n)^(1/2) ≈ n + 5/2, so the expression tends to 5/2.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> What is the sum of 1/(n(n + 2)) over all n ≥ 1? (fraction if needed)</p><details><summary>Hint</summary>Partial fractions: 1/(n(n+k)) = (1/k)(1/n − 1/(n+k)); the sum telescopes.</details><details><summary>Answer</summary>3/4</details>
+<details><summary>Method: Telescoping</summary><p>The sum equals (1/2)(1 + 1/2 + … + 1/2) = 3/4.</p></details>
+<details><summary>Method: Partial sums</summary><p>S_N = (1/2)(H_N − H_{N+2} + H_2) → H_2/2 = 3/4.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> What is the sum of 1/(n(n + 3)) over all n ≥ 1? (fraction if needed)</p><details><summary>Hint</summary>Partial fractions: 1/(n(n+k)) = (1/k)(1/n − 1/(n+k)); the sum telescopes.</details><details><summary>Answer</summary>11/18</details>
+<details><summary>Method: Telescoping</summary><p>The sum equals (1/3)(1 + 1/2 + … + 1/3) = 11/18.</p></details>
+<details><summary>Method: Partial sums</summary><p>S_N = (1/3)(H_N − H_{N+3} + H_3) → H_3/3 = 11/18.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> What is the sum of 1/(n(n + 4)) over all n ≥ 1? (fraction if needed)</p><details><summary>Hint</summary>Partial fractions: 1/(n(n+k)) = (1/k)(1/n − 1/(n+k)); the sum telescopes.</details><details><summary>Answer</summary>25/48</details>
+<details><summary>Method: Telescoping</summary><p>The sum equals (1/4)(1 + 1/2 + … + 1/4) = 25/48.</p></details>
+<details><summary>Method: Partial sums</summary><p>S_N = (1/4)(H_N − H_{N+4} + H_4) → H_4/4 = 25/48.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> Compute the product (1 − 1/2²)(1 − 1/3²)…(1 − 1/4²). (fraction)</p><details><summary>Hint</summary>Write 1 − 1/k² = (k − 1)(k + 1)/k² and cancel.</details><details><summary>Answer</summary>5/8</details>
+<details><summary>Method: Telescoping</summary><p>The product is (N + 1)/(2N) = 5/8 = 5/8.</p></details>
+<details><summary>Method: Direct</summary><p>Multiply the 3 factors: 5/8.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> Compute the product (1 − 1/2²)(1 − 1/3²)…(1 − 1/9²). (fraction)</p><details><summary>Hint</summary>Write 1 − 1/k² = (k − 1)(k + 1)/k² and cancel.</details><details><summary>Answer</summary>5/9</details>
+<details><summary>Method: Telescoping</summary><p>The product is (N + 1)/(2N) = 10/18 = 5/9.</p></details>
+<details><summary>Method: Direct</summary><p>Multiply the 8 factors: 5/9.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> a₁ = 1 and a_{n+1} = √(6 + aₙ). What is the limit of aₙ?</p><details><summary>Hint</summary>If the sequence converges to L, then L = √(6 + L).</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Fixed point</summary><p>L² = 6 + L gives L = 3 or −2; the sequence is positive, bounded above by 3 and increasing, so L = 3.</p></details>
+<details><summary>Method: Numerical check</summary><p>The terms are 1, 2.646, 2.94, 2.99, …, approaching 3 (verified by iteration).</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> a₁ = 0 and a_{n+1} = √(2 + aₙ). What is the limit of aₙ?</p><details><summary>Hint</summary>Fixed point L = √(2 + L); the sequence is increasing and bounded.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Fixed point</summary><p>L² = L + 2 gives L = 2 or −1; the sequence is positive, so L = 2.</p></details>
+<details><summary>Method: Trigonometric</summary><p>With a₁ = 0 = 2cos(π/2), a₂ = 2cos(π/4), …, aₙ = 2cos(π/2ⁿ) → 2.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> a₁ = 5 and a_{n+1} = (aₙ + 6/aₙ)/2. What is lim aₙ² ?</p><details><summary>Hint</summary>Fixed point: L = (L + 6/L)/2, so L² = 6 (Newton's method for √6).</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Fixed point</summary><p>L = (L + 6/L)/2 gives L² = 6; the limit is √6, so the square is 6.</p></details>
+<details><summary>Method: Newton's method</summary><p>This is Newton's iteration for x² − 6 = 0, whose positive root is √6, so aₙ² → 6.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> What is ∫ from 0 to π/2 of sin^5 x dx? (fraction)</p><details><summary>Hint</summary>Reduction formula: Iₙ = ((n − 1)/n) I_{n−2}.</details><details><summary>Answer</summary>8/15</details>
+<details><summary>Method: Reduction</summary><p>I_n = (n − 1)/n · I_{n−2}, I₁ = 1, so I_5 = 8/15.</p></details>
+<details><summary>Method: Substitution</summary><p>Write sin^5 x = (1 − cos² x)^2 sin x and substitute u = cos x; the integral is 8/15.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> What is ∫ from 0 to π/2 of sin^7 x dx? (fraction)</p><details><summary>Hint</summary>Reduction formula: Iₙ = ((n − 1)/n) I_{n−2}.</details><details><summary>Answer</summary>16/35</details>
+<details><summary>Method: Reduction</summary><p>I_n = (n − 1)/n · I_{n−2}, I₁ = 1, so I_7 = 16/35.</p></details>
+<details><summary>Method: Substitution</summary><p>Write sin^7 x = (1 − cos² x)^3 sin x and substitute u = cos x; the integral is 16/35.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> What is ∫ from 0 to π/2 of sin^9 x dx? (fraction)</p><details><summary>Hint</summary>Reduction formula: Iₙ = ((n − 1)/n) I_{n−2}.</details><details><summary>Answer</summary>128/315</details>
+<details><summary>Method: Reduction</summary><p>I_n = (n − 1)/n · I_{n−2}, I₁ = 1, so I_9 = 128/315.</p></details>
+<details><summary>Method: Substitution</summary><p>Write sin^9 x = (1 − cos² x)^4 sin x and substitute u = cos x; the integral is 128/315.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> What is ∫ from 0 to 4 of √x/(√x + √(4 − x)) dx?</p><details><summary>Hint</summary>Substitute x → 4 − x and add.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Symmetry</summary><p>Call it I; the substitution x → 4 − x gives I = ∫ √(4−x)/(√x + √(4−x)) dx; adding, 2I = ∫ 1 dx = 4, so I = 2.</p></details>
+<details><summary>Method: Check</summary><p>The integrand f(x) satisfies f(x) + f(4 − x) = 1, so the average value is 1/2 and I = 4·(1/2) = 2.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> What is ∫ from 0 to 6 of √x/(√x + √(6 − x)) dx?</p><details><summary>Hint</summary>Substitute x → 6 − x and add.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Symmetry</summary><p>Call it I; the substitution x → 6 − x gives I = ∫ √(6−x)/(√x + √(6−x)) dx; adding, 2I = ∫ 1 dx = 6, so I = 3.</p></details>
+<details><summary>Method: Check</summary><p>The integrand f(x) satisfies f(x) + f(6 − x) = 1, so the average value is 1/2 and I = 6·(1/2) = 3.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> What is the coefficient of x^5 in the Taylor series of eˣ/(1 − x)? (fraction)</p><details><summary>Hint</summary>The series is the product of Σ xᵏ/k! and Σ xᵏ; collect the coefficient of x^5.</details><details><summary>Answer</summary>163/60</details>
+<details><summary>Method: Cauchy product</summary><p>The coefficient is Σ_{k=0}^{5} 1/k! = 163/60.</p></details>
+<details><summary>Method: Partial sums</summary><p>1/(1 − x) multiplies the series by 1 + x + x² + …, i.e. takes partial sums of 1/k!: 163/60.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> What is the coefficient of x^6 in the Taylor series of eˣ/(1 − x)? (fraction)</p><details><summary>Hint</summary>The series is the product of Σ xᵏ/k! and Σ xᵏ; collect the coefficient of x^6.</details><details><summary>Answer</summary>1957/720</details>
+<details><summary>Method: Cauchy product</summary><p>The coefficient is Σ_{k=0}^{6} 1/k! = 1957/720.</p></details>
+<details><summary>Method: Partial sums</summary><p>1/(1 − x) multiplies the series by 1 + x + x² + …, i.e. takes partial sums of 1/k!: 1957/720.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> What is the coefficient of x^4 in the Taylor series of eˣ/(1 − x)? (fraction)</p><details><summary>Hint</summary>The series is the product of Σ xᵏ/k! and Σ xᵏ; collect the coefficient of x^4.</details><details><summary>Answer</summary>65/24</details>
+<details><summary>Method: Cauchy product</summary><p>The coefficient is Σ_{k=0}^{4} 1/k! = 65/24.</p></details>
+<details><summary>Method: Partial sums</summary><p>1/(1 − x) multiplies the series by 1 + x + x² + …, i.e. takes partial sums of 1/k!: 65/24.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> How many real roots does x^3 - 3*x + 1 have?</p><details><summary>Hint</summary>Find the signs of f at the critical points and use the intermediate value theorem.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Intermediate value</summary><p>f changes sign three times (check f at the critical points and at ±∞), so there are 3 real roots.</p></details>
+<details><summary>Method: Discriminant</summary><p>The discriminant of this cubic is positive, so there are 3 real roots.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> How many real roots does x^3 - 4*x + 1 have?</p><details><summary>Hint</summary>Find the signs of f at the critical points and use the intermediate value theorem.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Intermediate value</summary><p>f changes sign three times (check f at the critical points and at ±∞), so there are 3 real roots.</p></details>
+<details><summary>Method: Discriminant</summary><p>The discriminant of this cubic is positive, so there are 3 real roots.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> What is 1·1! + 2·2! + … + 5·5!?</p><details><summary>Hint</summary>k·k! = (k + 1)! − k!, a telescoping sum.</details><details><summary>Answer</summary>719</details>
+<details><summary>Method: Telescoping</summary><p>The sum is (6)! − 1! = 719.</p></details>
+<details><summary>Method: Direct</summary><p>Add the terms: 1 + 4 + 18 + 96 + 600 = 719.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> What is 1·1! + 2·2! + … + 6·6!?</p><details><summary>Hint</summary>k·k! = (k + 1)! − k!, a telescoping sum.</details><details><summary>Answer</summary>5039</details>
+<details><summary>Method: Telescoping</summary><p>The sum is (7)! − 1! = 5039.</p></details>
+<details><summary>Method: Direct</summary><p>Add the terms: 1 + 4 + 18 + 96 + 600 + 4320 = 5039.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> What is the sum over all n ≥ 1 of n/2ⁿ?</p><details><summary>Hint</summary>Differentiate the geometric series, or use a recurrence.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Generating function</summary><p>Σ xⁿ = x/(1−x); apply x·d/dx 1 time and set x = 1/2: 2.</p></details>
+<details><summary>Method: Recurrence</summary><p>If S = Σ n/2ⁿ, then S − S/2 can be written with the earlier sum, giving S = 2.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> What is the sum over all n ≥ 1 of n²/2ⁿ?</p><details><summary>Hint</summary>Differentiate the geometric series, or use a recurrence.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Generating function</summary><p>Σ xⁿ = x/(1−x); apply x·d/dx 2 times and set x = 1/2: 6.</p></details>
+<details><summary>Method: Recurrence</summary><p>If S = Σ n²/2ⁿ, then S − S/2 can be written with the earlier sum, giving S = 6.</p></details>
+<p class=ref>Source: Technique from Putnam and Beyond ch. 3 (original problem)</p></div>

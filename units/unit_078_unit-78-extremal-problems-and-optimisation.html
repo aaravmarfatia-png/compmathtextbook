@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 78</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 78: Unit 78: Extremal problems and optimisation</h1><p class=ref>Book: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5 (25 problems)<br>Zeitz, The Art and Craft of Problem Solving, chapters on the extreme principle and optimisation; Engel, Problem-Solving Strategies.</p>
+<h2>Reading</h2>
+<h3>1. Optimisation with algebra and inequalities</h3><p>We often want the largest or smallest value of a quantity. Tools: completing the square (Unit 10), AM–GM (Unit 13), Cauchy–Schwarz (Unit 14), and checking the endpoints.</p><p><b>Worked example 1.</b> A rectangle has area 100; its perimeter is 2(x + 100/x) ≥ 2 × 2√100 = 40, with equality for the square 10 × 10.</p><p><b>Worked example 2.</b> Triangles with two sides of length 5 and 8 have area ½ × 5 × 8 × sin θ ≤ 20, with equality when θ = 90°.</p><p><b>Worked example 3: splitting a number.</b> Split 10 into positive integers to maximise the product. Using 3s is best: 3 + 3 + 4 gives 36 and 3 + 3 + 2 + 2 also gives 36; no other split beats 36. For 12: 3⁴ = 81. The idea: parts bigger than 4 can be split to give more (n < 2(n − 2) when n > 4), and 1s should be absorbed.</p>
+<h3>2. Geometry optimisation</h3><p><b>Shortest path by reflection</b> (Unit 53). <b>Heron's problem:</b> the point P on a line minimising AP + PB lies where the angles of incidence and reflection are equal. <b>Fermat point:</b> the point minimising the sum of distances to the vertices of a triangle with all angles < 120° is where the sides subtend 120° angles. For an equilateral triangle of side 1 the minimum total is √3.</p><p><b>Worked example.</b> Among all rectangles inscribed in a circle of radius R, the largest area is the square, 2R². With sides 2R cos θ and 2R sin θ (a rectangle whose diagonal is the diameter), the area is 4R² sin θ cos θ = 2R² sin 2θ ≤ 2R².</p><p><b>Isoperimetric principle.</b> Among shapes of a given perimeter, the circle has the largest area; among rectangles, the square.</p>
+<h3>3. Discrete optimisation</h3><p>With integers, check the values near the real optimum. To maximise n(20 − n) over integers, the real maximum is at n = 10, and the integer answer is 100.</p><p><b>Linear programming.</b> Maximise 3x + 2y subject to x + y ≤ 4, x ≤ 3, x, y ≥ 0. The feasible region is a polygon with vertices (0, 0), (3, 0), (3, 1), (0, 4); the objective values are 0, 9, 11, 8; the maximum is 11 at (3, 1). A linear function on a polygon is maximised at a vertex.</p><p><b>Principle.</b> For linear objectives, look at the vertices of the allowed region; for quadratics, at the vertex of the parabola and the endpoints.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Ignoring the domain. Using AM–GM when equality cannot be reached. Forgetting to check the endpoints. Returning the optimising point instead of the optimal value (or vice versa).</p><p><b>Checks.</b> Compare the optimum with nearby points.</p><p><b>Practice.</b> State what you maximise, what is fixed, and the allowed range.</p>
+<h3>Worked examples with Try-its: Optimisation by inequalities</h3><p>AM-GM says (x + y)/2 ≥ √(xy) for non-negative x and y, with equality when x = y. Hence if x + y = 10 the product xy is at most 25, and if xy = 36 the sum x + y is at least 12. A rectangle of perimeter 20 has area at most 25 (a square), and a rectangle of area 36 has perimeter at least 24 (a 6 × 6 square). Also x + 1/x ≥ 2 for x > 0.</p><p><b>Sums of squares.</b> If x + y = 10 then x² + y² ≥ (x + y)²/2 = 50, with equality at x = y = 5. <b>Cauchy–Schwarz.</b> (3x + 4y)² ≤ (3² + 4²)(x² + y²), so if x² + y² = 25 then 3x + 4y ≤ 25, attained at (3, 4).</p><details class="try"><summary>Try it</summary><p>What is the minimum of x + 9/x for x > 0?</p><p><b>Answer.</b> 6, at x = 3.</p></details>
+<h3>Worked examples with Try-its: Completing the square and boundaries</h3><p>A quadratic ax² + bx + c with a > 0 has minimum c − b²/4a at x = −b/2a. For x² − 6x + 11 the minimum is 2 at x = 3. For problems on a closed interval check the endpoints as well as the vertex. In integer problems the extreme may sit at a boundary where equality in the inequality is impossible, so check that equality can actually be attained.</p><details class="try"><summary>Try it</summary><p>Largest value of 12x − x²?</p><p><b>Answer.</b> 36, at x = 6.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> A farmer has 40 m of fence for a rectangular pen against a long straight wall (no fence needed on the wall side). Maximise the area. <b>Solution.</b> If the sides perpendicular to the wall have length x, the parallel side is 40 − 2x and the area is x(40 − 2x) = −2(x − 10)² + 200, at most 200 when x = 10.</p><p><b>Reflection.</b> Without the wall the best pen would be a 10 × 10 square of area 100; the wall doubles the result.</p>
+<h3>More worked examples: Worked examples</h3><p><b>AM-GM.</b> For x > 0, x² + 16/x² ≥ 2 · √16 = 8, with equality at x² = 4. <b>Trigonometry.</b> sin θ + cos θ = √2 sin(θ + 45°) ≤ √2. <b>Geometry.</b> A rectangle inscribed in a circle of radius 5 has diagonal 10, so its area xy ≤ (x² + y²)/2 = 50, attained by the square. Among triangles of perimeter 12, the equilateral one has area 4√3 ≈ 6.93, larger than the 3-4-5 triangle's 6.</p><details class="try"><summary>Try it<p>Maximise the area of a rectangle with perimeter 36.</p><p><b>Answer.</b> A 9 × 9 square: 81.</p></details><details class="try"><summary>Try it<p>Find the minimum of x + 25/x for x > 0.</p><p><b>Answer.</b> 10, at x = 5.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Find the maximum of xy given 2x + 3y = 12 with x, y > 0. <b>Solution.</b> By AM-GM 12 = 2x + 3y ≥ 2√(6xy), so xy ≤ 6, attained at 2x = 3y = 6, i.e. x = 3, y = 2.</p><p><b>Check.</b> At (3, 2): 6 + 6 = 12 and xy = 6 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Integers x and y satisfy x + y = 20. What is the largest possible value of xy?</p><details><summary>Hint</summary>Make the numbers equal.</details><details><summary>Answer</summary>100</details>
+<details><summary>Method: Equal parts</summary><p>x = y = 10 gives 100.</p></details>
+<details><summary>Method: Square</summary><p>xy = x(20 − x) = 100 − (x − 10)² ≤ 100.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem p2.</b> What is the minimum value of x² − 8x + 20?</p><details><summary>Hint</summary>Complete the square.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Square</summary><p>(x − 4)² + 4 ≥ 4.</p></details>
+<details><summary>Method: Vertex</summary><p>The vertex is at x = 4, where the value is 16 − 32 + 20 = 4.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem p3.</b> Positive integers sum to 12. What is the largest possible product?</p><details><summary>Hint</summary>Use as many 3s as possible.</details><details><summary>Answer</summary>81</details>
+<details><summary>Method: Threes</summary><p>3 · 3 · 3 · 3 = 81.</p></details>
+<details><summary>Method: Smoothing</summary><p>Parts of 1 can be merged into a neighbour, a 4 is no worse as 2 · 2, a 5 splits to 2 · 3 = 6 > 5, so only 2s and 3s remain, and 3s beat 2s.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem p4.</b> A rectangle with integer sides has perimeter 36. What is its largest area?</p><details><summary>Hint</summary>Make it as square as possible.</details><details><summary>Answer</summary>81</details>
+<details><summary>Method: Square</summary><p>The semi-perimeter is 18, so a = b = 9 gives 81.</p></details>
+<details><summary>Method: Table</summary><p>Sides 8 and 10 give 80, 7 and 11 give 77, so 81 is largest.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem p5.</b> A farmer has 100 m of fence and uses a straight river as one side. The fenced rectangle has two sides of length x perpendicular to the river. What is the largest possible area?</p><details><summary>Hint</summary>Area = x(100 − 2x).</details><details><summary>Answer</summary>1250</details>
+<details><summary>Method: Vertex</summary><p>x(100 − 2x) is a downward parabola with vertex at x = 25, giving 25 · 50 = 1250.</p></details>
+<details><summary>Method: Equal parts</summary><p>Write 2x · (100 − 2x)/2 and maximise the product of two numbers summing to 100: 50 · 50/2 = 1250.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem p6.</b> What is the minimum value of |x − 3| + |x − 7| over real x?</p><details><summary>Hint</summary>Distance to two points.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Distance</summary><p>The sum of the distances from x to 3 and to 7 is at least 7 − 3 = 4, achieved for x between them.</p></details>
+<details><summary>Method: Pieces</summary><p>For 3 ≤ x ≤ 7 the sum is (x − 3) + (7 − x) = 4, and outside it is larger.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem p7.</b> What is the largest number of integers from 1, 2, …, 10 that can be chosen with no two consecutive?</p><details><summary>Hint</summary>Choose alternate numbers.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Alternate</summary><p>1, 3, 5, 7, 9 gives 5.</p></details>
+<details><summary>Method: Pairs</summary><p>The pairs (1,2), (3,4), …, (9,10) allow at most one number each, so at most 5.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem p8.</b> A rectangle with integer sides has area 36. What is its smallest perimeter?</p><details><summary>Hint</summary>Make it as square as possible.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Square</summary><p>6 × 6 gives 24.</p></details>
+<details><summary>Method: Table</summary><p>The factor pairs 1 × 36, 2 × 18, 3 × 12, 4 × 9, 6 × 6 have perimeters 74, 40, 30, 26, 24.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem p9.</b> What is the largest integer n with n² < 2000?</p><details><summary>Hint</summary>Estimate.</details><details><summary>Answer</summary>44</details>
+<details><summary>Method: Estimate</summary><p>44² = 1936 < 2000 and 45² = 2025 > 2000, so n = 44.</p></details>
+<details><summary>Method: Root</summary><p>√2000 ≈ 44.7, whose floor is 44.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem p10.</b> A rectangle has perimeter 40. What is its largest possible area?</p><details><summary>Hint</summary>Square is best.</details><details><summary>Answer</summary>100</details>
+<details><summary>Method: Square</summary><p>With sides a and 20 − a the area a(20 − a) is largest at a = 10: 100.</p></details>
+<details><summary>Method: AM-GM</summary><p>ab ≤ ((a + b)/2)² = 100.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem p11.</b> Two positive numbers have sum 10. What is the largest possible product?</p><details><summary>Hint</summary>Equal numbers.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: AM-GM</summary><p>xy ≤ ((x + y)/2)² = 25.</p></details>
+<details><summary>Method: Vertex</summary><p>x(10 − x) is a parabola with maximum at x = 5.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem p12.</b> Find the largest value of −x² + 6x + 1.</p><details><summary>Hint</summary>Complete the square.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Complete the square</summary><p>−(x − 3)² + 10, so the maximum is 10.</p></details>
+<details><summary>Method: Vertex</summary><p>The vertex is at x = 3, where the value is −9 + 18 + 1 = 10.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem p13.</b> Find the smallest value of x² − 8x + 20.</p><details><summary>Hint</summary>Complete the square.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Complete the square</summary><p>(x − 4)² + 4, so the minimum is 4.</p></details>
+<details><summary>Method: Vertex</summary><p>At x = 4: 16 − 32 + 20 = 4.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem p14.</b> A farmer has 60 m of fencing for three sides of a rectangular pen against a wall. What is the largest possible area in square metres?</p><details><summary>Hint</summary>Two sides x and one side 60 − 2x.</details><details><summary>Answer</summary>450</details>
+<details><summary>Method: Quadratic</summary><p>A = x(60 − 2x), maximised at x = 15: 15 · 30 = 450.</p></details>
+<details><summary>Method: AM-GM</summary><p>2x · (60 − 2x) ≤ 900, so A ≤ 450.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem p15.</b> What is the largest possible area of a rectangle inscribed in a circle of radius 5?</p><details><summary>Hint</summary>The diagonal is 10.</details><details><summary>Answer</summary>50</details>
+<details><summary>Method: Square</summary><p>With sides a, b: a² + b² = 100 and ab ≤ (a² + b²)/2 = 50, with equality for a square.</p></details>
+<details><summary>Method: Trigonometry</summary><p>The area is 100 sin θ cos θ = 50 sin 2θ ≤ 50.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem p16.</b> Two positive numbers have product 36. What is the smallest possible sum?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: AM-GM</summary><p>x + y ≥ 2√36 = 12, with x = y = 6.</p></details>
+<details><summary>Method: Calculus</summary><p>x + 36/x has derivative 1 − 36/x² = 0 at x = 6, giving 12.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem p17.</b> Find the smallest value of |x − 3| + |x − 8| over all real x.</p><details><summary>Hint</summary>Distances on a line.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Distance</summary><p>The sum of distances to 3 and 8 is at least 8 − 3 = 5, attained for 3 ≤ x ≤ 8.</p></details>
+<details><summary>Method: Triangle inequality</summary><p>|x − 3| + |8 − x| ≥ |5|.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem x18.</b> What is the smallest value of x + 36/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: AM-GM</summary><p>x + 36/x ≥ 2√36 = 12, with equality when x = 6.</p></details>
+<details><summary>Method: Table</summary><p>x = 5, 6, 7 give 61/5, 12, 85/7; the minimum is 12 at x = 6.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem x19.</b> The roots of x² − 10x + 21 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>58</details>
+<details><summary>Method: Vieta</summary><p>r + s = 10 and rs = 21, so r² + s² = (r + s)² − 2rs = 100 − 42 = 58.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 10 and p₂ = 10 · p₁ − 21 · p₀ = 100 − 42 = 58.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem x20.</b> Find 1² + 2² + … + 16².</p><details><summary>Hint</summary>n(n + 1)(2n + 1)/6.</details><details><summary>Answer</summary>1496</details>
+<details><summary>Method: Formula</summary><p>16 · 17 · 33/6 = 1496.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100 + 121 + 144 + 169 + 196 + 225 + 256 = 1496.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem x21.</b> What is the smallest value of x + 49/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: AM-GM</summary><p>x + 49/x ≥ 2√49 = 14, with equality when x = 7.</p></details>
+<details><summary>Method: Table</summary><p>x = 6, 7, 8 give 85/6, 14, 113/8; the minimum is 14 at x = 7.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem x22.</b> The roots of x² − 6x + 4 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>28</details>
+<details><summary>Method: Vieta</summary><p>r + s = 6 and rs = 4, so r² + s² = (r + s)² − 2rs = 36 − 8 = 28.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 6 and p₂ = 6 · p₁ − 4 · p₀ = 36 − 8 = 28.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem x23.</b> Find 1² + 2² + … + 18².</p><details><summary>Hint</summary>n(n + 1)(2n + 1)/6.</details><details><summary>Answer</summary>2109</details>
+<details><summary>Method: Formula</summary><p>18 · 19 · 37/6 = 2109.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100 + 121 + 144 + 169 + 196 + 225 + 256 + 289 + 324 = 2109.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem x24.</b> What is the smallest value of x + 64/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: AM-GM</summary><p>x + 64/x ≥ 2√64 = 16, with equality when x = 8.</p></details>
+<details><summary>Method: Table</summary><p>x = 7, 8, 9 give 113/7, 16, 145/9; the minimum is 16 at x = 8.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>
+<div class=p><p><b>Problem x25.</b> The roots of x² − 11x + 5 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>111</details>
+<details><summary>Method: Vieta</summary><p>r + s = 11 and rs = 5, so r² + s² = (r + s)² − 2rs = 121 − 10 = 111.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 11 and p₂ = 11 · p₁ − 5 · p₀ = 121 − 10 = 111.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 4 (extremes) and Engel ch. 5</p></div>

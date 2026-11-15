@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 99</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 99: Unit 99: Loci, constructions and a potpourri</h1><p class=ref>Book: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20 (25 problems)<br>AoPS Volume 1, chapter 20 (A Potpourri of Geometry) and Volume 2, chapter 20 (Find It and Make It), worked in coordinates.</p>
+<h2>Reading</h2>
+<h3>1. Loci</h3><p>A <b>locus</b> is the set of all points satisfying a geometric condition. Standard loci: points equidistant from two points form the perpendicular bisector; points equidistant from two intersecting lines form the two angle bisectors; points at distance d from a point form a circle; points at distance d from a line form two parallel lines; points P with ∠APB = 90° form a circle with diameter AB (minus A and B).</p><p><b>Worked example 1.</b> The locus of points P with PA² + PB² = k for fixed A and B is a circle centred at the midpoint M of AB, since PA² + PB² = 2PM² + AB²/2 (Apollonius). So PM² = (k − AB²/2)/2. For A = (−1, 0), B = (1, 0), k = 10: PM² = (10 − 2)/2 = 4, a circle of radius 2.</p><p><b>Worked example 2.</b> In a circle of radius 5 consider all chords of length 8. Each is at distance √(25 − 16) = 3 from the centre, so the midpoints of these chords form the circle of radius 3 about the centre.</p>
+<h3>2. Constructions with compass and straightedge</h3><p>With a straightedge and a compass you can: bisect a segment and construct its perpendicular bisector; bisect an angle; construct a perpendicular to a line at a point; draw a parallel; construct a regular triangle, square, hexagon, and pentagon; divide a segment into n equal parts (by similar triangles).</p><p><b>Constructible numbers.</b> Starting from 1 you can build all numbers obtained by +, −, ×, ÷ and square roots. Hence you can construct √2, (1 + √5)/2 and the length of a regular pentagon's diagonal, but not ∛2 (doubling the cube), the trisection of a general angle, or a square with the same area as a circle (π is not algebraic).</p><p><b>Worked example.</b> Construct a segment of length √5: draw a right triangle with legs 1 and 2; the hypotenuse is √5. To construct √ab, draw a semicircle on a segment of length a + b and the perpendicular at the joining point.</p>
+<h3>3. A potpourri of problems</h3><p><b>The tallest pole.</b> A ladder of length 13 leans against a wall with its foot 5 away: it reaches 12. If the foot is pulled out by 1 (to 6), the top drops to √(169 − 36) = √133 ≈ 11.53.</p><p><b>The coin rotation puzzle.</b> A coin rolls around an identical coin without slipping: it makes 2 full turns for one trip around (not 1).</p><p><b>Folding and cutting.</b> A square piece of paper of side 8 is folded so that a corner touches the midpoint of the opposite side: the crease length can be found by similar triangles.</p><p><b>Heron and trapezoids.</b> The area of a trapezoid with parallel sides a, b and legs c, d can be found by sliding one leg so that a triangle with sides (a − b), c, d appears: Heron gives its height.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Forgetting that a locus can have two parts. Including excluded points (like A and B for the right-angle circle). Trying to trisect an angle with a straightedge and compass.</p><p><b>Checks.</b> Test a locus with two or three specific points.</p><p><b>Practice.</b> Describe the locus in words before using coordinates.</p>
+<h3>Worked examples with Try-its: Loci</h3><p>A <b>locus</b> is the set of points satisfying a condition. Equidistant from two points: their perpendicular bisector. At fixed distance r from a point: a circle. At fixed distance from a line: two parallel lines. Equidistant from two lines: the angle bisectors. <b>Apollonius.</b> For A = (0, 0) and B = (3, 0), the points P with PA = 2·PB satisfy x² + y² = 4((x − 3)² + y²), which simplifies to (x − 4)² + y² = 4, a circle centred (4, 0) with radius 2 (it meets the x-axis at 2 and 6, the harmonic pair).</p><details class="try"><summary>Try it<p>Describe the locus of points P with PA + PB = 10 for fixed points A, B that are 6 apart.</p><p><b>Answer.</b> An ellipse with foci A, B and semi-major axis 5.</p></details>
+<h3>Worked examples with Try-its: Constructions</h3><p>With straightedge and compass you can bisect angles and segments, construct perpendiculars and parallels, build 60° angles and hence 30°, 15°, and construct lengths √n. A regular n-gon is constructible for n = 3, 4, 5, 6, 8, 10, 12, 15, 16, 17 but not for 7, 9, 11 or 13. Trisecting a general angle and doubling the cube are impossible.</p><details class="try"><summary>Try it<p>Which of these regular polygons can be constructed: 7-gon, 10-gon, 9-gon, 12-gon?</p><p><b>Answer.</b> 10-gon and 12-gon.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Show that there are 5 consecutive composite numbers. <b>Solution.</b> 6! + 2, …, 6! + 6 = 722, 723, 724, 725, 726 are divisible by 2, 3, 4, 5, 6 respectively (722 = 2 · 361, 723 = 3 · 241, 724 = 4 · 181, 725 = 5 · 145, 726 = 6 · 121).</p><p><b>Reflection.</b> The same idea gives arbitrarily long gaps between primes.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Midpoints of chords through a fixed point.</b> For the unit circle and P = (1, 0), the chord from P to (cos θ, sin θ) has midpoint ((1 + cos θ)/2, (sin θ)/2), which lies on the circle with centre (1/2, 0) and radius 1/2: the locus is the circle on diameter OP. <b>Constructibility.</b> A regular 15-gon can be constructed (3 · 5 with distinct Fermat primes) but a regular 7-gon cannot.</p><details class="try"><summary>Try it<p>What is the locus of points equidistant from two parallel lines 6 apart?</p><p><b>Answer.</b> The parallel line midway between them, 3 from each.</p></details><details class="try"><summary>Try it<p>What is the locus of points at distance 2 from a given circle of radius 5 (same centre side)?</p><p><b>Answer.</b> Two concentric circles of radii 3 and 7.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Find the locus of points P such that PA² + PB² = 10 where A = (−1, 0) and B = (1, 0). <b>Solution.</b> (x + 1)² + y² + (x − 1)² + y² = 2x² + 2y² + 2 = 10, so x² + y² = 4: a circle of radius 2 about the midpoint of AB.</p><p><b>Check.</b> At (2, 0): 9 + 1 = 10 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Points are 5 from (0,0) and 5 from (6,0). How far apart are the two such points?</p><details><summary>Hint</summary>They lie on the line x = 3.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Algebra</summary><p>x = 3 and y² = 25 − 9, so the points are (3, ±4), which are 8 apart.</p></details>
+<details><summary>Method: Geometry</summary><p>The two points and the centres form a rhombus with diagonals 6 and 8.</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem p2.</b> The locus of points equidistant from (0,0) and (4,2) is a line. Where does it cross the y-axis (give y)?</p><details><summary>Hint</summary>Square the distances.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Algebra</summary><p>x² + y² = (x − 4)² + (y − 2)² gives 8x + 4y = 20, so at x = 0, y = 5.</p></details>
+<details><summary>Method: Bisector</summary><p>It passes through the midpoint (2, 1) with slope −2, so at x = 0 it is at y = 1 + 4 = 5.</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem p3.</b> The points P with PA = 2·PB, where A = (0,0) and B = (3,0), form a circle. What is its radius?</p><details><summary>Hint</summary>Square both sides and complete the square.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Algebra</summary><p>x² + y² = 4((x − 3)² + y²) gives x² − 8x + y² + 12 = 0, so (x − 4)² + y² = 4 and the radius is 2.</p></details>
+<details><summary>Method: Check</summary><p>The points (2, 0) and (6, 0) on the x-axis satisfy PA = 2PB.</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem p4.</b> How many circles are tangent to all three lines of a triangle (the incircle and excircles)?</p><details><summary>Hint</summary>One inside, one opposite each vertex.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Count</summary><p>The incircle plus three excircles: 4.</p></details>
+<details><summary>Method: Reason</summary><p>The centres are the intersections of angle bisectors: one internal triple point and three points where one internal and two external bisectors meet.</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem p5.</b> A ladder of length 10 slides with its ends on perpendicular walls. What is the radius of the circle traced by its midpoint?</p><details><summary>Hint</summary>The midpoint of a hypotenuse is equidistant from the three vertices.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Thales</summary><p>The midpoint is always 5 from the corner, so the locus is a circle (quarter) of radius 5.</p></details>
+<details><summary>Method: Coordinates</summary><p>The ends are (a, 0) and (0, b) with a² + b² = 100, so the midpoint (a/2, b/2) has distance √(a² + b²)/2 = 5 from the origin.</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem p6.</b> The parabola of points equidistant from (0, 2) and the line y = −2 has equation y = x²/8. What is y when x = 8?</p><details><summary>Hint</summary>Use y = x²/8.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Substitute</summary><p>y = 64/8 = 8.</p></details>
+<details><summary>Method: Check</summary><p>The point (8, 8) is 8 + 2 = 10 from the line y = −2 and √(64 + 36) = 10 from (0, 2).</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem p7.</b> An ellipse consists of the points whose distances to (−3, 0) and (3, 0) add up to 10. What is the length of its semi-minor axis?</p><details><summary>Hint</summary>a = 5 and c = 3.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Relation</summary><p>b² = a² − c² = 25 − 9 = 16, so b = 4.</p></details>
+<details><summary>Method: Check</summary><p>The point (0, 4) is 5 from each focus, and 5 + 5 = 10.</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem p8.</b> How many regular n-gons with 3 ≤ n ≤ 20 can be constructed with compass and straightedge?</p><details><summary>Hint</summary>n is a power of 2 times distinct Fermat primes.</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: List</summary><p>n = 3, 4, 5, 6, 8, 10, 12, 15, 16, 17, 20: 11.</p></details>
+<details><summary>Method: Reason</summary><p>For example 15 = 3 · 5 works, 7, 9, 11, 13, 14, 18 and 19 do not.</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem p9.</b> How many circles pass through three given non-collinear points?</p><details><summary>Hint</summary>The centre is the intersection of two perpendicular bisectors.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Uniqueness</summary><p>Exactly 1.</p></details>
+<details><summary>Method: Reason</summary><p>The perpendicular bisectors of two chords meet in exactly one point, which is the only possible centre.</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem p10.</b> How many lines make up the locus of points at distance 3 from a given line?</p><details><summary>Hint</summary>One on each side.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Sides</summary><p>Two parallel lines, one on each side of the given line, each at distance 3.</p></details>
+<details><summary>Method: Coordinates</summary><p>For the x-axis the locus is y = 3 or y = −3.</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem p11.</b> How many points are equidistant from three non-collinear points?</p><details><summary>Hint</summary>Circumcentre.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Perpendicular bisectors</summary><p>The perpendicular bisectors of two sides meet in exactly one point, the circumcentre.</p></details>
+<details><summary>Method: Uniqueness</summary><p>A circle through three non-collinear points is unique.</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem p12.</b> A and B are 7 apart. How many points are at distance 5 from A and distance 3 from B?</p><details><summary>Hint</summary>Intersect two circles.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Circles</summary><p>Since |5 − 3| < 7 < 5 + 3, the two circles meet in 2 points.</p></details>
+<details><summary>Method: Triangle inequality</summary><p>Triangles with sides 5, 3, 7 exist, and the third vertex has two mirror positions.</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem p13.</b> How many lines make up the locus of points equidistant from two intersecting lines?</p><details><summary>Hint</summary>Angle bisectors.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Bisectors</summary><p>The two angle bisectors, which are perpendicular to each other.</p></details>
+<details><summary>Method: Reflection</summary><p>Each bisector is a reflection axis exchanging the two lines.</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem p14.</b> Two points are 6 apart. How many circles of radius 5 pass through both?</p><details><summary>Hint</summary>The centre lies on the perpendicular bisector.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Centres</summary><p>The centre is at distance √(25 − 9) = 4 from the midpoint along the perpendicular bisector, in 2 directions.</p></details>
+<details><summary>Method: Symmetry</summary><p>The two circles are mirror images in the line through the points.</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem p15.</b> A and B are 6 apart. The locus of P with PA = 2 PB is a circle. What is its radius?</p><details><summary>Hint</summary>Apollonius: radius = k · AB/|k² − 1|.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Formula</summary><p>2 · 6/3 = 4.</p></details>
+<details><summary>Method: Diameter</summary><p>The circle's diameter has endpoints at the internal division point (distance 2 from B) and the external one (distance 6 from B), so the diameter is 8 and the radius is 4.</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem p16.</b> The foci of an ellipse are 6 apart and the sum of distances to the foci is 10. What is its semi-minor axis?</p><details><summary>Hint</summary>a = 5, c = 3.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Formula</summary><p>b² = a² − c² = 25 − 9 = 16, so b = 4.</p></details>
+<details><summary>Method: Vertex</summary><p>At the top of the ellipse the distance to each focus is a = 5, giving a 3-4-5 triangle.</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem p17.</b> A parabola has focus 8 units from its directrix. How far is the vertex from the focus?</p><details><summary>Hint</summary>The vertex is midway.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Midpoint</summary><p>The vertex is equidistant from the focus and the directrix, so 8/2 = 4.</p></details>
+<details><summary>Method: Equation</summary><p>With focus (0, 4) and directrix y = −4 the parabola is x² = 16y.</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem x18.</b> Find the distance between (-2, 6) and (13, 26).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Formula</summary><p>√(15² + 20²) = √625 = 25.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 15 and 20 form a right triangle with hypotenuse 25 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem x19.</b> Find the distance between (1, 2) and (7, 10).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Formula</summary><p>√(6² + 8²) = √100 = 10.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 6 and 8 form a right triangle with hypotenuse 10 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem x20.</b> Find the distance between (-3, 4) and (2, 16).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Formula</summary><p>√(5² + 12²) = √169 = 13.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 5 and 12 form a right triangle with hypotenuse 13 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem x21.</b> Find the distance between (0, 0) and (8, 15).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>17</details>
+<details><summary>Method: Formula</summary><p>√(8² + 15²) = √289 = 17.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 8 and 15 form a right triangle with hypotenuse 17 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem x22.</b> Find the distance between (2, -1) and (9, 23).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Formula</summary><p>√(7² + 24²) = √625 = 25.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 7 and 24 form a right triangle with hypotenuse 25 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem x23.</b> Find the distance between (-4, -2) and (16, 19).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Formula</summary><p>√(20² + 21²) = √841 = 29.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 20 and 21 form a right triangle with hypotenuse 29 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem x24.</b> Find the distance between (5, 5) and (14, 17).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Formula</summary><p>√(9² + 12²) = √225 = 15.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 9 and 12 form a right triangle with hypotenuse 15 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>
+<div class=p><p><b>Problem x25.</b> Find the distance between (1, -3) and (13, 13).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Formula</summary><p>√(12² + 16²) = √400 = 20.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 12 and 16 form a right triangle with hypotenuse 20 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: AoPS Volume 1, ch. 20 (A Potpourri of Geometry) and Volume 2 ch. 20</p></div>

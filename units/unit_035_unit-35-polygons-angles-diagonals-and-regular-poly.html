@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 35</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 35: Unit 35: Polygons: angles, diagonals and regular polygons</h1><p class=ref>Book: Rusczyk, Art of Problem Solving Vol. 1, ch. 13 (25 problems)<br>Rusczyk, AoPS Vol. 1, chapter 13 (Polygons), printed pp. 127-132.</p>
+<h2>Reading</h2>
+<h3>1. Angles in polygons</h3><p>A polygon with n sides can be cut from one vertex into n − 2 triangles, so its interior angles sum to (n − 2) · 180°: 180° for n = 3, 360° for n = 4, 540° for n = 5, 720° for n = 6, 1080° for n = 8, 1440° for n = 10 and 1800° for n = 12. The <b>exterior angles</b> (one at each vertex, turning in the same direction) always sum to 360°, whatever n is.</p><p><b>Regular polygons.</b> All sides and angles equal. Each interior angle is (n − 2) · 180°/n: 108° for a pentagon, 120° for a hexagon, 135° for an octagon. Each exterior angle is 360°/n, so 36° for a decagon. To find n from an angle, use the exterior angle: if the interior angle is 156° the exterior angle is 24° and n = 360/24 = 15.</p><p><b>Convex or not.</b> The formulas for the angle sum hold for any simple polygon, convex or not; the exterior-angle fact needs the signed (turning) version. Always check the number of sides before using the formula.</p><details class="try"><summary>Try it</summary><p>Each interior angle of a regular polygon is 168°. How many sides?</p><p><b>Answer.</b> Exterior 12°, n = 30.</p></details>
+<h3>2. Diagonals</h3><p>A convex n-gon has n(n − 3)/2 diagonals: from each vertex there are n − 3 diagonals (not to itself or its two neighbours), and each diagonal is counted from both ends. The counts for n = 4, 5, 6, 8, 10, 12 are 2, 5, 9, 20, 35, 54, and a 20-gon has 170.</p><p><b>Triangulations.</b> Any convex n-gon can be cut into n − 2 triangles by n − 3 non-crossing diagonals; the number of different triangulations is the Catalan number C(n − 2): 14 for the hexagon.</p><p><b>Regions made by all diagonals.</b> If no three diagonals meet at a point, the diagonals divide the interior of a convex n-gon into C(n, 4) + C(n − 1, 2) regions: 1, 4, 11, 25 for n = 3, 4, 5, 6. Each intersection point of two diagonals corresponds to a choice of 4 vertices, which is why C(n, 4) appears.</p><details class="try"><summary>Try it</summary><p>How many diagonals does a convex 15-gon have?</p><p><b>Answer.</b> 15 · 12/2 = 90.</p></details>
+<h3>3. Regular polygons: lengths and areas</h3><p>Place a regular n-gon in a circle of radius R. Its area is (n/2)R² sin(360°/n), because it consists of n triangles with two sides R and apex angle 360°/n. For n = 8 and R = 1 the area is 2√2. A regular hexagon of side s splits into 6 equilateral triangles and has area (3√3/2)s²: for s = 2 that is 6√3.</p><p><b>The pentagon and the golden ratio.</b> In a regular pentagon the ratio of the diagonal to the side is φ = (1 + √5)/2 ≈ 1.618 (verified from the coordinates of the vertices on a unit circle). This is why the pentagram contains a nest of similar pentagons and pentagrams, each smaller by a factor of φ².</p><p><b>Octagon.</b> A regular octagon of side 1 has area 2 + 2√2 (cut the corners off a square of side 1 + √2).</p><p><b>Apothem.</b> The distance from the centre to the midpoint of a side is the apothem a, and the area of a regular polygon is ½ · perimeter · apothem.</p><details class="try"><summary>Try it</summary><p>Find the area of a regular hexagon with side 4.</p><p><b>Answer.</b> (3√3/2) · 16 = 24√3.</p></details>
+<h3>4. Counting with polygons</h3><p><b>Triangles from vertices.</b> The vertices of a convex 12-gon form C(12, 3) = 220 triangles. Among them, the equilateral ones use every fourth vertex: 4 of them. To count isosceles triangles, fix the apex and choose a symmetric pair of base vertices.</p><p><b>Interior angles in a sequence.</b> If a convex polygon's angles are in arithmetic progression, use the sum formula to determine the middle value: for 5 angles with common difference 10°, the sum is 540°, so the middle angle is 108° and the angles are 88°, 98°, 108°, 118°, 128°.</p><details class="try"><summary>Try it</summary><p>A convex hexagon has five angles of 110°. What is the sixth?</p><p><b>Answer.</b> 720 − 550 = 170°.</p></details>
+<h3>5. A longer problem</h3><p><b>Problem.</b> A regular polygon has interior angle 150°. (a) How many sides? (b) How many diagonals? (c) What is the area if the side is 2?</p><p><b>Solution.</b> (a) Exterior 30°, so 12 sides. (b) 12 · 9/2 = 54. (c) A regular 12-gon of side 2 has area 3 · s² · (2 + √3) = 12(2 + √3) = 24 + 12√3: check by cutting it into 12 triangles with apex 30° and apothem (s/2)/tan 15° = 1/tan 15° = 2 + √3, giving area ½ · 24 · (2 + √3).</p><p><b>Reflection.</b> The exterior angle did the first part at once. For the area, the apothem formula ½ · perimeter · apothem is the most reliable route.</p>
+<h3>6. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Using n · 180 instead of (n − 2) · 180. (2) Counting diagonals as n(n − 3) without halving. (3) Mixing circumradius and side. (4) Forgetting that the exterior angle is 180° minus the interior angle.</p><p><b>Checks.</b> Test formulas on the square and the hexagon. The exterior angles must sum to 360°.</p><p><b>How to practise.</b> Draw the polygon and mark one triangle. In Unlimited practice, rotate the polygon-angle and diagonal families.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find the sum of the interior angles of a hexagon, in degrees.</p><details><summary>Hint</summary>(n − 2)·180.</details><details><summary>Answer</summary>720</details>
+<details><summary>Method: Triangles from one vertex</summary><p>Cut the hexagon from one vertex into 4 triangles: 4·180° = 720°.</p></details>
+<details><summary>Method: Formula</summary><p>(6 − 2)·180 = 720.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem p2.</b> Find each interior angle of a regular 12-sided polygon, in degrees.</p><details><summary>Hint</summary>Exterior angle is 360/12.</details><details><summary>Answer</summary>150</details>
+<details><summary>Method: Exterior angle</summary><p>Each exterior angle is 360°/12 = 30°, so each interior angle is 180° − 30° = 150°.</p></details>
+<details><summary>Method: Sum</summary><p>The interior sum is 10·180° = 1800°, shared among 12 equal angles: 150° each.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem p3.</b> How many diagonals does a decagon (10 sides) have?</p><details><summary>Hint</summary>n(n − 3)/2.</details><details><summary>Answer</summary>35</details>
+<details><summary>Method: Formula</summary><p>10·7/2 = 35.</p></details>
+<details><summary>Method: Count from each vertex</summary><p>Each vertex joins to 10 − 3 = 7 non-neighbours. 10·7 = 70 counts each diagonal twice, so 35.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem p4.</b> Each exterior angle of a regular polygon is 18°. How many sides does it have?</p><details><summary>Hint</summary>Exterior angles add to 360°.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Exterior angles</summary><p>n = 360/18 = 20.</p></details>
+<details><summary>Method: Interior angle</summary><p>The interior angle is 162°, and (n − 2)·180/n = 162 gives 18n = 360, n = 20.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem p5.</b> The interior angles of a convex polygon add up to 1980°. How many sides has it?</p><details><summary>Hint</summary>(n − 2)·180 = 1980.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Solve</summary><p>n − 2 = 1980/180 = 11, so n = 13.</p></details>
+<details><summary>Method: Check</summary><p>For n = 13 the sum is 11·180 = 1980.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem p6.</b> A convex polygon has 54 diagonals. How many sides does it have?</p><details><summary>Hint</summary>n(n − 3) = 108.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Quadratic</summary><p>n² − 3n − 108 = 0 gives (n − 12)(n + 9) = 0, so n = 12.</p></details>
+<details><summary>Method: Try values</summary><p>n = 11 gives 44 diagonals and n = 12 gives 54.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem p7.</b> A regular hexagon has side 6. Find its area. (Write 54√3 style.)</p><details><summary>Hint</summary>Six equilateral triangles.</details><details><summary>Answer</summary>54√3</details>
+<details><summary>Method: Six triangles</summary><p>Each equilateral triangle of side 6 has area (√3/4)·36 = 9√3. Six of them: 54√3.</p></details>
+<details><summary>Method: Trapezoids</summary><p>Cut the hexagon along its long diagonal into two trapezoids. Each has height 3√3 and parallel sides 6 and 12, so area (6 + 12)/2 · 3√3 = 27√3. Together: 54√3.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem p8.</b> A regular hexagon has side 10. What is the distance between two opposite sides?</p><details><summary>Hint</summary>Two apothems.</details><details><summary>Answer</summary>10√3</details>
+<details><summary>Method: Apothem</summary><p>The apothem (centre to a side) is 5√3, the height of an equilateral triangle of side 10. The distance across is twice that: 10√3.</p></details>
+<details><summary>Method: Trapezoid height</summary><p>Cut the hexagon into two trapezoids; each has height 5√3, and together they span the distance 10√3.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem p9.</b> In a regular pentagon, find the angle between the two diagonals from one vertex, in degrees.</p><details><summary>Hint</summary>The three angles at a vertex are equal.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Equal angles</summary><p>The interior angle is 108°, and the two diagonals divide it into three equal angles of 36° (each is an inscribed angle on an arc of 72°). The angle between the diagonals is 36°.</p></details>
+<details><summary>Method: Inscribed angles</summary><p>Each side of a regular pentagon cuts a 72° arc of the circumscribed circle. The angle between the diagonals cuts one such arc, so it is 72°/2 = 36°.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem p10.</b> How many diagonals does a regular octagon have, and what is each of its interior angles in degrees? Answer as diagonals, angle.</p><details><summary>Hint</summary>Use n(n − 3)/2 and 180 − 360/n.</details><details><summary>Answer</summary>20, 135</details>
+<details><summary>Method: Formulas</summary><p>8·5/2 = 20 diagonals; the interior angle is 180° − 360°/8 = 135°.</p></details>
+<details><summary>Method: Reasoning</summary><p>Each vertex has 5 diagonals, 8·5/2 = 20. The angle sum is 6·180° = 1080°, so each angle is 135°.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem x11.</b> Find the sum of the interior angles of a convex 14-gon in degrees.</p><details><summary>Hint</summary>(n − 2) · 180.</details><details><summary>Answer</summary>2160</details>
+<details><summary>Method: Formula</summary><p>12 · 180 = 2160.</p></details>
+<details><summary>Method: Triangles</summary><p>A 14-gon splits into 12 triangles from one vertex.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem x12.</b> How many diagonals does a convex 15-gon have?</p><details><summary>Hint</summary>n(n − 3)/2.</details><details><summary>Answer</summary>90</details>
+<details><summary>Method: Formula</summary><p>15 · 12/2 = 90.</p></details>
+<details><summary>Method: Pairs</summary><p>C(15, 2) − 15 = 105 − 15 = 90.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem x13.</b> Find each exterior angle of a regular 20-gon in degrees.</p><details><summary>Hint</summary>360/n.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: Formula</summary><p>360/20 = 18.</p></details>
+<details><summary>Method: Interior</summary><p>The interior angle is 162 and 180 − 162 = 18.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem x14.</b> Each interior angle of a regular polygon is 168°. How many sides does it have?</p><details><summary>Hint</summary>Exterior angle 12°.</details><details><summary>Answer</summary>30</details>
+<details><summary>Method: Exterior</summary><p>360/12 = 30.</p></details>
+<details><summary>Method: Formula</summary><p>(n − 2) · 180 = 168n gives 12n = 360.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem x15.</b> A convex polygon has 54 diagonals. How many sides does it have?</p><details><summary>Hint</summary>n(n − 3)/2 = 54.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Equation</summary><p>n² − 3n − 108 = 0, so (n − 12)(n + 9) = 0, giving n = 12.</p></details>
+<details><summary>Method: Check</summary><p>12 · 9/2 = 54.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem x16.</b> Find each interior angle of a regular 24-gon in degrees.</p><details><summary>Hint</summary>180 − 360/n.</details><details><summary>Answer</summary>165</details>
+<details><summary>Method: Formula</summary><p>180 − 15 = 165.</p></details>
+<details><summary>Method: Sum</summary><p>22 · 180/24 = 165.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem x17.</b> The interior angles of a convex polygon sum to 1800°. How many sides does it have?</p><details><summary>Hint</summary>(n − 2) · 180 = 1800.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Equation</summary><p>n − 2 = 10, so n = 12.</p></details>
+<details><summary>Method: Check</summary><p>A 12-gon has 10 · 180 = 1800 degrees.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem x18.</b> Four angles of a convex pentagon are 100°, 110°, 120° and 130°. Find the fifth in degrees.</p><details><summary>Hint</summary>Pentagon sum 540°.</details><details><summary>Answer</summary>80</details>
+<details><summary>Method: Sum</summary><p>540 − 460 = 80.</p></details>
+<details><summary>Method: Exterior</summary><p>The exterior angles are 80, 70, 60, 50 and the fifth is 360 − 260 = 100, so the interior angle is 80.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem x19.</b> Find the sum of the interior angles of a convex 9-gon, in degrees.</p><details><summary>Hint</summary>(n − 2) · 180.</details><details><summary>Answer</summary>1260</details>
+<details><summary>Method: Formula</summary><p>(9 − 2) · 180 = 1260.</p></details>
+<details><summary>Method: Triangles</summary><p>Drawing diagonals from one vertex splits the polygon into 7 triangles of 180° each: 1260.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem x20.</b> How many diagonals does a convex 9-gon have?</p><details><summary>Hint</summary>n(n − 3)/2.</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: Formula</summary><p>9 · 6/2 = 27.</p></details>
+<details><summary>Method: Pairs</summary><p>C(9, 2) = 36 pairs of vertices, minus the 9 sides: 27.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem x21.</b> Find each exterior angle of a regular 10-gon, in degrees.</p><details><summary>Hint</summary>The exterior angles sum to 360°.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Formula</summary><p>360/10 = 36.</p></details>
+<details><summary>Method: Interior angle</summary><p>Each interior angle is 144, and 180 − 144 = 36.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem x22.</b> Each interior angle of a regular polygon is 140°. How many sides does it have?</p><details><summary>Hint</summary>Find the exterior angle first.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Exterior angle</summary><p>The exterior angle is 180 − 140 = 40, so n = 360/40 = 9.</p></details>
+<details><summary>Method: Equation</summary><p>(n − 2) · 180 = 140 · n gives n = 9.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem x23.</b> 25 objects are placed into 6 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈25/6⌉ = 5.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 4 objects, there would be at most 6 · 4 = 24 < 25 objects in all.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem x24.</b> Find the sum of the interior angles of a convex 10-gon, in degrees.</p><details><summary>Hint</summary>(n − 2) · 180.</details><details><summary>Answer</summary>1440</details>
+<details><summary>Method: Formula</summary><p>(10 − 2) · 180 = 1440.</p></details>
+<details><summary>Method: Triangles</summary><p>Drawing diagonals from one vertex splits the polygon into 8 triangles of 180° each: 1440.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>
+<div class=p><p><b>Problem x25.</b> How many diagonals does a convex 10-gon have?</p><details><summary>Hint</summary>n(n − 3)/2.</details><details><summary>Answer</summary>35</details>
+<details><summary>Method: Formula</summary><p>10 · 7/2 = 35.</p></details>
+<details><summary>Method: Pairs</summary><p>C(10, 2) = 45 pairs of vertices, minus the 10 sides: 35.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 13</p></div>

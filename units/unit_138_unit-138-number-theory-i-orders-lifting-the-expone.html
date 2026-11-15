@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 138</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 138: Unit 138: Number theory I: orders, lifting the exponent and residues</h1><p class=ref>Book: Khurmi, Modern Olympiad Number Theory; Andreescu &amp; Feng, 104 Number Theory Problems; Andreescu &amp; Dospinescu, Straight from the Book (25 problems)<br>Khurmi, Modern Olympiad Number Theory, ch. 5 (orders, quadratic residues), ch. 6 (Legendre&#x27;s formula, lifting the exponent) and 9.2 (CRT); Andreescu &amp; Dospinescu, Straight from the Book, ch. 3.</p>
+<h2>Reading</h2>
+<h3>1. Orders and Euler's theorem</h3><p>If gcd(a, m) = 1 the order of a mod m is the least k with aᵏ ≡ 1 and divides φ(m). The order of 3 mod 7 is 6 (3 is a primitive root), of 2 mod 7 is 3. To compute 7^2026 mod 10: the order of 7 mod 10 is 4 and 2026 ≡ 2 mod 4, so the answer is 7² = 49 → 9.</p><details class="try"><summary>Try it<p>Order of 2 mod 7?</p><p><b>Answer.</b> 3.</p></details><details class="try"><summary>Try it<p>Last digit of 3^2027?</p><p><b>Answer.</b> 3^2027: 2027 ≡ 3 mod 4, so 27 → 7.</p></details>
+<h3>2. Lifting the exponent and quadratic residues</h3><p><b>LTE.</b> If p is an odd prime dividing a − 1, then v_p(aⁿ − 1) = v_p(a − 1) + v_p(n). Example: v₃(10²⁷ − 1) = 2 + 3 = 5. For p = 2 and n even: v₂(aⁿ − 1) = v₂(a − 1) + v₂(a + 1) + v₂(n) − 1, e.g. v₂(3¹⁶ − 1) = 1 + 2 + 4 − 1 = 6. <b>Squares.</b> Mod an odd prime p there are (p − 1)/2 non-zero squares, and −1 is a square iff p ≡ 1 mod 4.</p><details class="try"><summary>Try it<p>v₅(6²⁵ − 1)?</p><p><b>Answer.</b> 1 + 2 = 3.</p></details><details class="try"><summary>Try it<p>Is −1 a square mod 13?</p><p><b>Answer.</b> Yes: 5² = 25 ≡ −1.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> Find the smallest positive x with x ≡ 2 (mod 3) and x ≡ 3 (mod 5). <b>Solution.</b> Numbers ≡ 3 mod 5 are 3, 8, 13; 8 ≡ 2 mod 3, so x = 8.</p><p><b>Check.</b> 8 = 3 · 2 + 2 ✓ and 8 = 5 + 3 ✓.</p>
+<h3>4. In the books</h3><p><b>Khurmi, ch. 5.</b> 5.2 Quadratic residues, 5.3 the square root of −1 (solvable iff p = 2 or p ≡ 1 mod 4), 5.4 Orders (the order of a divides every n with aⁿ ≡ 1, hence divides p − 1; Example 5.4.1 is n | 2ⁿ − 1), 5.5 Primitive roots.</p><p><b>Khurmi, ch. 6.</b> Legendre's formula (6.2); the lifting-the-exponent lemma for odd p (Lemma 6.4.1: v_p(aⁿ − bⁿ) = v_p(a − b) + v_p(n)); and for p = 2 (Lemmas 6.5.1 and 6.5.2: for even n, v₂(xⁿ − yⁿ) = v₂(x − y) + v₂(x + y) + v₂(n) − 1). Section 6.7 uses Zsigmondy's theorem. <b>9.2</b> covers the Chinese Remainder Theorem.</p><p><b>Straight from the Book, ch. 3 (&ldquo;Look at the Exponent&rdquo;).</b> It covers the local-global principle (3.2), Legendre's formula (3.3), the lifting exponent lemma (3.5) and p-adic techniques (3.6), with addenda on estimates for primes and p-adic numbers.</p><p><b>Honest note.</b> Orders and LTE match the books. Zsigmondy and primitive roots are only mentioned here, not worked.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find the order of 2 modulo 31 (the least k ≥ 1 with 2^k ≡ 1).</p><details><summary>Hint</summary>The order divides φ(31) = 30.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Divisors of φ</summary><p>Test the divisors of 30: the first power of 2 that is 1 mod 31 is 5.</p></details>
+<details><summary>Method: Powers</summary><p>List 2, 2², … mod 31 until 1 appears: at exponent 5.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> Find the order of 3 modulo 7 (the least k ≥ 1 with 3^k ≡ 1).</p><details><summary>Hint</summary>The order divides φ(7) = 6.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Divisors of φ</summary><p>Test the divisors of 6: the first power of 3 that is 1 mod 7 is 6.</p></details>
+<details><summary>Method: Powers</summary><p>List 3, 3², … mod 7 until 1 appears: at exponent 6.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> Find the order of 10 modulo 13 (the least k ≥ 1 with 10^k ≡ 1).</p><details><summary>Hint</summary>The order divides φ(13) = 12.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Divisors of φ</summary><p>Test the divisors of 12: the first power of 10 that is 1 mod 13 is 6.</p></details>
+<details><summary>Method: Powers</summary><p>List 10, 10², … mod 13 until 1 appears: at exponent 6.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> Find the order of 5 modulo 17 (the least k ≥ 1 with 5^k ≡ 1).</p><details><summary>Hint</summary>The order divides φ(17) = 16.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Divisors of φ</summary><p>Test the divisors of 16: the first power of 5 that is 1 mod 17 is 16.</p></details>
+<details><summary>Method: Powers</summary><p>List 5, 5², … mod 17 until 1 appears: at exponent 16.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> Find 7^2026 mod 10.</p><details><summary>Hint</summary>Reduce the exponent using the order or Euler's theorem.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Euler</summary><p>Reduce the exponent modulo the order of 7 mod 10 and compute: 9.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Square repeatedly, reducing mod 10 each time: 9.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> Find 3^2000 mod 100.</p><details><summary>Hint</summary>Reduce the exponent using the order or Euler's theorem.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Euler</summary><p>Reduce the exponent modulo the order of 3 mod 100 and compute: 1.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Square repeatedly, reducing mod 100 each time: 1.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> Find 13^1000 mod 7.</p><details><summary>Hint</summary>Reduce the exponent using the order or Euler's theorem.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Euler</summary><p>Reduce the exponent modulo the order of 13 mod 7 and compute: 1.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Square repeatedly, reducing mod 7 each time: 1.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> Find the exponent of 3 in 10^27 − 1.</p><details><summary>Hint</summary>Lifting the exponent: v_p(aⁿ − 1) = v_p(a − 1) + v_p(n) when p | a − 1.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Lifting the exponent</summary><p>Apply the lifting-the-exponent lemma: v_3(10^27 − 1) = 5.</p></details>
+<details><summary>Method: Factor repeatedly</summary><p>Write 10^27 − 1 as a product of cyclotomic-style factors and count the factors of 3 in each: 5.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> Find the exponent of 5 in 6^25 − 1.</p><details><summary>Hint</summary>Lifting the exponent: v_p(aⁿ − 1) = v_p(a − 1) + v_p(n) when p | a − 1.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Lifting the exponent</summary><p>Apply the lifting-the-exponent lemma: v_5(6^25 − 1) = 3.</p></details>
+<details><summary>Method: Factor repeatedly</summary><p>Write 6^25 − 1 as a product of cyclotomic-style factors and count the factors of 5 in each: 3.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> Find the exponent of 7 in 8^49 − 1.</p><details><summary>Hint</summary>Lifting the exponent: v_p(aⁿ − 1) = v_p(a − 1) + v_p(n) when p | a − 1.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Lifting the exponent</summary><p>Apply the lifting-the-exponent lemma: v_7(8^49 − 1) = 3.</p></details>
+<details><summary>Method: Factor repeatedly</summary><p>Write 8^49 − 1 as a product of cyclotomic-style factors and count the factors of 7 in each: 3.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> Find the exponent of 2 in 3^16 − 1.</p><details><summary>Hint</summary>Lifting the exponent for p = 2: v₂(aⁿ − 1) = v₂(a − 1) + v₂(a + 1) + v₂(n) − 1 for even n.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Lifting the exponent</summary><p>Apply the lifting-the-exponent lemma: v_2(3^16 − 1) = 6.</p></details>
+<details><summary>Method: Factor repeatedly</summary><p>Write 3^16 − 1 as a product of cyclotomic-style factors and count the factors of 2 in each: 6.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> How many residues r in {0, 1, …, 10} are squares modulo 11 (including 0)?</p><details><summary>Hint</summary>x and −x give the same square.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Pairing</summary><p>The non-zero squares come from the pairs ±x: (11 − 1)/2 = 5 of them, plus 0: 6.</p></details>
+<details><summary>Method: List</summary><p>Compute x² mod 11 for x = 0, …, 10 and count distinct values: 6.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> How many residues r in {0, 1, …, 12} are squares modulo 13 (including 0)?</p><details><summary>Hint</summary>x and −x give the same square.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Pairing</summary><p>The non-zero squares come from the pairs ±x: (13 − 1)/2 = 6 of them, plus 0: 7.</p></details>
+<details><summary>Method: List</summary><p>Compute x² mod 13 for x = 0, …, 12 and count distinct values: 7.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> How many residues r in {0, 1, …, 16} are squares modulo 17 (including 0)?</p><details><summary>Hint</summary>x and −x give the same square.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Pairing</summary><p>The non-zero squares come from the pairs ±x: (17 − 1)/2 = 8 of them, plus 0: 9.</p></details>
+<details><summary>Method: List</summary><p>Compute x² mod 17 for x = 0, …, 16 and count distinct values: 9.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> How many residues r in {0, 1, …, 18} are squares modulo 19 (including 0)?</p><details><summary>Hint</summary>x and −x give the same square.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Pairing</summary><p>The non-zero squares come from the pairs ±x: (19 − 1)/2 = 9 of them, plus 0: 10.</p></details>
+<details><summary>Method: List</summary><p>Compute x² mod 19 for x = 0, …, 18 and count distinct values: 10.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> Find the smallest positive integer x with x ≡ 2 (mod 3) and x ≡ 3 (mod 5).</p><details><summary>Hint</summary>List numbers ≡ 3 (mod 5) and test them mod 3.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Chinese Remainder</summary><p>The solution is unique mod 15; combining the congruences gives x = 8.</p></details>
+<details><summary>Method: Search</summary><p>The candidates 3, 8, 13 ≡ 3 mod 5; the first with x ≡ 2 mod 3 is 8.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> Find the smallest positive integer x with x ≡ 3 (mod 4) and x ≡ 2 (mod 7).</p><details><summary>Hint</summary>List numbers ≡ 2 (mod 7) and test them mod 4.</details><details><summary>Answer</summary>23</details>
+<details><summary>Method: Chinese Remainder</summary><p>The solution is unique mod 28; combining the congruences gives x = 23.</p></details>
+<details><summary>Method: Search</summary><p>The candidates 2, 9, 16 ≡ 2 mod 7; the first with x ≡ 3 mod 4 is 23.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> Find the smallest positive integer x with x ≡ 1 (mod 5) and x ≡ 4 (mod 7).</p><details><summary>Hint</summary>List numbers ≡ 4 (mod 7) and test them mod 5.</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: Chinese Remainder</summary><p>The solution is unique mod 35; combining the congruences gives x = 11.</p></details>
+<details><summary>Method: Search</summary><p>The candidates 4, 11, 18 ≡ 4 mod 7; the first with x ≡ 1 mod 5 is 11.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> Find the smallest positive integer x with x ≡ 5 (mod 6) and x ≡ 2 (mod 11).</p><details><summary>Hint</summary>List numbers ≡ 2 (mod 11) and test them mod 6.</details><details><summary>Answer</summary>35</details>
+<details><summary>Method: Chinese Remainder</summary><p>The solution is unique mod 66; combining the congruences gives x = 35.</p></details>
+<details><summary>Method: Search</summary><p>The candidates 2, 13, 24 ≡ 2 mod 11; the first with x ≡ 5 mod 6 is 35.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> For how many primes p < 30 does x² + 1 ≡ 0 (mod p) have a solution?</p><details><summary>Hint</summary>Only p = 2 and primes ≡ 1 (mod 4) work.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Quadratic residues</summary><p>−1 is a square mod p exactly when p = 2 or p ≡ 1 (mod 4); counting such primes below 30 gives 5.</p></details>
+<details><summary>Method: Direct test</summary><p>Test x = 0, …, p − 1 for every prime below 30: 5 primes have a solution.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> For how many primes p < 50 does x² + 1 ≡ 0 (mod p) have a solution?</p><details><summary>Hint</summary>Only p = 2 and primes ≡ 1 (mod 4) work.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Quadratic residues</summary><p>−1 is a square mod p exactly when p = 2 or p ≡ 1 (mod 4); counting such primes below 50 gives 7.</p></details>
+<details><summary>Method: Direct test</summary><p>Test x = 0, …, p − 1 for every prime below 50: 7 primes have a solution.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> For how many primes p < 70 does x² + 1 ≡ 0 (mod p) have a solution?</p><details><summary>Hint</summary>Only p = 2 and primes ≡ 1 (mod 4) work.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Quadratic residues</summary><p>−1 is a square mod p exactly when p = 2 or p ≡ 1 (mod 4); counting such primes below 70 gives 9.</p></details>
+<details><summary>Method: Direct test</summary><p>Test x = 0, …, p − 1 for every prime below 70: 9 primes have a solution.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> How many integers from 1 to 60 are coprime to 6?</p><details><summary>Hint</summary>Use inclusion–exclusion over the prime factors of 6.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Inclusion–exclusion</summary><p>Counting 60 minus multiples of each prime factor plus multiples of products gives 20.</p></details>
+<details><summary>Method: Direct</summary><p>Check gcd(t, 6) for each t ≤ 60: 20 integers qualify.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> How many integers from 1 to 100 are coprime to 15?</p><details><summary>Hint</summary>Use inclusion–exclusion over the prime factors of 15.</details><details><summary>Answer</summary>53</details>
+<details><summary>Method: Inclusion–exclusion</summary><p>Counting 100 minus multiples of each prime factor plus multiples of products gives 53.</p></details>
+<details><summary>Method: Direct</summary><p>Check gcd(t, 15) for each t ≤ 100: 53 integers qualify.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> How many integers from 1 to 210 are coprime to 30?</p><details><summary>Hint</summary>Use inclusion–exclusion over the prime factors of 30.</details><details><summary>Answer</summary>56</details>
+<details><summary>Method: Inclusion–exclusion</summary><p>Counting 210 minus multiples of each prime factor plus multiples of products gives 56.</p></details>
+<details><summary>Method: Direct</summary><p>Check gcd(t, 30) for each t ≤ 210: 56 integers qualify.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 5–6, 9.2 (original problem)</p></div>

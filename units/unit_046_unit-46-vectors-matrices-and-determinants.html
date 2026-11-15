@@ -1,0 +1,111 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 46</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 46: Unit 46: Vectors, matrices and determinants</h1><p class=ref>Book: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11 (25 problems)<br>Rusczyk, AoPS Vol. 2, chapters 10 and 11 (Vectors and Matrices; Cross Products and Determinants).</p>
+<h2>Reading</h2>
+<h3>1. Vectors</h3><p>A <b>vector</b> has a magnitude and direction; in coordinates it is a list like (1, 2, 3). Add componentwise. The <b>dot product</b> is a · b = Σaᵢbᵢ: (1, 2, 3) · (4, 5, 6) = 4 + 10 + 18 = 32, and it equals |a||b| cos θ, so two vectors are perpendicular exactly when their dot product is 0. The length of (2, 3, 6) is √49 = 7. The <b>cross product</b> in three dimensions gives a vector perpendicular to both: (1, 2, 3) × (4, 5, 6) = (−3, 6, −3).</p><p><b>Area from vectors.</b> The area of the triangle with vertices (0, 0), (3, 1), (1, 4) is ½|3 · 4 − 1 · 1| = 5.5; the parallelogram has area |ad − bc| for the vectors (a, b) and (c, d). The same quantity is a 2 × 2 determinant.</p><details class="try"><summary>Try it</summary><p>Find the angle between (1, 0) and (1, 1).</p><p><b>Answer.</b> cos θ = 1/√2, so θ = 45°.</p></details>
+<h3>2. Matrices</h3><p>A matrix is a rectangular array. Multiplication is row-by-column: [[1, 2], [3, 4]] × [[0, 1], [1, 0]] = [[2, 1], [4, 3]], which swaps the columns, while the product in the other order is [[3, 4], [1, 2]] (swaps the rows). <b>Matrix multiplication is not commutative.</b> The identity matrix leaves any matrix unchanged. A matrix with non-zero determinant has an inverse.</p><p><b>Linear maps.</b> The matrix [[0, −1], [1, 0]] rotates the plane by 90° counterclockwise; applied twice it gives −I. Systems of equations can be written as Ax = b: 2x + y = 5, x + 3y = 10 has solution (1, 3). Powers of [[1, 1], [1, 0]] produce Fibonacci numbers: the tenth power has 55 in the corner.</p><details class="try"><summary>Try it</summary><p>Compute [[1, 2], [0, 1]]².</p><p><b>Answer.</b> [[1, 4], [0, 1]].</p></details>
+<h3>3. Determinants</h3><p>For a 2 × 2 matrix [[a, b], [c, d]] the determinant is ad − bc: for [[1, 2], [3, 4]] it is −2. It gives the signed area scale factor of the transformation, and the matrix is invertible exactly when the determinant is not zero. Determinants multiply: det(AB) = det A · det B (checked on the example). For a 3 × 3 determinant expand along a row: det[[1, 2, 3], [4, 5, 6], [7, 8, 10]] = 1(50 − 48) − 2(40 − 42) + 3(32 − 35) = 2 + 4 − 9 = −3.</p><p><b>Properties.</b> Swapping two rows changes the sign; a row of zeros or two equal rows gives 0; adding a multiple of one row to another changes nothing. Use row operations to simplify before expanding.</p><details class="try"><summary>Try it</summary><p>Find det [[2, 3], [4, 5]].</p><p><b>Answer.</b> 10 − 12 = −2.</p></details>
+<h3>4. A longer problem</h3><p><b>Problem.</b> Find the area of the parallelogram spanned by (3, 1) and (1, 4), the inverse of [[2, 1], [1, 3]], and solve 2x + y = 5, x + 3y = 10 using it.</p><p><b>Solution.</b> Area = |3 · 4 − 1 · 1| = 11. The determinant of [[2, 1], [1, 3]] is 5 and the inverse is (1/5)[[3, −1], [−1, 2]]. Multiplying by (5, 10): (1/5)(15 − 10, −5 + 20) = (1, 3).</p><p><b>Reflection.</b> The inverse formula for a 2 × 2 matrix, (1/det)[[d, −b], [−c, a]], is worth memorising.</p>
+<h3>5. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Treating AB = BA. (2) Using the wrong signs in the cofactor expansion. (3) Forgetting that the inverse needs a non-zero determinant. (4) Mixing up rows and columns in a product.</p><p><b>Checks.</b> Multiply a matrix by its claimed inverse to get the identity. Check dimensions.</p><p><b>How to practise.</b> Do every determinant two ways. In Unlimited practice, rotate the matrix and determinant families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Dot product.</b> (1, 2) · (3, 4) = 11, and the angle between (1, 0) and (1, 1) satisfies cos θ = 1/√2, so θ = 45°. <b>Area.</b> The parallelogram spanned by (3, 1) and (1, 2) has area |3 · 2 − 1 · 1| = 5. <b>Matrix product.</b> [[1, 2], [3, 4]] × [[0, 1], [1, 0]] = [[2, 1], [4, 3]]: multiplying by the swap matrix on the right swaps the columns. <b>Inverse.</b> [[2, 1], [1, 1]] has determinant 1 and inverse [[1, −1], [−1, 2]].</p><details class="try"><summary>Try it<p>Find the area of the triangle with vertices (0, 0), (5, 1), (2, 4).</p><p><b>Answer.</b> ½|5 · 4 − 1 · 2| = 9.</p></details><details class="try"><summary>Try it<p>Are the vectors (2, 3) and (−3, 2) perpendicular?</p><p><b>Answer.</b> Dot product −6 + 6 = 0, so yes.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Find the matrix A with A × [[1, 2], [3, 4]] = [[5, 6], [7, 8]]. <b>Solution.</b> A = [[5, 6], [7, 8]] × [[1, 2], [3, 4]]⁻¹. The determinant of the second matrix is −2 and its inverse is [[−2, 1], [3/2, −1/2]], so A = [[5·(−2) + 6·(3/2), 5·1 + 6·(−1/2)], [7·(−2) + 8·(3/2), 7·1 + 8·(−1/2)]] = [[−1, 2], [−2, 3]]. Check: [[−1, 2], [−2, 3]] × [[1, 2], [3, 4]] = [[5, 6], [7, 8]] ✓.</p><p><b>Reflection.</b> Multiply by the inverse on the same side as the unknown.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find the length of the vector (5, 12).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Formula</summary><p>√(25 + 144) = 13.</p></details>
+<details><summary>Method: Picture</summary><p>It is the hypotenuse of a 5-12-13 triangle.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem p2.</b> For which value of k are the vectors (2, 3) and (k, −4) perpendicular?</p><details><summary>Hint</summary>Dot product zero.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Dot product</summary><p>2k − 12 = 0 gives k = 6.</p></details>
+<details><summary>Method: Slopes</summary><p>Slopes 3/2 and −4/k must multiply to −1: −12/(2k) = −1 gives k = 6.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem p3.</b> Find the determinant of the matrix with rows (3, 5) and (2, 4).</p><details><summary>Hint</summary>ad − bc.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Formula</summary><p>3·4 − 5·2 = 2.</p></details>
+<details><summary>Method: Area</summary><p>The parallelogram spanned by (3, 5) and (2, 4) has area |12 − 10| = 2.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem p4.</b> Find the area of the triangle with vertices (0,0), (4,1), (2,5).</p><details><summary>Hint</summary>Half the determinant.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Determinant</summary><p>|4·5 − 1·2|/2 = 18/2 = 9.</p></details>
+<details><summary>Method: Shoelace</summary><p>½|0 + (4·5 − 2·1) + 0| = 9.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem p5.</b> Multiply the matrices with rows (1, 2),(3, 4) and (0, 1),(1, 0). What is the top-left entry of the product?</p><details><summary>Hint</summary>Row 1 times column 1.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Row times column</summary><p>(1, 2)·(0, 1) = 0 + 2 = 2.</p></details>
+<details><summary>Method: Full product</summary><p>The product has rows (2, 1) and (4, 3), so the top-left entry is 2.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem p6.</b> Find the determinant of the 3×3 matrix with rows (1, 0, 2), (0, 3, 1), (4, 0, 1).</p><details><summary>Hint</summary>Expand along the middle column.</details><details><summary>Answer</summary>-21</details>
+<details><summary>Method: Expansion</summary><p>Expanding along column 2 (only 3 is non-zero): 3·det[[1,2],[4,1]] = 3·(1 − 8) = −21.</p></details>
+<details><summary>Method: Full formula</summary><p>1(3·1 − 1·0) − 0 + 2(0·0 − 3·4) = 3 − 24 = −21.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem p7.</b> What is the dot product of (1, 2, 3) and (4, −5, 6)?</p><details><summary>Hint</summary>Multiply and add.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Compute</summary><p>4 − 10 + 18 = 12.</p></details>
+<details><summary>Method: Group</summary><p>(4 + 18) − 10 = 12.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem p8.</b> For which value of k does the matrix with rows (1, 2),(3, k) have determinant 0 (its rows are parallel)?</p><details><summary>Hint</summary>ad − bc.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Determinant</summary><p>k − 6 = 0, so k = 6.</p></details>
+<details><summary>Method: Parallel rows</summary><p>(3, 6) = 3(1, 2).</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem p9.</b> Find the area of the parallelogram spanned by (3, 1) and (1, 4).</p><details><summary>Hint</summary>Absolute value of the determinant.</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: Determinant</summary><p>|3·4 − 1·1| = 11.</p></details>
+<details><summary>Method: Box minus corners</summary><p>The parallelogram with corners (0,0), (3,1), (4,5), (1,4) fits in a 4 × 5 box of area 20. Cut away two triangles of area 3/2, two of area 2, and two unit squares in opposite corners: 20 − 3 − 4 − 2 = 11.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem p10.</b> If A has rows (2, 1),(1, 1), find the determinant of A².</p><details><summary>Hint</summary>det(A²) = det(A)².</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Multiplicativity</summary><p>det A = 2 − 1 = 1, so det A² = 1.</p></details>
+<details><summary>Method: Compute A²</summary><p>A² has rows (5, 3),(3, 2) with determinant 10 − 9 = 1.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem x11.</b> Find the dot product of (2, 3, 4) and (1, −2, 5).</p><details><summary>Hint</summary>Multiply and add.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Compute</summary><p>2 − 6 + 20 = 16.</p></details>
+<details><summary>Method: Check</summary><p>The component products are 2, −6 and 20.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem x12.</b> Find the length of the vector (3, 4, 12).</p><details><summary>Hint</summary>3D Pythagoras.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Formula</summary><p>√(9 + 16 + 144) = 13.</p></details>
+<details><summary>Method: Steps</summary><p>(3, 4) has length 5, then √(25 + 144) = 13.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem x13.</b> Find the determinant of the matrix with rows (2, 5) and (1, 3).</p><details><summary>Hint</summary>ad − bc.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Formula</summary><p>6 − 5 = 1.</p></details>
+<details><summary>Method: Area</summary><p>The parallelogram spanned by (2, 5) and (1, 3) has area 1.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem x14.</b> Find the z-component of the cross product (1, 2, 0) × (3, 1, 0).</p><details><summary>Hint</summary>x₁y₂ − y₁x₂.</details><details><summary>Answer</summary>-5</details>
+<details><summary>Method: Formula</summary><p>1 · 1 − 2 · 3 = −5.</p></details>
+<details><summary>Method: Determinant</summary><p>It is the determinant of the 2 × 2 matrix of x and y components.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem x15.</b> Find the area of the parallelogram spanned by (3, 1) and (1, 4).</p><details><summary>Hint</summary>Absolute determinant.</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: Determinant</summary><p>|3 · 4 − 1 · 1| = 11.</p></details>
+<details><summary>Method: Shoelace</summary><p>The triangle has area 11/2, and the parallelogram is twice it.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem x16.</b> Find the determinant of the upper triangular matrix with diagonal 2, 3, 4.</p><details><summary>Hint</summary>Product of the diagonal.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Triangular</summary><p>2 · 3 · 4 = 24.</p></details>
+<details><summary>Method: Expansion</summary><p>Expanding down the first column gives 2 times the determinant of the lower-right block, which is 3 · 4.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem x17.</b> What is the length of the projection of (3, 4) onto the x-axis direction (1, 0)?</p><details><summary>Hint</summary>Dot product with a unit vector.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Dot product</summary><p>(3, 4) · (1, 0) = 3.</p></details>
+<details><summary>Method: Picture</summary><p>The shadow on the x-axis is the x-coordinate.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem x18.</b> Let A have rows (0, 1) and (1, 0). Find the top-right entry of A⁷.</p><details><summary>Hint</summary>A² = I.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Powers</summary><p>A² = I, so A⁷ = A, whose top-right entry is 1.</p></details>
+<details><summary>Method: Swap</summary><p>A swaps coordinates, and an odd number of swaps is one swap.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem x19.</b> Find the area of the triangle with vertices (0, 0), (6, 2) and (2, 7).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: Shoelace</summary><p>|0(2 − 7) + 6(7 − 0) + 2(0 − 2)|/2 = 19.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (6, 2) and (2, 7); half the absolute value of 6 · 7 − 2 · 2 is 19.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem x20.</b> Find the distance between (5, 5) and (14, 17).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Formula</summary><p>√(9² + 12²) = √225 = 15.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 9 and 12 form a right triangle with hypotenuse 15 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem x21.</b> Find the slope of the line through (-2, 4) and (6, -4).</p><details><summary>Hint</summary>Rise over run.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Formula</summary><p>(-4 − 4)/(6 − -2) = -1.</p></details>
+<details><summary>Method: Line equation</summary><p>The line y = -1·x + 2 passes through both points, so its slope is -1.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem x22.</b> Find the square of the space diagonal of a box that is 1 by 4 by 8.</p><details><summary>Hint</summary>a² + b² + c².</details><details><summary>Answer</summary>81</details>
+<details><summary>Method: Formula</summary><p>1 + 16 + 64 = 81.</p></details>
+<details><summary>Method: Two steps</summary><p>The base diagonal squared is 17, and adding 64 gives 81.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem x23.</b> Find the area of the triangle with sides 5, 5 and 8.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Heron</summary><p>s = 9, so K = √(9 · 4 · 4 · 1) = 12.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 8 is 2K/8 = 3, so the area is ½ · 8 · 3 = 12.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem x24.</b> Find the area of the triangle with vertices (1, 1), (9, 3) and (4, 8).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Shoelace</summary><p>|1(3 − 8) + 9(8 − 1) + 4(1 − 3)|/2 = 25.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (8, 2) and (3, 7); half the absolute value of 8 · 7 − 2 · 3 is 25.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>
+<div class=p><p><b>Problem x25.</b> Find the distance between (1, -3) and (13, 13).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Formula</summary><p>√(12² + 16²) = √400 = 20.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 12 and 16 form a right triangle with hypotenuse 20 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 10-11</p></div>

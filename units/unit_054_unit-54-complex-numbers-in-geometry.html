@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 54</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 54: Unit 54: Complex numbers in geometry</h1><p class=ref>Book: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6 (25 problems)<br>Chen, Euclidean Geometry in Mathematical Olympiads, chapter 6 (Complex Numbers).</p>
+<h2>Reading</h2>
+<h3>1. Points as complex numbers</h3><p>Place the plane's point (x, y) at z = x + yi. Then the distance between points is |z₁ − z₂|, the midpoint is (z₁ + z₂)/2 and the centroid of a triangle is (z₁ + z₂ + z₃)/3. Three points z₁, z₂, z₃ are collinear exactly when (z₁ − z₂)/(z₃ − z₂) is real: for 0, 1 + i, 3 + 3i the ratio is 1/3. The area of the triangle with vertices 0, a, b is ½|Im(ā b)|; for 0, 3, 4i it is ½ · 12 = 6.</p><p><b>Rotation and similarity.</b> Multiplying by e^{iθ} rotates about the origin by θ; multiplying by a real k scales. Rotating z about the point c by 90° gives c + i(z − c). Rotating 3 + 4i by 90° about 1 + i: (2 + 3i)i + 1 + i = −3 + 2i + 1 + i = −2 + 3i.</p><p><b>Equilateral triangles.</b> The vertices 0, 1, w form an equilateral triangle when w = e^{iπ/3} = (1 + i√3)/2 (or its conjugate). In general, z₁, z₂, z₃ form an equilateral triangle iff z₁² + z₂² + z₃² = z₁z₂ + z₂z₃ + z₃z₁.</p><details class="try"><summary>Try it</summary><p>Rotate the point 5 by 60° about the point 2 and find the result.</p><p><b>Answer.</b> 2 + 3 e^{iπ/3} = 2 + 3(1/2 + i√3/2) = 3.5 + (3√3/2)i.</p></details>
+<h3>2. Lines, circles and angles</h3><p>The unit circle is |z| = 1, and for such z, z̄ = 1/z. A circle with centre c and radius r is |z − c| = r. The angle between two segments from a point is the argument of a quotient: ∠ABC is arg((c − b)/(a − b)). Four points are concyclic iff the cross-ratio (z₁ − z₃)(z₂ − z₄)/((z₁ − z₄)(z₂ − z₃)) is real.</p><p><b>Example (square on a side).</b> If AB is a side, the other two vertices of the square are B + i(B − A)·(±1) and A + i(B − A)·(±1). For A = 0, B = 2, we get the vertices 2i and 2 + 2i on one side.</p><details class="try"><summary>Try it</summary><p>Find the circumcentre of the triangle with vertices 0, 4, 4i in complex form.</p><p><b>Answer.</b> The right angle is at 0, so the circumcentre is the midpoint of the hypotenuse from 4 to 4i: 2 + 2i.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> Triangle ABC has A = 0, B = 6, C = 3 + 3√3 i. Show it is equilateral and find the centroid and the area.</p><p><b>Solution.</b> |AB| = 6; |AC| = √(9 + 27) = 6; |BC| = |−3 + 3√3 i| = √(9 + 27) = 6. Centroid: (9 + 3√3 i)/3 = 3 + √3 i. Area: ½|Im(b̄c)| = ½ · 18√3 = 9√3, which agrees with the formula (√3/4) · 36.</p><p><b>Reflection.</b> Complex numbers made the equilateral check a matter of three modulus computations.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Rotating about the origin instead of the correct centre (subtract, rotate, add). (2) Using the wrong conjugate in the area formula. (3) Mixing degrees and radians.</p><p><b>Checks.</b> Rotations preserve distances.</p><p><b>How to practise.</b> Translate each geometry problem into 'move the centre to 0'. In Unlimited practice, rotate the complex-geometry families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Distance and area.</b> For the triangle with vertices 0, 4 and 3i the sides are 4, 3 and |3i − 4| = 5, and the area is ½ · 4 · 3 = 6. <b>Rotation.</b> Rotating z about 1 by 90° gives 1 + i(z − 1); the point 3 + 4i goes to 1 + i(2 + 4i) = −3 + 2i. <b>Collinearity.</b> Three points z₁, z₂, z₃ are collinear exactly when (z₃ − z₁)/(z₂ − z₁) is real. <b>Equilateral test.</b> Points a, b, c form an equilateral triangle exactly when a + ωb + ω²c = 0 or a + ω²b + ωc = 0, where ω = e^{2πi/3}.</p><details class="try"><summary>Try it<p>Are 1 + i, 2 + 2i and 4 + 4i collinear?</p><p><b>Answer.</b> (4 + 4i − 1 − i)/(2 + 2i − 1 − i) = (3 + 3i)/(1 + i) = 3, real, so yes.</p></details><details class="try"><summary>Try it<p>Find the midpoint of 3 + 2i and −1 + 6i.</p><p><b>Answer.</b> 1 + 4i.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Show that 0, 1 and e^{iπ/3} form an equilateral triangle. <b>Solution.</b> With a = 0, b = 1, c = e^{iπ/3}: the sides are |b − a| = 1, |c − a| = 1 and |c − b| = |e^{iπ/3} − 1| = |−1/2 + i√3/2| = 1.</p><p><b>Reflection.</b> Rotating the segment from 0 to 1 by 60° about 0 produces the third vertex.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Rotate z = 2 by 60° about the origin. What is the real part of the result?</p><details><summary>Hint</summary>Multiply by cos 60° + i sin 60°.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Multiply</summary><p>2(1/2 + i√3/2) = 1 + i√3, with real part 1.</p></details>
+<details><summary>Method: Picture</summary><p>The point (2, 0) rotated by 60° is (2 cos 60°, 2 sin 60°) = (1, √3).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem p2.</b> Find the area of the equilateral triangle with vertices 0, 4 and 2 + 2√3 i, as k√3.</p><details><summary>Hint</summary>Side 4.</details><details><summary>Answer</summary>4√3</details>
+<details><summary>Method: Formula</summary><p>(√3/4)·16 = 4√3.</p></details>
+<details><summary>Method: Base and height</summary><p>Base 4 and height 2√3: 4·2√3/2 = 4√3.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem p3.</b> What is the midpoint of 1 + 3i and 5 − i? Answer as a + bi (for example 3+i).</p><details><summary>Hint</summary>Average.</details><details><summary>Answer</summary>3+i</details>
+<details><summary>Method: Average</summary><p>(6 + 2i)/2 = 3 + i.</p></details>
+<details><summary>Method: Coordinates</summary><p>The points are (1, 3) and (5, −1); the midpoint is (3, 1).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem p4.</b> Find |(2 + 3i) − (5 + 7i)|.</p><details><summary>Hint</summary>Distance between the points.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Formula</summary><p>|−3 − 4i| = 5.</p></details>
+<details><summary>Method: Coordinates</summary><p>The distance between (2, 3) and (5, 7) is √(9 + 16) = 5.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem p5.</b> Find the centroid of the points 1 + i, 4 + 2i and 7 + 6i. Answer as a + bi.</p><details><summary>Hint</summary>Average of the three.</details><details><summary>Answer</summary>4+3i</details>
+<details><summary>Method: Average</summary><p>(12 + 9i)/3 = 4 + 3i.</p></details>
+<details><summary>Method: Coordinates</summary><p>The x-coordinates 1, 4, 7 average to 4; the y-coordinates 1, 2, 6 average to 3.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem p6.</b> The three cube roots of 8 form a triangle in the plane. Find its area as k√3.</p><details><summary>Hint</summary>They lie on a circle of radius 2.</details><details><summary>Answer</summary>3√3</details>
+<details><summary>Method: Side length</summary><p>They are 2, 2e^(2πi/3), 2e^(4πi/3), equally spaced on a circle of radius 2, so the triangle is equilateral with side 2√3 and area (√3/4)·12 = 3√3.</p></details>
+<details><summary>Method: Formula</summary><p>The area of an equilateral triangle inscribed in a circle of radius R is (3√3/4)R² = 3√3.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem p7.</b> The point 3 + 4i is reflected in the unit circle. What is the distance of the image from the origin? (As a fraction.)</p><details><summary>Hint</summary>The image is z/|z|².</details><details><summary>Answer</summary>1/5</details>
+<details><summary>Method: Formula</summary><p>The image is (3 + 4i)/25 with absolute value 5/25 = 1/5.</p></details>
+<details><summary>Method: Inversion rule</summary><p>The image lies on the same ray, at distance 1/|z| = 1/5.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem p8.</b> If |z| = 1, find |z − 1|² + |z + 1|².</p><details><summary>Hint</summary>Expand using |w|² = w·conj(w).</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Expand</summary><p>|z − 1|² + |z + 1|² = 2|z|² + 2 = 4.</p></details>
+<details><summary>Method: Example</summary><p>z = i gives 2 + 2 = 4; z = 1 gives 0 + 4 = 4.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem p9.</b> Find the area of the triangle with vertices 0, 4 and 3i.</p><details><summary>Hint</summary>Right angle at the origin.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Right triangle</summary><p>The legs are 4 and 3, so the area is 6.</p></details>
+<details><summary>Method: Determinant</summary><p>The vertices (0,0), (4,0), (0,3): |4·3 − 0|/2 = 6.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem x10.</b> Find the sum of the real and imaginary parts of the midpoint of 2 + 3i and 6 − i.</p><details><summary>Hint</summary>Average.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Average</summary><p>The midpoint is 4 + i, sum 5.</p></details>
+<details><summary>Method: Coordinates</summary><p>(2, 3) and (6, −1) have midpoint (4, 1).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem x11.</b> Find the distance between 1 + 2i and 4 + 6i.</p><details><summary>Hint</summary>|z − w|.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Modulus</summary><p>|3 + 4i| = 5.</p></details>
+<details><summary>Method: Triple</summary><p>Legs 3 and 4.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem x12.</b> Rotate 2 + i by 90° counterclockwise about 0. Find the sum of the real and imaginary parts of the result.</p><details><summary>Hint</summary>Multiply by i.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Multiply</summary><p>i(2 + i) = −1 + 2i, sum 1.</p></details>
+<details><summary>Method: Coordinates</summary><p>(2, 1) → (−1, 2).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem x13.</b> Find the area of the triangle with vertices 0, 4 and 3i.</p><details><summary>Hint</summary>Right triangle.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Legs</summary><p>The legs are 4 and 3, so the area is 6.</p></details>
+<details><summary>Method: Shoelace</summary><p>½|4 · 3 − 0| = 6.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem x14.</b> The points 0, 1 and e^{iπ/3} form an equilateral triangle. Find the distance between the last two.</p><details><summary>Hint</summary>e^{iπ/3} = 1/2 + (√3/2) i.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Distance</summary><p>|e^{iπ/3} − 1| = √(1/4 + 3/4) = 1.</p></details>
+<details><summary>Method: Geometry</summary><p>The triangle has two unit sides and a 60° angle.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem x15.</b> Find the sum of the real and imaginary parts of the centroid of 1 + i, 5 + i and 3 + 7i.</p><details><summary>Hint</summary>Average.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Average</summary><p>The centroid is (9 + 9i)/3 = 3 + 3i, sum 6.</p></details>
+<details><summary>Method: Coordinates</summary><p>(1, 1), (5, 1), (3, 7) give (3, 3).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem x16.</b> Find the sum of the real and imaginary parts of the centre of the square with vertices 0, 2, 2 + 2i and 2i.</p><details><summary>Hint</summary>Midpoint of a diagonal.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Midpoint</summary><p>The centre is (0 + 2 + 2i)/2 = 1 + i, sum 2.</p></details>
+<details><summary>Method: Average</summary><p>The average of all four vertices is also 1 + i.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem x17.</b> OABC is a parallelogram with its vertices in this order, where O = 0, A = 3 and B = 5 + 2i. Find the sum of the real and imaginary parts of the fourth vertex C.</p><details><summary>Hint</summary>C = B − A.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Vectors</summary><p>C = B − A = 2 + 2i, sum 4.</p></details>
+<details><summary>Method: Check</summary><p>The diagonals OB and AC share the midpoint (5 + 2i)/2: (3 + 2 + 2i)/2.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem x18.</b> Find the distance between (-3, 4) and (2, 16).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Formula</summary><p>√(5² + 12²) = √169 = 13.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 5 and 12 form a right triangle with hypotenuse 13 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem x19.</b> Find the sum of the coordinates of the midpoint of (-7, 3) and (5, 9).</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Average</summary><p>The midpoint is (-1, 6), with sum 5.</p></details>
+<details><summary>Method: Vector</summary><p>Start at (-7, 3) and move half the way to (5, 9): (-7 + 6, 3 + 3) = (-1, 6).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem x20.</b> Find the area of the triangle with vertices (0, 0), (7, 1) and (3, 6).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>39/2</details>
+<details><summary>Method: Shoelace</summary><p>|0(1 − 6) + 7(6 − 0) + 3(0 − 1)|/2 = 39/2.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (7, 1) and (3, 6); half the absolute value of 7 · 6 − 1 · 3 is 39/2.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem x21.</b> Two similar triangles have corresponding sides in the ratio 2 : 7. The smaller has area 10. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square of the ratio.</details><details><summary>Answer</summary>245/2</details>
+<details><summary>Method: Area ratio</summary><p>The areas are in the ratio 4 : 49, so the larger area is 10 · 49/4 = 245/2.</p></details>
+<details><summary>Method: Scale factor</summary><p>The linear factor is 7/2, so the area factor is 49/4; 10 · 49/4 = 245/2.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem x22.</b> Find the distance between (0, 0) and (8, 15).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>17</details>
+<details><summary>Method: Formula</summary><p>√(8² + 15²) = √289 = 17.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 8 and 15 form a right triangle with hypotenuse 17 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem x23.</b> Find the sum of the coordinates of the midpoint of (1, 1) and (13, -7).</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Average</summary><p>The midpoint is (7, -3), with sum 4.</p></details>
+<details><summary>Method: Vector</summary><p>Start at (1, 1) and move half the way to (13, -7): (1 + 6, 1 + -4) = (7, -3).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem x24.</b> Find the area of the triangle with vertices (-3, -2), (5, 0) and (1, 7).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>32</details>
+<details><summary>Method: Shoelace</summary><p>|-3(0 − 7) + 5(7 − -2) + 1(-2 − 0)|/2 = 32.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (8, 2) and (4, 9); half the absolute value of 8 · 9 − 2 · 4 is 32.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>
+<div class=p><p><b>Problem x25.</b> Two similar triangles have corresponding sides in the ratio 3 : 5. The smaller has area 36. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square of the ratio.</details><details><summary>Answer</summary>100</details>
+<details><summary>Method: Area ratio</summary><p>The areas are in the ratio 9 : 25, so the larger area is 36 · 25/9 = 100.</p></details>
+<details><summary>Method: Scale factor</summary><p>The linear factor is 5/3, so the area factor is 25/9; 36 · 25/9 = 100.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 6</p></div>

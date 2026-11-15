@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 51</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 51: Unit 51: Computational geometry: law of cosines and sines</h1><p class=ref>Book: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5 (25 problems)<br>Chen, Euclidean Geometry in Mathematical Olympiads, chapter 5 (Computational Geometry).</p>
+<h2>Reading</h2>
+<h3>1. The law of cosines</h3><p>For a triangle with sides a, b, c and opposite angles A, B, C: <b>c² = a² + b² − 2ab cos C</b>. It generalises the Pythagorean theorem (cos 90° = 0) and is used when two sides and the included angle, or all three sides, are known. For sides 5 and 8 enclosing 60°, c² = 25 + 64 − 40 = 49, c = 7. Solving for the angle: cos C = (a² + b² − c²)/(2ab). For the 7-8-9 triangle the angle opposite 9 has cos C = (49 + 64 − 81)/112 = 2/7, so C ≈ 73.4°. In the 13-14-15 triangle the angle between 13 and 14 has cosine (169 + 196 − 225)/(2 · 13 · 14) = 5/13, so its sine is 12/13 and the area is ½ · 13 · 14 · 12/13 = 84 ✓.</p><p><b>Classifying a triangle by its sides.</b> The largest angle is opposite the longest side, and it is acute, right or obtuse according as c² is less than, equal to or greater than a² + b². For 4, 5, 7: 49 > 41, and cos C = −0.2, so the triangle is obtuse. For 5, 6, 7 the largest angle has cosine 1/5.</p><details class="try"><summary>Try it</summary><p>Find the third side of a triangle with sides 3 and 5 enclosing 120°.</p><p><b>Answer.</b> c² = 9 + 25 − 2 · 15 · (−1/2) = 49, so c = 7.</p></details>
+<h3>2. The law of sines and the circumradius</h3><p><b>a/sin A = b/sin B = c/sin C = 2R</b>, where R is the circumradius. It is used when two angles and a side, or two sides and a non-included angle, are known. For the 13-14-15 triangle the angle opposite 14 has sine 56/65 (from area = ½ · 13 · 15 · sin A = 84), so 2R = 14/(56/65) = 65/4 and R = 65/8 ✓ (agrees with Unit 26).</p><p><b>The ambiguous case (SSA).</b> Given a = 6, b = 8 and A = 30°: sin B = 8 · sin 30°/6 = 2/3. Both B = 41.8° and B = 138.2° are possible (each leaves a positive third angle since 30° + 138.2° < 180°), so there are <i>two</i> triangles. If sin B came out larger than 1 there would be none; if b sin A = a (tangent case) exactly one right-angled triangle.</p><details class="try"><summary>Try it</summary><p>In a triangle A = 40°, B = 60° and a = 10. Find b.</p><p><b>Answer.</b> b = 10 sin 60°/sin 40° = 8.66/0.6428 ≈ 13.47.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> A boat sails 12 km on a bearing, turns through 50° and sails 9 km. How far is it from the start?</p><p><b>Solution.</b> The turn through 50° makes the interior angle 130° (the angle between the legs measured inside the triangle is 180° − 50°). d² = 144 + 81 − 2 · 12 · 9 · cos 130° = 225 + 216 · 0.6428 = 363.8, d ≈ 19.07 km.</p><p><b>Reflection.</b> The most common error in navigation problems is to use 50° in the formula instead of the interior angle 130°. Draw the triangle.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Using the exterior angle. (2) Calculator in the wrong mode. (3) Ignoring the second solution in the ambiguous case. (4) Dividing wrongly: cos C = (a² + b² − c²)/(2ab).</p><p><b>Checks.</b> The largest side faces the largest angle; angles sum to 180°.</p><p><b>How to practise.</b> Sketch every triangle. In Unlimited practice, rotate the law-of-cosines and law-of-sines families.</p>
+<h3>More worked examples: Worked examples</h3><p>A triangle with sides 5 and 8 enclosing 60° has third side √(25 + 64 − 40) = 7, area ½ · 5 · 8 · sin 60° = 10√3 and circumradius R = 7/(2 sin 60°) = 7/√3. For the reverse problem, a triangle with sides 5, 7, 8 has cos θ = (25 + 64 − 49)/(2 · 5 · 8) = 1/2 for the angle opposite 7, so that angle is 60°.</p><details class="try"><summary>Try it<p>Sides 3, 5 and 7: find the largest angle.</p><p><b>Answer.</b> cos θ = (9 + 25 − 49)/30 = −1/2, so θ = 120°.</p></details><details class="try"><summary>Try it<p>In triangle ABC, A = 30°, B = 45°, a = 6. Find b.</p><p><b>Answer.</b> b = 6 sin 45°/sin 30° = 6√2.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> The sides of a triangle are 7, 8 and 9. Find its area and inradius. <b>Solution.</b> s = 12 and Heron gives √(12 · 5 · 4 · 3) = √720 = 12√5. The inradius is area/s = √5.</p><p><b>Check.</b> cos A (opposite 7) = (64 + 81 − 49)/144 = 2/3, so sin A = √5/3 and the area is ½ · 8 · 9 · √5/3 = 12√5 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> A triangle has sides 7, 8, 9. Find the cosine of the angle opposite the side 7 as a fraction.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>2/3</details>
+<details><summary>Method: Law of cosines</summary><p>cos = (8² + 9² − 7²)/(2·8·9) = 96/144 = 2/3.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put the vertex V where the sides 8 and 9 meet at (0,0), the end of the side 9 at P = (9,0) and the end of the side 8 at Q = (8c, 8s) with c = cos θ. Then PQ² = (9 − 8c)² + 64s² = 49, so 81 − 144c + 64 = 49 and c = 96/144 = 2/3.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem p2.</b> In triangle ABC, angle A = 30° and BC = 5. Find the circumradius.</p><details><summary>Hint</summary>a/sin A = 2R.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Law of sines</summary><p>2R = 5/sin 30° = 10, so R = 5.</p></details>
+<details><summary>Method: Inscribed angle</summary><p>The chord BC subtends a 30° inscribed angle, so the central angle is 60° and triangle OBC is equilateral with side R = 5.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem p3.</b> In a triangle with sides 5, 7, 8, find the angle opposite the side 7, in degrees.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Law of cosines</summary><p>cos = (25 + 64 − 49)/(2·5·8) = 40/80 = 1/2, so 60°.</p></details>
+<details><summary>Method: Special triangle</summary><p>A triangle with sides 5, 8 and an included angle of 60° has third side √(25 + 64 − 40) = 7.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem p4.</b> Find the area of the triangle with sides 5, 7, 8 as k√3.</p><details><summary>Hint</summary>½·5·8·sin 60°.</details><details><summary>Answer</summary>10√3</details>
+<details><summary>Method: Sine formula</summary><p>½·5·8·(√3/2) = 10√3.</p></details>
+<details><summary>Method: Heron</summary><p>s = 10: √(10·5·3·2) = √300 = 10√3.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem p5.</b> A triangle has sides 4, 5, 6. Find the square of its circumradius as a fraction.</p><details><summary>Hint</summary>R = abc/(4·Area).</details><details><summary>Answer</summary>64/7</details>
+<details><summary>Method: Area formula</summary><p>Heron gives area 15√7/4. R = 120/(4·15√7/4) = 8/√7, so R² = 64/7.</p></details>
+<details><summary>Method: Law of sines</summary><p>cos C = (16 + 25 − 36)/40 = 1/8, sin C = √63/8 = 3√7/8; 2R = 6/sin C = 16/√7, R = 8/√7.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem p6.</b> Find the area of the triangle with vertices (1,1), (5,2) and (3,7).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: Shoelace</summary><p>½|1(2 − 7) + 5(7 − 1) + 3(1 − 2)| = ½|−5 + 30 − 3| = 11.</p></details>
+<details><summary>Method: Vectors</summary><p>From (1,1) the other vertices are at displacements (4,1) and (2,6). The area is half the determinant: |4·6 − 1·2|/2 = 11.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem p7.</b> Find the area of the triangle with sides 9, 10, 17.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Heron</summary><p>s = 18: √(18·9·8·1) = √1296 = 36.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 17 is 2·36/17 = 72/17.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem p8.</b> A triangle has sides 3, 5 and 7. What is its largest angle in degrees?</p><details><summary>Hint</summary>Opposite the longest side.</details><details><summary>Answer</summary>120</details>
+<details><summary>Method: Law of cosines</summary><p>cos = (9 + 25 − 49)/30 = −1/2, so 120°.</p></details>
+<details><summary>Method: Check</summary><p>A 120° angle between sides 3 and 5 has opposite side √(9 + 25 + 15) = 7.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x9.</b> A triangle has sides 5 and 8 with an included angle of 60°. Find the third side.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Law of cosines</summary><p>c² = 25 + 64 − 40 = 49, so c = 7.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put (8, 0) and 5(1/2, √3/2); the squared distance is (5.5)² + (2.5√3)² = 30.25 + 18.75 = 49.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x10.</b> A triangle has sides 7, 8 and 9. Find cos A for the angle A opposite the side 7.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>2/3</details>
+<details><summary>Method: Law of cosines</summary><p>cos A = (64 + 81 − 49)/(2 · 8 · 9) = 96/144 = 2/3.</p></details>
+<details><summary>Method: Check</summary><p>2/3 > 0, so A is acute, as expected for the smallest side.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x11.</b> In triangle ABC, a = 10, A = 30° and B = 90°. Find b.</p><details><summary>Hint</summary>Law of sines.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Law of sines</summary><p>b = 10 · sin 90°/sin 30° = 20.</p></details>
+<details><summary>Method: Right triangle</summary><p>The side opposite 30° is half the hypotenuse, so the hypotenuse is 20.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x12.</b> A triangle has sides 6 and 7 with an included angle of 150°. Find its area.</p><details><summary>Hint</summary>½ab sin C.</details><details><summary>Answer</summary>21/2</details>
+<details><summary>Method: Formula</summary><p>½ · 6 · 7 · sin 150° = 21 · 1/2 = 21/2.</p></details>
+<details><summary>Method: Supplement</summary><p>sin 150° = sin 30° = 1/2.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x13.</b> In a triangle a side of length 12 is opposite an angle of 30°. Find the circumradius.</p><details><summary>Hint</summary>a = 2R sin A.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Law of sines</summary><p>12 = 2R · 1/2, so R = 12.</p></details>
+<details><summary>Method: Chord</summary><p>A chord of length 12 subtending 30° at the circle has R = 12.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x14.</b> Find cos of the largest angle of the 3-4-5 triangle.</p><details><summary>Hint</summary>Right triangle.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Right angle</summary><p>The largest angle is 90°, with cosine 0.</p></details>
+<details><summary>Method: Formula</summary><p>(9 + 16 − 25)/(2 · 12) = 0.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x15.</b> Find the cosine of the largest angle of the triangle with sides 2, 3 and 4.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>-1/4</details>
+<details><summary>Method: Law of cosines</summary><p>cos = (4 + 9 − 16)/(2 · 2 · 3) = −3/12 = −1/4.</p></details>
+<details><summary>Method: Check</summary><p>It is negative, so the angle is obtuse.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x16.</b> In triangle ABC, a = 8, A = 45° and B = 30°. Find b².</p><details><summary>Hint</summary>Law of sines.</details><details><summary>Answer</summary>32</details>
+<details><summary>Method: Law of sines</summary><p>b = 8 · (1/2)/(√2/2) = 4√2, so b² = 32.</p></details>
+<details><summary>Method: Ratio</summary><p>b/a = sin 30°/sin 45° = 1/√2, so b² = 64/2 = 32.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x17.</b> A triangle has sides 4 and 9 with an included angle of 120°. Find the square of the third side.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>133</details>
+<details><summary>Method: Law of cosines</summary><p>c² = 16 + 81 − 2 · 4 · 9 · (−1/2) = 133.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put the vertex at the origin, one side along the x-axis to (9, 0) and the other to 4(−1/2, √3/2). The squared distance is 133.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x18.</b> A triangle has sides 6, 8 and 10. Find the square of the median to the side of length 6.</p><details><summary>Hint</summary>m² = (2b² + 2c² − a²)/4.</details><details><summary>Answer</summary>73</details>
+<details><summary>Method: Median formula</summary><p>(2 · 64 + 2 · 100 − 36)/4 = 73.</p></details>
+<details><summary>Method: Parallelogram law</summary><p>Doubling the median completes a parallelogram with diagonals 6 and 2m; the law gives 36 + 4m² = 2(64 + 100), so m² = 73.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x19.</b> Find the area of the triangle with sides 6, 8 and 10.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Heron</summary><p>s = 12, so K = √(12 · 6 · 4 · 2) = 24.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 10 is 2K/10 = 24/5, so the area is ½ · 10 · 24/5 = 24.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x20.</b> Find the circumradius of the triangle with sides 6, 8 and 10.</p><details><summary>Hint</summary>R = abc/(4K).</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Formula</summary><p>K = 24, so R = 480/(4 · 24) = 5.</p></details>
+<details><summary>Method: Law of sines</summary><p>The altitude to side 10 is 24/5, so sin of the adjacent angle is 3/5; then 2R = 6/3/5 gives R = 5.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x21.</b> Find the altitude to the side of length 8 in the triangle with sides 5, 5 and 8.</p><details><summary>Hint</summary>Use the area.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Area</summary><p>K = 12, so the altitude is 2K/8 = 3.</p></details>
+<details><summary>Method: Check</summary><p>½ · 8 · 3 = 12, matching K.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x22.</b> Find the inradius of the triangle with sides 7, 15 and 20.</p><details><summary>Hint</summary>r = K/s.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Formula</summary><p>The area is 42 and s = 21, so r = 2.</p></details>
+<details><summary>Method: Tangent lengths</summary><p>The tangent lengths from the vertices are 14, 6, 1; splitting the area into three triangles with height r gives K = r·s, so r = 2.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x23.</b> A triangle has sides 6 and 10 with an included angle of 60°. Find the square of the third side.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>76</details>
+<details><summary>Method: Law of cosines</summary><p>c² = 36 + 100 − 2 · 6 · 10 · (1/2) = 76.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put the vertex at the origin, one side along the x-axis to (10, 0) and the other to 6(1/2, √3/2). The squared distance is 76.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x24.</b> A triangle has sides 7, 15 and 20. Find the square of the median to the side of length 7.</p><details><summary>Hint</summary>m² = (2b² + 2c² − a²)/4.</details><details><summary>Answer</summary>1201/4</details>
+<details><summary>Method: Median formula</summary><p>(2 · 225 + 2 · 400 − 49)/4 = 1201/4.</p></details>
+<details><summary>Method: Parallelogram law</summary><p>Doubling the median completes a parallelogram with diagonals 7 and 2m; the law gives 49 + 4m² = 2(225 + 400), so m² = 1201/4.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>
+<div class=p><p><b>Problem x25.</b> Find the area of the triangle with sides 7, 15 and 20.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>42</details>
+<details><summary>Method: Heron</summary><p>s = 21, so K = √(21 · 14 · 6 · 1) = 42.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 20 is 2K/20 = 21/5, so the area is ½ · 20 · 21/5 = 42.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 5</p></div>

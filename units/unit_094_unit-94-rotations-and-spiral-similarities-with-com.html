@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 94</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 94: Unit 94: Rotations and spiral similarities with complex numbers</h1><p class=ref>Book: Chen ch. 11 and AoPS Volume 2 ch. 9 (25 problems)<br>AoPS Volume 2, chapter 9 (complex multiplication and geometry) and Chen, Euclidean Geometry in Mathematical Olympiads, spiral similarity.</p>
+<h2>Reading</h2>
+<h3>1. Rotations and spiral similarities as functions</h3><p>Every <b>spiral similarity</b> (a rotation followed by a scaling about the same point) of the plane is a function z ↦ az + b with complex a ≠ 0. The ratio of the scaling is |a| and the rotation angle is arg a. If a ≠ 1 there is exactly one fixed point s with s = as + b, i.e. s = b/(1 − a), and then z ↦ s + a(z − s). A pure rotation has |a| = 1.</p><p><b>Worked example 1.</b> The map z ↦ (1 + i)z + 2 sends 0 to 2 and 1 to 3 + i. Its fixed point is s = 2/(1 − (1 + i)) = 2/(−i) = 2i, and indeed (1 + i)(2i) + 2 = 2i − 2 + 2 = 2i ✓. The map rotates by 45° and scales by √2 about 2i.</p><p><b>Worked example 2.</b> Rotate z by 90° about the point c: c + i(z − c). The image of 3 about c = 1 is 1 + i(2) = 1 + 2i.</p>
+<h3>2. Finding the centre from two pairs of points</h3><p>Suppose a spiral similarity sends the point P to P′ and Q to Q′ (as complex numbers). Then a = (Q′ − P′)/(Q − P) and b = P′ − aP. The centre s satisfies s = b/(1 − a).</p><p><b>Worked example.</b> The spiral similarity sends 0 ↦ 2 and 1 ↦ 3 + i. Here P = 0, P′ = 2, Q = 1, Q′ = 3 + i, so a = (3 + i − 2)/(1 − 0) = 1 + i and b = 2 − 0 = 2, matching the first example, with centre 2i.</p><p><b>Composition.</b> The composition of two spiral similarities z ↦ a₁z + b₁ and z ↦ a₂z + b₂ is z ↦ a₂a₁z + a₂b₁ + b₂, again a spiral similarity (or a translation if a₁a₂ = 1).</p>
+<h3>3. Using spiral similarity in geometry</h3><p><b>Squares on the sides.</b> Erect squares outward on the sides of a triangle. In complex numbers, the centre of the square on the side from P to Q (outward) is (P + Q)/2 + i(Q − P)/2 for one orientation. For P = 0, Q = 4: the centre is 2 + 2i, and the other vertices are 4i and 4 + 4i.</p><p><b>Napoleon's theorem.</b> Erect equilateral triangles outward on the sides of any triangle; their centres form an equilateral triangle. For example on the side from 0 to 2 (drawn below the axis) the apex is 1 − i√3 and the centre of that triangle is (0 + 2 + 1 − i√3)/3 = 1 − i√3/3.</p><p><b>Rotating a triangle.</b> If two segments AB and AC are equal and perpendicular, then C − A = ±i(B − A). So the 'rotation of B about A by 90°' is C. This turns many perpendicularity and length statements into one equation.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Rotating about the origin when the centre is elsewhere. Forgetting to translate back. Sign errors for clockwise versus anticlockwise. Mixing up the order of composition.</p><p><b>Checks.</b> Check that the fixed point is mapped to itself.</p><p><b>Practice.</b> Always find the fixed point first.</p>
+<h3>Worked examples with Try-its: Rotations as multiplication</h3><p>Multiplying z by i rotates it 90° anticlockwise about the origin; multiplying by e^{iθ} rotates by θ. To rotate z about a centre c, use c + e^{iθ}(z − c). Rotating 4 + 3i by 90° about 1 + i gives (1 + i) + i(3 + 2i) = (1 + i) + (3i − 2) = −1 + 4i.</p><details class="try"><summary>Try it<p>Rotate 2 + 0i by 120° about the origin.</p><p><b>Answer.</b> 2e^{2πi/3} = −1 + i√3.</p></details>
+<h3>Worked examples with Try-its: Equilateral triangles and spiral similarity</h3><p>The third vertex of an equilateral triangle on 0 and 2 is 2e^{iπ/3} = 1 + i√3. A <b>spiral similarity</b> z ↦ az + b combines a rotation (the argument of a) with a scaling (the modulus of a). Two triangles that are directly similar can be mapped to each other by one such map.</p><details class="try"><summary>Try it<p>Where does z ↦ iz + 1 send 2?</p><p><b>Answer.</b> 1 + 2i.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Triangle ABC has A = 0, B = 4 and C = 3i. An equilateral triangle ABP is built on AB on the same side as C. Find CP. <b>Solution.</b> P = 4e^{iπ/3} = 2 + 2√3 i, so CP = |2 + (2√3 − 3)i| = √(4 + 21 − 12√3) = √(25 − 12√3) ≈ 2.05.</p><p><b>Reflection.</b> Put A at the origin so that rotations are simple multiplications.</p>
+<h3>More worked examples: Worked examples</h3><p>Multiplying by 1 + i rotates 45° and scales by √2. Rotating 2 + 3i by 90° about 1 + i gives (1 + i) + i(1 + 2i) = −1 + 2i. The map z ↦ 2iz + 1 has the fixed point z = 1/(1 − 2i) = (1 + 2i)/5; it is a spiral similarity with ratio 2 and angle 90° about that point.</p><details class="try"><summary>Try it<p>Rotate 3 by 60° about the origin.</p><p><b>Answer.</b> 3e^{iπ/3} = 3/2 + (3√3/2)i.</p></details><details class="try"><summary>Try it<p>Find the fixed point of z ↦ 3z − 4.</p><p><b>Answer.</b> z = 2.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Find the rotation z ↦ az + b with |a| = 1 that sends 1 to i and 2 to 2i. <b>Solution.</b> 1 ↦ i gives a + b = i, and 2 ↦ 2i gives 2a + b = 2i, so a = i and b = 0, the rotation by 90° about the origin.</p><p><b>Check.</b> i · 1 = i and i · 2 = 2i ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Rotate the point (3, 1) by 90° counterclockwise about the origin. The image is (x, y). Find x + y.</p><details><summary>Hint</summary>Multiply by i.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Complex</summary><p>i(3 + i) = 3i − 1 = −1 + 3i, so x + y = 2.</p></details>
+<details><summary>Method: Rule</summary><p>A 90° rotation sends (x, y) to (−y, x): (−1, 3).</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem p2.</b> Rotate (4, 1) by 90° counterclockwise about the point (1, 1). Find x + y of the image.</p><details><summary>Hint</summary>Translate so the centre is the origin.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Translate</summary><p>(4, 1) − (1, 1) = (3, 0), rotating gives (0, 3), and adding back (1, 1) gives (1, 4): x + y = 5.</p></details>
+<details><summary>Method: Complex</summary><p>1 + i + i(3) = 1 + 4i.</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem p3.</b> The map z ↦ 2iz is applied to 1 + i, giving a + bi. Find a + b.</p><details><summary>Hint</summary>Multiply.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Multiply</summary><p>2i(1 + i) = 2i − 2 = −2 + 2i, so a + b = 0.</p></details>
+<details><summary>Method: Geometry</summary><p>It scales by 2 and rotates by 90°: (1, 1) becomes (−2, 2).</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem p4.</b> Find the real part of (3 + 4i)/(1 + 2i) as a fraction.</p><details><summary>Hint</summary>Multiply by the conjugate.</details><details><summary>Answer</summary>11/5</details>
+<details><summary>Method: Conjugate</summary><p>(3 + 4i)(1 − 2i)/5 = (3 − 6i + 4i + 8)/5 = (11 − 2i)/5, so the real part is 11/5.</p></details>
+<details><summary>Method: Check</summary><p>(1 + 2i)(11 − 2i)/5 = (11 − 2i + 22i + 4)/5 = (15 + 20i)/5 = 3 + 4i.</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem p5.</b> Find the distance between the points 2 + 3i and −1 + 7i.</p><details><summary>Hint</summary>|z − w|.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Modulus</summary><p>|3 − 4i| = 5.</p></details>
+<details><summary>Method: 3-4-5</summary><p>The horizontal gap is 3 and the vertical gap is 4.</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem p6.</b> The map z ↦ (1 + i)z + 2 has a fixed point. Find its imaginary part.</p><details><summary>Hint</summary>z = b/(1 − a).</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Fixed point</summary><p>z = 2/(1 − (1 + i)) = 2/(−i) = 2i, so the imaginary part is 2.</p></details>
+<details><summary>Method: Check</summary><p>(1 + i)(2i) + 2 = 2i − 2 + 2 = 2i.</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem p7.</b> The unit square is mapped by z ↦ (1 + i)z. Find the area of its image.</p><details><summary>Hint</summary>Area scales by |a|².</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Scale factor</summary><p>|1 + i|² = 2 and the area was 1, so the area is 2.</p></details>
+<details><summary>Method: Vertices</summary><p>The vertices 0, 1, 1 + i, i map to 0, 1 + i, 2i, −1 + i, a square of side √2.</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem p8.</b> The triangle with vertices 0, 1, i is mapped by z ↦ (1 + i)z. Find the area of the image.</p><details><summary>Hint</summary>Original area 1/2, scale factor 2.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Scaling</summary><p>The area doubles: 1.</p></details>
+<details><summary>Method: Shoelace</summary><p>The image vertices 0, 1 + i, −1 + i have area (1/2)|1·1 − 1·(−1)| = 1.</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem p9.</b> Find the imaginary part of (1 + i)(2 + i)(3 + i).</p><details><summary>Hint</summary>Multiply two at a time.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Multiply</summary><p>(1 + i)(2 + i) = 1 + 3i and (1 + 3i)(3 + i) = 3 + i + 9i − 3 = 10i, so the imaginary part is 10.</p></details>
+<details><summary>Method: Argument</summary><p>The arguments arctan 1 + arctan(1/2) + arctan(1/3) add to 90°, so the product is purely imaginary.</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem p10.</b> Rotate 3 + i by 90° counterclockwise about the origin. What is the sum of the real and imaginary parts of the result?</p><details><summary>Hint</summary>Multiply by i.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Multiply</summary><p>i(3 + i) = −1 + 3i, sum 2.</p></details>
+<details><summary>Method: Coordinates</summary><p>(3, 1) → (−1, 3), sum 2.</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem p11.</b> Rotate 5 + i by 90° counterclockwise about 2 + i. What is the sum of the real and imaginary parts of the image?</p><details><summary>Hint</summary>Subtract the centre first.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Formula</summary><p>The vector from centre is 3, which becomes 3i, so the image is 2 + 4i, sum 6.</p></details>
+<details><summary>Method: Coordinates</summary><p>(3, 0) rotates to (0, 3) relative to (2, 1): (2, 4).</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem p12.</b> Find |(1 + i)⁶|.</p><details><summary>Hint</summary>|z|ⁿ = |zⁿ|.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Modulus</summary><p>|1 + i| = √2 and (√2)⁶ = 8.</p></details>
+<details><summary>Method: Power</summary><p>(1 + i)² = 2i, so (1 + i)⁶ = (2i)³ = −8i, of modulus 8.</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem p13.</b> Find the argument in degrees, between 0 and 360, of (1 + i√3)³.</p><details><summary>Hint</summary>The argument of 1 + i√3 is 60°.</details><details><summary>Answer</summary>180</details>
+<details><summary>Method: De Moivre</summary><p>3 · 60° = 180°.</p></details>
+<details><summary>Method: Compute</summary><p>(1 + i√3)³ = −8, which is on the negative real axis.</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem p14.</b> The map z → (1 + i)z multiplies every area by what factor?</p><details><summary>Hint</summary>Scale factor is |1 + i|.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Scale</summary><p>Lengths scale by √2, so areas by 2.</p></details>
+<details><summary>Method: Square</summary><p>The unit square maps to a square of side √2 and area 2.</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem p15.</b> The map f(z) = (1 + i)z + 1 sends 2 to a point. What is the sum of its real and imaginary parts?</p><details><summary>Hint</summary>Compute.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Compute</summary><p>(1 + i) · 2 + 1 = 3 + 2i, sum 5.</p></details>
+<details><summary>Method: Steps</summary><p>Scale and rotate 2 to 2 + 2i, then shift by 1.</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem p16.</b> The rotation f(z) = iz + 2 has a fixed point. What is the sum of its real and imaginary parts?</p><details><summary>Hint</summary>Solve z = iz + 2.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Solve</summary><p>z(1 − i) = 2 so z = 2/(1 − i) = 1 + i, sum 2.</p></details>
+<details><summary>Method: Check</summary><p>i(1 + i) + 2 = i − 1 + 2 = 1 + i.</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem p17.</b> Find |(3 + 4i)(5 − 12i)|.</p><details><summary>Hint</summary>Moduli multiply.</details><details><summary>Answer</summary>65</details>
+<details><summary>Method: Moduli</summary><p>5 · 13 = 65.</p></details>
+<details><summary>Method: Expand</summary><p>(3 + 4i)(5 − 12i) = 15 + 48 + (20 − 36)i = 63 − 16i, and 63² + 16² = 4225 = 65².</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem x18.</b> Find the distance between (-2, 6) and (13, 26).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Formula</summary><p>√(15² + 20²) = √625 = 25.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 15 and 20 form a right triangle with hypotenuse 25 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem x19.</b> Find the distance between (1, 2) and (7, 10).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Formula</summary><p>√(6² + 8²) = √100 = 10.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 6 and 8 form a right triangle with hypotenuse 10 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem x20.</b> Find the distance between (-3, 4) and (2, 16).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Formula</summary><p>√(5² + 12²) = √169 = 13.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 5 and 12 form a right triangle with hypotenuse 13 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem x21.</b> Find the distance between (0, 0) and (8, 15).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>17</details>
+<details><summary>Method: Formula</summary><p>√(8² + 15²) = √289 = 17.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 8 and 15 form a right triangle with hypotenuse 17 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem x22.</b> Find the distance between (2, -1) and (9, 23).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Formula</summary><p>√(7² + 24²) = √625 = 25.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 7 and 24 form a right triangle with hypotenuse 25 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem x23.</b> Find the distance between (-4, -2) and (16, 19).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Formula</summary><p>√(20² + 21²) = √841 = 29.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 20 and 21 form a right triangle with hypotenuse 29 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem x24.</b> Find the distance between (5, 5) and (14, 17).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Formula</summary><p>√(9² + 12²) = √225 = 15.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 9 and 12 form a right triangle with hypotenuse 15 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>
+<div class=p><p><b>Problem x25.</b> Find the distance between (1, -3) and (13, 13).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Formula</summary><p>√(12² + 16²) = √400 = 20.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 12 and 16 form a right triangle with hypotenuse 20 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Chen ch. 11 and AoPS Volume 2 ch. 9</p></div>

@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 83</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 83: Unit 83: Recursion and counting</h1><p class=ref>Book: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8 (25 problems)<br>Zeitz, The Art and Craft of Problem Solving, recursion chapters; Engel, Problem-Solving Strategies.</p>
+<h2>Reading</h2>
+<h3>1. Setting up a recursion</h3><p>To count objects of size n, relate them to smaller objects of size n − 1, n − 2, …. The method: look at the last step (the last digit, the last tile, the last move) and count the ways to complete each case.</p><p><b>Worked example 1: compositions.</b> The number of ways to write n as an ordered sum of 1s and 2s satisfies cₙ = cₙ₋₁ + cₙ₋₂ (the last part is 1 or 2), with c₁ = 1, c₂ = 2: 1, 2, 3, 5, 8, 13, a Fibonacci sequence. The number of compositions of n into any positive parts is 2ⁿ⁻¹ (each of the n − 1 gaps either has a plus sign or not).</p><p><b>Worked example 2: strings.</b> Count binary strings of length n with no three consecutive 1s. Let sₙ be the count. If the string ends in 0, any good string of length n − 1 precedes it; if it ends in 01, good of length n − 2; if it ends in 011, good of length n − 3. So sₙ = sₙ₋₁ + sₙ₋₂ + sₙ₋₃ with s₁ = 2, s₂ = 4, s₃ = 7: then s₄ = 13, s₅ = 24, s₆ = 44.</p>
+<h3>2. Tilings</h3><p><b>Dominoes on a 2 × n board:</b> tₙ = tₙ₋₁ + tₙ₋₂ (Unit 25), values 1, 2, 3, 5, 8. <b>Dominoes on a 3 × n board:</b> there are none for odd n. For even n: 3, 11, 41, 153 for n = 2, 4, 6, 8. The recurrence is tₙ = 4tₙ₋₂ − tₙ₋₄: with t₀ = 1, t₂ = 3: t₄ = 12 − 1 = 11, t₆ = 44 − 3 = 41, t₈ = 164 − 11 = 153.</p><p><b>Worked example.</b> How many ways to tile a 2 × 10 board with 1 × 2 and 2 × 1 dominoes? Using t₁ = 1, t₂ = 2: t₃ = 3, t₄ = 5, t₅ = 8, t₆ = 13, t₇ = 21, t₈ = 34, t₉ = 55, t₁₀ = 89.</p>
+<h3>3. Counting set partitions and paths</h3><p><b>Stirling numbers of the second kind.</b> S(n, k) counts ways to split n objects into k non-empty unlabelled groups. Recurrence: S(n, k) = k S(n − 1, k) + S(n − 1, k − 1) (the last object joins an existing group, or forms its own). S(4, 2) = 2 × S(3, 2) + S(3, 1) = 2 × 3 + 1 = 7. S(5, 3) = 3 × 6 + 7 = 25.</p><p><b>Lattice paths with a barrier.</b> The number of paths from (0, 0) to (n, n) with steps right and up that never go above the diagonal is the Catalan number Cₙ = C(2n, n)/(n + 1): 1, 2, 5, 14, 42.</p><p><b>Worked example.</b> A frog hops 1 or 3 steps. In how many ways can it reach step 8? Let fₙ = fₙ₋₁ + fₙ₋₃ with f₀ = 1, f₁ = 1, f₂ = 1: f₃ = 2, f₄ = 3, f₅ = 4, f₆ = 6, f₇ = 9, f₈ = 13.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Wrong initial values. Overcounting because two cases overlap. Missing a case for the last step. Using a recurrence of the wrong order.</p><p><b>Checks.</b> Count the first few values by listing.</p><p><b>Practice.</b> Always list n = 1, 2, 3 by hand before setting up the recurrence.</p>
+<h3>Worked examples with Try-its: Recurrences for counting</h3><p>Count by the <b>last step</b>. Tiling a 2 × n strip with 1 × 2 dominoes: the last column is either one vertical domino (leaving a 2 × (n − 1) strip) or two horizontal ones (leaving 2 × (n − 2)), so fₙ = fₙ₋₁ + fₙ₋₂ with f₁ = 1, f₂ = 2, giving 1, 2, 3, 5, 8 for n = 1 to 5. The same recurrence counts binary strings of length 6 with no two adjacent 1s (21, confirmed by listing all 64 strings) and ways to climb 7 stairs using steps of 1 or 2 (21).</p><details class="try"><summary>Try it<p>How many ways can you climb 5 stairs using steps of 1 or 2?</p><p><b>Answer.</b> 8.</p></details>
+<h3>Worked examples with Try-its: Compositions and Catalan numbers</h3><p>The number of ways to write n as an ordered sum of positive integers is 2ⁿ⁻¹ (each of the n − 1 gaps between units is either a plus or a break): for n = 5 that is 16. The Catalan number Cₙ = C(2n, n)/(n + 1) counts balanced bracket sequences with n pairs: C₄ = 70/5 = 14. It also counts triangulations of a convex (n + 2)-gon and lattice paths that stay on one side of a diagonal.</p><details class="try"><summary>Try it<p>How many balanced sequences of 3 pairs of brackets are there?</p><p><b>Answer.</b> C₃ = 5: ((())), (()()), (())(), ()(()), ()()().</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Let aₙ be the number of binary strings of length n with no three consecutive 1s. Find a₅. <b>Solution.</b> Condition on how the string ends: 0, 01 or 011 (preceded by anything valid), so aₙ = aₙ₋₁ + aₙ₋₂ + aₙ₋₃ with a₁ = 2, a₂ = 4, a₃ = 7, giving a₄ = 13 and a₅ = 24.</p><p><b>Reflection.</b> Always compute small cases by hand to check the recurrence.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Tower of Hanoi.</b> Moving n discs takes Tₙ = 2Tₙ₋₁ + 1 moves with T₁ = 1, so Tₙ = 2ⁿ − 1: 15 moves for 4 discs, 31 for 5. <b>Subsets with no two consecutive numbers.</b> From {1, …, n} there are Fₙ₊₂ such subsets: for n = 5 that is 13 (confirmed by listing all 32 subsets).</p><details class="try"><summary>Try it<p>How many moves does the Tower of Hanoi with 6 discs need?</p><p><b>Answer.</b> 63.</p></details><details class="try"><summary>Try it<p>How many binary strings of length 4 have no two adjacent 1s?</p><p><b>Answer.</b> 8.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Let bₙ be the number of ways to write n as an ordered sum of 1s and 3s. Find b₇. <b>Solution.</b> bₙ = bₙ₋₁ + bₙ₋₃ with b₀ = 1, b₁ = 1, b₂ = 1. Then b₃ = 2, b₄ = 3, b₅ = 4, b₆ = 6, b₇ = 9.</p><p><b>Check.</b> Counting compositions of 7 by the number of 3s: no 3s gives 1 way, one 3 gives 5 ways (4 ones and one 3 arranged), two 3s gives 3 ways (one 1 and two 3s): 1 + 5 + 3 = 9 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> How many moves does the Tower of Hanoi need for 7 disks?</p><details><summary>Hint</summary>T(n) = 2T(n − 1) + 1.</details><details><summary>Answer</summary>127</details>
+<details><summary>Method: Recurrence</summary><p>T(n) = 2T(n − 1) + 1 with T(0) = 0 gives 2ⁿ − 1 = 127.</p></details>
+<details><summary>Method: Reason</summary><p>Move n − 1 disks away, move the biggest, move the n − 1 back: 2T(n − 1) + 1 moves.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem p2.</b> How many binary strings of length 10 have no two consecutive 1s?</p><details><summary>Hint</summary>Fibonacci recurrence.</details><details><summary>Answer</summary>144</details>
+<details><summary>Method: Recurrence</summary><p>a(n) = a(n − 1) + a(n − 2), with a(1) = 2, a(2) = 3: 2, 3, 5, 8, 13, 21, 34, 55, 89, 144.</p></details>
+<details><summary>Method: Count</summary><p>A string ends in 0 (any valid string of length n − 1 precedes) or in 01 (any valid string of length n − 2 precedes).</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem p3.</b> In how many ways can a 2 × 8 board be tiled by 1 × 2 dominoes?</p><details><summary>Hint</summary>Last column vertical or last two columns horizontal.</details><details><summary>Answer</summary>34</details>
+<details><summary>Method: Recurrence</summary><p>t(n) = t(n − 1) + t(n − 2) with t(0) = t(1) = 1: 1, 1, 2, 3, 5, 8, 13, 21, 34, so t(8) = 34.</p></details>
+<details><summary>Method: Reason</summary><p>Either the last column is one vertical domino, or the last two columns hold two stacked horizontal dominoes.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem p4.</b> In how many ways can 20 cents be made from pennies, nickels and dimes?</p><details><summary>Hint</summary>Count by dimes then nickels.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: By dimes</summary><p>With 0 dimes: nickels 0–4 give 5 ways; 1 dime: nickels 0–2 give 3 ways; 2 dimes: 1 way. Total 9.</p></details>
+<details><summary>Method: Table</summary><p>Using only pennies there is 1 way; adding nickels gives 5; adding dimes gives 9.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem p5.</b> A staircase has 10 steps and you climb 1, 2 or 3 steps at a time. How many ways are there?</p><details><summary>Hint</summary>w(n) = w(n − 1) + w(n − 2) + w(n − 3).</details><details><summary>Answer</summary>274</details>
+<details><summary>Method: Recurrence</summary><p>1, 1, 2, 4, 7, 13, 24, 44, 81, 149, 274 for n = 0..10, so 274.</p></details>
+<details><summary>Method: Reason</summary><p>The last jump is of size 1, 2 or 3.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem p6.</b> How many subsets of {1, 2, …, 12} contain no two consecutive numbers (the empty set counts)?</p><details><summary>Hint</summary>Fibonacci again.</details><details><summary>Answer</summary>377</details>
+<details><summary>Method: Recurrence</summary><p>f(n) = f(n − 1) + f(n − 2) with f(0) = 1, f(1) = 2 gives f(12) = 377.</p></details>
+<details><summary>Method: Reason</summary><p>Either 12 is not in the subset (f(11) ways) or it is, and 11 is not (f(10) ways).</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem p7.</b> In how many ways can 5 pairs of parentheses be correctly matched?</p><details><summary>Hint</summary>Catalan number C₅.</details><details><summary>Answer</summary>42</details>
+<details><summary>Method: Catalan</summary><p>C₅ = 42.</p></details>
+<details><summary>Method: Recursion</summary><p>C₅ = C₀C₄ + C₁C₃ + C₂C₂ + C₃C₁ + C₄C₀ = 14 + 5 + 4 + 5 + 14 = 42.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem p8.</b> In how many ways can 8 be written as an ordered sum of positive integers?</p><details><summary>Hint</summary>Compositions: 2ⁿ⁻¹.</details><details><summary>Answer</summary>128</details>
+<details><summary>Method: Gaps</summary><p>Each of the 7 gaps between eight 1s is either a plus or a cut, so 2⁷ = 128.</p></details>
+<details><summary>Method: Recurrence</summary><p>c(n) = 2c(n − 1) and c(1) = 1, so c(8) = 128.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem p9.</b> Fibonacci with F₁ = F₂ = 1. Find F₁₅.</p><details><summary>Hint</summary>Add successively.</details><details><summary>Answer</summary>610</details>
+<details><summary>Method: Compute</summary><p>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610.</p></details>
+<details><summary>Method: Identity</summary><p>F₁₅ = F₇² + F₈² = 169 + 441 = 610.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem p10.</b> In how many ways can a 2 × 8 rectangle be tiled with 1 × 2 dominoes?</p><details><summary>Hint</summary>Let tₙ = tₙ₋₁ + tₙ₋₂.</details><details><summary>Answer</summary>34</details>
+<details><summary>Method: Recurrence</summary><p>t₁ = 1, t₂ = 2, then 3, 5, 8, 13, 21, 34 for n = 8.</p></details>
+<details><summary>Method: Last column</summary><p>Either one vertical domino remains (tₙ₋₁) or two horizontal dominoes (tₙ₋₂).</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem p11.</b> How many binary strings of length 8 contain no two consecutive 1s?</p><details><summary>Hint</summary>Condition on the last symbol.</details><details><summary>Answer</summary>55</details>
+<details><summary>Method: Recurrence</summary><p>aₙ = aₙ₋₁ + aₙ₋₂ with a₁ = 2, a₂ = 3, giving 5, 8, 13, 21, 34, 55 for n = 8.</p></details>
+<details><summary>Method: Fibonacci</summary><p>aₙ = Fₙ₊₂, so a₈ = F₁₀ = 55.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem p12.</b> A staircase has 10 steps and you climb 1 or 2 steps at a time. How many ways are there?</p><details><summary>Hint</summary>Last move was 1 or 2.</details><details><summary>Answer</summary>89</details>
+<details><summary>Method: Recurrence</summary><p>Ways(n) = Ways(n − 1) + Ways(n − 2): 1, 2, 3, 5, 8, 13, 21, 34, 55, 89.</p></details>
+<details><summary>Method: Compositions</summary><p>It counts compositions of 10 into 1s and 2s, which is F₁₁ = 89.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem p13.</b> A staircase has 7 steps and you climb 1, 2 or 3 steps at a time. How many ways are there?</p><details><summary>Hint</summary>Ways(n) = Ways(n − 1) + Ways(n − 2) + Ways(n − 3).</details><details><summary>Answer</summary>44</details>
+<details><summary>Method: Recurrence</summary><p>1, 2, 4, 7, 13, 24, 44 for n = 1 to 7.</p></details>
+<details><summary>Method: Check</summary><p>Ways(4) = 4 + 2 + 1 = 7.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem p14.</b> In how many ways can a 1 × 6 strip be tiled with 1 × 1 squares and 1 × 2 dominoes?</p><details><summary>Hint</summary>Last tile.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Recurrence</summary><p>tₙ = tₙ₋₁ + tₙ₋₂: 1, 2, 3, 5, 8, 13.</p></details>
+<details><summary>Method: Compositions</summary><p>It counts compositions of 6 into 1s and 2s: 13.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem p15.</b> How many strings of length 6 over {a, b} do not contain two consecutive a's?</p><details><summary>Hint</summary>Same as the no-11 problem.</details><details><summary>Answer</summary>21</details>
+<details><summary>Method: Recurrence</summary><p>2, 3, 5, 8, 13, 21 for lengths 1 to 6.</p></details>
+<details><summary>Method: Fibonacci</summary><p>F₈ = 21.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem p16.</b> A sequence has a₁ = 1 and aₙ = aₙ₋₁ + n. Find a₁₀.</p><details><summary>Hint</summary>Triangular numbers.</details><details><summary>Answer</summary>55</details>
+<details><summary>Method: Sum</summary><p>a₁₀ = 1 + 2 + … + 10 = 55.</p></details>
+<details><summary>Method: List</summary><p>1, 3, 6, 10, 15, 21, 28, 36, 45, 55.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem p17.</b> How many derangements of 6 objects are there?</p><details><summary>Hint</summary>Dₙ = (n − 1)(Dₙ₋₁ + Dₙ₋₂).</details><details><summary>Answer</summary>265</details>
+<details><summary>Method: Recurrence</summary><p>D₁ = 0, D₂ = 1, D₃ = 2, D₄ = 9, D₅ = 44, D₆ = 5(44 + 9) = 265.</p></details>
+<details><summary>Method: Formula</summary><p>720(1 − 1 + 1/2 − 1/6 + 1/24 − 1/120 + 1/720) = 720 − 720 + 360 − 120 + 30 − 6 + 1 = 265.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem x18.</b> How many binary strings of length 7 contain no two consecutive 1s?</p><details><summary>Hint</summary>Condition on the last symbol.</details><details><summary>Answer</summary>34</details>
+<details><summary>Method: Recurrence</summary><p>aₙ = aₙ₋₁ + aₙ₋₂ with a₁ = 2, a₂ = 3: 2, 3, 5, 8, 13, 21, 34, so a_7 = 34.</p></details>
+<details><summary>Method: Fibonacci</summary><p>aₙ = F_{n+2}, so a_7 = F_9 = 34.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem x19.</b> A staircase has 8 steps and you climb 1 or 2 steps at a time. How many ways are there to climb it?</p><details><summary>Hint</summary>Consider the last move.</details><details><summary>Answer</summary>34</details>
+<details><summary>Method: Recurrence</summary><p>Ways(n) = Ways(n − 1) + Ways(n − 2): 1, 2, 3, 5, 8, 13, 21, 34, so 34 ways.</p></details>
+<details><summary>Method: By number of 2-steps</summary><p>With j two-steps there are C(8 − j, j) orders; summing over j gives 34.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem x20.</b> A sequence has a₁ = 4 and aₖ₊₁ = 3·aₖ + -2. Find a_5.</p><details><summary>Hint</summary>Compute term by term, or find a closed form.</details><details><summary>Answer</summary>244</details>
+<details><summary>Method: Step by step</summary><p>The terms are 4, 10, 28, 82, 244, so a_5 = 244.</p></details>
+<details><summary>Method: Closed form</summary><p>The fixed point is K = 1, so aₙ = (a₁ − K)·3^(n−1) + K. For n = 5 this is 244.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem x21.</b> In how many ways can 7 letters be put into 7 addressed envelopes so that no letter is in its own envelope?</p><details><summary>Hint</summary>Derangements.</details><details><summary>Answer</summary>1854</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>7!(1 − 1 + 1/2! − …) = +5040 −5040 +2520 −840 +210 −42 +7 −1 = 1854.</p></details>
+<details><summary>Method: Recurrence</summary><p>Dₙ = (n − 1)(Dₙ₋₁ + Dₙ₋₂) gives 1, 0, 1, 2, 9, 44, 265, 1854, so D_7 = 1854.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem x22.</b> How many binary strings of length 9 contain no two consecutive 1s?</p><details><summary>Hint</summary>Condition on the last symbol.</details><details><summary>Answer</summary>89</details>
+<details><summary>Method: Recurrence</summary><p>aₙ = aₙ₋₁ + aₙ₋₂ with a₁ = 2, a₂ = 3: 2, 3, 5, 8, 13, 21, 34, 55, 89, so a_9 = 89.</p></details>
+<details><summary>Method: Fibonacci</summary><p>aₙ = F_{n+2}, so a_9 = F_11 = 89.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem x23.</b> A staircase has 9 steps and you climb 1 or 2 steps at a time. How many ways are there to climb it?</p><details><summary>Hint</summary>Consider the last move.</details><details><summary>Answer</summary>55</details>
+<details><summary>Method: Recurrence</summary><p>Ways(n) = Ways(n − 1) + Ways(n − 2): 1, 2, 3, 5, 8, 13, 21, 34, 55, so 55 ways.</p></details>
+<details><summary>Method: By number of 2-steps</summary><p>With j two-steps there are C(9 − j, j) orders; summing over j gives 55.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem x24.</b> A sequence has a₁ = 1 and aₖ₊₁ = 4·aₖ + 3. Find a_5.</p><details><summary>Hint</summary>Compute term by term, or find a closed form.</details><details><summary>Answer</summary>511</details>
+<details><summary>Method: Step by step</summary><p>The terms are 1, 7, 31, 127, 511, so a_5 = 511.</p></details>
+<details><summary>Method: Closed form</summary><p>The fixed point is K = -1, so aₙ = (a₁ − K)·4^(n−1) + K. For n = 5 this is 511.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>
+<div class=p><p><b>Problem x25.</b> In how many ways can 3 letters be put into 3 addressed envelopes so that no letter is in its own envelope?</p><details><summary>Hint</summary>Derangements.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>3!(1 − 1 + 1/2! − …) = +6 −6 +3 −1 = 2.</p></details>
+<details><summary>Method: Recurrence</summary><p>Dₙ = (n − 1)(Dₙ₋₁ + Dₙ₋₂) gives 1, 0, 1, 2, so D_3 = 2.</p></details>
+<p class=ref>Source: Zeitz, ch. 6 (induction and recursion) and Engel ch. 8</p></div>

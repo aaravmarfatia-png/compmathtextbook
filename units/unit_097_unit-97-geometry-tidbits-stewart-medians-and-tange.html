@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 97</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 97: Unit 97: Geometry tidbits: Stewart, medians and tangent lengths</h1><p class=ref>Book: AoPS Volume 2, ch. 22 (Geometry Tidbits) (25 problems)<br>AoPS Volume 2, chapter 22 (Geometry Tidbits: Stewart&#x27;s theorem and related formulas).</p>
+<h2>Reading</h2>
+<h3>1. Medians and Apollonius's theorem</h3><p>The length of the median from A to the midpoint D of BC is given by <b>Apollonius's theorem</b>: AB² + AC² = 2(AD² + BD²), i.e. m_a² = (2b² + 2c² − a²)/4. In the 13-14-15 triangle with the median to the side 14 (BD = 7): 169 + 225 = 394 = 2(AD² + 49), so AD² = 148 ✓ (matches Unit 50).</p><p><b>Worked example.</b> A right triangle has legs 6 and 8 and hypotenuse 10. The median to the hypotenuse is 5. By Apollonius: 36 + 64 = 100 = 2(m² + 25), m² = 25 ✓. The median to the side 6 has m² = (2 × 64 + 2 × 100 − 36)/4 = 292/4 = 73.</p><p><b>The three medians</b> divide the triangle into six triangles of equal area and meet at the centroid, which divides each in the ratio 2 : 1.</p>
+<h3>2. Tangent lengths and excircles</h3><p>For a triangle with sides a, b, c and semiperimeter s, the incircle touches the sides so that the tangent length from vertex A is s − a, from B is s − b, from C is s − c. The <b>excircle</b> opposite A touches BC and the extensions of AB, AC; the tangent length from A to it is s. The radii are r = K/s and r_a = K/(s − a), where K is the area.</p><p><b>Worked example (13-14-15).</b> K = 84 and s = 21. The radii: r = 4; r_a (opposite the side 14) = 84/7 = 12; r_b (opposite 15) = 84/6 = 14; r_c (opposite 13) = 84/8 = 10.5. Check the identity 1/r = 1/r_a + 1/r_b + 1/r_c: 1/12 + 1/14 + 1/10.5 = 0.0833 + 0.0714 + 0.0952 = 0.25 = 1/4 ✓.</p><p><b>Area as a product.</b> K² = r · r_a · r_b · r_c: 4 × 12 × 14 × 10.5 = 7,056 = 84² ✓.</p>
+<h3>3. Other useful facts</h3><p><b>The angle bisector length</b> from A: d² = bc(1 − a²/(b + c)²) (Unit 50). <b>Euler's formula</b> OI² = R² − 2Rr relates the circumcentre and incentre. <b>The area of a triangle with medians</b> m_a, m_b, m_c is 4/3 the area of the triangle having sides m_a, m_b, m_c.</p><p><b>Worked example.</b> For the right triangle with legs 6, 8: R = 5, r = (6 + 8 − 10)/2 = 2, so OI² = 25 − 20 = 5.</p><p><b>The butterfly and other lemmas.</b> The ratio of areas of triangles that share a vertex and have bases on one line is the ratio of the bases. This single idea underlies many 'tidbits'.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Using the full side where half is needed (BD instead of BC). Mixing the excircle tangent length s with s − a. Forgetting that the median formulas use the opposite side.</p><p><b>Checks.</b> Test your formula on a right triangle where the answer is easy.</p><p><b>Practice.</b> Keep a table of a, b, c, s, K, r, R for your triangle.</p>
+<h3>Worked examples with Try-its: Stewart's theorem and medians</h3><p>For a cevian of length d from A to a point on BC that splits BC into m (next to B) and n (next to C), with b = AC, c = AB, a = m + n: b²m + c²n = a(d² + mn). In the 13-14-15 triangle with BD = 6, DC = 8: 225 · 6 + 169 · 8 = 2702 = 14(d² + 48), so d² = 145 and d = √145. The median has m = n = a/2 and length m_a² = (2b² + 2c² − a²)/4; from A in 13-14-15 the square of the median is 148, so m_a = √148.</p><details class="try"><summary>Try it<p>A triangle has sides 7, 8, 9. Find the median to the side of length 9.</p><p><b>Answer.</b> (98 + 128 − 81)/4 = 145/4, so the median is √145/2.</p></details>
+<h3>Worked examples with Try-its: Tangent lengths</h3><p>From the vertices of a triangle with semiperimeter s, the incircle tangent lengths are s − a, s − b, s − c. In 13-14-15, s = 21 and the lengths are 7, 6, 8 from the vertices opposite sides 14, 15, 13 respectively. Equal tangent segments from an outside point are the key fact behind many of these problems.</p><details class="try"><summary>Try it<p>A triangle has sides 5, 6, 7. How long is the tangent from the vertex opposite the side 6 to the incircle?</p><p><b>Answer.</b> s = 9, so s − 6 = 3.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> In the 13-14-15 triangle the cevian from A meets BC at the incircle's touch point D. Find AD. <b>Solution.</b> BD = s − b = 6, DC = 8, and Stewart gives AD = √145, the same cevian as above.</p><p><b>Reflection.</b> The touch point is just a point with BD = s − b, so Stewart applies directly.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Isosceles median.</b> In a 5-5-6 triangle the median to the base is √(25 − 9) = 4 (also from the formula (2 · 25 + 2 · 25 − 36)/4 = 16). In the 3-4-5 triangle the median to the hypotenuse is 5/2, from (2 · 9 + 2 · 16 − 25)/4 = 25/4. The incircle tangent lengths of the 3-4-5 triangle from the vertices are s − a, s − b, s − c with s = 6: 3, 2 and 1.</p><details class="try"><summary>Try it<p>Find the median to the side of length 8 in a triangle with sides 8, 6, 10.</p><p><b>Answer.</b> m² = (2 · 36 + 2 · 100 − 64)/4 = 52, so √52 = 2√13.</p></details><details class="try"><summary>Try it<p>A triangle has sides 7, 8, 9. Find the incircle tangent length from the vertex between sides 8 and 9.</p><p><b>Answer.</b> s = 12, so s − 7 = 5.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> In triangle ABC, AB = 7, AC = 9, BC = 8. A point D on BC has BD = 3. Find AD. <b>Solution.</b> Stewart: AC² · BD + AB² · DC = BC(AD² + BD · DC) gives 81 · 3 + 49 · 5 = 488 = 8(AD² + 15), so AD² = 61 − 15 = 46 and AD = √46.</p><p><b>Check.</b> 243 + 245 = 488, and 488/8 = 61 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> In triangle ABC with AB = 13, AC = 15, BC = 14, D lies on BC with BD = 6, DC = 8. Find AD².</p><details><summary>Hint</summary>Stewart: b²m + c²n = a(d² + mn).</details><details><summary>Answer</summary>145</details>
+<details><summary>Method: Stewart</summary><p>225·6 + 169·8 = 1350 + 1352 = 2702 = 14(AD² + 48), so AD² = 193 − 48 = 145.</p></details>
+<details><summary>Method: Coordinates</summary><p>With B = (0,0), C = (14,0), A = (5,12) and D = (6,0): AD² = 1 + 144 = 145.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem p2.</b> Find the square of the median to BC in the 13-14-15 triangle (BC = 14).</p><details><summary>Hint</summary>m² = (2b² + 2c² − a²)/4.</details><details><summary>Answer</summary>148</details>
+<details><summary>Method: Formula</summary><p>(450 + 338 − 196)/4 = 592/4 = 148.</p></details>
+<details><summary>Method: Coordinates</summary><p>The midpoint of BC is (7, 0) and A = (5, 12): 4 + 144 = 148.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem p3.</b> Find the square of the angle-bisector length from A in the 13-14-15 triangle with AB = 13, AC = 15, BC = 14, as a fraction.</p><details><summary>Hint</summary>AD² = bc(1 − a²/(b + c)²).</details><details><summary>Answer</summary>585/4</details>
+<details><summary>Method: Formula</summary><p>195(1 − 196/784) = 195 · 3/4 = 585/4.</p></details>
+<details><summary>Method: Stewart</summary><p>BD = 14 · 13/28 = 13/2, DC = 15/2. Then 225 · 13/2 + 169 · 15/2 = 14(AD² + 195/4), so AD² = 585/4.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem p4.</b> Find the altitude to the side 14 in the 13-14-15 triangle.</p><details><summary>Hint</summary>Area 84.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Area</summary><p>2 · 84/14 = 12.</p></details>
+<details><summary>Method: Pythagoras</summary><p>The altitude splits BC into 5 and 9, and 5² + 12² = 13².</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem p5.</b> A parallelogram has sides 5 and 7. One diagonal has square 64. Find the square of the other diagonal.</p><details><summary>Hint</summary>d₁² + d₂² = 2(a² + b²).</details><details><summary>Answer</summary>84</details>
+<details><summary>Method: Law</summary><p>2(25 + 49) − 64 = 84.</p></details>
+<details><summary>Method: Check</summary><p>The sides must satisfy the triangle inequality in each half: d₁/2 = 4 and d₂/2 = √21 ≈ 4.58 are each between 7 − 5 = 2 and 7 + 5 = 12, so the diagonals are plausible.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem p6.</b> Find the square of the median to the side of length 9 in a triangle with sides 7, 8, 9, as a fraction.</p><details><summary>Hint</summary>m² = (2b² + 2c² − a²)/4.</details><details><summary>Answer</summary>145/4</details>
+<details><summary>Method: Formula</summary><p>(98 + 128 − 81)/4 = 145/4.</p></details>
+<details><summary>Method: Coordinates</summary><p>Place the side 9 on the x-axis from (0,0) to (9,0); the third vertex is (x, y) with x² + y² = 49 and (x − 9)² + y² = 64, so x = 11/3 and y² = 320/9. The median goes to (9/2, 0), so its square is (5/6)² + 320/9 = 25/36 + 1280/36 = 145/4.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem p7.</b> How many triangles with positive integer sides have perimeter 20 (order of sides ignored)?</p><details><summary>Hint</summary>Triangle inequality: the longest side is below 10.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Count</summary><p>By the longest side c = 7, 8, 9: c = 9 gives (2,9,9), (3,8,9), (4,7,9), (5,6,9) = 4; c = 8 gives (4,8,8), (5,7,8), (6,6,8) = 3; c = 7 gives (6,7,7) = 1. Total 8.</p></details>
+<details><summary>Method: Check</summary><p>The longest side must satisfy 20/3 ≤ c < 10.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem p8.</b> Find the area of the triangle with vertices (0,0), (7,1), (2,5), as a fraction.</p><details><summary>Hint</summary>Half the cross product.</details><details><summary>Answer</summary>33/2</details>
+<details><summary>Method: Cross product</summary><p>|7·5 − 1·2|/2 = 33/2.</p></details>
+<details><summary>Method: Shoelace</summary><p>(0 + 35 + 0) − (0 + 2 + 0) = 33, halved.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem p9.</b> Two circles with radii 6 and 2 have centres 5 apart. Find the length of a common external tangent segment between the points of tangency.</p><details><summary>Hint</summary>√(d² − (r₁ − r₂)²).</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Formula</summary><p>√(25 − 16) = 3.</p></details>
+<details><summary>Method: Right triangle</summary><p>Draw the radii to the tangent points; the segment of length d, the difference 4 of the radii and the tangent segment form a right triangle with hypotenuse 5, legs 4 and 3.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem p10.</b> In the 13-14-15 triangle, find the square of the median to the side of length 14.</p><details><summary>Hint</summary>m² = (2b² + 2c² − a²)/4.</details><details><summary>Answer</summary>148</details>
+<details><summary>Method: Formula</summary><p>(2 · 169 + 2 · 225 − 196)/4 = 592/4 = 148.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put the side 14 from (0, 0) to (14, 0), the apex at (5, 12), and the midpoint at (7, 0). The squared distance is 4 + 144 = 148.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem p11.</b> In triangle ABC, AB = 5, AC = 7 and BC = 8. D lies on BC with BD = 3. Find AD².</p><details><summary>Hint</summary>Stewart's theorem.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: Stewart</summary><p>AD² = (AC² · BD + AB² · DC)/BC − BD · DC = (147 + 125)/8 − 15 = 34 − 15 = 19.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put B = (0, 0) and C = (8, 0). From AB = 5 and AC = 7, A has x = (25 + 64 − 49)/16 = 5/2 and y² = 25 − 25/4 = 75/4. D = (3, 0), so AD² = 1/4 + 75/4 = 19.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem p12.</b> Find the altitude to the side of length 14 in the 13-14-15 triangle.</p><details><summary>Hint</summary>Use the area 84.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Area</summary><p>84 = ½ · 14 · h, so h = 12.</p></details>
+<details><summary>Method: Right triangles</summary><p>The foot splits the side into 5 and 9, and the altitude satisfies 13² − 5² = 144, so 12.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem p13.</b> Find the area of an isosceles triangle with sides 5, 5 and 6.</p><details><summary>Hint</summary>Drop the altitude to the base.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Altitude</summary><p>The altitude is √(25 − 9) = 4, so the area is ½ · 6 · 4 = 12.</p></details>
+<details><summary>Method: Heron</summary><p>s = 8, so the area is √(8 · 3 · 3 · 2) = √144 = 12.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem p14.</b> Find the inradius of the 13-14-15 triangle.</p><details><summary>Hint</summary>r = K/s.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Formula</summary><p>r = 84/21 = 4.</p></details>
+<details><summary>Method: Tangent lengths</summary><p>With s = 21 the tangent lengths are 8, 7 and 6, and the area is r · s, so r = 84/21 = 4.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem p15.</b> In triangle ABC, AB = 6, AC = 3 and BC = 6. The bisector of angle A meets BC at D. Find AD².</p><details><summary>Hint</summary>BD:DC = 6:3.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Stewart</summary><p>BD = 4 and DC = 2, so AD² = (AC² · BD + AB² · DC)/BC − BD · DC = (36 + 72)/6 − 8 = 10.</p></details>
+<details><summary>Method: Bisector formula</summary><p>AD² = AB · AC − BD · DC = 18 − 8 = 10.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem p16.</b> Find the area of the triangle with sides 6, 8 and 10.</p><details><summary>Hint</summary>Right triangle.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Right angle</summary><p>6² + 8² = 10², so the area is ½ · 6 · 8 = 24.</p></details>
+<details><summary>Method: Heron</summary><p>s = 12, so √(12 · 6 · 4 · 2) = √576 = 24.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem p17.</b> Find the sum of the squares of the three medians of the 13-14-15 triangle.</p><details><summary>Hint</summary>Sum = ¾(a² + b² + c²).</details><details><summary>Answer</summary>885/2</details>
+<details><summary>Method: Formula</summary><p>¾ · 590 = 885/2.</p></details>
+<details><summary>Method: Direct</summary><p>The squared medians are 148 (to side 14), and by the same formula (2·196 + 2·225 − 169)/4 = 673/4 and (2·169 + 2·196 − 225)/4 = 505/4; the sum is (592 + 673 + 505)/4 = 1770/4 = 885/2.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem x18.</b> In triangle ABC, BC = 11, CA = 8 and AB = 9. D lies on BC with BD = 3. Find AD².</p><details><summary>Hint</summary>Stewart's theorem.</details><details><summary>Answer</summary>576/11</details>
+<details><summary>Method: Stewart</summary><p>AD² = (CA² · BD + AB² · DC)/BC − BD · DC = (64 · 3 + 81 · 8)/11 − 24 = 576/11.</p></details>
+<details><summary>Method: Law of cosines</summary><p>cos B = 23/33. Then AD² = AB² + BD² − 2 · AB · BD · cos B = 81 + 9 − 414/11 = 576/11.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem x19.</b> A triangle has sides 13, 20 and 21. Find the square of the median to the side of length 13.</p><details><summary>Hint</summary>m² = (2b² + 2c² − a²)/4.</details><details><summary>Answer</summary>1513/4</details>
+<details><summary>Method: Median formula</summary><p>(2 · 400 + 2 · 441 − 169)/4 = 1513/4.</p></details>
+<details><summary>Method: Parallelogram law</summary><p>Doubling the median completes a parallelogram with diagonals 13 and 2m; the law gives 169 + 4m² = 2(400 + 441), so m² = 1513/4.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem x20.</b> In triangle ABC, BC = 15, CA = 10 and AB = 12. D lies on BC with BD = 7. Find AD².</p><details><summary>Hint</summary>Stewart's theorem.</details><details><summary>Answer</summary>1012/15</details>
+<details><summary>Method: Stewart</summary><p>AD² = (CA² · BD + AB² · DC)/BC − BD · DC = (100 · 7 + 144 · 8)/15 − 56 = 1012/15.</p></details>
+<details><summary>Method: Law of cosines</summary><p>cos B = 269/360. Then AD² = AB² + BD² − 2 · AB · BD · cos B = 144 + 49 − 1883/15 = 1012/15.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem x21.</b> A triangle has sides 8, 15 and 17. Find the square of the median to the side of length 8.</p><details><summary>Hint</summary>m² = (2b² + 2c² − a²)/4.</details><details><summary>Answer</summary>241</details>
+<details><summary>Method: Median formula</summary><p>(2 · 225 + 2 · 289 − 64)/4 = 241.</p></details>
+<details><summary>Method: Parallelogram law</summary><p>Doubling the median completes a parallelogram with diagonals 8 and 2m; the law gives 64 + 4m² = 2(225 + 289), so m² = 241.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem x22.</b> In triangle ABC, BC = 13, CA = 9 and AB = 10. D lies on BC with BD = 5. Find AD².</p><details><summary>Hint</summary>Stewart's theorem.</details><details><summary>Answer</summary>685/13</details>
+<details><summary>Method: Stewart</summary><p>AD² = (CA² · BD + AB² · DC)/BC − BD · DC = (81 · 5 + 100 · 8)/13 − 40 = 685/13.</p></details>
+<details><summary>Method: Law of cosines</summary><p>cos B = 47/65. Then AD² = AB² + BD² − 2 · AB · BD · cos B = 100 + 25 − 940/13 = 685/13.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem x23.</b> A triangle has sides 10, 17 and 21. Find the square of the median to the side of length 10.</p><details><summary>Hint</summary>m² = (2b² + 2c² − a²)/4.</details><details><summary>Answer</summary>340</details>
+<details><summary>Method: Median formula</summary><p>(2 · 289 + 2 · 441 − 100)/4 = 340.</p></details>
+<details><summary>Method: Parallelogram law</summary><p>Doubling the median completes a parallelogram with diagonals 10 and 2m; the law gives 100 + 4m² = 2(289 + 441), so m² = 340.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem x24.</b> In triangle ABC, BC = 16, CA = 11 and AB = 12. D lies on BC with BD = 6. Find AD².</p><details><summary>Hint</summary>Stewart's theorem.</details><details><summary>Answer</summary>603/8</details>
+<details><summary>Method: Stewart</summary><p>AD² = (CA² · BD + AB² · DC)/BC − BD · DC = (121 · 6 + 144 · 10)/16 − 60 = 603/8.</p></details>
+<details><summary>Method: Law of cosines</summary><p>cos B = 93/128. Then AD² = AB² + BD² − 2 · AB · BD · cos B = 144 + 36 − 837/8 = 603/8.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>
+<div class=p><p><b>Problem x25.</b> A triangle has sides 9, 12 and 15. Find the square of the median to the side of length 9.</p><details><summary>Hint</summary>m² = (2b² + 2c² − a²)/4.</details><details><summary>Answer</summary>657/4</details>
+<details><summary>Method: Median formula</summary><p>(2 · 144 + 2 · 225 − 81)/4 = 657/4.</p></details>
+<details><summary>Method: Parallelogram law</summary><p>Doubling the median completes a parallelogram with diagonals 9 and 2m; the law gives 81 + 4m² = 2(144 + 225), so m² = 657/4.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 22 (Geometry Tidbits)</p></div>

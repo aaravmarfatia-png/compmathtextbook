@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 150</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 150: Unit 150: Jensen&#x27;s inequality, smoothing and balanced coefficients</h1><p class=ref>Book: Pham Kim Hung, Secrets in Inequalities vol. 1; Cîrtoaje, Algebraic Inequalities; Andreescu &amp; Enescu, Mathematical Olympiad Treasures (25 problems)<br>Pham Kim Hung vol. 1, ch. 4 (convex functions, Jensen; variables restricted to an interval) and ch. 6 (balanced coefficients); Cîrtoaje, Algebraic Inequalities, ch. 3 (right convex and left concave functions); Andreescu &amp; Enescu 1.6.</p>
+<h2>Reading</h2>
+<h3>1. Jensen's inequality and smoothing</h3><p>A function is <b>convex</b> if the chord lies above the graph; then f((x + y)/2) ≤ (f(x) + f(y))/2, and in general Σ f(xᵢ) ≥ n·f(mean). For 1/x on positive reals with Σ xᵢ = 8 and n = 4 the sum is at least 4 · f(2) = 4 · ½ = 2. For concave f the inequality flips: with Σ xᵢ = 9 and n = 4, Σ √xᵢ ≤ 4 · √(9/4) = 6.</p><p><b>Smoothing.</b> For a convex f, replacing two numbers by two closer numbers with the same sum lowers Σ f. With integers adding to 17 in five places the sum of squares is smallest for 3, 3, 3, 4, 4, namely 59. On an interval, a convex function is largest at the endpoints: with x₁, …, x₅ in [0, 1] and sum 2.5 the largest Σ xᵢ² is 1 + 1 + 0.25 = 2.25.</p><details class="try"><summary>Try it<p>Minimum of Σ x² if three reals sum to 6?</p><p><b>Answer.</b> 3 · 4 = 12.</p></details><details class="try"><summary>Try it<p>Maximum of √x + √y if x + y = 8?</p><p><b>Answer.</b> 2 · √4 = 4.</p></details>
+<h3>2. Balancing the coefficients</h3><p>When AM-GM is used for a minimum, the terms must be arranged so the equality case is reachable. For the minimum of x + 4/x² write x as x/2 + x/2: then x/2 + x/2 + 4/x² ≥ 3·∛(1) = 3, and equality needs x/2 = 4/x², i.e. x = 2, where the value is 2 + 1 = 3 ✓. Had one used x + 4/x² ≥ 2·√(4/x), the bound would not be a constant and would not give the minimum. The same idea with Cauchy–Schwarz: (1/x + 4/y)(x + y) ≥ 9 with equality at x : y = 1 : 2.</p><details class="try"><summary>Try it<p>Minimum of x + 32/x² for x > 0?</p><p><b>Answer.</b> x/2 + x/2 + 32/x² ≥ 3·∛8 = 6, at x = 4.</p></details><details class="try"><summary>Try it<p>Largest product of positive integers adding to 10?</p><p><b>Answer.</b> 3 · 3 · 2 · 2 = 36.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> Positive reals x, y satisfy x + y = 6. Find the minimum of 1/x + 4/y. <b>Solution.</b> By Cauchy–Schwarz (1/x + 4/y)(x + y) ≥ (1 + 2)² = 9, so 1/x + 4/y ≥ 9/6 = 3/2, with equality at x = 2, y = 4.</p><p><b>Check.</b> 1/2 + 4/4 = 3/2 ✓.</p>
+<h3>4. In the books</h3><p>Pham Kim Hung vol. 1 treats convex functions and Jensen in ch. 4 and balanced coefficients in ch. 6; Cîrtoaje, <i>Algebraic Inequalities</i>, ch. 3 covers right-convex and left-concave functions. This unit introduces the ideas only; the books' proof-based inequality problems are not covered. <b>Honest note:</b> the problems are my own templates.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Positive reals x₁, …, x_4 have sum 8. What is the minimum value of 1/x₁ + … + 1/x_4? (fraction if needed)</p><details><summary>Hint</summary>The function 1/x is convex for x > 0; use Jensen's inequality.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Jensen</summary><p>For convex f, Σ f(xᵢ) ≥ n·f(mean) = 4·f(2) = 4·1/2 = 2.</p></details>
+<details><summary>Method: AM-HM</summary><p>The harmonic mean is at most the arithmetic mean, so Σ 1/xᵢ ≥ 4²/8 = 2.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> Positive reals x₁, …, x_5 have sum 10. What is the minimum value of 1/x₁ + … + 1/x_5? (fraction if needed)</p><details><summary>Hint</summary>The function 1/x is convex for x > 0; use Jensen's inequality.</details><details><summary>Answer</summary>5/2</details>
+<details><summary>Method: Jensen</summary><p>For convex f, Σ f(xᵢ) ≥ n·f(mean) = 5·f(2) = 5·1/2 = 5/2.</p></details>
+<details><summary>Method: AM-HM</summary><p>The harmonic mean is at most the arithmetic mean, so Σ 1/xᵢ ≥ 5²/10 = 5/2.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> Positive reals x₁, …, x_3 have sum 6. What is the minimum value of 1/x₁ + … + 1/x_3? (fraction if needed)</p><details><summary>Hint</summary>The function 1/x is convex for x > 0; use Jensen's inequality.</details><details><summary>Answer</summary>3/2</details>
+<details><summary>Method: Jensen</summary><p>For convex f, Σ f(xᵢ) ≥ n·f(mean) = 3·f(2) = 3·1/2 = 3/2.</p></details>
+<details><summary>Method: AM-HM</summary><p>The harmonic mean is at most the arithmetic mean, so Σ 1/xᵢ ≥ 3²/6 = 3/2.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> Reals x₁, …, x_3 have sum 6. What is the minimum value of x₁⁴ + … + x_3⁴? (fraction if needed)</p><details><summary>Hint</summary>x⁴ is convex on all of ℝ.</details><details><summary>Answer</summary>48</details>
+<details><summary>Method: Jensen</summary><p>Σ xᵢ⁴ ≥ n(Σ xᵢ/n)⁴ = 3·(2)⁴ = 48.</p></details>
+<details><summary>Method: Tangent line</summary><p>x⁴ ≥ 4m³x − 3m⁴ with m = 2 (it is (x − m)²(x² + 2mx + 3m²) ≥ 0); summing gives 48.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> Reals x₁, …, x_4 have sum 8. What is the minimum value of x₁⁴ + … + x_4⁴? (fraction if needed)</p><details><summary>Hint</summary>x⁴ is convex on all of ℝ.</details><details><summary>Answer</summary>64</details>
+<details><summary>Method: Jensen</summary><p>Σ xᵢ⁴ ≥ n(Σ xᵢ/n)⁴ = 4·(2)⁴ = 64.</p></details>
+<details><summary>Method: Tangent line</summary><p>x⁴ ≥ 4m³x − 3m⁴ with m = 2 (it is (x − m)²(x² + 2mx + 3m²) ≥ 0); summing gives 64.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> Reals x₁, …, x_5 have sum 10. What is the minimum value of x₁⁴ + … + x_5⁴? (fraction if needed)</p><details><summary>Hint</summary>x⁴ is convex on all of ℝ.</details><details><summary>Answer</summary>80</details>
+<details><summary>Method: Jensen</summary><p>Σ xᵢ⁴ ≥ n(Σ xᵢ/n)⁴ = 5·(2)⁴ = 80.</p></details>
+<details><summary>Method: Tangent line</summary><p>x⁴ ≥ 4m³x − 3m⁴ with m = 2 (it is (x − m)²(x² + 2mx + 3m²) ≥ 0); summing gives 80.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> Non-negative reals x₁, …, x_3 have sum 12. What is the maximum value of √x₁ + … + √x_3?</p><details><summary>Hint</summary>√x is concave; Jensen gives the reverse inequality.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Jensen</summary><p>For concave f, Σ f(xᵢ) ≤ n·f(mean) = 3·√(4) = 6.</p></details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(Σ √xᵢ)² ≤ n·Σ xᵢ = 36, so the sum is at most 6.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> Non-negative reals x₁, …, x_4 have sum 9. What is the maximum value of √x₁ + … + √x_4?</p><details><summary>Hint</summary>√x is concave; Jensen gives the reverse inequality.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Jensen</summary><p>For concave f, Σ f(xᵢ) ≤ n·f(mean) = 4·√(9/4) = 6.</p></details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(Σ √xᵢ)² ≤ n·Σ xᵢ = 36, so the sum is at most 6.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> Non-negative reals x₁, …, x_5 have sum 20. What is the maximum value of √x₁ + … + √x_5?</p><details><summary>Hint</summary>√x is concave; Jensen gives the reverse inequality.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Jensen</summary><p>For concave f, Σ f(xᵢ) ≤ n·f(mean) = 5·√(4) = 10.</p></details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(Σ √xᵢ)² ≤ n·Σ xᵢ = 100, so the sum is at most 10.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> 5 non-negative integers add up to 17. What is the smallest possible value of the sum of their squares?</p><details><summary>Hint</summary>Convexity says to keep the numbers as equal as possible.</details><details><summary>Answer</summary>59</details>
+<details><summary>Method: Balance</summary><p>Use 3 copies of 3 and 2 copies of 4: 3·9 + 2·16 = 59.</p></details>
+<details><summary>Method: Smoothing</summary><p>If two numbers differ by 2 or more, moving them one step closer lowers the sum of squares, so the minimum has all numbers within 1 of each other: 59.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> 6 non-negative integers add up to 23. What is the smallest possible value of the sum of their squares?</p><details><summary>Hint</summary>Convexity says to keep the numbers as equal as possible.</details><details><summary>Answer</summary>89</details>
+<details><summary>Method: Balance</summary><p>Use 1 copies of 3 and 5 copies of 4: 1·9 + 5·16 = 89.</p></details>
+<details><summary>Method: Smoothing</summary><p>If two numbers differ by 2 or more, moving them one step closer lowers the sum of squares, so the minimum has all numbers within 1 of each other: 89.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> 8 non-negative integers add up to 31. What is the smallest possible value of the sum of their squares?</p><details><summary>Hint</summary>Convexity says to keep the numbers as equal as possible.</details><details><summary>Answer</summary>121</details>
+<details><summary>Method: Balance</summary><p>Use 1 copies of 3 and 7 copies of 4: 1·9 + 7·16 = 121.</p></details>
+<details><summary>Method: Smoothing</summary><p>If two numbers differ by 2 or more, moving them one step closer lowers the sum of squares, so the minimum has all numbers within 1 of each other: 121.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> What is the minimum value of x + 4/x² for x > 0?</p><details><summary>Hint</summary>Split x into x/2 + x/2 and use 3-term AM-GM so the equality case is x = 2.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Balanced AM-GM</summary><p>x/2 + x/2 + 4/x² ≥ 3∛(4/4) = 3, with equality at x = 2.</p></details>
+<details><summary>Method: Calculus</summary><p>The derivative 1 − 8/x³ vanishes at x = 2, where the value is 3.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> What is the minimum value of x + 32/x² for x > 0?</p><details><summary>Hint</summary>Split x into x/2 + x/2 and use 3-term AM-GM so the equality case is x = 4.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Balanced AM-GM</summary><p>x/2 + x/2 + 32/x² ≥ 3∛(32/4) = 6, with equality at x = 4.</p></details>
+<details><summary>Method: Calculus</summary><p>The derivative 1 − 64/x³ vanishes at x = 4, where the value is 6.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> What is the minimum value of x + 108/x² for x > 0?</p><details><summary>Hint</summary>Split x into x/2 + x/2 and use 3-term AM-GM so the equality case is x = 6.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Balanced AM-GM</summary><p>x/2 + x/2 + 108/x² ≥ 3∛(108/4) = 9, with equality at x = 6.</p></details>
+<details><summary>Method: Calculus</summary><p>The derivative 1 − 216/x³ vanishes at x = 6, where the value is 9.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> What is the minimum value of x + 256/x² for x > 0?</p><details><summary>Hint</summary>Split x into x/2 + x/2 and use 3-term AM-GM so the equality case is x = 8.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Balanced AM-GM</summary><p>x/2 + x/2 + 256/x² ≥ 3∛(256/4) = 12, with equality at x = 8.</p></details>
+<details><summary>Method: Calculus</summary><p>The derivative 1 − 512/x³ vanishes at x = 8, where the value is 12.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> Positive reals x, y satisfy x + y = 3. What is the minimum of 1/x + 4/y? (fraction if needed)</p><details><summary>Hint</summary>Cauchy–Schwarz: (1/x + 4/y)(x + y) ≥ (1 + 2)².</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(1/x + 4/y)(x + y) ≥ (1 + 2)² = 9, so the sum is at least 9/3 = 3.</p></details>
+<details><summary>Method: Balancing</summary><p>Equality needs x : y = 1 : 2, so x = 1, y = 2 and the value is 3.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> Positive reals x, y satisfy x + y = 6. What is the minimum of 1/x + 4/y? (fraction if needed)</p><details><summary>Hint</summary>Cauchy–Schwarz: (1/x + 4/y)(x + y) ≥ (1 + 2)².</details><details><summary>Answer</summary>3/2</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(1/x + 4/y)(x + y) ≥ (1 + 2)² = 9, so the sum is at least 9/6 = 3/2.</p></details>
+<details><summary>Method: Balancing</summary><p>Equality needs x : y = 1 : 2, so x = 2, y = 4 and the value is 3/2.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> Positive reals x, y satisfy x + y = 9. What is the minimum of 1/x + 4/y? (fraction if needed)</p><details><summary>Hint</summary>Cauchy–Schwarz: (1/x + 4/y)(x + y) ≥ (1 + 2)².</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(1/x + 4/y)(x + y) ≥ (1 + 2)² = 9, so the sum is at least 9/9 = 1.</p></details>
+<details><summary>Method: Balancing</summary><p>Equality needs x : y = 1 : 2, so x = 3, y = 6 and the value is 1.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> Reals x₁, …, x_5 lie in [0, 1] and have sum 5/2. What is the maximum of x₁² + … + x_5²? (fraction if needed)</p><details><summary>Hint</summary>x² is convex, so the maximum is at an extreme point: all but one variable are 0 or 1.</details><details><summary>Answer</summary>9/4</details>
+<details><summary>Method: Convexity</summary><p>A convex function is largest at extreme points: 2 ones, one number equal to 1/2, and zeros give 2 + (1/2)² = 9/4.</p></details>
+<details><summary>Method: Pushing apart</summary><p>Moving two interior numbers apart (keeping their sum) increases the sum of squares, so at most one variable stays strictly inside (0, 1): value 9/4.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> Reals x₁, …, x_6 lie in [0, 1] and have sum 17/5. What is the maximum of x₁² + … + x_6²? (fraction if needed)</p><details><summary>Hint</summary>x² is convex, so the maximum is at an extreme point: all but one variable are 0 or 1.</details><details><summary>Answer</summary>79/25</details>
+<details><summary>Method: Convexity</summary><p>A convex function is largest at extreme points: 3 ones, one number equal to 2/5, and zeros give 3 + (2/5)² = 79/25.</p></details>
+<details><summary>Method: Pushing apart</summary><p>Moving two interior numbers apart (keeping their sum) increases the sum of squares, so at most one variable stays strictly inside (0, 1): value 79/25.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> Reals x₁, …, x_4 lie in [0, 1] and have sum 7/4. What is the maximum of x₁² + … + x_4²? (fraction if needed)</p><details><summary>Hint</summary>x² is convex, so the maximum is at an extreme point: all but one variable are 0 or 1.</details><details><summary>Answer</summary>25/16</details>
+<details><summary>Method: Convexity</summary><p>A convex function is largest at extreme points: 1 ones, one number equal to 3/4, and zeros give 1 + (3/4)² = 25/16.</p></details>
+<details><summary>Method: Pushing apart</summary><p>Moving two interior numbers apart (keeping their sum) increases the sum of squares, so at most one variable stays strictly inside (0, 1): value 25/16.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> Positive integers add up to 10. What is the largest possible value of their product?</p><details><summary>Hint</summary>Use as many 3s as possible, but avoid a leftover 1.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Balancing</summary><p>Parts equal to 3 are best (4 = 2 + 2 ties, 5 splits as 2 + 3 to give more): the optimum is 3^3 with 4 in place of 3 + 1, product 36.</p></details>
+<details><summary>Method: Dynamic programming</summary><p>Let P(n) be the best product; P(n) = max over j of j·P(n − j), P(1) = 1 ... P(10) = 36.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> Positive integers add up to 13. What is the largest possible value of their product?</p><details><summary>Hint</summary>Use as many 3s as possible, but avoid a leftover 1.</details><details><summary>Answer</summary>108</details>
+<details><summary>Method: Balancing</summary><p>Parts equal to 3 are best (4 = 2 + 2 ties, 5 splits as 2 + 3 to give more): the optimum is 3^4 with 4 in place of 3 + 1, product 108.</p></details>
+<details><summary>Method: Dynamic programming</summary><p>Let P(n) be the best product; P(n) = max over j of j·P(n − j), P(1) = 1 ... P(13) = 108.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> Positive integers add up to 17. What is the largest possible value of their product?</p><details><summary>Hint</summary>Use as many 3s as possible, but avoid a leftover 1.</details><details><summary>Answer</summary>486</details>
+<details><summary>Method: Balancing</summary><p>Parts equal to 3 are best (4 = 2 + 2 ties, 5 splits as 2 + 3 to give more): the optimum is 3^5·2, product 486.</p></details>
+<details><summary>Method: Dynamic programming</summary><p>Let P(n) be the best product; P(n) = max over j of j·P(n − j), P(1) = 1 ... P(17) = 486.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 4, 6 and Cîrtoaje ch. 3 (original problem)</p></div>

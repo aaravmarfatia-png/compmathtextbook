@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 81</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 81: Unit 81: Inclusion-exclusion and derangements</h1><p class=ref>Book: AoPS Volume 2, counting chapters; Engel ch. 9 (25 problems)<br>AoPS Volume 2, inclusion-exclusion chapters; Engel, Problem-Solving Strategies.</p>
+<h2>Reading</h2>
+<h3>1. Inclusion–exclusion</h3><p>For finite sets A₁, …, Aₙ, the number of elements in at least one set is |A₁| + … + |Aₙ| − (sizes of pairwise intersections) + (sizes of triple intersections) − …. For two sets |A ∪ B| = |A| + |B| − |A ∩ B|; for three, add back the triple intersection.</p><p><b>Worked example 1.</b> How many integers from 1 to 100 are divisible by none of 2, 3, 5? By inclusion–exclusion: 100 − (50 + 33 + 20) + (16 + 10 + 6) − 3 = 26.</p><p><b>Worked example 2.</b> How many integers from 1 to 1,000 are divisible by 3 or 5 but not 15? Divisible by 3: 333; by 5: 200; by 15: 66. Divisible by 3 or 5: 333 + 200 − 66 = 467; remove those divisible by 15: 467 − 66 = 401.</p><p><b>Worked example 3: surjections.</b> The number of ways to map 5 labelled objects onto 3 labelled boxes with no box empty is 3⁵ − 3 · 2⁵ + 3 · 1⁵ = 243 − 96 + 3 = 150.</p>
+<h3>2. Derangements</h3><p>A <b>derangement</b> is a permutation of n objects with no fixed point. By inclusion–exclusion, Dₙ = n!(1 − 1/1! + 1/2! − … + (−1)ⁿ/n!). D₃ = 6(1 − 1 + 1/2 − 1/6) = 2, D₄ = 24(1 − 1 + 1/2 − 1/6 + 1/24) = 9 and D₅ = 44. The fraction of permutations that are derangements tends to 1/e ≈ 0.3679.</p><p><b>Worked example.</b> Four letters are put into four addressed envelopes at random. The probability that none is in the correct envelope is D₄/4! = 9/24 = 3/8.</p><p><b>Recurrence.</b> Dₙ = (n − 1)(Dₙ₋₁ + Dₙ₋₂) with D₁ = 0, D₂ = 1: D₃ = 2(1 + 0) = 2, D₄ = 3(2 + 1) = 9, D₅ = 4(9 + 2) = 44, D₆ = 5(44 + 9) = 265.</p>
+<h3>3. Counting solutions with upper bounds</h3><p>The number of non-negative solutions of x + y + z = 10 is C(12, 2) = 66. If each variable must be at most 5, subtract the cases where some variable is at least 6: for x ≥ 6, set x′ = x − 6 and count x′ + y + z = 4: C(6, 2) = 15. By symmetry three such cases, and no two can happen together (12 > 10). So 66 − 45 = 21.</p><p><b>Worked example 2.</b> How many ways to distribute 10 identical sweets among 3 children with each getting at least 1 and at most 5? Subtract 1 each: x + y + z = 7 with each ≤ 4: total C(9, 2) = 36; bad: x ≥ 5 → x′ + y + z = 2: C(4, 2) = 6, three cases, 18, overlaps impossible: 36 − 18 = 18.</p><p><b>Euler's totient.</b> The count of integers up to n coprime to n comes from inclusion–exclusion over the prime divisors: φ(30) = 30 − 15 − 10 − 6 + 5 + 3 + 2 − 1 = 8.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Wrong signs. Forgetting higher-order intersections. Counting the bad cases without checking whether overlaps exist. Treating labelled and unlabelled objects the same.</p><p><b>Checks.</b> Test on a small case you can list.</p><p><b>Practice.</b> Write the sets and intersections explicitly.</p>
+<h3>Worked examples with Try-its: The principle</h3><p>|A ∪ B ∪ C| = |A| + |B| + |C| − |A ∩ B| − |A ∩ C| − |B ∩ C| + |A ∩ B ∩ C|. How many integers from 1 to 100 are divisible by 2, 3 or 5? 50 + 33 + 20 − 16 − 10 − 6 + 3 = 74. The complement (coprime to 30) is 26 numbers. Euler's φ(30) = 30 · (1/2)(2/3)(4/5) = 8.</p><details class="try"><summary>Try it</summary><p>How many integers from 1 to 60 are divisible by neither 2 nor 3?</p><p><b>Answer.</b> 60 − 30 − 20 + 10 = 20.</p></details>
+<h3>Worked examples with Try-its: Derangements and surjections</h3><p>A <b>derangement</b> is a permutation with no fixed point. By inclusion-exclusion Dₙ = n!(1 − 1/1! + 1/2! − … ± 1/n!), giving D₄ = 9 and D₅ = 44 and the recurrence Dₙ = (n − 1)(Dₙ₋₁ + Dₙ₋₂). The number of onto functions from a 4-element set to a 3-element set is 3⁴ − 3 · 2⁴ + 3 · 1⁴ = 36.</p><details class="try"><summary>Try it</summary><p>In how many ways can 4 letters go into 4 addressed envelopes so that none is in its own envelope?</p><p><b>Answer.</b> 9.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> How many 5-letter words can be made with the letters A, B, C so that all three letters appear? <b>Solution.</b> 3⁵ − 3 · 2⁵ + 3 = 243 − 96 + 3 = 150.</p><p><b>Reflection.</b> It is the surjection formula again: count all words, subtract those missing one letter, add back those missing two.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Coprime count.</b> The integers from 1 to 120 not divisible by 2, 3 or 5 number 120 · (1/2)(2/3)(4/5) = 32. <b>Derangements.</b> D₂ = 1, D₃ = 2, D₄ = 9, D₅ = 44, D₆ = 265. <b>Hats.</b> With 5 hats returned at random, the probability that nobody gets their own is 44/120 = 11/30.</p><details class="try"><summary>Try it<p>How many integers from 1 to 30 are divisible by 2 or 3?</p><p><b>Answer.</b> 15 + 10 − 5 = 20.</p></details><details class="try"><summary>Try it<p>In how many ways can 3 letters be put into 3 envelopes with none correct?</p><p><b>Answer.</b> 2.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> How many permutations of 5 objects have exactly 1 fixed point? <b>Solution.</b> Choose the fixed point (5 ways) and derange the other 4 (D₄ = 9 ways): 45.</p><p><b>Check.</b> The numbers of permutations with 0, 1, 2, 3, 5 fixed points are 44, 45, 20, 10, 1 and the total with 4 fixed points is 0: 44 + 45 + 20 + 10 + 0 + 1 = 120 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> How many integers from 1 to 100 are divisible by 2 or 3?</p><details><summary>Hint</summary>50 + 33 − 16.</details><details><summary>Answer</summary>67</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>50 + 33 − 16 = 67.</p></details>
+<details><summary>Method: Complement</summary><p>The numbers divisible by neither are 100 − 67 = 33, those coprime to 6.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem p2.</b> How many integers from 1 to 100 are divisible by 2, 3 or 5?</p><details><summary>Hint</summary>Three-set inclusion-exclusion.</details><details><summary>Answer</summary>74</details>
+<details><summary>Method: Formula</summary><p>(50 + 33 + 20) − (16 + 10 + 6) + 3 = 103 − 32 + 3 = 74.</p></details>
+<details><summary>Method: Complement</summary><p>The 26 numbers coprime to 30 are left out: 100 − 26 = 74.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem p3.</b> How many ways can 5 letters be placed in 5 addressed envelopes so that none is in the correct envelope?</p><details><summary>Hint</summary>D₅.</details><details><summary>Answer</summary>44</details>
+<details><summary>Method: Formula</summary><p>120 − 120 + 60 − 20 + 5 − 1 = 44.</p></details>
+<details><summary>Method: Recurrence</summary><p>D_n = (n − 1)(D_{n−1} + D_{n−2}) = 4(9 + 2) = 44.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem p4.</b> How many integers from 1 to 1000 are coprime to 30?</p><details><summary>Hint</summary>Exclude multiples of 2, 3 and 5.</details><details><summary>Answer</summary>266</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>1000 − (500 + 333 + 200) + (166 + 100 + 66) − 33 = 266.</p></details>
+<details><summary>Method: Density</summary><p>Among each 30 numbers 8 are coprime to 30, so 33 blocks give 264, and the remaining 10 numbers 991–1000 add 2: 266.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem p5.</b> How many surjective functions are there from a 5-element set onto a 3-element set?</p><details><summary>Hint</summary>Total − missing one − missing two.</details><details><summary>Answer</summary>150</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>3⁵ − 3·2⁵ + 3·1⁵ = 243 − 96 + 3 = 150.</p></details>
+<details><summary>Method: Shapes</summary><p>Group sizes (3,1,1): 3 choices for the target with 3 elements and 5!/(3!1!1!) = 20 splits give 60. Sizes (2,2,1): 3 choices for the singleton target and 5!/(2!2!1!) = 30 splits give 90. Total 150.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem p6.</b> In a class of 30, 18 take math, 15 take physics and 8 take both. How many take neither?</p><details><summary>Hint</summary>|M ∪ P| = 18 + 15 − 8.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Union</summary><p>25 take at least one, so 5 take neither.</p></details>
+<details><summary>Method: Venn</summary><p>Only math 10, only physics 7, both 8: 25 in the circles.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem p7.</b> How many distinct arrangements are there of the letters of MISSISSIPPI?</p><details><summary>Hint</summary>11!/(4!4!2!).</details><details><summary>Answer</summary>34650</details>
+<details><summary>Method: Multinomial</summary><p>39916800/(24·24·2) = 34650.</p></details>
+<details><summary>Method: Step by step</summary><p>C(11,4) · C(7,4) · C(3,2) = 330 · 35 · 3 = 34650.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem p8.</b> How many nonnegative integer solutions does x + y + z = 12 have with each variable at most 5?</p><details><summary>Hint</summary>Subtract solutions where a variable is at least 6.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>C(14,2) − 3·C(8,2) + 3·C(2,2) = 91 − 84 + 3 = 10.</p></details>
+<details><summary>Method: List</summary><p>The solutions are the arrangements of (5,5,2), (5,4,3) and (4,4,4): 3 + 6 + 1 = 10.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem p9.</b> How many 4-digit strings (leading zeros allowed) contain at least one 7?</p><details><summary>Hint</summary>Total minus strings with no 7.</details><details><summary>Answer</summary>3439</details>
+<details><summary>Method: Complement</summary><p>10⁴ − 9⁴ = 10000 − 6561 = 3439.</p></details>
+<details><summary>Method: Brute check</summary><p>Counting strings of 0000–9999 containing a 7 directly gives 3439.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem p10.</b> How many integers from 1 to 100 are divisible by 2 or 5?</p><details><summary>Hint</summary>Inclusion-exclusion.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Formula</summary><p>50 + 20 − 10 = 60.</p></details>
+<details><summary>Method: Complement</summary><p>Numbers divisible by neither: 100 − 60 = 40, matching 50 · 4/5.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem p11.</b> How many integers from 1 to 200 are divisible by 3, 5 or 7?</p><details><summary>Hint</summary>Three-set inclusion-exclusion.</details><details><summary>Answer</summary>108</details>
+<details><summary>Method: Formula</summary><p>66 + 40 + 28 − 13 − 9 − 5 + 1 = 108.</p></details>
+<details><summary>Method: Check</summary><p>Counts of multiples: 3→66, 5→40, 7→28, 15→13, 21→9, 35→5, 105→1.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem p12.</b> In a class of 40, 25 play soccer, 20 play chess and 8 do neither. How many do both?</p><details><summary>Hint</summary>Union = 32.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Union</summary><p>32 play at least one; 25 + 20 − both = 32 gives both = 13.</p></details>
+<details><summary>Method: Venn</summary><p>Soccer only 12, chess only 7, both 13 and neither 8: total 40.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem p13.</b> How many positive integers up to 60 are coprime to 60?</p><details><summary>Hint</summary>φ(60).</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Formula</summary><p>60 · 1/2 · 2/3 · 4/5 = 16.</p></details>
+<details><summary>Method: Inclusion-exclusion</summary><p>60 − 30 − 20 − 12 + 10 + 6 + 4 − 2 = 16.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem p14.</b> How many arrangements of 4 distinct letters have no letter in its original position (derangements)?</p><details><summary>Hint</summary>D₄.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Formula</summary><p>24 − 24 + 12 − 4 + 1 = 9.</p></details>
+<details><summary>Method: Recurrence</summary><p>D₄ = 3(D₃ + D₂) = 3(2 + 1) = 9.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem p15.</b> How many 3-digit numbers (100–999) have no digit equal to 5?</p><details><summary>Hint</summary>Count digit choices.</details><details><summary>Answer</summary>648</details>
+<details><summary>Method: Direct</summary><p>8 · 9 · 9 = 648 (hundreds digit not 0 or 5).</p></details>
+<details><summary>Method: Complement</summary><p>900 minus those containing a 5: 900 − 252 = 648.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem p16.</b> How many integers from 1 to 1000 are not divisible by 2, 3 or 5?</p><details><summary>Hint</summary>Complement.</details><details><summary>Answer</summary>266</details>
+<details><summary>Method: Formula</summary><p>1000 − 500 − 333 − 200 + 166 + 100 + 66 − 33 = 266.</p></details>
+<details><summary>Method: Density</summary><p>1000 · 8/30 ≈ 267, and the exact value is 266.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem p17.</b> How many ways can 5 people each take a different one of 5 coats so that nobody gets their own?</p><details><summary>Hint</summary>D₅.</details><details><summary>Answer</summary>44</details>
+<details><summary>Method: Formula</summary><p>120 − 120 + 60 − 20 + 5 − 1 = 44.</p></details>
+<details><summary>Method: Recurrence</summary><p>D₅ = 4(D₄ + D₃) = 4(9 + 2) = 44.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem x18.</b> How many integers from 1 to 200 are divisible by 4 or 6?</p><details><summary>Hint</summary>Inclusion-exclusion.</details><details><summary>Answer</summary>67</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>50 + 33 − 16 = 67.</p></details>
+<details><summary>Method: Complement</summary><p>Integers divisible by neither number 200 − 67 = 133, and 200 − 133 = 67 divisible by at least one.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem x19.</b> In how many ways can 4 letters be put into 4 addressed envelopes so that no letter is in its own envelope?</p><details><summary>Hint</summary>Derangements.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>4!(1 − 1 + 1/2! − …) = +24 −24 +12 −4 +1 = 9.</p></details>
+<details><summary>Method: Recurrence</summary><p>Dₙ = (n − 1)(Dₙ₋₁ + Dₙ₋₂) gives 1, 0, 1, 2, 9, so D_4 = 9.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem x20.</b> In how many ways can 5 people be chosen from 12?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>792</details>
+<details><summary>Method: Formula</summary><p>C(12, 5) = 792.</p></details>
+<details><summary>Method: Pascal</summary><p>C(11, 4) + C(11, 5) = 330 + 462 = 792.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem x21.</b> How many integers from 1 to 150 are divisible by 5 or 9?</p><details><summary>Hint</summary>Inclusion-exclusion.</details><details><summary>Answer</summary>43</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>30 + 16 − 3 = 43.</p></details>
+<details><summary>Method: Complement</summary><p>Integers divisible by neither number 150 − 43 = 107, and 150 − 107 = 43 divisible by at least one.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem x22.</b> In how many ways can 5 letters be put into 5 addressed envelopes so that no letter is in its own envelope?</p><details><summary>Hint</summary>Derangements.</details><details><summary>Answer</summary>44</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>5!(1 − 1 + 1/2! − …) = +120 −120 +60 −20 +5 −1 = 44.</p></details>
+<details><summary>Method: Recurrence</summary><p>Dₙ = (n − 1)(Dₙ₋₁ + Dₙ₋₂) gives 1, 0, 1, 2, 9, 44, so D_5 = 44.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem x23.</b> In how many ways can 3 people be chosen from 13?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>286</details>
+<details><summary>Method: Formula</summary><p>C(13, 3) = 286.</p></details>
+<details><summary>Method: Pascal</summary><p>C(12, 2) + C(12, 3) = 66 + 220 = 286.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem x24.</b> How many integers from 1 to 300 are divisible by 6 or 10?</p><details><summary>Hint</summary>Inclusion-exclusion.</details><details><summary>Answer</summary>70</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>50 + 30 − 10 = 70.</p></details>
+<details><summary>Method: Complement</summary><p>Integers divisible by neither number 300 − 70 = 230, and 300 − 230 = 70 divisible by at least one.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>
+<div class=p><p><b>Problem x25.</b> In how many ways can 6 letters be put into 6 addressed envelopes so that no letter is in its own envelope?</p><details><summary>Hint</summary>Derangements.</details><details><summary>Answer</summary>265</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>6!(1 − 1 + 1/2! − …) = +720 −720 +360 −120 +30 −6 +1 = 265.</p></details>
+<details><summary>Method: Recurrence</summary><p>Dₙ = (n − 1)(Dₙ₋₁ + Dₙ₋₂) gives 1, 0, 1, 2, 9, 44, 265, so D_6 = 265.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Engel ch. 9</p></div>

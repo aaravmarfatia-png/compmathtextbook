@@ -1,0 +1,111 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 56</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 56: Unit 56: Enumerative combinatorics</h1><p class=ref>Book: Engel, Problem-Solving Strategies, ch. 5 (25 problems)<br>Engel, Problem-Solving Strategies, chapter 5 (Enumerative Combinatorics).</p>
+<h2>Reading</h2>
+<h3>1. Arrangements into groups</h3><p>The number of ways to divide 10 people into groups of 3, 3 and 4, with labelled groups, is 10!/(3! 3! 4!) = 4200 (equivalently C(10, 3) · C(7, 3) · C(4, 4) = 120 · 35 · 1 = 4200). If the two groups of 3 are not labelled, divide by 2!: 2100. Surjections: the number of ways to map 5 labelled objects onto 3 labelled boxes with no box empty is 3! · S(5, 3) = 6 · 25 = 150, which inclusion–exclusion also gives: 3⁵ − 3 · 2⁵ + 3 · 1 = 243 − 96 + 3 = 150.</p><p><b>Stirling numbers of the second kind</b> S(n, k) count the ways to split n labelled objects into k non-empty unlabelled groups, with S(n, k) = k S(n − 1, k) + S(n − 1, k − 1). The row for n = 5 reads 1, 15, 25, 10, 1, and the sum 52 is the <b>Bell number</b> counting all partitions of a 5-element set (the Bell numbers begin 1, 2, 5, 15, 52, 203).</p><details class="try"><summary>Try it</summary><p>In how many ways can 6 people be split into 3 unlabelled pairs?</p><p><b>Answer.</b> 6!/(2! 2! 2! 3!) = 15.</p></details>
+<h3>2. Partitions of integers</h3><p>A <b>partition</b> of n writes it as a sum of positive integers, order ignored: p(5) = 7 (5, 4+1, 3+2, 3+1+1, 2+2+1, 2+1+1+1, 1+1+1+1+1), p(6) = 11, p(10) = 42 (found by recursion). Partitions of 10 into <i>distinct</i> parts: 10. The recursion p(n, k) = p(n − k, k) + p(n, k − 1) counts partitions with largest part at most k: either use a part k or not.</p><p><b>Distributing identical objects.</b> Giving 10 identical sweets to 3 children, each getting at least 2: give 2 to each first, leaving 4 to distribute freely: C(4 + 2, 2) = 15 (stars and bars).</p><details class="try"><summary>Try it</summary><p>How many partitions of 7 have exactly 2 parts?</p><p><b>Answer.</b> 6 + 1, 5 + 2, 4 + 3: three partitions.</p></details>
+<h3>3. Paths, necklaces and Catalan numbers</h3><p>The number of shortest lattice paths from (0, 0) to (4, 4) is C(8, 4) = 70. The Catalan number C₅ = 42 counts the paths that never go above the diagonal (and the ways to triangulate a heptagon, to bracket products, to arrange parentheses …).</p><p><b>Necklaces.</b> The number of distinct necklaces of 4 beads in 2 colours (up to rotation) is (1/4)(2⁴ + 2 + 2² + 2) = 6 by Burnside's lemma: average the number of colourings fixed by each rotation (16 for the identity, 2 for a quarter turn, 4 for a half turn, 2 for three-quarters).</p><details class="try"><summary>Try it</summary><p>Count the shortest paths from (0, 0) to (3, 5).</p><p><b>Answer.</b> C(8, 3) = 56.</p></details>
+<h3>4. A longer problem</h3><p><b>Problem.</b> Eight students are to be assigned to 3 distinct projects so that every project gets at least one student. In how many ways?</p><p><b>Solution.</b> Inclusion–exclusion: 3⁸ − 3 · 2⁸ + 3 · 1⁸ = 6561 − 768 + 3 = 5796. Check via Stirling: 3! · S(8, 3) = 6 · 966 = 5796.</p><p><b>Reflection.</b> Two independent routes gave the same value: always compare an inclusion–exclusion answer with a Stirling-number answer when you can.</p>
+<h3>5. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Treating labelled and unlabelled groups alike. (2) Forgetting to divide by the order of identical groups. (3) Counting compositions (order matters) as partitions. (4) Mixing up stars and bars with surjections.</p><p><b>Checks.</b> Test with n = 3 or 4 and list all cases.</p><p><b>How to practise.</b> Decide 'labelled or not, ordered or not' first. In Unlimited practice, rotate the partition and arrangement families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Splitting into groups.</b> The number of ways to split 4 people into 2 non-empty unlabelled groups is the Stirling number S(4, 2) = 7 (four groups of 3 + 1 and three of 2 + 2). The number of ways to split 3 objects into any number of groups is 1 + 3 + 1 = 5 (the Bell number). <b>Lattice paths.</b> A path from (0, 0) to (3, 3) with right and up steps has C(6, 3) = 20 routes. <b>Necklaces.</b> Counting two-colour necklaces of 4 beads up to rotation gives 6.</p><details class="try"><summary>Try it<p>How many paths from (0, 0) to (4, 2) using right and up steps?</p><p><b>Answer.</b> C(6, 2) = 15.</p></details><details class="try"><summary>Try it<p>How many ways to split 3 labelled people into groups, ignoring order of the groups?</p><p><b>Answer.</b> 5.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> How many ways can 6 people be placed into 3 labelled rooms with at least one person in each room? <b>Solution.</b> By inclusion-exclusion: 3⁶ − 3 · 2⁶ + 3 · 1⁶ = 729 − 192 + 3 = 540. Equivalently 3! · S(6, 3) = 6 · 90 = 540.</p><p><b>Reflection.</b> Labelled rooms multiply the unlabelled count by 3!.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> How many permutations of 5 objects leave no object in its original position?</p><details><summary>Hint</summary>Inclusion–exclusion.</details><details><summary>Answer</summary>44</details>
+<details><summary>Method: Formula</summary><p>D(5) = 120(1 − 1 + 1/2 − 1/6 + 1/24 − 1/120) = 120 − 120 + 60 − 20 + 5 − 1 = 44.</p></details>
+<details><summary>Method: Recurrence</summary><p>D(n) = (n − 1)(D(n − 1) + D(n − 2)): D(3) = 2, D(4) = 9, D(5) = 4·(9 + 2) = 44.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem p2.</b> How many strings of 5 pairs of correctly nested parentheses are there?</p><details><summary>Hint</summary>Catalan number C₅.</details><details><summary>Answer</summary>42</details>
+<details><summary>Method: Catalan</summary><p>Cₙ = C(2n, n)/(n + 1): C(10, 5)/6 = 252/6 = 42.</p></details>
+<details><summary>Method: Recurrence</summary><p>C₀…C₅ = 1, 1, 2, 5, 14, 42.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem p3.</b> In how many ways can 6 be written as a sum of positive integers, ignoring order?</p><details><summary>Hint</summary>List by the largest part.</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: List</summary><p>6; 5+1; 4+2; 4+1+1; 3+3; 3+2+1; 3+1+1+1; 2+2+2; 2+2+1+1; 2+1+1+1+1; 1+1+1+1+1+1: eleven.</p></details>
+<details><summary>Method: Computer check</summary><p>Counting by code gives 11.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem p4.</b> How many onto functions are there from a 5-element set to a 3-element set?</p><details><summary>Hint</summary>Inclusion–exclusion on missed values.</details><details><summary>Answer</summary>150</details>
+<details><summary>Method: Inclusion–exclusion</summary><p>3⁵ − 3·2⁵ + 3·1⁵ = 243 − 96 + 3 = 150.</p></details>
+<details><summary>Method: Computer check</summary><p>Checking all 243 functions finds 150 that use every value.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem p5.</b> In how many ways can 10 identical balls be placed in 4 different boxes?</p><details><summary>Hint</summary>Stars and bars.</details><details><summary>Answer</summary>286</details>
+<details><summary>Method: Stars and bars</summary><p>Arrange 10 balls and 3 dividers: C(13, 3) = 286.</p></details>
+<details><summary>Method: Check</summary><p>For 2 balls and 2 boxes the formula gives C(3,1) = 3: (2,0), (1,1), (0,2).</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem p6.</b> In how many ways can 10 identical balls be placed in 4 different boxes if every box gets at least one?</p><details><summary>Hint</summary>Give each box one ball first.</details><details><summary>Answer</summary>84</details>
+<details><summary>Method: Reduce</summary><p>After one ball each, 6 balls go anywhere: C(9, 3) = 84.</p></details>
+<details><summary>Method: Dividers</summary><p>Choose 3 of the 9 gaps between the 10 balls: C(9, 3) = 84.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem p7.</b> How many binary strings of length 10 have no two adjacent 1s?</p><details><summary>Hint</summary>Fibonacci recurrence.</details><details><summary>Answer</summary>144</details>
+<details><summary>Method: Recurrence</summary><p>aₙ = aₙ₋₁ + aₙ₋₂ with a₁ = 2, a₂ = 3: 2, 3, 5, 8, 13, 21, 34, 55, 89, 144.</p></details>
+<details><summary>Method: Computer check</summary><p>Enumerating all 1024 strings gives 144.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem p8.</b> How many shortest lattice paths go from (0,0) to (6,4) using unit steps right and up?</p><details><summary>Hint</summary>Choose which steps are up.</details><details><summary>Answer</summary>210</details>
+<details><summary>Method: Choose</summary><p>10 steps, 4 of them up: C(10, 4) = 210.</p></details>
+<details><summary>Method: Pascal's triangle</summary><p>Each point's count is the sum of the counts below and to its left, giving 210 at (6, 4).</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem p9.</b> In how many ways can a set of 5 elements be split into 2 non-empty groups (the groups are not labelled)?</p><details><summary>Hint</summary>2⁵ minus 2, divided by 2.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Count</summary><p>(2⁵ − 2)/2 = 15.</p></details>
+<details><summary>Method: By size</summary><p>Groups of size 1 and 4: 5 ways; sizes 2 and 3: 10 ways. Total 15.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem x10.</b> How many distinct arrangements are there of the letters of LETTER?</p><details><summary>Hint</summary>Two Ls... L, E, T, T, E, R.</details><details><summary>Answer</summary>180</details>
+<details><summary>Method: Formula</summary><p>6!/(2! · 2!) = 720/4 = 180, since E and T each appear twice.</p></details>
+<details><summary>Method: Choose</summary><p>Choose places for the Es (15 ways), then the Ts (6 ways), then arrange L and R (2 ways): 15 · 6 · 2 = 180.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem x11.</b> In how many ways can 3 people be chosen from 10?</p><details><summary>Hint</summary>C(10, 3).</details><details><summary>Answer</summary>120</details>
+<details><summary>Method: Formula</summary><p>10 · 9 · 8/6 = 120.</p></details>
+<details><summary>Method: Pascal</summary><p>C(9,2) + C(9,3) = 36 + 84 = 120.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem x12.</b> How many 4-digit positive integers have all digits distinct?</p><details><summary>Hint</summary>First digit nonzero.</details><details><summary>Answer</summary>4536</details>
+<details><summary>Method: Choices</summary><p>9 · 9 · 8 · 7 = 4536.</p></details>
+<details><summary>Method: Complement</summary><p>There are 9000 four-digit numbers, and those with a repeat number 4464.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem x13.</b> In how many ways can 6 people be seated around a round table, with rotations considered the same?</p><details><summary>Hint</summary>Fix one person.</details><details><summary>Answer</summary>120</details>
+<details><summary>Method: Fix</summary><p>Fix one person and arrange the other 5: 120.</p></details>
+<details><summary>Method: Divide</summary><p>6! = 720 divided by the 6 rotations is 120.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem x14.</b> How many positive divisors does 360 have?</p><details><summary>Hint</summary>360 = 2³ · 3² · 5.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Formula</summary><p>(3 + 1)(2 + 1)(1 + 1) = 24.</p></details>
+<details><summary>Method: List</summary><p>Choose an exponent for each prime: 4 · 3 · 2 = 24.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem x15.</b> How many shortest lattice paths lead from (0, 0) to (5, 5)?</p><details><summary>Hint</summary>Choose the up-steps.</details><details><summary>Answer</summary>252</details>
+<details><summary>Method: Choose</summary><p>C(10, 5) = 252.</p></details>
+<details><summary>Method: Symmetry</summary><p>Equivalent to arranging 5 R and 5 U letters.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem x16.</b> In how many ways can 10 identical candies be given to 4 children, where a child may get none?</p><details><summary>Hint</summary>Stars and bars.</details><details><summary>Answer</summary>286</details>
+<details><summary>Method: Stars and bars</summary><p>C(13, 3) = 286.</p></details>
+<details><summary>Method: Formula</summary><p>C(n + k − 1, k − 1) with n = 10, k = 4.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem x17.</b> How many non-empty subsets does an 8-element set have?</p><details><summary>Hint</summary>2ⁿ − 1.</details><details><summary>Answer</summary>255</details>
+<details><summary>Method: Count</summary><p>2⁸ − 1 = 255.</p></details>
+<details><summary>Method: Choices</summary><p>Each element is in or out: 256 subsets, minus the empty one.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem x18.</b> In how many ways can 5 people be chosen from 9?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>126</details>
+<details><summary>Method: Formula</summary><p>C(9, 5) = 126.</p></details>
+<details><summary>Method: Pascal</summary><p>C(8, 4) + C(8, 5) = 70 + 56 = 126.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem x19.</b> How many distinct arrangements are there of the letters of BANANA?</p><details><summary>Hint</summary>n! divided by the factorials of repeated letters.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Formula</summary><p>6!/(3! · 2!) = 60.</p></details>
+<details><summary>Method: Choose places</summary><p>Place the repeated letters one kind at a time with binomial coefficients, then arrange the rest: the total is 60.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem x20.</b> How many nonnegative integer solutions does x₁ + x₂ + … + x3 = 12 have?</p><details><summary>Hint</summary>Stars and bars.</details><details><summary>Answer</summary>91</details>
+<details><summary>Method: Stars and bars</summary><p>C(14, 2) = 91.</p></details>
+<details><summary>Method: Fix the last variable</summary><p>If the last variable is t, the others sum to 12 − t; adding the counts over t = 0 to 12 gives 91.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem x21.</b> In how many ways can 3 letters be put into 3 addressed envelopes so that no letter is in its own envelope?</p><details><summary>Hint</summary>Derangements.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>3!(1 − 1 + 1/2! − …) = +6 −6 +3 −1 = 2.</p></details>
+<details><summary>Method: Recurrence</summary><p>Dₙ = (n − 1)(Dₙ₋₁ + Dₙ₋₂) gives 1, 0, 1, 2, so D_3 = 2.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem x22.</b> How many integers from 1 to 100 are divisible by 3 or 7?</p><details><summary>Hint</summary>Inclusion-exclusion.</details><details><summary>Answer</summary>43</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>33 + 14 − 4 = 43.</p></details>
+<details><summary>Method: Complement</summary><p>Integers divisible by neither number 100 − 43 = 57, and 100 − 57 = 43 divisible by at least one.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem x23.</b> How many shortest lattice paths lead from (0, 0) to (4, 5) with steps right or up?</p><details><summary>Hint</summary>Choose the positions of the up-steps.</details><details><summary>Answer</summary>126</details>
+<details><summary>Method: Choose</summary><p>C(9, 4) = 126.</p></details>
+<details><summary>Method: Last step</summary><p>Paths ending with a right step plus those ending with an up step: C(8, 3) + C(8, 4) = 56 + 70.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem x24.</b> In how many ways can 5 people be seated around a round table, if rotations are considered the same?</p><details><summary>Hint</summary>Fix one person.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Fix one</summary><p>Fix one person; arrange the other 4: 4! = 24.</p></details>
+<details><summary>Method: Divide</summary><p>5! = 120 arrangements in a line, divided by 5 rotations is 24.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>
+<div class=p><p><b>Problem x25.</b> How many rectangles of all sizes are there in a 4 × 5 grid of unit squares?</p><details><summary>Hint</summary>Choose two vertical and two horizontal grid lines.</details><details><summary>Answer</summary>150</details>
+<details><summary>Method: Choose lines</summary><p>C(5, 2) · C(6, 2) = 10 · 15 = 150.</p></details>
+<details><summary>Method: Sums</summary><p>(1 + … + 4)(1 + … + 5) = 10 · 15 = 150.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 5</p></div>

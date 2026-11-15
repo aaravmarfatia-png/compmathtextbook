@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 59</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 59: Unit 59: Number theory toolkit: divisors, totients and congruences</h1><p class=ref>Book: Engel, Problem-Solving Strategies, ch. 6 (25 problems)<br>Engel, Problem-Solving Strategies, chapter 6 (Number Theory).</p>
+<h2>Reading</h2>
+<h3>1. Divisors and Euler's totient</h3><p>The number of positive divisors of n = p₁^{a₁}⋯p_k^{a_k} is (a₁ + 1)⋯(a_k + 1) and their sum is Π (p^{a+1} − 1)/(p − 1). For 360 = 2³ · 3² · 5 there are 24 divisors; σ(12) = 28 and σ(28) = 56 = 2 · 28, so 28 is <b>perfect</b>. <b>Euler's totient</b> φ(n) counts integers in 1, …, n coprime to n: φ(p) = p − 1, φ(pᵏ) = pᵏ − pᵏ⁻¹ and φ is multiplicative on coprime arguments. So φ(36) = φ(4)φ(9) = 2 · 6 = 12, φ(100) = 40, φ(97) = 96, φ(49) = 42.</p><p><b>Euler's theorem.</b> If gcd(a, n) = 1 then a^{φ(n)} ≡ 1 (mod n); for prime p this is Fermat's little theorem a^{p−1} ≡ 1. Examples: 3¹⁰⁰ ≡ 3^{100 mod 6} = 3⁴ = 81 ≡ 4 (mod 7); 7⁴⁰ ≡ 1 (mod 100); 2¹⁰ ≡ 1 (mod 11). <b>Wilson:</b> (p − 1)! ≡ −1 (mod p): 6! = 720 ≡ 6 (mod 7).</p><details class="try"><summary>Try it</summary><p>Find φ(72) and the number of divisors of 72.</p><p><b>Answer.</b> 72 = 2³ · 3²: φ = 72 · (1/2) · (2/3) = 24; divisors 4 · 3 = 12.</p></details>
+<h3>2. Congruences and the Chinese Remainder Theorem</h3><p>A <b>linear congruence</b> ax ≡ b (mod n) has a solution iff gcd(a, n) divides b. When gcd(a, n) = 1 multiply by the inverse of a: the inverse of 7 modulo 26 is 15 since 7 · 15 = 105 = 4 · 26 + 1; and 7x ≡ 3 (mod 11) gives x ≡ 3 · 8 = 24 ≡ 2.</p><p><b>CRT.</b> If moduli are pairwise coprime, the system x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7) has a unique solution modulo 105, namely x ≡ 23. Solve by combining one pair at a time: x = 2 + 3k ≡ 3 (mod 5) gives 3k ≡ 1, k ≡ 2, x ≡ 8 (mod 15); then x = 8 + 15m ≡ 2 (mod 7) gives m ≡ 1, x ≡ 23.</p><p><b>gcd facts.</b> gcd(2ᵃ − 1, 2ᵇ − 1) = 2^{gcd(a,b)} − 1 (check: gcd(2¹² − 1, 2¹⁸ − 1) = 2⁶ − 1 = 63). gcd × lcm = product: gcd(48, 180) = 12 and lcm = 720.</p><details class="try"><summary>Try it</summary><p>Solve x ≡ 1 (mod 4), x ≡ 2 (mod 5).</p><p><b>Answer.</b> x = 1 + 4k ≡ 2 (mod 5): 4k ≡ 1, k ≡ 4, x = 17 (mod 20).</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> Find the last two digits of 7²⁰²³ using Euler, and count the solutions of x² ≡ 1 (mod 15).</p><p><b>Solution.</b> φ(100) = 40 and 2023 ≡ 23 (mod 40), so 7²⁰²³ ≡ 7²³ (mod 100); using the cycle 07, 49, 43, 01 of period 4 and 23 ≡ 3 (mod 4), the answer is 43 (as in Unit 31). For x² ≡ 1 (mod 15): x² ≡ 1 mod 3 and mod 5 gives x ≡ ±1 mod 3 and ±1 mod 5, so there are 4 solutions mod 15, namely 1, 4, 11, 14 (verified by listing).</p><p><b>Reflection.</b> CRT turns a composite modulus into prime ones; solve each and combine.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Using Euler's theorem when gcd(a, n) ≠ 1. (2) Reducing the exponent mod n instead of mod φ(n). (3) Dividing by a non-invertible element. (4) Forgetting that CRT needs coprime moduli.</p><p><b>Checks.</b> Substitute the solution into every congruence.</p><p><b>How to practise.</b> Memorise φ for small numbers. In Unlimited practice, rotate the totient and congruence families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Divisors.</b> 360 = 2³ · 3² · 5 has (3 + 1)(2 + 1)(1 + 1) = 24 divisors and divisor sum σ(360) = 15 · 13 · 6 = 1170. <b>Totient.</b> φ(100) = 100 · (1/2)(4/5) = 40. <b>Inverses.</b> 7 · 23 = 161 = 4 · 40 + 1, so 7⁻¹ ≡ 23 (mod 40). <b>Euler's theorem.</b> If gcd(a, n) = 1 then a^φ(n) ≡ 1 (mod n), so 3⁴⁰ ≡ 1 (mod 100).</p><details class="try"><summary>Try it<p>Find φ(36) and the number of divisors of 36.</p><p><b>Answer.</b> φ(36) = 12 and d(36) = 9.</p></details><details class="try"><summary>Try it<p>Solve 7x ≡ 3 (mod 40).</p><p><b>Answer.</b> x ≡ 3 · 23 = 69 ≡ 29.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Find the last two digits of 7²⁰²⁶. <b>Solution.</b> φ(100) = 40 and in fact 7⁴ = 2401 ≡ 1 (mod 100), so 7²⁰²⁶ = 7²⁰²⁴ · 7² ≡ 49. The last two digits are 49.</p><p><b>Check.</b> pow(7, 2026, 100) = 49.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find the sum of all positive divisors of 36.</p><details><summary>Hint</summary>36 = 2²·3².</details><details><summary>Answer</summary>91</details>
+<details><summary>Method: Formula</summary><p>(1 + 2 + 4)(1 + 3 + 9) = 7·13 = 91.</p></details>
+<details><summary>Method: List</summary><p>1 + 2 + 3 + 4 + 6 + 9 + 12 + 18 + 36 = 91.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem p2.</b> Find φ(60), the number of integers from 1 to 60 coprime to 60.</p><details><summary>Hint</summary>60 = 4·3·5.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Formula</summary><p>60·(1/2)(2/3)(4/5) = 16.</p></details>
+<details><summary>Method: Inclusion–exclusion</summary><p>60 − 30 − 20 − 12 + 10 + 6 + 4 − 2 = 16 (removing multiples of 2, 3, 5 and adding back overlaps).</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem p3.</b> How many primes are less than 50?</p><details><summary>Hint</summary>List them.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Sieve</summary><p>2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47: fifteen primes.</p></details>
+<details><summary>Method: Sieve of Eratosthenes</summary><p>Strike out multiples of 2, 3, 5, 7 (any composite below 50 has a prime factor at most 7); 15 numbers remain.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem p4.</b> What is the smallest positive n with 10ⁿ ≡ 1 (mod 7)?</p><details><summary>Hint</summary>Compute powers of 10 mod 7.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Powers</summary><p>10 ≡ 3, 10² ≡ 2, 10³ ≡ 6, 10⁴ ≡ 4, 10⁵ ≡ 5, 10⁶ ≡ 1 (mod 7). So n = 6.</p></details>
+<details><summary>Method: Totient</summary><p>By Euler's theorem n divides φ(7) = 6, and 1, 2, 3 fail.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem p5.</b> Find the smallest positive x with x ≡ 2 (mod 3), x ≡ 3 (mod 5) and x ≡ 2 (mod 7).</p><details><summary>Hint</summary>Chinese Remainder Theorem.</details><details><summary>Answer</summary>23</details>
+<details><summary>Method: Combine</summary><p>x ≡ 2 (mod 21) and x ≡ 3 (mod 5): x = 2, 23, 44, … and 23 ≡ 3 (mod 5). So x = 23.</p></details>
+<details><summary>Method: Check</summary><p>23 = 3·7 + 2, 23 = 5·4 + 3, 23 = 7·3 + 2.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem p6.</b> What is the remainder when 7¹⁰⁰ is divided by 13?</p><details><summary>Hint</summary>Euler: 7¹² ≡ 1.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Reduce the exponent</summary><p>7¹² ≡ 1 (mod 13) and 100 = 8·12 + 4, so 7¹⁰⁰ ≡ 7⁴ = 2401 = 13·184 + 9.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>7² = 49 ≡ 10, 7⁴ ≡ 100 ≡ 9, 7⁸ ≡ 81 ≡ 3, 7¹⁶ ≡ 9, … which also gives 9 for 7¹⁰⁰.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem p7.</b> How many positive divisors does 360 have?</p><details><summary>Hint</summary>360 = 2³·3²·5.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Formula</summary><p>(3 + 1)(2 + 1)(1 + 1) = 24.</p></details>
+<details><summary>Method: Pairs</summary><p>Divisors pair up as d and 360/d below and above 18.97, giving 12 pairs and 24 divisors.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem p8.</b> What is the sum of the digits of the smallest positive integer divisible by every integer from 1 to 10?</p><details><summary>Hint</summary>The lcm of 1..10.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Prime powers</summary><p>lcm = 2³·3²·5·7 = 2520, with digit sum 2 + 5 + 2 + 0 = 9.</p></details>
+<details><summary>Method: Check</summary><p>2520 is divisible by each of 1 through 10.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem p9.</b> What is the units digit of 3²⁰²⁴?</p><details><summary>Hint</summary>Cycle of units digits: 3, 9, 7, 1.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Cycle</summary><p>The cycle has length 4 and 2024 is a multiple of 4, so the units digit is 1.</p></details>
+<details><summary>Method: Mod 10</summary><p>3⁴ = 81 ≡ 1, so 3²⁰²⁴ = (3⁴)⁵⁰⁶ ≡ 1.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem p10.</b> Find σ(48), the sum of all positive divisors of 48.</p><details><summary>Hint</summary>48 = 16 · 3 and σ is multiplicative.</details><details><summary>Answer</summary>124</details>
+<details><summary>Method: Multiplicative</summary><p>σ(16) = 31 and σ(3) = 4, so σ(48) = 124.</p></details>
+<details><summary>Method: List</summary><p>1 + 2 + 3 + 4 + 6 + 8 + 12 + 16 + 24 + 48 = 124.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem p11.</b> Find φ(90).</p><details><summary>Hint</summary>90 = 2 · 3² · 5.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Formula</summary><p>90(1 − 1/2)(1 − 1/3)(1 − 1/5) = 90 · 1/2 · 2/3 · 4/5 = 24.</p></details>
+<details><summary>Method: Multiplicative</summary><p>φ(2)φ(9)φ(5) = 1 · 6 · 4 = 24.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem p12.</b> How many primes are less than 100?</p><details><summary>Hint</summary>Use the sieve of Eratosthenes.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Sieve</summary><p>Cross out multiples of 2, 3, 5 and 7; the survivors are the 25 primes below 100.</p></details>
+<details><summary>Method: By decade</summary><p>There are 4, 21 and 25 primes below 10, 50 and 100.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem p13.</b> What is the smallest positive n with 3ⁿ ≡ 1 (mod 11)?</p><details><summary>Hint</summary>Compute successive powers of 3.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Powers</summary><p>3, 9, 5, 4, 1: so n = 5.</p></details>
+<details><summary>Method: Order divides 10</summary><p>By Fermat 3¹⁰ ≡ 1, so the order divides 10; 3¹ and 3² are not 1, and 3⁵ = 243 = 22 · 11 + 1.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem p14.</b> Find the smallest positive x with x ≡ 1 (mod 3), x ≡ 2 (mod 7) and x ≡ 3 (mod 8).</p><details><summary>Hint</summary>Combine two congruences at a time.</details><details><summary>Answer</summary>163</details>
+<details><summary>Method: Combine</summary><p>x ≡ 2 mod 7 and x ≡ 3 mod 8 gives x ≡ 51 mod 56. Then 51 + 56t ≡ 1 mod 3 gives 0 + 2t ≡ 1, so t ≡ 2 and x = 51 + 112 = 163.</p></details>
+<details><summary>Method: Check</summary><p>163 = 3 · 54 + 1 = 7 · 23 + 2 = 8 · 20 + 3.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem p15.</b> What is the remainder when 5²⁰⁰ is divided by 17?</p><details><summary>Hint</summary>Find the order of 5 mod 17.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Fermat</summary><p>5¹⁶ ≡ 1, so 5²⁰⁰ = 5¹⁹² · 5⁸ ≡ 5⁸. 5² = 8, 5⁴ = 64 ≡ 13, 5⁸ ≡ 169 ≡ 16.</p></details>
+<details><summary>Method: Check</summary><p>5⁸ ≡ 16 ≡ −1 (mod 17), so 5¹⁶ ≡ 1 and 200 ≡ 8 (mod 16).</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem p16.</b> How many positive divisors does 1260 have?</p><details><summary>Hint</summary>1260 = 2² · 3² · 5 · 7.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Formula</summary><p>(2 + 1)(2 + 1)(1 + 1)(1 + 1) = 36.</p></details>
+<details><summary>Method: Count</summary><p>Each divisor chooses exponents (0–2, 0–2, 0–1, 0–1), giving 3 · 3 · 2 · 2 = 36.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem p17.</b> What is the units digit of 7²⁰²⁵?</p><details><summary>Hint</summary>Powers of 7 end in 7, 9, 3, 1.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Cycle</summary><p>2025 ≡ 1 (mod 4), so the units digit is 7.</p></details>
+<details><summary>Method: Mod 10</summary><p>7⁴ = 2401 ≡ 1 (mod 10), so only the exponent mod 4 matters.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem x18.</b> Find σ(90), the sum of all positive divisors of 90.</p><details><summary>Hint</summary>Factor 90 into primes and use that σ is multiplicative.</details><details><summary>Answer</summary>234</details>
+<details><summary>Method: Multiplicative</summary><p>90 = 2 · 3^2 · 5. σ(p^k) = 1 + p + … + p^k, giving 3 and 13 and 6, whose product is 234.</p></details>
+<details><summary>Method: List the divisors</summary><p>The divisors are 1, 2, 3, 5, 6, 9, 10, 15, 18, 30, 45, 90, and their sum is 234.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem x19.</b> Find φ(45), the number of integers from 1 to 45 that are coprime to 45.</p><details><summary>Hint</summary>Use the product formula over the prime factors.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Multiplicative formula</summary><p>45 = 3^2 · 5, so φ = 6 · 4 = 24.</p></details>
+<details><summary>Method: Inclusion-exclusion</summary><p>Start with 45 and remove multiples of each prime, add back overlaps: 45 −15 −9 +3 = 24.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem x20.</b> How many positive divisors does 196 have?</p><details><summary>Hint</summary>Factor first.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Exponent formula</summary><p>196 = 2^2 · 7^2, so the count is 3 · 3 = 9.</p></details>
+<details><summary>Method: Pairing</summary><p>Divisors pair as d and 196/d: 1, 2, 4, 7, 14, 28, 49, 98, 196. There are 9 of them.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem x21.</b> Find gcd(527, 629).</p><details><summary>Hint</summary>Use Euclid's algorithm.</details><details><summary>Answer</summary>17</details>
+<details><summary>Method: Euclid</summary><p>527 = 0 · 629 + 527; 629 = 1 · 527 + 102; 527 = 5 · 102 + 17; 102 = 6 · 17 + 0, so the gcd is 17.</p></details>
+<details><summary>Method: Prime factors</summary><p>527 = 17 · 31 and 629 = 17 · 37; the common part is 17.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem x22.</b> Find lcm(14, 21).</p><details><summary>Hint</summary>lcm · gcd = product.</details><details><summary>Answer</summary>42</details>
+<details><summary>Method: Using the gcd</summary><p>gcd = 7, so lcm = 14 · 21/7 = 42.</p></details>
+<details><summary>Method: Prime powers</summary><p>14 = 2 · 7 and 21 = 3 · 7; take the larger power of each prime to get 42.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem x23.</b> What is the remainder when 8^60 is divided by 15?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 8, 8², 8³, … are 8, 4, 2, 1, and then they repeat from position 1 with period 4. Exponent 60 lands on 1.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 60 = 111100 in binary. The squares 8^(2^i) mod 15 are 8, 4, 1, 1, 1, 1; multiplying the ones for the 1-bits gives 1.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem x24.</b> Find the smallest positive integer x with x ≡ 5 (mod 7) and x ≡ 2 (mod 9).</p><details><summary>Hint</summary>List numbers of the first kind and test the second.</details><details><summary>Answer</summary>47</details>
+<details><summary>Method: Listing</summary><p>Numbers ≡ 5 (mod 7): 5, 12, 19, 26, 33, 40, 47. The first with remainder 2 mod 9 is 47.</p></details>
+<details><summary>Method: Algebra</summary><p>Write x = 5 + 7t. Then 5 + 7t ≡ 2 (mod 9) gives t ≡ 6, so x = 5 + 7 · 6 = 47.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>
+<div class=p><p><b>Problem x25.</b> Find the smallest positive x with 7x ≡ 1 (mod 19).</p><details><summary>Hint</summary>Try multiples, or use the Euclidean algorithm.</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: Table</summary><p>7 · k mod 19 for k = 1, 2, …: 7, 14, 2, 9, 16, 4, 11, 18, 6, 13, 1; the first 1 appears at k = 11.</p></details>
+<details><summary>Method: Equation</summary><p>We need 7 · x = 1 + 19 · t. With x = 11 we get 77 = 1 + 19 · 4, which checks.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 6</p></div>

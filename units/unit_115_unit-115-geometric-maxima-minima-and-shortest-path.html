@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 115</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 115: Unit 115: Geometric maxima, minima and shortest paths</h1><p class=ref>Book: Engel, Problem-Solving Strategies, ch. 12 (Geometry) (25 problems)<br>Engel, Problem-Solving Strategies, chapter 12 (Geometry): extremal problems, reflection and inequalities.</p>
+<h2>Reading</h2>
+<h3>1. Extremes from simple inequalities</h3><p>Many 'largest' or 'smallest' geometry questions reduce to AM-GM or the triangle inequality. <b>Rectangles:</b> with perimeter 20 the area x(10 − x) is largest when x = 5 (a square), area 25. <b>Triangles:</b> among triangles with a fixed base and fixed perimeter, the isosceles triangle has the greatest area. <b>Inscribed in a circle:</b> the regular n-gon has the greatest area.</p><p><b>Worked example.</b> A right triangle with hypotenuse 10 has area ½ab with a² + b² = 100. Since 2ab ≤ a² + b² = 100, the area is at most 25, at a = b = 5√2.</p>
+<h3>2. Shortest paths</h3><p>The shortest path between two points is a straight segment. If the path must touch a line, reflect one endpoint (Unit 104). On a solid, unfold faces into a plane and measure straight.</p><p><b>Worked example (cube).</b> An ant walks along the surface of a unit cube from one corner to the opposite corner. Unfold two adjacent faces into a 2 × 1 rectangle; the diagonal is √(4 + 1) = √5 ≈ 2.236, shorter than going along three edges (3).</p><p><b>Worked example (cylinder).</b> A cylinder has circumference 12 and height 5. Unrolled it is a 12 × 5 rectangle; a path from a point to the point directly across along the surface half way round has length √(6² + 5²) = √61 ≈ 7.81.</p>
+<h3>3. The Fermat point</h3><p>The point P that minimises PA + PB + PC for a triangle with all angles below 120° is the <b>Fermat point</b>: the three segments make angles of 120° with one another. For an equilateral triangle of side 1 the Fermat point is the centre, with total distance 3 × (1/√3) = √3 ≈ 1.732.</p><p><b>Why.</b> Rotate the triangle by 60° around A; the sum PA + PB + PC becomes the length of a broken line that is shortest when straight.</p><p><b>Worked example.</b> If one angle is 120° or more, the Fermat point is that vertex. For the 3-4-5 triangle the minimum total distance is √((a² + b² + c²)/2 + 2√3 K), with a² + b² + c² = 50 and K = 6, so it is √(25 + 12√3) ≈ 6.77. (For an equilateral triangle of side 1 the same formula gives √(3/2 + 3/2) = √3 ✓.)</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Reflecting both endpoints. Unfolding the wrong faces; try more than one net and take the shortest. Assuming the extremum occurs at a symmetric figure without checking the boundary.</p><p><b>Checks.</b> Compare with a nearby non-optimal path.</p><p><b>Practice.</b> For each problem try the three tools: AM-GM, reflection, unfolding.</p>
+<h3>Worked examples with Try-its: Shortest paths by unfolding</h3><p>To find the shortest route along the surface of a box, unfold the faces into a plane and measure a straight line. On a 3 × 4 × 5 box between opposite corners the three possible unfoldings give √((3 + 4)² + 5²) = √74, √((3 + 5)² + 4²) = √80 and √((4 + 5)² + 3²) = √90, so the shortest path has length √74. On a unit cube the corresponding path across two faces has length √5.</p><details class="try"><summary>Try it<p>A 1 × 1 × 2 box: find the shortest surface path between opposite corners.</p><p><b>Answer.</b> Options √((1 + 1)² + 2²) = √8 and √((1 + 2)² + 1²) = √10; the shortest is √8.</p></details>
+<h3>Worked examples with Try-its: Reflection and Fermat point</h3><p>To minimise a path that touches a line, reflect one endpoint across the line. The point inside a triangle (all angles under 120°) that minimises the sum of distances to the vertices is the <b>Fermat point</b>, where the sides subtend 120°. For an equilateral triangle of side 1 the minimum sum is √3. Among shapes of equal perimeter, the circle has the greatest area.</p><details class="try"><summary>Try it<p>What is the sum of distances from the centre of an equilateral triangle of side 6 to its vertices?</p><p><b>Answer.</b> 3 · (6/√3) = 6√3.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> A fly sits on the middle of one 1 × 1 end face of a 1 × 1 × 3 box (centre of the 1 × 1 face) and a spider at the centre of the opposite end. Find the shortest path along the surface. <b>Solution.</b> Unfold: the path goes ½ across the first end, 3 along a side, and ½ across the last end, totalling 4 in a straight line.</p><p><b>Reflection.</b> Straight lines on the unfolded net are shortest paths on the surface.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Reflection principle.</b> To minimise PA + PB for P on the x-axis with A = (0, 3), B = (8, 5), reflect A to (0, −3); the minimum is |A′B| = √(64 + 64) = 8√2, attained where the line A′B meets the axis, at x = 3. <b>Perimeter.</b> Among rectangles with area 36 the square has the least perimeter, 24.</p><details class="try"><summary>Try it<p>Reflect A = (1, 2) in the line x = 4.</p><p><b>Answer.</b> (7, 2).</p></details><details class="try"><summary>Try it<p>Find the minimum value of √(x² + 1) + √((4 − x)² + 4) for real x.</p><p><b>Answer.</b> The distance from (0, 1) to (4, −2) with a reflection: √(16 + 9) = 5.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> A point P is on the line y = x. Find the least value of PA + PB where A = (1, 0) and B = (0, 3). <b>Solution.</b> The points A and B are on opposite sides of y = x? A has y < x and B has y > x, so the straight segment AB crosses the line and the minimum is |AB| = √10.</p><p><b>Check.</b> |AB| = √(1 + 9) = √10 ≈ 3.16.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> A rectangle is inscribed in a circle of radius 5. What is the largest possible area?</p><details><summary>Hint</summary>The diagonal is the diameter 10.</details><details><summary>Answer</summary>50</details>
+<details><summary>Method: AM-GM</summary><p>With sides a, b: a² + b² = 100 and ab ≤ (a² + b²)/2 = 50, with equality for the square.</p></details>
+<details><summary>Method: Trig</summary><p>If the diagonal makes angle θ with a side, the sides are 10 cos θ and 10 sin θ, so the area is 100 sin θ cos θ = 50 sin 2θ ≤ 50.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem p2.</b> A right triangle has hypotenuse 10. What is its largest possible area?</p><details><summary>Hint</summary>ab ≤ (a² + b²)/2.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: AM-GM</summary><p>a² + b² = 100 gives ab ≤ 50, so the area ab/2 ≤ 25.</p></details>
+<details><summary>Method: Median</summary><p>The altitude to the hypotenuse is at most the median, 5, so the area is at most (1/2)(10)(5) = 25.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem p3.</b> A ray of light goes from A = (1, 2) to the x-axis and then to B = (7, 6). What is the shortest total path length?</p><details><summary>Hint</summary>Reflect B in the x-axis.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Reflection</summary><p>The image B' = (7, −6). The distance from A is √(6² + 8²) = 10.</p></details>
+<details><summary>Method: Check</summary><p>The path hits the axis at the point where the line from A to B' crosses y = 0, which is x = 5/2.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem p4.</b> Among rectangles with perimeter 20, what is the largest area?</p><details><summary>Hint</summary>The square.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Square</summary><p>a(10 − a) = 25 − (a − 5)² ≤ 25.</p></details>
+<details><summary>Method: AM-GM</summary><p>ab ≤ ((a + b)/2)² = 25.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem p5.</b> How many triangles with positive integer sides have perimeter 15 (order ignored)?</p><details><summary>Hint</summary>Triangle inequality.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: By longest side</summary><p>c = 7 gives (1, 7, 7), (2, 6, 7), (3, 5, 7), (4, 4, 7): 4. c = 6 gives (3, 6, 6), (4, 5, 6): 2. c = 5 gives (5, 5, 5): 1. Total 7.</p></details>
+<details><summary>Method: Check</summary><p>The longest side lies between 15/3 = 5 and 7.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem p6.</b> What is the greatest possible distance between two points of a 3 × 4 rectangle?</p><details><summary>Hint</summary>The diagonal.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Diagonal</summary><p>√(9 + 16) = 5.</p></details>
+<details><summary>Method: Argument</summary><p>Any two points are within a distance bounded by the opposite corners.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem p7.</b> What is the radius of the smallest circle that contains a 3 × 4 rectangle? Give as a fraction.</p><details><summary>Hint</summary>The circle through all four corners.</details><details><summary>Answer</summary>5/2</details>
+<details><summary>Method: Circumcircle</summary><p>Its diameter is the diagonal 5, so the radius is 5/2.</p></details>
+<details><summary>Method: Reason</summary><p>A smaller circle could not contain two opposite corners that are 5 apart.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem p8.</b> The shortest distance from the point (3, 4) to the circle x² + y² = 4 is what?</p><details><summary>Hint</summary>Along the line through the centre.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Radial</summary><p>The distance from (3, 4) to the centre is 5, so the shortest distance to the circle is 5 − 2 = 3.</p></details>
+<details><summary>Method: Triangle inequality</summary><p>Any other point of the circle is farther by the triangle inequality.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem p9.</b> What is the shortest distance from (0, 0) to (4, 3)?</p><details><summary>Hint</summary>Straight line.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Pythagoras</summary><p>√(16 + 9) = 5.</p></details>
+<details><summary>Method: Triple</summary><p>3-4-5 triangle.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem p10.</b> A(0, 2) and B(6, 4) are above the x-axis. A path goes from A to a point on the x-axis and then to B. Find the square of the shortest possible length.</p><details><summary>Hint</summary>Reflect B in the axis.</details><details><summary>Answer</summary>72</details>
+<details><summary>Method: Reflection</summary><p>The reflection of B is (6, −4), and the distance from A is √(36 + 36), so the square is 72.</p></details>
+<details><summary>Method: Optimum</summary><p>The path touches the axis at x = 2, and the legs have lengths √8 and √32, summing to 2√2 + 4√2 = 6√2.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem p11.</b> Two sides of a triangle are 6 and 8. What is the largest possible area?</p><details><summary>Hint</summary>½ab sin C.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Formula</summary><p>½ · 6 · 8 · sin C ≤ 24 with C = 90°.</p></details>
+<details><summary>Method: Height</summary><p>The height onto the side 8 is at most 6.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem p12.</b> An ant crawls on the surface of a cube with side 2 from one corner to the opposite corner. Find the square of the shortest path.</p><details><summary>Hint</summary>Unfold two faces.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Unfold</summary><p>Two adjacent faces form a 2 × 4 rectangle with diagonal squared 4 + 16 = 20.</p></details>
+<details><summary>Method: Check</summary><p>The path length is 2√5 ≈ 4.47, shorter than going along edges (6).</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem p13.</b> A rectangle has a diagonal of length 10. What is its greatest possible area?</p><details><summary>Hint</summary>Square.</details><details><summary>Answer</summary>50</details>
+<details><summary>Method: AM-GM</summary><p>a² + b² = 100 and ab ≤ 50.</p></details>
+<details><summary>Method: Square</summary><p>The best case is a = b = 5√2, area 50.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem p14.</b> Find the shortest distance from the origin to the line 3x + 4y = 25.</p><details><summary>Hint</summary>|c|/√(a² + b²).</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Formula</summary><p>25/5 = 5.</p></details>
+<details><summary>Method: Foot</summary><p>The foot is (3, 4), at distance 5.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem p15.</b> Points A(1, 3) and B(3, 1) are given. The point P lies on the line y = x. Find the square of the minimum of PA + PB.</p><details><summary>Hint</summary>A and B are on opposite sides.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Straight line</summary><p>A and B lie on opposite sides of y = x, so the minimum is AB itself, with AB² = 4 + 4 = 8.</p></details>
+<details><summary>Method: Crossing</summary><p>AB meets y = x at (2, 2).</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem p16.</b> A triangle is inscribed in a circle of radius 2. Find the square of its greatest possible area.</p><details><summary>Hint</summary>Equilateral.</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: Equilateral</summary><p>The best triangle is equilateral with side 2√3 and area 3√3, so the square is 27.</p></details>
+<details><summary>Method: Formula</summary><p>Area = (3√3/4)R² = 3√3.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem x17.</b> Find the distance between (0, 0) and (8, 15).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>17</details>
+<details><summary>Method: Formula</summary><p>√(8² + 15²) = √289 = 17.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 8 and 15 form a right triangle with hypotenuse 17 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem x18.</b> Find the area of the triangle with sides 10, 13 and 13.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Heron</summary><p>s = 18, so K = √(18 · 8 · 5 · 5) = 60.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 13 is 2K/13 = 120/13, so the area is ½ · 13 · 120/13 = 60.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem x19.</b> Find the distance between (2, -1) and (9, 23).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Formula</summary><p>√(7² + 24²) = √625 = 25.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 7 and 24 form a right triangle with hypotenuse 25 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem x20.</b> Find the area of the triangle with sides 13, 14 and 15.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>84</details>
+<details><summary>Method: Heron</summary><p>s = 21, so K = √(21 · 8 · 7 · 6) = 84.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 15 is 2K/15 = 56/5, so the area is ½ · 15 · 56/5 = 84.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem x21.</b> Find the distance between (-4, -2) and (16, 19).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Formula</summary><p>√(20² + 21²) = √841 = 29.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 20 and 21 form a right triangle with hypotenuse 29 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem x22.</b> Find the area of the triangle with sides 13, 20 and 21.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>126</details>
+<details><summary>Method: Heron</summary><p>s = 27, so K = √(27 · 14 · 7 · 6) = 126.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 21 is 2K/21 = 12, so the area is ½ · 21 · 12 = 126.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem x23.</b> Find the distance between (5, 5) and (14, 17).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Formula</summary><p>√(9² + 12²) = √225 = 15.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 9 and 12 form a right triangle with hypotenuse 15 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem x24.</b> Find the area of the triangle with sides 8, 15 and 17.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Heron</summary><p>s = 20, so K = √(20 · 12 · 5 · 3) = 60.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 17 is 2K/17 = 120/17, so the area is ½ · 17 · 120/17 = 60.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>
+<div class=p><p><b>Problem x25.</b> Find the distance between (1, -3) and (13, 13).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Formula</summary><p>√(12² + 16²) = √400 = 20.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 12 and 16 form a right triangle with hypotenuse 20 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 12 (Geometry)</p></div>

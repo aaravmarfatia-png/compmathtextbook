@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 55</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 55: Unit 55: The extremal principle</h1><p class=ref>Book: Engel, Problem-Solving Strategies, ch. 3 (25 problems)<br>Engel, Problem-Solving Strategies, chapter 3 (The Extremal Principle).</p>
+<h2>Reading</h2>
+<h3>1. The extremal principle in action</h3><p>The <b>extremal principle</b> looks at the largest, smallest, first or last element of a finite collection, which is special and therefore often easier to control. <b>Example 1 (equal sum and product).</b> Find positive integers with sum equal to product. For three numbers a ≤ b ≤ c, abc = a + b + c ≤ 3c, so ab ≤ 3, giving (a, b) = (1, 1), (1, 2), (1, 3). Only (1, 2, 3) works (a search up to 7 confirms it is the only triple); for four numbers the only solution is (1, 1, 2, 4).</p><p><b>Example 2 (parity of midpoints).</b> Among any five points with integer coordinates, two have a midpoint with integer coordinates. This is a pigeonhole argument, but the extremal flavour is in choosing the right invariant: there are only four parity classes (even/odd, even/odd) for the pair of coordinates, so two of the five points share a class, and their midpoint is integral. Random tests agree.</p><p><b>Example 3 (longest path).</b> In a graph where every vertex has degree at least 2, there is a cycle. Take a longest path v₁, …, v_k; v₁ has another neighbour besides v₂, which must lie on the path (otherwise the path could be extended), and that gives a cycle.</p><details class="try"><summary>Try it</summary><p>Show that in any finite set of at least two real numbers there are two whose difference is the smallest among all pairwise differences, and explain why this smallest gap exists.</p><p><b>Answer.</b> A finite set has finitely many pairwise differences, so one of them is smallest; this uses finiteness, which is the reason extremal arguments need finite sets.</p></details>
+<h3>2. Choosing the extremal object</h3><p>Typical choices: the <b>smallest counterexample</b> (to prove a statement for all n, assume it fails and take the smallest n for which it fails); the <b>longest path</b>; the <b>point farthest from a line</b>; the <b>triangle of largest area</b> among triangles with vertices in a given set (it contains all the other points in a triangle twice as big); the <b>leftmost point</b>.</p><p><b>The area trick.</b> If a set of points lies in the plane and no triangle formed by three of them has area greater than 1, then all the points fit in a triangle of area 4. Take the triangle ABC of maximum area (at most 1) and draw through each vertex a line parallel to the opposite side; every point lies within the larger triangle of area 4 formed by those lines.</p><p><b>Tips.</b> State clearly which quantity you maximise or minimise, and prove that a maximiser exists (finite set, or a closed bounded region). Then derive a contradiction from the assumption that the extremal object lacks the property you want.</p><details class="try"><summary>Try it</summary><p>Show that among 7 distinct positive integers whose sum is 28 the set must be {1, …, 7}.</p><p><b>Answer.</b> The smallest possible sum of 7 distinct positive integers is 1 + … + 7 = 28, with equality only for {1, …, 7}.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> At a round table sit n people, each with a distinct integer. A person is called a 'peak' if they hold a larger number than both neighbours. Show that there is at least one peak.</p><p><b>Solution.</b> Take the person with the largest number. Both neighbours have smaller numbers (the numbers are distinct), so this person is a peak. If numbers can repeat, the argument needs the maximum to be strictly larger than its neighbours, which can fail (all numbers equal): so the statement needs the distinctness.</p><p><b>Reflection.</b> The proof is a single line once the extremal choice is made. Always check where each hypothesis (here: distinctness) is used.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Applying the principle to an infinite set where the extremum may not exist. (2) Forgetting to show that the extremal object has the property you claim. (3) Not using all the hypotheses.</p><p><b>Checks.</b> Look at small cases to see which element plays the extremal role.</p><p><b>How to practise.</b> For each problem list the possible extremal quantities. In Unlimited practice, rotate the extremal families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Longest path.</b> In a graph where every vertex has degree at least 2, take a longest path v₁, …, vₖ. The endpoint v₁ has at least two neighbours, and all of them must lie on the path (else the path could be extended), so one of them is vᵢ with i ≥ 3, giving a cycle v₁ … vᵢ v₁. <b>Tournaments.</b> In a tournament (every pair of players has a winner) there is always a path visiting every player once, each beating the next: this was checked by computer for all tournaments with up to 5 players, and the standard proof inserts players into a path one at a time.</p><details class="try"><summary>Try it<p>In a graph all of whose degrees are at least 2, why must a cycle exist?</p><p><b>Answer.</b> Take a longest path; its first vertex has a second neighbour on the path, which closes a cycle.</p></details><details class="try"><summary>Try it<p>In a 3-player tournament A beats B, B beats C and C beats A. Find an order of all three in which each beats the next.</p><p><b>Answer.</b> A, B, C (A beats B and B beats C).</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Show that no finite set of at least two distinct real numbers has the property that every element is the average of two other elements. <b>Solution.</b> Take the largest element M. It would be the average of two other elements, both different from M and therefore smaller than M, so their average is below M. This contradicts the choice of M.</p><p><b>Reflection.</b> Choosing the largest (or smallest) object first gives a strict inequality to play with.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> What is the smallest possible sum of 10 different positive integers?</p><details><summary>Hint</summary>Take the 10 smallest.</details><details><summary>Answer</summary>55</details>
+<details><summary>Method: Extreme case</summary><p>Any 10 distinct positive integers, sorted, are at least 1, 2, …, 10 term by term, so the sum is at least 55.</p></details>
+<details><summary>Method: Formula</summary><p>10·11/2 = 55.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem p2.</b> Positive integers add up to 12. What is the largest possible product?</p><details><summary>Hint</summary>Use many 3s.</details><details><summary>Answer</summary>81</details>
+<details><summary>Method: Use 3s</summary><p>3 + 3 + 3 + 3 = 12 gives 81. Replacing two 3s by 2 + 4 or other splits gives less, and 1s are wasteful.</p></details>
+<details><summary>Method: Dynamic programming</summary><p>Building up the best product for each total from 1 to 12 gives 81.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem p3.</b> A rectangle has perimeter 36. What is its largest possible area?</p><details><summary>Hint</summary>Balance the sides.</details><details><summary>Answer</summary>81</details>
+<details><summary>Method: Square</summary><p>Sides a and 18 − a: area a(18 − a) = 81 − (a − 9)² ≤ 81, with equality at a = 9.</p></details>
+<details><summary>Method: AM–GM</summary><p>√(ab) ≤ (a + b)/2 = 9, so ab ≤ 81.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem p4.</b> What is the longest chain of numbers from 1 to 50 in which each divides the next (a₁ | a₂ | …)?</p><details><summary>Hint</summary>Double each time.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Doubling</summary><p>1, 2, 4, 8, 16, 32 has 6 terms. Each step multiplies by at least 2 and 2⁶ = 64 &gt; 50, so no chain has 7 terms.</p></details>
+<details><summary>Method: Computer check</summary><p>A search over divisibility chains confirms the longest has 6 terms.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem p5.</b> What is the largest subset of {1, 2, …, 20} containing no two consecutive numbers?</p><details><summary>Hint</summary>Take every other number.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Pairs</summary><p>Group the numbers into the pairs (1,2), (3,4), …, (19,20); a subset with no consecutive numbers has at most one from each pair, so at most 10. The odd numbers achieve 10.</p></details>
+<details><summary>Method: Computer check</summary><p>A search over all subsets confirms 10.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem p6.</b> What is the largest subset of {1, …, 20} in which no number divides another?</p><details><summary>Hint</summary>Take the upper half.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Pigeonhole on odd parts</summary><p>Write each number as 2ᵏ·m with m odd. There are 10 odd values of m, and two numbers with the same m divide each other, so at most 10 numbers. The set {11, …, 20} achieves 10.</p></details>
+<details><summary>Method: Computer check</summary><p>Searching all subsets confirms 10.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem p7.</b> Four real numbers add up to 12. What is the smallest possible value of the sum of their squares?</p><details><summary>Hint</summary>Equal numbers minimise it.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Complete squares</summary><p>Σxᵢ² = Σ(xᵢ − 3)² + 6Σxᵢ − 36 = Σ(xᵢ − 3)² + 36 ≥ 36, with equality when all xᵢ = 3.</p></details>
+<details><summary>Method: QM–AM</summary><p>√(Σx²/4) ≥ (Σx)/4 = 3, so Σx² ≥ 36.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem p8.</b> What is the smallest n such that n! ends in at least three zeros?</p><details><summary>Hint</summary>Count factors of 5.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Legendre</summary><p>n! has ⌊n/5⌋ + ⌊n/25⌋ + … zeros: n = 14 gives 2, n = 15 gives 3.</p></details>
+<details><summary>Method: Check</summary><p>15! = 1307674368000 ends in three zeros; 14! = 87178291200 ends in two.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem p9.</b> What is the largest n for which n! is less than 10¹⁰?</p><details><summary>Hint</summary>Compute factorials.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Table</summary><p>13! = 6227020800 &lt; 10¹⁰ and 14! = 87178291200 &gt; 10¹⁰.</p></details>
+<details><summary>Method: Estimate</summary><p>Each factorial from 10 on multiplies by at least 10, so the sequence passes 10¹⁰ quickly.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem x10.</b> What is the largest number of non-attacking knights on an 8 × 8 board?</p><details><summary>Hint</summary>Colour the board.</details><details><summary>Answer</summary>32</details>
+<details><summary>Method: Colouring</summary><p>A knight always changes square colour, so the 32 squares of one colour are mutually safe: 32.</p></details>
+<details><summary>Method: Bound</summary><p>Pair the squares into knight-move pairs to show at most 32.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem x11.</b> What is the smallest possible sum of 5 distinct positive integers?</p><details><summary>Hint</summary>Take the smallest ones.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Smallest</summary><p>1 + 2 + 3 + 4 + 5 = 15.</p></details>
+<details><summary>Method: Argument</summary><p>The kth smallest of the integers is at least k.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem x12.</b> Four distinct positive integers sum to 30. What is the largest possible value of the smallest of them?</p><details><summary>Hint</summary>They are at least m, m + 1, m + 2, m + 3.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Inequality</summary><p>4m + 6 ≤ 30 gives m ≤ 6.</p></details>
+<details><summary>Method: Example</summary><p>6, 7, 8, 9 sum to 30.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem x13.</b> What is the largest number of acute angles a convex polygon can have?</p><details><summary>Hint</summary>Exterior angles sum to 360°.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Exterior angles</summary><p>An acute interior angle has an exterior angle above 90°, and the exterior angles sum to 360°, so at most 3 are above 90°.</p></details>
+<details><summary>Method: Example</summary><p>A triangle has 3 acute angles.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem x14.</b> What is the largest number of acute angles a convex hexagon can have?</p><details><summary>Hint</summary>Exterior angles.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Exterior angles</summary><p>At most 3 exterior angles can exceed 90° (4 would sum above 360°), so at most 3 acute interior angles.</p></details>
+<details><summary>Method: Example</summary><p>Possible with three acute angles and three large obtuse ones.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem x15.</b> A rectangle has perimeter 30. What is its largest possible area?</p><details><summary>Hint</summary>Square.</details><details><summary>Answer</summary>225/4</details>
+<details><summary>Method: AM-GM</summary><p>With sides a and 15 − a the area is at most (15/2)² = 225/4.</p></details>
+<details><summary>Method: Vertex</summary><p>a(15 − a) peaks at a = 7.5.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem x16.</b> What is the smallest possible sum of 10 distinct positive integers?</p><details><summary>Hint</summary>1 to 10.</details><details><summary>Answer</summary>55</details>
+<details><summary>Method: Sum</summary><p>1 + 2 + … + 10 = 55.</p></details>
+<details><summary>Method: Argument</summary><p>The kth smallest is at least k.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem x17.</b> What is the largest number of points in the plane, no three collinear, such that every triangle they form is a right triangle?</p><details><summary>Hint</summary>Rectangle.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Example</summary><p>The 4 vertices of a rectangle give four right triangles.</p></details>
+<details><summary>Method: Bound</summary><p>A fifth point would force an obtuse or acute triangle among the points.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem x18.</b> 40 objects are placed into 7 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈40/7⌉ = 6.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 5 objects, there would be at most 7 · 5 = 35 < 40 objects in all.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem x19.</b> What is the smallest value of x + 81/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: AM-GM</summary><p>x + 81/x ≥ 2√81 = 18, with equality when x = 9.</p></details>
+<details><summary>Method: Table</summary><p>x = 8, 9, 10 give 145/8, 18, 181/10; the minimum is 18 at x = 9.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem x20.</b> Find the nim-sum (XOR) of the piles 3, 7, 11.</p><details><summary>Hint</summary>Write each pile in binary.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Binary columns</summary><p>In binary the piles are 0011, 0111, 1011; adding each column mod 2 gives 1111 = 15.</p></details>
+<details><summary>Method: Step by step</summary><p>XOR them one at a time: 3, 4, 15.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem x21.</b> How many edges does the complete graph K_30 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>435</details>
+<details><summary>Method: Pairs</summary><p>C(30, 2) = 435.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 30 vertices has degree 29, so the edges number 30 · 29/2 = 435.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem x22.</b> 50 objects are placed into 8 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈50/8⌉ = 7.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 6 objects, there would be at most 8 · 6 = 48 < 50 objects in all.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem x23.</b> What is the smallest value of x + 100/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: AM-GM</summary><p>x + 100/x ≥ 2√100 = 20, with equality when x = 10.</p></details>
+<details><summary>Method: Table</summary><p>x = 9, 10, 11 give 181/9, 20, 221/11; the minimum is 20 at x = 10.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem x24.</b> Find the nim-sum (XOR) of the piles 10, 14, 5.</p><details><summary>Hint</summary>Write each pile in binary.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Binary columns</summary><p>In binary the piles are 1010, 1110, 0101; adding each column mod 2 gives 0001 = 1.</p></details>
+<details><summary>Method: Step by step</summary><p>XOR them one at a time: 10, 4, 1.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>
+<div class=p><p><b>Problem x25.</b> How many edges does the complete graph K_6 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Pairs</summary><p>C(6, 2) = 15.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 6 vertices has degree 5, so the edges number 6 · 5/2 = 15.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 3</p></div>

@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 61</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 61: Unit 61: Polynomials: interpolation and identities</h1><p class=ref>Book: Engel, Problem-Solving Strategies, ch. 10 (25 problems)<br>Engel, Problem-Solving Strategies, chapter 10 (Polynomials).</p>
+<h2>Reading</h2>
+<h3>1. Lagrange interpolation</h3><p>A polynomial of degree at most n is determined by its values at n + 1 points. The polynomial of degree ≤ 2 through (0, 1), (1, 3), (2, 7) is x² + x + 1 (found by the Lagrange formula, confirmed by computer algebra), and the cubic through (0, 0), (1, 1), (2, 8), (3, 27) is x³. <b>Lagrange's formula:</b> P(x) = Σ yᵢ Π_{j≠i} (x − xⱼ)/(xᵢ − xⱼ).</p><p><b>Finite differences.</b> For the sequence 1, 4, 9, 16, 25 the first differences are 3, 5, 7, 9 and the second differences are constant (2), so the sequence is a quadratic polynomial in n. In general, if the k-th differences are constant, the sequence is a polynomial of degree k.</p><details class="try"><summary>Try it</summary><p>Find the quadratic through (1, 2), (2, 5), (3, 10).</p><p><b>Answer.</b> Differences 3, 5 and 2: P(n) = n² + 1.</p></details>
+<h3>2. Remainders and identities</h3><p>The remainder of P(x) on division by (x − 1)(x − 2) is a linear polynomial; if P(1) = 3 and P(2) = 5, then the remainder is 2x + 1 (the line through (1, 3), (2, 5)). <b>A trick for values at consecutive integers.</b> Suppose P has degree at most 3 and P(k) = 1/k for k = 1, 2, 3, 4. Then Q(x) = xP(x) − 1 has degree at most 4 and roots 1, 2, 3, 4, so Q(x) = c(x − 1)(x − 2)(x − 3)(x − 4). Putting x = 0: Q(0) = −1 = 24c, so c = −1/24. Then P(5) = (1 + Q(5))/5 = (1 − 24/24)/5 = 0 (computer algebra agrees).</p><p><b>Identities.</b> A polynomial identity valid for infinitely many x is valid for all x. Two polynomials of degree at most n that agree at n + 1 points are identical.</p><details class="try"><summary>Try it</summary><p>A cubic P satisfies P(0) = 0, P(1) = 1, P(2) = 8, P(3) = 27. Find P(4).</p><p><b>Answer.</b> P(x) = x³, so 64.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> A polynomial P of degree at most 3 satisfies P(k) = 1/k for k = 1, 2, 3, 4. Find P(5) and P(0).</p><p><b>Solution.</b> Q(x) = xP(x) − 1 = −(1/24)(x − 1)(x − 2)(x − 3)(x − 4), as in section 2. P(5) = 0. For P(0): P(x) = (1 + Q(x))/x, and 1 + Q(x) vanishes at x = 0 (since Q(0) = −1), so P(0) is the derivative of Q at 0: Q′(0) = −(1/24) · (−(2·3·4) − (1·3·4) − (1·2·4) − (1·2·3)) = (24 + 12 + 8 + 6)/24 = 50/24 = 25/12.</p><p><b>Reflection.</b> Count unknowns and conditions before solving: a polynomial of degree at most 3 has 4 coefficients, which matches the four conditions.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Assuming a polynomial of the wrong degree. (2) Mixing up conditions and unknowns. (3) Forgetting the constant when using the Q(x) trick. (4) Evaluating the product at the wrong point.</p><p><b>Checks.</b> Evaluate the final polynomial at the given points.</p><p><b>How to practise.</b> Count degrees of freedom. In Unlimited practice, rotate the interpolation families.</p>
+<h3>More worked examples: Worked examples</h3><p>A polynomial of degree at most n is determined by its values at n + 1 points. If P(0) = 1, P(1) = 3 and P(2) = 7, Lagrange interpolation gives P(x) = x² + x + 1. The finite differences of the values 1, 3, 7 are 2, 4 and then 2: a constant second difference of 2 signals a quadratic with leading coefficient 1. Another check: the polynomial through (1, 1), (2, 4), (3, 9) is x².</p><details class="try"><summary>Try it<p>Find the quadratic with values 0, 2, 6 at x = 0, 1, 2.</p><p><b>Answer.</b> x² + x.</p></details><details class="try"><summary>Try it<p>A polynomial of degree 3 takes the values 1, 2, 3, 4 at x = 1, 2, 3, 4. What is it?</p><p><b>Answer.</b> P(x) = x.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> A polynomial P of degree 2 satisfies P(1) = 2, P(2) = 5 and P(3) = 10. Find P(4). <b>Solution.</b> The values 2, 5, 10 have differences 3, 5 and second difference 2, so P(4) = 10 + (5 + 2) = 17. Indeed P(x) = x² + 1.</p><p><b>Check.</b> 4² + 1 = 17 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> A quadratic p has p(0) = 1, p(1) = 3, p(2) = 7. Find p(3).</p><details><summary>Hint</summary>Take differences.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Differences</summary><p>Values 1, 3, 7 have differences 2, 4 and constant second difference 2, so the next difference is 6 and p(3) = 13.</p></details>
+<details><summary>Method: Formula</summary><p>p(x) = x² + x + 1, so p(3) = 13.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem p2.</b> What is the sum of the coefficients of (2x − 3)⁵?</p><details><summary>Hint</summary>Put x = 1.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Evaluate at 1</summary><p>(2 − 3)⁵ = −1.</p></details>
+<details><summary>Method: Reason</summary><p>The sum of coefficients is p(1) for any polynomial.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem p3.</b> What is the remainder when x³ − 2x + 5 is divided by x − 3?</p><details><summary>Hint</summary>Remainder theorem.</details><details><summary>Answer</summary>26</details>
+<details><summary>Method: Remainder theorem</summary><p>p(3) = 27 − 6 + 5 = 26.</p></details>
+<details><summary>Method: Synthetic division</summary><p>Coefficients 1, 0, −2, 5 with 3: 1, 3, 7, 26. The remainder is 26.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem p4.</b> A cubic has roots 1, 2, 3 and p(0) = −12. Find p(4).</p><details><summary>Hint</summary>p(x) = a(x − 1)(x − 2)(x − 3).</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Find a</summary><p>p(0) = a(−1)(−2)(−3) = −6a = −12, so a = 2. Then p(4) = 2·3·2·1 = 12.</p></details>
+<details><summary>Method: Check</summary><p>p(x) = 2x³ − 12x² + 22x − 12 and p(4) = 128 − 192 + 88 − 12 = 12.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem p5.</b> What is the coefficient of x² in (x + 1)(x + 2)(x + 3)(x + 4)?</p><details><summary>Hint</summary>Elementary symmetric sum e₂ of 1, 2, 3, 4.</details><details><summary>Answer</summary>35</details>
+<details><summary>Method: Choose constants</summary><p>The x² term arises by taking x from two factors and the constant from the other two. So the coefficient is the sum of the products of two of the constants: 1·2 + 1·3 + 1·4 + 2·3 + 2·4 + 3·4 = 35.</p></details>
+<details><summary>Method: Expand</summary><p>(x² + 3x + 2)(x² + 7x + 12) has x² coefficient 12 + 21 + 2 = 35.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem p6.</b> If p(x) = x² − 5x + 6, how many integers n between −10 and 10 make p(n) negative?</p><details><summary>Hint</summary>Factor.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Factor</summary><p>(x − 2)(x − 3) is negative strictly between 2 and 3: no integers.</p></details>
+<details><summary>Method: Table</summary><p>p(2) = p(3) = 0 and the parabola opens upwards, so no integer has p(n) negative.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem p7.</b> Find the sum of the squares of the roots of x² − 7x + 10.</p><details><summary>Hint</summary>(r + s)² − 2rs.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Vieta</summary><p>r + s = 7 and rs = 10, so r² + s² = 49 − 20 = 29.</p></details>
+<details><summary>Method: Roots</summary><p>The roots are 2 and 5: 4 + 25 = 29.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem p8.</b> p is a polynomial with p(1) = 1, p(2) = 4, p(3) = 9 and degree at most 2. Find p(10).</p><details><summary>Hint</summary>Guess the pattern, then check the degree.</details><details><summary>Answer</summary>100</details>
+<details><summary>Method: Pattern</summary><p>p(x) = x² fits all three values, and a quadratic is determined by three values, so p(10) = 100.</p></details>
+<details><summary>Method: Differences</summary><p>1, 4, 9 have second difference 2, so p(x) = x².</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem p9.</b> How many real roots does x³ − 6x² + 12x − 8 have counting each distinct value once?</p><details><summary>Hint</summary>Recognise a cube.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Cube</summary><p>x³ − 6x² + 12x − 8 = (x − 2)³, with the single root 2.</p></details>
+<details><summary>Method: Derivative idea</summary><p>The graph is increasing everywhere and crosses zero once, at x = 2.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem p10.</b> A quadratic p has p(1) = 2, p(2) = 5 and p(3) = 10. Find p(4).</p><details><summary>Hint</summary>Look for a pattern in the values.</details><details><summary>Answer</summary>17</details>
+<details><summary>Method: Pattern</summary><p>The values are n² + 1, so p(x) = x² + 1 and p(4) = 17.</p></details>
+<details><summary>Method: Differences</summary><p>The first differences 3, 5 and the second difference 2 give the next first difference 7, so p(4) = 10 + 7 = 17.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem p11.</b> What is the sum of the coefficients of (x − 2)⁷?</p><details><summary>Hint</summary>Set x = 1.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Evaluate</summary><p>(1 − 2)⁷ = −1.</p></details>
+<details><summary>Method: Meaning</summary><p>The sum of coefficients is the value of the polynomial at x = 1.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem p12.</b> What is the remainder when x⁴ − 3x + 1 is divided by x − 2?</p><details><summary>Hint</summary>Remainder theorem.</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: Theorem</summary><p>p(2) = 16 − 6 + 1 = 11.</p></details>
+<details><summary>Method: Division</summary><p>x⁴ − 3x + 1 = (x − 2)(x³ + 2x² + 4x + 5) + 11.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem p13.</b> If p(x) = x² − 5x + 6, find p(7).</p><details><summary>Hint</summary>Substitute.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Substitute</summary><p>49 − 35 + 6 = 20.</p></details>
+<details><summary>Method: Factor</summary><p>p(x) = (x − 2)(x − 3), so p(7) = 5 · 4 = 20.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem p14.</b> What is the product of the roots of x³ − 3x² + 4x − 12?</p><details><summary>Hint</summary>Vieta: product = −d/a.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Vieta</summary><p>For x³ + bx² + cx + d the product of the roots is −d = 12.</p></details>
+<details><summary>Method: Factor</summary><p>x³ − 3x² + 4x − 12 = (x − 3)(x² + 4), whose roots are 3, 2i, −2i with product 3 · 4 = 12.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem p15.</b> How many real roots does x⁴ − 1 have?</p><details><summary>Hint</summary>Factor as a difference of squares.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Factor</summary><p>(x² − 1)(x² + 1) = (x − 1)(x + 1)(x² + 1), so the real roots are 1 and −1.</p></details>
+<details><summary>Method: Graph</summary><p>x⁴ = 1 has the two real solutions ±1.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem p16.</b> A cubic p satisfies p(0) = 0, p(1) = 1, p(2) = 8 and p(3) = 27. Find p(4).</p><details><summary>Hint</summary>Spot the pattern.</details><details><summary>Answer</summary>64</details>
+<details><summary>Method: Pattern</summary><p>The values are n³, and four points determine a cubic uniquely, so p(x) = x³ and p(4) = 64.</p></details>
+<details><summary>Method: Differences</summary><p>The first differences of 0, 1, 8, 27 are 1, 7, 19; the second differences are 6, 12; the third difference is constant 6, so the next second difference is 18, the next first difference 37, and p(4) = 27 + 37 = 64.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem p17.</b> What is the coefficient of x⁴ in (x² + 1)⁵?</p><details><summary>Hint</summary>Choose x² from two of the five factors.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Binomial</summary><p>C(5, 2) = 10.</p></details>
+<details><summary>Method: Reasoning</summary><p>x⁴ = (x²)², using x² from two factors and 1 from the other three.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem x18.</b> The roots of x² − 7x + 10 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Vieta</summary><p>r + s = 7 and rs = 10, so r² + s² = (r + s)² − 2rs = 49 − 20 = 29.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 7 and p₂ = 7 · p₁ − 10 · p₀ = 49 − 20 = 29.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem x19.</b> The roots of x² − 6x + 4 = 0 are r and s. Find r³ + s³.</p><details><summary>Hint</summary>(r + s)³ − 3rs(r + s).</details><details><summary>Answer</summary>144</details>
+<details><summary>Method: Identity</summary><p>r³ + s³ = (r + s)³ − 3rs(r + s) = 216 − 72 = 144.</p></details>
+<details><summary>Method: Recurrence</summary><p>p₁ = 6, p₂ = 28, so p₃ = 6 · p₂ − 4 · p₁ = 168 − 24 = 144.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem x20.</b> A sequence has a₁ = 2 and aₖ₊₁ = 3·aₖ + 1. Find a_5.</p><details><summary>Hint</summary>Compute term by term, or find a closed form.</details><details><summary>Answer</summary>202</details>
+<details><summary>Method: Step by step</summary><p>The terms are 2, 7, 22, 67, 202, so a_5 = 202.</p></details>
+<details><summary>Method: Closed form</summary><p>The fixed point is K = -1/2, so aₙ = (a₁ − K)·3^(n−1) + K. For n = 5 this is 202.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem x21.</b> An arithmetic sequence has first term 12 and common difference 7. Find term number 25.</p><details><summary>Hint</summary>aₙ = a₁ + (n − 1)d.</details><details><summary>Answer</summary>180</details>
+<details><summary>Method: Formula</summary><p>12 + 24 · 7 = 180.</p></details>
+<details><summary>Method: Linear form</summary><p>The terms are 12, 19, 26, 33, …, so term k equals 7·k + 5; at k = 25 this is 180.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem x22.</b> Find 1² + 2² + … + 11².</p><details><summary>Hint</summary>n(n + 1)(2n + 1)/6.</details><details><summary>Answer</summary>506</details>
+<details><summary>Method: Formula</summary><p>11 · 12 · 23/6 = 506.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100 + 121 = 506.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem x23.</b> The roots of x² − 9x + 14 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>53</details>
+<details><summary>Method: Vieta</summary><p>r + s = 9 and rs = 14, so r² + s² = (r + s)² − 2rs = 81 − 28 = 53.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 9 and p₂ = 9 · p₁ − 14 · p₀ = 81 − 28 = 53.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem x24.</b> The roots of x² − 11x + 5 = 0 are r and s. Find r³ + s³.</p><details><summary>Hint</summary>(r + s)³ − 3rs(r + s).</details><details><summary>Answer</summary>1166</details>
+<details><summary>Method: Identity</summary><p>r³ + s³ = (r + s)³ − 3rs(r + s) = 1331 − 165 = 1166.</p></details>
+<details><summary>Method: Recurrence</summary><p>p₁ = 11, p₂ = 111, so p₃ = 11 · p₂ − 5 · p₁ = 1221 − 55 = 1166.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>
+<div class=p><p><b>Problem x25.</b> A sequence has a₁ = 3 and aₖ₊₁ = 2·aₖ + -1. Find a_7.</p><details><summary>Hint</summary>Compute term by term, or find a closed form.</details><details><summary>Answer</summary>129</details>
+<details><summary>Method: Step by step</summary><p>The terms are 3, 5, 9, 17, 33, 65, 129, so a_7 = 129.</p></details>
+<details><summary>Method: Closed form</summary><p>The fixed point is K = 1, so aₙ = (a₁ − K)·2^(n−1) + K. For n = 7 this is 129.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 10</p></div>

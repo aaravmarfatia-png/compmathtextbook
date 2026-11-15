@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 62</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 62: Unit 62: Problem-solving heuristics: small cases, patterns and puzzles</h1><p class=ref>Book: Zeitz, The Art and Craft of Problem Solving, ch. 1-2 (25 problems)<br>Zeitz, The Art and Craft of Problem Solving, chapters 1-2 (Strategy and Tactics; Methods of Proof).</p>
+<h2>Reading</h2>
+<h3>1. Small cases and patterns</h3><p>Many problems yield to a simple strategy: try small cases, find a pattern, then prove it. <b>Example.</b> Evaluate 1 · 1! + 2 · 2! + … + n · n!. For n = 1, 2, 3 the values are 1, 5, 23, and these are 2! − 1, 3! − 1, 4! − 1. So conjecture (n + 1)! − 1, which holds for n up to 9 and is proved by k · k! = (k + 1)! − k! (a telescoping sum). The pattern is only a conjecture until proved: the proof matters.</p><p><b>Guess and check.</b> For which n is 2ⁿ > n³? Trying n = 2, …: it fails up to n = 9 (512 < 729) and holds from n = 10 on (1024 > 1000). Tabulating small values both finds the threshold and suggests that an induction works afterwards.</p><details class="try"><summary>Try it</summary><p>Find the sum of the first n odd numbers for n = 1, 2, 3, 4, then guess and prove the general formula.</p><p><b>Answer.</b> 1, 4, 9, 16 suggest n². Proof by induction: n² + (2n + 1) = (n + 1)².</p></details>
+<h3>2. Working backwards, symmetry, and simpler problems</h3><p><b>Working backwards.</b> Start from the goal and ask what would give it. A frog jumps 1 or 2 steps; in how many ways can it climb 8 steps? The last jump is 1 or 2 from step 7 or 6: f(n) = f(n − 1) + f(n − 2): 1, 2, 3, 5, 8, 13, 21, 34 — so 34.</p><p><b>Symmetry and simpler versions.</b> If a problem has a symmetric structure, use it. If it has 2023 items, try 3, 4 and 5 items. <b>Extreme cases.</b> Look at what happens when a quantity is 0, 1 or very large; the answer often hints at the form of the solution.</p><p><b>Draw a picture; make a table; change the representation.</b> Many counting problems are easier as lattice paths or as coloured grids; many number problems are easier modulo something.</p><details class="try"><summary>Try it</summary><p>A staircase of 6 steps can be climbed taking 1 or 2 steps at a time. How many ways?</p><p><b>Answer.</b> f(6) = 13.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> There are 100 lockers, all closed. Student k toggles every k-th locker, for k = 1, …, 100. Which lockers end open?</p><p><b>Solution.</b> Locker n is toggled once for each divisor of n, so it is open iff n has an odd number of divisors, which happens exactly when n is a perfect square. The open lockers are 1, 4, 9, …, 100: ten lockers.</p><p><b>Reflection.</b> Trying n = 1, …, 12 by hand makes the pattern (squares) visible and the divisor-count argument obvious.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Trusting a pattern from too few cases. (2) Skipping the proof. (3) Choosing small cases that are too special.</p><p><b>Checks.</b> Test the conjecture on a case you did not use to find it.</p><p><b>How to practise.</b> Keep a notebook of patterns and their proofs. In Unlimited practice, rotate the pattern families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Pattern.</b> The sums 1, 1 + 3, 1 + 3 + 5, … are 1, 4, 9, …, squares, so the sum of the first 7 odd numbers is 49. <b>Working backwards.</b> To measure 4 litres with jugs of 3 and 5 litres, fill the 5, pour into the 3 (leaving 2), empty the 3, pour the 2 in, fill the 5 again, and top up the 3 (taking 1), leaving 4 in the 5-litre jug. A computer search confirms that 6 steps are the minimum.</p><details class="try"><summary>Try it<p>What is 1 + 2 + 4 + 8 + … + 2⁹?</p><p><b>Answer.</b> Pattern: partial sums are 2ⁿ − 1, so the total is 1023.</p></details><details class="try"><summary>Try it<p>What is the unit digit of 3²⁰²⁶?</p><p><b>Answer.</b> The units digits cycle 3, 9, 7, 1 and 2026 ≡ 2 (mod 4), so 9.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> A frog on a number line starts at 0 and each jump is either +3 or −2. Which integers can it reach? <b>Solution.</b> The jumps +3, −2 reach 1, and repeating that pair reaches every positive integer. The jumps +3, −2, −2 reach −1, and repeating that triple reaches every negative integer. So every integer is reachable.</p><p><b>Reflection.</b> Trying small cases (1, 2, 3, …) reveals that gcd(3, 2) = 1 is the key.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> 100 lockers are closed. Student k toggles every k-th locker (k = 1, …, 100). How many lockers end up open?</p><details><summary>Hint</summary>A locker is toggled once for each divisor of its number.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Divisors</summary><p>Locker n is toggled d(n) times. d(n) is odd only if n is a perfect square (divisors pair up as d and n/d, except when d = n/d). So the open lockers are 1, 4, 9, …, 100: ten lockers.</p></details>
+<details><summary>Method: Simulation</summary><p>Simulating all 100 students gives 10 open lockers.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem p2.</b> 41 people stand in a circle and every second person is eliminated (1 remains, 2 is out, 3 stays, 4 is out, …). Who is the last person left, if the count starts at person 1 staying?</p><details><summary>Hint</summary>Josephus problem: J(n) = 2L + 1 where n = 2ᵃ + L.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: Formula</summary><p>41 = 32 + 9, so the survivor is 2·9 + 1 = 19.</p></details>
+<details><summary>Method: Simulation</summary><p>Removing every second person in turn from a circle of 41 leaves person 19.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem p3.</b> How many squares of all sizes are on an 8×8 chessboard?</p><details><summary>Hint</summary>Count k×k squares for each k.</details><details><summary>Answer</summary>204</details>
+<details><summary>Method: Sum</summary><p>There are (9 − k)² squares of side k: 64 + 49 + … + 1 = 204.</p></details>
+<details><summary>Method: Formula</summary><p>Σ k² for k = 1 to 8 = 8·9·17/6 = 204.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem p4.</b> How many rectangles (of any size, including squares) are on an 8×8 chessboard?</p><details><summary>Hint</summary>Choose two horizontal and two vertical lines.</details><details><summary>Answer</summary>1296</details>
+<details><summary>Method: Choose lines</summary><p>There are 9 horizontal and 9 vertical grid lines; choosing 2 of each gives C(9,2)² = 36² = 1296.</p></details>
+<details><summary>Method: Sum</summary><p>Σ(9 − a)(9 − b) over widths a and heights b equals (1 + … + 8)² = 36² = 1296.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem p5.</b> Six points are placed on a circle and every pair is joined by a chord, with no three chords meeting at a point inside. Into how many regions is the disc divided?</p><details><summary>Hint</summary>Regions = 1 + C(n,2) + C(n,4).</details><details><summary>Answer</summary>31</details>
+<details><summary>Method: Formula</summary><p>1 + 15 + 15 = 31.</p></details>
+<details><summary>Method: Small cases</summary><p>n = 1…6 give 1, 2, 4, 8, 16, 31: the pattern doubles at first and then fails, so small cases alone mislead; the formula comes from counting chords and crossing points.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem p6.</b> How many ways can you climb 10 stairs taking 1 or 2 steps at a time?</p><details><summary>Hint</summary>Fibonacci recurrence.</details><details><summary>Answer</summary>89</details>
+<details><summary>Method: Recurrence</summary><p>w(n) = w(n − 1) + w(n − 2) with w(1) = 1, w(2) = 2: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89.</p></details>
+<details><summary>Method: Count by twos</summary><p>Using k two-steps and 10 − 2k one-steps: Σ C(10 − k, k) for k = 0…5 = 1 + 9 + 28 + 35 + 15 + 1 = 89.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem p7.</b> What is the sum 1 − 2 + 3 − 4 + … + 99 − 100?</p><details><summary>Hint</summary>Pair consecutive terms.</details><details><summary>Answer</summary>-50</details>
+<details><summary>Method: Pairs</summary><p>(1 − 2) + (3 − 4) + … + (99 − 100) = 50·(−1) = −50.</p></details>
+<details><summary>Method: Small cases</summary><p>The sums for n = 2, 4, 6 are −1, −2, −3: the sum is −n/2.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem p8.</b> How many zeros does 100! end with?</p><details><summary>Hint</summary>Count factors of 5.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Factors of 5</summary><p>⌊100/5⌋ + ⌊100/25⌋ = 20 + 4 = 24.</p></details>
+<details><summary>Method: Computer check</summary><p>100! ends in exactly 24 zeros.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem p9.</b> A frog climbs a 30 m well, rising 3 m each day and slipping back 2 m each night. On which day does it get out?</p><details><summary>Hint</summary>It escapes before slipping on the last day.</details><details><summary>Answer</summary>28</details>
+<details><summary>Method: Reasoning</summary><p>After day d it is at the top of its climb at 3 + (d − 1) m. It escapes when 3 + (d − 1) ≥ 30, so d = 28.</p></details>
+<details><summary>Method: Check</summary><p>After 27 nights it is at 27 m; on day 28 it climbs to 30 m and is out.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem p10.</b> How many handshakes occur among 12 people if each pair shakes hands once?</p><details><summary>Hint</summary>Try 2, 3, 4 people first.</details><details><summary>Answer</summary>66</details>
+<details><summary>Method: Pattern</summary><p>For 2, 3, 4, 5 people the counts are 1, 3, 6, 10, the triangular numbers, so for 12 people it is 11 · 12/2 = 66.</p></details>
+<details><summary>Method: Choose</summary><p>C(12, 2) = 66.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem p11.</b> The sequence 2, 6, 12, 20, 30, … continues with terms n(n + 1). What is the 10th term?</p><details><summary>Hint</summary>Spot the pattern.</details><details><summary>Answer</summary>110</details>
+<details><summary>Method: Formula</summary><p>10 · 11 = 110.</p></details>
+<details><summary>Method: Differences</summary><p>The differences 4, 6, 8, … grow by 2, and the 10th term is 2 + 4 + 6 + … + 20 = 110.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem p12.</b> What is the units digit of 3²⁰²⁶?</p><details><summary>Hint</summary>Find the cycle.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Cycle</summary><p>Units digits of powers of 3 are 3, 9, 7, 1 repeating. 2026 ≡ 2 (mod 4), so the digit is 9.</p></details>
+<details><summary>Method: Mod 10</summary><p>3⁴ = 81 ≡ 1 (mod 10), so 3²⁰²⁶ ≡ 3² = 9.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem p13.</b> How many squares of all sizes are on a 3 × 3 grid of unit squares?</p><details><summary>Hint</summary>Count by size.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: By size</summary><p>9 of size 1, 4 of size 2 and 1 of size 3: 14.</p></details>
+<details><summary>Method: Formula</summary><p>1² + 2² + 3² = 14.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem p14.</b> A frog in a 10-foot well climbs 3 feet each day and slips back 2 feet each night. On which day does it first reach the top?</p><details><summary>Hint</summary>It escapes during the day.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Simulation</summary><p>After n nights it is at n feet. On day 8 it starts at 7 feet and climbs to 10, so it escapes on day 8.</p></details>
+<details><summary>Method: Reasoning</summary><p>It must start a day at 7 or more feet, which first happens at the start of day 8.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem p15.</b> What is the sum of all digits used in writing the integers from 1 to 99?</p><details><summary>Hint</summary>Pair n with 99 − n.</details><details><summary>Answer</summary>900</details>
+<details><summary>Method: Pairing</summary><p>Writing 00 to 99, each tens and each units digit takes each value 0 to 9 ten times: 2 · 10 · 45 = 900.</p></details>
+<details><summary>Method: Check</summary><p>The 1 to 9 contribute 45 and 10 to 99 contribute 855, total 900.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem p16.</b> How many zeros does 25! end with?</p><details><summary>Hint</summary>Count the factors of 5.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Count</summary><p>⌊25/5⌋ + ⌊25/25⌋ = 5 + 1 = 6.</p></details>
+<details><summary>Method: Small case</summary><p>10! = 3628800 ends with 2 zeros, matching ⌊10/5⌋ = 2.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem p17.</b> Add the first 10 odd positive integers.</p><details><summary>Hint</summary>Try the first few sums.</details><details><summary>Answer</summary>100</details>
+<details><summary>Method: Pattern</summary><p>1, 4, 9, 16, … are squares, so the sum of the first n odd numbers is n² and the answer is 100.</p></details>
+<details><summary>Method: Pairing</summary><p>1 + 19 = 20, 3 + 17 = 20, …: 5 pairs of 20.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem x18.</b> 33 objects are placed into 4 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈33/4⌉ = 9.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 8 objects, there would be at most 4 · 8 = 32 < 33 objects in all.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem x19.</b> Find 1² + 2² + … + 12².</p><details><summary>Hint</summary>n(n + 1)(2n + 1)/6.</details><details><summary>Answer</summary>650</details>
+<details><summary>Method: Formula</summary><p>12 · 13 · 25/6 = 650.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100 + 121 + 144 = 650.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem x20.</b> How many binary strings of length 12 contain no two consecutive 1s?</p><details><summary>Hint</summary>Condition on the last symbol.</details><details><summary>Answer</summary>377</details>
+<details><summary>Method: Recurrence</summary><p>aₙ = aₙ₋₁ + aₙ₋₂ with a₁ = 2, a₂ = 3: 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, so a_12 = 377.</p></details>
+<details><summary>Method: Fibonacci</summary><p>aₙ = F_{n+2}, so a_12 = F_14 = 377.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem x21.</b> A staircase has 12 steps and you climb 1 or 2 steps at a time. How many ways are there to climb it?</p><details><summary>Hint</summary>Consider the last move.</details><details><summary>Answer</summary>233</details>
+<details><summary>Method: Recurrence</summary><p>Ways(n) = Ways(n − 1) + Ways(n − 2): 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, so 233 ways.</p></details>
+<details><summary>Method: By number of 2-steps</summary><p>With j two-steps there are C(12 − j, j) orders; summing over j gives 233.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem x22.</b> 77 objects are placed into 10 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈77/10⌉ = 8.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 7 objects, there would be at most 10 · 7 = 70 < 77 objects in all.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem x23.</b> Find 1² + 2² + … + 14².</p><details><summary>Hint</summary>n(n + 1)(2n + 1)/6.</details><details><summary>Answer</summary>1015</details>
+<details><summary>Method: Formula</summary><p>14 · 15 · 29/6 = 1015.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100 + 121 + 144 + 169 + 196 = 1015.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem x24.</b> How many binary strings of length 8 contain no two consecutive 1s?</p><details><summary>Hint</summary>Condition on the last symbol.</details><details><summary>Answer</summary>55</details>
+<details><summary>Method: Recurrence</summary><p>aₙ = aₙ₋₁ + aₙ₋₂ with a₁ = 2, a₂ = 3: 2, 3, 5, 8, 13, 21, 34, 55, so a_8 = 55.</p></details>
+<details><summary>Method: Fibonacci</summary><p>aₙ = F_{n+2}, so a_8 = F_10 = 55.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>
+<div class=p><p><b>Problem x25.</b> A staircase has 13 steps and you climb 1 or 2 steps at a time. How many ways are there to climb it?</p><details><summary>Hint</summary>Consider the last move.</details><details><summary>Answer</summary>377</details>
+<details><summary>Method: Recurrence</summary><p>Ways(n) = Ways(n − 1) + Ways(n − 2): 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, so 377 ways.</p></details>
+<details><summary>Method: By number of 2-steps</summary><p>With j two-steps there are C(13 − j, j) orders; summing over j gives 377.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 1-2</p></div>

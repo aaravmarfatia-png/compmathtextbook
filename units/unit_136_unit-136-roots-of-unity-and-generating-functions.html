@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 136</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 136: Unit 136: Roots of unity and generating functions</h1><p class=ref>Book: Andreescu &amp; Dospinescu, Straight from the Book; Gelca &amp; Andreescu, Putnam and Beyond (25 problems)<br>Andreescu &amp; Dospinescu, Straight from the Book, ch. 7 (roots of unity, finite Fourier analysis) and ch. 8 (formal series); Gelca &amp; Andreescu 6.2.2 (generating functions).</p>
+<h2>Reading</h2>
+<h3>1. Roots of unity as filters</h3><p>If ω = e^(2πi/3) then 1 + ω + ω² = 0, so (f(1) + f(ω) + f(ω²))/3 keeps exactly the terms of a polynomial f whose exponents are multiples of 3. For f(t) = (1 + t)⁶ this gives the number of subsets of a 6-set with size divisible by 3: (64 + 2cos(2π))/3 = 22 and directly C(6,0) + C(6,3) + C(6,6) = 1 + 20 + 1 = 22 ✓.</p><p>For 4 classes use 1, i, −1, −i. Subsets of an 8-set of size ≡ 1 mod 4: C(8,1) + C(8,5) = 8 + 56 = 64 ✓.</p><details class="try"><summary>Try it<p>How many subsets of a 6-set have size divisible by 3?</p><p><b>Answer.</b> 22.</p></details><details class="try"><summary>Try it<p>How many subsets of an 8-set have size ≡ 1 mod 4?</p><p><b>Answer.</b> 64.</p></details>
+<h3>2. Generating functions for counting</h3><p>The coefficient of xⁿ in a product of factors counts ways to choose terms with exponents adding to n. Making change from 1-, 2-, 5-cent coins uses 1/((1 − x)(1 − x²)(1 − x⁵)); for 10 cents the answer is 10. Dice sums come from (x + … + x⁶)ᵏ; two dice make 7 in 6 ways. Cyclotomic fact: Π(1 − ζᵏ) = n, because 1 + x + … + xⁿ⁻¹ = Π(x − ζᵏ).</p><details class="try"><summary>Try it<p>Ways to total 7 with two dice (ordered)?</p><p><b>Answer.</b> 6.</p></details><details class="try"><summary>Try it<p>Number of non-negative solutions of a + b + c = 4?</p><p><b>Answer.</b> 15.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> How many subsets of {1,…,12} have a size divisible by 3? <b>Solution.</b> The count is (2¹² + 2cos(12π/3))/3 = (4096 + 2)/3 = 1366.</p><p><b>Check.</b> C(12,0) + C(12,3) + C(12,6) + C(12,9) + C(12,12) = 1 + 220 + 924 + 220 + 1 = 1366 ✓.</p>
+<h3>4. In the books</h3><p><b>Straight from the Book, ch. 7.</b> The central idea is that a congruence between integers can be written as a sum of powers of a root of unity, which is exactly the roots-of-unity filter used in this unit. Addendum 7.A develops finite Fourier analysis, up to Gauss sums and the Pólya–Vinogradov inequality.</p><p><b>Ch. 8 (&ldquo;Formal Series Revisited&rdquo;).</b> Sections 8.1 to 8.4 cover counting problems, proving identities, recurrence relations and additive properties with generating functions; the problems include Catalan's problem and counting irreducible polynomials of fixed degree mod p. Addendum 8.A proves Lagrange's inversion theorem, with Cayley's tree formula as an application.</p><p><b>Honest note.</b> These chapters go well beyond a first unit. My 25 problems are my own examples of the filter and the coefficient-extraction idea.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> How many subsets of a set of 6 elements have a size divisible by 3?</p><details><summary>Hint</summary>Add the three cube-root-of-unity values of (1 + t)^6.</details><details><summary>Answer</summary>22</details>
+<details><summary>Method: Roots of unity filter</summary><p>The count is ((1+1)^6 + (1+ω)^6 + (1+ω²)^6)/3 = (2^6 + 2cos(6π/3))/3 = 22.</p></details>
+<details><summary>Method: Recurrence</summary><p>Track the number of subsets of each size class mod 3 as elements are added; after 6 elements the class 0 count is 22.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> How many subsets of a set of 9 elements have a size divisible by 3?</p><details><summary>Hint</summary>Add the three cube-root-of-unity values of (1 + t)^9.</details><details><summary>Answer</summary>170</details>
+<details><summary>Method: Roots of unity filter</summary><p>The count is ((1+1)^9 + (1+ω)^9 + (1+ω²)^9)/3 = (2^9 + 2cos(9π/3))/3 = 170.</p></details>
+<details><summary>Method: Recurrence</summary><p>Track the number of subsets of each size class mod 3 as elements are added; after 9 elements the class 0 count is 170.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> How many subsets of a set of 12 elements have a size divisible by 3?</p><details><summary>Hint</summary>Add the three cube-root-of-unity values of (1 + t)^12.</details><details><summary>Answer</summary>1366</details>
+<details><summary>Method: Roots of unity filter</summary><p>The count is ((1+1)^12 + (1+ω)^12 + (1+ω²)^12)/3 = (2^12 + 2cos(12π/3))/3 = 1366.</p></details>
+<details><summary>Method: Recurrence</summary><p>Track the number of subsets of each size class mod 3 as elements are added; after 12 elements the class 0 count is 1366.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> How many subsets of a set of 15 elements have a size divisible by 3?</p><details><summary>Hint</summary>Add the three cube-root-of-unity values of (1 + t)^15.</details><details><summary>Answer</summary>10922</details>
+<details><summary>Method: Roots of unity filter</summary><p>The count is ((1+1)^15 + (1+ω)^15 + (1+ω²)^15)/3 = (2^15 + 2cos(15π/3))/3 = 10922.</p></details>
+<details><summary>Method: Recurrence</summary><p>Track the number of subsets of each size class mod 3 as elements are added; after 15 elements the class 0 count is 10922.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> Find the coefficient of x^4 in (1 + x + x²)^4.</p><details><summary>Hint</summary>Choose how many factors give x² and how many give x.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: Counting</summary><p>Choose j factors to give x² and k − 2j to give x: Σ C(4,j)·C(4−j,4−2j) = 19.</p></details>
+<details><summary>Method: Multiply out</summary><p>Multiplying the polynomial by itself 3 times gives the x^4 coefficient 19.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> Find the coefficient of x^5 in (1 + x + x²)^5.</p><details><summary>Hint</summary>Choose how many factors give x² and how many give x.</details><details><summary>Answer</summary>51</details>
+<details><summary>Method: Counting</summary><p>Choose j factors to give x² and k − 2j to give x: Σ C(5,j)·C(5−j,5−2j) = 51.</p></details>
+<details><summary>Method: Multiply out</summary><p>Multiplying the polynomial by itself 4 times gives the x^5 coefficient 51.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> Find the coefficient of x^6 in (1 + x + x²)^6.</p><details><summary>Hint</summary>Choose how many factors give x² and how many give x.</details><details><summary>Answer</summary>141</details>
+<details><summary>Method: Counting</summary><p>Choose j factors to give x² and k − 2j to give x: Σ C(6,j)·C(6−j,6−2j) = 141.</p></details>
+<details><summary>Method: Multiply out</summary><p>Multiplying the polynomial by itself 5 times gives the x^6 coefficient 141.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> Find the coefficient of x^3 in (1 + x + x²)^5.</p><details><summary>Hint</summary>Choose how many factors give x² and how many give x.</details><details><summary>Answer</summary>30</details>
+<details><summary>Method: Counting</summary><p>Choose j factors to give x² and k − 2j to give x: Σ C(5,j)·C(5−j,3−2j) = 30.</p></details>
+<details><summary>Method: Multiply out</summary><p>Multiplying the polynomial by itself 4 times gives the x^3 coefficient 30.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> In how many ways can 10 cents be made from 1-, 2- and 5-cent coins (order does not matter)?</p><details><summary>Hint</summary>Fix the number of 5-cent coins first.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Case on 5-cent coins</summary><p>If i fives are used, the rest is paid with 1s and 2s in ⌊(10 − 5i)/2⌋ + 1 ways. Summing over i gives 10.</p></details>
+<details><summary>Method: Generating function</summary><p>The coefficient of x^10 in 1/((1−x)(1−x²)(1−x⁵)) is 10.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> In how many ways can 12 cents be made from 1-, 2- and 5-cent coins (order does not matter)?</p><details><summary>Hint</summary>Fix the number of 5-cent coins first.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Case on 5-cent coins</summary><p>If i fives are used, the rest is paid with 1s and 2s in ⌊(12 − 5i)/2⌋ + 1 ways. Summing over i gives 13.</p></details>
+<details><summary>Method: Generating function</summary><p>The coefficient of x^12 in 1/((1−x)(1−x²)(1−x⁵)) is 13.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> In how many ways can 15 cents be made from 1-, 2- and 5-cent coins (order does not matter)?</p><details><summary>Hint</summary>Fix the number of 5-cent coins first.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: Case on 5-cent coins</summary><p>If i fives are used, the rest is paid with 1s and 2s in ⌊(15 − 5i)/2⌋ + 1 ways. Summing over i gives 18.</p></details>
+<details><summary>Method: Generating function</summary><p>The coefficient of x^15 in 1/((1−x)(1−x²)(1−x⁵)) is 18.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> In how many ways can 20 cents be made from 1-, 2- and 5-cent coins (order does not matter)?</p><details><summary>Hint</summary>Fix the number of 5-cent coins first.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Case on 5-cent coins</summary><p>If i fives are used, the rest is paid with 1s and 2s in ⌊(20 − 5i)/2⌋ + 1 ways. Summing over i gives 29.</p></details>
+<details><summary>Method: Generating function</summary><p>The coefficient of x^20 in 1/((1−x)(1−x²)(1−x⁵)) is 29.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> Let ζ = e^(2πi/5). Find |(1 − ζ)(1 − ζ²)…(1 − ζ^4)|.</p><details><summary>Hint</summary>The ζᵏ (k = 1,…,4) are the roots of 1 + x + … + x^4.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Cyclotomic factorisation</summary><p>1 + x + … + x^4 = Π(x − ζᵏ); setting x = 1 gives the product = 5.</p></details>
+<details><summary>Method: Numerical check</summary><p>Multiplying the 4 moduli |1 − ζᵏ| = 2 sin(kπ/5) gives 5.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> Let ζ = e^(2πi/8). Find |(1 − ζ)(1 − ζ²)…(1 − ζ^7)|.</p><details><summary>Hint</summary>The ζᵏ (k = 1,…,7) are the roots of 1 + x + … + x^7.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Cyclotomic factorisation</summary><p>1 + x + … + x^7 = Π(x − ζᵏ); setting x = 1 gives the product = 8.</p></details>
+<details><summary>Method: Numerical check</summary><p>Multiplying the 7 moduli |1 − ζᵏ| = 2 sin(kπ/8) gives 8.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> Let ζ = e^(2πi/12). Find |(1 − ζ)(1 − ζ²)…(1 − ζ^11)|.</p><details><summary>Hint</summary>The ζᵏ (k = 1,…,11) are the roots of 1 + x + … + x^11.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Cyclotomic factorisation</summary><p>1 + x + … + x^11 = Π(x − ζᵏ); setting x = 1 gives the product = 12.</p></details>
+<details><summary>Method: Numerical check</summary><p>Multiplying the 11 moduli |1 − ζᵏ| = 2 sin(kπ/12) gives 12.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> In how many ways can four ordered dice show a total of 10?</p><details><summary>Hint</summary>Find the coefficient of x^10 in (x + x² + … + x⁶)⁴.</details><details><summary>Answer</summary>80</details>
+<details><summary>Method: Generating function</summary><p>The coefficient of x^10 in (x + … + x⁶)⁴ is 80.</p></details>
+<details><summary>Method: Inclusion–exclusion</summary><p>Σ(−1)ʲ C(4,j) C(10 − 6j − 1, 3) = 80.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> In how many ways can four ordered dice show a total of 12?</p><details><summary>Hint</summary>Find the coefficient of x^12 in (x + x² + … + x⁶)⁴.</details><details><summary>Answer</summary>125</details>
+<details><summary>Method: Generating function</summary><p>The coefficient of x^12 in (x + … + x⁶)⁴ is 125.</p></details>
+<details><summary>Method: Inclusion–exclusion</summary><p>Σ(−1)ʲ C(4,j) C(12 − 6j − 1, 3) = 125.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> In how many ways can four ordered dice show a total of 14?</p><details><summary>Hint</summary>Find the coefficient of x^14 in (x + x² + … + x⁶)⁴.</details><details><summary>Answer</summary>146</details>
+<details><summary>Method: Generating function</summary><p>The coefficient of x^14 in (x + … + x⁶)⁴ is 146.</p></details>
+<details><summary>Method: Inclusion–exclusion</summary><p>Σ(−1)ʲ C(4,j) C(14 − 6j − 1, 3) = 146.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> In how many ways can four ordered dice show a total of 16?</p><details><summary>Hint</summary>Find the coefficient of x^16 in (x + x² + … + x⁶)⁴.</details><details><summary>Answer</summary>125</details>
+<details><summary>Method: Generating function</summary><p>The coefficient of x^16 in (x + … + x⁶)⁴ is 125.</p></details>
+<details><summary>Method: Inclusion–exclusion</summary><p>Σ(−1)ʲ C(4,j) C(16 − 6j − 1, 3) = 125.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> How many subsets of a set of 8 elements have size congruent to 1 mod 4?</p><details><summary>Hint</summary>Use the four fourth roots of unity as a filter.</details><details><summary>Answer</summary>64</details>
+<details><summary>Method: Roots of unity filter</summary><p>(1/4)Σ i^(−j)(1 + i^j)^8 over j = 0..3 = 64.</p></details>
+<details><summary>Method: Residue recurrence</summary><p>Update the four class counts (a₀,a₁,a₂,a₃) one element at a time; the class 1 count after 8 elements is 64.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> How many subsets of a set of 10 elements have size congruent to 1 mod 4?</p><details><summary>Hint</summary>Use the four fourth roots of unity as a filter.</details><details><summary>Answer</summary>272</details>
+<details><summary>Method: Roots of unity filter</summary><p>(1/4)Σ i^(−j)(1 + i^j)^10 over j = 0..3 = 272.</p></details>
+<details><summary>Method: Residue recurrence</summary><p>Update the four class counts (a₀,a₁,a₂,a₃) one element at a time; the class 1 count after 10 elements is 272.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> How many subsets of a set of 12 elements have size congruent to 1 mod 4?</p><details><summary>Hint</summary>Use the four fourth roots of unity as a filter.</details><details><summary>Answer</summary>1024</details>
+<details><summary>Method: Roots of unity filter</summary><p>(1/4)Σ i^(−j)(1 + i^j)^12 over j = 0..3 = 1024.</p></details>
+<details><summary>Method: Residue recurrence</summary><p>Update the four class counts (a₀,a₁,a₂,a₃) one element at a time; the class 1 count after 12 elements is 1024.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> How many non-negative integer triples (a, b, c) have a + b + c = 6?</p><details><summary>Hint</summary>Use stars and bars, or fix a first.</details><details><summary>Answer</summary>28</details>
+<details><summary>Method: Stars and bars</summary><p>C(6 + 2, 2) = 28.</p></details>
+<details><summary>Method: Fix a</summary><p>For each a from 0 to 6 there are 6 − a + 1 pairs (b, c); the sum is 28.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> How many non-negative integer triples (a, b, c) have a + b + c = 9?</p><details><summary>Hint</summary>Use stars and bars, or fix a first.</details><details><summary>Answer</summary>55</details>
+<details><summary>Method: Stars and bars</summary><p>C(9 + 2, 2) = 55.</p></details>
+<details><summary>Method: Fix a</summary><p>For each a from 0 to 9 there are 9 − a + 1 pairs (b, c); the sum is 55.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> How many non-negative integer triples (a, b, c) have a + b + c = 12?</p><details><summary>Hint</summary>Use stars and bars, or fix a first.</details><details><summary>Answer</summary>91</details>
+<details><summary>Method: Stars and bars</summary><p>C(12 + 2, 2) = 91.</p></details>
+<details><summary>Method: Fix a</summary><p>For each a from 0 to 12 there are 12 − a + 1 pairs (b, c); the sum is 91.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 7–8, Gelca &amp; Andreescu 6.2.2 (original problem)</p></div>

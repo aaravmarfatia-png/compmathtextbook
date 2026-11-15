@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 87</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 87: Unit 87: Harmonic division, cross ratio and poles</h1><p class=ref>Book: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10 (25 problems)<br>Chen, Euclidean Geometry in Mathematical Olympiads, chapters 9-10 (projective ideas: cross ratios and harmonic bundles) in coordinates.</p>
+<h2>Reading</h2>
+<h3>1. Cross ratio and harmonic division</h3><p>For four collinear points A, B, C, D, the <b>cross ratio</b> is (A, B; C, D) = (AC/BC) ÷ (AD/BD), with signed lengths. Projections preserve it. When the cross ratio is −1, we say C and D <b>divide AB harmonically</b>: C is inside the segment AB and D is outside, with AC/CB = AD/DB.</p><p><b>Worked example.</b> With A = 0 and B = 3 on a number line, the harmonic conjugate of C = 1 is D with AC/CB = 1/2, so AD/DB = 1/2 with D outside: D = −3 (AD = 3, DB = 6). Check cross ratio with signed lengths: AC = 1, BC = −2, AD = 3, BD = 6: (1/(−2)) ÷ (3/6) = (−1/2) ÷ (1/2) = −1 ✓.</p><p><b>Harmonic mean connection.</b> If C and D divide AB harmonically, the distance AB relates to AC and AD by 2/AB = 1/AC + 1/AD with signed distances from A. In the example above AB = 3, AC = 1 and AD = −3, and 1/1 + 1/(−3) = 2/3 = 2/3 ✓.</p>
+<h3>2. Apollonius circles and harmonic pencils</h3><p>The locus of points P whose distances to two fixed points A and B are in a constant ratio k ≠ 1, PA/PB = k, is a circle (the <b>Apollonius circle</b>). Its diameter is the segment between the two points dividing AB internally and externally in the ratio k, and those two points are harmonic conjugates with respect to A and B.</p><p><b>Worked example.</b> A = (0, 0), B = (6, 0), k = 2 (PA = 2PB). Points on the line: internal division x with x/(6 − x) = 2, x = 4; external, x/(x − 6) = 2, x = 12. The circle has diameter from (4, 0) to (12, 0): centre (8, 0), radius 4. Check the point (8, 4): PA = √(64 + 16) = √80, PB = √(4 + 16) = √20 and √80/√20 = 2 ✓.</p><p><b>Angle bisectors.</b> The internal and external bisectors of the angle at P meet line AB at the points dividing AB harmonically, which is why they lie on the Apollonius circle.</p>
+<h3>3. Poles and polars</h3><p>For a circle with centre O and radius r, the <b>polar</b> of a point P (not O) is the line perpendicular to OP at the point P′ with OP · OP′ = r² (the inverse of P). In coordinates, for the circle x² + y² = r², the polar of (x₀, y₀) is x x₀ + y y₀ = r². If P is outside the circle, its polar is the line through the two points of tangency of the tangents from P.</p><p><b>Worked example.</b> For x² + y² = 4 and P = (4, 0): the polar is 4x = 4, i.e. x = 1. The tangent points have x = 1 and y² = 3: (1, ±√3). Check: the tangent from (4, 0) to (1, √3) has direction (−3, √3), and the radius to (1, √3) is (1, √3): dot product −3 + 3 = 0 ✓.</p><p><b>La Hire's theorem.</b> A point Q lies on the polar of P iff P lies on the polar of Q. Also, the polar of a point is the set of harmonic conjugates: for a line through P meeting the circle at A and B, the point Q on that line with (A, B; P, Q) = −1 lies on the polar of P.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Using unsigned lengths in the cross ratio. Confusing inversion with polarity (the polar is a line; the inverse is a point). Taking the polar line through the wrong point.</p><p><b>Checks.</b> Test the harmonic relation numerically.</p><p><b>Practice.</b> Put the points on a number line and use coordinates.</p>
+<h3>Worked examples with Try-its: Harmonic division</h3><p>Four collinear points A, B, C, D have <b>cross ratio</b> (A, B; C, D) = (AC · BD)/(BC · AD) using signed lengths. The pair C, D <b>divides AB harmonically</b> when this equals −1, which means C divides AB internally and D externally in the same ratio. Example: A = 0, B = 6, C = 2, D = −6; then AC/CB = 2/4 and AD/DB = 6/12 (taken externally), and the cross ratio is (2 · (−12))/((−4)(−6)) = −1.</p><details class="try"><summary>Try it<p>Find D so that A = 0, B = 8, C = 6 and D are harmonic (C inside AB).</p><p><b>Answer.</b> AC/CB = 6/2 = 3; D outside with AD/DB = 3: D = 12 (AD = 12, DB = 4).</p></details>
+<h3>Worked examples with Try-its: The angle bisector connection</h3><p>In triangle ABC the feet of the internal and external bisectors from A cut BC harmonically. With AB = 3, AC = 6 and BC = 9 (placing B = 0, C = 9), the internal foot is at 3 and the external foot at −9, and (B, C; 3, −9) = −1. This explains why the Apollonius circle (all points whose distances to B and C are in a fixed ratio) has the harmonic pair as a diameter.</p><details class="try"><summary>Try it<p>Triangle with AB = 4, AC = 12, BC = 8: where does the internal bisector from A meet BC (distance from B)?</p><p><b>Answer.</b> BD = 8 · 4/16 = 2.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Show that if C and D divide AB harmonically and M is the midpoint of AB, then MC · MD = MA². <b>Check with numbers.</b> A = 0, B = 6, C = 2, D = −6, M = 3: MC = 1, MD = 9, product 9 = 3². ✓</p><p><b>Reflection.</b> The proof sets M as the origin and uses the coordinates a, −a, c, d with cd = a², the standard way to prove harmonic facts.</p>
+<h3>More worked examples: Worked examples</h3><p>With A = 0, B = 4 and C = 1, the harmonic conjugate D satisfies AD/DB = AC/CB = 1/3 with D outside the segment, so D = −2 (AD = 2 and DB = 6). The cross ratio (A, B; C, D) = ((1 − 0)(−2 − 4))/((1 − 4)(−2 − 0)) = −6/6 = −1. The polar of the point (2, 0) with respect to the unit circle is x = 1/2.</p><details class="try"><summary>Try it<p>Find the harmonic conjugate of the midpoint of AB with respect to A and B.</p><p><b>Answer.</b> The point at infinity on line AB.</p></details><details class="try"><summary>Try it<p>A = 0, B = 6, C = 4: find D with (A, B; C, D) = −1.</p><p><b>Answer.</b> AC/CB = 4/2 = 2, so D = 12.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Show that if (A, B; C, D) = −1 then 2/AB = 1/AC + 1/AD in signed lengths from A. <b>Check with numbers.</b> A = 0, B = 6, C = 4, D = 12: 2/6 = 1/3 and 1/4 + 1/12 = 1/3 ✓.</p><p><b>Reflection.</b> The distance AB is the harmonic mean of AC and AD.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Points A, B, C, D lie at 0, 6, 2 and d on a line, and (A, B; C, D) = −1. Find d.</p><details><summary>Hint</summary>Use the cross ratio formula.</details><details><summary>Answer</summary>-6</details>
+<details><summary>Method: Formula</summary><p>(2)(d − 6)/((−4)(d)) = −1 gives 2d − 12 = 4d, so d = −6.</p></details>
+<details><summary>Method: Ratios</summary><p>The internal point C divides AB in ratio AC:CB = 2:4 = 1:2, so the harmonic conjugate D divides AB externally in the same ratio: DA:DB = 1:2, which puts D at −6, 6 units from A.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem p2.</b> Points A, B, C, D are at 0, 1, 3, 7. Compute (A, B; C, D) as a fraction.</p><details><summary>Hint</summary>((c − a)(d − b))/((c − b)(d − a)).</details><details><summary>Answer</summary>9/7</details>
+<details><summary>Method: Formula</summary><p>(3 · 6)/(2 · 7) = 18/14 = 9/7.</p></details>
+<details><summary>Method: Ratios</summary><p>(AC/BC)/(AD/BD) = (3/2)/(7/6) = 9/7.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem p3.</b> Find the harmonic mean of 3 and 6.</p><details><summary>Hint</summary>2ab/(a + b).</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Formula</summary><p>36/9 = 4.</p></details>
+<details><summary>Method: Reciprocals</summary><p>The reciprocals 1/3 and 1/6 have mean 1/4, so the harmonic mean is 4.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem p4.</b> Find the polar of the point (10, 0) with respect to x² + y² = 25. It is a vertical line x = k. Find k as a fraction.</p><details><summary>Hint</summary>px + qy = r².</details><details><summary>Answer</summary>5/2</details>
+<details><summary>Method: Rule</summary><p>10x = 25, so x = 5/2.</p></details>
+<details><summary>Method: Inversion</summary><p>The polar meets the x-axis at the inverse of (10, 0): 25/10 = 5/2.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem p5.</b> Find the polar of (0, 20) with respect to x² + y² = 25. It is y = k. Find k as a fraction.</p><details><summary>Hint</summary>px + qy = r².</details><details><summary>Answer</summary>5/4</details>
+<details><summary>Method: Rule</summary><p>20y = 25, so y = 5/4.</p></details>
+<details><summary>Method: Inversion</summary><p>The inverse of (0, 20) in the circle is (0, 25/20) = (0, 5/4).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem p6.</b> If (A, B; C, D) = 3/2, what is (B, A; C, D)?</p><details><summary>Hint</summary>Swapping the first two points inverts the cross ratio.</details><details><summary>Answer</summary>2/3</details>
+<details><summary>Method: Formula</summary><p>Swapping A and B swaps numerator and denominator, giving 2/3.</p></details>
+<details><summary>Method: Check</summary><p>With a = 0, b = 1, c = 3, d = 7 we got 9/7, and swapping gives (3 − 1)(7 − 0)/((3 − 0)(7 − 1)) = 14/18 = 7/9, the reciprocal.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem p7.</b> Triangle ABC has AB = 6, AC = 3 and BC = 7. The internal bisector from A meets BC at D and the external bisector meets line BC at E beyond C. Find CE.</p><details><summary>Hint</summary>EB/EC = AB/AC = 2.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Ratio</summary><p>EB/EC = 2 and EB = EC + 7, so EC = 7.</p></details>
+<details><summary>Method: Harmonic</summary><p>(B, C; D, E) is harmonic. D has BD = 14/3, DC = 7/3, and E satisfies EB/EC = 2, which gives EC = 7.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem p8.</b> Four lines in general position (no two parallel, no three through a point) meet in how many points?</p><details><summary>Hint</summary>Choose 2 lines.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Choose</summary><p>C(4,2) = 6.</p></details>
+<details><summary>Method: Complete quadrilateral</summary><p>The six vertices form 3 pairs of opposite vertices.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem p9.</b> A complete quadrangle has 4 points, no three collinear. How many diagonal points does it have (the intersections of opposite sides)?</p><details><summary>Hint</summary>Pair the 6 lines into opposite pairs.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Pairing</summary><p>The 6 lines through pairs of the 4 points split into 3 opposite pairs, so there are 3 diagonal points.</p></details>
+<details><summary>Method: Check</summary><p>For a square's four vertices, the diagonal points are the centre and two points at infinity.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem p10.</b> Points A, B, C, D lie on a line at positions 0, 2, 3, 6. Find the cross ratio (A, B; C, D) = (AC · BD)/(AD · BC).</p><details><summary>Hint</summary>Use signed distances.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Compute</summary><p>AC = 3, BD = 4, AD = 6, BC = 1, giving 12/6 = 2.</p></details>
+<details><summary>Method: Check</summary><p>The cross ratio stays 2 if the line is shifted or rescaled.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem p11.</b> Find the harmonic conjugate D of C = 1 with respect to A = 0 and B = 3, i.e. (A, B; C, D) = −1. Give the position of D.</p><details><summary>Hint</summary>AC/CB = −AD/DB.</details><details><summary>Answer</summary>-3</details>
+<details><summary>Method: Ratio</summary><p>AC/CB = 1/2, so AD/DB = −1/2: D = −3 gives AD = −3 and DB = 6.</p></details>
+<details><summary>Method: Check</summary><p>The ratios are AC/CB = 1/2 and AD/DB = −3/6 = −1/2, and their quotient is −1, as required for a harmonic conjugate.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem p12.</b> In triangle ABC, AB = 6, AC = 3 and BC = 6. The external bisector from A meets line BC at D′. Find BD′.</p><details><summary>Hint</summary>BD′/D′C = AB/AC = 2, with D′ beyond C.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Ratio</summary><p>BD′ = 2 · D′C and BD′ = D′C + 6, so D′C = 6 and BD′ = 12.</p></details>
+<details><summary>Method: Harmonic</summary><p>The internal foot D has BD = 4, and (B, C; D, D′) is harmonic: BD/DC = 2 = BD′/D′C.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem p13.</b> A = 0, B = 8 and C = 2 lie on a line. Find the position of the harmonic conjugate D of C with respect to A and B.</p><details><summary>Hint</summary>AC/CB = 1/3.</details><details><summary>Answer</summary>-4</details>
+<details><summary>Method: Ratio</summary><p>AD/DB = −1/3 gives D = −4, since AD = −4 and DB = 12.</p></details>
+<details><summary>Method: Check</summary><p>(AC/CB)/(AD/DB) = (1/3)/(−1/3) = −1.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem p14.</b> If (A, B; C, D) = 2, find (A, B; D, C).</p><details><summary>Hint</summary>Swapping C and D inverts the cross ratio.</details><details><summary>Answer</summary>1/2</details>
+<details><summary>Method: Rule</summary><p>(A, B; D, C) = 1/(A, B; C, D) = 1/2.</p></details>
+<details><summary>Method: Example</summary><p>With 0, 2, 3, 6 the swap gives (AD · BC)/(AC · BD) = 6 · 1/(3 · 4) = 1/2.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem p15.</b> A circle has radius 6 and a point P lies 10 from its centre. How far from the centre is the polar line of P?</p><details><summary>Hint</summary>d = r²/OP.</details><details><summary>Answer</summary>18/5</details>
+<details><summary>Method: Formula</summary><p>36/10 = 18/5.</p></details>
+<details><summary>Method: Inversion</summary><p>The polar passes through the inverse of P, at distance 36/10, perpendicular to OP.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem p16.</b> Points A = 0 and B = 12 are fixed, and C = 4. Find the harmonic conjugate of C with respect to A and B.</p><details><summary>Hint</summary>AC/CB = 1/2.</details><details><summary>Answer</summary>-12</details>
+<details><summary>Method: Ratio</summary><p>AD/DB = −1/2 so D = −12.</p></details>
+<details><summary>Method: Check</summary><p>AD = −12 and DB = 24, ratio −1/2.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem p17.</b> Find the harmonic mean of 6 and 12.</p><details><summary>Hint</summary>2ab/(a + b).</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Formula</summary><p>2 · 72/18 = 8.</p></details>
+<details><summary>Method: Reciprocals</summary><p>1/6 and 1/12 average to 1/8.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem x18.</b> Find the sum of the coordinates of the midpoint of (0, 9) and (12, -5).</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Average</summary><p>The midpoint is (6, 2), with sum 8.</p></details>
+<details><summary>Method: Vector</summary><p>Start at (0, 9) and move half the way to (12, -5): (0 + 6, 9 + -7) = (6, 2).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem x19.</b> Two similar triangles have corresponding sides in the ratio 3 : 7. The smaller has area 18. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square of the ratio.</details><details><summary>Answer</summary>98</details>
+<details><summary>Method: Area ratio</summary><p>The areas are in the ratio 9 : 49, so the larger area is 18 · 49/9 = 98.</p></details>
+<details><summary>Method: Scale factor</summary><p>The linear factor is 7/3, so the area factor is 49/9; 18 · 49/9 = 98.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem x20.</b> Find the distance between (2, -1) and (9, 23).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Formula</summary><p>√(7² + 24²) = √625 = 25.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 7 and 24 form a right triangle with hypotenuse 25 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem x21.</b> Find the sum of the coordinates of the midpoint of (6, -8) and (2, 14).</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Average</summary><p>The midpoint is (4, 3), with sum 7.</p></details>
+<details><summary>Method: Vector</summary><p>Start at (6, -8) and move half the way to (2, 14): (6 + -2, -8 + 11) = (4, 3).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem x22.</b> Two similar triangles have corresponding sides in the ratio 3 : 4. The smaller has area 27. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square of the ratio.</details><details><summary>Answer</summary>48</details>
+<details><summary>Method: Area ratio</summary><p>The areas are in the ratio 9 : 16, so the larger area is 27 · 16/9 = 48.</p></details>
+<details><summary>Method: Scale factor</summary><p>The linear factor is 4/3, so the area factor is 16/9; 27 · 16/9 = 48.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem x23.</b> Find the distance between (-4, -2) and (16, 19).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Formula</summary><p>√(20² + 21²) = √841 = 29.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 20 and 21 form a right triangle with hypotenuse 29 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem x24.</b> Find the sum of the coordinates of the midpoint of (-7, 3) and (5, 9).</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Average</summary><p>The midpoint is (-1, 6), with sum 5.</p></details>
+<details><summary>Method: Vector</summary><p>Start at (-7, 3) and move half the way to (5, 9): (-7 + 6, 3 + 3) = (-1, 6).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>
+<div class=p><p><b>Problem x25.</b> Two similar triangles have corresponding sides in the ratio 4 : 9. The smaller has area 16. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square of the ratio.</details><details><summary>Answer</summary>81</details>
+<details><summary>Method: Area ratio</summary><p>The areas are in the ratio 16 : 81, so the larger area is 16 · 81/16 = 81.</p></details>
+<details><summary>Method: Scale factor</summary><p>The linear factor is 9/4, so the area factor is 81/16; 16 · 81/16 = 81.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 9-10</p></div>

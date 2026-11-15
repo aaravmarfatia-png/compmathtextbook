@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 122</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 122: Unit 122: Quadratic residues, Wilson and Fermat</h1><p class=ref>Book: AoPS Volume 2, ch. 23 (Number Theory) (25 problems)<br>AoPS Volume 2, chapter 23 (Number Theory): division in congruences, linear and quadratic congruences, Fermat&#x27;s little theorem and Wilson&#x27;s theorem.</p>
+<h2>Reading</h2>
+<h3>1. Fermat's little theorem</h3><p>If p is prime and p does not divide a, then a^{p−1} ≡ 1 (mod p). Consequently a^p ≡ a (mod p) for every integer a. It lets you reduce huge exponents: reduce the exponent mod p − 1.</p><p><b>Worked example 1.</b> 3¹⁰⁰ mod 7: 3⁶ ≡ 1, 100 = 6 × 16 + 4, so 3¹⁰⁰ ≡ 3⁴ = 81 ≡ 4 (mod 7). <b>Example 2.</b> 2¹⁰⁰ mod 13: 2¹² ≡ 1 and 100 = 12 × 8 + 4, so ≡ 16 ≡ 3. <b>Example 3.</b> 7²²² mod 5: 7 ≡ 2, 2⁴ ≡ 1, 222 = 4 × 55 + 2, so ≡ 4.</p>
+<h3>2. Wilson's theorem</h3><p>For a prime p, (p − 1)! ≡ −1 (mod p). Conversely, if (n − 1)! ≡ −1 (mod n) then n is prime. The reason: each residue other than 1 and p − 1 pairs with its inverse, and the product of 1 and p − 1 is p − 1 ≡ −1.</p><p><b>Worked example.</b> p = 7: 6! = 720 = 7 × 103 − 1, so 6! ≡ −1 ✓. p = 5: 4! = 24 ≡ −1 mod 5 ✓.</p><p><b>Use.</b> Evaluate (p − 2)! ≡ 1 (mod p), since (p − 1)! = (p − 1)(p − 2)! ≡ −(p − 2)!.</p>
+<h3>3. Quadratic residues</h3><p>A number a is a <b>quadratic residue</b> mod p if x² ≡ a has a solution. For an odd prime p exactly (p − 1)/2 of the non-zero residues are quadratic residues. <b>Euler's criterion:</b> a is a residue iff a^{(p−1)/2} ≡ 1 (mod p); otherwise it is ≡ −1.</p><p><b>Worked example.</b> The squares mod 7 are 1, 4, 2 (from 1², 2², 3²): {1, 2, 4}. Mod 13: {1, 3, 4, 9, 10, 12}, six of them (13 − 1)/2 = 6 ✓. For p = 11: {1, 3, 4, 5, 9}; check Euler for a = 3: 3⁵ = 243 = 22 × 11 + 1 ≡ 1 ✓.</p><p><b>The number −1.</b> −1 is a residue mod p iff p ≡ 1 (mod 4). Mod 13 we have 5² = 25 ≡ −1 ✓, while mod 7 (7 ≡ 3 mod 4) −1 = 6 is not in {1, 2, 4}. This proves that x² + y² is never divisible by a prime p ≡ 3 mod 4 unless p divides both x and y.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Applying Fermat when p divides a. Reducing the exponent mod p instead of p − 1. Applying Wilson's theorem to composite numbers.</p><p><b>Checks.</b> Test with small primes (3, 5, 7).</p><p><b>Practice.</b> Make a table of squares mod p for p = 5, 7, 11, 13.</p>
+<h3>Worked examples with Try-its: Fermat and Wilson</h3><p><b>Fermat's little theorem:</b> if p is prime and p does not divide a then aᵖ⁻¹ ≡ 1 (mod p); for instance 2¹⁰ ≡ 1 (mod 11). So 3¹⁰⁰ mod 7: since 3⁶ ≡ 1, 3¹⁰⁰ = 3⁴ · (3⁶)¹⁶ ≡ 81 ≡ 4. <b>Wilson's theorem:</b> (p − 1)! ≡ −1 (mod p), so 10! ≡ −1 (mod 11), that is 10! leaves remainder 10.</p><details class="try"><summary>Try it<p>Find the remainder when 5¹⁰⁰ is divided by 13.</p><p><b>Answer.</b> 5¹² ≡ 1, and 100 = 8 · 12 + 4, so 5¹⁰⁰ ≡ 5⁴ = 625 = 48 · 13 + 1. The remainder is 1.</p></details>
+<h3>Worked examples with Try-its: Quadratic residues</h3><p>A number a is a <b>quadratic residue</b> mod p if x² ≡ a has a solution. Mod 7 the residues are 1, 2, 4. By Euler's criterion −1 is a residue exactly when p ≡ 1 (mod 4): mod 13 we have 5² = 25 ≡ −1. Half of the non-zero residues mod an odd prime are quadratic residues.</p><details class="try"><summary>Try it<p>Is 3 a quadratic residue mod 7?</p><p><b>Answer.</b> No: the residues are 1, 2, 4.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Show that x² + 1 is never divisible by 7. <b>Solution.</b> We would need x² ≡ −1 ≡ 6 (mod 7), but the squares mod 7 are only 0, 1, 2, 4.</p><p><b>Reflection.</b> Listing squares mod a small prime settles many such questions.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Fermat.</b> 2¹⁰⁰ ≡ 1 (mod 101) since 101 is prime. <b>Orders.</b> 3⁵ = 243 = 22 · 11 + 1, so 3 has order 5 modulo 11. <b>Residues.</b> The quadratic residues modulo 11 are 1, 3, 4, 5, 9. <b>Wilson.</b> 12! ≡ −1 (mod 13), so 12! leaves remainder 12.</p><details class="try"><summary>Try it<p>Is 5 a quadratic residue mod 11?</p><p><b>Answer.</b> Yes: 4² = 16 ≡ 5.</p></details><details class="try"><summary>Try it<p>Find 2²⁰²⁶ mod 7.</p><p><b>Answer.</b> 2³ ≡ 1 and 2026 ≡ 1 (mod 3), so the remainder is 2.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Show that p divides 2ᵖ − 2 for every prime p. <b>Solution.</b> For odd p, 2ᵖ⁻¹ ≡ 1 (mod p) by Fermat, so 2ᵖ ≡ 2. For p = 2 the number 2² − 2 = 2 is divisible by 2.</p><p><b>Check.</b> p = 5: 32 − 2 = 30 = 5 · 6 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> What is the remainder when 12! is divided by 13?</p><details><summary>Hint</summary>Wilson's theorem.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Wilson</summary><p>(13 − 1)! ≡ −1 ≡ 12 (mod 13).</p></details>
+<details><summary>Method: Pairing</summary><p>Each of 2, …, 11 pairs with its inverse and multiplies to 1, leaving 1 · 12 = 12.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem p2.</b> How many nonzero quadratic residues are there modulo 13?</p><details><summary>Hint</summary>(p − 1)/2.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Count</summary><p>(13 − 1)/2 = 6, namely 1, 3, 4, 9, 10, 12.</p></details>
+<details><summary>Method: List</summary><p>The squares of 1..6 are 1, 4, 9, 3, 12, 10.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem p3.</b> How many solutions x (mod 15) does x² ≡ 1 (mod 15) have?</p><details><summary>Hint</summary>Solve mod 3 and mod 5 and combine.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: CRT</summary><p>x² ≡ 1 mod 3 has x ≡ ±1 and mod 5 has x ≡ ±1, so there are 2 · 2 = 4 solutions: 1, 4, 11, 14.</p></details>
+<details><summary>Method: Check</summary><p>4² = 16 ≡ 1 and 11² = 121 ≡ 1 mod 15.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem p4.</b> Is 5 a quadratic residue mod 11? Answer 1 if yes and 0 if no.</p><details><summary>Hint</summary>Find x with x² ≡ 5.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Search</summary><p>4² = 16 ≡ 5 (mod 11), so yes.</p></details>
+<details><summary>Method: List</summary><p>The squares mod 11 are 1, 4, 9, 5, 3, and 5 is among them.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem p5.</b> Find the inverse of 7 modulo 31 (a number from 1 to 30).</p><details><summary>Hint</summary>Solve 7x ≡ 1.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Search</summary><p>7 · 9 = 63 = 2 · 31 + 1, so the inverse is 9.</p></details>
+<details><summary>Method: Euclid</summary><p>31 = 4 · 7 + 3, 7 = 2 · 3 + 1, so 1 = 7 − 2(31 − 4 · 7) = 9 · 7 − 2 · 31.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem p6.</b> What is the remainder when 3¹⁰⁰ is divided by 7?</p><details><summary>Hint</summary>The powers of 3 mod 7 repeat with period 6.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Fermat</summary><p>3⁶ ≡ 1 (mod 7), so 3¹⁰⁰ = 3⁹⁶ · 3⁴ ≡ 81 ≡ 4.</p></details>
+<details><summary>Method: Cycle</summary><p>3, 2, 6, 4, 5, 1 repeat, and 100 mod 6 = 4 gives the fourth term, 4.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem p7.</b> How many solutions x (mod 13) does x² ≡ −1 (mod 13) have?</p><details><summary>Hint</summary>13 ≡ 1 (mod 4).</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Count</summary><p>Since 13 ≡ 1 mod 4, −1 is a square and the solutions are x = 5 and x = 8: 2.</p></details>
+<details><summary>Method: Check</summary><p>25 + 1 = 26 = 2 · 13.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem p8.</b> What is the remainder when 5¹⁰⁰ is divided by 13?</p><details><summary>Hint</summary>5⁴ = 625 ≡ 1 (mod 13).</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Order</summary><p>625 = 48 · 13 + 1, so 5⁴ ≡ 1 and 5¹⁰⁰ = (5⁴)²⁵ ≡ 1.</p></details>
+<details><summary>Method: Fermat</summary><p>5¹² ≡ 1 and gcd(100, 12) = 4 gives 5⁴ ≡ 1 as the order divides 4.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem p9.</b> Find the smallest positive x with x ≡ 1 (mod 4), x ≡ 2 (mod 5) and x ≡ 3 (mod 7).</p><details><summary>Hint</summary>Chinese remainder theorem.</details><details><summary>Answer</summary>17</details>
+<details><summary>Method: Combine</summary><p>x ≡ 1 mod 4 and x ≡ 2 mod 5 gives x ≡ 17 mod 20. Then 17 + 20t ≡ 3 mod 7 gives 3 + 6t ≡ 3, so t ≡ 0 and x = 17.</p></details>
+<details><summary>Method: Check</summary><p>17 = 4 · 4 + 1 = 3 · 5 + 2 = 2 · 7 + 3.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem p10.</b> What is the remainder when 10! is divided by 11?</p><details><summary>Hint</summary>Wilson's theorem.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Wilson</summary><p>(p − 1)! ≡ −1 (mod p), so 10! ≡ −1 ≡ 10.</p></details>
+<details><summary>Method: Pairing</summary><p>Pair each number with its inverse mod 11; only 1 and 10 are self-paired, leaving 10.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem p11.</b> What is the remainder when 12! is divided by 13?</p><details><summary>Hint</summary>Wilson.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Wilson</summary><p>12! ≡ −1 ≡ 12 (mod 13).</p></details>
+<details><summary>Method: Check</summary><p>12! = 479001600 = 13 · 36846276 + 12.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem p12.</b> How many nonzero quadratic residues are there modulo 13?</p><details><summary>Hint</summary>(p − 1)/2.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Formula</summary><p>(13 − 1)/2 = 6.</p></details>
+<details><summary>Method: List</summary><p>1, 4, 9, 3, 12, 10 are the squares of 1 to 6.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem p13.</b> Find the smallest positive x with x² ≡ 5 (mod 11).</p><details><summary>Hint</summary>Test small values.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Test</summary><p>1, 4, 9, 16 ≡ 5, so x = 4.</p></details>
+<details><summary>Method: Other root</summary><p>The other root is 11 − 4 = 7.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem p14.</b> What is the remainder when 3¹⁰⁰ is divided by 7?</p><details><summary>Hint</summary>3⁶ ≡ 1.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Fermat</summary><p>100 ≡ 4 (mod 6), so 3¹⁰⁰ ≡ 3⁴ = 81 ≡ 4.</p></details>
+<details><summary>Method: Cycle</summary><p>3, 2, 6, 4, 5, 1 repeat mod 7, and the 4th entry is 4.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem p15.</b> What is the remainder when 6! is divided by 7?</p><details><summary>Hint</summary>Wilson.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Wilson</summary><p>6! ≡ −1 ≡ 6.</p></details>
+<details><summary>Method: Direct</summary><p>720 = 7 · 102 + 6.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem p16.</b> How many solutions x (mod 15) does x² ≡ 1 (mod 15) have?</p><details><summary>Hint</summary>Chinese remainder theorem.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: CRT</summary><p>x² ≡ 1 mod 3 and mod 5 each have 2 solutions, so 2 · 2 = 4.</p></details>
+<details><summary>Method: List</summary><p>1, 4, 11, 14.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem p17.</b> Add the nonzero quadratic residues modulo 17, taking each residue as a number from 1 to 16.</p><details><summary>Hint</summary>Square 1 to 8 mod 17.</details><details><summary>Answer</summary>68</details>
+<details><summary>Method: List</summary><p>1, 4, 9, 16, 8, 2, 15, 13 sum to 68.</p></details>
+<details><summary>Method: Symmetry</summary><p>Since −1 is a residue mod 17, residues pair as r and 17 − r, giving 4 pairs · 17 = 68.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem x18.</b> What is the remainder when 4^99 is divided by 9?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 4, 4², 4³, … are 4, 7, 1, and then they repeat from position 1 with period 3. Exponent 99 lands on 1.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 99 = 1100011 in binary. The squares 4^(2^i) mod 9 are 4, 7, 4, 7, 4, 7, 4; multiplying the ones for the 1-bits gives 1.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem x19.</b> Find the smallest positive x with 13x ≡ 1 (mod 17).</p><details><summary>Hint</summary>Try multiples, or use the Euclidean algorithm.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Table</summary><p>13 · k mod 17 for k = 1, 2, …: 13, 9, 5, 1; the first 1 appears at k = 4.</p></details>
+<details><summary>Method: Equation</summary><p>We need 13 · x = 1 + 17 · t. With x = 4 we get 52 = 1 + 17 · 3, which checks.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem x20.</b> What is the remainder when 6^45 is divided by 13?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 6, 6², 6³, … are 6, 10, 8, 9, 2, 12, 7, 3, 5, 4, 11, 1, and then they repeat from position 1 with period 12. Exponent 45 lands on 5.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 45 = 101101 in binary. The squares 6^(2^i) mod 13 are 6, 10, 9, 3, 9, 3; multiplying the ones for the 1-bits gives 5.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem x21.</b> Find the smallest positive x with 10x ≡ 1 (mod 21).</p><details><summary>Hint</summary>Try multiples, or use the Euclidean algorithm.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: Table</summary><p>10 · k mod 21 for k = 1, 2, …: 10, 20, 9, 19, 8, 18, 7, 17, 6, 16, 5, 15, 4, 14, 3, 13, 2, 12, 1; the first 1 appears at k = 19.</p></details>
+<details><summary>Method: Equation</summary><p>We need 10 · x = 1 + 21 · t. With x = 19 we get 190 = 1 + 21 · 9, which checks.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem x22.</b> What is the remainder when 8^60 is divided by 15?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 8, 8², 8³, … are 8, 4, 2, 1, and then they repeat from position 1 with period 4. Exponent 60 lands on 1.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 60 = 111100 in binary. The squares 8^(2^i) mod 15 are 8, 4, 1, 1, 1, 1; multiplying the ones for the 1-bits gives 1.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem x23.</b> Find the smallest positive x with 12x ≡ 1 (mod 29).</p><details><summary>Hint</summary>Try multiples, or use the Euclidean algorithm.</details><details><summary>Answer</summary>17</details>
+<details><summary>Method: Table</summary><p>12 · k mod 29 for k = 1, 2, …: 12, 24, 7, 19, 2, 14, 26, 9, 21, 4, 16, 28, 11, 23, 6, 18, 1; the first 1 appears at k = 17.</p></details>
+<details><summary>Method: Equation</summary><p>We need 12 · x = 1 + 29 · t. With x = 17 we get 204 = 1 + 29 · 7, which checks.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem x24.</b> What is the remainder when 10^31 is divided by 7?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 10, 10², 10³, … are 3, 2, 6, 4, 5, 1, and then they repeat from position 1 with period 6. Exponent 31 lands on 3.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 31 = 11111 in binary. The squares 10^(2^i) mod 7 are 3, 2, 4, 2, 4; multiplying the ones for the 1-bits gives 3.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>
+<div class=p><p><b>Problem x25.</b> Find the smallest positive x with 14x ≡ 1 (mod 25).</p><details><summary>Hint</summary>Try multiples, or use the Euclidean algorithm.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Table</summary><p>14 · k mod 25 for k = 1, 2, …: 14, 3, 17, 6, 20, 9, 23, 12, 1; the first 1 appears at k = 9.</p></details>
+<details><summary>Method: Equation</summary><p>We need 14 · x = 1 + 25 · t. With x = 9 we get 126 = 1 + 25 · 5, which checks.</p></details>
+<p class=ref>Source: AoPS Volume 2, ch. 23 (Number Theory)</p></div>

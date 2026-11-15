@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 113</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 113: Unit 113: Dissections, centres of mass and solids in boxes</h1><p class=ref>Book: Andreescu &amp; Gelca, 1.4, 1.7, 1.8 (25 problems)<br>Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 1.4 (Dissections of Polygonal Surfaces), 1.7 (Problems with Physical Flavor) and 1.8 (Tetrahedra Inscribed in Parallelepipeds).</p>
+<h2>Reading</h2>
+<h3>1. Dissections</h3><p>A <b>dissection</b> cuts a figure into pieces that can be rearranged or counted. Area is preserved, so dissections prove area facts and bound the number of pieces. A rectangle of size 13 × 8 (area 104) cannot be rearranged into 10 × 10 (area 100); fake dissection paradoxes hide a thin sliver.</p><p><b>Worked example.</b> A square can be cut into 4 smaller squares (a 2 × 2 grid). Cutting any one square into four adds 3 to the count, so 4, 7, 10, 13, … are possible. A 3 × 3 grid with a 2 × 2 block merged gives 6 squares, and then 6, 9, 12, … are possible. Two squares or three squares are impossible, which is a good small case to examine.</p><p><b>Triangle cut by a line parallel to a side.</b> The little triangle is similar, with area equal to (ratio)² times the whole.</p>
+<h3>2. Centres of mass</h3><p>The <b>centre of mass</b> of point masses m_i at positions P_i is (Σ m_i P_i)/(Σ m_i). It lets you replace many pieces by a single heavier point. For equal masses at the vertices of a triangle, the centre is the centroid (A + B + C)/3, which is the intersection of the medians.</p><p><b>Worked example 1.</b> The triangle with vertices (0, 0), (6, 0), (0, 9) has centroid (2, 3).</p><p><b>Worked example 2 (an L-shape).</b> An L-shape consists of a 3 × 1 rectangle [0, 3] × [0, 1] (area 3, centre (1.5, 0.5)) and a 1 × 2 rectangle [0, 1] × [1, 3] (area 2, centre (0.5, 2)). The centre of mass is x = (3 × 1.5 + 2 × 0.5)/5 = 1.1, y = (3 × 0.5 + 2 × 2)/5 = 1.1, as symmetry across the line y = x predicts.</p><p><b>Mass points.</b> To find ratios in a triangle, assign masses so that each cevian balances; the ratios of segments are inverse to the masses at the ends.</p>
+<h3>3. Solids in boxes</h3><p>Many solids are best seen inside a cube or box. A regular tetrahedron of edge a√2 is inscribed in a cube of edge a by joining four alternate vertices. The cube minus four corner tetrahedra (each with legs a, a, a and volume a³/6) leaves a³ − 4a³/6 = a³/3. So the regular tetrahedron with edge e has volume e³/(6√2) = e³√2/12.</p><p><b>Worked example.</b> A regular tetrahedron has edge 1. It fits in a cube of edge 1/√2, so its volume is (1/√2)³/3 = 1/(6√2) = √2/12 ≈ 0.1179.</p><p><b>The corner of a cube.</b> The tetrahedron cut off by slicing the corner through the three adjacent vertices has volume 1/6 of the cube, and the sliced face is an equilateral triangle.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Averaging positions instead of weighting by area or mass. Putting the centre of mass of a triangle half way along a median (it is 1/3 of the way from the base). Forgetting a hole has negative mass.</p><p><b>Checks.</b> A symmetric figure's centre lies on its axis.</p><p><b>Practice.</b> Embed solids in a cube, then subtract pieces.</p>
+<h3>Worked examples with Try-its: Dissections</h3><p>A <b>dissection</b> cuts a figure into pieces that can be rearranged. A cube of side 2 splits into six congruent pyramids with apex at the centre; each has base 4 and height 1, so volume ⅓ · 4 · 1 = 4/3 and six of them give 8. A triangle can be cut into 4 congruent similar triangles by joining the midpoints of its sides.</p><details class="try"><summary>Try it<p>What is the volume of a pyramid with a square base of side 6 and height 5?</p><p><b>Answer.</b> ⅓ · 36 · 5 = 60.</p></details>
+<h3>Worked examples with Try-its: Centres of mass</h3><p>The centroid of a system is the weighted average of the pieces' centroids. An L-shape made from a 4 × 4 square (centroid (2, 2), area 16) with a 2 × 2 corner [2, 4] × [2, 4] removed (centroid (3, 3), area 4) has area 12 and centroid ((16 · 2 − 4 · 3)/12, (16 · 2 − 4 · 3)/12) = (5/3, 5/3).</p><details class="try"><summary>Try it<p>Two masses of 3 and 1 at positions 0 and 8 on a line: where is the centre of mass?</p><p><b>Answer.</b> (3 · 0 + 1 · 8)/4 = 2.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> A sphere is inscribed in a cube of side 2. What fraction of the cube does it fill? <b>Solution.</b> Sphere volume (4/3)π · 1³ = 4π/3, cube 8, ratio π/6 ≈ 0.5236.</p><p><b>Reflection.</b> Name the dimensions of the solids first, then compute.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Box diagonal.</b> A 3 × 4 × 12 box has space diagonal √(9 + 16 + 144) = 13. <b>Centroid.</b> The triangle with vertices (0, 0), (6, 0), (0, 6) has centroid (2, 2). <b>Cube in a sphere.</b> The largest cube inside a sphere of radius 3 has space diagonal 6, so its side is 6/√3 = 2√3.</p><details class="try"><summary>Try it<p>A cube has side 4. Find the length of its space diagonal.</p><p><b>Answer.</b> 4√3.</p></details><details class="try"><summary>Try it<p>Find the centre of mass of masses 1, 2, 3 at positions 0, 1, 2 on a line.</p><p><b>Answer.</b> (0 + 2 + 6)/6 = 4/3.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> A rectangular box has face areas 12, 15 and 20. Find its volume. <b>Solution.</b> If the edges are a, b, c then ab = 12, bc = 15, ca = 20, so (abc)² = 12 · 15 · 20 = 3600 and abc = 60. The edges are 3, 4 and 5.</p><p><b>Check.</b> 3 · 4 = 12, 4 · 5 = 20, 3 · 5 = 15 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> A 6 × 4 rectangle is cut into squares of side 2. How many squares are there?</p><details><summary>Hint</summary>Compare areas.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Areas</summary><p>24/4 = 6.</p></details>
+<details><summary>Method: Grid</summary><p>3 squares along the length and 2 across: 6.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem p2.</b> A regular tetrahedron is formed by four alternate vertices of a cube of side 6. Find its volume.</p><details><summary>Hint</summary>It is one third of the cube.</details><details><summary>Answer</summary>72</details>
+<details><summary>Method: Subtract corners</summary><p>Cut four right-triangular corner pyramids from the cube, each with volume (1/6)·6³ = 36. The remaining tetrahedron has volume 216 − 4 · 36 = 72.</p></details>
+<details><summary>Method: Fraction</summary><p>The regular tetrahedron has 1/3 of the cube's volume: 216/3 = 72.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem p3.</b> Masses of 2 kg at x = 0 and 3 kg at x = 10 sit on a rod. Where is the balance point?</p><details><summary>Hint</summary>Weighted average.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Weighted</summary><p>(2 · 0 + 3 · 10)/5 = 6.</p></details>
+<details><summary>Method: Lever</summary><p>2 · 6 = 3 · 4, so the torques balance.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem p4.</b> A 40 kg child sits 3 m from the pivot of a seesaw. How many kg must sit 5 m on the other side to balance?</p><details><summary>Hint</summary>m₁d₁ = m₂d₂.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Torque</summary><p>40 · 3 = m · 5, so m = 24.</p></details>
+<details><summary>Method: Check</summary><p>120 = 24 · 5.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem p5.</b> A box measures 2 × 3 × 6. A tetrahedron is formed by one corner and its three neighbours along the edges. Find its volume.</p><details><summary>Hint</summary>abc/6.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Formula</summary><p>36/6 = 6.</p></details>
+<details><summary>Method: Base times height</summary><p>The base is a right triangle with legs 2 and 3 (area 3) and the height is 6, so the volume is (1/3)(3)(6) = 6.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem p6.</b> A box has volume 60. The tetrahedron through four alternate corners has volume one third of it. Find it.</p><details><summary>Hint</summary>Cut four corners.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: One third</summary><p>60/3 = 20.</p></details>
+<details><summary>Method: Corners</summary><p>Each of the four corner pyramids has volume 60/6 = 10, so the middle has 60 − 40 = 20.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem p7.</b> Into how many triangles does a convex octagon split when diagonals are drawn from one vertex?</p><details><summary>Hint</summary>n − 2.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Formula</summary><p>8 − 2 = 6.</p></details>
+<details><summary>Method: Angles</summary><p>Six triangles give an angle sum of 6 · 180° = 1080°, the angle sum of an octagon.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem p8.</b> A square of side 10 is cut along both diagonals into four triangles. What is the area of each?</p><details><summary>Hint</summary>Four congruent triangles.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Fraction</summary><p>100/4 = 25.</p></details>
+<details><summary>Method: Formula</summary><p>Each is a right isosceles triangle with legs 5√2: area (1/2)(5√2)² = 25.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem p9.</b> Squares with areas 9 and 16 are cut and rearranged into one square. What is its side?</p><details><summary>Hint</summary>Pythagoras by dissection.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Areas</summary><p>9 + 16 = 25, so the side is 5.</p></details>
+<details><summary>Method: Triangle</summary><p>The squares are on the legs 3 and 4 of a right triangle and the new square is on the hypotenuse 5.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem p10.</b> A 4 × 4 × 4 cube is painted on all faces and cut into 64 unit cubes. How many have exactly two painted faces?</p><details><summary>Hint</summary>Edge cubes that are not corners.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Edges</summary><p>The cube has 12 edges, each with 4 − 2 = 2 non-corner unit cubes: 24.</p></details>
+<details><summary>Method: Complement</summary><p>Total 64 = 8 corners + 24 edges + 24 face centres + 8 inside.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem p11.</b> A box has dimensions 3, 4 and 5. Find the square of its space diagonal.</p><details><summary>Hint</summary>a² + b² + c².</details><details><summary>Answer</summary>50</details>
+<details><summary>Method: Formula</summary><p>9 + 16 + 25 = 50.</p></details>
+<details><summary>Method: Two steps</summary><p>The face diagonal squared is 25, then 25 + 25 = 50.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem p12.</b> Find the surface area of a 3 × 4 × 5 box.</p><details><summary>Hint</summary>2(ab + bc + ca).</details><details><summary>Answer</summary>94</details>
+<details><summary>Method: Formula</summary><p>2(12 + 20 + 15) = 94.</p></details>
+<details><summary>Method: Faces</summary><p>Pairs of faces: 2 · 12, 2 · 20, 2 · 15 give 24 + 40 + 30 = 94.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem p13.</b> Find x + y for the centroid of the triangle with vertices (0, 0), (6, 0) and (0, 9).</p><details><summary>Hint</summary>Average.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Average</summary><p>The centroid is (2, 3), sum 5.</p></details>
+<details><summary>Method: Medians</summary><p>It lies 1/3 of the way up from each side.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem p14.</b> Masses 2 at position 0 and 3 at position 10 lie on a line. Find the position of their centre of mass.</p><details><summary>Hint</summary>Weighted average.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Formula</summary><p>(2 · 0 + 3 · 10)/5 = 6.</p></details>
+<details><summary>Method: Balance</summary><p>The distances 6 and 4 balance 2 · 6 = 3 · 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem p15.</b> A cube is inscribed in a sphere of diameter 6√3. Find the side of the cube.</p><details><summary>Hint</summary>Space diagonal = diameter.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Diagonal</summary><p>s√3 = 6√3, so s = 6.</p></details>
+<details><summary>Method: Check</summary><p>6² · 3 = 108 = (6√3)².</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem p16.</b> A diagonal of a 3 × 4 × 5 box passes through how many unit cubes?</p><details><summary>Hint</summary>a + b + c − gcd(a,b) − gcd(b,c) − gcd(c,a) + gcd(a,b,c).</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Formula</summary><p>12 − 1 − 1 − 1 + 1 = 10.</p></details>
+<details><summary>Method: Planes</summary><p>The diagonal crosses 2 + 3 + 4 interior planes, with the 1 overlap correction giving 10 cubes.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem p17.</b> A 5 × 5 × 5 cube is painted on all faces and cut into unit cubes. How many have no painted face?</p><details><summary>Hint</summary>Inner cube.</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: Inner</summary><p>(5 − 2)³ = 27.</p></details>
+<details><summary>Method: Subtract</summary><p>125 minus the 98 cubes on the surface is 27.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem x18.</b> Find the square of the space diagonal of a box that is 3 by 4 by 12.</p><details><summary>Hint</summary>a² + b² + c².</details><details><summary>Answer</summary>169</details>
+<details><summary>Method: Formula</summary><p>9 + 16 + 144 = 169.</p></details>
+<details><summary>Method: Two steps</summary><p>The base diagonal squared is 25, and adding 144 gives 169.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem x19.</b> Find the volume of a square pyramid with base side 9 and height 4.</p><details><summary>Hint</summary>V = (base area × height)/3.</details><details><summary>Answer</summary>108</details>
+<details><summary>Method: Formula</summary><p>81 · 4/3 = 108.</p></details>
+<details><summary>Method: Prism</summary><p>Three such pyramids fill a prism of volume 324, so one has volume 108.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem x20.</b> A cone has radius 6 and height 4. Its volume is kπ. Find k.</p><details><summary>Hint</summary>V = πr²h/3.</details><details><summary>Answer</summary>48</details>
+<details><summary>Method: Formula</summary><p>36 · 4/3 = 48.</p></details>
+<details><summary>Method: Cylinder</summary><p>The cylinder with the same base and height has volume 144π, and the cone is one third of that: 48π.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem x21.</b> Find the square of the space diagonal of a box that is 5 by 6 by 7.</p><details><summary>Hint</summary>a² + b² + c².</details><details><summary>Answer</summary>110</details>
+<details><summary>Method: Formula</summary><p>25 + 36 + 49 = 110.</p></details>
+<details><summary>Method: Two steps</summary><p>The base diagonal squared is 61, and adding 49 gives 110.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem x22.</b> Find the volume of a square pyramid with base side 5 and height 6.</p><details><summary>Hint</summary>V = (base area × height)/3.</details><details><summary>Answer</summary>50</details>
+<details><summary>Method: Formula</summary><p>25 · 6/3 = 50.</p></details>
+<details><summary>Method: Prism</summary><p>Three such pyramids fill a prism of volume 150, so one has volume 50.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem x23.</b> A cone has radius 5 and height 9. Its volume is kπ. Find k.</p><details><summary>Hint</summary>V = πr²h/3.</details><details><summary>Answer</summary>75</details>
+<details><summary>Method: Formula</summary><p>25 · 9/3 = 75.</p></details>
+<details><summary>Method: Cylinder</summary><p>The cylinder with the same base and height has volume 225π, and the cone is one third of that: 75π.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem x24.</b> Find the square of the space diagonal of a box that is 2 by 9 by 6.</p><details><summary>Hint</summary>a² + b² + c².</details><details><summary>Answer</summary>121</details>
+<details><summary>Method: Formula</summary><p>4 + 81 + 36 = 121.</p></details>
+<details><summary>Method: Two steps</summary><p>The base diagonal squared is 85, and adding 36 gives 121.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>
+<div class=p><p><b>Problem x25.</b> Find the volume of a square pyramid with base side 8 and height 9.</p><details><summary>Hint</summary>V = (base area × height)/3.</details><details><summary>Answer</summary>192</details>
+<details><summary>Method: Formula</summary><p>64 · 9/3 = 192.</p></details>
+<details><summary>Method: Prism</summary><p>Three such pyramids fill a prism of volume 576, so one has volume 192.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.4, 1.7, 1.8</p></div>

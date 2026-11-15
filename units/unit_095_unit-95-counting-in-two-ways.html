@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 95</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 95: Unit 95: Counting in two ways</h1><p class=ref>Book: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17 (25 problems)<br>Engel, Problem-Solving Strategies, and AoPS Volume 2, chapter 17 (clever correspondences and double counting).</p>
+<h2>Reading</h2>
+<h3>1. The idea of double counting</h3><p>Count the same set in two different ways; the two answers must be equal. That is the whole principle, and it proves surprising identities.</p><p><b>Worked example 1: handshakes.</b> In a group of n people, count pairs of people: C(n, 2). Count by degrees: each person shakes d hands, and the sum of degrees counts each handshake twice. So Σd = 2E, the handshake lemma.</p><p><b>Worked example 2.</b> Prove C(n, 2) + C(n + 1, 2) = n². Use a picture: an n × n grid of squares has n² squares. The squares on or above the diagonal number n(n + 1)/2 = C(n + 1, 2) and those strictly below number n(n − 1)/2 = C(n, 2). So C(n + 1, 2) + C(n, 2) = n². For n = 5: 15 + 10 = 25 ✓.</p><p><b>Worked example 3.</b> Σ_{k=0}^{n} k C(n, k) = n 2ⁿ⁻¹. Count pairs (S, x) where x is an element of the subset S of an n-set. Count by S: Σ |S| = Σ k C(n, k). Count by x: n choices for x, then 2ⁿ⁻¹ subsets containing x. For n = 3: 3 + 6 + 3 = 12 = 3 × 4 ✓.</p>
+<h3>2. Counting pairs in tables</h3><p>Make a table with rows and columns, mark an entry for each incidence (person–club, number–divisor), and count the marks by rows and then by columns.</p><p><b>Worked example 1: divisors.</b> Σ_{k=1}^{n} ⌊n/k⌋ counts the pairs (k, m) with km ≤ n; counting by m gives the same thing, so it equals the total number of divisors of the numbers 1, …, n (Unit 82).</p><p><b>Worked example 2: committees.</b> Each of 10 students belongs to exactly 3 clubs, and each club has exactly 5 members. How many clubs are there? Count the (student, club) memberships: 10 × 3 = 30 = (number of clubs) × 5, so there are 6 clubs.</p><p><b>Worked example 3: an impossibility.</b> Is it possible to have 7 people where each knows exactly 3 others? The pairs of acquaintances would number 7 × 3/2 = 10.5, not an integer. Impossible.</p>
+<h3>3. Further identities by double counting</h3><p><b>Vandermonde:</b> C(m + n, r) = Σ C(m, i)C(n, r − i), counting committees of r from m men and n women. <b>Σ C(n, k)² = C(2n, n):</b> choose n people from 2n people (n men and n women) by choosing k men and n − k women: C(n, k)C(n, n − k) = C(n, k)².</p><p><b>Worked example.</b> Prove that Σ_{k=1}^{n} k·k! = (n + 1)! − 1 by telescoping, since k·k! = (k + 1)! − k!. For n = 3 gives 1 + 4 + 18 = 23 = 24 − 1 ✓.</p><p><b>Tournaments.</b> In a round-robin with n players, the total number of wins equals C(n, 2), and the sum of the squares of the scores is related to the number of cyclic triples; the number of non-transitive triples is C(n, 3) − Σ C(wᵢ, 2).</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Counting ordered pairs in one count and unordered in the other. Forgetting to divide by 2 when each pair is counted twice. Using different sets in the two counts.</p><p><b>Checks.</b> Test the final identity for n = 2 or 3.</p><p><b>Practice.</b> Define the set of pairs before you count.</p>
+<h3>Worked examples with Try-its: Double counting</h3><p>Count the same set in two different ways and equate. <b>Identity.</b> C(4, 0)² + C(4, 1)² + … + C(4, 4)² = 1 + 16 + 36 + 16 + 1 = 70 = C(8, 4): choose 4 people from 4 men and 4 women, grouping by the number of men k (C(4, k) · C(4, 4 − k) = C(4, k)²). <b>Identity.</b> Σ k·C(5, k) = 5 · 2⁴ = 80: count (committee, chair) pairs by committee size or by chair first.</p><details class="try"><summary>Try it<p>Show that k·C(n, k) = n·C(n − 1, k − 1) by counting committees with a chair.</p><p><b>Answer.</b> Left: choose k members, then a chair among them. Right: choose the chair (n ways), then the other k − 1 members from n − 1.</p></details>
+<h3>Worked examples with Try-its: Degrees and handshakes</h3><p>In a graph the sum of degrees is twice the number of edges, because each edge is counted at both ends. At a party of 9 people it is impossible for everyone to shake hands with exactly 3 others: 9 · 3 = 27 is odd. A table with r rows and c columns of numbers has the same total whether you add rows first or columns first, which is the basis of many double-counting proofs.</p><details class="try"><summary>Try it<p>Can a graph have 7 vertices all of degree 3?</p><p><b>Answer.</b> No: the degree sum 21 is odd.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> In a group of 6 people each pair are friends or strangers. Show there are at least 2 triangles whose three pairs are all the same (all friends or all strangers). <b>Solution.</b> Call an angle at a vertex 'bad' if its two edges differ in kind. A vertex with f friends and 5 − f strangers is the centre of f(5 − f) ≤ 6 bad angles, so there are at most 36 bad angles in all. Each triangle that is not all one kind contains exactly 2 bad angles, so at most 18 of the 20 triangles are mixed, leaving at least 2 uniform ones.</p><p><b>Reflection.</b> Double counting converts a global statement into a local bound.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Committees with a chair pair.</b> Σ C(4, k)C(k, 2) = 6 + 12 + 6 = 24 counts choosing a committee of any size from 4 people and then 2 of its members as co-chairs; counting the pair first gives C(4, 2) · 2² = 24 (the other 2 people are free to join or not). <b>Edges.</b> Counting handshakes among n people in two ways, as n(n − 1)/2 and as half the sum of degrees, shows the degree sum is n(n − 1) when everyone shakes hands with everyone.</p><details class="try"><summary>Try it<p>Count the pairs (person, club) if 5 clubs each have 6 members and each person belongs to 3 clubs.</p><p><b>Answer.</b> 5 · 6 = 30 pairs, so there are 30/3 = 10 people.</p></details><details class="try"><summary>Try it<p>Prove Σ C(n, k) = 2ⁿ by counting subsets two ways.</p><p><b>Answer.</b> Each of the n elements is in or out of a subset (2ⁿ), or group subsets by size k.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Show that C(n, 2) + C(n + 1, 2) = n². <b>Solution.</b> Count the ordered pairs (a, b) of numbers from 1 to n: n² in total. Pairs with a < b number C(n, 2), pairs with a > b number C(n, 2), and pairs with a = b number n, so n² = 2C(n, 2) + n. This is C(n, 2) + C(n + 1, 2) since C(n + 1, 2) = C(n, 2) + n.</p><p><b>Check.</b> n = 4: 6 + 10 = 16 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> At a party each of 10 people shakes hands with exactly 3 others. How many handshakes are there?</p><details><summary>Hint</summary>Count handshake ends.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Handshake</summary><p>The degree sum is 30 and each handshake has 2 ends, so there are 15.</p></details>
+<details><summary>Method: Check</summary><p>A 3-regular graph on 10 vertices exists (for example the Petersen graph), with 15 edges.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem p2.</b> How many pairs (i, j) with 1 ≤ i < j ≤ 10 have i + j even?</p><details><summary>Hint</summary>i and j must have the same parity.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Parity</summary><p>Five odd and five even numbers give C(5,2) + C(5,2) = 20.</p></details>
+<details><summary>Method: Complement</summary><p>All pairs are 45 and the mixed-parity pairs are 5 · 5 = 25, so 20 are same-parity.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem p3.</b> There are 6 committees, each with 4 members, and every person is on exactly 2 committees. How many people are there?</p><details><summary>Hint</summary>Count (person, committee) memberships.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Memberships</summary><p>The total number of memberships is 6 · 4 = 24 and also 2 per person, so there are 12 people.</p></details>
+<details><summary>Method: Check</summary><p>12 · 2 = 24.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem p4.</b> How many ordered pairs (a, b) of positive integers satisfy a | b and b ≤ 20?</p><details><summary>Hint</summary>Fix a and count its multiples up to 20.</details><details><summary>Answer</summary>66</details>
+<details><summary>Method: By a</summary><p>⌊20/1⌋ + ⌊20/2⌋ + … + ⌊20/20⌋ = 20 + 10 + 6 + 5 + 4 + 3 + 2 + 2 + 2 + 2 + 1·10 = 66.</p></details>
+<details><summary>Method: By b</summary><p>Summing the number of divisors d(b) for b = 1..20 also gives 66.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem p5.</b> Find d(1) + d(2) + … + d(30), where d(n) is the number of divisors of n.</p><details><summary>Hint</summary>Equals Σ ⌊30/k⌋.</details><details><summary>Answer</summary>111</details>
+<details><summary>Method: Swap</summary><p>Σ d(n) = Σ ⌊30/k⌋ = 30 + 15 + 10 + 7 + 6 + 5 + 4 + 3 + 3 + 3 + 2·5 + 1·15 = 111.</p></details>
+<details><summary>Method: Direct</summary><p>Adding the divisor counts of 1 to 30 directly also gives 111.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem p6.</b> Triangles are chosen from the vertices of K₇. Each triangle has 3 edges and each edge lies in 5 triangles. Use this to count the triangles.</p><details><summary>Hint</summary>Count (edge, triangle) incidences.</details><details><summary>Answer</summary>35</details>
+<details><summary>Method: Incidences</summary><p>There are 21 edges, each in 5 triangles, so 105 incidences; each triangle has 3 edges, so there are 35 triangles.</p></details>
+<details><summary>Method: Direct</summary><p>C(7,3) = 35.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem p7.</b> In how many ways can 5 non-attacking rooks be placed on a 5 × 5 board?</p><details><summary>Hint</summary>One rook per row and per column.</details><details><summary>Answer</summary>120</details>
+<details><summary>Method: Permutation</summary><p>Each row has one rook in a distinct column: 5! = 120.</p></details>
+<details><summary>Method: Count by rows</summary><p>5 choices in the first row, 4 in the next, and so on.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem p8.</b> How many subsets of {1, 2, …, 8} have an even sum?</p><details><summary>Hint</summary>Toggle element 1.</details><details><summary>Answer</summary>128</details>
+<details><summary>Method: Pairing</summary><p>Toggling the element 1 flips the parity of the sum and pairs the subsets, so half of all 256 have an even sum: 128.</p></details>
+<details><summary>Method: Counting odd elements</summary><p>The sum is even when an even number of the 4 odd elements is chosen: 8 ways (even-size subsets of 4) times 16 even-element choices = 128.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem p9.</b> Find the sum of the sizes of all subsets of {1, 2, …, 6}.</p><details><summary>Hint</summary>Count (element, subset) pairs.</details><details><summary>Answer</summary>192</details>
+<details><summary>Method: Pairs</summary><p>Each of the 6 elements lies in 2⁵ = 32 subsets, so the total is 6 · 32 = 192.</p></details>
+<details><summary>Method: By size</summary><p>Σ k·C(6,k) = 0 + 6 + 30 + 60 + 60 + 30 + 6 = 192.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem p10.</b> At a party of 15 people everyone shakes hands with everyone else once. How many handshakes occur?</p><details><summary>Hint</summary>Count pairs.</details><details><summary>Answer</summary>105</details>
+<details><summary>Method: Pairs</summary><p>C(15, 2) = 105.</p></details>
+<details><summary>Method: Double counting</summary><p>Each of 15 people shakes 14 hands, giving 210 hand-ends, and each handshake has 2 ends: 105.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem p11.</b> 12 students each belong to exactly 3 clubs, and every club has exactly 6 members. How many clubs are there?</p><details><summary>Hint</summary>Count membership pairs two ways.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Double counting</summary><p>Memberships total 12 · 3 = 36 and also 6c, so c = 6.</p></details>
+<details><summary>Method: Check</summary><p>6 clubs of 6 members give 36 memberships.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem p12.</b> How many diagonals does a convex 12-gon have?</p><details><summary>Hint</summary>Pairs of vertices minus sides.</details><details><summary>Answer</summary>54</details>
+<details><summary>Method: Pairs</summary><p>C(12, 2) − 12 = 66 − 12 = 54.</p></details>
+<details><summary>Method: Per vertex</summary><p>Each vertex has 9 diagonals, so 12 · 9/2 = 54.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem p13.</b> How many triangles can be formed from 7 points with no three on a line?</p><details><summary>Hint</summary>Choose 3 points.</details><details><summary>Answer</summary>35</details>
+<details><summary>Method: Choose</summary><p>C(7, 3) = 35.</p></details>
+<details><summary>Method: Edges</summary><p>Count triangles through a vertex, C(6, 2) = 15, for each of 7 vertices, then divide by 3 since each triangle is counted at 3 vertices: 7 · 15/3 = 35.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem p14.</b> In a round-robin tournament with 10 players, every pair plays once. How many games are played?</p><details><summary>Hint</summary>Pairs.</details><details><summary>Answer</summary>45</details>
+<details><summary>Method: Choose</summary><p>C(10, 2) = 45.</p></details>
+<details><summary>Method: Per player</summary><p>Each plays 9 games, so 10 · 9/2 = 45.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem p15.</b> 30 people each have exactly 4 friends in the group, with friendship mutual. How many friendships are there?</p><details><summary>Hint</summary>Handshake lemma.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Handshake</summary><p>30 · 4/2 = 60.</p></details>
+<details><summary>Method: Ends</summary><p>There are 120 friend-ends, two per friendship.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem p16.</b> From 8 people a committee of 3 is chosen and one of them is the chair. How many choices are there?</p><details><summary>Hint</summary>Count it two ways.</details><details><summary>Answer</summary>168</details>
+<details><summary>Method: Chair first</summary><p>8 chairs times C(7, 2) = 21 other pairs: 168.</p></details>
+<details><summary>Method: Committee first</summary><p>C(8, 3) = 56 committees times 3 chairs: 168.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem p17.</b> Find d(1) + d(2) + … + d(20), where d(n) is the number of divisors of n.</p><details><summary>Hint</summary>Count pairs (k, n) with k | n.</details><details><summary>Answer</summary>66</details>
+<details><summary>Method: Swap</summary><p>Each k up to 20 divides ⌊20/k⌋ numbers: 20 + 10 + 6 + 5 + 4 + 3 + 2 + 2 + 2 + 2 + 1·10 = 66.</p></details>
+<details><summary>Method: Direct</summary><p>d(1..20) = 1, 2, 2, 3, 2, 4, 2, 4, 3, 4, 2, 6, 2, 4, 4, 5, 2, 6, 2, 6, which sum to 66.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem x18.</b> In how many ways can 5 people be chosen from 9?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>126</details>
+<details><summary>Method: Formula</summary><p>C(9, 5) = 126.</p></details>
+<details><summary>Method: Pascal</summary><p>C(8, 4) + C(8, 5) = 70 + 56 = 126.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem x19.</b> How many edges does the complete graph K_6 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Pairs</summary><p>C(6, 2) = 15.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 6 vertices has degree 5, so the edges number 6 · 5/2 = 15.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem x20.</b> In how many ways can 3 people be chosen from 18?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>816</details>
+<details><summary>Method: Formula</summary><p>C(18, 3) = 816.</p></details>
+<details><summary>Method: Pascal</summary><p>C(17, 2) + C(17, 3) = 136 + 680 = 816.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem x21.</b> How many edges does the complete graph K_8 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>28</details>
+<details><summary>Method: Pairs</summary><p>C(8, 2) = 28.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 8 vertices has degree 7, so the edges number 8 · 7/2 = 28.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem x22.</b> In how many ways can 4 people be chosen from 11?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>330</details>
+<details><summary>Method: Formula</summary><p>C(11, 4) = 330.</p></details>
+<details><summary>Method: Pascal</summary><p>C(10, 3) + C(10, 4) = 120 + 210 = 330.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem x23.</b> How many edges does the complete graph K_9 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Pairs</summary><p>C(9, 2) = 36.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 9 vertices has degree 8, so the edges number 9 · 8/2 = 36.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem x24.</b> In how many ways can 5 people be chosen from 12?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>792</details>
+<details><summary>Method: Formula</summary><p>C(12, 5) = 792.</p></details>
+<details><summary>Method: Pascal</summary><p>C(11, 4) + C(11, 5) = 330 + 462 = 792.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>
+<div class=p><p><b>Problem x25.</b> How many edges does the complete graph K_11 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>55</details>
+<details><summary>Method: Pairs</summary><p>C(11, 2) = 55.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 11 vertices has degree 10, so the edges number 11 · 10/2 = 55.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 1 and 9; AoPS Volume 2 ch. 17</p></div>

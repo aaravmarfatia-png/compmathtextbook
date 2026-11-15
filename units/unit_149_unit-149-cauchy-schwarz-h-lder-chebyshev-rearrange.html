@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 149</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 149: Unit 149: Cauchy–Schwarz, Hölder, Chebyshev, rearrangement and Abel summation</h1><p class=ref>Book: Pham Kim Hung, Secrets in Inequalities vol. 1; Andreescu &amp; Dospinescu, Straight from the Book; Andreescu &amp; Enescu, Mathematical Olympiad Treasures (25 problems)<br>Pham Kim Hung vol. 1, ch. 1.2 (Cauchy reverse technique), 2 (Cauchy–Schwarz, Hölder), 3 (Chebyshev), 5 (Abel formula, rearrangement); Andreescu &amp; Dospinescu, Straight from the Book, ch. 2 and addendum 5.A (Hölder); Andreescu &amp; Enescu 1.2 and 1.9.</p>
+<h2>Reading</h2>
+<h3>1. Cauchy–Schwarz in three forms</h3><p>For real numbers, (Σ aᵢ²)(Σ bᵢ²) ≥ (Σ aᵢbᵢ)², with equality exactly when the two lists are proportional. The <b>Engel (Titu) form</b> says Σ aᵢ²/xᵢ ≥ (Σ aᵢ)²/Σ xᵢ for positive xᵢ. Example: for x + y + z = 6, the sum 1/x + 4/y + 9/z is at least (1 + 2 + 3)²/6 = 6, at x : y : z = 1 : 2 : 3, that is (1, 2, 3).</p><p>The same inequality gives a constrained minimum: if x + 2y + 2z = 9 then x² + y² + z² ≥ 81/9 = 9, at (1, 2, 2). And a maximum: if x² + y² = 4 then 3x + 4y ≤ 5 · 2 = 10.</p><details class="try"><summary>Try it<p>Minimum of 1/x + 1/y for x + y = 4, x, y > 0?</p><p><b>Answer.</b> (1 + 1)²/4 = 1.</p></details><details class="try"><summary>Try it<p>If x² + y² = 1, the maximum of 5x + 12y?</p><p><b>Answer.</b> 13.</p></details>
+<h3>2. Rearrangement, Chebyshev, Hölder and Abel</h3><p><b>Rearrangement.</b> For two lists, the sum of products of matched pairs is largest when both are sorted the same way and smallest when sorted oppositely. For (1, 3, 4) and (2, 5, 6): the maximum is 1·2 + 3·5 + 4·6 = 41 and the minimum is 1·6 + 3·5 + 4·2 = 29. <b>Chebyshev.</b> For two similarly ordered lists, Σ aᵢbᵢ ≥ (1/n)(Σ aᵢ)(Σ bᵢ). <b>Hölder</b> extends Cauchy–Schwarz to more lists; a consequence is the power mean bound Σ xᵢᵏ ≥ (Σ xᵢ)ᵏ / nᵏ⁻¹. <b>Abel summation</b> turns Σ aᵢbᵢ into a sum of partial sums of one list times differences of the other: 1·2 + 2·4 + 3·8 = 34 = (3 − 1)·2³ + 2.</p><details class="try"><summary>Try it<p>Largest sum of matched products for (1, 2, 3) and (4, 5, 6)?</p><p><b>Answer.</b> 4 + 10 + 18 = 32.</p></details><details class="try"><summary>Try it<p>Minimum of x³ + y³ for x + y = 4?</p><p><b>Answer.</b> (4)³/2 = 32.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> Positive reals a, b, c have a + b + c = 3. Find the minimum of a/(b + c) + b/(c + a) + c/(a + b) using Cauchy–Schwarz. <b>Solution.</b> By the Engel form, Σ a²/(a(b + c)) ≥ (a + b + c)²/(2(ab + bc + ca)) = 9/(2(ab + bc + ca)), and ab + bc + ca ≤ (a + b + c)²/3 = 3, so the sum is at least 9/6 = 3/2, at a = b = c = 1 (Nesbitt).</p><p><b>Check.</b> At a = b = c = 1 each fraction is 1/2, sum 3/2 ✓.</p>
+<h3>4. In the books</h3><p>Pham Kim Hung, <i>Secrets in Inequalities</i> vol. 1, covers Cauchy–Schwarz and Hölder in ch. 2, Chebyshev in ch. 3, Abel summation and rearrangement in ch. 5, and the Cauchy reverse technique in section 1.2; Andreescu and Dospinescu, <i>Straight from the Book</i>, ch. 2, is the other main source. This unit is an introduction with computational problems. <b>Honest note:</b> the problems are my own templates, not the books'.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Real numbers x, y, z satisfy 1x + 2y + 2z = 9. What is the minimum value of x² + y² + z²? (fraction if needed)</p><details><summary>Hint</summary>Apply Cauchy–Schwarz to (p, q, r) and (x, y, z).</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(1² + 2² + 2²)(x² + y² + z²) ≥ (1x + 2y + 2z)² = 81, so x² + y² + z² ≥ 81/9 = 9, with equality when (x, y, z) is proportional to (1, 2, 2).</p></details>
+<details><summary>Method: Foot of the perpendicular</summary><p>The point of the plane 1x + 2y + 2z = 9 closest to the origin is t(1, 2, 2) with t = 1; its squared distance is 9.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> Real numbers x, y, z satisfy 2x + 3y + 6z = 14. What is the minimum value of x² + y² + z²? (fraction if needed)</p><details><summary>Hint</summary>Apply Cauchy–Schwarz to (p, q, r) and (x, y, z).</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(2² + 3² + 6²)(x² + y² + z²) ≥ (2x + 3y + 6z)² = 196, so x² + y² + z² ≥ 196/49 = 4, with equality when (x, y, z) is proportional to (2, 3, 6).</p></details>
+<details><summary>Method: Foot of the perpendicular</summary><p>The point of the plane 2x + 3y + 6z = 14 closest to the origin is t(2, 3, 6) with t = 2/7; its squared distance is 4.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> Real numbers x, y, z satisfy 1x + 4y + 8z = 18. What is the minimum value of x² + y² + z²? (fraction if needed)</p><details><summary>Hint</summary>Apply Cauchy–Schwarz to (p, q, r) and (x, y, z).</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(1² + 4² + 8²)(x² + y² + z²) ≥ (1x + 4y + 8z)² = 324, so x² + y² + z² ≥ 324/81 = 4, with equality when (x, y, z) is proportional to (1, 4, 8).</p></details>
+<details><summary>Method: Foot of the perpendicular</summary><p>The point of the plane 1x + 4y + 8z = 18 closest to the origin is t(1, 4, 8) with t = 2/9; its squared distance is 4.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> Real numbers x, y, z satisfy 3x + 4y + 12z = 13. What is the minimum value of x² + y² + z²? (fraction if needed)</p><details><summary>Hint</summary>Apply Cauchy–Schwarz to (p, q, r) and (x, y, z).</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(3² + 4² + 12²)(x² + y² + z²) ≥ (3x + 4y + 12z)² = 169, so x² + y² + z² ≥ 169/169 = 1, with equality when (x, y, z) is proportional to (3, 4, 12).</p></details>
+<details><summary>Method: Foot of the perpendicular</summary><p>The point of the plane 3x + 4y + 12z = 13 closest to the origin is t(3, 4, 12) with t = 1/13; its squared distance is 1.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> Positive reals x, y, z have sum 6. What is the minimum value of 1/x + 4/y + 9/z? (fraction if needed)</p><details><summary>Hint</summary>Use the Engel (Titu) form of Cauchy–Schwarz: Σ aᵢ²/xᵢ ≥ (Σ aᵢ)²/Σ xᵢ.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Engel form</summary><p>1²/x + 2²/y + 3²/z ≥ (1 + 2 + 3)²/(x + y + z) = 36/6 = 6.</p></details>
+<details><summary>Method: Equality case</summary><p>Equality needs x : y : z = 1 : 2 : 3; with sum 6 this gives x = 1, y = 2, z = 3 and the value 6.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> Positive reals x, y, z have sum 10. What is the minimum value of 4/x + 9/y + 25/z? (fraction if needed)</p><details><summary>Hint</summary>Use the Engel (Titu) form of Cauchy–Schwarz: Σ aᵢ²/xᵢ ≥ (Σ aᵢ)²/Σ xᵢ.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Engel form</summary><p>2²/x + 3²/y + 5²/z ≥ (2 + 3 + 5)²/(x + y + z) = 100/10 = 10.</p></details>
+<details><summary>Method: Equality case</summary><p>Equality needs x : y : z = 2 : 3 : 5; with sum 10 this gives x = 2, y = 3, z = 5 and the value 10.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> Positive reals x, y, z have sum 12. What is the minimum value of 9/x + 16/y + 25/z? (fraction if needed)</p><details><summary>Hint</summary>Use the Engel (Titu) form of Cauchy–Schwarz: Σ aᵢ²/xᵢ ≥ (Σ aᵢ)²/Σ xᵢ.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Engel form</summary><p>3²/x + 4²/y + 5²/z ≥ (3 + 4 + 5)²/(x + y + z) = 144/12 = 12.</p></details>
+<details><summary>Method: Equality case</summary><p>Equality needs x : y : z = 3 : 4 : 5; with sum 12 this gives x = 3, y = 4, z = 5 and the value 12.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> Positive reals x, y, z have sum 12. What is the minimum value of 1/x + 1/y + 16/z? (fraction if needed)</p><details><summary>Hint</summary>Use the Engel (Titu) form of Cauchy–Schwarz: Σ aᵢ²/xᵢ ≥ (Σ aᵢ)²/Σ xᵢ.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Engel form</summary><p>1²/x + 1²/y + 4²/z ≥ (1 + 1 + 4)²/(x + y + z) = 36/12 = 3.</p></details>
+<details><summary>Method: Equality case</summary><p>Equality needs x : y : z = 1 : 1 : 4; with sum 12 this gives x = 2, y = 2, z = 8 and the value 3.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> Real numbers x, y satisfy x² + y² = 4. What is the maximum value of 3x + 4y?</p><details><summary>Hint</summary>Cauchy–Schwarz: (ax + by)² ≤ (a² + b²)(x² + y²).</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(3x + 4y)² ≤ (9 + 16)(4) = 100, so 3x + 4y ≤ 10.</p></details>
+<details><summary>Method: Trigonometry</summary><p>Put (x, y) = 2(cos θ, sin θ); then 3x + 4y = 2·5·cos(θ − φ) ≤ 10.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> Real numbers x, y satisfy x² + y² = 9. What is the maximum value of 5x + 12y?</p><details><summary>Hint</summary>Cauchy–Schwarz: (ax + by)² ≤ (a² + b²)(x² + y²).</details><details><summary>Answer</summary>39</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(5x + 12y)² ≤ (25 + 144)(9) = 1521, so 5x + 12y ≤ 39.</p></details>
+<details><summary>Method: Trigonometry</summary><p>Put (x, y) = 3(cos θ, sin θ); then 5x + 12y = 3·13·cos(θ − φ) ≤ 39.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> Real numbers x, y satisfy x² + y² = 4. What is the maximum value of 8x + 15y?</p><details><summary>Hint</summary>Cauchy–Schwarz: (ax + by)² ≤ (a² + b²)(x² + y²).</details><details><summary>Answer</summary>34</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(8x + 15y)² ≤ (64 + 225)(4) = 1156, so 8x + 15y ≤ 34.</p></details>
+<details><summary>Method: Trigonometry</summary><p>Put (x, y) = 2(cos θ, sin θ); then 8x + 15y = 2·17·cos(θ − φ) ≤ 34.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> Positive reals x₁, …, x_4. What is the minimum value of (x₁ + … + x_4)(1/x₁ + … + 1/x_4)?</p><details><summary>Hint</summary>Cauchy–Schwarz with the vectors (√xᵢ) and (1/√xᵢ).</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(Σ xᵢ)(Σ 1/xᵢ) ≥ (Σ 1)² = 4²= 16, with equality when all xᵢ are equal.</p></details>
+<details><summary>Method: AM-HM</summary><p>The arithmetic mean is at least the harmonic mean, so the product is at least 16.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> Positive reals x₁, …, x_5. What is the minimum value of (x₁ + … + x_5)(1/x₁ + … + 1/x_5)?</p><details><summary>Hint</summary>Cauchy–Schwarz with the vectors (√xᵢ) and (1/√xᵢ).</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(Σ xᵢ)(Σ 1/xᵢ) ≥ (Σ 1)² = 5²= 25, with equality when all xᵢ are equal.</p></details>
+<details><summary>Method: AM-HM</summary><p>The arithmetic mean is at least the harmonic mean, so the product is at least 25.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> Positive reals x₁, …, x_6. What is the minimum value of (x₁ + … + x_6)(1/x₁ + … + 1/x_6)?</p><details><summary>Hint</summary>Cauchy–Schwarz with the vectors (√xᵢ) and (1/√xᵢ).</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(Σ xᵢ)(Σ 1/xᵢ) ≥ (Σ 1)² = 6²= 36, with equality when all xᵢ are equal.</p></details>
+<details><summary>Method: AM-HM</summary><p>The arithmetic mean is at least the harmonic mean, so the product is at least 36.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> The numbers 1, 3, 4, 7 are matched one-to-one with the numbers 2, 5, 6, 9. What is the largest possible value of the sum of the products of matched pairs?</p><details><summary>Hint</summary>Rearrangement inequality: match large with large.</details><details><summary>Answer</summary>104</details>
+<details><summary>Method: Rearrangement</summary><p>Sort both lists increasingly and pair equal positions: 1·2, 3·5, 4·6, 7·9, sum 104.</p></details>
+<details><summary>Method: Exchange argument</summary><p>If a larger a were matched to a smaller b while a smaller a had the larger b, swapping would not decrease the sum; so the sorted matching is optimal, giving 104.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> The numbers 2, 3, 8, 10 are matched one-to-one with the numbers 1, 4, 5, 9. What is the largest possible value of the sum of the products of matched pairs?</p><details><summary>Hint</summary>Rearrangement inequality: match large with large.</details><details><summary>Answer</summary>144</details>
+<details><summary>Method: Rearrangement</summary><p>Sort both lists increasingly and pair equal positions: 2·1, 3·4, 8·5, 10·9, sum 144.</p></details>
+<details><summary>Method: Exchange argument</summary><p>If a larger a were matched to a smaller b while a smaller a had the larger b, swapping would not decrease the sum; so the sorted matching is optimal, giving 144.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> The numbers 1, 2, 6, 9, 11 are matched one-to-one with the numbers 3, 4, 5, 8, 10. What is the largest possible value of the sum of the products of matched pairs?</p><details><summary>Hint</summary>Rearrangement inequality: match large with large.</details><details><summary>Answer</summary>223</details>
+<details><summary>Method: Rearrangement</summary><p>Sort both lists increasingly and pair equal positions: 1·3, 2·4, 6·5, 9·8, 11·10, sum 223.</p></details>
+<details><summary>Method: Exchange argument</summary><p>If a larger a were matched to a smaller b while a smaller a had the larger b, swapping would not decrease the sum; so the sorted matching is optimal, giving 223.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> The numbers 1, 3, 4, 7 are matched one-to-one with the numbers 2, 5, 6, 9. What is the smallest possible value of the sum of the products of matched pairs?</p><details><summary>Hint</summary>Rearrangement inequality: match large with small.</details><details><summary>Answer</summary>61</details>
+<details><summary>Method: Rearrangement</summary><p>Pair the increasing list with the decreasing one: 1·9, 3·6, 4·5, 7·2, sum 61.</p></details>
+<details><summary>Method: Exchange argument</summary><p>Any matching with a larger a and larger b together can be improved by swapping, so the opposite-order matching is optimal: 61.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> The numbers 2, 3, 8, 10 are matched one-to-one with the numbers 1, 4, 5, 9. What is the smallest possible value of the sum of the products of matched pairs?</p><details><summary>Hint</summary>Rearrangement inequality: match large with small.</details><details><summary>Answer</summary>75</details>
+<details><summary>Method: Rearrangement</summary><p>Pair the increasing list with the decreasing one: 2·9, 3·5, 8·4, 10·1, sum 75.</p></details>
+<details><summary>Method: Exchange argument</summary><p>Any matching with a larger a and larger b together can be improved by swapping, so the opposite-order matching is optimal: 75.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> Positive reals x₁, …, x_4 have sum 8. What is the minimum of x₁^3 + … + x_4^3? (fraction if needed)</p><details><summary>Hint</summary>Use the power mean inequality or Hölder.</details><details><summary>Answer</summary>32</details>
+<details><summary>Method: Power mean</summary><p>(Σ xᵢ^3 / 4)^(1/3) ≥ Σ xᵢ/4, so Σ xᵢ^3 ≥ 8^3/4^2 = 32.</p></details>
+<details><summary>Method: Hölder</summary><p>(Σ xᵢ^3)(4)^2 ≥ (Σ xᵢ)^3 gives Σ xᵢ^3 ≥ 32.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> Positive reals x₁, …, x_3 have sum 9. What is the minimum of x₁^4 + … + x_3^4? (fraction if needed)</p><details><summary>Hint</summary>Use the power mean inequality or Hölder.</details><details><summary>Answer</summary>243</details>
+<details><summary>Method: Power mean</summary><p>(Σ xᵢ^4 / 3)^(1/4) ≥ Σ xᵢ/3, so Σ xᵢ^4 ≥ 9^4/3^3 = 243.</p></details>
+<details><summary>Method: Hölder</summary><p>(Σ xᵢ^4)(3)^3 ≥ (Σ xᵢ)^4 gives Σ xᵢ^4 ≥ 243.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> Positive reals x₁, …, x_5 have sum 10. What is the minimum of x₁^3 + … + x_5^3? (fraction if needed)</p><details><summary>Hint</summary>Use the power mean inequality or Hölder.</details><details><summary>Answer</summary>40</details>
+<details><summary>Method: Power mean</summary><p>(Σ xᵢ^3 / 5)^(1/3) ≥ Σ xᵢ/5, so Σ xᵢ^3 ≥ 10^3/5^2 = 40.</p></details>
+<details><summary>Method: Hölder</summary><p>(Σ xᵢ^3)(5)^2 ≥ (Σ xᵢ)^3 gives Σ xᵢ^3 ≥ 40.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> Compute 1·2 + 2·2² + 3·2³ + … + 6·2^6.</p><details><summary>Hint</summary>Use Abel summation (summation by parts), or differentiate a geometric series.</details><details><summary>Answer</summary>642</details>
+<details><summary>Method: Abel summation</summary><p>Σ k rᵏ = r(1 − (n + 1)rⁿ + n rⁿ⁺¹)/(1 − r)²; with n = 6, r = 2 this equals 642.</p></details>
+<details><summary>Method: Direct</summary><p>Add the 6 terms 2, 8, 24, 64, 160, 384: 642.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> Compute 1·2 + 2·2² + 3·2³ + … + 7·2^7.</p><details><summary>Hint</summary>Use Abel summation (summation by parts), or differentiate a geometric series.</details><details><summary>Answer</summary>1538</details>
+<details><summary>Method: Abel summation</summary><p>Σ k rᵏ = r(1 − (n + 1)rⁿ + n rⁿ⁺¹)/(1 − r)²; with n = 7, r = 2 this equals 1538.</p></details>
+<details><summary>Method: Direct</summary><p>Add the 7 terms 2, 8, 24, 64, 160, 384, 896: 1538.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> Compute 1·3 + 2·3² + 3·3³ + … + 5·3^5.</p><details><summary>Hint</summary>Use Abel summation (summation by parts), or differentiate a geometric series.</details><details><summary>Answer</summary>1641</details>
+<details><summary>Method: Abel summation</summary><p>Σ k rᵏ = r(1 − (n + 1)rⁿ + n rⁿ⁺¹)/(1 − r)²; with n = 5, r = 3 this equals 1641.</p></details>
+<details><summary>Method: Direct</summary><p>Add the 5 terms 3, 18, 81, 324, 1215: 1641.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 2, 3, 5 and Straight from the Book ch. 2 (original problem)</p></div>

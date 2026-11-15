@@ -1,0 +1,109 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 36</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 36: Unit 36: Coordinates, distance, lines and circles</h1><p class=ref>Book: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16 (25 problems)<br>Rusczyk, AoPS Vol. 1, chapters 15-16 (Areas; The Power of Coordinates), printed pp. 136-154.</p>
+<h2>Reading</h2>
+<h3>1. Distance, midpoint and slope</h3><p>Coordinates turn geometry into algebra. The <b>distance</b> between (x₁, y₁) and (x₂, y₂) is √((x₂ − x₁)² + (y₂ − y₁)²), the Pythagorean theorem in disguise: from (1, 2) to (4, 6) it is √(9 + 16) = 5. The <b>midpoint</b> is the average of the coordinates: ((1 + 7)/2, (2 + 10)/2) = (4, 6) for the segment from (1, 2) to (7, 10). The <b>slope</b> of a line through two points is rise over run, (y₂ − y₁)/(x₂ − x₁); the slope from (1, 2) to (5, 6) is 1.</p><p><b>Parallel and perpendicular.</b> Parallel lines have equal slopes; perpendicular lines have slopes whose product is −1 (m and −1/m). The perpendicular bisector of the segment from (0, 0) to (6, 2) passes through the midpoint (3, 1) with slope −3, so its equation is y − 1 = −3(x − 3), i.e. 3x + y = 10.</p><p><b>Equations of lines.</b> Slope-intercept y = mx + b; point-slope y − y₁ = m(x − x₁); standard form ax + by = c. The line 2x + 3y = 12 meets the axes at (6, 0) and (0, 4), forming a triangle of area ½ · 6 · 4 = 12.</p><details class="try"><summary>Try it</summary><p>Find the equation of the line through (1, 2) and (5, 10).</p><p><b>Answer.</b> Slope 8/4 = 2, so y − 2 = 2(x − 1), i.e. y = 2x.</p></details>
+<h3>2. Distance from a point to a line</h3><p>The distance from the point (p, q) to the line ax + by = c is |ap + bq − c|/√(a² + b²). For the point (3, 4) and the line 3x + 4y = 5: |9 + 16 − 5|/5 = 4. For two parallel lines 3x + 4y = 5 and 3x + 4y = 20, the distance is |20 − 5|/5 = 3. The formula follows from projecting onto the normal direction (a, b).</p><p><b>Area of a triangle from coordinates.</b> For a triangle with vertices (0, 0), (6, 0), (2, 5) the area is ½ · 6 · 5 = 15. For general vertices use the shoelace formula. A triangle has area zero exactly when its three vertices are collinear, a useful test.</p><p><b>Reflections.</b> Reflecting (3, 1) over the line y = x swaps the coordinates, giving (1, 3); over the x-axis gives (3, −1). To reflect over a general line, drop a perpendicular, find its foot, and double the displacement.</p><details class="try"><summary>Try it</summary><p>Find the distance from (2, 1) to the line x + y = 7.</p><p><b>Answer.</b> |2 + 1 − 7|/√2 = 4/√2 = 2√2.</p></details>
+<h3>3. Circles</h3><p>The circle with centre (h, k) and radius r has equation (x − h)² + (y − k)² = r². The circle (x − 2)² + (y + 1)² = 25 has centre (2, −1) and radius 5, and passes through (5, 3) since 9 + 16 = 25. The <b>tangent</b> at (5, 3) is perpendicular to the radius, whose direction is (3, 4), so its equation is 3x + 4y = 27; the distance from the centre to this line is |6 − 4 − 27|/5 = 5, equal to the radius, as a tangent requires.</p><p><b>Circle through three points.</b> The circle through (0, 0), (4, 0), (0, 2) has centre (2, 1) (found as the intersection of the perpendicular bisectors x = 2 and y = 1) and r² = 5; each of the three points is at squared distance 5 from the centre. A right triangle's circumcentre is the midpoint of its hypotenuse: for (0, 0), (6, 0), (0, 8) the circumcentre is (3, 4) and the radius 5.</p><p><b>Line meets circle.</b> Substitute: for y = x + 1 and x² + y² = 13 we get x² + (x + 1)² = 13, so 2x² + 2x − 12 = 0, x² + x − 6 = 0, and x = 2 or x = −3: the points (2, 3) and (−3, −2). The discriminant tells how many intersection points: positive gives two, zero a tangent, negative none.</p><details class="try"><summary>Try it</summary><p>Find the centre and radius of x² + y² − 6x + 4y − 12 = 0.</p><p><b>Answer.</b> Complete the squares: (x − 3)² + (y + 2)² = 25. Centre (3, −2), radius 5.</p></details>
+<h3>4. A longer problem</h3><p><b>Problem.</b> Triangle ABC has A = (0, 0), B = (8, 0), C = (2, 6). Find (a) the area, (b) the circumcentre and circumradius, (c) the distance from C to the line through A and B, and (d) the equation of the median from A.</p><p><b>Solution.</b> (a) Base 8, height 6: area 24. (b) The perpendicular bisector of AB is x = 4. The perpendicular bisector of AC: midpoint (1, 3), slope of AC is 3 so perpendicular slope −1/3: y − 3 = −(x − 1)/3. At x = 4, y = 3 − 1 = 2. The circumcentre is (4, 2) and R = √(16 + 4) = √20; check with C: (2 − 4)² + (6 − 2)² = 20 ✓. (c) 6. (d) The midpoint of BC is (5, 3), so the median has slope 3/5 and equation y = 3x/5.</p><p><b>Reflection.</b> Every step came from one of the tools above. If an answer can be checked by substituting a given point (as C into the circle), do it.</p>
+<h3>5. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Forgetting the square root in the distance formula. (2) Using slope m instead of −1/m for perpendicular lines. (3) Sign errors when completing the square. (4) Dividing by zero for vertical lines (their slope is undefined; use x = c).</p><p><b>Checks.</b> Substitute known points into the equation. Check that the circumcentre is equidistant from all three vertices. Draw a quick sketch.</p><p><b>How to practise.</b> Sketch every problem. In Unlimited practice, rotate the line, distance and circle families.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find the distance between (1, 2) and (13, 7).</p><details><summary>Hint</summary>Distance formula.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Distance formula</summary><p>√(12² + 5²) = √169 = 13.</p></details>
+<details><summary>Method: Right triangle</summary><p>The points form the opposite corners of a 12 by 5 rectangle, so the distance is the hypotenuse of a 5-12-13 triangle.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem p2.</b> Find the midpoint of (−4, 9) and (10, 3). Answer as x, y.</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>3, 6</details>
+<details><summary>Method: Average</summary><p>((−4 + 10)/2, (9 + 3)/2) = (3, 6).</p></details>
+<details><summary>Method: Walk halfway</summary><p>From (−4, 9) move half of (14, −6) = (7, −3): (3, 6).</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem p3.</b> Find the slope of the line through (2, 3) and (8, 11) as a fraction.</p><details><summary>Hint</summary>Rise over run.</details><details><summary>Answer</summary>4/3</details>
+<details><summary>Method: Slope formula</summary><p>(11 − 3)/(8 − 2) = 8/6 = 4/3.</p></details>
+<details><summary>Method: Step picture</summary><p>Moving 6 units right raises the line by 8, so the slope is 8/6 = 4/3.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem p4.</b> A line has slope −2 and passes through (1, 5). Where does it cross the y-axis (give the y-intercept)?</p><details><summary>Hint</summary>y − 5 = −2(x − 1).</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Point-slope</summary><p>y − 5 = −2(x − 1) gives y = −2x + 7, so the intercept is 7.</p></details>
+<details><summary>Method: Walk back</summary><p>Going from x = 1 back to x = 0 (one unit left) raises y by 2: 5 + 2 = 7.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem p5.</b> Find the radius of the circle x² + y² − 6x + 8y = 0.</p><details><summary>Hint</summary>Complete the squares.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Complete the square</summary><p>(x − 3)² − 9 + (y + 4)² − 16 = 0, so (x − 3)² + (y + 4)² = 25. Radius 5.</p></details>
+<details><summary>Method: Through the origin</summary><p>The circle passes through the origin and its centre is (3, −4), so the radius is the distance √(9 + 16) = 5.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem p6.</b> Find the area of the triangle with vertices (0, 0), (10, 0) and (4, 7).</p><details><summary>Hint</summary>Base 10 and height 7.</details><details><summary>Answer</summary>35</details>
+<details><summary>Method: Base and height</summary><p>The base on the x-axis is 10 and the height is 7: 10·7/2 = 35.</p></details>
+<details><summary>Method: Determinant formula</summary><p>|10·7 − 0·4|/2 = 35.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem p7.</b> Find the distance from the origin to the line 3x + 4y = 25.</p><details><summary>Hint</summary>Find the closest point.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Distance formula</summary><p>|25|/√(3² + 4²) = 25/5 = 5.</p></details>
+<details><summary>Method: Perpendicular</summary><p>The perpendicular from the origin has direction (3, 4); the point (3, 4) lies on the line (9 + 16 = 25), and its distance from the origin is 5.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem p8.</b> Find the intersection of y = 2x + 1 and y = −x + 7. Answer as x, y.</p><details><summary>Hint</summary>Set the two expressions equal.</details><details><summary>Answer</summary>2, 5</details>
+<details><summary>Method: Substitute</summary><p>2x + 1 = −x + 7 gives x = 2, then y = 5.</p></details>
+<details><summary>Method: Check</summary><p>2·2 + 1 = 5 and −2 + 7 = 5.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem p9.</b> Find the area of the triangle bounded by the axes and the line 3x + 4y = 24.</p><details><summary>Hint</summary>Intercepts.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Intercepts</summary><p>x-intercept 8 and y-intercept 6, so the area is 8·6/2 = 24.</p></details>
+<details><summary>Method: Slope</summary><p>The line runs from (8, 0) to (0, 6), a right triangle with legs 8 and 6.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem p10.</b> How many points with whole-number coordinates lie inside or on the circle x² + y² = 25?</p><details><summary>Hint</summary>For each x from −5 to 5 count the y values.</details><details><summary>Answer</summary>81</details>
+<details><summary>Method: Count by column</summary><p>x = 0: y from −5 to 5 (11); x = ±1: |y| ≤ 4 (9 each); x = ±2: |y| ≤ 4 (9 each); x = ±3: |y| ≤ 4 (9 each); x = ±4: |y| ≤ 3 (7 each); x = ±5: y = 0 (1 each). 11 + 2(9 + 9 + 9 + 7 + 1) = 81.</p></details>
+<details><summary>Method: Computer check</summary><p>Testing all 121 candidate points gives 81.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem x11.</b> Find the distance between (−2, 3) and (4, −5).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Formula</summary><p>√(36 + 64) = 10.</p></details>
+<details><summary>Method: Triple</summary><p>The legs 6 and 8 form a 3-4-5 triangle scaled by 2.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem x12.</b> What is the slope of the line 2x + 3y = 12?</p><details><summary>Hint</summary>Solve for y.</details><details><summary>Answer</summary>-2/3</details>
+<details><summary>Method: Rearrange</summary><p>y = −2x/3 + 4, slope −2/3.</p></details>
+<details><summary>Method: Points</summary><p>(0, 4) and (6, 0) give slope −4/6 = −2/3.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem x13.</b> The lines y = 2x − 1 and x + y = 8 meet at a point (x, y). Find xy.</p><details><summary>Hint</summary>Substitute.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Substitution</summary><p>x + 2x − 1 = 8 gives x = 3 and y = 5, so xy = 15.</p></details>
+<details><summary>Method: Check</summary><p>5 = 2 · 3 − 1 and 3 + 5 = 8.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem x14.</b> Find x + y for the midpoint of (3, 7) and (9, −1).</p><details><summary>Hint</summary>Average.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Average</summary><p>The midpoint is (6, 3), sum 9.</p></details>
+<details><summary>Method: Total</summary><p>The endpoint sums 10 and 8 average to 9.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem x15.</b> Find the distance from the origin to the line 5x + 12y = 60.</p><details><summary>Hint</summary>|c|/√(a² + b²).</details><details><summary>Answer</summary>60/13</details>
+<details><summary>Method: Formula</summary><p>60/13.</p></details>
+<details><summary>Method: Area</summary><p>The intercepts are (12, 0) and (0, 5), giving a 5-12-13 triangle of area 30, and the altitude to the hypotenuse is 60/13.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem x16.</b> Find the area of the triangle with vertices (1, 1), (5, 1) and (3, 7).</p><details><summary>Hint</summary>Base and height.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Base-height</summary><p>The base is 4 and the height is 6: 12.</p></details>
+<details><summary>Method: Shoelace</summary><p>|1·1 + 5·7 + 3·1 − (1·5 + 1·3 + 7·1)|/2 = |39 − 15|/2 = 12.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem x17.</b> How many lattice points lie on the circle x² + y² = 25?</p><details><summary>Hint</summary>Find all integer solutions.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: List</summary><p>(±5, 0), (0, ±5), (±3, ±4), (±4, ±3): 4 + 8 = 12.</p></details>
+<details><summary>Method: Check</summary><p>9 + 16 = 25.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem x18.</b> A line has slope −1 and passes through (2, 3). Where does it meet the x-axis? Give the x-coordinate.</p><details><summary>Hint</summary>y − 3 = −(x − 2).</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Solve</summary><p>0 − 3 = −(x − 2) gives x = 5.</p></details>
+<details><summary>Method: Intercepts</summary><p>The line is x + y = 5.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem x19.</b> Find the distance between (1, 2) and (7, 10).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Formula</summary><p>√(6² + 8²) = √100 = 10.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 6 and 8 form a right triangle with hypotenuse 10 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem x20.</b> Find the slope of the line through (1, 2) and (5, 10).</p><details><summary>Hint</summary>Rise over run.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Formula</summary><p>(10 − 2)/(5 − 1) = 2.</p></details>
+<details><summary>Method: Line equation</summary><p>The line y = 2·x + 0 passes through both points, so its slope is 2.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem x21.</b> Find the sum of the coordinates of the midpoint of (-3, 4) and (9, -2).</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Average</summary><p>The midpoint is (3, 1), with sum 4.</p></details>
+<details><summary>Method: Vector</summary><p>Start at (-3, 4) and move half the way to (9, -2): (-3 + 6, 4 + -3) = (3, 1).</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem x22.</b> Find the area of the triangle with vertices (-2, 1), (4, -3) and (5, 6).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Shoelace</summary><p>|-2(-3 − 6) + 4(6 − 1) + 5(1 − -3)|/2 = 29.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (6, -4) and (7, 5); half the absolute value of 6 · 5 − -4 · 7 is 29.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem x23.</b> How many pairs of positive integers (x, y) satisfy 6x + 11y = 150?</p><details><summary>Hint</summary>Test values of one variable.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: List</summary><p>The solutions are (3, 12), (14, 6), which is 2 pairs.</p></details>
+<details><summary>Method: Step pattern</summary><p>Solutions are spaced by (11, −6) since gcd(6, 11) = 1, so they form a short arithmetic list: 2 in total.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem x24.</b> Find the sum of all real solutions of |5x + 2| = 13.</p><details><summary>Hint</summary>Split into two cases.</details><details><summary>Answer</summary>-4/5</details>
+<details><summary>Method: Cases</summary><p>5x + 2 = 13 gives x = 11/5, and 5x + 2 = −13 gives x = -3. Sum -4/5.</p></details>
+<details><summary>Method: Symmetry</summary><p>The solutions are symmetric about the point where 5x + 2 = 0, i.e. x = -2/5, so their sum is -4/5.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>
+<div class=p><p><b>Problem x25.</b> Find the distance between (-3, 4) and (2, 16).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Formula</summary><p>√(5² + 12²) = √169 = 13.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 5 and 12 form a right triangle with hypotenuse 13 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 15-16</p></div>

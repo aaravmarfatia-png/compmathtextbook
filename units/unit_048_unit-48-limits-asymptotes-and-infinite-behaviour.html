@@ -1,0 +1,111 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 48</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 48: Unit 48: Limits, asymptotes and infinite behaviour</h1><p class=ref>Book: Rusczyk, Art of Problem Solving Vol. 2, ch. 8 (25 problems)<br>Rusczyk, AoPS Vol. 2, chapter 8 (Taking it to the Limit), printed pp. 76-87.</p>
+<h2>Reading</h2>
+<h3>1. Limits at a point</h3><p>The <b>limit</b> of f(x) as x approaches a is the value that f(x) gets close to, even if f(a) is undefined. <b>Removable discontinuity.</b> (x² − 1)/(x − 1) is undefined at x = 1, but for x ≠ 1 it equals x + 1, so the limit is 2. <b>Rationalising.</b> (√(x + 4) − 2)/x: multiply by the conjugate to get x/(x(√(x + 4) + 2)) = 1/(√(x + 4) + 2), with limit 1/4 at x = 0. <b>Factoring.</b> (x² − 9)/(x² − 5x + 6) = (x − 3)(x + 3)/((x − 3)(x − 2)) = (x + 3)/(x − 2), with limit 6 at x = 3 (all these limits were confirmed by computer algebra).</p><p><b>Two famous limits.</b> sin x/x → 1 as x → 0 and (1 + 1/x)ˣ → e ≈ 2.718 as x → ∞.</p><details class="try"><summary>Try it</summary><p>Find lim as x → 2 of (x² − 4)/(x − 2).</p><p><b>Answer.</b> x + 2 → 4.</p></details>
+<h3>2. Limits at infinity and horizontal asymptotes</h3><p>For rational functions compare the degrees. (3x² + 1)/(x² − 4) → 3 as x → ∞ (ratio of leading coefficients, since the degrees are equal). If the numerator has lower degree the limit is 0; if higher, the function grows without bound: (x³ + 1)/(x² + x) → ∞. A <b>horizontal asymptote</b> y = L means f(x) → L as x → ±∞. For (2x − 1)/(x + 4) the horizontal asymptote is y = 2.</p><p><b>Differences of roots.</b> √(x² + x) − x → 1/2 as x → ∞: multiply and divide by the conjugate to get x/(√(x² + x) + x) → 1/2. A common trap is to claim the difference tends to 0 because both terms are 'about' x.</p><details class="try"><summary>Try it</summary><p>Find the limit of (5x³ − x)/(2x³ + 7) as x → ∞.</p><p><b>Answer.</b> 5/2.</p></details>
+<h3>3. Vertical and slant asymptotes</h3><p>A <b>vertical asymptote</b> occurs where the denominator is zero but the numerator is not: (2x + 1)/(x − 3) → +∞ as x → 3 from the right and −∞ from the left. A <b>slant asymptote</b> occurs when the numerator's degree is exactly one more than the denominator's: (x² + 1)/(x − 1) = x + 1 + 2/(x − 1), so the line y = x + 1 is the slant asymptote (long division or partial fractions reveals it).</p><p><b>Infinite series.</b> A geometric series 1 + 1/2 + 1/4 + … has limit 2: the partial sums 2 − 1/2ⁿ approach 2.</p><details class="try"><summary>Try it</summary><p>Find all asymptotes of f(x) = (x² − 1)/(x − 2).</p><p><b>Answer.</b> Vertical x = 2. Slant: x² − 1 = (x − 2)(x + 2) + 3, so y = x + 2.</p></details>
+<h3>4. A longer problem</h3><p><b>Problem.</b> Sketch the graph features of f(x) = (2x² + 3x − 2)/(x² − 1): intercepts, asymptotes, any hole.</p><p><b>Solution.</b> Numerator 2x² + 3x − 2 = (2x − 1)(x + 2), denominator (x − 1)(x + 1): no common factor, so no holes. x-intercepts at x = 1/2 and x = −2; y-intercept f(0) = 2. Vertical asymptotes x = 1 and x = −1. Horizontal asymptote y = 2.</p><p><b>Reflection.</b> Factor first: a common factor would create a hole rather than an asymptote.</p>
+<h3>5. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Substituting before simplifying a 0/0 form. (2) Cancelling terms rather than factors. (3) Confusing holes with asymptotes. (4) Believing 'infinity minus infinity' is zero.</p><p><b>Checks.</b> Evaluate the function at numbers close to the limit point.</p><p><b>How to practise.</b> Always factor and simplify first. In Unlimited practice, rotate the limit and asymptote families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Limit at a point.</b> (x² − 9)/(x − 3) = x + 3 for x ≠ 3, so the limit as x → 3 is 6. <b>At infinity.</b> Divide by the highest power: (3x² + 1)/(x² − 5) → 3 as x → ∞. <b>Asymptotes.</b> For (x² − 1)/(x − 2), long division gives x + 2 + 3/(x − 2), so there is a slant asymptote y = x + 2 and a vertical asymptote x = 2.</p><details class="try"><summary>Try it<p>Find lim (2x + 1)/(5x − 3) as x → ∞.</p><p><b>Answer.</b> 2/5.</p></details><details class="try"><summary>Try it<p>Find the vertical asymptote(s) of (x + 1)/(x² − 4).</p><p><b>Answer.</b> x = 2 and x = −2.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Find lim (√(x² + x) − x) as x → ∞. <b>Solution.</b> Multiply by the conjugate: (x² + x − x²)/(√(x² + x) + x) = x/(√(x² + x) + x) = 1/(√(1 + 1/x) + 1) → 1/2.</p><p><b>Reflection.</b> A difference of large quantities needs a conjugate or a common denominator.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find the limit of (3x² + 1)/(x² − 5) as x gets very large.</p><details><summary>Hint</summary>Divide by x².</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Divide by x²</summary><p>(3 + 1/x²)/(1 − 5/x²) → 3/1 = 3.</p></details>
+<details><summary>Method: Large values</summary><p>At x = 1000: 3000001/999995 ≈ 3.00001.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem p2.</b> Find the limit of (x² − 4)/(x − 2) as x approaches 2.</p><details><summary>Hint</summary>Factor the top.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Cancel</summary><p>(x − 2)(x + 2)/(x − 2) = x + 2 → 4.</p></details>
+<details><summary>Method: Numbers</summary><p>At x = 2.001: 4.001.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem p3.</b> What is the horizontal asymptote y = c of f(x) = (5x + 1)/(2x − 3)? Give c as a fraction.</p><details><summary>Hint</summary>Ratio of leading coefficients.</details><details><summary>Answer</summary>5/2</details>
+<details><summary>Method: Leading terms</summary><p>For large x the function is about 5x/2x = 5/2.</p></details>
+<details><summary>Method: Divide</summary><p>(5 + 1/x)/(2 − 3/x) → 5/2.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem p4.</b> Where is the vertical asymptote of f(x) = 1/(x − 7)? Give x.</p><details><summary>Hint</summary>Denominator zero.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Zero of the denominator</summary><p>x − 7 = 0 at x = 7, and the numerator is not zero there.</p></details>
+<details><summary>Method: Numbers</summary><p>f(7.001) = 1000 and f(6.999) = −1000, blowing up on both sides.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem p5.</b> Find the sum of the infinite series 1 + 1/3 + 1/9 + 1/27 + …</p><details><summary>Hint</summary>a/(1 − r).</details><details><summary>Answer</summary>3/2</details>
+<details><summary>Method: Geometric series</summary><p>1/(1 − 1/3) = 3/2.</p></details>
+<details><summary>Method: Partial sums</summary><p>1, 4/3, 13/9, 40/27 … approach 1.5.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem p6.</b> What is 1000 × (√(x² + 1) − x) at x = 500, rounded to the nearest whole number?</p><details><summary>Hint</summary>Multiply by the conjugate: 1/(√(x² + 1) + x).</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Conjugate</summary><p>√(x² + 1) − x = 1/(√(x² + 1) + x). At x = 500 this is about 1/1000, so 1000 times it is about 1.</p></details>
+<details><summary>Method: Direct</summary><p>√250001 ≈ 500.001, so the difference ≈ 0.001.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem p7.</b> Find the limit of (2ⁿ + 3ⁿ)/(3ⁿ) as n gets large.</p><details><summary>Hint</summary>Divide by 3ⁿ.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Divide</summary><p>(2/3)ⁿ + 1 → 1.</p></details>
+<details><summary>Method: Numbers</summary><p>n = 20: 1.0003.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem p8.</b> What value does 0.999… equal?</p><details><summary>Hint</summary>Geometric series 9/10 + 9/100 + …</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Series</summary><p>(9/10)/(1 − 1/10) = 1.</p></details>
+<details><summary>Method: Subtraction</summary><p>10x − x = 9.999… − 0.999… = 9, so x = 1.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem p9.</b> How many vertical asymptotes does (x + 1)/((x − 1)(x + 1)(x − 4)) have?</p><details><summary>Hint</summary>Cancel common factors first.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Cancel</summary><p>The factor x + 1 cancels (a gap, not an asymptote). The remaining denominator (x − 1)(x − 4) gives asymptotes at x = 1 and x = 4: two.</p></details>
+<details><summary>Method: Test</summary><p>Near x = −1 the simplified fraction 1/((x − 1)(x − 4)) is close to 1/10, so there is no blow-up there.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem x10.</b> Find the limit of (3x² + 1)/(x² − 2) as x → ∞.</p><details><summary>Hint</summary>Divide by x².</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Divide</summary><p>The ratio tends to 3/1 = 3.</p></details>
+<details><summary>Method: Leading terms</summary><p>Only the leading coefficients matter.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem x11.</b> Where is the vertical asymptote of 1/(x − 4)? Give x.</p><details><summary>Hint</summary>Denominator zero.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Zero</summary><p>The denominator vanishes at x = 4.</p></details>
+<details><summary>Method: Behaviour</summary><p>The function blows up near x = 4.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem x12.</b> Find the horizontal asymptote y = c of (2x + 1)/(x − 3). Give c.</p><details><summary>Hint</summary>Leading coefficients.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Limit</summary><p>As x → ∞ the ratio tends to 2.</p></details>
+<details><summary>Method: Division</summary><p>(2x + 1)/(x − 3) = 2 + 7/(x − 3) → 2.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem x13.</b> Evaluate the limit of (x² − 16)/(x − 4) as x → 4.</p><details><summary>Hint</summary>Factor.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Factor</summary><p>x + 4 → 8.</p></details>
+<details><summary>Method: Derivative</summary><p>It is the derivative of x² at 4.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem x14.</b> Evaluate the limit of √(x² + x) − x as x → ∞.</p><details><summary>Hint</summary>Multiply by the conjugate.</details><details><summary>Answer</summary>1/2</details>
+<details><summary>Method: Conjugate</summary><p>x/(√(x² + x) + x) → 1/2.</p></details>
+<details><summary>Method: Numerical</summary><p>At x = 10000 the value is 0.49998.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem x15.</b> Evaluate the limit of n/(n + 1) as n → ∞.</p><details><summary>Hint</summary>Divide by n.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Divide</summary><p>1/(1 + 1/n) → 1.</p></details>
+<details><summary>Method: Values</summary><p>1/2, 2/3, 3/4, … approach 1.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem x16.</b> How many vertical asymptotes does 1/((x − 1)(x + 2)(x − 5)) have?</p><details><summary>Hint</summary>Distinct zeros of the denominator.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Zeros</summary><p>At x = 1, −2 and 5.</p></details>
+<details><summary>Method: Numerator</summary><p>The numerator is constant, so none cancels.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem x17.</b> Find the slope of the slant asymptote of (x² + 1)/(x − 1).</p><details><summary>Hint</summary>Divide.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Division</summary><p>(x² + 1)/(x − 1) = x + 1 + 2/(x − 1), so the asymptote is y = x + 1 with slope 1.</p></details>
+<details><summary>Method: Limit</summary><p>The slope is lim f(x)/x = 1.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem x18.</b> Evaluate 1/(1·2) + 1/(2·3) + … + 1/(59·60).</p><details><summary>Hint</summary>1/(k(k + 1)) = 1/k − 1/(k + 1).</details><details><summary>Answer</summary>59/60</details>
+<details><summary>Method: Telescoping</summary><p>Each term is 1/k − 1/(k + 1); everything cancels except 1 − 1/60 = 59/60.</p></details>
+<details><summary>Method: Small cases</summary><p>Up to n = 1, 2, 3 the sums are 1/2, 2/3, 3/4, so up to n = 59 the sum is 59/60.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem x19.</b> Find the sum of the first 10 terms of the geometric sequence 2, 4, 8, …</p><details><summary>Hint</summary>a(rⁿ − 1)/(r − 1).</details><details><summary>Answer</summary>2046</details>
+<details><summary>Method: Formula</summary><p>2(2^10 − 1)/(2 − 1) = 2046.</p></details>
+<details><summary>Method: Add the terms</summary><p>2 + 4 + 8 + 16 + 32 + 64 + 128 + 256 + 512 + 1024 = 2046.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem x20.</b> If x + 1/x = 9, find x² + 1/x².</p><details><summary>Hint</summary>Square both sides.</details><details><summary>Answer</summary>79</details>
+<details><summary>Method: Square</summary><p>(x + 1/x)² = x² + 2 + 1/x², so x² + 1/x² = 81 − 2 = 79.</p></details>
+<details><summary>Method: Recurrence</summary><p>With pₙ = xⁿ + x⁻ⁿ we have p₀ = 2, p₁ = 9 and p₂ = 9 · p₁ − p₀ = 79.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem x21.</b> What is the smallest value of x + 64/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: AM-GM</summary><p>x + 64/x ≥ 2√64 = 16, with equality when x = 8.</p></details>
+<details><summary>Method: Table</summary><p>x = 7, 8, 9 give 113/7, 16, 145/9; the minimum is 16 at x = 8.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem x22.</b> Find 1² + 2² + … + 20².</p><details><summary>Hint</summary>n(n + 1)(2n + 1)/6.</details><details><summary>Answer</summary>2870</details>
+<details><summary>Method: Formula</summary><p>20 · 21 · 41/6 = 2870.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100 + 121 + 144 + 169 + 196 + 225 + 256 + 289 + 324 + 361 + 400 = 2870.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem x23.</b> Evaluate 1/(1·2) + 1/(2·3) + … + 1/(79·80).</p><details><summary>Hint</summary>1/(k(k + 1)) = 1/k − 1/(k + 1).</details><details><summary>Answer</summary>79/80</details>
+<details><summary>Method: Telescoping</summary><p>Each term is 1/k − 1/(k + 1); everything cancels except 1 − 1/80 = 79/80.</p></details>
+<details><summary>Method: Small cases</summary><p>Up to n = 1, 2, 3 the sums are 1/2, 2/3, 3/4, so up to n = 79 the sum is 79/80.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem x24.</b> Find the sum of the first 6 terms of the geometric sequence 7, 14, 28, …</p><details><summary>Hint</summary>a(rⁿ − 1)/(r − 1).</details><details><summary>Answer</summary>441</details>
+<details><summary>Method: Formula</summary><p>7(2^6 − 1)/(2 − 1) = 441.</p></details>
+<details><summary>Method: Add the terms</summary><p>7 + 14 + 28 + 56 + 112 + 224 = 441.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>
+<div class=p><p><b>Problem x25.</b> If x + 1/x = 10, find x² + 1/x².</p><details><summary>Hint</summary>Square both sides.</details><details><summary>Answer</summary>98</details>
+<details><summary>Method: Square</summary><p>(x + 1/x)² = x² + 2 + 1/x², so x² + 1/x² = 100 − 2 = 98.</p></details>
+<details><summary>Method: Recurrence</summary><p>With pₙ = xⁿ + x⁻ⁿ we have p₀ = 2, p₁ = 10 and p₂ = 10 · p₁ − p₀ = 98.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 8</p></div>

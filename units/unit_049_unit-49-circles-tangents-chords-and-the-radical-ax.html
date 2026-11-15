@@ -1,0 +1,111 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 49</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 49: Unit 49: Circles: tangents, chords and the radical axis</h1><p class=ref>Book: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2 (25 problems)<br>Chen, Euclidean Geometry in Mathematical Olympiads, chapter 2 (Circles).</p>
+<h2>Reading</h2>
+<h3>1. Tangents</h3><p>A tangent to a circle is perpendicular to the radius at the point of contact. The two tangent segments from an outside point P to a circle are equal, and if O is the centre and r the radius, the tangent length is √(PO² − r²): for PO = 13, r = 5 it is 12. The line from P through O bisects the angle between the tangents.</p><p><b>Two circles.</b> For circles with radii r₁ and r₂ whose centres are d apart, a <b>common external tangent</b> has length √(d² − (r₁ − r₂)²) and a <b>common internal tangent</b> has length √(d² − (r₁ + r₂)²). With r₁ = 3, r₂ = 5, d = 8 (touching externally) the external tangent is √(64 − 4) = 2√15 = 2√(r₁r₂). With d = 10 the internal tangent has length √(100 − 64) = 6.</p><details class="try"><summary>Try it</summary><p>From a point 17 units from the centre of a circle of radius 8 a tangent is drawn. How long is it?</p><p><b>Answer.</b> √(289 − 64) = 15.</p></details>
+<h3>2. Chords</h3><p>A perpendicular from the centre to a chord bisects it. A chord at distance 3 from the centre of a circle of radius 5 has length 2√(25 − 9) = 8. Chords equidistant from the centre have equal length. Equal chords subtend equal arcs and equal angles at the centre.</p><p><b>Two circles intersecting.</b> The line joining the two intersection points is the <b>common chord</b>; it is perpendicular to the line of centres. Two circles of radius 5 with centres 6 apart have a common chord of length 2√(25 − 9) = 8.</p><details class="try"><summary>Try it</summary><p>A chord of length 24 is in a circle of radius 13. How far is it from the centre?</p><p><b>Answer.</b> √(169 − 144) = 5.</p></details>
+<h3>3. The radical axis</h3><p>The <b>power</b> of a point P with respect to a circle with centre O and radius r is PO² − r². For two circles, the set of points with <i>equal</i> power with respect to both is a straight line, the <b>radical axis</b>. For x² + y² = 25 and (x − 6)² + y² = 9, equal power means x² + y² − 25 = (x − 6)² + y² − 9, which simplifies to 12x − 36 = 16, i.e. x = 13/3. At (13/3, 0) the power with respect to each circle is −56/9 (negative, so inside both).</p><p><b>Properties.</b> The radical axis is perpendicular to the line of centres. If the circles intersect, it is the line through the intersection points (the common chord). For three circles the three radical axes meet at a point, the <b>radical centre</b> (or are parallel).</p><p><b>Using it.</b> To prove that three points are collinear, show that they all have equal power with respect to two circles. To prove tangent lengths equal from a point on the radical axis, use that its power is the squared tangent length.</p><details class="try"><summary>Try it</summary><p>Find the radical axis of x² + y² = 4 and x² + y² − 6x = 0.</p><p><b>Answer.</b> Equal power: x² + y² − 4 = x² + y² − 6x, so 6x = 4 and x = 2/3.</p></details>
+<h3>4. A longer problem</h3><p><b>Problem.</b> Two circles with radii 5 and 3 have centres 7 apart. (a) Do they intersect? (b) Find the length of their common chord. (c) Find the length of a common external tangent.</p><p><b>Solution.</b> (a) The circles intersect in two points exactly when |5 − 3| < d < 5 + 3, i.e. 2 < 7 < 8, which holds. (b) Place the centres at (0, 0) and (7, 0). Radical axis: x² + y² − 25 = (x − 7)² + y² − 9 gives 14x = 65, x = 65/14. Then y² = 25 − (65/14)² = 25 − 4225/196 = 675/196, so the half-chord is √675/14 = 15√3/14 and the chord is 15√3/7. (c) √(49 − 4) = √45 = 3√5.</p><p><b>Reflection.</b> The radical axis converts a two-circle problem into a line-and-circle problem.</p>
+<h3>5. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Using the distance between centres instead of the tangent length. (2) Mixing up internal and external tangent formulas. (3) Forgetting the power is negative inside a circle. (4) Not squaring correctly when computing half-chords.</p><p><b>Checks.</b> Check the right angle at the point of tangency with the Pythagorean theorem. Check chord lengths with the triangle formed by the centre.</p><p><b>How to practise.</b> Draw the radii to points of tangency. In Unlimited practice, rotate the tangent and chord families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Radical axis.</b> For the circles x² + y² = 25 and (x − 6)² + y² = 9 subtract the equations x² + y² − 25 = 0 and (x − 6)² + y² − 9 = 0: the difference is 12x − 52 = 0, so the radical axis is x = 13/3. At that x we get y² = 25 − 169/9 = 56/9, so the circles meet in two points. <b>Power of a point.</b> A point P outside a circle at distance d from the centre has power d² − r² = (tangent length)².</p><details class="try"><summary>Try it<p>A point is 13 from the centre of a circle of radius 5. How long is the tangent from it?</p><p><b>Answer.</b> 12.</p></details><details class="try"><summary>Try it<p>Chords AB and CD meet inside a circle at P with PA = 4, PB = 3, PC = 2. Find PD.</p><p><b>Answer.</b> PD = 4 · 3/2 = 6.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Two circles of radius 5 have centres 6 apart. Find the length of their common chord. <b>Solution.</b> The radical axis is the perpendicular bisector of the centres, at distance 3 from each. Half the chord is √(25 − 9) = 4, so the chord has length 8.</p><p><b>Reflection.</b> For equal circles the radical axis is the perpendicular bisector.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> A point P is 13 from the centre of a circle of radius 5. How long is a tangent from P to the circle?</p><details><summary>Hint</summary>The radius to the tangent point is perpendicular to the tangent.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Right triangle</summary><p>The triangle O, tangent point, P is right-angled with legs 5 and tangent length t and hypotenuse 13: t = √(169 − 25) = 12.</p></details>
+<details><summary>Method: Power of a point</summary><p>The power of P is 13² − 5² = 144 = t², so t = 12.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem p2.</b> Two circles with radii 4 and 9 are externally tangent. How long is their common external tangent segment (between the two points of tangency)?</p><details><summary>Hint</summary>Drop a perpendicular from the smaller centre.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Right triangle</summary><p>The centres are 13 apart; the difference in radii is 5; the external tangent has length √(13² − 5²) = 12.</p></details>
+<details><summary>Method: Formula</summary><p>For tangent circles the external tangent length is 2√(rR) = 2√36 = 12.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem p3.</b> Circles of radii 3 and 5 have centres 10 apart. How long is a common internal tangent segment?</p><details><summary>Hint</summary>The sum of the radii is the other leg.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Right triangle</summary><p>√(10² − (3 + 5)²) = √36 = 6.</p></details>
+<details><summary>Method: Picture</summary><p>Move one centre along the tangent: a right triangle with hypotenuse 10 and one leg r₁ + r₂ = 8 remains.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem p4.</b> The circles x² + y² = 25 and (x − 8)² + y² = 9 have a radical axis (the set of points with equal power for both circles), which is a vertical line x = c. Find c.</p><details><summary>Hint</summary>Subtract the two equations.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Subtract</summary><p>Equal powers means x² + y² − 25 = (x − 8)² + y² − 9. Expanding, −25 = −16x + 64 − 9, so 16x = 80 and x = 5.</p></details>
+<details><summary>Method: Check</summary><p>The centres are 8 apart and the radii add to 5 + 3 = 8, so the circles touch at (5, 0). The radical axis of touching circles is the common tangent there, the line x = 5.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem p5.</b> A point is 10 from the centre of a circle of radius 6. What is the power of the point?</p><details><summary>Hint</summary>PO² − r².</details><details><summary>Answer</summary>64</details>
+<details><summary>Method: Definition</summary><p>100 − 36 = 64.</p></details>
+<details><summary>Method: Secant</summary><p>A line through the centre meets the circle at distances 4 and 16 from the point: 4·16 = 64.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem p6.</b> A circle has radius 13 and a chord lies 5 from the centre. How long is the chord?</p><details><summary>Hint</summary>Half-chord, distance and radius form a right triangle.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Right triangle</summary><p>Half the chord is √(169 − 25) = 12, so the chord is 24.</p></details>
+<details><summary>Method: Triples</summary><p>5-12-13 is a Pythagorean triple, so the half-chord is 12.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem p7.</b> Two circles of radius 5 have centres 6 apart. How long is their common chord?</p><details><summary>Hint</summary>The chord is perpendicular to the line of centres at its midpoint.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Right triangle</summary><p>The chord meets the line of centres 3 from each centre, and half the chord is √(25 − 9) = 4, so the chord is 8.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put the centres at (−3, 0) and (3, 0); the circles meet where x = 0, y² = 16, so y = ±4.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem p8.</b> Find the radius of the incircle of the right triangle with sides 5, 12, 13.</p><details><summary>Hint</summary>r = (a + b − c)/2 for a right triangle.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Right-triangle formula</summary><p>(5 + 12 − 13)/2 = 2.</p></details>
+<details><summary>Method: Area over semiperimeter</summary><p>Area 30, semiperimeter 15, so r = 30/15 = 2.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem p9.</b> For the 5-12-13 triangle find the radius of the excircle opposite the hypotenuse.</p><details><summary>Hint</summary>r_c = Area/(s − c).</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Formula</summary><p>Area 30 and s − c = 15 − 13 = 2, so r_c = 15.</p></details>
+<details><summary>Method: Tangent lengths</summary><p>The excircle touches the extended legs at distance s = 15 from the right-angle vertex, and since that vertex is the right angle the radius is also 15.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem x10.</b> The circles x² + y² = 25 and (x − 6)² + y² = 9 have a radical axis x = c. Find c.</p><details><summary>Hint</summary>Subtract the equations.</details><details><summary>Answer</summary>13/3</details>
+<details><summary>Method: Subtract</summary><p>x² − (x − 6)² = 25 − 9, so 12x − 36 = 16 and x = 13/3.</p></details>
+<details><summary>Method: Power</summary><p>The points of the axis have equal power to both circles.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem x11.</b> Find the length of a tangent from (10, 0) to the circle x² + y² = 36.</p><details><summary>Hint</summary>Power of a point.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Power</summary><p>The power is 100 − 36 = 64, so the tangent is 8.</p></details>
+<details><summary>Method: Right triangle</summary><p>√(10² − 6²) = 8.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem x12.</b> Two circles of radius 5 have centres 6 apart. How long is their common chord?</p><details><summary>Hint</summary>Half-chord from a right triangle.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Pythagoras</summary><p>The chord's midpoint is 3 from each centre, so half the chord is √(25 − 9) = 4 and the chord is 8.</p></details>
+<details><summary>Method: Radical axis</summary><p>The chord lies on the perpendicular bisector of the centres.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem x13.</b> Two circles of radii 4 and 9 have centres 15 apart. Find the square of the length of a common external tangent segment.</p><details><summary>Hint</summary>d² − (R − r)².</details><details><summary>Answer</summary>200</details>
+<details><summary>Method: Formula</summary><p>225 − 25 = 200.</p></details>
+<details><summary>Method: Right triangle</summary><p>The tangent segment is a leg of a right triangle with hypotenuse 15 and other leg 5.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem x14.</b> Find the power of the point (5, 0) with respect to the circle x² + y² = 9.</p><details><summary>Hint</summary>OP² − r².</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Formula</summary><p>25 − 9 = 16.</p></details>
+<details><summary>Method: Tangent</summary><p>The tangent length from that point is 4.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem x15.</b> A chord of length 24 lies in a circle of radius 13. How far is the chord from the centre?</p><details><summary>Hint</summary>Half-chord 12.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Pythagoras</summary><p>√(169 − 144) = 5.</p></details>
+<details><summary>Method: Triple</summary><p>5-12-13.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem x16.</b> A point is 17 from the centre of a circle of radius 8. Find the length of a tangent from it.</p><details><summary>Hint</summary>Right triangle.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Pythagoras</summary><p>√(289 − 64) = 15.</p></details>
+<details><summary>Method: Triple</summary><p>8-15-17.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem x17.</b> Two tangents are drawn from a point to a circle, and the minor arc between the points of contact is 120°. Find the angle between the tangents in degrees.</p><details><summary>Hint</summary>Tangent angle = 180° − arc.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Formula</summary><p>180 − 120 = 60.</p></details>
+<details><summary>Method: Quadrilateral</summary><p>The two radii form a 120° angle and two right angles, so the remaining angle is 360 − 90 − 90 − 120 = 60.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem x18.</b> A point is 13 from the centre of a circle of radius 5. How long is a tangent segment from the point?</p><details><summary>Hint</summary>The radius is perpendicular to the tangent.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Pythagoras</summary><p>√(13² − 5²) = √144 = 12.</p></details>
+<details><summary>Method: Power of a point</summary><p>The power of the point is 13² − 5² = 144, which is the tangent length squared, so 12.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem x19.</b> Chords AB and CD of a circle meet at P inside it with AP = 8, PB = 9 and CP = 12. Find PD.</p><details><summary>Hint</summary>Intersecting chords theorem.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Theorem</summary><p>AP · PB = CP · PD, so 8 · 9 = 12 · PD and PD = 6.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles APC and DPB are similar, so AP/DP = CP/BP, giving the same equation 8 · 9 = 12 · PD.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem x20.</b> From an external point P a tangent touches a circle at T with PT = 10, and a secant meets it at A and B with PA = 5. Find PB.</p><details><summary>Hint</summary>PT² = PA · PB.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Power of a point</summary><p>10² = 5 · PB, so PB = 20.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles PTA and PBT are similar, so PT/PA = PB/PT, giving PB = 10²/5 = 20.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem x21.</b> Find the circumradius of the triangle with sides 5, 5 and 8.</p><details><summary>Hint</summary>R = abc/(4K).</details><details><summary>Answer</summary>25/6</details>
+<details><summary>Method: Formula</summary><p>K = 12, so R = 200/(4 · 12) = 25/6.</p></details>
+<details><summary>Method: Law of sines</summary><p>The altitude to side 8 is 3, so sin of the adjacent angle is 3/5; then 2R = 5/3/5 gives R = 25/6.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem x22.</b> Find the inradius of the triangle with sides 6, 8 and 10.</p><details><summary>Hint</summary>r = K/s.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Formula</summary><p>The area is 24 and s = 12, so r = 2.</p></details>
+<details><summary>Method: Tangent lengths</summary><p>The tangent lengths from the vertices are 6, 4, 2; splitting the area into three triangles with height r gives K = r·s, so r = 2.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem x23.</b> A point is 17 from the centre of a circle of radius 8. How long is a tangent segment from the point?</p><details><summary>Hint</summary>The radius is perpendicular to the tangent.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Pythagoras</summary><p>√(17² − 8²) = √225 = 15.</p></details>
+<details><summary>Method: Power of a point</summary><p>The power of the point is 17² − 8² = 225, which is the tangent length squared, so 15.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem x24.</b> Chords AB and CD of a circle meet at P inside it with AP = 4, PB = 15 and CP = 10. Find PD.</p><details><summary>Hint</summary>Intersecting chords theorem.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Theorem</summary><p>AP · PB = CP · PD, so 4 · 15 = 10 · PD and PD = 6.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles APC and DPB are similar, so AP/DP = CP/BP, giving the same equation 4 · 15 = 10 · PD.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>
+<div class=p><p><b>Problem x25.</b> From an external point P a tangent touches a circle at T with PT = 12, and a secant meets it at A and B with PA = 6. Find PB.</p><details><summary>Hint</summary>PT² = PA · PB.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Power of a point</summary><p>12² = 6 · PB, so PB = 24.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles PTA and PBT are similar, so PT/PA = PB/PT, giving PB = 12²/6 = 24.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 2</p></div>

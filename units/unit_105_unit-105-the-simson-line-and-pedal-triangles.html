@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 105</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 105: Unit 105: The Simson line and pedal triangles</h1><p class=ref>Book: Coxeter &amp; Greitzer ch. 2; Chen ch. 1 (25 problems)<br>Coxeter &amp; Greitzer, Geometry Revisited, chapter 2 (the Simson line) and Chen, Euclidean Geometry in Mathematical Olympiads, chapter 1, worked in coordinates on the circle x² + y² = 25 with A = (5, 0), B = (0, 5), C = (−3, −4).</p>
+<h2>Reading</h2>
+<h3>1. The Simson line</h3><p>Let ABC be a triangle and P a point. Drop perpendiculars from P to the three side lines, with feet D, E, F. <b>The Simson line theorem:</b> D, E, F are collinear if and only if P lies on the circumcircle of ABC. The line is the <b>Simson line</b> of P.</p><p><b>Worked example.</b> Take A = (0, 0), B = (4, 0), C = (0, 3). The circumcentre is (2, 1.5) with radius 2.5. The point P = (4, 3) satisfies (4 − 2)² + (3 − 1.5)² = 4 + 2.25 = 6.25, so it is on the circumcircle. The feet: on AB (y = 0): (4, 0); on AC (x = 0): (0, 3); on BC (3x + 4y = 12): P − (12/25)(3, 4) = (2.56, 1.08). The first two lie on 3x + 4y = 12, and (2.56, 1.08) gives 7.68 + 4.32 = 12 ✓. They are collinear.</p><p><b>Why it works.</b> The cyclic quadrilaterals formed with the feet give equal angles that add up to a straight angle (Unit 96 on angle chasing).</p>
+<h3>2. The pedal triangle</h3><p>For a point P the triangle formed by the three feet of perpendiculars is the <b>pedal triangle</b>. It degenerates exactly when P is on the circumcircle. Its area is K(R² − OP²)/(4R²), where K is the area of ABC, R the circumradius and O the circumcentre.</p><p><b>Worked example.</b> If P = O, the pedal triangle is the medial triangle and the formula gives K/4 ✓. If P is the orthocentre of an acute triangle, the pedal triangle is the orthic triangle. If P is on the circle, OP = R and the area is 0 ✓ (the Simson line).</p><p><b>Side lengths.</b> The side of the pedal triangle opposite the foot on BC equals AP sin A.</p>
+<h3>3. Using these ideas</h3><p>The Simson line helps with problems like 'the feet of three perpendiculars are collinear; prove P lies on the circle', and the area formula turns questions about the maximum area of a pedal triangle into 'put P at O' (largest area K/4 when P is inside the circle).</p><p><b>Worked example.</b> A triangle has area 84 and circumradius 8.125 (the 13-14-15 triangle). For P at distance 5 from O the pedal area is 84 × (8.125² − 25)/(4 × 8.125²) = 84 × (66.02 − 25)/(264.06) = 84 × 0.1553 = 13.05.</p><p><b>The Simson line bisects</b> the segment joining P to the orthocentre H.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Dropping perpendiculars to the segments instead of the lines (the feet can be outside the sides). Forgetting that the theorem is an if-and-only-if.</p><p><b>Checks.</b> Always test with a right triangle where coordinates are easy.</p><p><b>Practice.</b> Draw the figure large and compute feet with coordinates once.</p>
+<h3>Worked examples with Try-its: The Simson line</h3><p>If P lies on the circumcircle of ABC, the feet of the perpendiculars from P to the three side lines are collinear: this is the <b>Simson line</b>. For the 13-14-15 triangle with P the point diametrically opposite A, namely (9, −15/4), the three feet are collinear (computed exactly with rational numbers). The converse also holds: if the feet are collinear, P is on the circumcircle.</p><details class="try"><summary>Try it<p>Where do the feet of the perpendiculars from P lie when P is a vertex of the triangle?</p><p><b>Answer.</b> Two feet coincide with P itself, and the third is the foot of the altitude, so the line is the altitude from that vertex.</p></details>
+<h3>Worked examples with Try-its: Pedal triangles</h3><p>The triangle formed by the three feet is the <b>pedal triangle</b> of P. Its area is |R² − OP²|/(4R²) times the area of ABC. When P = O this gives 1/4: the pedal triangle is the medial triangle, with area 84/4 = 21 in the 13-14-15 triangle. When P is on the circumcircle the area is 0, which is the Simson line again.</p><details class="try"><summary>Try it<p>A triangle has area 60 and circumradius 10. What is the area of the pedal triangle of a point at distance 6 from the circumcentre?</p><p><b>Answer.</b> |100 − 36|/400 · 60 = 9.6.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> In the 13-14-15 triangle let P be the centroid G. What is the area of its pedal triangle using the formula? <b>Solution.</b> OG² = (7 − 19/3)² + (33/8 − 4)² = 4/9 + 1/64 = 265/576. R² = 4225/64. The ratio is (4225/64 − 265/576)/(4 · 4225/64) = (38025/576 − 265/576)/(4225/16) = (37760/576)/(4225/16) = 37760 · 16/(576 · 4225) = 604160/2433600 = 0.2482, so the area is about 0.2482 · 84 ≈ 20.85.</p><p><b>Reflection.</b> The pedal triangle of G is slightly smaller than the medial triangle (21), as OG is small but non-zero.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Right triangle.</b> Take A = (0, 0), B = (4, 0), C = (0, 3); the circumcircle has centre (2, 3/2) and radius 5/2, and P = (4, 3) lies on it. The feet of the perpendiculars from P to the lines AB and AC are B = (4, 0) and C = (0, 3), and the foot on BC lies on line BC, so all three feet lie on the line BC: this is the Simson line of P, as the theorem predicts.</p><details class="try"><summary>Try it<p>What is the Simson line of a point P that coincides with a vertex A?</p><p><b>Answer.</b> The altitude from A.</p></details><details class="try"><summary>Try it<p>Do the feet of the perpendiculars from the circumcentre O to the three sides lie on one line?</p><p><b>Answer.</b> No: they are the midpoints of the sides, which form the medial triangle of positive area. The theorem needs P on the circle.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Show that the pedal triangle of the circumcentre is the medial triangle. <b>Solution.</b> The foot of the perpendicular from O to BC is the midpoint of BC, since the perpendicular from the centre bisects a chord. The same holds for the other sides.</p><p><b>Reflection.</b> The pedal triangle of O has area 1/4 of the triangle, matching the formula (R² − OP²)/(4R²) with OP = 0.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Triangle A = (5, 0), B = (0, 5), C = (−3, −4) is inscribed in x² + y² = 25. Find its area.</p><details><summary>Hint</summary>Half the cross product.</details><details><summary>Answer</summary>30</details>
+<details><summary>Method: Cross product</summary><p>|(0 − 5)(−4 − 0) − (−3 − 5)(5 − 0)|/2 = |20 + 40|/2 = 30.</p></details>
+<details><summary>Method: Shoelace</summary><p>(5·5 + 0·(−4) + (−3)·0) − (0·0 + 5·(−3) + (−4)·5) = 25 + 35 = 60, halved to 30.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem p2.</b> Find the area of the pedal triangle of the circumcentre O = (0, 0) of that triangle, as a fraction.</p><details><summary>Hint</summary>Use the area formula with OP = 0.</details><details><summary>Answer</summary>15/2</details>
+<details><summary>Method: Formula</summary><p>(25 − 0)/100 · 30 = 15/2.</p></details>
+<details><summary>Method: Medial triangle</summary><p>The feet from O are the midpoints of the sides, so the pedal triangle is the medial triangle with a quarter of the area: 30/4 = 15/2.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem p3.</b> P = (−5, 0) lies on the circumcircle. Find the area of its pedal triangle.</p><details><summary>Hint</summary>Simson line: the feet are collinear.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Simson</summary><p>P is on the circle, so its three feet are collinear and the area is 0.</p></details>
+<details><summary>Method: Formula</summary><p>(25 − 25)/100 · 30 = 0.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem p4.</b> P = (3, 4) also lies on the circle. Find the area of its pedal triangle.</p><details><summary>Hint</summary>Same idea.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Simson</summary><p>The feet are collinear, so the area is 0.</p></details>
+<details><summary>Method: Check</summary><p>The formula gives |25 − 25|/100 · 30 = 0.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem p5.</b> P = (10, 0) lies outside the circle. Find the area of its pedal triangle, as a fraction.</p><details><summary>Hint</summary>|R² − OP²| = |25 − 100| = 75.</details><details><summary>Answer</summary>45/2</details>
+<details><summary>Method: Formula</summary><p>75/100 · 30 = 45/2.</p></details>
+<details><summary>Method: Reading</summary><p>The area is the same as for a point at the same distance inside the circle in the formula's absolute value.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem p6.</b> Find the foot of the perpendicular from the origin to the line AB (x + y = 5) and give its x + y.</p><details><summary>Hint</summary>By symmetry the foot is on y = x.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Symmetry</summary><p>The foot is (5/2, 5/2), the midpoint of AB, so x + y = 5.</p></details>
+<details><summary>Method: Projection</summary><p>t = (0 − 5, 0 − 0)·(−5, 5)/50 = 1/2 so the foot is (5, 0) + (1/2)(−5, 5) = (5/2, 5/2).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem p7.</b> Find the area of the pedal triangle of the centroid of ABC, as a fraction.</p><details><summary>Hint</summary>Find the centroid first, then use the area formula.</details><details><summary>Answer</summary>22/3</details>
+<details><summary>Method: Computation</summary><p>The centroid is ((5 + 0 − 3)/3, (0 + 5 − 4)/3) = (2/3, 1/3), so OP² = 4/9 + 1/9 = 5/9. The formula gives (25 − 5/9)/100 · 30 = (220/9)(30/100) = 22/3.</p></details>
+<details><summary>Method: Check</summary><p>Computing the three feet with the projection formula and applying the shoelace formula gives the same 22/3.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem p8.</b> Find the area of the pedal triangle of the orthocentre H of ABC (the orthic triangle), as a fraction.</p><details><summary>Hint</summary>The orthocentre of an inscribed triangle with O at the origin is A + B + C.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Orthocentre</summary><p>H = (5 + 0 − 3, 0 + 5 − 4) = (2, 1), so OH² = 5.</p></details>
+<details><summary>Method: Formula</summary><p>(25 − 5)/100 · 30 = 6.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem p9.</b> Find the slope of the Simson line of P = (−5, 0), as a fraction.</p><details><summary>Hint</summary>Compute two of the feet.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Feet</summary><p>P is the antipode of A, so PB ⊥ AB and the foot on AB is B = (0, 5). The foot on BC is (−2, −1). The slope through these two feet is (5 − (−1))/(0 − (−2)) = 3.</p></details>
+<details><summary>Method: Check</summary><p>The third foot lies on the same line, since P is on the circle.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem p10.</b> The pedal triangle of the circumcentre O of a triangle of area 84 is its medial triangle. Find its area.</p><details><summary>Hint</summary>Feet of perpendiculars from O are the midpoints.</details><details><summary>Answer</summary>21</details>
+<details><summary>Method: Medial</summary><p>The medial triangle has a quarter of the area: 21.</p></details>
+<details><summary>Method: Formula</summary><p>Area = (R² − OP²)K/(4R²) with OP = 0 gives K/4 = 21.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem p11.</b> What is the area of the pedal triangle of a point on the circumcircle?</p><details><summary>Hint</summary>Simson line.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Simson</summary><p>The feet are collinear, so the triangle is degenerate with area 0.</p></details>
+<details><summary>Method: Formula</summary><p>OP = R in (R² − OP²)K/(4R²) gives 0.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem p12.</b> A triangle of area 96 has circumradius 10. The point P is at distance 6 from the circumcentre. Find the area of its pedal triangle.</p><details><summary>Hint</summary>(R² − OP²)K/(4R²).</details><details><summary>Answer</summary>384/25</details>
+<details><summary>Method: Formula</summary><p>(100 − 36) · 96/400 = 6144/400 = 384/25.</p></details>
+<details><summary>Method: Decimal</summary><p>384/25 = 15.36.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem p13.</b> The Simson line of P bisects the segment PH, where H is the orthocentre. If PH = 12, how far is the midpoint from P?</p><details><summary>Hint</summary>Half.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Midpoint</summary><p>The Simson line passes through the midpoint of PH, which is 12/2 = 6 from P.</p></details>
+<details><summary>Method: Nine-point circle</summary><p>This midpoint lies on the nine-point circle.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem p14.</b> From a point P with PA = 10, the feet of perpendiculars to AB and AC are Q and R, and sin A = 3/5. Find QR.</p><details><summary>Hint</summary>QR = PA sin A, since P, Q, A, R lie on a circle with diameter PA.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Formula</summary><p>QR = 10 · 3/5 = 6.</p></details>
+<details><summary>Method: Law of sines</summary><p>In the circle of diameter PA = 10, the chord QR subtends angle A, so QR = 10 sin A = 6.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem p15.</b> A right triangle with sides 5, 12, 13 has area 30 and circumradius 13/2. Find the area of the pedal triangle of the circumcentre.</p><details><summary>Hint</summary>Medial triangle.</details><details><summary>Answer</summary>15/2</details>
+<details><summary>Method: Medial</summary><p>30/4 = 15/2.</p></details>
+<details><summary>Method: Check</summary><p>The medial triangle has sides 5/2, 6, 13/2 and area ½ · 5/2 · 6 = 15/2.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem p16.</b> A triangle of area 60 has circumradius 10, and P is 5 from the circumcentre. Find the area of its pedal triangle.</p><details><summary>Hint</summary>(R² − OP²)K/(4R²).</details><details><summary>Answer</summary>45/4</details>
+<details><summary>Method: Formula</summary><p>75 · 60/400 = 45/4.</p></details>
+<details><summary>Method: Decimal</summary><p>45/4 = 11.25.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem p17.</b> An equilateral triangle has area 48. Find the area of the pedal triangle of its centre.</p><details><summary>Hint</summary>The centre is the circumcentre.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Medial</summary><p>The centre is the circumcentre, so the pedal triangle is the medial triangle: 48/4 = 12.</p></details>
+<details><summary>Method: Symmetry</summary><p>The three feet are the midpoints.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem x18.</b> Find the area of the triangle with sides 7, 24 and 25.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>84</details>
+<details><summary>Method: Heron</summary><p>s = 28, so K = √(28 · 21 · 4 · 3) = 84.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 25 is 2K/25 = 168/25, so the area is ½ · 25 · 168/25 = 84.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem x19.</b> Find the area of the triangle with sides 20, 21 and 29.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>210</details>
+<details><summary>Method: Heron</summary><p>s = 35, so K = √(35 · 15 · 14 · 6) = 210.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 29 is 2K/29 = 420/29, so the area is ½ · 29 · 420/29 = 210.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem x20.</b> Find the area of the triangle with sides 3, 4 and 5.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Heron</summary><p>s = 6, so K = √(6 · 3 · 2 · 1) = 6.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 5 is 2K/5 = 12/5, so the area is ½ · 5 · 12/5 = 6.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem x21.</b> Find the area of the triangle with sides 5, 5 and 6.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Heron</summary><p>s = 8, so K = √(8 · 3 · 3 · 2) = 12.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 6 is 2K/6 = 4, so the area is ½ · 6 · 4 = 12.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem x22.</b> Find the area of the triangle with sides 5, 5 and 8.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Heron</summary><p>s = 9, so K = √(9 · 4 · 4 · 1) = 12.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 8 is 2K/8 = 3, so the area is ½ · 8 · 3 = 12.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem x23.</b> Find the area of the triangle with sides 6, 8 and 10.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Heron</summary><p>s = 12, so K = √(12 · 6 · 4 · 2) = 24.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 10 is 2K/10 = 24/5, so the area is ½ · 10 · 24/5 = 24.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem x24.</b> Find the area of the triangle with sides 7, 15 and 20.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>42</details>
+<details><summary>Method: Heron</summary><p>s = 21, so K = √(21 · 14 · 6 · 1) = 42.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 20 is 2K/20 = 21/5, so the area is ½ · 20 · 21/5 = 42.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>
+<div class=p><p><b>Problem x25.</b> Find the area of the triangle with sides 9, 10 and 17.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Heron</summary><p>s = 18, so K = √(18 · 9 · 8 · 1) = 36.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 17 is 2K/17 = 72/17, so the area is ½ · 17 · 72/17 = 36.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2; Chen ch. 1</p></div>

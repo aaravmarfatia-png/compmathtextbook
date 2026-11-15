@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 76</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 76: Unit 76: Binomial coefficients and Pascal&#x27;s triangle</h1><p class=ref>Book: AoPS Volume 2, counting chapters; Sriram ch. 3-4 (25 problems)<br>AoPS Volume 2, counting and binomial theorem chapters; Sriram, Olympiad Combinatorics, counting methods.</p>
+<h2>Reading</h2>
+<h3>1. Identities of binomial coefficients</h3><p>C(n, k) counts the k-element subsets of an n-set. Some identities, each with a counting proof: C(n, k) = C(n, n − k) (choose what to leave out); k·C(n, k) = n·C(n − 1, k − 1) (choose a committee and its chair in two ways); Σₖ C(n, k) = 2ⁿ (all subsets); Σₖ (−1)ᵏ C(n, k) = 0 for n ≥ 1; and the hockey stick Σᵢ₌ₖⁿ C(i, k) = C(n + 1, k + 1).</p><p><b>Worked example 1.</b> Σ k·C(10, k) = 10 × 2⁹ = 5,120, by k·C(n, k) = n·C(n − 1, k − 1) summed.</p><p><b>Worked example 2.</b> C(10, 5) = 252 = C(9, 4) + C(9, 5) = 126 + 126 ✓.</p><p><b>Worked example 3.</b> Σ C(n, k)² = C(2n, n) (Vandermonde with m = n = r): for n = 3: 1 + 9 + 9 + 1 = 20 = C(6, 3) ✓.</p>
+<h3>2. Binomial coefficients and primes</h3><p>For a prime p and 0 < k < p, p divides C(p, k), since C(p, k) = p!/(k!(p − k)!) has a p in the numerator but not in the denominator. Therefore (x + y)ᵖ ≡ xᵖ + yᵖ (mod p): the middle terms vanish. This gives another proof of Fermat's little theorem: (1 + 1 + … + 1)ᵖ ≡ 1 + … + 1, i.e. aᵖ ≡ a.</p><p><b>Lucas's theorem (parity).</b> C(n, k) is odd exactly when every binary digit 1 of k is also a 1 in n. For n = 7 = 111₂, every k from 0 to 7 works: the row 1, 7, 21, 35, 35, 21, 7, 1 is all odd. For n = 8 = 1000₂ only k = 0 and 8 qualify: 1, 8, 28, 56, 70, 56, 28, 8, 1.</p><p><b>Counting the odd entries.</b> Row n has 2^s odd entries, where s is the number of 1s in the binary form of n. For n = 6 = 110₂, s = 2: row 1, 6, 15, 20, 15, 6, 1 has 4 odd entries ✓.</p>
+<h3>3. Counting with binomials</h3><p><b>Paths on a grid.</b> The number of paths from (0, 0) to (a, b) going only right or up is C(a + b, a). <b>Subsets with a sum condition</b> and <b>distributions</b> use stars and bars: C(n + k − 1, k − 1).</p><p><b>Worked example.</b> A committee of 4 is chosen from 6 men and 5 women with at least one of each. Total C(11, 4) = 330; all men C(6, 4) = 15; all women C(5, 4) = 5; so 330 − 20 = 310.</p><p><b>Worked example 2.</b> What is the coefficient of x⁵ in (1 + x)¹⁰(1 + x)⁵? The product is (1 + x)¹⁵, so the coefficient is C(15, 5) = 3,003. By Vandermonde it is Σ C(10, i)C(5, 5 − i).</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Using C(n, k) with k > n. Forgetting symmetry. Mis-indexing the hockey stick. Mixing combinations with permutations.</p><p><b>Checks.</b> Evaluate small n by Pascal's triangle.</p><p><b>Practice.</b> Give each identity a committee-counting story.</p>
+<h3>Worked examples with Try-its: Pascal's triangle</h3><p>Each entry is the sum of the two above it: row 5 is 1, 5, 10, 10, 5, 1. The entry C(n, k) = n!/(k!(n − k)!) counts the ways to choose k objects from n, so C(10, 3) = 120. Row n adds up to 2ⁿ (choose any subset) and the alternating sum is 0. The Binomial Theorem says (x + y)ⁿ = ΣC(n, k)xⁿ⁻ᵏyᵏ; the coefficient of x³ in (1 + x)⁸ is C(8, 3) = 56, and the coefficient of x² in (2x + 3)⁴ is C(4, 2) · 2² · 3² = 216.</p><details class="try"><summary>Try it</summary><p>What is the coefficient of x² in (1 + 2x)⁵?</p><p><b>Answer.</b> C(5, 2) · 4 = 40.</p></details>
+<h3>Worked examples with Try-its: Identities</h3><p><b>Hockey stick.</b> C(2, 2) + C(3, 2) + … + C(6, 2) = 1 + 3 + 6 + 10 + 15 = 35 = C(7, 3). <b>Vandermonde.</b> Choosing 3 people from 5 women and 4 men: Σ C(5, k)C(4, 3 − k) = 4 + 30 + 40 + 10 = 84 = C(9, 3). <b>Parity.</b> Row 7 of Pascal's triangle is entirely odd (8 odd entries), because 7 = 111 in binary; in general the number of odd entries in row n is 2 raised to the number of 1s in the binary form of n.</p><details class="try"><summary>Try it</summary><p>Evaluate C(5, 0) + C(5, 1) + … + C(5, 5).</p><p><b>Answer.</b> 32.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> How many ways can a committee of 3 be chosen from 5 women and 4 men if it must include at least one man? <b>Solution.</b> Total C(9, 3) = 84 minus the all-women committees C(5, 3) = 10, giving 74.</p><p><b>Reflection.</b> Complementary counting is usually the cleanest for 'at least one'.</p>
+<h3>More worked examples: Worked examples</h3><p>C(6, 3) = 20; the coefficient of x⁴ in (1 + x)⁷ is C(7, 4) = 35; and C(n, 2) = 45 gives n(n − 1) = 90, so n = 10. In (x + 2)⁵ the coefficient of x² is C(5, 2) · 2³ = 80. The row sum Σ C(6, k) = 64.</p><details class="try"><summary>Try it<p>What is the coefficient of x³ in (1 − x)⁶?</p><p><b>Answer.</b> −C(6, 3) = −20.</p></details><details class="try"><summary>Try it<p>How many subsets of {1, …, 6} have an even number of elements?</p><p><b>Answer.</b> 32 (half of 64).</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Find the middle term of (a + b)⁸. <b>Solution.</b> The middle term is the fifth, C(8, 4)a⁴b⁴ = 70a⁴b⁴.</p><p><b>Check.</b> The row 1, 8, 28, 56, 70, 56, 28, 8, 1 has 70 in the centre.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find C(10, 4).</p><details><summary>Hint</summary>10·9·8·7/4!.</details><details><summary>Answer</summary>210</details>
+<details><summary>Method: Formula</summary><p>(10·9·8·7)/24 = 210.</p></details>
+<details><summary>Method: Pascal</summary><p>C(10,4) = C(9,3) + C(9,4) = 84 + 126 = 210.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem p2.</b> What is the sum of the numbers in row 8 of Pascal's triangle (row 0 is 1)?</p><details><summary>Hint</summary>2ⁿ.</details><details><summary>Answer</summary>256</details>
+<details><summary>Method: Formula</summary><p>2⁸ = 256.</p></details>
+<details><summary>Method: Subsets</summary><p>The entries count the subsets of an 8-element set by size, and there are 2⁸ subsets.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem p3.</b> What is the coefficient of x³ in (1 + x)⁸?</p><details><summary>Hint</summary>C(8,3).</details><details><summary>Answer</summary>56</details>
+<details><summary>Method: Binomial theorem</summary><p>C(8,3) = 56.</p></details>
+<details><summary>Method: Choosing</summary><p>x³ arises by choosing x from 3 of the 8 factors.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem p4.</b> Find C(6,0)² + C(6,1)² + … + C(6,6)².</p><details><summary>Hint</summary>Σ C(n,k)² = C(2n,n).</details><details><summary>Answer</summary>924</details>
+<details><summary>Method: Identity</summary><p>C(12,6) = 924.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 36 + 225 + 400 + 225 + 36 + 1 = 924.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem p5.</b> How many subsets of a 10-element set have an even number of elements?</p><details><summary>Hint</summary>Half of 2¹⁰.</details><details><summary>Answer</summary>512</details>
+<details><summary>Method: Symmetry</summary><p>Even and odd subsets are equinumerous, so there are 2¹⁰/2 = 512.</p></details>
+<details><summary>Method: Toggle</summary><p>Toggling element 1 pairs each even subset with an odd one.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem p6.</b> How many shortest lattice paths lead from (0,0) to (5,5) using unit steps right or up?</p><details><summary>Hint</summary>Choose which 5 of the 10 steps go right.</details><details><summary>Answer</summary>252</details>
+<details><summary>Method: Choose</summary><p>C(10,5) = 252.</p></details>
+<details><summary>Method: Pascal</summary><p>The count at each lattice point is the sum of the counts below and to the left, giving 252 at (5,5).</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem p7.</b> A committee of 3 is chosen from 7 people and must include Ana. How many committees are there?</p><details><summary>Hint</summary>Choose the other 2.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Direct</summary><p>C(6,2) = 15.</p></details>
+<details><summary>Method: Subtract</summary><p>C(7,3) − C(6,3) = 35 − 20 = 15.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem p8.</b> Find C(2,2) + C(3,2) + … + C(9,2).</p><details><summary>Hint</summary>Hockey stick.</details><details><summary>Answer</summary>120</details>
+<details><summary>Method: Identity</summary><p>C(10,3) = 120.</p></details>
+<details><summary>Method: Add up</summary><p>1 + 3 + 6 + 10 + 15 + 21 + 28 + 36 = 120.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem p9.</b> How many nonnegative integer solutions does x + y + z = 10 have?</p><details><summary>Hint</summary>Stars and bars.</details><details><summary>Answer</summary>66</details>
+<details><summary>Method: Stars and bars</summary><p>C(12,2) = 66.</p></details>
+<details><summary>Method: Sum</summary><p>For each x there are 11 − x choices of (y, z), and 11 + 10 + … + 1 = 66.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem p10.</b> Find C(12, 5).</p><details><summary>Hint</summary>12·11·10·9·8/120.</details><details><summary>Answer</summary>792</details>
+<details><summary>Method: Formula</summary><p>95040/120 = 792.</p></details>
+<details><summary>Method: Pascal</summary><p>C(11,4) + C(11,5) = 330 + 462 = 792.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem p11.</b> What is the sum of the entries of row 10 of Pascal's triangle?</p><details><summary>Hint</summary>2ⁿ.</details><details><summary>Answer</summary>1024</details>
+<details><summary>Method: Formula</summary><p>2¹⁰ = 1024.</p></details>
+<details><summary>Method: Subsets</summary><p>The entries count the subsets of a 10-element set by size.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem p12.</b> What is the coefficient of x⁴ in (1 + x)¹⁰?</p><details><summary>Hint</summary>C(10, 4).</details><details><summary>Answer</summary>210</details>
+<details><summary>Method: Binomial</summary><p>C(10, 4) = 210.</p></details>
+<details><summary>Method: Choosing</summary><p>Choose x from 4 of the 10 factors.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem p13.</b> In how many ways can 4 people be chosen from 9?</p><details><summary>Hint</summary>C(9, 4).</details><details><summary>Answer</summary>126</details>
+<details><summary>Method: Formula</summary><p>126.</p></details>
+<details><summary>Method: Pascal</summary><p>C(8,3) + C(8,4) = 56 + 70 = 126.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem p14.</b> How many shortest lattice paths lead from (0,0) to (6,4) with unit steps right or up?</p><details><summary>Hint</summary>Choose the positions of the 4 up-steps.</details><details><summary>Answer</summary>210</details>
+<details><summary>Method: Choose</summary><p>C(10, 4) = 210.</p></details>
+<details><summary>Method: Symmetry</summary><p>C(10, 6) = C(10, 4), counting by right-steps.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem p15.</b> Find C(10,0) + C(10,2) + C(10,4) + … + C(10,10).</p><details><summary>Hint</summary>Half of 2¹⁰.</details><details><summary>Answer</summary>512</details>
+<details><summary>Method: Symmetry</summary><p>(1 + 1)¹⁰ and (1 − 1)¹⁰ give even-index sum 2⁹ = 512.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 45 + 210 + 210 + 45 + 1 = 512.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem p16.</b> Find C(5,0)² + C(5,1)² + … + C(5,5)².</p><details><summary>Hint</summary>C(2n, n).</details><details><summary>Answer</summary>252</details>
+<details><summary>Method: Identity</summary><p>C(10, 5) = 252.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 25 + 100 + 100 + 25 + 1 = 252.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem p17.</b> How many nonnegative integer solutions does x + y + z = 8 have?</p><details><summary>Hint</summary>Stars and bars.</details><details><summary>Answer</summary>45</details>
+<details><summary>Method: Formula</summary><p>C(10, 2) = 45.</p></details>
+<details><summary>Method: Sum</summary><p>For each x there are 9 − x choices of (y, z): 9 + 8 + … + 1 = 45.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem x18.</b> In how many ways can 5 people be chosen from 16?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>4368</details>
+<details><summary>Method: Formula</summary><p>C(16, 5) = 4368.</p></details>
+<details><summary>Method: Pascal</summary><p>C(15, 4) + C(15, 5) = 1365 + 3003 = 4368.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem x19.</b> How many shortest lattice paths lead from (0, 0) to (6, 4) with steps right or up?</p><details><summary>Hint</summary>Choose the positions of the up-steps.</details><details><summary>Answer</summary>210</details>
+<details><summary>Method: Choose</summary><p>C(10, 6) = 210.</p></details>
+<details><summary>Method: Last step</summary><p>Paths ending with a right step plus those ending with an up step: C(9, 5) + C(9, 6) = 126 + 84.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem x20.</b> How many nonnegative integer solutions does x₁ + x₂ + … + x4 = 10 have?</p><details><summary>Hint</summary>Stars and bars.</details><details><summary>Answer</summary>286</details>
+<details><summary>Method: Stars and bars</summary><p>C(13, 3) = 286.</p></details>
+<details><summary>Method: Fix the last variable</summary><p>If the last variable is t, the others sum to 10 − t; adding the counts over t = 0 to 10 gives 286.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem x21.</b> How many rectangles of all sizes are there in a 3 × 7 grid of unit squares?</p><details><summary>Hint</summary>Choose two vertical and two horizontal grid lines.</details><details><summary>Answer</summary>168</details>
+<details><summary>Method: Choose lines</summary><p>C(4, 2) · C(8, 2) = 6 · 28 = 168.</p></details>
+<details><summary>Method: Sums</summary><p>(1 + … + 3)(1 + … + 7) = 6 · 28 = 168.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem x22.</b> In how many ways can 5 people be chosen from 9?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>126</details>
+<details><summary>Method: Formula</summary><p>C(9, 5) = 126.</p></details>
+<details><summary>Method: Pascal</summary><p>C(8, 4) + C(8, 5) = 70 + 56 = 126.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem x23.</b> How many shortest lattice paths lead from (0, 0) to (5, 7) with steps right or up?</p><details><summary>Hint</summary>Choose the positions of the up-steps.</details><details><summary>Answer</summary>792</details>
+<details><summary>Method: Choose</summary><p>C(12, 5) = 792.</p></details>
+<details><summary>Method: Last step</summary><p>Paths ending with a right step plus those ending with an up step: C(11, 4) + C(11, 5) = 330 + 462.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem x24.</b> How many nonnegative integer solutions does x₁ + x₂ + … + x3 = 15 have?</p><details><summary>Hint</summary>Stars and bars.</details><details><summary>Answer</summary>136</details>
+<details><summary>Method: Stars and bars</summary><p>C(17, 2) = 136.</p></details>
+<details><summary>Method: Fix the last variable</summary><p>If the last variable is t, the others sum to 15 − t; adding the counts over t = 0 to 15 gives 136.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>
+<div class=p><p><b>Problem x25.</b> How many rectangles of all sizes are there in a 5 × 6 grid of unit squares?</p><details><summary>Hint</summary>Choose two vertical and two horizontal grid lines.</details><details><summary>Answer</summary>315</details>
+<details><summary>Method: Choose lines</summary><p>C(6, 2) · C(7, 2) = 15 · 21 = 315.</p></details>
+<details><summary>Method: Sums</summary><p>(1 + … + 5)(1 + … + 6) = 15 · 21 = 315.</p></details>
+<p class=ref>Source: AoPS Volume 2, counting chapters; Sriram ch. 3-4</p></div>

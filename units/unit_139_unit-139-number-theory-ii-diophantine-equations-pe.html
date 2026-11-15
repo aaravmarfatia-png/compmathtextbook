@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 139</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 139: Unit 139: Number theory II: Diophantine equations, Pell and Vieta jumping</h1><p class=ref>Book: Khurmi, Modern Olympiad Number Theory; Gelca &amp; Andreescu, Putnam and Beyond; Andreescu &amp; Enescu, Mathematical Olympiad Treasures (25 problems)<br>Khurmi, Modern Olympiad Number Theory, ch. 4 (4.2 factoring, 4.5 Pythagorean triples, 4.7 Vieta jumping, 4.8 Pell); Gelca &amp; Andreescu 5.3 (Diophantine equations).</p>
+<h2>Reading</h2>
+<h3>1. Linear and Pell equations</h3><p>ax + by = c has integer solutions iff gcd(a,b) divides c; once one is found the rest differ by multiples of (b, −a). For 3x + 5y = 100 with positive solutions: x = 5 + 5t... (x, y) = (5,17), (10,14), (15,11), (20,8), (25,5), (30,2): 6 solutions. The Frobenius number for coprime a, b is ab − a − b: for 3 and 5 it is 7. <b>Pell.</b> x² − 2y² = 1 has smallest solution (3,2); all others come from (3 + 2√2)ⁿ.</p><details class="try"><summary>Try it<p>Smallest solution of x² − 5y² = 1?</p><p><b>Answer.</b> (9, 4).</p></details><details class="try"><summary>Try it<p>Largest amount not payable with 4- and 7-cent stamps?</p><p><b>Answer.</b> 17.</p></details>
+<h3>2. Factoring and Vieta jumping</h3><p>x² − y² = n becomes (x − y)(x + y) = n; for 45 the factor pairs 1·45, 3·15, 5·9 each have matching parity, giving 3 solutions. <b>Vieta jumping.</b> For x² + y² + 1 = 3xy, if (x, y) is a solution then so is (y, 3y − x), since both are roots of t² − 3yt + y² + 1 = 0. The solutions run (1,1), (1,2), (2,5), (5,13), (13,34), …</p><details class="try"><summary>Try it<p>Next pair after (13, 34)?</p><p><b>Answer.</b> (34, 89).</p></details><details class="try"><summary>Try it<p>How many positive solutions to x² − y² = 15?</p><p><b>Answer.</b> 2: (4,1), (8,7).</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> How many right triangles with integer sides have a leg of 15? <b>Solution.</b> c² − b² = 225 with factor pairs (1,225), (3,75), (5,45), (9,25) each with equal parity, so there are 4 triangles: 15-112-113, 15-36-39, 15-20-25, 8-15-17.</p><p><b>Check.</b> 112² + 15² = 12544 + 225 = 12769 = 113² ✓; 36² + 15² = 1521 = 39² ✓; 8² + 15² = 289 = 17² ✓.</p>
+<h3>4. In the books</h3><p><b>Khurmi, ch. 4.</b> 4.2 factoring (Simon's Favorite Factoring Trick, Examples 4.2.1 to 4.2.7), 4.5 Pythagorean triples (Theorem 4.5.2), 4.6 infinite descent, 4.7 Vieta jumping, 4.8 Pell's equation.</p><p>Example 4.7.1 is IMO 1988/6 (if ab + 1 divides a² + b² then the quotient is a perfect square); <b>Example 4.7.2</b> shows that if ab divides a² + b² + 1 then the quotient is exactly 3, which is the equation x² + y² + 1 = 3xy I count solutions of. For Pell, solutions come from a fundamental solution and the multiplicative norm N(x + y√d) = x² − dy²; Examples 4.8.1 to 4.8.3 treat d = 3, d = 28 and a negative-Pell case.</p><p><b>Gelca &amp; Andreescu, 5.3.</b> Linear Diophantine equations (5.3.1), the equation of Pythagoras (5.3.2), Pell's equation (5.3.3) and other Diophantine equations (5.3.4).</p><p><b>Honest note.</b> The Frobenius (stamp) problem and the sum-of-two-squares count are standard results that I added; they are not worked in these books' Diophantine sections.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find the smallest positive integer x for which x² − 2y² = 1 has a positive integer solution y.</p><details><summary>Hint</summary>Search small y, or use the continued fraction of √2.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Search</summary><p>Test y = 1, 2, 3, … until 2·y² + 1 is a square; the first square gives x = 3.</p></details>
+<details><summary>Method: Continued fraction</summary><p>The convergents of √2 produce the fundamental solution with x = 3.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> Find the smallest positive integer x for which x² − 5y² = 1 has a positive integer solution y.</p><details><summary>Hint</summary>Search small y, or use the continued fraction of √5.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Search</summary><p>Test y = 1, 2, 3, … until 5·y² + 1 is a square; the first square gives x = 9.</p></details>
+<details><summary>Method: Continued fraction</summary><p>The convergents of √5 produce the fundamental solution with x = 9.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> Find the smallest positive integer x for which x² − 7y² = 1 has a positive integer solution y.</p><details><summary>Hint</summary>Search small y, or use the continued fraction of √7.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Search</summary><p>Test y = 1, 2, 3, … until 7·y² + 1 is a square; the first square gives x = 8.</p></details>
+<details><summary>Method: Continued fraction</summary><p>The convergents of √7 produce the fundamental solution with x = 8.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> Find the smallest positive integer x for which x² − 10y² = 1 has a positive integer solution y.</p><details><summary>Hint</summary>Search small y, or use the continued fraction of √10.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: Search</summary><p>Test y = 1, 2, 3, … until 10·y² + 1 is a square; the first square gives x = 19.</p></details>
+<details><summary>Method: Continued fraction</summary><p>The convergents of √10 produce the fundamental solution with x = 19.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> How many ordered pairs of positive integers (x, y) satisfy 3x + 5y = 100?</p><details><summary>Hint</summary>Find one solution and add multiples of 5 to x.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: General solution</summary><p>One solution plus the step (x, y) → (x + 5, y − 3) gives all; counting those with both positive gives 6.</p></details>
+<details><summary>Method: Enumerate</summary><p>For each x, check whether (100 − 3x) is a positive multiple of 5: 6 values of x work.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> How many ordered pairs of positive integers (x, y) satisfy 4x + 7y = 200?</p><details><summary>Hint</summary>Find one solution and add multiples of 7 to x.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: General solution</summary><p>One solution plus the step (x, y) → (x + 7, y − 4) gives all; counting those with both positive gives 7.</p></details>
+<details><summary>Method: Enumerate</summary><p>For each x, check whether (200 − 4x) is a positive multiple of 7: 7 values of x work.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> How many ordered pairs of positive integers (x, y) satisfy 5x + 8y = 300?</p><details><summary>Hint</summary>Find one solution and add multiples of 8 to x.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: General solution</summary><p>One solution plus the step (x, y) → (x + 8, y − 5) gives all; counting those with both positive gives 7.</p></details>
+<details><summary>Method: Enumerate</summary><p>For each x, check whether (300 − 5x) is a positive multiple of 8: 7 values of x work.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> How many ordered pairs of positive integers (x, y) satisfy 6x + 11y = 500?</p><details><summary>Hint</summary>Find one solution and add multiples of 11 to x.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: General solution</summary><p>One solution plus the step (x, y) → (x + 11, y − 6) gives all; counting those with both positive gives 7.</p></details>
+<details><summary>Method: Enumerate</summary><p>For each x, check whether (500 − 6x) is a positive multiple of 11: 7 values of x work.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> What is the largest positive integer that cannot be written as 3m + 5n with non-negative integers m and n?</p><details><summary>Hint</summary>For coprime a and b the answer is ab − a − b.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Formula</summary><p>ab − a − b = 7.</p></details>
+<details><summary>Method: List</summary><p>Write all sums up to 15; the last gap is 7.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> What is the largest positive integer that cannot be written as 4m + 7n with non-negative integers m and n?</p><details><summary>Hint</summary>For coprime a and b the answer is ab − a − b.</details><details><summary>Answer</summary>17</details>
+<details><summary>Method: Formula</summary><p>ab − a − b = 17.</p></details>
+<details><summary>Method: List</summary><p>Write all sums up to 28; the last gap is 17.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> What is the largest positive integer that cannot be written as 5m + 8n with non-negative integers m and n?</p><details><summary>Hint</summary>For coprime a and b the answer is ab − a − b.</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: Formula</summary><p>ab − a − b = 27.</p></details>
+<details><summary>Method: List</summary><p>Write all sums up to 40; the last gap is 27.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> How many right triangles with integer sides have one leg of length 15? (The other leg may be any positive integer; triangles are counted once.)</p><details><summary>Hint</summary>Write c² − b² = 15² and factor.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Factor</summary><p>(c − b)(c + b) = 15²; the pairs of factors d < e of the same parity give 4 triangles.</p></details>
+<details><summary>Method: Search</summary><p>Test b from 1 up to (15² − 1)/2 and count the b for which 15² + b² is a square: 4.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> How many right triangles with integer sides have one leg of length 20? (The other leg may be any positive integer; triangles are counted once.)</p><details><summary>Hint</summary>Write c² − b² = 20² and factor.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Factor</summary><p>(c − b)(c + b) = 20²; the pairs of factors d < e of the same parity give 4 triangles.</p></details>
+<details><summary>Method: Search</summary><p>Test b from 1 up to (20² − 1)/2 and count the b for which 20² + b² is a square: 4.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> How many right triangles with integer sides have one leg of length 24? (The other leg may be any positive integer; triangles are counted once.)</p><details><summary>Hint</summary>Write c² − b² = 24² and factor.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Factor</summary><p>(c − b)(c + b) = 24²; the pairs of factors d < e of the same parity give 7 triangles.</p></details>
+<details><summary>Method: Search</summary><p>Test b from 1 up to (24² − 1)/2 and count the b for which 24² + b² is a square: 7.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> How many right triangles with integer sides have one leg of length 35? (The other leg may be any positive integer; triangles are counted once.)</p><details><summary>Hint</summary>Write c² − b² = 35² and factor.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Factor</summary><p>(c − b)(c + b) = 35²; the pairs of factors d < e of the same parity give 4 triangles.</p></details>
+<details><summary>Method: Search</summary><p>Test b from 1 up to (35² − 1)/2 and count the b for which 35² + b² is a square: 4.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> How many pairs of positive integers (x, y) with x ≤ y ≤ 10 satisfy x² + y² + 1 = 3xy?</p><details><summary>Hint</summary>If (x, y) is a solution then so is (y, 3y − x) — Vieta jumping.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Vieta jumping</summary><p>Starting from (1,1), (1,2): the chain is (1,1),(1,2),(2,5),(5,13),(13,34),…; counting pairs with y ≤ 10 gives 3.</p></details>
+<details><summary>Method: Brute force</summary><p>Test every pair with x ≤ y ≤ 10: exactly 3 satisfy the equation.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> How many pairs of positive integers (x, y) with x ≤ y ≤ 30 satisfy x² + y² + 1 = 3xy?</p><details><summary>Hint</summary>If (x, y) is a solution then so is (y, 3y − x) — Vieta jumping.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Vieta jumping</summary><p>Starting from (1,1), (1,2): the chain is (1,1),(1,2),(2,5),(5,13),(13,34),…; counting pairs with y ≤ 30 gives 4.</p></details>
+<details><summary>Method: Brute force</summary><p>Test every pair with x ≤ y ≤ 30: exactly 4 satisfy the equation.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> How many pairs of positive integers (x, y) with x ≤ y ≤ 100 satisfy x² + y² + 1 = 3xy?</p><details><summary>Hint</summary>If (x, y) is a solution then so is (y, 3y − x) — Vieta jumping.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Vieta jumping</summary><p>Starting from (1,1), (1,2): the chain is (1,1),(1,2),(2,5),(5,13),(13,34),…; counting pairs with y ≤ 100 gives 6.</p></details>
+<details><summary>Method: Brute force</summary><p>Test every pair with x ≤ y ≤ 100: exactly 6 satisfy the equation.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> How many pairs of positive integers (x, y) with x ≤ y ≤ 1000 satisfy x² + y² + 1 = 3xy?</p><details><summary>Hint</summary>If (x, y) is a solution then so is (y, 3y − x) — Vieta jumping.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Vieta jumping</summary><p>Starting from (1,1), (1,2): the chain is (1,1),(1,2),(2,5),(5,13),(13,34),…; counting pairs with y ≤ 1000 gives 8.</p></details>
+<details><summary>Method: Brute force</summary><p>Test every pair with x ≤ y ≤ 1000: exactly 8 satisfy the equation.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> How many ordered pairs of integers (x, y) satisfy x² + y² = 25?</p><details><summary>Hint</summary>Jacobi's formula: r₂(n) = 4(d₁ − d₃).</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Jacobi</summary><p>d₁ = 3 divisors ≡ 1 mod 4 and d₃ = 0 divisors ≡ 3 mod 4, so 4(3 − 0) = 12.</p></details>
+<details><summary>Method: List</summary><p>Run through x from −5 to 5 and test whether 25 − x² is a square: 12 pairs.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> How many ordered pairs of integers (x, y) satisfy x² + y² = 50?</p><details><summary>Hint</summary>Jacobi's formula: r₂(n) = 4(d₁ − d₃).</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Jacobi</summary><p>d₁ = 3 divisors ≡ 1 mod 4 and d₃ = 0 divisors ≡ 3 mod 4, so 4(3 − 0) = 12.</p></details>
+<details><summary>Method: List</summary><p>Run through x from −7 to 7 and test whether 50 − x² is a square: 12 pairs.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> How many ordered pairs of integers (x, y) satisfy x² + y² = 65?</p><details><summary>Hint</summary>Jacobi's formula: r₂(n) = 4(d₁ − d₃).</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Jacobi</summary><p>d₁ = 4 divisors ≡ 1 mod 4 and d₃ = 0 divisors ≡ 3 mod 4, so 4(4 − 0) = 16.</p></details>
+<details><summary>Method: List</summary><p>Run through x from −8 to 8 and test whether 65 − x² is a square: 16 pairs.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> How many ordered pairs of positive integers (x, y) satisfy x² − y² = 45?</p><details><summary>Hint</summary>Factor (x − y)(x + y) = 45.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Factor</summary><p>Pairs of factors d < e of 45 with the same parity: 3.</p></details>
+<details><summary>Method: Search</summary><p>For each y ≤ 22 test whether y² + 45 is a square: 3 values.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> How many ordered pairs of positive integers (x, y) satisfy x² − y² = 105?</p><details><summary>Hint</summary>Factor (x − y)(x + y) = 105.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Factor</summary><p>Pairs of factors d < e of 105 with the same parity: 4.</p></details>
+<details><summary>Method: Search</summary><p>For each y ≤ 52 test whether y² + 105 is a square: 4 values.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> How many ordered pairs of positive integers (x, y) satisfy x² − y² = 63?</p><details><summary>Hint</summary>Factor (x − y)(x + y) = 63.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Factor</summary><p>Pairs of factors d < e of 63 with the same parity: 3.</p></details>
+<details><summary>Method: Search</summary><p>For each y ≤ 31 test whether y² + 63 is a square: 3 values.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 4 and Gelca &amp; Andreescu 5.3 (original problem)</p></div>

@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 91</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 91: Unit 91: Complex numbers and roots of unity</h1><p class=ref>Book: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers (25 problems)<br>Andreescu &amp; Gelca, Mathematical Olympiad Challenges, chapter 2 (complex numbers in algebra) and AoPS Volume 2.</p>
+<h2>Reading</h2>
+<h3>1. Roots of unity</h3><p>The solutions of zⁿ = 1 are z = cos(2πk/n) + i sin(2πk/n) for k = 0, 1, …, n − 1, the <b>n-th roots of unity</b>, which are the vertices of a regular n-gon on the unit circle. If ω is a primitive root (for example ω = e^(2πi/n)) they are 1, ω, ω², …, ωⁿ⁻¹. Factorisation: xⁿ − 1 = (x − 1)(x − ω)⋯(x − ωⁿ⁻¹).</p><p><b>The sum is zero.</b> 1 + ω + … + ωⁿ⁻¹ = (ωⁿ − 1)/(ω − 1) = 0. Taking real parts: Σ cos(2πk/n) = 0. For n = 5: 1 + 2 cos 72° + 2 cos 144° = 0, so cos 72° + cos 144° = −1/2 (check: 0.309 − 0.809 = −0.5 ✓).</p><p><b>The product of distances.</b> Dividing xⁿ − 1 by x − 1 and setting x = 1: Π_{k=1}^{n−1}(1 − ωᵏ) = n. For n = 4: (1 − i)(1 − (−1))(1 + i) = (1 − i)(1 + i) × 2 = 2 × 2 = 4 ✓. So the product of the distances from one vertex of a regular n-gon (inscribed in a unit circle) to the other vertices is n.</p>
+<h3>2. Computing with complex numbers</h3><p><b>Powers of i:</b> i²⁰²⁵ = i (2025 = 4 × 506 + 1). <b>Powers of 1 + i:</b> (1 + i)² = 2i so (1 + i)²⁰ = (2i)¹⁰ = 1,024 × i¹⁰ = 1,024 × (−1) = −1,024.</p><p><b>Using the cube roots of unity.</b> If ω = (−1 + i√3)/2 then ω³ = 1 and 1 + ω + ω² = 0. So (1 + ω)(1 + ω²) = 1 + ω + ω² + ω³ = 1 and 1/(1 + ω) = 1 + ω² = −ω. Also, a³ + b³ = (a + b)(a + ωb)(a + ω²b), which factors a sum of cubes over the complex numbers.</p><p><b>Worked example.</b> Evaluate (1 + ω)⁶. Since 1 + ω = −ω², (1 + ω)⁶ = ω¹² = 1.</p><p><b>Worked example 2.</b> Find Σ_{k=0}^{5} ωᵏ for ω a primitive 6th root of unity: 0. And for ω a primitive cube root, Σ_{k=0}^{8} ωᵏ = 3 × 0 = 0.</p>
+<h3>3. Roots of unity filters</h3><p>To find the sum of the binomial coefficients C(n, k) with k divisible by 3, use ω a primitive cube root of unity: (1 + 1)ⁿ + (1 + ω)ⁿ + (1 + ω²)ⁿ = 3 Σ_{3 | k} C(n, k). For n = 6: 64 + (−ω²)⁶ + (−ω)⁶ = 64 + 1 + 1 = 66, so the sum is 22. Direct check: C(6, 0) + C(6, 3) + C(6, 6) = 1 + 20 + 1 = 22 ✓.</p><p><b>Geometry.</b> A triangle with vertices a, b, c is equilateral iff a² + b² + c² = ab + bc + ca.</p><p><b>Worked example.</b> The points 0, 1, and (1 + i√3)/2 form an equilateral triangle: a² + b² + c² = 0 + 1 + (1 + i√3)²/4 = 1 + (−2 + 2i√3)/4 = 1/2 + i√3/2, and ab + bc + ca = 0 + (1 + i√3)/2 + 0 = 1/2 + i√3/2 ✓.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Forgetting that Σωᵏ = 0 requires ω ≠ 1. Taking the wrong power cycle. Mixing degrees and radians. Forgetting the factor 3 in a filter.</p><p><b>Checks.</b> Check small n explicitly.</p><p><b>Practice.</b> Plot roots of unity on the unit circle.</p>
+<h3>Worked examples with Try-its: Arithmetic and polar form</h3><p>With i² = −1 the powers of i cycle through i, −1, −i, 1. The modulus |a + bi| = √(a² + b²), so |3 + 4i| = 5. In polar form z = r(cos θ + i sin θ) = re^{iθ}, multiplying adds angles and multiplies moduli. Since (1 + i)² = 2i, we get (1 + i)⁸ = (2i)⁴ = 16 and |(1 + i)¹⁰| = (√2)¹⁰ = 32.</p><details class="try"><summary>Try it<p>Compute i²⁰²⁶.</p><p><b>Answer.</b> 2026 = 4 · 506 + 2, so i²⁰²⁶ = i² = −1.</p></details>
+<h3>Worked examples with Try-its: Roots of unity</h3><p>The n-th roots of unity are e^{2πik/n} for k = 0, …, n − 1, spaced 360/n degrees apart on the unit circle, and they add to zero. With ω = e^{2πi/3}: ω³ = 1, 1 + ω + ω² = 0, and (1 − ω)(1 − ω²) = 3. This last product is the derivative-at-1 trick: xⁿ − 1 = ∏(x − ωᵏ), so ∏(1 − ωᵏ) over k = 1 to n − 1 equals n.</p><details class="try"><summary>Try it<p>What is 1 + ω + ω² + ω³ + ω⁴ + ω⁵?</p><p><b>Answer.</b> 0 (two full cycles).</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Find the real part of (1 + i√3)⁶. <b>Solution.</b> 1 + i√3 = 2e^{iπ/3}, so the sixth power is 2⁶e^{2πi} = 64.</p><p><b>Reflection.</b> Convert to polar before taking a power.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Square root.</b> (1 + 2i)² = 1 − 4 + 4i = −3 + 4i, so the square roots of −3 + 4i are ±(1 + 2i). <b>Fourth roots of −1.</b> They are e^{i(π/4 + kπ/2)}, namely (±1 ± i)/√2; their sum is 0 and their product is 1 (the constant term of z⁴ + 1). The conjugate of a product is the product of the conjugates, and |zw| = |z||w|.</p><details class="try"><summary>Try it<p>Find (1 + i)(1 − 2i).</p><p><b>Answer.</b> 3 − i.</p></details><details class="try"><summary>Try it<p>What is the modulus of (3 + 4i)/(1 − i)?</p><p><b>Answer.</b> 5/√2.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Solve z² + 2z + 5 = 0. <b>Solution.</b> z = (−2 ± √(4 − 20))/2 = −1 ± 2i. The roots are conjugates, as for any real polynomial.</p><p><b>Check.</b> (−1 + 2i)² = 1 − 4i − 4 = −3 − 4i and −3 − 4i − 2 + 4i + 5 = 0 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find the product (1 − ω)(1 − ω²)(1 − ω³)(1 − ω⁴), where ω is a primitive 5th root of unity.</p><details><summary>Hint</summary>Evaluate (x⁵ − 1)/(x − 1) at x = 1.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Polynomial identity</summary><p>Π(x − ωᵏ) = 1 + x + x² + x³ + x⁴, and at x = 1 this is 5.</p></details>
+<details><summary>Method: Numeric</summary><p>The product of |1 − ωᵏ| = 2 sin(πk/5) over k = 1..4 has value 5.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem p2.</b> Let ω = cos 120° + i sin 120°. Find |ω − 1|².</p><details><summary>Hint</summary>Use coordinates.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Coordinates</summary><p>ω = (−1/2, √3/2) so ω − 1 = (−3/2, √3/2) and |ω − 1|² = 9/4 + 3/4 = 3.</p></details>
+<details><summary>Method: Identity</summary><p>|ω − 1|² = (ω − 1)(ω̄ − 1) = 1 − ω − ω̄ + 1 = 2 + 1 = 3 since ω + ω̄ = −1.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem p3.</b> How many complex numbers z satisfy both z¹² = 1 and z⁸ = 1?</p><details><summary>Hint</summary>They are roots of unity of order dividing gcd(12, 8).</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: gcd</summary><p>z must satisfy z⁴ = 1, giving 4 solutions.</p></details>
+<details><summary>Method: Reasoning</summary><p>If z¹² = 1 and z⁸ = 1 then z⁴ = z¹²/z⁸ = 1.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem p4.</b> How many of the 12th roots of unity have positive real part?</p><details><summary>Hint</summary>Angles k·30° with cos > 0.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Angles</summary><p>The angles 0°, 30°, 60°, 300°, 330° have positive cosine: 5.</p></details>
+<details><summary>Method: Symmetry</summary><p>Angles ±90° have real part 0 and the rest negative, leaving 12 − 2 − 5 = 5 with negative real part.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem p5.</b> Find i²⁰²⁴.</p><details><summary>Hint</summary>Powers of i repeat every 4.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Cycle</summary><p>i⁴ = 1 and 2024 is a multiple of 4, so i²⁰²⁴ = 1.</p></details>
+<details><summary>Method: Mod 4</summary><p>2024 mod 4 = 0.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem p6.</b> Find (1 + i)⁸.</p><details><summary>Hint</summary>(1 + i)² = 2i.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Squares</summary><p>(1 + i)² = 2i, (2i)² = −4, (−4)² = 16.</p></details>
+<details><summary>Method: Polar</summary><p>1 + i has modulus √2 and angle 45°, so the eighth power has modulus 16 and angle 360°, which is 16.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem p7.</b> Find (cos 20° + i sin 20°)¹⁸ (a real number).</p><details><summary>Hint</summary>De Moivre.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: De Moivre</summary><p>The angle becomes 360°, so the value is cos 360° + i sin 360° = 1.</p></details>
+<details><summary>Method: Roots</summary><p>cos 20° + i sin 20° is an 18th root of unity.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem p8.</b> How many primitive 12th roots of unity are there?</p><details><summary>Hint</summary>φ(12).</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Totient</summary><p>φ(12) = 4: the roots with k = 1, 5, 7, 11.</p></details>
+<details><summary>Method: Factor</summary><p>φ(12) = 12(1 − 1/2)(1 − 1/3) = 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem p9.</b> What is the sum of the squares of all fifth roots of unity?</p><details><summary>Hint</summary>The squares are again the fifth roots, each once.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Permutation</summary><p>Squaring permutes the fifth roots of unity, so the sum is still 0.</p></details>
+<details><summary>Method: Geometric series</summary><p>1 + ω² + ω⁴ + ω⁶ + ω⁸ = (ω¹⁰ − 1)/(ω² − 1) = 0 since ω¹⁰ = 1.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem p10.</b> Find the sum of the five 5th roots of unity.</p><details><summary>Hint</summary>They are roots of x⁵ − 1.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Vieta</summary><p>The x⁴ coefficient of x⁵ − 1 is 0, so the roots sum to 0.</p></details>
+<details><summary>Method: Geometry</summary><p>The five vertices of a regular pentagon centred at the origin have centroid 0.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem p11.</b> Find the product of all six 6th roots of unity.</p><details><summary>Hint</summary>Product of roots of x⁶ − 1.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Vieta</summary><p>For x⁶ − 1 the product of the roots is (−1)⁶ · (−1) = −1.</p></details>
+<details><summary>Method: Pairing</summary><p>The roots pair into conjugates with product 1, apart from 1 and −1, whose product is −1.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem p12.</b> Evaluate (1 + i)⁸.</p><details><summary>Hint</summary>1 + i = √2 (cos 45° + i sin 45°).</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Polar</summary><p>(√2)⁸ = 16 and the angle is 8 · 45° = 360°, so 16.</p></details>
+<details><summary>Method: Squaring</summary><p>(1 + i)² = 2i, then (2i)² = −4 and (−4)² = 16.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem p13.</b> Let ω be a primitive cube root of unity. Find ω¹⁰⁰ + ω²⁰⁰.</p><details><summary>Hint</summary>ω³ = 1.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Reduce</summary><p>100 ≡ 1 and 200 ≡ 2 (mod 3), so the sum is ω + ω² = −1.</p></details>
+<details><summary>Method: Identity</summary><p>1 + ω + ω² = 0.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem p14.</b> How many primitive 12th roots of unity are there?</p><details><summary>Hint</summary>φ(12).</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Totient</summary><p>φ(12) = 4.</p></details>
+<details><summary>Method: Direct</summary><p>The primitive roots are e^{2πik/12} for k = 1, 5, 7, 11.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem p15.</b> Find (cos 15° + i sin 15°)²⁴.</p><details><summary>Hint</summary>De Moivre.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: De Moivre</summary><p>The angle becomes 24 · 15° = 360°, giving 1.</p></details>
+<details><summary>Method: Roots</summary><p>It is a 24th root of unity raised to the 24th power.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem p16.</b> How many of the eight 8th roots of unity are real?</p><details><summary>Hint</summary>e^{2πik/8} is real when k = 0 or 4.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Angles</summary><p>The roots with angle 0° and 180° are 1 and −1.</p></details>
+<details><summary>Method: Polynomial</summary><p>x⁸ = 1 has only the real solutions ±1.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem p17.</b> Find the sum 1 + i + i² + … + i⁹⁹ .</p><details><summary>Hint</summary>Blocks of four.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Blocks</summary><p>Each block of 4 consecutive powers sums to 0 and 100 = 4 · 25, so 0.</p></details>
+<details><summary>Method: Geometric</summary><p>(i¹⁰⁰ − 1)/(i − 1) = 0 since i¹⁰⁰ = 1.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem x18.</b> What is the remainder when 9^50 is divided by 11?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 9, 9², 9³, … are 9, 4, 3, 5, 1, and then they repeat from position 1 with period 5. Exponent 50 lands on 1.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 50 = 110010 in binary. The squares 9^(2^i) mod 11 are 9, 4, 5, 3, 9, 4; multiplying the ones for the 1-bits gives 1.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem x19.</b> What is the last digit of 19^81?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 19, 19², 19³, … are 9, 1, and then they repeat from position 1 with period 2. Exponent 81 lands on 9.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 81 = 1010001 in binary. The squares 19^(2^i) mod 10 are 9, 1, 1, 1, 1, 1, 1; multiplying the ones for the 1-bits gives 9.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem x20.</b> What is the remainder when 12^40 is divided by 17?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 12, 12², 12³, … are 12, 8, 11, 13, 3, 2, 7, 16, 5, 9, 6, 4, 14, 15, and then they repeat from position 1 with period 16. Exponent 40 lands on 16.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 40 = 101000 in binary. The squares 12^(2^i) mod 17 are 12, 8, 13, 16, 1, 1; multiplying the ones for the 1-bits gives 16.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem x21.</b> What is the last digit of 23^100?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 23, 23², 23³, … are 3, 9, 7, 1, and then they repeat from position 1 with period 4. Exponent 100 lands on 1.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 100 = 1100100 in binary. The squares 23^(2^i) mod 10 are 3, 9, 1, 1, 1, 1, 1; multiplying the ones for the 1-bits gives 1.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem x22.</b> What is the remainder when 11^24 is divided by 13?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 11, 11², 11³, … are 11, 4, 5, 3, 7, 12, 2, 9, 8, 10, 6, 1, and then they repeat from position 1 with period 12. Exponent 24 lands on 1.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 24 = 11000 in binary. The squares 11^(2^i) mod 13 are 11, 4, 3, 9, 3; multiplying the ones for the 1-bits gives 1.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem x23.</b> What is the last digit of 4^2031?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 4, 4², 4³, … are 4, 6, and then they repeat from position 1 with period 2. Exponent 2031 lands on 4.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 2031 = 11111101111 in binary. The squares 4^(2^i) mod 10 are 4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6; multiplying the ones for the 1-bits gives 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem x24.</b> What is the remainder when 13^35 is divided by 19?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 13, 13², 13³, … are 13, 17, 12, 4, 14, 11, 10, 16, 18, 6, 2, 7, 15, 5, and then they repeat from position 1 with period 18. Exponent 35 lands on 3.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 35 = 100011 in binary. The squares 13^(2^i) mod 19 are 13, 17, 4, 16, 9, 5; multiplying the ones for the 1-bits gives 3.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>
+<div class=p><p><b>Problem x25.</b> What is the last digit of 6^57?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 6, 6², 6³, … are 6, and then they repeat from position 1 with period 1. Exponent 57 lands on 6.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 57 = 111001 in binary. The squares 6^(2^i) mod 10 are 6, 6, 6, 6, 6, 6; multiplying the ones for the 1-bits gives 6.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca ch. 2; AoPS Volume 2 complex numbers</p></div>

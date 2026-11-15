@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 104</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 104: Unit 104: Reflections, rotations and transformations in coordinates</h1><p class=ref>Book: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19 (25 problems)<br>Coxeter &amp; Greitzer, Geometry Revisited, chapter 4 (Transformations) and AoPS Volume 1, chapter 19 (Shifts, Turns, Flips, Stretches and Squeezes).</p>
+<h2>Reading</h2>
+<h3>1. The basic maps in coordinates</h3><p><b>Translation</b> by (h, k): (x, y) → (x + h, y + k). <b>Reflection</b> in the x-axis: (x, y) → (x, −y); in the y-axis: (−x, y); in the line y = x: (y, x). <b>Rotation</b> about the origin by 90° counter-clockwise: (x, y) → (−y, x); by 180°: (−x, −y). <b>Dilation</b> with centre the origin and factor k: (x, y) → (kx, ky). To transform about another centre C, translate C to the origin, apply the map, translate back.</p><p><b>Worked example 1.</b> Reflect (3, 1) in the line y = x + 2. Shift down by 2 so that the line becomes y = x: the point (3, 1) becomes (3, −1); reflecting in y = x gives (−1, 3); shifting back up gives (−1, 5). Check: the midpoint of (3, 1) and (−1, 5) is (1, 3), which lies on y = x + 2 ✓, and the segment has slope −1, perpendicular to the line ✓.</p><p><b>Worked example 2.</b> Rotate (2, 1) by 90° counter-clockwise about (1, 1). Relative to the centre the point is (1, 0); rotating gives (0, 1); adding back (1, 1) gives (1, 2).</p>
+<h3>2. Compositions</h3><p>Two reflections in parallel lines at distance d compose to a translation by 2d perpendicular to the lines. Two reflections in lines meeting at angle θ compose to a rotation by 2θ about the intersection. Reflection followed by translation along the mirror line is a <b>glide reflection</b>.</p><p><b>Worked example.</b> Reflect in x = 1 and then in x = 4: x → 2 − x → 8 − (2 − x) = x + 6. The result is a translation by 6 = 2 × 3 ✓.</p><p><b>Orientation.</b> Reflections reverse orientation, rotations and translations preserve it. The composition of an even number of reflections preserves it.</p>
+<h3>3. Using reflection for shortest paths</h3><p>To find the shortest path from A to B that touches a line ℓ, reflect B in ℓ to B′; the shortest path is the straight segment AB′. This works because the path A → P → B has the same length as A → P → B′ for any P on ℓ.</p><p><b>Worked example.</b> A = (0, 3), B = (6, 1), the path must touch the x-axis. Reflect B to B′ = (6, −1). The distance is √(6² + 4²) = √52 = 2√13 ≈ 7.21. The touching point is where AB′ meets the axis: x = 4.5.</p><p><b>Check.</b> At (4.5, 0): √(4.5² + 9) + √(1.5² + 1) = 5.408 + 1.803 = 7.211 ✓.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Rotating about the origin when the centre is elsewhere. Mixing up clockwise and counter-clockwise. Reflecting the wrong point in a shortest-path problem (reflect only one of the two points).</p><p><b>Checks.</b> Distances from the centre or the mirror must be preserved.</p><p><b>Practice.</b> Do every transformation as: translate, apply, translate back.</p>
+<h3>Worked examples with Try-its: Reflections and rotations</h3><p>Reflection in the x-axis sends (x, y) to (x, −y); in the y-axis to (−x, y); in the line y = x to (y, x); in y = x + c to (y − c, x + c). The point (3, 1) reflects in y = x + 2 to (−1, 5): the midpoint (1, 3) lies on the line. Rotation by 90° anticlockwise about the origin sends (x, y) to (−y, x); by 180° about (a, b) it sends (x, y) to (2a − x, 2b − y).</p><details class="try"><summary>Try it<p>Reflect (4, −1) in the line y = x.</p><p><b>Answer.</b> (−1, 4).</p></details>
+<h3>Worked examples with Try-its: Shortest paths and compositions</h3><p>To find the shortest path from A = (1, 2) to B = (5, 3) touching the x-axis, reflect B in the axis to B′ = (5, −3); the path length is |AB′| = √(16 + 25) = √41. Two reflections in parallel lines distance d apart compose to a translation of length 2d; two reflections in lines meeting at angle φ compose to a rotation by 2φ about the intersection point.</p><details class="try"><summary>Try it<p>Reflections in the lines x = 1 and x = 4 are applied in turn to (0, 0). Where does it end?</p><p><b>Answer.</b> First (2, 0), then (6, 0): a translation by 6.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Find the image of the point (2, 5) after rotating 90° anticlockwise about (1, 1). <b>Solution.</b> Shift: (1, 4); rotate: (−4, 1); shift back: (−3, 2).</p><p><b>Reflection.</b> Move the centre to the origin, transform, then move it back.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Rotation about a point.</b> Rotating (2, 3) by 90° anticlockwise about (1, 1): shift to (1, 2), rotate to (−2, 1), shift back to (−1, 2). <b>Point reflection.</b> The 180° rotation about (4, −1) sends (2, 3) to (2 · 4 − 2, 2 · (−1) − 3) = (6, −5). <b>Reflection in y = −x.</b> This sends (a, b) to (−b, −a), so (2, 5) goes to (−5, −2).</p><details class="try"><summary>Try it<p>Reflect (3, 7) in the x-axis and then the y-axis. Where does it end?</p><p><b>Answer.</b> (−3, −7).</p></details><details class="try"><summary>Try it<p>Rotate (4, 0) by 90° anticlockwise about the origin.</p><p><b>Answer.</b> (0, 4).</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> A light ray travels from A = (0, 4) to the x-axis, reflects, and reaches B = (6, 2). Where does it hit the axis? <b>Solution.</b> Reflect B to B′ = (6, −2). The line from A to B′ has slope (−2 − 4)/6 = −1 and meets y = 0 at x = 4. The ray touches the axis at (4, 0); the path length is |AB′| = √(36 + 36) = 6√2.</p><p><b>Check.</b> |A(4, 0)| + |(4, 0)B| = √32 + √8 = 4√2 + 2√2 = 6√2 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Reflect (3, 5) in the line y = x. The image is (a, b). Find a + b.</p><details><summary>Hint</summary>Swap the coordinates.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Rule</summary><p>The image is (5, 3), so a + b = 8.</p></details>
+<details><summary>Method: Midpoint</summary><p>The midpoint (4, 4) of the two points lies on y = x.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem p2.</b> Reflect (2, −3) in the x-axis and then translate by (1, 4). The result is (a, b). Find a + b.</p><details><summary>Hint</summary>Reflect first, then add.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Steps</summary><p>(2, −3) becomes (2, 3), then (3, 7), so a + b = 10.</p></details>
+<details><summary>Method: Order</summary><p>Translating first and reflecting after would give a different point, (3, −1).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem p3.</b> Rotate (1, 0) by 180° about (2, 1). The image is (a, b). Find a + b.</p><details><summary>Hint</summary>The centre is the midpoint.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Rule</summary><p>(2·2 − 1, 2·1 − 0) = (3, 2), so a + b = 5.</p></details>
+<details><summary>Method: Midpoint</summary><p>The midpoint of (1, 0) and (3, 2) is (2, 1), the centre.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem p4.</b> Reflect (4, 1) in the line y = 2x. The image is (a, b). Find a + b as a fraction.</p><details><summary>Hint</summary>Reflect = 2 · projection − the point.</details><details><summary>Answer</summary>11/5</details>
+<details><summary>Method: Projection</summary><p>The projection of (4, 1) on the direction (1, 2) is ((4 + 2)/5)(1, 2) = (6/5, 12/5). The image is 2(6/5, 12/5) − (4, 1) = (−8/5, 19/5), so a + b = 11/5.</p></details>
+<details><summary>Method: Check</summary><p>The midpoint (6/5, 12/5) lies on y = 2x, and the segment direction (−28/5, 14/5) is perpendicular to (1, 2).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem p5.</b> A point is reflected in the line x = 1 and then in the line x = 4. By how much is it translated (the distance moved to the right)?</p><details><summary>Hint</summary>Two parallel reflections give a translation of twice the distance between the lines.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Rule</summary><p>2 · 3 = 6.</p></details>
+<details><summary>Method: Example</summary><p>x = 0 reflects to 2 and then to 6: a shift of 6.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem p6.</b> Two reflections are made in lines meeting at an angle of 30°. The composition is a rotation. By how many degrees?</p><details><summary>Hint</summary>Twice the angle between the lines.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Rule</summary><p>2 · 30° = 60°.</p></details>
+<details><summary>Method: Example</summary><p>Reflecting in the x-axis and then in the line at 30° sends the direction 0° to 60°.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem p7.</b> How many symmetries (rotations and reflections) does a regular hexagon have?</p><details><summary>Hint</summary>2n.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Count</summary><p>6 rotations and 6 reflections: 12.</p></details>
+<details><summary>Method: Reasoning</summary><p>A symmetry is determined by where it sends one vertex (6 choices) and one adjacent vertex (2 choices).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem p8.</b> How many symmetries does a rectangle that is not a square have?</p><details><summary>Hint</summary>Identity, rotation by 180°, two reflections.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: List</summary><p>Identity, a 180° rotation and reflections in the two midlines: 4.</p></details>
+<details><summary>Method: Why not diagonals</summary><p>The diagonals are not axes of symmetry because the sides are unequal.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem p9.</b> A dilation with centre (1, 1) and ratio 3 sends (2, 3) to (a, b). Find a + b.</p><details><summary>Hint</summary>P' = centre + 3(P − centre).</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: Rule</summary><p>(1 + 3·1, 1 + 3·2) = (4, 7), so a + b = 11.</p></details>
+<details><summary>Method: Check</summary><p>The centre, P and P' are collinear and (4, 7) − (1, 1) = 3((2, 3) − (1, 1)).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem p10.</b> Reflect (3, 5) in the line y = x. What is the sum of the coordinates of the image?</p><details><summary>Hint</summary>Swap the coordinates.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Swap</summary><p>The image is (5, 3), sum 8.</p></details>
+<details><summary>Method: Midpoint</summary><p>The midpoint of (3, 5) and (5, 3) is (4, 4), on the line y = x.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem p11.</b> Rotate (2, 1) by 90° counterclockwise about the origin. What is the sum of the coordinates of the image?</p><details><summary>Hint</summary>(x, y) → (−y, x).</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Rule</summary><p>The image is (−1, 2), sum 1.</p></details>
+<details><summary>Method: Complex numbers</summary><p>(2 + i) · i = 2i − 1, which is (−1, 2).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem p12.</b> Reflect (4, −3) in the x-axis. What is the y-coordinate of the image?</p><details><summary>Hint</summary>Negate y.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Rule</summary><p>The image is (4, 3).</p></details>
+<details><summary>Method: Distance</summary><p>The image is as far above the axis as the original is below.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem p13.</b> Translate (1, 2) by (5, −4). What is the product of the coordinates of the image?</p><details><summary>Hint</summary>Add the vector.</details><details><summary>Answer</summary>-12</details>
+<details><summary>Method: Add</summary><p>The image is (6, −2), product −12.</p></details>
+<details><summary>Method: Check</summary><p>The displacement (5, −4) is the difference of image and original.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem p14.</b> Dilate (3, 6) by a factor of 1/3 about the origin. What is the sum of the coordinates of the image?</p><details><summary>Hint</summary>Multiply by 1/3.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Scale</summary><p>The image is (1, 2), sum 3.</p></details>
+<details><summary>Method: Line</summary><p>The image lies on the line through the origin and (3, 6).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem p15.</b> Rotate (1, 0) by 180° about the point (2, 3). What is the sum of the coordinates of the image?</p><details><summary>Hint</summary>The centre is the midpoint.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Midpoint</summary><p>The image P′ satisfies (2, 3) = midpoint of (1, 0) and P′, so P′ = (3, 6), sum 9.</p></details>
+<details><summary>Method: Formula</summary><p>P′ = 2C − P = (4 − 1, 6 − 0) = (3, 6).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem p16.</b> Reflect the origin in the line y = x + 2. What is the x-coordinate of the image?</p><details><summary>Hint</summary>The midpoint lies on the line and the segment is perpendicular to it.</details><details><summary>Answer</summary>-2</details>
+<details><summary>Method: Perpendicular</summary><p>The perpendicular from the origin is y = −x, meeting the line at (−1, 1); the image is twice that: (−2, 2).</p></details>
+<details><summary>Method: Shift</summary><p>Shift down by 2, reflect in y = x, shift back: (0, −2) → (−2, 0) → (−2, 2).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem p17.</b> Reflect (3, −7) in the x-axis and then in the y-axis. What is the sum of the coordinates of the final image?</p><details><summary>Hint</summary>Two reflections in perpendicular lines make a half-turn.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Compose</summary><p>(3, −7) → (3, 7) → (−3, 7), sum 4.</p></details>
+<details><summary>Method: Rotation</summary><p>The result is a 180° rotation about the origin, (x, y) → (−x, −y).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem x18.</b> Find the distance between (-2, 6) and (13, 26).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Formula</summary><p>√(15² + 20²) = √625 = 25.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 15 and 20 form a right triangle with hypotenuse 25 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem x19.</b> Find the sum of the coordinates of the midpoint of (-3, 4) and (9, -2).</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Average</summary><p>The midpoint is (3, 1), with sum 4.</p></details>
+<details><summary>Method: Vector</summary><p>Start at (-3, 4) and move half the way to (9, -2): (-3 + 6, 4 + -3) = (3, 1).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem x20.</b> Find the slope of the line through (1, 8) and (7, 2).</p><details><summary>Hint</summary>Rise over run.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Formula</summary><p>(2 − 8)/(7 − 1) = -1.</p></details>
+<details><summary>Method: Line equation</summary><p>The line y = -1·x + 9 passes through both points, so its slope is -1.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem x21.</b> Find the distance between (1, 2) and (7, 10).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Formula</summary><p>√(6² + 8²) = √100 = 10.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 6 and 8 form a right triangle with hypotenuse 10 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem x22.</b> Find the sum of the coordinates of the midpoint of (10, 7) and (-4, 3).</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Average</summary><p>The midpoint is (3, 5), with sum 8.</p></details>
+<details><summary>Method: Vector</summary><p>Start at (10, 7) and move half the way to (-4, 3): (10 + -7, 7 + -2) = (3, 5).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem x23.</b> Find the slope of the line through (1, 2) and (5, 10).</p><details><summary>Hint</summary>Rise over run.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Formula</summary><p>(10 − 2)/(5 − 1) = 2.</p></details>
+<details><summary>Method: Line equation</summary><p>The line y = 2·x + 0 passes through both points, so its slope is 2.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem x24.</b> Find the distance between (-3, 4) and (2, 16).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Formula</summary><p>√(5² + 12²) = √169 = 13.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 5 and 12 form a right triangle with hypotenuse 13 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>
+<div class=p><p><b>Problem x25.</b> Find the sum of the coordinates of the midpoint of (0, 9) and (12, -5).</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Average</summary><p>The midpoint is (6, 2), with sum 8.</p></details>
+<details><summary>Method: Vector</summary><p>Start at (0, 9) and move half the way to (12, -5): (0 + 6, 9 + -7) = (6, 2).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 4; AoPS Volume 1 ch. 19</p></div>

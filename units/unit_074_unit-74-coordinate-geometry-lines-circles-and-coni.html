@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 74</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 74: Unit 74: Coordinate geometry: lines, circles and conics</h1><p class=ref>Book: AoPS Volume 2, analytic geometry chapters (25 problems)<br>AoPS Volume 2, chapters on analytic geometry: lines, circles, parabolas and ellipses.</p>
+<h2>Reading</h2>
+<h3>1. Parabolas</h3><p>A <b>parabola</b> is the set of points equally far from a fixed point (the <b>focus</b>) and a fixed line (the <b>directrix</b>). The parabola y² = 4ax has focus (a, 0) and directrix x = −a. The parabola y = x²/4 (that is, x² = 4y) has focus (0, 1) and directrix y = −1. Check with the point (2, 1) on it: its distance to the focus (0, 1) is 2 and to the line y = −1 is also 2 ✓.</p><p><b>Tangents.</b> The tangent to y = x² at x = 1 has slope 2 (the derivative) and passes through (1, 1): y = 2x − 1. A line y = mx + c meets y = x² in one point exactly when x² − mx − c = 0 has a double root: m² + 4c = 0.</p>
+<h3>2. Ellipses</h3><p>An <b>ellipse</b> is the set of points whose distances to two foci add up to a constant 2a. In standard form x²/a² + y²/b² = 1 (a > b) with foci (±c, 0), c² = a² − b². For x²/25 + y²/9 = 1: a = 5, b = 3, c = 4, foci (±4, 0). A point such as (0, 3) has distance 5 to each focus, sum 10 = 2a ✓. The area is πab = 15π.</p><p><b>Worked example.</b> The ellipse x²/25 + y²/9 = 1 meets the line y = 3x/5 at x²/25 + (9x²/25)/9 = 1, so 2x²/25 = 1, x = ±5/√2, giving the two intersection points.</p><p><b>Eccentricity.</b> e = c/a = 4/5 measures how elongated the ellipse is; a circle has e = 0.</p>
+<h3>3. Hyperbolas and the general picture</h3><p>A <b>hyperbola</b> is the set of points whose distances to two foci <i>differ</i> by a constant 2a. In standard form x²/a² − y²/b² = 1, with foci (±c, 0), c² = a² + b², and asymptotes y = ±(b/a)x. For x²/9 − y²/16 = 1: a = 3, b = 4, c = 5, asymptotes y = ±4x/3. The point (5, 16/3) lies on it, and its distances to the foci (5, 0) and (−5, 0) are 16/3 and √(100 + 256/9) = 34/3; the difference is 6 = 2a ✓.</p><p><b>The rectangular hyperbola</b> xy = 1 has asymptotes the axes. The line x + y = k meets it where x(k − x) = 1, x² − kx + 1 = 0: two points if |k| > 2, one if |k| = 2 (tangent) and none if |k| < 2.</p><p><b>General conics.</b> Every second-degree equation Ax² + Bxy + Cy² + Dx + Ey + F = 0 is a conic (ellipse, parabola, hyperbola or degenerate). The discriminant B² − 4AC tells which: negative for an ellipse, zero for a parabola, positive for a hyperbola.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Using c² = a² + b² for an ellipse (the correct relation is c² = a² − b²). Mixing a and b. Forgetting that a hyperbola has two branches.</p><p><b>Checks.</b> Test a point on the curve: the focal distances should add (ellipse) or differ (hyperbola) by 2a.</p><p><b>Practice.</b> Sketch with the axes and asymptotes first.</p>
+<h3>Worked examples with Try-its: Lines and distances</h3><p>The distance between (x₁, y₁) and (x₂, y₂) is √((x₂ − x₁)² + (y₂ − y₁)²). The distance from (x₀, y₀) to the line ax + by + c = 0 is |ax₀ + by₀ + c|/√(a² + b²); for (1, 2) and 3x + 4y − 10 = 0 it is |3 + 8 − 10|/5 = 1/5. Perpendicular lines have slopes whose product is −1. The midpoint is the average of the coordinates.</p><p><b>Triangles in coordinates.</b> A right triangle with legs 6 and 8 along the axes has hypotenuse 10 and inradius (6 + 8 − 10)/2 = 2, so its incentre is (2, 2).</p><details class="try"><summary>Try it</summary><p>Distance from the origin to the line x + y = 4?</p><p><b>Answer.</b> |−4|/√2 = 2√2.</p></details>
+<h3>Worked examples with Try-its: Circles</h3><p>The circle with centre (h, k) and radius r is (x − h)² + (y − k)² = r². Completing the square turns x² + y² − 6x + 4y − 12 = 0 into (x − 3)² + (y + 2)² = 25, centre (3, −2), radius 5. A line is tangent when its distance to the centre equals r: y = x + k touches x² + y² = 2 when |k|/√2 = √2, so k = ±2.</p><p><b>Chords.</b> The line x + y = 7 meets x² + y² = 25 at (3, 4) and (4, 3) (check: 9 + 16 = 25), so the chord has length √2.</p><details class="try"><summary>Try it</summary><p>Find the centre and radius of x² + y² + 2x − 4y − 4 = 0.</p><p><b>Answer.</b> (x + 1)² + (y − 2)² = 9: centre (−1, 2), radius 3.</p></details>
+<h3>Worked examples with Try-its: Conics and a longer problem</h3><p>The ellipse x²/25 + y²/9 = 1 has semi-axes 5 and 3, foci at (±4, 0) because c² = 25 − 9, and area 15π. The parabola y = x²/8 has focus (0, 2) (written x² = 4py with p = 2). The hyperbola x²/a² − y²/b² = 1 has c² = a² + b².</p><p><b>Problem.</b> Find the points where the line y = x meets the ellipse x²/25 + y²/9 = 1, and their distance apart. <b>Solution.</b> x²(1/25 + 1/9) = 1, so x² = 225/34 and the two points are ±(15/√34)(1, 1). Their distance is 2 · √2 · 15/√34 = 30√2/√34 = 30/√17.</p><p><b>Reflection.</b> Substitute one equation into the other and solve the resulting quadratic.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Circle through three points.</b> The points (0, 0), (4, 0), (0, 3) form a right triangle, so the circumcentre is the midpoint of the hypotenuse, (2, 3/2), and the radius is 5/2. <b>Parallel lines.</b> The distance between 3x + 4y = 5 and 3x + 4y = 15 is |15 − 5|/√(9 + 16) = 2. <b>Slopes.</b> The line through (1, 2) and (5, 10) has slope 2, and the perpendicular through (1, 2) has slope −1/2.</p><details class="try"><summary>Try it<p>Find the midpoint and length of the segment from (−1, 3) to (5, 11).</p><p><b>Answer.</b> Midpoint (2, 7), length √(36 + 64) = 10.</p></details><details class="try"><summary>Try it<p>Is the line y = x tangent to the circle (x − 3)² + y² = 4?</p><p><b>Answer.</b> Distance from (3, 0) to the line is 3/√2 ≈ 2.12 > 2, so no.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Find the circle through (0, 0), (1, 0) and (0, 1). <b>Solution.</b> The three points form a right triangle with hypotenuse from (1, 0) to (0, 1), so the centre is the midpoint (1/2, 1/2) and the radius is √2/2. The equation is (x − 1/2)² + (y − 1/2)² = 1/2, and the origin satisfies it: 1/4 + 1/4 = 1/2.</p><p><b>Reflection.</b> Count the conditions: a circle needs three.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find the distance between (1, 2) and (7, 10).</p><details><summary>Hint</summary>Distance formula.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Formula</summary><p>√(6² + 8²) = √100 = 10.</p></details>
+<details><summary>Method: Triangle</summary><p>The legs are 6 and 8, a 3-4-5 triangle scaled by 2, so the hypotenuse is 10.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem p2.</b> The line through (1, 2) and (7, 10) crosses the y-axis at (0, b). Find b as a fraction.</p><details><summary>Hint</summary>Find the slope first.</details><details><summary>Answer</summary>2/3</details>
+<details><summary>Method: Slope</summary><p>The slope is 8/6 = 4/3, so b = 2 − 4/3 = 2/3.</p></details>
+<details><summary>Method: Equation</summary><p>y − 2 = (4/3)(x − 1); setting x = 0 gives y = 2 − 4/3 = 2/3.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem p3.</b> Find the radius of the circle x² + y² − 6x + 8y = 0.</p><details><summary>Hint</summary>Complete the square.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Complete</summary><p>(x − 3)² + (y + 4)² = 25, so the radius is 5.</p></details>
+<details><summary>Method: Through O</summary><p>The circle passes through the origin and has centre (3, −4), at distance 5 from O.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem p4.</b> Find the distance from the origin to the line 3x + 4y = 10.</p><details><summary>Hint</summary>|ap + bq − c|/√(a² + b²).</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Formula</summary><p>|0 + 0 − 10|/5 = 2.</p></details>
+<details><summary>Method: Foot point</summary><p>The foot is t(3, 4) with 25t = 10, so t = 2/5 and the distance is (2/5)·5 = 2.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem p5.</b> y = 2x + 1 and y = −x + 7 meet at (x, y). Find x + y.</p><details><summary>Hint</summary>Set the right-hand sides equal.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Solve</summary><p>2x + 1 = −x + 7 gives x = 2, y = 5, so x + y = 7.</p></details>
+<details><summary>Method: Check</summary><p>Both lines give y = 5 at x = 2.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem p6.</b> The line x/4 + y/3 = 1 and the axes bound a triangle. Find its area.</p><details><summary>Hint</summary>Intercepts are 4 and 3.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Intercepts</summary><p>The legs are 4 and 3, so the area is 6.</p></details>
+<details><summary>Method: Check</summary><p>The hypotenuse is 5 (a 3-4-5 triangle) and (1/2)(4)(3) = 6.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem p7.</b> The ellipse x²/25 + y²/9 = 1 has foci. How far apart are they?</p><details><summary>Hint</summary>c = √(a² − b²).</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Formula</summary><p>c = √(25 − 9) = 4, so the foci are 8 apart.</p></details>
+<details><summary>Method: Definition</summary><p>A vertex (5,0) has distances 1 and 9 to the foci (±4, 0), summing to 10 = 2a as required.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem p8.</b> Find the minimum value of y = x² − 6x + 5.</p><details><summary>Hint</summary>Complete the square or use x = −b/2a.</details><details><summary>Answer</summary>-4</details>
+<details><summary>Method: Vertex</summary><p>The vertex is at x = 3, where y = 9 − 18 + 5 = −4.</p></details>
+<details><summary>Method: Complete</summary><p>y = (x − 3)² − 4 ≥ −4.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem p9.</b> How many points (x, y) with integer coordinates lie on x² + y² = 25?</p><details><summary>Hint</summary>List the ways 25 = a² + b².</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: List</summary><p>(±5, 0), (0, ±5) give 4, and (±3, ±4), (±4, ±3) give 8: 12 in all.</p></details>
+<details><summary>Method: Check</summary><p>25 = 0 + 25 = 9 + 16, with signs and order accounting for 4 + 8.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem p10.</b> Find the distance between (1, 2) and (7, 10).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Formula</summary><p>√(36 + 64) = 10.</p></details>
+<details><summary>Method: Triple</summary><p>The legs 6 and 8 form a 3-4-5 triangle scaled by 2.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem p11.</b> Find the area of the triangle with vertices (0, 0), (6, 0) and (2, 5).</p><details><summary>Hint</summary>Base times height over 2.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Base-height</summary><p>Base 6 and height 5 give 15.</p></details>
+<details><summary>Method: Shoelace</summary><p>|0·0 + 6·5 + 2·0 − (0·6 + 0·2 + 5·0)|/2 = 30/2 = 15.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem p12.</b> What is the slope of the line through (3, −1) and (9, 8)?</p><details><summary>Hint</summary>Rise over run.</details><details><summary>Answer</summary>3/2</details>
+<details><summary>Method: Formula</summary><p>(8 + 1)/(9 − 3) = 9/6 = 3/2.</p></details>
+<details><summary>Method: Check</summary><p>From (3, −1) move right 6 and up 9 to reach (9, 8).</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem p13.</b> Find the midpoint's x-coordinate plus its y-coordinate for the segment from (2, 9) to (10, 3).</p><details><summary>Hint</summary>Average coordinates.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Midpoint</summary><p>The midpoint is (6, 6), sum 12.</p></details>
+<details><summary>Method: Check</summary><p>Both ends sum to 11 and 13, whose average is 12.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem p14.</b> A circle has centre (1, 2) and passes through (4, 6). What is its radius?</p><details><summary>Hint</summary>Distance from centre.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Distance</summary><p>√(9 + 16) = 5.</p></details>
+<details><summary>Method: Triple</summary><p>The offsets 3 and 4 form a 3-4-5 triangle.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem p15.</b> Where does the line y = 2x + 3 cross the x-axis? Give the x-coordinate.</p><details><summary>Hint</summary>Set y = 0.</details><details><summary>Answer</summary>-3/2</details>
+<details><summary>Method: Solve</summary><p>0 = 2x + 3 gives x = −3/2.</p></details>
+<details><summary>Method: Check</summary><p>2(−3/2) + 3 = 0.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem p16.</b> What is the area of the triangle formed by the line 3x + 4y = 12 and the two axes?</p><details><summary>Hint</summary>Find the intercepts.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Intercepts</summary><p>The intercepts are (4, 0) and (0, 3), so the area is 4 · 3/2 = 6.</p></details>
+<details><summary>Method: Check</summary><p>3 · 4 + 4 · 0 = 12 and 3 · 0 + 4 · 3 = 12.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem p17.</b> Find the square of the distance from the point (3, 4) to the line x + y = 0.</p><details><summary>Hint</summary>Formula |ax + by + c|²/(a² + b²).</details><details><summary>Answer</summary>49/2</details>
+<details><summary>Method: Formula</summary><p>The distance is |3 + 4|/√2, so its square is 49/2.</p></details>
+<details><summary>Method: Foot</summary><p>The foot of the perpendicular is (−1/2, 1/2); the distance squared is (7/2)² + (7/2)² = 49/2.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem x18.</b> Find the distance between (-3, 4) and (2, 16).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Formula</summary><p>√(5² + 12²) = √169 = 13.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 5 and 12 form a right triangle with hypotenuse 13 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem x19.</b> Find the slope of the line through (-5, 1) and (3, 9).</p><details><summary>Hint</summary>Rise over run.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Formula</summary><p>(9 − 1)/(3 − -5) = 1.</p></details>
+<details><summary>Method: Line equation</summary><p>The line y = 1·x + 6 passes through both points, so its slope is 1.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem x20.</b> Find the sum of the coordinates of the midpoint of (-3, 4) and (9, -2).</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Average</summary><p>The midpoint is (3, 1), with sum 4.</p></details>
+<details><summary>Method: Vector</summary><p>Start at (-3, 4) and move half the way to (9, -2): (-3 + 6, 4 + -3) = (3, 1).</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem x21.</b> Find the area of the triangle with vertices (2, -1), (8, 5) and (0, 6).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: Shoelace</summary><p>|2(5 − 6) + 8(6 − -1) + 0(-1 − 5)|/2 = 27.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (6, 6) and (-2, 7); half the absolute value of 6 · 7 − 6 · -2 is 27.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem x22.</b> Find the distance between (0, 0) and (8, 15).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>17</details>
+<details><summary>Method: Formula</summary><p>√(8² + 15²) = √289 = 17.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 8 and 15 form a right triangle with hypotenuse 17 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem x23.</b> Find the slope of the line through (4, -3) and (12, 6).</p><details><summary>Hint</summary>Rise over run.</details><details><summary>Answer</summary>9/8</details>
+<details><summary>Method: Formula</summary><p>(6 − -3)/(12 − 4) = 9/8.</p></details>
+<details><summary>Method: Line equation</summary><p>The line y = 9/8·x + -15/2 passes through both points, so its slope is 9/8.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem x24.</b> Find the sum of the coordinates of the midpoint of (10, 7) and (-4, 3).</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Average</summary><p>The midpoint is (3, 5), with sum 8.</p></details>
+<details><summary>Method: Vector</summary><p>Start at (10, 7) and move half the way to (-4, 3): (10 + -7, 7 + -2) = (3, 5).</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>
+<div class=p><p><b>Problem x25.</b> Find the area of the triangle with vertices (0, 0), (7, 1) and (3, 6).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>39/2</details>
+<details><summary>Method: Shoelace</summary><p>|0(1 − 6) + 7(6 − 0) + 3(0 − 1)|/2 = 39/2.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (7, 1) and (3, 6); half the absolute value of 7 · 6 − 1 · 3 is 39/2.</p></details>
+<p class=ref>Source: AoPS Volume 2, analytic geometry chapters</p></div>

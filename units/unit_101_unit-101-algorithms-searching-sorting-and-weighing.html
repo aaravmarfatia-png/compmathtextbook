@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 101</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 101: Unit 101: Algorithms: searching, sorting and weighing</h1><p class=ref>Book: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms) (25 problems)<br>Sriram, Olympiad Combinatorics, chapters 1-2 (Algorithms), covering information bounds and efficient procedures.</p>
+<h2>Reading</h2>
+<h3>1. Searching: binary search</h3><p>To find a hidden number from 1 to N by asking yes/no questions, each answer can at best halve the possibilities. After k questions at most 2^k possibilities can be told apart, so you need k ≥ log₂ N. For N = 100 you need 7 questions, since 2⁶ = 64 < 100 ≤ 128 = 2⁷. The strategy 'is it at most the middle value?' achieves this.</p><p><b>Worked example.</b> To find a number from 1 to 1000 you need ⌈log₂ 1000⌉ = 10 questions (2⁹ = 512 < 1000 ≤ 1024).</p><p><b>Information bound.</b> With r possible outcomes per test and k tests there are at most r^k distinguishable cases. This counting bound proves a lower bound for every algorithm.</p>
+<h3>2. Sorting and comparisons</h3><p>Sorting n distinct items by pairwise comparisons must distinguish n! orderings, so you need at least log₂(n!) comparisons. For n = 4: 4! = 24 and 2⁴ = 16 < 24 ≤ 32 = 2⁵, so 5 comparisons are needed (and 5 suffice). For n = 5: 120 ≤ 128 = 2⁷, so at least 7 comparisons.</p><p><b>Merge idea.</b> Merging two sorted lists of lengths a and b takes at most a + b − 1 comparisons. The largest of n items needs exactly n − 1 comparisons, since each comparison eliminates at most one candidate.</p><p><b>Worked example.</b> Finding both the largest and the smallest of 8 numbers: pair them up (4 comparisons), compare the 4 winners (3) and the 4 losers (3): 10 comparisons, fewer than the naive 7 + 6 = 13.</p>
+<h3>3. Weighing problems</h3><p>A balance has three outcomes (left heavier, right heavier, equal), so w weighings distinguish at most 3^w cases. <b>Nine coins, one heavier:</b> weigh 3 against 3; the result tells you which group of three holds the heavy coin; weigh two of that group. 2 weighings (3² = 9).</p><p><b>Twelve coins, one different (heavier or lighter, unknown).</b> There are 24 cases (12 coins × 2) and 3³ = 27 ≥ 24, so 3 weighings might suffice, and indeed they do with a careful scheme (4 against 4 first). With 13 coins it is possible to find the odd one but not always to say whether it is heavy or light.</p><p><b>Worked example.</b> With 27 coins one heavy, 3 weighings find it (3³ = 27).</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Forgetting that the counting bound is a lower bound only; you must also give an algorithm. Using 2 outcomes for a balance (it has 3).</p><p><b>Checks.</b> Always compare r^k with the number of cases.</p><p><b>Practice.</b> Design the first test so the cases split as evenly as possible.</p>
+<h3>Worked examples with Try-its: Searching and information</h3><p>Each yes/no question can at most halve the possibilities, so finding a number from 1 to 100 needs ⌈log₂ 100⌉ = 7 questions, and binary search achieves this. Sorting 5 items by comparisons needs at least ⌈log₂ 5!⌉ = ⌈log₂ 120⌉ = 7 comparisons. A balance scale has three outcomes, so k weighings distinguish up to 3ᵏ cases: 3 weighings can find one odd coin among 27 (if you only need to find it, not whether it is heavier or lighter).</p><details class="try"><summary>Try it<p>How many yes/no questions are enough to identify a number from 1 to 1000?</p><p><b>Answer.</b> 10, since 2¹⁰ = 1024 ≥ 1000.</p></details>
+<h3>Worked examples with Try-its: Counting steps</h3><p>A bubble sort on n items uses at most C(n, 2) swaps: 10 for n = 5. The Euclidean algorithm for two numbers needs at most about 5 times the number of digits in steps. An algorithm is only correct if it works for <b>every</b> input, so test the extremes such as an empty list or all equal items.</p><details class="try"><summary>Try it<p>What is the largest number of swaps bubble sort may need for 6 items?</p><p><b>Answer.</b> C(6, 2) = 15.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> There are 12 coins, one of which is counterfeit and differs in weight (heavier or lighter, unknown). Can you identify it in 3 weighings? <b>Solution.</b> Yes: 12 coins × 2 possibilities = 24 outcomes ≤ 27. The standard method weighs 4 against 4 first and then follows the tilt (or balance) into a second weighing of 3 against 3 or similar.</p><p><b>Reflection.</b> The counting bound 24 ≤ 27 says it might be possible; the method shows it is.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Weighing.</b> Nine coins, one lighter: two weighings suffice (3 against 3, then 1 against 1 among the lightest group). <b>Search.</b> A number from 1 to 1000 is found with ⌈log₂ 1000⌉ = 10 yes/no questions. <b>Euclid.</b> For consecutive Fibonacci numbers 89 and 55 the Euclidean algorithm takes 9 steps, the slowest case for numbers of that size.</p><details class="try"><summary>Try it<p>How many weighings find one lighter coin among 27 coins?</p><p><b>Answer.</b> 3.</p></details><details class="try"><summary>Try it<p>How many comparisons does it take to find the largest of 8 numbers?</p><p><b>Answer.</b> 7.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Show that finding the largest of n numbers by comparisons needs at least n − 1 comparisons. <b>Solution.</b> Every number except the maximum must lose at least one comparison (otherwise we cannot know it is not the maximum), and each comparison produces one loser, so at least n − 1 comparisons are needed.</p><p><b>Reflection.</b> The argument is an adversary or counting bound, not just a count of one algorithm.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> A number between 1 and 1000 is chosen. How many yes/no questions are enough in the worst case to find it?</p><details><summary>Hint</summary>2^k ≥ 1000.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Binary search</summary><p>2⁹ = 512 < 1000 ≤ 1024 = 2¹⁰, so 10 questions suffice and 9 do not.</p></details>
+<details><summary>Method: Halving</summary><p>Each question can halve the remaining range, which takes 10 steps from 1000 down to 1.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem p2.</b> Among 12 coins one is counterfeit and may be heavier or lighter. What is the least number of weighings on a balance that is guaranteed to find the fake and say whether it is heavy or light?</p><details><summary>Hint</summary>There are 24 cases and 3 outcomes per weighing.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Information</summary><p>12 coins times 2 possibilities is 24 cases, and 3² = 9 < 24 ≤ 27 = 3³, so at least 3 weighings are needed.</p></details>
+<details><summary>Method: Known result</summary><p>A careful 4 against 4 first weighing makes 3 weighings sufficient.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem p3.</b> What is the least number of comparisons that could sort any 5 distinct numbers in the worst case (information bound)?</p><details><summary>Hint</summary>⌈log₂ 5!⌉.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Bound</summary><p>5! = 120 and 2⁶ = 64 < 120 ≤ 128 = 2⁷, so at least 7 comparisons.</p></details>
+<details><summary>Method: Achievable</summary><p>7 comparisons are known to be enough for 5 numbers (merge-insertion sort).</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem p4.</b> How many comparisons are needed to find the largest of 100 distinct numbers?</p><details><summary>Hint</summary>Each comparison eliminates one candidate.</details><details><summary>Answer</summary>99</details>
+<details><summary>Method: Elimination</summary><p>Each comparison eliminates one number from the running for maximum, and 99 must be eliminated: 99.</p></details>
+<details><summary>Method: Tournament</summary><p>A knockout tournament of 100 players has 99 matches.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem p5.</b> How many comparisons are enough to find both the largest and smallest of 8 distinct numbers?</p><details><summary>Hint</summary>Compare in pairs first: 3n/2 − 2.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Pairs</summary><p>Compare 4 pairs (4 comparisons), then find the max among the 4 winners (3) and the min among the 4 losers (3): 10.</p></details>
+<details><summary>Method: Formula</summary><p>3 · 8/2 − 2 = 10.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem p6.</b> A single-elimination tournament has 64 players. How many games are played?</p><details><summary>Hint</summary>Each game eliminates exactly one player.</details><details><summary>Answer</summary>63</details>
+<details><summary>Method: Eliminations</summary><p>All but one player is eliminated, so 63 games.</p></details>
+<details><summary>Method: Rounds</summary><p>32 + 16 + 8 + 4 + 2 + 1 = 63.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem p7.</b> In a knockout tournament of 8 players where the better player always wins, how many games are enough to determine both the best and the second-best player?</p><details><summary>Hint</summary>n + ⌈log₂ n⌉ − 2.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Formula</summary><p>8 + 3 − 2 = 9: 7 matches find the winner, then the 3 players who lost directly to the winner play off for second place (2 more matches).</p></details>
+<details><summary>Method: Reasoning</summary><p>The second best must have lost only to the best, so it is among the winner's 3 opponents.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem p8.</b> A list of 6 numbers is in exactly reverse order. Bubble sort swaps adjacent out-of-order pairs. How many swaps are needed?</p><details><summary>Hint</summary>Each adjacent swap removes exactly one inversion.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Inversions</summary><p>A reversed list of 6 has C(6,2) = 15 inversions, so 15 swaps.</p></details>
+<details><summary>Method: Passes</summary><p>The passes make 5 + 4 + 3 + 2 + 1 = 15 swaps.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem p9.</b> How many division steps does Euclid's algorithm use on (89, 55)?</p><details><summary>Hint</summary>Fibonacci inputs are the slowest.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Run</summary><p>89 = 1·55 + 34, 55 = 1·34 + 21, 34 = 1·21 + 13, 21 = 1·13 + 8, 13 = 1·8 + 5, 8 = 1·5 + 3, 5 = 1·3 + 2, 3 = 1·2 + 1, 2 = 2·1: 9 steps.</p></details>
+<details><summary>Method: Why</summary><p>Consecutive Fibonacci numbers make every quotient 1.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem p10.</b> With a number between 1 and 100 hidden, what is the greatest number of yes-no questions you need to be sure of finding it?</p><details><summary>Hint</summary>Each question halves the possibilities.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Halving</summary><p>2⁶ = 64 < 100 ≤ 128 = 2⁷, so 7 questions.</p></details>
+<details><summary>Method: Binary</summary><p>The numbers 0 to 99 need 7 binary digits.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem p11.</b> Nine coins look identical, one is lighter. What is the fewest number of balance weighings that always finds it?</p><details><summary>Hint</summary>Split into three groups.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Thirds</summary><p>Weigh 3 against 3; this finds the group of 3 containing the light coin, and one more weighing of 1 against 1 finds it.</p></details>
+<details><summary>Method: Bound</summary><p>Each weighing has 3 outcomes, and 3² = 9 covers 9 coins.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem p12.</b> Twenty-seven coins look identical, one is lighter. What is the fewest balance weighings that always finds it?</p><details><summary>Hint</summary>3ⁿ.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Thirds</summary><p>Each weighing narrows 27 to 9 to 3 to 1.</p></details>
+<details><summary>Method: Bound</summary><p>3³ = 27 outcomes are enough and 3² = 9 is too few.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem p13.</b> What is the fewest comparisons needed to find the largest of 10 distinct numbers?</p><details><summary>Hint</summary>Every non-maximum must lose a comparison.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Tournament</summary><p>Each of the 9 non-winners must lose at least once, and each comparison produces one loser: 9.</p></details>
+<details><summary>Method: Scan</summary><p>Keep the largest so far and compare with the next 9 numbers.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem p14.</b> How many comparisons does bubble sort make on 6 numbers if every adjacent pair is compared in every pass, with passes of lengths 5, 4, 3, 2, 1?</p><details><summary>Hint</summary>Add the pass lengths.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Sum</summary><p>5 + 4 + 3 + 2 + 1 = 15.</p></details>
+<details><summary>Method: Pairs</summary><p>It is C(6, 2) = 15.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem p15.</b> How many inversions (pairs out of order) does 3, 1, 4, 2, 5 have?</p><details><summary>Hint</summary>Count pairs i < j with the earlier entry larger.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: List</summary><p>(3, 1), (3, 2) and (4, 2): 3.</p></details>
+<details><summary>Method: By element</summary><p>3 exceeds 1 and 2 after it; 1 exceeds none; 4 exceeds 2; 2 and 5 exceed none: 2 + 0 + 1 = 3.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem p16.</b> What is the fewest comparisons that always sort 4 distinct numbers?</p><details><summary>Hint</summary>There are 24 orderings, and each comparison has 2 outcomes.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Information</summary><p>2⁴ = 16 < 24 ≤ 32 = 2⁵, so at least 5 comparisons are needed, and merge insertion achieves 5.</p></details>
+<details><summary>Method: Counting</summary><p>4! = 24 orderings must be distinguished.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem p17.</b> How many division steps does the Euclidean algorithm take to find gcd(89, 55)?</p><details><summary>Hint</summary>Count each division with remainder, up to the one with remainder 0.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Steps</summary><p>89 = 1·55 + 34, 55 = 1·34 + 21, 34 = 1·21 + 13, 21 = 1·13 + 8, 13 = 1·8 + 5, 8 = 1·5 + 3, 5 = 1·3 + 2, 3 = 1·2 + 1, 2 = 2·1 + 0: 9 divisions.</p></details>
+<details><summary>Method: Fibonacci</summary><p>The quotients are all 1 (except the last), which is the slowest case for Euclid's algorithm; 55 and 89 are consecutive Fibonacci numbers.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem x18.</b> 61 objects are placed into 12 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈61/12⌉ = 6.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 5 objects, there would be at most 12 · 5 = 60 < 61 objects in all.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem x19.</b> How many binary strings of length 10 contain no two consecutive 1s?</p><details><summary>Hint</summary>Condition on the last symbol.</details><details><summary>Answer</summary>144</details>
+<details><summary>Method: Recurrence</summary><p>aₙ = aₙ₋₁ + aₙ₋₂ with a₁ = 2, a₂ = 3: 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, so a_10 = 144.</p></details>
+<details><summary>Method: Fibonacci</summary><p>aₙ = F_{n+2}, so a_10 = F_12 = 144.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem x20.</b> 33 objects are placed into 4 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈33/4⌉ = 9.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 8 objects, there would be at most 4 · 8 = 32 < 33 objects in all.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem x21.</b> How many binary strings of length 11 contain no two consecutive 1s?</p><details><summary>Hint</summary>Condition on the last symbol.</details><details><summary>Answer</summary>233</details>
+<details><summary>Method: Recurrence</summary><p>aₙ = aₙ₋₁ + aₙ₋₂ with a₁ = 2, a₂ = 3: 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, so a_11 = 233.</p></details>
+<details><summary>Method: Fibonacci</summary><p>aₙ = F_{n+2}, so a_11 = F_13 = 233.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem x22.</b> 77 objects are placed into 10 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈77/10⌉ = 8.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 7 objects, there would be at most 10 · 7 = 70 < 77 objects in all.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem x23.</b> How many binary strings of length 12 contain no two consecutive 1s?</p><details><summary>Hint</summary>Condition on the last symbol.</details><details><summary>Answer</summary>377</details>
+<details><summary>Method: Recurrence</summary><p>aₙ = aₙ₋₁ + aₙ₋₂ with a₁ = 2, a₂ = 3: 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, so a_12 = 377.</p></details>
+<details><summary>Method: Fibonacci</summary><p>aₙ = F_{n+2}, so a_12 = F_14 = 377.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem x24.</b> 125 objects are placed into 13 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈125/13⌉ = 10.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 9 objects, there would be at most 13 · 9 = 117 < 125 objects in all.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>
+<div class=p><p><b>Problem x25.</b> How many binary strings of length 8 contain no two consecutive 1s?</p><details><summary>Hint</summary>Condition on the last symbol.</details><details><summary>Answer</summary>55</details>
+<details><summary>Method: Recurrence</summary><p>aₙ = aₙ₋₁ + aₙ₋₂ with a₁ = 2, a₂ = 3: 2, 3, 5, 8, 13, 21, 34, 55, so a_8 = 55.</p></details>
+<details><summary>Method: Fibonacci</summary><p>aₙ = F_{n+2}, so a_8 = F_10 = 55.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 1-2 (Algorithms)</p></div>

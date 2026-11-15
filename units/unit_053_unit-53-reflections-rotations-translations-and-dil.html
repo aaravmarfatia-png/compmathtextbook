@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 53</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 53: Unit 53: Reflections, rotations, translations and dilations</h1><p class=ref>Book: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4 (25 problems)<br>Coxeter &amp; Greitzer, Geometry Revisited, chapter 4 (Transformations), and AoPS Vol. 1 chapter 19.</p>
+<h2>Reading</h2>
+<h3>1. The four rigid motions and dilation</h3><p>A <b>translation</b> slides everything by a vector; a <b>reflection</b> flips across a line; a <b>rotation</b> turns about a point; a <b>dilation</b> scales from a centre. The first three are <b>isometries</b>: they preserve distances, angles and areas. Reflecting (3, 1) in the line y = x gives (1, 3); in the x-axis (3, −1). Rotating (2, 0) by 90° about the origin gives (0, 2). A dilation by factor 3 about the origin sends (2, 0) to (6, 0) and multiplies areas by 9: the triangle (0, 0), (4, 0), (0, 3) of area 6 becomes one of area 24 under factor 2 and of area 54 under factor 3.</p><p><b>Composition.</b> Two reflections in parallel lines give a translation (by twice the distance between the lines); two reflections in lines meeting at angle θ give a rotation by 2θ about the intersection point. Hence reflecting across lines at 30° gives a 60° rotation. A rotation by 60° takes (1, 0) to (1/2, √3/2).</p><details class="try"><summary>Try it</summary><p>Reflect the point (5, 2) across the line x = 3.</p><p><b>Answer.</b> (1, 2).</p></details>
+<h3>2. Using transformations to solve problems</h3><p><b>Shortest path by reflection.</b> A hiker walks from A to a river (a straight line) and then to B on the same side. To minimise the total length, reflect B across the river to B′ and join A to B′: the intersection with the river is the best crossing point, because the path A → X → B has the same length as A → X → B′. <b>Rotation trick.</b> To show that for a point inside an equilateral triangle the distances to the vertices form a triangle, rotate by 60° about one vertex.</p><p><b>Symmetry.</b> A figure has symmetry under a transformation if it maps onto itself. A rectangle has 2 reflection lines and rotation by 180°; a square has 4 reflection lines and rotations by 90°; a regular n-gon has n reflections and n rotations.</p><details class="try"><summary>Try it</summary><p>A is (0, 4), B is (6, 2), and the river is the x-axis. Find the shortest path from A to the river to B.</p><p><b>Answer.</b> Reflect B to (6, −2): distance from (0, 4) = √(36 + 36) = 6√2.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> A point P = (4, 1) is reflected across the line y = x, then rotated 90° counterclockwise about the origin, then translated by (−2, 3). Where does it end?</p><p><b>Solution.</b> Reflection: (1, 4). Rotation by 90° (x, y) → (−y, x): (−4, 1). Translation: (−6, 4).</p><p><b>Reflection.</b> The order matters: rotating first, then reflecting, then translating would give (2, 2) instead, which shows that transformations generally do not commute.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Applying transformations in the wrong order. (2) Rotating in the wrong direction. (3) Forgetting dilation scales area by k². (4) Reflecting about the wrong axis.</p><p><b>Checks.</b> Distances should be preserved by isometries.</p><p><b>How to practise.</b> Track one test point through every step. In Unlimited practice, rotate the transformation families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Coordinates.</b> A rotation by 90° anticlockwise about the origin sends (3, 4) to (−4, 3); a reflection in y = −x sends (a, b) to (−b, −a); a dilation by 2 about the origin sends (x, y) to (2x, 2y). The map x ↦ 2x + 3 has the fixed point where x = 2x + 3, namely x = −3. A composition of a dilation by 2 followed by a translation by (1, 0) is the map (x, y) ↦ (2x + 1, 2y), whose fixed point is (−1, 0).</p><details class="try"><summary>Try it<p>Where does (2, 5) go under reflection in the line y = x followed by a translation by (1, −1)?</p><p><b>Answer.</b> (5, 2) then (6, 1).</p></details><details class="try"><summary>Try it<p>What is the image of (1, 2) under a dilation by 3 centred at (1, 1)?</p><p><b>Answer.</b> (1, 1) + 3 · (0, 1) = (1, 4).</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> A triangle with vertices (0, 0), (2, 0), (0, 3) is rotated 90° anticlockwise about the origin and then reflected in the x-axis. Find the final vertices. <b>Solution.</b> The rotation sends (x, y) to (−y, x): (0, 0), (0, 2), (−3, 0). The reflection sends (x, y) to (x, −y): (0, 0), (0, −2), (−3, 0). The area is ½ · 2 · 3 = 3 both before and after, as expected for isometries.</p><p><b>Reflection.</b> Apply the maps one at a time and write the result after each step.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Reflect the point (3, 5) across the line y = x and then across the x-axis. Where does it end up? Answer as x, y.</p><details><summary>Hint</summary>Swap, then change the sign of y.</details><details><summary>Answer</summary>5, -3</details>
+<details><summary>Method: Step by step</summary><p>y = x swaps the coordinates: (5, 3). The x-axis flips y: (5, −3).</p></details>
+<details><summary>Method: Rotation</summary><p>The two reflections are in lines at 45°, so together they rotate by 90° clockwise: (x, y) → (y, −x) sends (3, 5) to (5, −3).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem p2.</b> Rotate (4, 1) by 90° counterclockwise about the origin. Answer as x, y.</p><details><summary>Hint</summary>(x, y) → (−y, x).</details><details><summary>Answer</summary>-1, 4</details>
+<details><summary>Method: Rule</summary><p>(−1, 4).</p></details>
+<details><summary>Method: Check lengths</summary><p>Both points are √17 from the origin and the vectors are perpendicular: 4·(−1) + 1·4 = 0.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem p3.</b> Rotate (5, 2) by 90° counterclockwise about the point (1, 1). Answer as x, y.</p><details><summary>Hint</summary>Shift the centre to the origin first.</details><details><summary>Answer</summary>0, 5</details>
+<details><summary>Method: Shift, rotate, shift back</summary><p>(5, 2) − (1, 1) = (4, 1). Rotating gives (−1, 4). Adding (1, 1) gives (0, 5).</p></details>
+<details><summary>Method: Check</summary><p>Both (5, 2) and (0, 5) are √17 from (1, 1).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem p4.</b> Apply the dilation with centre (2, 3) and ratio 3 to (4, 4). Answer as x, y.</p><details><summary>Hint</summary>New point = centre + 3 × (P − centre).</details><details><summary>Answer</summary>8, 6</details>
+<details><summary>Method: Formula</summary><p>(2, 3) + 3·(2, 1) = (8, 6).</p></details>
+<details><summary>Method: Distance</summary><p>The distance from the centre goes from √5 to 3√5, and the points are collinear with the centre.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem p5.</b> Two reflections in parallel lines 5 apart compose to a translation. By what distance does it translate?</p><details><summary>Hint</summary>Twice the gap.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Reasoning</summary><p>A point at distance a from the first line (on the far side) is carried across both lines: net shift 2·5 = 10.</p></details>
+<details><summary>Method: Example</summary><p>Lines x = 0 and x = 5. The point x = 1 reflects to −1, then to 11: a shift of 10.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem p6.</b> Reflect (1, 2) in the line x + y = 6. Answer as x, y.</p><details><summary>Hint</summary>Reflection in x + y = c sends (x, y) to (c − y, c − x).</details><details><summary>Answer</summary>4, 5</details>
+<details><summary>Method: Formula</summary><p>(6 − 2, 6 − 1) = (4, 5).</p></details>
+<details><summary>Method: Check</summary><p>The midpoint (2.5, 3.5) has coordinates adding to 6, and the segment is along (1, 1), perpendicular to the mirror.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem p7.</b> A path goes from A = (1, 2) to the x-axis and then to B = (7, 4). What is the shortest total length? Write as k√2.</p><details><summary>Hint</summary>Reflect B (or A) in the x-axis.</details><details><summary>Answer</summary>6√2</details>
+<details><summary>Method: Reflection</summary><p>Reflect A to (1, −2). The shortest path has length |(1, −2)(7, 4)| = √(36 + 36) = 6√2.</p></details>
+<details><summary>Method: Check by coordinates</summary><p>The straight line from (1, −2) to (7, 4) hits y = 0 at x = 3, and the two pieces have lengths 2√2 and 4√2.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem p8.</b> The line y = 2x + 1 is translated 3 units right and 2 units down. What is the new y-intercept?</p><details><summary>Hint</summary>Shift the equation.</details><details><summary>Answer</summary>-7</details>
+<details><summary>Method: New equation</summary><p>y + 2 = 2(x − 3) + 1, so y = 2x − 7. The intercept is −7.</p></details>
+<details><summary>Method: Point</summary><p>The point (0, 1) moves to (3, −1), and slope 2 back to x = 0 gives y = −1 − 6 = −7.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem p9.</b> A region has area 7. A dilation with ratio 3 is applied. What is the area of the image?</p><details><summary>Hint</summary>Areas scale by k².</details><details><summary>Answer</summary>63</details>
+<details><summary>Method: Scaling</summary><p>Lengths ×3 so areas ×9: 63.</p></details>
+<details><summary>Method: Unit square</summary><p>A unit square becomes a 3 × 3 square of area 9.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem x10.</b> Reflect (−2, 5) in the y-axis. What is the sum of the coordinates of the image?</p><details><summary>Hint</summary>Negate x.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Rule</summary><p>The image is (2, 5), sum 7.</p></details>
+<details><summary>Method: Distance</summary><p>The image is as far to the right as the original is to the left.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem x11.</b> Rotate (3, 0) by 90° counterclockwise about (1, 1). What is the sum of the coordinates of the image?</p><details><summary>Hint</summary>Subtract the centre first.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Steps</summary><p>Relative to the centre the point is (2, −1), which rotates to (1, 2), so the image is (2, 3), sum 5.</p></details>
+<details><summary>Method: Check</summary><p>The distance from (1, 1) is √5 both before and after.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem x12.</b> Dilate (4, −2) with factor −2 about the origin. What is the sum of the coordinates of the image?</p><details><summary>Hint</summary>Multiply.</details><details><summary>Answer</summary>-4</details>
+<details><summary>Method: Scale</summary><p>(−8, 4), sum −4.</p></details>
+<details><summary>Method: Meaning</summary><p>A negative factor also turns the point through 180°.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem x13.</b> Translate (0, 0) by (3, 4), then reflect in the x-axis. What is the product of the coordinates of the image?</p><details><summary>Hint</summary>Two steps.</details><details><summary>Answer</summary>-12</details>
+<details><summary>Method: Steps</summary><p>(3, 4) then (3, −4), product −12.</p></details>
+<details><summary>Method: Order</summary><p>Reflecting first would leave the origin at (0, 0) and the translation would then give (3, 4) with product 12, so the order matters.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem x14.</b> Reflect (1, 6) in the line y = −x. What is the sum of the coordinates of the image?</p><details><summary>Hint</summary>(x, y) → (−y, −x).</details><details><summary>Answer</summary>-7</details>
+<details><summary>Method: Rule</summary><p>The image is (−6, −1), sum −7.</p></details>
+<details><summary>Method: Check</summary><p>The midpoint (−2.5, 2.5) lies on y = −x.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem x15.</b> Rotate (−3, 8) by 180° about the origin. What is the sum of the coordinates of the image?</p><details><summary>Hint</summary>Negate both.</details><details><summary>Answer</summary>-5</details>
+<details><summary>Method: Rule</summary><p>(3, −8), sum −5.</p></details>
+<details><summary>Method: Midpoint</summary><p>The origin is the midpoint of the point and its image.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem x16.</b> How many fixed points does a translation by a nonzero vector have?</p><details><summary>Hint</summary>Every point moves.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Definition</summary><p>Each point moves by the vector, so none stays: 0.</p></details>
+<details><summary>Method: Contrast</summary><p>A rotation has one fixed point (its centre) and a reflection has a whole line.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem x17.</b> A dilation has scale factor 3. By what factor are areas multiplied?</p><details><summary>Hint</summary>Square.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Square</summary><p>3² = 9.</p></details>
+<details><summary>Method: Example</summary><p>A unit square becomes 3 × 3 with area 9.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem x18.</b> Find the distance between (-2, 6) and (13, 26).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Formula</summary><p>√(15² + 20²) = √625 = 25.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 15 and 20 form a right triangle with hypotenuse 25 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem x19.</b> Find the sum of the coordinates of the midpoint of (0, 9) and (12, -5).</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Average</summary><p>The midpoint is (6, 2), with sum 8.</p></details>
+<details><summary>Method: Vector</summary><p>Start at (0, 9) and move half the way to (12, -5): (0 + 6, 9 + -7) = (6, 2).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem x20.</b> Find the slope of the line through (0, 5) and (8, -3).</p><details><summary>Hint</summary>Rise over run.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Formula</summary><p>(-3 − 5)/(8 − 0) = -1.</p></details>
+<details><summary>Method: Line equation</summary><p>The line y = -1·x + 5 passes through both points, so its slope is -1.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem x21.</b> Two similar triangles have corresponding sides in the ratio 5 : 8. The smaller has area 25. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square of the ratio.</details><details><summary>Answer</summary>64</details>
+<details><summary>Method: Area ratio</summary><p>The areas are in the ratio 25 : 64, so the larger area is 25 · 64/25 = 64.</p></details>
+<details><summary>Method: Scale factor</summary><p>The linear factor is 8/5, so the area factor is 64/25; 25 · 64/25 = 64.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem x22.</b> Find the area of the triangle with vertices (2, -1), (8, 5) and (0, 6).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: Shoelace</summary><p>|2(5 − 6) + 8(6 − -1) + 0(-1 − 5)|/2 = 27.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (6, 6) and (-2, 7); half the absolute value of 6 · 7 − 6 · -2 is 27.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem x23.</b> Find the distance between (1, 2) and (7, 10).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Formula</summary><p>√(6² + 8²) = √100 = 10.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 6 and 8 form a right triangle with hypotenuse 10 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem x24.</b> Find the sum of the coordinates of the midpoint of (6, -8) and (2, 14).</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Average</summary><p>The midpoint is (4, 3), with sum 7.</p></details>
+<details><summary>Method: Vector</summary><p>Start at (6, -8) and move half the way to (2, 14): (6 + -2, -8 + 11) = (4, 3).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>
+<div class=p><p><b>Problem x25.</b> Find the slope of the line through (2, 2) and (10, 7).</p><details><summary>Hint</summary>Rise over run.</details><details><summary>Answer</summary>5/8</details>
+<details><summary>Method: Formula</summary><p>(7 − 2)/(10 − 2) = 5/8.</p></details>
+<details><summary>Method: Line equation</summary><p>The line y = 5/8·x + 3/4 passes through both points, so its slope is 5/8.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 4</p></div>

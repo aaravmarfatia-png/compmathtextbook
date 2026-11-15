@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 146</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 146: Unit 146: Geometry Unbound: coordinates, complex numbers and Pick</h1><p class=ref>Book: Kedlaya, Geometry Unbound; Aigner &amp; Ziegler, Proofs from THE BOOK; Andreescu &amp; Enescu, Mathematical Olympiad Treasures (25 problems)<br>Kedlaya, Geometry Unbound, 1.4 (areas of polygons), 2.3 (complex numbers), 3.4 (similarities as z ↦ az + b); Aigner &amp; Ziegler, ch. 12 (Pick&#x27;s theorem); Andreescu &amp; Enescu 2.8.</p>
+<h2>Reading</h2>
+<h3>1. Coordinates and complex numbers</h3><p>Rotating by 90° about the origin sends (x, y) to (−y, x), which is multiplication by i. The circumcentre is the intersection of perpendicular bisectors: for the right triangle (0,0), (8,0), (0,6) it is the midpoint (4,3) of the hypotenuse. The shoelace formula gives the area ½|Σ(xᵢyᵢ₊₁ − xᵢ₊₁yᵢ)|: the rectangle (0,0), (4,0), (4,3), (0,3) has area 12.</p><details class="try"><summary>Try it<p>Rotate (3, 1) by 90° about the origin?</p><p><b>Answer.</b> (−1, 3).</p></details><details class="try"><summary>Try it<p>Distance from (0,0) to 3x + 4y = 12?</p><p><b>Answer.</b> 12/5.</p></details>
+<h3>2. Lengths and lattice points</h3><p>Law of cosines: with angle 60° and sides 5, 8, BC² = 25 + 64 − 40 = 49, BC = 7; with angle 120° and sides 3, 5 we get 9 + 25 + 15 = 49 as well. Euler: OH² = 9R² − (a² + b² + c²), so OH = 0 in an equilateral triangle. Pick: A = I + B/2 − 1; the triangle (0,0), (6,0), (0,4) has A = 12, B = 12 and I = 7. A segment with differences (dx, dy) has gcd(dx, dy) + 1 lattice points.</p><details class="try"><summary>Try it<p>Lattice points on the segment (0,0)–(6,9)?</p><p><b>Answer.</b> gcd = 3, so 4.</p></details><details class="try"><summary>Try it<p>Interior points of the triangle (0,0), (4,0), (0,4)?</p><p><b>Answer.</b> A = 8, B = 12, so I = 8 − 6 + 1 = 3.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> Find the circumcentre of (0,0), (6,0), (2,4). <b>Solution.</b> The perpendicular bisector of the base is x = 3. Equating distances to (0,0) and (2,4): 9 + y² = 1 + (y − 4)², so 8y = 8, y = 1; the circumcentre is (3, 1).</p><p><b>Check.</b> Distance to (0,0) is √10 and to (2,4) is √(1 + 9) = √10 ✓.</p>
+<h3>4. In the books</h3><p><b>Kedlaya.</b> Ch. 1 develops the plane from the distance formula; 1.4 gives the area of a polygon by the shoelace formula, [P₁…Pₙ] = ½(x₁y₂ − x₂y₁ + … + xₙy₁ − x₁yₙ). Section 2.3 identifies points with complex numbers; 3.4 proves that every orientation-preserving similarity is z ↦ az + b, a translation if a = 1 and a spiral similarity otherwise (so a 90° rotation about c is z ↦ i(z − c) + c).</p><p><b>Aigner &amp; Ziegler, ch. 12.</b> The chapter on Euler's formula applications also proves Pick's theorem, A = I + B/2 − 1. <b>Olympiad Treasures 2.8</b> (&ldquo;Dr. Trig Learns Complex Numbers&rdquo;) is a problem section on complex numbers in trigonometry.</p><p><b>Honest note.</b> The problems are my own coordinate exercises.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Rotate the point (5, 2) by 90° counter-clockwise about (1, 1). What is the sum of the coordinates of the image?</p><details><summary>Hint</summary>Shift so the centre is the origin, rotate by (x, y) → (−y, x), then shift back.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Translate and rotate</summary><p>Relative position (4, 1) becomes (-1, 4); adding the centre gives (0, 5), sum 5.</p></details>
+<details><summary>Method: Complex numbers</summary><p>Multiply (5 + 2i) − (1 + 1i) by i and add the centre back: 0 + 5i, so the sum is 5.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> Rotate the point (7, 3) by 90° counter-clockwise about (2, 5). What is the sum of the coordinates of the image?</p><details><summary>Hint</summary>Shift so the centre is the origin, rotate by (x, y) → (−y, x), then shift back.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Translate and rotate</summary><p>Relative position (5, -2) becomes (2, 5); adding the centre gives (4, 10), sum 14.</p></details>
+<details><summary>Method: Complex numbers</summary><p>Multiply (7 + 3i) − (2 + 5i) by i and add the centre back: 4 + 10i, so the sum is 14.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> Rotate the point (0, 6) by 90° counter-clockwise about (3, 1). What is the sum of the coordinates of the image?</p><details><summary>Hint</summary>Shift so the centre is the origin, rotate by (x, y) → (−y, x), then shift back.</details><details><summary>Answer</summary>-4</details>
+<details><summary>Method: Translate and rotate</summary><p>Relative position (-3, 5) becomes (-5, -3); adding the centre gives (-2, -2), sum -4.</p></details>
+<details><summary>Method: Complex numbers</summary><p>Multiply (0 + 6i) − (3 + 1i) by i and add the centre back: -2 + -2i, so the sum is -4.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> Rotate the point (4, -1) by 90° counter-clockwise about (-2, 2). What is the sum of the coordinates of the image?</p><details><summary>Hint</summary>Shift so the centre is the origin, rotate by (x, y) → (−y, x), then shift back.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Translate and rotate</summary><p>Relative position (6, -3) becomes (3, 6); adding the centre gives (1, 8), sum 9.</p></details>
+<details><summary>Method: Complex numbers</summary><p>Multiply (4 + -1i) − (-2 + 2i) by i and add the centre back: 1 + 8i, so the sum is 9.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> Find x + y for the circumcentre (x, y) of the triangle with vertices (0,0), (6,0), (2,4). (fraction)</p><details><summary>Hint</summary>The circumcentre is equidistant from the three vertices; subtract pairs of distance equations.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Perpendicular bisectors</summary><p>Equating squared distances gives two linear equations with solution (3, 1), sum 4.</p></details>
+<details><summary>Method: Geometry</summary><p>Find the midpoint of a side and use perpendicular bisectors; the intersection has coordinate sum 4.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> Find x + y for the circumcentre (x, y) of the triangle with vertices (0,0), (8,0), (0,6). (fraction)</p><details><summary>Hint</summary>The circumcentre is equidistant from the three vertices; subtract pairs of distance equations.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Perpendicular bisectors</summary><p>Equating squared distances gives two linear equations with solution (4, 3), sum 7.</p></details>
+<details><summary>Method: Geometry</summary><p>Find the midpoint of a side and use perpendicular bisectors; the intersection has coordinate sum 7.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> Find x + y for the circumcentre (x, y) of the triangle with vertices (1,1), (9,1), (1,7). (fraction)</p><details><summary>Hint</summary>The circumcentre is equidistant from the three vertices; subtract pairs of distance equations.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Perpendicular bisectors</summary><p>Equating squared distances gives two linear equations with solution (5, 4), sum 9.</p></details>
+<details><summary>Method: Geometry</summary><p>Find the midpoint of a side and use perpendicular bisectors; the intersection has coordinate sum 9.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> Find the area of the polygon with vertices (0,0), (4,0), (5,3), (2,5), (0,3) in order. (fraction)</p><details><summary>Hint</summary>Use the shoelace formula.</details><details><summary>Answer</summary>37/2</details>
+<details><summary>Method: Shoelace</summary><p>½|Σ(xᵢyᵢ₊₁ − xᵢ₊₁yᵢ)| = 37/2.</p></details>
+<details><summary>Method: Triangulate</summary><p>Split from the first vertex into 3 triangles and add their areas: 37/2.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> Find the area of the polygon with vertices (0,0), (6,1), (7,5), (3,7), (-1,4) in order. (fraction)</p><details><summary>Hint</summary>Use the shoelace formula.</details><details><summary>Answer</summary>38</details>
+<details><summary>Method: Shoelace</summary><p>½|Σ(xᵢyᵢ₊₁ − xᵢ₊₁yᵢ)| = 38.</p></details>
+<details><summary>Method: Triangulate</summary><p>Split from the first vertex into 3 triangles and add their areas: 38.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> Find the area of the polygon with vertices (1,0), (5,2), (4,6), (0,5) in order. (fraction)</p><details><summary>Hint</summary>Use the shoelace formula.</details><details><summary>Answer</summary>39/2</details>
+<details><summary>Method: Shoelace</summary><p>½|Σ(xᵢyᵢ₊₁ − xᵢ₊₁yᵢ)| = 39/2.</p></details>
+<details><summary>Method: Triangulate</summary><p>Split from the first vertex into 2 triangles and add their areas: 39/2.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> Triangle ABC has AB = 5, AC = 8 and angle A = 60°. Find BC.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Law of cosines</summary><p>BC² = 5² + 8² − 2·5·8·cos 60° = 49, so BC = 7.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put A at the origin and AC on the x-axis; B is at 5(cos 60°, sin 60°); the distance from B to C is 7.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> Triangle ABC has AB = 3, AC = 8 and angle A = 60°. Find BC.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Law of cosines</summary><p>BC² = 3² + 8² − 2·3·8·cos 60° = 49, so BC = 7.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put A at the origin and AC on the x-axis; B is at 3(cos 60°, sin 60°); the distance from B to C is 7.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> Triangle ABC has AB = 7, AC = 8 and angle A = 120°. Find BC.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Law of cosines</summary><p>BC² = 7² + 8² − 2·7·8·cos 120° = 169, so BC = 13.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put A at the origin and AC on the x-axis; B is at 7(cos 120°, sin 120°); the distance from B to C is 13.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> Triangle ABC has AB = 3, AC = 5 and angle A = 120°. Find BC.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Law of cosines</summary><p>BC² = 3² + 5² − 2·3·5·cos 120° = 49, so BC = 7.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put A at the origin and AC on the x-axis; B is at 3(cos 120°, sin 120°); the distance from B to C is 7.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> Triangle ABC has sides 13, 14, 15. If O is the circumcentre and H the orthocentre, find OH². (fraction)</p><details><summary>Hint</summary>Euler: OH² = 9R² − (a² + b² + c²).</details><details><summary>Answer</summary>265/64</details>
+<details><summary>Method: Euler's formula</summary><p>R = 65/8, so OH² = 9·4225/64 − 590 = 265/64.</p></details>
+<details><summary>Method: Coordinates</summary><p>Place B and C on the x-axis, compute O and H = A + B + C − 2O and the squared distance: 265/64.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> Triangle ABC has sides 5, 12, 13. If O is the circumcentre and H the orthocentre, find OH². (fraction)</p><details><summary>Hint</summary>Euler: OH² = 9R² − (a² + b² + c²).</details><details><summary>Answer</summary>169/4</details>
+<details><summary>Method: Euler's formula</summary><p>R = 13/2, so OH² = 9·169/4 − 338 = 169/4.</p></details>
+<details><summary>Method: Coordinates</summary><p>Place B and C on the x-axis, compute O and H = A + B + C − 2O and the squared distance: 169/4.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> Triangle ABC has sides 8, 15, 17. If O is the circumcentre and H the orthocentre, find OH². (fraction)</p><details><summary>Hint</summary>Euler: OH² = 9R² − (a² + b² + c²).</details><details><summary>Answer</summary>289/4</details>
+<details><summary>Method: Euler's formula</summary><p>R = 17/2, so OH² = 9·289/4 − 578 = 289/4.</p></details>
+<details><summary>Method: Coordinates</summary><p>Place B and C on the x-axis, compute O and H = A + B + C − 2O and the squared distance: 289/4.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> Find the distance from the point (0, 0) to the line 3x + 4y − 12 = 0. (fraction)</p><details><summary>Hint</summary>Distance = |Ax₀ + By₀ + C|/√(A² + B²).</details><details><summary>Answer</summary>12/5</details>
+<details><summary>Method: Distance formula</summary><p>|3·0 + 4·0 + (-12)|/5 = 12/5.</p></details>
+<details><summary>Method: Foot of perpendicular</summary><p>Move along the normal (3, 4) to the line and compute the length of that segment: 12/5.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> Find the distance from the point (1, 2) to the line 5x + 12y + 1 = 0. (fraction)</p><details><summary>Hint</summary>Distance = |Ax₀ + By₀ + C|/√(A² + B²).</details><details><summary>Answer</summary>30/13</details>
+<details><summary>Method: Distance formula</summary><p>|5·1 + 12·2 + (1)|/13 = 30/13.</p></details>
+<details><summary>Method: Foot of perpendicular</summary><p>Move along the normal (5, 12) to the line and compute the length of that segment: 30/13.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> Find the distance from the point (6, 7) to the line 8x + 15y − 34 = 0. (fraction)</p><details><summary>Hint</summary>Distance = |Ax₀ + By₀ + C|/√(A² + B²).</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Distance formula</summary><p>|8·6 + 15·7 + (-34)|/17 = 7.</p></details>
+<details><summary>Method: Foot of perpendicular</summary><p>Move along the normal (8, 15) to the line and compute the length of that segment: 7.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> How many lattice points lie strictly inside the triangle with vertices (0,0), (6,0), (0,4)?</p><details><summary>Hint</summary>Pick's theorem: A = I + B/2 − 1.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Pick's theorem</summary><p>A = 12, B = 6 + 4 + gcd(6,4) = 12, so I = 12 − 6 + 1 = 7.</p></details>
+<details><summary>Method: Count rows</summary><p>For each x from 1 to 5 count the integers y with 0 < y < 4(1 − x/6); the total is 7.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> How many lattice points lie strictly inside the triangle with vertices (0,0), (8,0), (0,6)?</p><details><summary>Hint</summary>Pick's theorem: A = I + B/2 − 1.</details><details><summary>Answer</summary>17</details>
+<details><summary>Method: Pick's theorem</summary><p>A = 24, B = 8 + 6 + gcd(8,6) = 16, so I = 24 − 8 + 1 = 17.</p></details>
+<details><summary>Method: Count rows</summary><p>For each x from 1 to 7 count the integers y with 0 < y < 6(1 − x/8); the total is 17.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> How many lattice points lie strictly inside the triangle with vertices (0,0), (9,0), (0,6)?</p><details><summary>Hint</summary>Pick's theorem: A = I + B/2 − 1.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: Pick's theorem</summary><p>A = 27, B = 9 + 6 + gcd(9,6) = 18, so I = 27 − 9 + 1 = 19.</p></details>
+<details><summary>Method: Count rows</summary><p>For each x from 1 to 8 count the integers y with 0 < y < 6(1 − x/9); the total is 19.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> How many lattice points lie on the segment from (0,0) to (12,18), including both ends?</p><details><summary>Hint</summary>Use the gcd of the coordinate differences.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Gcd</summary><p>gcd(12, 18) + 1 = 7.</p></details>
+<details><summary>Method: Step vector</summary><p>The smallest lattice step is (2, 3); the segment contains 6 steps, so 7 points.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> How many lattice points lie on the segment from (3,4) to (21,40), including both ends?</p><details><summary>Hint</summary>Use the gcd of the coordinate differences.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: Gcd</summary><p>gcd(18, 36) + 1 = 19.</p></details>
+<details><summary>Method: Step vector</summary><p>The smallest lattice step is (1, 2); the segment contains 18 steps, so 19 points.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 1–3 and Aigner &amp; Ziegler ch. 12 (original problem)</p></div>

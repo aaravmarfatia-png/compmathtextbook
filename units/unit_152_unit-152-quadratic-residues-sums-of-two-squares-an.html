@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 152</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 152: Unit 152: Quadratic residues, sums of two squares and integer polynomials</h1><p class=ref>Book: Khurmi, Modern Olympiad Number Theory; Aigner &amp; Ziegler, Proofs from THE BOOK; Andreescu &amp; Dospinescu, Straight from the Book (25 problems)<br>Khurmi ch. 7–8 (quadratic residues, reciprocity); Aigner &amp; Ziegler ch. 4–5 (reciprocity, two squares); Straight from the Book ch. 4 (integer polynomials).</p>
+<h2>Reading</h2>
+<h3>1. Quadratic residues and reciprocity</h3><p>Modulo an odd prime p, a is a <b>quadratic residue</b> if x² ≡ a has a solution. <b>Euler's criterion</b>: a^((p−1)/2) ≡ 1 for residues and ≡ −1 for non-residues. Example: mod 11 the squares are 1, 4, 9, 5, 3, so 5 is a residue (and 2 is not). <b>Quadratic reciprocity</b> says (p/q)(q/p) = (−1)^(((p−1)/2)((q−1)/2)): for odd primes p, q it lets you flip the symbol, so (3/101) = (101/3) = (2/3) = −1 because 101 ≡ 1 (mod 4).</p><details class="try"><summary>Try it<p>Is 2 a residue mod 7?</p><p><b>Answer.</b> Yes: 3² = 9 ≡ 2.</p></details><details class="try"><summary>Try it<p>Is 3 a residue mod 11?</p><p><b>Answer.</b> Yes: 5² = 25 ≡ 3.</p></details>
+<h3>2. Sums of two squares and integer polynomials</h3><p><b>Fermat.</b> An odd prime p is a sum of two squares iff p ≡ 1 (mod 4); in general n is, iff every prime ≡ 3 (mod 4) divides n to an even power. The number of integer pairs (a, b) with a² + b² = n is 4(d₁(n) − d₃(n)): for 25 the divisors are 1, 5, 25 (all ≡ 1), giving 12 pairs. <b>Polynomials.</b> For integer coefficients, a − b divides f(a) − f(b); and rational roots p/q of an integer polynomial satisfy p | constant term, q | leading coefficient. A cubic is determined by four values, found by finite differences.</p><details class="try"><summary>Try it<p>Is 21 a sum of two squares?</p><p><b>Answer.</b> No: 3 · 7 has two primes ≡ 3 (mod 4) to odd powers.</p></details><details class="try"><summary>Try it<p>Which rational roots of 2x² − 3x − 2 = 0 are possible, and which are real?</p><p><b>Answer.</b> The roots are 2 and −1/2.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> Find the number of integer pairs with a² + b² = 65. <b>Solution.</b> 65 = 5 · 13 has divisors 1, 5, 13, 65 all ≡ 1 (mod 4), so the count is 4 · 4 = 16: (±1, ±8), (±8, ±1), (±4, ±7), (±7, ±4).</p><p><b>Check.</b> 1 + 64 = 65 and 16 + 49 = 65 ✓.</p>
+<h3>4. In the books</h3><p>Khurmi, <i>Modern Olympiad Number Theory</i> covers quadratic residues and reciprocity in ch. 7–8; Aigner and Ziegler, <i>Proofs from THE BOOK</i> prove reciprocity and the two-squares theorem in ch. 4–5; Andreescu and Dospinescu, <i>Straight from the Book</i>, ch. 4 treats integer polynomials. This unit is only an introduction. <b>Honest note:</b> the problems here are my own computational templates, and none of the proofs from those books are reproduced.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> How many integers x with 0 ≤ x < 11 satisfy x² ≡ 5 (mod 11)?</p><details><summary>Hint</summary>Euler's criterion: a is a residue mod p exactly when a^((p−1)/2) ≡ 1.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Euler's criterion</summary><p>5^5 ≡ 1 (mod 11), so 5 is a quadratic residue and there are 2 solutions.</p></details>
+<details><summary>Method: List squares</summary><p>The squares mod 11 are [1, 3, 4, 5, 9]; 5 is in the list, so 2 solutions.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> How many integers x with 0 ≤ x < 13 satisfy x² ≡ 3 (mod 13)?</p><details><summary>Hint</summary>Euler's criterion: a is a residue mod p exactly when a^((p−1)/2) ≡ 1.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Euler's criterion</summary><p>3^6 ≡ 1 (mod 13), so 3 is a quadratic residue and there are 2 solutions.</p></details>
+<details><summary>Method: List squares</summary><p>The squares mod 13 are [1, 3, 4, 9, 10, 12]; 3 is in the list, so 2 solutions.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> How many integers x with 0 ≤ x < 19 satisfy x² ≡ 7 (mod 19)?</p><details><summary>Hint</summary>Euler's criterion: a is a residue mod p exactly when a^((p−1)/2) ≡ 1.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Euler's criterion</summary><p>7^9 ≡ 1 (mod 19), so 7 is a quadratic residue and there are 2 solutions.</p></details>
+<details><summary>Method: List squares</summary><p>The squares mod 19 are [1, 4, 5, 6, 7, 9, 11, 16, 17]; 7 is in the list, so 2 solutions.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> How many integers x with 0 ≤ x < 23 satisfy x² ≡ 10 (mod 23)?</p><details><summary>Hint</summary>Euler's criterion: a is a residue mod p exactly when a^((p−1)/2) ≡ 1.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Euler's criterion</summary><p>10^11 ≡ 22 (mod 23), so 10 is not a quadratic residue and there are 0 solutions.</p></details>
+<details><summary>Method: List squares</summary><p>The squares mod 23 are [1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18]; 10 is not in the list, so 0 solutions.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> Is 3 a quadratic residue mod the prime 101? Answer 1 if yes and −1 if no.</p><details><summary>Hint</summary>Use quadratic reciprocity to flip (q/p).</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Reciprocity</summary><p>Flip using (q/p)(p/q) = (−1)^((p−1)(q−1)/4), then reduce 101 mod 3; the result is -1.</p></details>
+<details><summary>Method: Euler</summary><p>3^50 ≡ 100 (mod 101), so the symbol is -1.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> Is 5 a quadratic residue mod the prime 103? Answer 1 if yes and −1 if no.</p><details><summary>Hint</summary>Use quadratic reciprocity to flip (q/p).</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Reciprocity</summary><p>Flip using (q/p)(p/q) = (−1)^((p−1)(q−1)/4), then reduce 103 mod 5; the result is -1.</p></details>
+<details><summary>Method: Euler</summary><p>5^51 ≡ 102 (mod 103), so the symbol is -1.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> Is 7 a quadratic residue mod the prime 97? Answer 1 if yes and −1 if no.</p><details><summary>Hint</summary>Use quadratic reciprocity to flip (q/p).</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Reciprocity</summary><p>Flip using (q/p)(p/q) = (−1)^((p−1)(q−1)/4), then reduce 97 mod 7; the result is -1.</p></details>
+<details><summary>Method: Euler</summary><p>7^48 ≡ 96 (mod 97), so the symbol is -1.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> How many ordered pairs (a, b) of integers (positive, zero or negative) satisfy a² + b² = 25?</p><details><summary>Hint</summary>Jacobi: the count is 4·(number of divisors ≡ 1 mod 4 − number ≡ 3 mod 4).</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Divisor formula</summary><p>Divisors ≡ 1 (mod 4): 3; divisors ≡ 3 (mod 4): 0; count = 4·(3 − 0) = 12.</p></details>
+<details><summary>Method: Direct search</summary><p>Check a from 0 to 5: the pairs found, with signs and order, total 12.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> How many ordered pairs (a, b) of integers (positive, zero or negative) satisfy a² + b² = 65?</p><details><summary>Hint</summary>Jacobi: the count is 4·(number of divisors ≡ 1 mod 4 − number ≡ 3 mod 4).</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Divisor formula</summary><p>Divisors ≡ 1 (mod 4): 4; divisors ≡ 3 (mod 4): 0; count = 4·(4 − 0) = 16.</p></details>
+<details><summary>Method: Direct search</summary><p>Check a from 0 to 8: the pairs found, with signs and order, total 16.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> How many ordered pairs (a, b) of integers (positive, zero or negative) satisfy a² + b² = 85?</p><details><summary>Hint</summary>Jacobi: the count is 4·(number of divisors ≡ 1 mod 4 − number ≡ 3 mod 4).</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Divisor formula</summary><p>Divisors ≡ 1 (mod 4): 4; divisors ≡ 3 (mod 4): 0; count = 4·(4 − 0) = 16.</p></details>
+<details><summary>Method: Direct search</summary><p>Check a from 0 to 9: the pairs found, with signs and order, total 16.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> How many ordered pairs (a, b) of integers (positive, zero or negative) satisfy a² + b² = 50?</p><details><summary>Hint</summary>Jacobi: the count is 4·(number of divisors ≡ 1 mod 4 − number ≡ 3 mod 4).</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Divisor formula</summary><p>Divisors ≡ 1 (mod 4): 3; divisors ≡ 3 (mod 4): 0; count = 4·(3 − 0) = 12.</p></details>
+<details><summary>Method: Direct search</summary><p>Check a from 0 to 7: the pairs found, with signs and order, total 12.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> How many integers from 1 to 100 are the sum of two squares of integers (zero allowed)?</p><details><summary>Hint</summary>n is a sum of two squares iff every prime ≡ 3 (mod 4) divides n to an even power.</details><details><summary>Answer</summary>43</details>
+<details><summary>Method: Criterion</summary><p>Test each n ≤ 100 by factoring; exactly 43 pass.</p></details>
+<details><summary>Method: Search</summary><p>List a² + b² for 0 ≤ a ≤ b ≤ 10 with value ≤ 100 and count the distinct values: 43.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> What is the smallest positive integer x with x² ≡ −1 (mod 13)?</p><details><summary>Hint</summary>Since 13 ≡ 1 (mod 4), −1 is a quadratic residue; compute ((p−1)/2)! or search.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Search</summary><p>Test x = 1, 2, …: the first success is x = 5, since 5² + 1 = 26 = 13·2.</p></details>
+<details><summary>Method: Wilson</summary><p>For p ≡ 1 (mod 4), x = ((p−1)/2)! is a root; reducing gives 5 or 8, the smaller being 5.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> What is the smallest positive integer x with x² ≡ −1 (mod 17)?</p><details><summary>Hint</summary>Since 17 ≡ 1 (mod 4), −1 is a quadratic residue; compute ((p−1)/2)! or search.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Search</summary><p>Test x = 1, 2, …: the first success is x = 4, since 4² + 1 = 17 = 17·1.</p></details>
+<details><summary>Method: Wilson</summary><p>For p ≡ 1 (mod 4), x = ((p−1)/2)! is a root; reducing gives 4 or 13, the smaller being 4.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> What is the smallest positive integer x with x² ≡ −1 (mod 29)?</p><details><summary>Hint</summary>Since 29 ≡ 1 (mod 4), −1 is a quadratic residue; compute ((p−1)/2)! or search.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Search</summary><p>Test x = 1, 2, …: the first success is x = 12, since 12² + 1 = 145 = 29·5.</p></details>
+<details><summary>Method: Wilson</summary><p>For p ≡ 1 (mod 4), x = ((p−1)/2)! is a root; reducing gives 12 or 17, the smaller being 12.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> What is the smallest positive integer x with x² ≡ −1 (mod 37)?</p><details><summary>Hint</summary>Since 37 ≡ 1 (mod 4), −1 is a quadratic residue; compute ((p−1)/2)! or search.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Search</summary><p>Test x = 1, 2, …: the first success is x = 6, since 6² + 1 = 37 = 37·1.</p></details>
+<details><summary>Method: Wilson</summary><p>For p ≡ 1 (mod 4), x = ((p−1)/2)! is a root; reducing gives 6 or 31, the smaller being 6.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> How many primes below 50 can be written as a sum of two squares of integers?</p><details><summary>Hint</summary>Fermat: an odd prime is a sum of two squares iff it is ≡ 1 (mod 4); also 2 = 1² + 1².</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Fermat</summary><p>The primes: [2, 5, 13, 17, 29, 37, 41], so 7 in total.</p></details>
+<details><summary>Method: List</summary><p>Check each of the 15 primes below 50 against the squares up to 49: the same 7 succeed.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> The prime 29 is the sum of two positive squares a² + b². What is a + b?</p><details><summary>Hint</summary>Search for the square that leaves a square.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Search</summary><p>29 = 2² + 5², so a + b = 7.</p></details>
+<details><summary>Method: Gaussian integers</summary><p>Factor p = (a + bi)(a − bi); the uniqueness of the factorization gives {a, b} = {2, 5}.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> The prime 41 is the sum of two positive squares a² + b². What is a + b?</p><details><summary>Hint</summary>Search for the square that leaves a square.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Search</summary><p>41 = 4² + 5², so a + b = 9.</p></details>
+<details><summary>Method: Gaussian integers</summary><p>Factor p = (a + bi)(a − bi); the uniqueness of the factorization gives {a, b} = {4, 5}.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> f is a polynomial with integer coefficients. What is the largest integer that must divide f(10) − f(4) for every such f?</p><details><summary>Hint</summary>a − b divides f(a) − f(b).</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Divisibility</summary><p>aⁿ − bⁿ is divisible by a − b, so f(10) − f(4) is divisible by 6, and f(x) = x shows 6 is the largest.</p></details>
+<details><summary>Method: Test</summary><p>With f(x) = x the difference is exactly 6, so nothing larger works.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> f is a polynomial with integer coefficients. What is the largest integer that must divide f(9) − f(2) for every such f?</p><details><summary>Hint</summary>a − b divides f(a) − f(b).</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Divisibility</summary><p>aⁿ − bⁿ is divisible by a − b, so f(9) − f(2) is divisible by 7, and f(x) = x shows 7 is the largest.</p></details>
+<details><summary>Method: Test</summary><p>With f(x) = x the difference is exactly 7, so nothing larger works.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> A polynomial f of degree at most 3 satisfies f(0) = 1, f(1) = 3, f(2) = 9, f(3) = 19. What is f(4)?</p><details><summary>Hint</summary>Use finite differences or Lagrange interpolation.</details><details><summary>Answer</summary>33</details>
+<details><summary>Method: Finite differences</summary><p>Take differences until the third difference is constant, then extend the table: f(4) = 33.</p></details>
+<details><summary>Method: Lagrange</summary><p>f(x) = 2*x**2 + 1, so f(4) = 33.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> A polynomial f of degree at most 3 satisfies f(0) = 2, f(1) = 3, f(2) = 10, f(3) = 29. What is f(4)?</p><details><summary>Hint</summary>Use finite differences or Lagrange interpolation.</details><details><summary>Answer</summary>66</details>
+<details><summary>Method: Finite differences</summary><p>Take differences until the third difference is constant, then extend the table: f(4) = 66.</p></details>
+<details><summary>Method: Lagrange</summary><p>f(x) = x**3 + 2, so f(4) = 66.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> What is the sum of the rational roots of 6*x^3 - x^2 - 5*x + 2?</p><details><summary>Hint</summary>Rational root theorem: roots p/q have p | constant, q | leading coefficient.</details><details><summary>Answer</summary>1/6</details>
+<details><summary>Method: Rational root theorem</summary><p>Test the candidates p/q; the rational roots are [-1, 1/2, 2/3], with sum 1/6.</p></details>
+<details><summary>Method: Factor</summary><p>Factor the polynomial as (x + 1)*(2*x - 1)*(3*x - 2); the roots add up to 1/6.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> What is the sum of the rational roots of 2*x^3 - 3*x^2 - 8*x - 3?</p><details><summary>Hint</summary>Rational root theorem: roots p/q have p | constant, q | leading coefficient.</details><details><summary>Answer</summary>3/2</details>
+<details><summary>Method: Rational root theorem</summary><p>Test the candidates p/q; the rational roots are [-1, -1/2, 3], with sum 3/2.</p></details>
+<details><summary>Method: Factor</summary><p>Factor the polynomial as (x - 3)*(x + 1)*(2*x + 1); the roots add up to 3/2.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 7–8, A&amp;Z ch. 4–5, SFB ch. 4 (original problem)</p></div>

@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 111</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 111: Unit 111: Digits, repunits, residues, squares and cubes</h1><p class=ref>Book: Andreescu &amp; Gelca, 3.1-3.5 (25 problems)<br>Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 3.2-3.5 (Squares and Cubes, Repunits, Digits of Numbers, Residues).</p>
+<h2>Reading</h2>
+<h3>1. Residues of squares and cubes</h3><p>The squares mod 10 end in 0, 1, 4, 5, 6 or 9, never 2, 3, 7 or 8. Squares mod 4 are 0 or 1. Squares mod 8 are 0, 1 or 4. Cubes mod 9 are 0, 1 or 8, and cubes mod 7 are 0, 1 or 6. Residues are found by squaring or cubing every residue class.</p><p><b>Worked example 1.</b> No perfect square has the form 4k + 3. So no number made of the digits 1 only (111…1 with at least two digits) is a square: such a number is 11 mod 100, which is 3 mod 4.</p><p><b>Worked example 2.</b> Show x³ + y³ = 9z + 4 has no integer solutions. Cubes mod 9 are 0, 1, 8, so x³ + y³ mod 9 ∈ {0, 1, 2, 7, 8}, and 4 is not among them.</p>
+<h3>2. Digits</h3><p>A number is congruent to its digit sum mod 9 (and mod 3), and to its alternating digit sum mod 11. The last digit gives the number mod 10, the last two digits mod 100, the last three mod 8.</p><p><b>Worked example.</b> A number with digit sum 20 is neither a perfect square nor a perfect cube: 20 ≡ 2 mod 9, squares mod 9 are 0, 1, 4, 7, and cubes mod 9 are 0, 1, 8.</p><p><b>Palindromes and 11.</b> Every palindrome with an even number of digits is divisible by 11 (alternating digit sum is 0).</p>
+<h3>3. Repunits</h3><p>The <b>repunit</b> R_n = 11…1 (n ones) = (10ⁿ − 1)/9. R_3 = 111 = 3 × 37; R_6 = 111111 = 3 × 7 × 11 × 13 × 37 (checked). R_m divides R_n when m divides n. R_n is divisible by 3 iff 3 divides n.</p><p><b>Worked example.</b> Show R_6 is divisible by 7: 111111 = 7 × 15873. In general 10⁶ ≡ 1 mod 7 so 10⁶ − 1 is divisible by 7, and R_6 = (10⁶ − 1)/9 with 9 coprime to 7.</p><p><b>Numbers like 9, 99, 999.</b> 10ⁿ − 1 = 99…9, so a number consisting of nines is always one less than a power of 10.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Using the digit-sum test for 9 on numbers represented in another base. Concluding that a number is a square from its residue (residues only exclude). Forgetting that squares can be 0 mod anything.</p><p><b>Checks.</b> Compute residues by squaring each class.</p><p><b>Practice.</b> Memorise: squares mod 3 (0, 1), mod 4 (0, 1), mod 5 (0, 1, 4), mod 8 (0, 1, 4).</p>
+<h3>Worked examples with Try-its: Repunits and digit tricks</h3><p>A repunit Rₙ = 11…1 (n ones) equals (10ⁿ − 1)/9; R₃ = 111 = 3 · 37. No repunit with n ≥ 2 is a perfect square: it ends in 11, so it is ≡ 3 (mod 4), but squares are 0 or 1 (mod 4). The digit sum determines the remainder mod 9 and mod 3, and the last two digits determine the remainder mod 4.</p><details class="try"><summary>Try it<p>Is 1111 divisible by 11?</p><p><b>Answer.</b> Alternating digit sum 1 − 1 + 1 − 1 = 0, so yes: 1111 = 11 · 101.</p></details>
+<h3>Worked examples with Try-its: Residues of squares and cubes</h3><p>Squares are 0 or 1 mod 4, 0, 1 or 4 mod 8, and 0, 1, 4, 7 mod 9. Cubes are 0, 1 or 8 mod 9. These restrictions rule out many equations: x² + y² = 4k + 3 has no integer solutions, and x³ + y³ + z³ ≡ 4 or 5 mod 9 cannot be solved.</p><details class="try"><summary>Try it<p>Can a perfect square end in 7?</p><p><b>Answer.</b> No: squares end in 0, 1, 4, 5, 6 or 9.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Show that 4ⁿ + 1 is never a perfect square for n ≥ 1. <b>Solution.</b> (2ⁿ)² = 4ⁿ < 4ⁿ + 1 < 4ⁿ + 2 · 2ⁿ + 1 = (2ⁿ + 1)², and there is no square strictly between consecutive squares.</p><p><b>Reflection.</b> Sandwiching between consecutive squares is a standard argument.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Repunit factors.</b> 111111 = 3 · 7 · 11 · 13 · 37 (a factorisation program agrees), because R₆ = (10⁶ − 1)/9 and 10⁶ − 1 = 999999 = 3³ · 7 · 11 · 13 · 37. <b>Residues.</b> A square ends in 0, 1, 4, 5, 6 or 9; a cube can end in any digit. Mod 9, cubes are 0, 1 or 8.</p><details class="try"><summary>Try it<p>Is 2222222 divisible by 11?</p><p><b>Answer.</b> Alternating digit sum 2 − 2 + 2 − 2 + 2 − 2 + 2 = 2, so no.</p></details><details class="try"><summary>Try it<p>What is the remainder when 12345678 is divided by 9?</p><p><b>Answer.</b> Digit sum 36, so remainder 0.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Find the smallest positive integer made only of 1s that is divisible by 7. <b>Solution.</b> R₆ = 111111 = 7 · 15873 and the smaller repunits 1, 11, 111, 1111, 11111 leave remainders 1, 4, 6, 5, 2 on division by 7, so the answer is 111111.</p><p><b>Check.</b> 7 · 15873 = 111111 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> What is the remainder when the number made of twenty 1s is divided by 9?</p><details><summary>Hint</summary>A number is congruent to its digit sum mod 9.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Digit sum</summary><p>The digit sum is 20 and 20 mod 9 = 2.</p></details>
+<details><summary>Method: Formula</summary><p>R₂₀ = (10²⁰ − 1)/9 and 10 ≡ 1 mod 9 gives R₂₀ ≡ 20 ≡ 2.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem p2.</b> Find 111111 ÷ 7.</p><details><summary>Hint</summary>Check divisibility.</details><details><summary>Answer</summary>15873</details>
+<details><summary>Method: Division</summary><p>7 · 15873 = 111111, so the quotient is 15873.</p></details>
+<details><summary>Method: Reason</summary><p>10⁶ ≡ 1 mod 7, so R₆ = (10⁶ − 1)/9 is a multiple of 7.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem p3.</b> What are the last two digits of 3¹⁰⁰ (give the number from 0 to 99)?</p><details><summary>Hint</summary>Find the cycle of 3ⁿ mod 100.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Order</summary><p>3²⁰ = 3486784401 ≡ 1 (mod 100), so 3¹⁰⁰ = (3²⁰)⁵ ≡ 1.</p></details>
+<details><summary>Method: Check</summary><p>By Euler, 3⁴⁰ ≡ 1 mod 100 as well.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem p4.</b> How many 3-digit numbers equal the sum of the cubes of their digits?</p><details><summary>Hint</summary>Search or reason.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Search</summary><p>The numbers are 153, 370, 371 and 407: 4.</p></details>
+<details><summary>Method: Check</summary><p>1 + 125 + 27 = 153.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem p5.</b> How many different remainders can a perfect square leave when divided by 4?</p><details><summary>Hint</summary>Test n = 0, 1, 2, 3.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Test</summary><p>0, 1, 4 ≡ 0, 9 ≡ 1, so the remainders are 0 and 1: 2.</p></details>
+<details><summary>Method: Parity</summary><p>An even number squared is a multiple of 4; an odd number squared is 1 more than a multiple of 8.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem p6.</b> How many different remainders can a perfect cube leave when divided by 9?</p><details><summary>Hint</summary>Test n = 0..8.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Test</summary><p>The cubes of 0..8 leave 0, 1, 8, 0, 1, 8, 0, 1, 8 mod 9, so 3 values.</p></details>
+<details><summary>Method: Reason</summary><p>Write n = 3k + r and the cube mod 9 depends only on r.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem p7.</b> What is the smallest repunit divisible by 3, and how many ones does it have?</p><details><summary>Hint</summary>R_n ≡ n (mod 3).</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Digit sum</summary><p>The digit sum equals n, so 3 | R_n iff 3 | n; the smallest is n = 3 (111 = 3 · 37).</p></details>
+<details><summary>Method: Check</summary><p>R₁ = 1 and R₂ = 11 are not multiples of 3.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem p8.</b> How many integers from 1 to 1000 are perfect squares or perfect cubes?</p><details><summary>Hint</summary>Inclusion-exclusion with sixth powers.</details><details><summary>Answer</summary>38</details>
+<details><summary>Method: Count</summary><p>There are 31 squares (up to 31² = 961), 10 cubes (up to 10³ = 1000) and 3 numbers that are both, the sixth powers 1, 64 and 729. So 31 + 10 − 3 = 38.</p></details>
+<details><summary>Method: Check</summary><p>The squares are up to 31² = 961, the cubes up to 10³ = 1000.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem p9.</b> How many two-digit numbers equal 4 times the sum of their digits?</p><details><summary>Hint</summary>10a + b = 4(a + b).</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Equation</summary><p>6a = 3b gives b = 2a, so a = 1..4: 12, 24, 36, 48 — 4 numbers.</p></details>
+<details><summary>Method: Check</summary><p>24 = 4 · 6 and 4 · (2 + 4) = 24.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem p10.</b> What is the remainder when the repunit 11111 is divided by 7?</p><details><summary>Hint</summary>Compute 11111 mod 7.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Division</summary><p>7 · 1587 = 11109, so the remainder is 2.</p></details>
+<details><summary>Method: Powers of 10</summary><p>Mod 7 the powers of 10 are 1, 3, 2, 6, 4, and 1 + 3 + 2 + 6 + 4 = 16 ≡ 2.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem p11.</b> How many distinct remainders do perfect squares leave when divided by 8?</p><details><summary>Hint</summary>Square 0 to 7.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Table</summary><p>0, 1, 4, 1, 0, 1, 4, 1 give the set {0, 1, 4}: 3.</p></details>
+<details><summary>Method: Parity</summary><p>Odd squares are 1 mod 8, and even squares are 0 or 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem p12.</b> What are the last two digits of 7²⁰²⁵, written as a number from 0 to 99?</p><details><summary>Hint</summary>7⁴ = 2401.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Cycle</summary><p>7⁴ ≡ 1 (mod 100), and 2025 ≡ 1 (mod 4), so 7²⁰²⁵ ≡ 7.</p></details>
+<details><summary>Method: Check</summary><p>7² = 49, 7³ = 343 ≡ 43, 7⁴ ≡ 301 ≡ 1 (mod 100).</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem p13.</b> How many distinct remainders do perfect cubes leave when divided by 9?</p><details><summary>Hint</summary>Cube 0 to 8.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Table</summary><p>The cubes are 0, 1, 8, 0, 1, 8, 0, 1, 8 mod 9, so the set is {0, 1, 8}: 3.</p></details>
+<details><summary>Method: Reason</summary><p>n³ mod 9 depends on n mod 3 only.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem p14.</b> Find the digit sum of 999².</p><details><summary>Hint</summary>999² = 998001.</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: Compute</summary><p>999² = 998001, with digit sum 9 + 9 + 8 + 0 + 0 + 1 = 27.</p></details>
+<details><summary>Method: Mod 9</summary><p>The digit sum is a multiple of 9 since 999² is, and 27 fits.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem p15.</b> What is the digital root of 2¹⁰⁰ (the result of repeatedly summing digits down to one digit)?</p><details><summary>Hint</summary>2¹⁰⁰ mod 9.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Mod 9</summary><p>2⁶ ≡ 1 (mod 9) and 100 ≡ 4 (mod 6), so 2¹⁰⁰ ≡ 16 ≡ 7. The digital root is 7.</p></details>
+<details><summary>Method: Check</summary><p>2, 4, 8, 7, 5, 1 repeat, and the 4th entry is 7.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem p16.</b> What is the fewest ones a repunit must have to be divisible by 3?</p><details><summary>Hint</summary>Digit sum.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Digit sum</summary><p>A number is divisible by 3 when its digit sum is, so the number of ones must be a multiple of 3: 3.</p></details>
+<details><summary>Method: Check</summary><p>111 = 3 · 37.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem p17.</b> How many positive two-digit perfect squares are there?</p><details><summary>Hint</summary>16 to 81.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: List</summary><p>16, 25, 36, 49, 64, 81: 6.</p></details>
+<details><summary>Method: Bounds</summary><p>4² = 16 is the first and 9² = 81 is the last, so n = 4 to 9: 6.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem x18.</b> What is the last digit of 12^99?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 12, 12², 12³, … are 2, 4, 8, 6, and then they repeat from position 1 with period 4. Exponent 99 lands on 8.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 99 = 1100011 in binary. The squares 12^(2^i) mod 10 are 2, 4, 6, 6, 6, 6, 6; multiplying the ones for the 1-bits gives 8.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem x19.</b> What is the remainder when 3^100 is divided by 7?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 3, 3², 3³, … are 3, 2, 6, 4, 5, 1, and then they repeat from position 1 with period 6. Exponent 100 lands on 4.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 100 = 1100100 in binary. The squares 3^(2^i) mod 7 are 3, 2, 4, 2, 4, 2, 4; multiplying the ones for the 1-bits gives 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem x20.</b> What is the last digit of 2^2027?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 2, 2², 2³, … are 2, 4, 8, 6, and then they repeat from position 1 with period 4. Exponent 2027 lands on 8.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 2027 = 11111101011 in binary. The squares 2^(2^i) mod 10 are 2, 4, 6, 6, 6, 6, 6, 6, 6, 6, 6; multiplying the ones for the 1-bits gives 8.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem x21.</b> What is the remainder when 2^50 is divided by 13?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 2, 2², 2³, … are 2, 4, 8, 3, 6, 12, 11, 9, 5, 10, 7, 1, and then they repeat from position 1 with period 12. Exponent 50 lands on 4.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 50 = 110010 in binary. The squares 2^(2^i) mod 13 are 2, 4, 3, 9, 3, 9; multiplying the ones for the 1-bits gives 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem x22.</b> What is the last digit of 3^2029?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 3, 3², 3³, … are 3, 9, 7, 1, and then they repeat from position 1 with period 4. Exponent 2029 lands on 3.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 2029 = 11111101101 in binary. The squares 3^(2^i) mod 10 are 3, 9, 1, 1, 1, 1, 1, 1, 1, 1, 1; multiplying the ones for the 1-bits gives 3.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem x23.</b> What is the remainder when 5^77 is divided by 11?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 5, 5², 5³, … are 5, 3, 4, 9, 1, and then they repeat from position 1 with period 5. Exponent 77 lands on 3.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 77 = 1001101 in binary. The squares 5^(2^i) mod 11 are 5, 3, 9, 4, 5, 3, 9; multiplying the ones for the 1-bits gives 3.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem x24.</b> What is the last digit of 7^2026?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 7, 7², 7³, … are 7, 9, 3, 1, and then they repeat from position 1 with period 4. Exponent 2026 lands on 9.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 2026 = 11111101010 in binary. The squares 7^(2^i) mod 10 are 7, 9, 1, 1, 1, 1, 1, 1, 1, 1, 1; multiplying the ones for the 1-bits gives 9.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>
+<div class=p><p><b>Problem x25.</b> What is the remainder when 7^30 is divided by 10?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 7, 7², 7³, … are 7, 9, 3, 1, and then they repeat from position 1 with period 4. Exponent 30 lands on 9.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 30 = 11110 in binary. The squares 7^(2^i) mod 10 are 7, 9, 1, 1, 1; multiplying the ones for the 1-bits gives 9.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1-3.5</p></div>

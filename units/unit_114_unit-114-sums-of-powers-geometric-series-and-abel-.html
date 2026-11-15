@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 114</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 114: Unit 114: Sums of powers, geometric series and Abel summation</h1><p class=ref>Book: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3 (25 problems)<br>Andreescu &amp; Gelca, Mathematical Olympiad Challenges, section 2.7 (The Abel Summation Formula) and Zeitz, The Art and Craft of Problem Solving, section 5.3 (Sums and Products).</p>
+<h2>Reading</h2>
+<h3>1. Sums of powers</h3><p>The standard formulas: Σk = n(n+1)/2, Σk² = n(n+1)(2n+1)/6, Σk³ = [n(n+1)/2]². For n = 10 these give 55, 385 and 3,025 = 55². They can be proved by induction or by telescoping with (k + 1)^{m+1} − k^{m+1}.</p><p><b>Worked example.</b> Σ_{k=1}^{10} k(k + 1) = Σk² + Σk = 385 + 55 = 440, and 10 × 11 × 12/3 = 440 ✓.</p><p><b>Differences of powers.</b> a^n − b^n = (a − b)(a^{n−1} + a^{n−2} b + … + b^{n−1}); this is also the geometric sum in disguise.</p>
+<h3>2. Geometric series</h3><p>For a ratio r ≠ 1: 1 + r + … + r^{n−1} = (rⁿ − 1)/(r − 1). So Σ_{k=0}^{9} 2ᵏ = 1,023. If |r| < 1 the infinite sum is 1/(1 − r): Σ (1/2)^k = 2, and 0.999… = 9/10 + 9/100 + … = 1.</p><p><b>Worked example.</b> A ball dropped from 8 m bounces to ¾ of its previous height each time. Total distance: 8 + 2 × (6 + 4.5 + …) = 8 + 2 × 6/(1 − 3/4) = 8 + 48 = 56 m.</p><p><b>The trick S − rS.</b> For Σ k·2ᵏ, write S = Σ_{k=1}^{n} k 2ᵏ; then 2S − S gives S = (n − 1)2^{n+1} + 2. For n = 4: 1·2 + 2·4 + 3·8 + 4·16 = 98 and 3 × 32 + 2 = 98 ✓.</p>
+<h3>3. Abel summation</h3><p><b>Abel summation</b> is summation by parts. With partial sums A_k = a₁ + … + a_k: Σ_{k=1}^{n} a_k b_k = A_n b_n − Σ_{k=1}^{n−1} A_k (b_{k+1} − b_k). It is to sums what integration by parts is to integrals.</p><p><b>Worked example.</b> Evaluate Σ_{k=1}^{4} k · 2ᵏ. Take a_k = 2ᵏ, so A_k = 2^{k+1} − 2, and b_k = k with b_{k+1} − b_k = 1. Then the sum = A₄ · 4 − Σ_{k=1}^{3} A_k = 30 × 4 − (2 + 6 + 14) = 120 − 22 = 98 ✓.</p><p><b>When it helps.</b> When b_k is monotonic and the partial sums A_k are easy, as for bounding sums of oscillating terms.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Off-by-one in the number of terms (r⁰ to r^{n−1} has n terms). Using the infinite-sum formula when |r| ≥ 1. Forgetting the boundary term in Abel summation.</p><p><b>Checks.</b> Test a formula on n = 1, 2, 3.</p><p><b>Practice.</b> Whenever you see k·rᵏ, try S − rS.</p>
+<h3>Worked examples with Try-its: Sums of powers</h3><p>Σk = n(n + 1)/2, Σk² = n(n + 1)(2n + 1)/6 and Σk³ = (n(n + 1)/2)²: for n = 5 the cubes sum to 225 = 15². A geometric series has Σ rᵏ = (1 − rⁿ⁺¹)/(1 − r) and, for |r| < 1, an infinite sum 1/(1 − r). Differentiating gives Σ k rᵏ = r/(1 − r)² (equal to 2 for r = 1/2).</p><details class="try"><summary>Try it<p>Evaluate 1² + 2² + … + 12².</p><p><b>Answer.</b> 12 · 13 · 25/6 = 650.</p></details>
+<h3>Worked examples with Try-its: Abel summation</h3><p>Summation by parts: Σ aₖbₖ = Aₙbₙ − Σ Aₖ(bₖ₊₁ − bₖ) where Aₖ = a₁ + … + aₖ. It converts a sum of products into one with simpler terms. For example Σ_{k=1}^{4} k · 2ᵏ = 2 + 8 + 24 + 64 = 98, which matches the closed form (n − 1)2ⁿ⁺¹ + 2 = 3 · 32 + 2.</p><details class="try"><summary>Try it<p>Evaluate 1 · 2 + 2 · 4 + 3 · 8.</p><p><b>Answer.</b> 2 + 8 + 24 = 34.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Find the sum 1 + 2x + 3x² + 4x³ + … for |x| < 1 and evaluate it at x = 1/3. <b>Solution.</b> The sum is 1/(1 − x)², so at x = 1/3 it equals 1/(2/3)² = 9/4.</p><p><b>Reflection.</b> Differentiating the geometric series is a standard source of such formulas.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Pronic sum.</b> Σ k(k + 1) for k = 1 to n equals n(n + 1)(n + 2)/3: for n = 5 that is 70. <b>Arithmetico-geometric.</b> Σ k · 3ᵏ from 1 to 3 = 3 + 18 + 81 = 102, which matches the closed form ((2n − 1)3ⁿ⁺¹ + 3)/4 = (5 · 81 + 3)/4. <b>Cubes.</b> 1³ + 2³ + 3³ + 4³ = 100 = 10².</p><details class="try"><summary>Try it<p>Evaluate 1 · 2 + 2 · 3 + 3 · 4.</p><p><b>Answer.</b> 3 · 4 · 5/3 = 20.</p></details><details class="try"><summary>Try it<p>Evaluate the infinite sum Σ k/2ᵏ.</p><p><b>Answer.</b> 2.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Find 1² − 2² + 3² − 4² + … − 100². <b>Solution.</b> Pair terms: (2k − 1)² − (2k)² = −(4k − 1), so the sum is −Σ(4k − 1) for k = 1 to 50 = −(4 · 1275 − 50) = −5050.</p><p><b>Check.</b> It equals −(1 + 2 + … + 100) = −5050.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find 1² + 2² + … + 20².</p><details><summary>Hint</summary>n(n + 1)(2n + 1)/6.</details><details><summary>Answer</summary>2870</details>
+<details><summary>Method: Formula</summary><p>20 · 21 · 41/6 = 2870.</p></details>
+<details><summary>Method: Differences</summary><p>Using k³ − (k − 1)³ = 3k² − 3k + 1 and telescoping gives the same formula.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem p2.</b> Find 1³ + 2³ + … + 10³.</p><details><summary>Hint</summary>The square of the triangular number.</details><details><summary>Answer</summary>3025</details>
+<details><summary>Method: Formula</summary><p>(10 · 11/2)² = 55² = 3025.</p></details>
+<details><summary>Method: Telescoping</summary><p>Use (k + 1)⁴ − k⁴ = 4k³ + 6k² + 4k + 1 and sum.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem p3.</b> Find the infinite sum 1/2 + 2/4 + 3/8 + 4/16 + … = Σ k/2ᵏ.</p><details><summary>Hint</summary>Subtract a shifted copy.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Shift</summary><p>If S = Σ k/2ᵏ then S − S/2 = Σ 1/2ᵏ = 1, so S = 2.</p></details>
+<details><summary>Method: Numeric</summary><p>The partial sum to 20 terms is 1.99998.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem p4.</b> Find 1·2 + 2·4 + 3·8 + 4·16 + 5·32 = Σ_{k=1}^{5} k·2ᵏ.</p><details><summary>Hint</summary>Σ k·2ᵏ = (n − 1)2ⁿ⁺¹ + 2.</details><details><summary>Answer</summary>258</details>
+<details><summary>Method: Formula</summary><p>(5 − 1) · 2⁶ + 2 = 258.</p></details>
+<details><summary>Method: Direct</summary><p>2 + 8 + 24 + 64 + 160 = 258.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem p5.</b> Find Σ_{k=1}^{6} k·3ᵏ.</p><details><summary>Hint</summary>Abel summation or subtract a shifted copy.</details><details><summary>Answer</summary>6015</details>
+<details><summary>Method: Shift</summary><p>With S = Σ k3ᵏ, 3S − S = 6·3⁷ − (3 + 3² + … + 3⁶) = 13122 − 1092 = 12030, so S = 6015.</p></details>
+<details><summary>Method: Direct</summary><p>3 + 18 + 81 + 324 + 1215 + 4374 = 6015.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem p6.</b> Find Σ_{k=1}^{10} k(k + 1).</p><details><summary>Hint</summary>k(k + 1) = k² + k.</details><details><summary>Answer</summary>440</details>
+<details><summary>Method: Split</summary><p>385 + 55 = 440.</p></details>
+<details><summary>Method: Formula</summary><p>n(n + 1)(n + 2)/3 = 10 · 11 · 12/3 = 440.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem p7.</b> Write 0.272727… as a fraction in lowest terms.</p><details><summary>Hint</summary>Geometric series with ratio 1/100.</details><details><summary>Answer</summary>3/11</details>
+<details><summary>Method: Series</summary><p>27/100 · 1/(1 − 1/100) = 27/99 = 3/11.</p></details>
+<details><summary>Method: Algebra</summary><p>Let x = 0.2727…; then 100x − x = 27, so x = 27/99 = 3/11.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem p8.</b> Find 1/2 + 1/4 + … + 1/1024, as a fraction.</p><details><summary>Hint</summary>Geometric sum.</details><details><summary>Answer</summary>1023/1024</details>
+<details><summary>Method: Formula</summary><p>1 − 1/1024 = 1023/1024.</p></details>
+<details><summary>Method: Doubling</summary><p>Adding the last term 1/1024 to the sum gives 1 exactly.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem p9.</b> Find −1 + 2 − 3 + 4 − … + 100.</p><details><summary>Hint</summary>Pair consecutive terms.</details><details><summary>Answer</summary>50</details>
+<details><summary>Method: Pairs</summary><p>(−1 + 2) + (−3 + 4) + … + (−99 + 100) = 50.</p></details>
+<details><summary>Method: Formula</summary><p>The sum Σ(−1)ᵏk to an even n is n/2 = 50.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem p10.</b> Find 1² + 2² + … + 20².</p><details><summary>Hint</summary>n(n + 1)(2n + 1)/6.</details><details><summary>Answer</summary>2870</details>
+<details><summary>Method: Formula</summary><p>20 · 21 · 41/6 = 2870.</p></details>
+<details><summary>Method: Cubic fit</summary><p>Differences of the partial sums 1, 5, 14, 30 give a cubic polynomial; the formula n(n + 1)(2n + 1)/6 matches them all.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem p11.</b> Find 1³ + 2³ + … + 10³.</p><details><summary>Hint</summary>The sum is the square of 1 + 2 + … + n.</details><details><summary>Answer</summary>3025</details>
+<details><summary>Method: Formula</summary><p>(10 · 11/2)² = 55² = 3025.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 8 + 27 + 64 + 125 + 216 + 343 + 512 + 729 + 1000 = 3025.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem p12.</b> Find 1 + 3 + 9 + … + 3⁷.</p><details><summary>Hint</summary>Geometric series.</details><details><summary>Answer</summary>3280</details>
+<details><summary>Method: Formula</summary><p>(3⁸ − 1)/2 = 6560/2 = 3280.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 3 + 9 + 27 + 81 + 243 + 729 + 2187 = 3280.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem p13.</b> Find 1 + 2 + 3 + … + 50.</p><details><summary>Hint</summary>Pair the ends.</details><details><summary>Answer</summary>1275</details>
+<details><summary>Method: Formula</summary><p>50 · 51/2 = 1275.</p></details>
+<details><summary>Method: Pairing</summary><p>25 pairs each summing to 51.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem p14.</b> Find 1² + 3² + 5² + 7² + 9².</p><details><summary>Hint</summary>Odd squares.</details><details><summary>Answer</summary>165</details>
+<details><summary>Method: Direct</summary><p>1 + 9 + 25 + 49 + 81 = 165.</p></details>
+<details><summary>Method: Formula</summary><p>The sum of the first n odd squares is n(2n − 1)(2n + 1)/3 = 5 · 9 · 11/3 = 165.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem p15.</b> Find 1·2 + 2·3 + … + 10·11.</p><details><summary>Hint</summary>k(k + 1) = k² + k.</details><details><summary>Answer</summary>440</details>
+<details><summary>Method: Split</summary><p>Σk² + Σk = 385 + 55 = 440.</p></details>
+<details><summary>Method: Formula</summary><p>n(n + 1)(n + 2)/3 = 10 · 11 · 12/3 = 440.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem p16.</b> Find 1/2 + 1/4 + 1/8 + … + 1/1024.</p><details><summary>Hint</summary>Geometric series, 10 terms.</details><details><summary>Answer</summary>1023/1024</details>
+<details><summary>Method: Formula</summary><p>1 − 1/1024 = 1023/1024.</p></details>
+<details><summary>Method: Doubling</summary><p>Each term fills half of the remaining gap to 1.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem p17.</b> What is the smallest n with 1³ + 2³ + … + n³ greater than 5000?</p><details><summary>Hint</summary>The sum is (n(n + 1)/2)².</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Formula</summary><p>We need n(n + 1)/2 > 70.7; n = 11 gives 66 and n = 12 gives 78. So n = 12.</p></details>
+<details><summary>Method: Values</summary><p>The sums are 66² = 4356 and 78² = 6084.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem x18.</b> Find 1² + 2² + … + 22².</p><details><summary>Hint</summary>n(n + 1)(2n + 1)/6.</details><details><summary>Answer</summary>3795</details>
+<details><summary>Method: Formula</summary><p>22 · 23 · 45/6 = 3795.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100 + 121 + 144 + 169 + 196 + 225 + 256 + 289 + 324 + 361 + 400 + 441 + 484 = 3795.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem x19.</b> Find 1³ + 2³ + … + 12³.</p><details><summary>Hint</summary>The sum equals the square of 1 + 2 + … + n.</details><details><summary>Answer</summary>6084</details>
+<details><summary>Method: Square of a sum</summary><p>(12 · 13/2)² = 78² = 6084.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 8 + 27 + 64 + 125 + 216 + 343 + 512 + 729 + 1000 + 1331 + 1728 = 6084.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem x20.</b> Find the sum of the first 5 terms of the geometric sequence 3, 12, 48, …</p><details><summary>Hint</summary>a(rⁿ − 1)/(r − 1).</details><details><summary>Answer</summary>1023</details>
+<details><summary>Method: Formula</summary><p>3(4^5 − 1)/(4 − 1) = 1023.</p></details>
+<details><summary>Method: Add the terms</summary><p>3 + 12 + 48 + 192 + 768 = 1023.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem x21.</b> Find 1² + 2² + … + 25².</p><details><summary>Hint</summary>n(n + 1)(2n + 1)/6.</details><details><summary>Answer</summary>5525</details>
+<details><summary>Method: Formula</summary><p>25 · 26 · 51/6 = 5525.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100 + 121 + 144 + 169 + 196 + 225 + 256 + 289 + 324 + 361 + 400 + 441 + 484 + 529 + 576 + 625 = 5525.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem x22.</b> Find 1³ + 2³ + … + 14³.</p><details><summary>Hint</summary>The sum equals the square of 1 + 2 + … + n.</details><details><summary>Answer</summary>11025</details>
+<details><summary>Method: Square of a sum</summary><p>(14 · 15/2)² = 105² = 11025.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 8 + 27 + 64 + 125 + 216 + 343 + 512 + 729 + 1000 + 1331 + 1728 + 2197 + 2744 = 11025.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem x23.</b> Find the sum of the first 6 terms of the geometric sequence 1, 5, 25, …</p><details><summary>Hint</summary>a(rⁿ − 1)/(r − 1).</details><details><summary>Answer</summary>3906</details>
+<details><summary>Method: Formula</summary><p>1(5^6 − 1)/(5 − 1) = 3906.</p></details>
+<details><summary>Method: Add the terms</summary><p>1 + 5 + 25 + 125 + 625 + 3125 = 3906.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem x24.</b> Find 1² + 2² + … + 11².</p><details><summary>Hint</summary>n(n + 1)(2n + 1)/6.</details><details><summary>Answer</summary>506</details>
+<details><summary>Method: Formula</summary><p>11 · 12 · 23/6 = 506.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100 + 121 = 506.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>
+<div class=p><p><b>Problem x25.</b> Find 1³ + 2³ + … + 15³.</p><details><summary>Hint</summary>The sum equals the square of 1 + 2 + … + n.</details><details><summary>Answer</summary>14400</details>
+<details><summary>Method: Square of a sum</summary><p>(15 · 16/2)² = 120² = 14400.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 8 + 27 + 64 + 125 + 216 + 343 + 512 + 729 + 1000 + 1331 + 1728 + 2197 + 2744 + 3375 = 14400.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.7; Zeitz ch. 5.3</p></div>

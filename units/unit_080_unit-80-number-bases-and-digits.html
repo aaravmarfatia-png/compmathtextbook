@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 80</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 80: Unit 80: Number bases and digits</h1><p class=ref>Book: AoPS Volume 2, number bases chapter; Engel ch. 6 (25 problems)<br>AoPS Volume 2, chapters on number bases and digits.</p>
+<h2>Reading</h2>
+<h3>1. Writing numbers in other bases</h3><p>In base b, the digits dₖ…d₁d₀ stand for dₖbᵏ + … + d₁b + d₀. Binary uses b = 2 with digits 0 and 1; 1011₂ = 8 + 2 + 1 = 11. Hexadecimal uses b = 16 with digits 0–9 and A–F; FF₁₆ = 15 × 16 + 15 = 255. Base 5: 123₅ = 25 + 10 + 3 = 38.</p><p><b>Converting to base b.</b> Divide repeatedly by b and read the remainders from the last to the first. For 100 in binary: 100 = 2 × 50 + 0, 50 = 2 × 25 + 0, 25 = 2 × 12 + 1, 12 = 2 × 6 + 0, 6 = 2 × 3 + 0, 3 = 2 × 1 + 1, 1 = 2 × 0 + 1. Reading upward: 1100100₂ = 64 + 32 + 4 = 100 ✓.</p><p><b>Arithmetic.</b> Add as usual, carrying when you reach b. In binary 1011 + 110 = 10001 (11 + 6 = 17 = 16 + 1). Multiplication: 1011₂ × 11₂ = 11 × 3 = 33 = 100001₂ ✓.</p>
+<h3>2. Digits and divisibility in base b</h3><p>A number is congruent to its digit sum mod (b − 1), as in base 10 with 9. In base 8, a number is divisible by 7 iff its digit sum is. The last digit in base b is n mod b; the last two digits give n mod b². To count digits: n has ⌊log_b n⌋ + 1 digits in base b, so 2¹⁰⁰ has 101 binary digits and 31 decimal digits.</p><p><b>Worked example 1.</b> The number 2⁶⁴ − 1 in binary is sixty-four 1s; in hex it is sixteen Fs.</p><p><b>Worked example 2.</b> In which bases is 36 written with two digits? Need b ≤ 36 < b²: b = 7, …, 35.</p><p><b>Worked example 3.</b> A number is 121 in base b and equals 49 in base 10: b² + 2b + 1 = 49, (b + 1)² = 49, b = 6.</p>
+<h3>3. Tricks with binary</h3><p><b>Weights.</b> With weights 1, 2, 4, 8, 16, 32 you can balance any total from 1 to 63: each number has a binary form. <b>Balanced ternary</b> with weights 1, 3, 9, 27 on both pans of a balance makes every integer from 1 to 40.</p><p><b>Nim and binary.</b> The nim-sum in Unit 58 is addition without carrying in binary.</p><p><b>Counting 1s.</b> The number of 1s in binary of n is its <i>binary weight</i>. The number of odd entries in row n of Pascal's triangle is 2 raised to it (Unit 76).</p><p><b>Worked example.</b> What is the sum of the binary digits of 1 through 7? 1, 1, 2, 1, 2, 2, 3 add to 12 = 3 × 4 (each of the 3 bit positions is 1 in 4 of the 7 numbers).</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Reading remainders in the wrong order. Using digits ≥ b. Forgetting a carry. Mixing up the base of the answer with the base of the question.</p><p><b>Checks.</b> Convert back to decimal.</p><p><b>Practice.</b> Always write the base as a subscript.</p>
+<h3>Worked examples with Try-its: Converting between bases</h3><p>A number written dₖ…d₁d₀ in base b equals Σdᵢbⁱ. So 101101₂ = 32 + 8 + 4 + 1 = 45 and 213₄ = 2 · 16 + 1 · 4 + 3 = 39. To convert down, divide repeatedly by b and read the remainders backwards: 2024 = 11111101000₂ (1024 + 512 + 256 + 128 + 64 + 32 + 8). 100 in base 5 is 400₅ since 4 · 25 = 100.</p><details class="try"><summary>Try it</summary><p>Write 77 in base 3.</p><p><b>Answer.</b> 77 = 2 · 27 + 2 · 9 + 1 · 3 + 2, so 2212₃.</p></details>
+<h3>Worked examples with Try-its: Digits and divisibility</h3><p>Since b ≡ 1 mod (b − 1), a number is congruent to its digit sum mod 9 in base 10 (and mod 3). In base b the digit sum tells you the remainder mod (b − 1); the alternating digit sum gives the remainder mod (b + 1). The number of digits of n in base b is ⌊log_b n⌋ + 1, so there are 7³ − 7² = 294 three-digit numbers in base 7.</p><p><b>Trailing zeros.</b> n! ends in as many zeros in base b as the smallest ratio (exponent of p in n!)/(exponent of p in b) over the primes of b. In base 10, 100! has ⌊100/5⌋ + ⌊100/25⌋ = 24 zeros. 10! = 2⁸ · 3⁴ · 5² · 7, so in base 12 = 2² · 3 it ends in min(8/2, 4) = 4 zeros.</p><details class="try"><summary>Try it</summary><p>What is the remainder when 123456789 is divided by 9?</p><p><b>Answer.</b> Digit sum 45, so remainder 0.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> The number 1001₂ · 11₂ is computed in base 2. What is the result in base 10? <b>Solution.</b> 1001₂ = 9 and 11₂ = 3, product 27 = 11011₂.</p><p><b>Reflection.</b> Convert to base 10, compute, and convert back unless the problem needs base-b arithmetic directly.</p>
+<h3>More worked examples: Worked examples</h3><p>1101₂ = 8 + 4 + 1 = 13; 212₃ = 18 + 3 + 2 = 23; and 255 = FF in base 16. In base 2, 101₂ · 11₂ = 5 · 3 = 15 = 1111₂. The digit sum of 2¹⁰ = 1024 is 7, and 1024 ≡ 7 (mod 9), consistent with the digit-sum rule.</p><details class="try"><summary>Try it<p>Write 100 in base 2.</p><p><b>Answer.</b> 1100100₂.</p></details><details class="try"><summary>Try it<p>What is the largest 3-digit number in base 5, in base 10?</p><p><b>Answer.</b> 444₅ = 124.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Find all bases b for which 14ᵦ is a perfect square. <b>Solution.</b> 14ᵦ = b + 4 with b ≥ 5. Squares of the form b + 4: b = 5 (9 = 3²), b = 12 (16 = 4²), b = 21 (25 = 5²), …, namely b = k² − 4 for k ≥ 3.</p><p><b>Check.</b> In base 5, 14₅ = 9 = 3² ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Convert 1011101 (base 2) to base 10.</p><details><summary>Hint</summary>Powers of 2.</details><details><summary>Answer</summary>93</details>
+<details><summary>Method: Expand</summary><p>64 + 16 + 8 + 4 + 1 = 93.</p></details>
+<details><summary>Method: Horner</summary><p>((((((1)·2 + 0)·2 + 1)·2 + 1)·2 + 1)·2 + 0)·2 + 1 = 93.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p2.</b> Write 200 in base 7 and give the sum of its digits.</p><details><summary>Hint</summary>Divide by 7 repeatedly.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Division</summary><p>200 = 4·49 + 4, and 4 = 0·7 + 4, so 200 = 404 (base 7) with digit sum 8.</p></details>
+<details><summary>Method: Check</summary><p>4·49 + 0·7 + 4 = 200.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p3.</b> How many three-digit positive integers have digit sum 7?</p><details><summary>Hint</summary>Stars and bars with first digit at least 1.</details><details><summary>Answer</summary>28</details>
+<details><summary>Method: Stars and bars</summary><p>Let the first digit be a + 1: a + b + c = 6 with nonnegative digits, so C(8,2) = 28.</p></details>
+<details><summary>Method: List by first digit</summary><p>First digit 1 leaves digit sum 6 for two digits (7 ways), then 6 ways, 5, 4, 3, 2, 1 for first digits 2 to 7: 7 + 6 + 5 + 4 + 3 + 2 + 1 = 28.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p4.</b> What is the sum of the digits of 2²⁰?</p><details><summary>Hint</summary>2²⁰ = 1048576.</details><details><summary>Answer</summary>31</details>
+<details><summary>Method: Compute</summary><p>2¹⁰ = 1024 and 1024² = 1048576, whose digits sum to 31.</p></details>
+<details><summary>Method: Mod 9</summary><p>2²⁰ ≡ 2² = 4 (mod 9) using 2⁶ ≡ 1, and 31 ≡ 4 (mod 9), consistent.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p5.</b> What is the smallest positive multiple of 12 whose digits are all 0 or 1?</p><details><summary>Hint</summary>Divisible by 4 and by 3.</details><details><summary>Answer</summary>11100</details>
+<details><summary>Method: Conditions</summary><p>Divisible by 4 means ending in 00, and by 3 means the digit sum is a multiple of 3, so at least three 1s: the smallest is 11100.</p></details>
+<details><summary>Method: Check</summary><p>11100 = 12 · 925.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p6.</b> How many digits does 2¹⁰⁰ have?</p><details><summary>Hint</summary>⌊100 log₁₀ 2⌋ + 1.</details><details><summary>Answer</summary>31</details>
+<details><summary>Method: Logarithm</summary><p>100 · 0.30103 = 30.103, so the number has 31 digits.</p></details>
+<details><summary>Method: Bounds</summary><p>2¹⁰ = 1024 > 10³ gives 2¹⁰⁰ > 10³⁰, and 2¹⁰⁰ < 10³¹.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p7.</b> Convert 1234 (base 5) to base 10.</p><details><summary>Hint</summary>Powers of 5.</details><details><summary>Answer</summary>194</details>
+<details><summary>Method: Expand</summary><p>125 + 2·25 + 3·5 + 4 = 194.</p></details>
+<details><summary>Method: Horner</summary><p>(((1)·5 + 2)·5 + 3)·5 + 4 = 194.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p8.</b> How many zeros does 50! end with?</p><details><summary>Hint</summary>Count factors of 5.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Factors of 5</summary><p>⌊50/5⌋ + ⌊50/25⌋ = 10 + 2 = 12.</p></details>
+<details><summary>Method: Check</summary><p>50! ends in exactly 12 zeros.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p9.</b> How many positive integers up to 1000 have digit sum 9?</p><details><summary>Hint</summary>Treat 000 to 999 as three digits.</details><details><summary>Answer</summary>55</details>
+<details><summary>Method: Stars and bars</summary><p>Digit triples with sum 9: C(11,2) = 55; 1000 has digit sum 1, so the count is 55.</p></details>
+<details><summary>Method: Mod 9</summary><p>By leading digit d = 0, 1, …, 9, the other two digits sum to 9 − d, which has 10 − d ways: 10 + 9 + … + 1 = 55.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p10.</b> Convert 101101 (base 2) to base 10.</p><details><summary>Hint</summary>Powers of 2.</details><details><summary>Answer</summary>45</details>
+<details><summary>Method: Place values</summary><p>32 + 8 + 4 + 1 = 45.</p></details>
+<details><summary>Method: Doubling</summary><p>Reading left to right, double and add: 1, 2, 5, 11, 22, 45.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p11.</b> Write 100 in base 2 and give the number of 1 digits.</p><details><summary>Hint</summary>Repeated division.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Division</summary><p>100 is 1100100 in base 2, with three 1s.</p></details>
+<details><summary>Method: Powers</summary><p>100 = 64 + 32 + 4.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p12.</b> Convert 2143 (base 5) to base 10.</p><details><summary>Hint</summary>5³, 5², 5, 1.</details><details><summary>Answer</summary>298</details>
+<details><summary>Method: Place values</summary><p>2·125 + 1·25 + 4·5 + 3 = 298.</p></details>
+<details><summary>Method: Horner</summary><p>((2·5 + 1)·5 + 4)·5 + 3 = 298.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p13.</b> What is the sum of the digits of 2¹⁰ in base 10?</p><details><summary>Hint</summary>2¹⁰ = 1024.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Compute</summary><p>1 + 0 + 2 + 4 = 7.</p></details>
+<details><summary>Method: Check mod 9</summary><p>2¹⁰ ≡ 7 (mod 9) since 2⁶ ≡ 1 and 2⁴ = 16 ≡ 7.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p14.</b> How many 3-digit positive integers are there in base 10 whose digits sum to 5?</p><details><summary>Hint</summary>Stars and bars with first digit at least 1.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Stars and bars</summary><p>Let the hundreds digit be a + 1: a + b + c = 4 gives C(6, 2) = 15.</p></details>
+<details><summary>Method: Check</summary><p>All digits are at most 5, so no digit exceeds 9.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p15.</b> Find the base-3 representation's digit sum of 50.</p><details><summary>Hint</summary>50 = 1212 in base 3.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Division</summary><p>50 = 27 + 18 + 3 + 2 = 1·27 + 2·9 + 1·3 + 2, so 1212 and the digit sum is 6.</p></details>
+<details><summary>Method: Check</summary><p>27 + 18 + 3 + 2 = 50.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p16.</b> What is the units digit of 13¹³ in base 10?</p><details><summary>Hint</summary>Powers of 3 cycle with period 4.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Cycle</summary><p>13¹³ ends like 3¹³, and 13 ≡ 1 mod 4, so 3.</p></details>
+<details><summary>Method: Mod 10</summary><p>3¹³ = 3¹² · 3 ≡ 1 · 3.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p17.</b> A number in base 10 is written 36 in base b. If it equals 30 in base 10, find b.</p><details><summary>Hint</summary>3b + 6 = 30.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Equation</summary><p>3b + 6 = 30 so b = 8.</p></details>
+<details><summary>Method: Check</summary><p>36 in base 8 is 3·8 + 6 = 30.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem x18.</b> Write 77 in base 2.</p><details><summary>Hint</summary>Divide repeatedly by 2 and record remainders.</details><details><summary>Answer</summary>1001101</details>
+<details><summary>Method: Repeated division</summary><p>Dividing by 2 repeatedly gives the remainders 1, 0, 1, 1, 0, 0, 1 in that order; reading them backwards gives 1001101.</p></details>
+<details><summary>Method: Place values</summary><p>1001101: 1·2^6 + 0·2^5 + 0·2^4 + 1·2^3 + 1·2^2 + 0·2^1 + 1·2^0, which total 77.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem x19.</b> Convert 777 (base 8) to base 10.</p><details><summary>Hint</summary>Use place values.</details><details><summary>Answer</summary>511</details>
+<details><summary>Method: Place values</summary><p>7·8^2 + 7·8^1 + 7·8^0 = 511.</p></details>
+<details><summary>Method: Horner</summary><p>Double-and-add style: starting from 0, multiply by 8 and add each digit: 7, 63, 511, ending at 511.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem x20.</b> What is the last digit of 13^45?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 13, 13², 13³, … are 3, 9, 7, 1, and then they repeat from position 1 with period 4. Exponent 45 lands on 3.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 45 = 101101 in binary. The squares 13^(2^i) mod 10 are 3, 9, 1, 1, 1, 1; multiplying the ones for the 1-bits gives 3.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem x21.</b> Write 500 in base 7.</p><details><summary>Hint</summary>Divide repeatedly by 7 and record remainders.</details><details><summary>Answer</summary>1313</details>
+<details><summary>Method: Repeated division</summary><p>Dividing by 7 repeatedly gives the remainders 3, 1, 3, 1 in that order; reading them backwards gives 1313.</p></details>
+<details><summary>Method: Place values</summary><p>1313: 1·7^3 + 3·7^2 + 1·7^1 + 3·7^0, which total 500.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem x22.</b> Convert 1234 (base 6) to base 10.</p><details><summary>Hint</summary>Use place values.</details><details><summary>Answer</summary>310</details>
+<details><summary>Method: Place values</summary><p>1·6^3 + 2·6^2 + 3·6^1 + 4·6^0 = 310.</p></details>
+<details><summary>Method: Horner</summary><p>Double-and-add style: starting from 0, multiply by 6 and add each digit: 1, 8, 51, 310, ending at 310.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem x23.</b> What is the last digit of 17^64?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 17, 17², 17³, … are 7, 9, 3, 1, and then they repeat from position 1 with period 4. Exponent 64 lands on 1.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 64 = 1000000 in binary. The squares 17^(2^i) mod 10 are 7, 9, 1, 1, 1, 1, 1; multiplying the ones for the 1-bits gives 1.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem x24.</b> Write 1000 in base 9.</p><details><summary>Hint</summary>Divide repeatedly by 9 and record remainders.</details><details><summary>Answer</summary>1331</details>
+<details><summary>Method: Repeated division</summary><p>Dividing by 9 repeatedly gives the remainders 1, 3, 3, 1 in that order; reading them backwards gives 1331.</p></details>
+<details><summary>Method: Place values</summary><p>1331: 1·9^3 + 3·9^2 + 3·9^1 + 1·9^0, which total 1000.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem x25.</b> Convert 3102 (base 4) to base 10.</p><details><summary>Hint</summary>Use place values.</details><details><summary>Answer</summary>210</details>
+<details><summary>Method: Place values</summary><p>3·4^3 + 1·4^2 + 0·4^1 + 2·4^0 = 210.</p></details>
+<details><summary>Method: Horner</summary><p>Double-and-add style: starting from 0, multiply by 4 and add each digit: 3, 13, 52, 210, ending at 210.</p></details>
+<p class=ref>Source: AoPS Volume 2, number bases chapter; Engel ch. 6</p></div>

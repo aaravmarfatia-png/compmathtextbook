@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 82</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 82: Unit 82: The floor function and sums</h1><p class=ref>Book: AoPS Volume 2, floor function chapter; Engel ch. 6 (25 problems)<br>AoPS Volume 2, floor and fractional part chapters.</p>
+<h2>Reading</h2>
+<h3>1. The floor function</h3><p>The <b>floor</b> ⌊x⌋ is the greatest integer not exceeding x: ⌊3.7⌋ = 3, ⌊5⌋ = 5, ⌊−1.2⌋ = −2 (note: not −1). The <b>fractional part</b> {x} = x − ⌊x⌋ lies in [0, 1). The <b>ceiling</b> ⌈x⌉ is the least integer at least x. Basic facts: ⌊x + n⌋ = ⌊x⌋ + n for an integer n; ⌊x⌋ ≤ x < ⌊x⌋ + 1; and ⌊n/k⌋ is the number of multiples of k among 1, …, n.</p><p><b>Worked example 1.</b> Solve ⌊2x − 1⌋ = 4. We need 4 ≤ 2x − 1 < 5, so 2.5 ≤ x < 3.</p><p><b>Worked example 2.</b> How many multiples of 7 are there between 1 and 500? ⌊500/7⌋ = 71. Between 100 and 500 inclusive: ⌊500/7⌋ − ⌊99/7⌋ = 71 − 14 = 57.</p>
+<h3>2. Sums with floors</h3><p><b>Square roots.</b> The number of n ≤ 100 with ⌊√n⌋ = k is (k + 1)² − k² = 2k + 1 (for k ≤ 9). So Σ ⌊√n⌋ for n = 1 to 100 = Σ_{k=1}^{9} k(2k + 1) + 10 = 2 × 285 + 45 + 10 = 625.</p><p><b>The divisor-sum trick.</b> Σ_{k=1}^{n} ⌊n/k⌋ counts pairs (k, m) with km ≤ n, which equals the sum of the number of divisors of 1, …, n. For n = 10: 10 + 5 + 3 + 2 + 2 + 1 + 1 + 1 + 1 + 1 = 27 ✓ (indeed τ(1) + … + τ(10) = 1 + 2 + 2 + 3 + 2 + 4 + 2 + 4 + 3 + 4 = 27).</p><p><b>Hermite's identity.</b> ⌊x⌋ + ⌊x + 1/2⌋ = ⌊2x⌋. Check x = 2.3: 2 + 2 = 4 = ⌊4.6⌋ ✓; x = 2.7: 2 + 3 = 5 = ⌊5.4⌋ ✓.</p><p><b>Legendre's formula</b> (Unit 21) uses floors: v_p(n!) = Σ ⌊n/pᵏ⌋.</p>
+<h3>3. Beatty sequences and equations</h3><p>If α is irrational and α > 1, the sequence ⌊α⌋, ⌊2α⌋, ⌊3α⌋, … is a <b>Beatty sequence</b>. Two Beatty sequences ⌊nα⌋ and ⌊nβ⌋ with 1/α + 1/β = 1 partition the positive integers. For α = φ (the golden ratio) the pair is ⌊nφ⌋ = 1, 3, 4, 6, 8, 9, 11, … and ⌊nφ²⌋ = 2, 5, 7, 10, 13, 15, 18, … Together they cover every positive integer once.</p><p><b>Worked example 1.</b> Solve x² − 7⌊x⌋ + 6 = 0. Let n = ⌊x⌋; then x² = 7n − 6 and n ≤ x < n + 1. Try n = 1: x² = 1, x = 1 ✓ (⌊1⌋ = 1). n = 2: x² = 8, x ≈ 2.83, ⌊x⌋ = 2 ✓. n = 3: x² = 15, x ≈ 3.87 ✓. n = 4: x² = 22, x ≈ 4.69 ✓. n = 5: x² = 29, x ≈ 5.39 ✓. n = 6: x² = 36, x = 6 ✓. n = 7: x² = 43, x ≈ 6.56 ✗. So x = 1, √8, √15, √22, √29, 6.</p><p><b>Worked example 2.</b> For which positive integers n is ⌊n/3⌋ = ⌊n/5⌋? Checking n = 1, 2 (both 0) and n = 5 (both 1) works; n = 3, 4, 6, 7, … fail. For n ≥ 8, n/3 − n/5 = 2n/15 > 1, so the floors must differ. Only n = 1, 2, 5 qualify, as a direct check up to 7 confirms.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Taking ⌊−1.2⌋ = −1. Forgetting that {x} is never 1. Using ⌊x + y⌋ = ⌊x⌋ + ⌊y⌋ (it can be one bigger). Dropping the inequality range when solving for x.</p><p><b>Checks.</b> Test an interval's endpoint and a point inside.</p><p><b>Practice.</b> Replace ⌊x⌋ = n by n ≤ x < n + 1.</p>
+<h3>Worked examples with Try-its: Properties of ⌊x⌋</h3><p>⌊x⌋ is the greatest integer not exceeding x; {x} = x − ⌊x⌋ is the fractional part, between 0 and 1. Key facts: ⌊x + n⌋ = ⌊x⌋ + n for integer n; ⌊x⌋ + ⌊y⌋ ≤ ⌊x + y⌋ ≤ ⌊x⌋ + ⌊y⌋ + 1; and ⌊n/2⌋ + ⌊(n + 1)/2⌋ = n for every integer n. A sum like ⌊1/3⌋ + ⌊2/3⌋ + … + ⌊10/3⌋ = 0 + 0 + 1 + 1 + 1 + 2 + 2 + 2 + 3 + 3 = 15.</p><details class="try"><summary>Try it</summary><p>Evaluate ⌊−2.5⌋ and ⌊π⌋.</p><p><b>Answer.</b> −3 and 3.</p></details>
+<h3>Worked examples with Try-its: Legendre and counting multiples</h3><p>The exponent of a prime p in n! is ⌊n/p⌋ + ⌊n/p²⌋ + …; for p = 5 and n = 100 this is 20 + 4 = 24. The number of multiples of d up to n is ⌊n/d⌋. To solve ⌊x⌋ = 3 write 3 ≤ x < 4; to solve ⌊2x⌋ = 5 write 5/2 ≤ x < 3.</p><details class="try"><summary>Try it</summary><p>How many positive integers up to 200 are divisible by 7?</p><p><b>Answer.</b> ⌊200/7⌋ = 28.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Solve ⌊x⌋ + ⌊2x⌋ = 7. <b>Solution.</b> Write x = n + f with 0 ≤ f < 1. If f < 1/2, ⌊2x⌋ = 2n so 3n = 7, impossible. If f ≥ 1/2, ⌊2x⌋ = 2n + 1, so 3n + 1 = 7 and n = 2, giving 2.5 ≤ x < 3. Check x = 2.5: 2 + 5 = 7 ✓.</p><p><b>Reflection.</b> Split on the fractional part.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Legendre.</b> The exponent of 7 in 50! is ⌊50/7⌋ + ⌊50/49⌋ = 7 + 1 = 8. <b>Sums.</b> Σ_{k=1}^{16} ⌊√k⌋ = 1 · 3 + 2 · 5 + 3 · 7 + 4 · 1 = 3 + 10 + 21 + 4 = 38 (the value m occurs for k from m² to (m + 1)² − 1). <b>Equations.</b> ⌊x⌋ = 3 means 3 ≤ x < 4; ⌊2x⌋ = 5 means 2.5 ≤ x < 3.</p><details class="try"><summary>Try it<p>How many trailing zeros does 60! have?</p><p><b>Answer.</b> 12 + 2 = 14.</p></details><details class="try"><summary>Try it<p>Solve ⌊3x⌋ = 7.</p><p><b>Answer.</b> 7/3 ≤ x < 8/3.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Evaluate ⌊1000/3⌋ + ⌊1000/9⌋ + ⌊1000/27⌋ + ⌊1000/81⌋ + ⌊1000/243⌋ + ⌊1000/729⌋. <b>Solution.</b> 333 + 111 + 37 + 12 + 4 + 1 = 498, which is the exponent of 3 in 1000!.</p><p><b>Check.</b> Legendre's formula for p = 3 and n = 1000.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find ⌊1/3⌋ + ⌊2/3⌋ + ⌊3/3⌋ + … + ⌊30/3⌋.</p><details><summary>Hint</summary>Group in threes.</details><details><summary>Answer</summary>145</details>
+<details><summary>Method: Groups</summary><p>The values are 0, 0, then each of 1, 2, …, 9 three times, then 10 once (n = 30): 3(1 + 2 + … + 9) + 10 = 135 + 10 = 145.</p></details>
+<details><summary>Method: Direct</summary><p>Add the list ⌊n/3⌋ for n = 1..30: 145.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p2.</b> What is the exponent of 3 in 30!?</p><details><summary>Hint</summary>Legendre.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Formula</summary><p>10 + 3 + 1 = 14.</p></details>
+<details><summary>Method: Count</summary><p>10 multiples of 3, 3 of 9 and 1 of 27 each contribute one more factor.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p3.</b> What is ⌊√200⌋?</p><details><summary>Hint</summary>Bracket between squares.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Squares</summary><p>14² = 196 ≤ 200 < 225 = 15², so 14.</p></details>
+<details><summary>Method: Estimate</summary><p>√200 ≈ 14.14.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p4.</b> How many positive integers n satisfy ⌊n/5⌋ = 3?</p><details><summary>Hint</summary>15 ≤ n < 20.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Interval</summary><p>3 ≤ n/5 < 4, so n is 15, 16, 17, 18 or 19: 5 values.</p></details>
+<details><summary>Method: Blocks</summary><p>Each block of 5 consecutive integers has one floor value.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p5.</b> Find the smallest real x with ⌊x⌋ + ⌊2x⌋ = 7. Give a fraction.</p><details><summary>Hint</summary>Try x = 2 + {x}.</details><details><summary>Answer</summary>5/2</details>
+<details><summary>Method: Cases</summary><p>With ⌊x⌋ = 2, ⌊2x⌋ = 5 so 2.5 ≤ x < 3, smallest x = 5/2. With ⌊x⌋ = 1, ⌊2x⌋ ≤ 3 gives at most 4, which is too small.</p></details>
+<details><summary>Method: Check</summary><p>⌊2.5⌋ + ⌊5⌋ = 2 + 5 = 7 and anything smaller gives at most 6.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p6.</b> How many multiples of 7 are there from 1 to 1000?</p><details><summary>Hint</summary>⌊1000/7⌋.</details><details><summary>Answer</summary>142</details>
+<details><summary>Method: Floor</summary><p>⌊1000/7⌋ = 142.</p></details>
+<details><summary>Method: Check</summary><p>7 · 142 = 994 ≤ 1000 < 1001 = 7 · 143.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p7.</b> Find ⌊1/2⌋ + ⌊2/2⌋ + ⌊3/2⌋ + … + ⌊20/2⌋.</p><details><summary>Hint</summary>Pair consecutive terms.</details><details><summary>Answer</summary>100</details>
+<details><summary>Method: Pairs</summary><p>The terms are 0, 1, 1, 2, 2, …, 9, 9, 10: 2(1 + … + 9) + 10 = 90 + 10 = 100.</p></details>
+<details><summary>Method: Formula</summary><p>Direct addition gives 100.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p8.</b> Find ⌊√1⌋ + ⌊√2⌋ + … + ⌊√25⌋.</p><details><summary>Hint</summary>⌊√k⌋ = m for m² ≤ k < (m + 1)².</details><details><summary>Answer</summary>75</details>
+<details><summary>Method: Groups</summary><p>The value m occurs 2m + 1 times for m ≤ 4: 1·3 + 2·5 + 3·7 + 4·9 = 70, plus 5 for k = 25: 75.</p></details>
+<details><summary>Method: Check</summary><p>3 + 10 + 21 + 36 + 5 = 75.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p9.</b> What is ⌊−3.2⌋ + ⌊3.7⌋?</p><details><summary>Hint</summary>Floor rounds down.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Compute</summary><p>−4 + 3 = −1.</p></details>
+<details><summary>Method: Number line</summary><p>−3.2 lies between −4 and −3, so its floor is −4.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p10.</b> Evaluate ⌊17/3⌋ + ⌊−17/3⌋.</p><details><summary>Hint</summary>Floor of a negative number rounds down.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Compute</summary><p>⌊5.67⌋ = 5 and ⌊−5.67⌋ = −6, so −1.</p></details>
+<details><summary>Method: Rule</summary><p>For non-integers ⌊x⌋ + ⌊−x⌋ = −1.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p11.</b> What is the exponent of 2 in 20! ?</p><details><summary>Hint</summary>⌊20/2⌋ + ⌊20/4⌋ + …</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: Legendre</summary><p>10 + 5 + 2 + 1 = 18.</p></details>
+<details><summary>Method: Binary</summary><p>20 minus its binary digit sum (2) is 18.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p12.</b> With how many zeros does 100! end?</p><details><summary>Hint</summary>Count factors of 5.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Count</summary><p>⌊100/5⌋ + ⌊100/25⌋ = 24.</p></details>
+<details><summary>Method: Check</summary><p>There are plenty of 2s, so the 5s decide.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p13.</b> Find ⌊√200⌋.</p><details><summary>Hint</summary>14² = 196.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Bounds</summary><p>196 ≤ 200 < 225, so 14.</p></details>
+<details><summary>Method: Estimate</summary><p>√200 ≈ 14.14.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p14.</b> How many positive integers n satisfy ⌊n/7⌋ = 5?</p><details><summary>Hint</summary>35 ≤ n < 42.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Range</summary><p>n = 35 to 41, so 7 values.</p></details>
+<details><summary>Method: General</summary><p>⌊n/k⌋ = m has exactly k solutions.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p15.</b> Evaluate ⌊1.5⌋ + ⌊2.5⌋ + ⌊3.5⌋ + … + ⌊9.5⌋.</p><details><summary>Hint</summary>Floors are 1 through 9.</details><details><summary>Answer</summary>45</details>
+<details><summary>Method: Sum</summary><p>1 + 2 + … + 9 = 45.</p></details>
+<details><summary>Method: Pairing</summary><p>Nine terms averaging 5.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p16.</b> What is the exponent of 3 in 30! ?</p><details><summary>Hint</summary>Legendre.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Legendre</summary><p>⌊30/3⌋ + ⌊30/9⌋ + ⌊30/27⌋ = 10 + 3 + 1 = 14.</p></details>
+<details><summary>Method: Check</summary><p>Base 3 digit sum of 30 is 1 + 0 + 1 + 0 = 2 (30 = 1010 in base 3), and (30 − 2)/2 = 14.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem p17.</b> How many multiples of 7 are there from 1 to 500?</p><details><summary>Hint</summary>⌊500/7⌋.</details><details><summary>Answer</summary>71</details>
+<details><summary>Method: Floor</summary><p>⌊500/7⌋ = 71.</p></details>
+<details><summary>Method: Check</summary><p>71 · 7 = 497 ≤ 500 < 504.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem x18.</b> What is the exponent of the prime 2 in 60! ?</p><details><summary>Hint</summary>Legendre's formula: add ⌊n/p⌋ + ⌊n/p²⌋ + …</details><details><summary>Answer</summary>56</details>
+<details><summary>Method: Legendre</summary><p>30 + 15 + 7 + 3 + 1 = 56.</p></details>
+<details><summary>Method: Digit sum</summary><p>60 has base-2 digit sum 4, so the exponent is (60 − 4)/1 = 56.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem x19.</b> How many zeros does 150! end with?</p><details><summary>Hint</summary>Count the factors of 5; there are plenty of 2s.</details><details><summary>Answer</summary>37</details>
+<details><summary>Method: Legendre</summary><p>30 + 6 + 1 = 37.</p></details>
+<details><summary>Method: Digit sum</summary><p>150 has base-5 digit sum 2, so the exponent is (150 − 2)/4 = 37.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem x20.</b> Find gcd(1224, 1530).</p><details><summary>Hint</summary>Use Euclid's algorithm.</details><details><summary>Answer</summary>306</details>
+<details><summary>Method: Euclid</summary><p>1224 = 0 · 1530 + 1224; 1530 = 1 · 1224 + 306; 1224 = 4 · 306 + 0, so the gcd is 306.</p></details>
+<details><summary>Method: Prime factors</summary><p>1224 = 2^3 · 3^2 · 17 and 1530 = 2 · 3^2 · 5 · 17; the common part is 306.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem x21.</b> What is the exponent of the prime 3 in 80! ?</p><details><summary>Hint</summary>Legendre's formula: add ⌊n/p⌋ + ⌊n/p²⌋ + …</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Legendre</summary><p>26 + 8 + 2 = 36.</p></details>
+<details><summary>Method: Digit sum</summary><p>80 has base-3 digit sum 8, so the exponent is (80 − 8)/2 = 36.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem x22.</b> How many zeros does 200! end with?</p><details><summary>Hint</summary>Count the factors of 5; there are plenty of 2s.</details><details><summary>Answer</summary>49</details>
+<details><summary>Method: Legendre</summary><p>40 + 8 + 1 = 49.</p></details>
+<details><summary>Method: Digit sum</summary><p>200 has base-5 digit sum 4, so the exponent is (200 − 4)/4 = 49.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem x23.</b> Find gcd(2024, 1012).</p><details><summary>Hint</summary>Use Euclid's algorithm.</details><details><summary>Answer</summary>1012</details>
+<details><summary>Method: Euclid</summary><p>2024 = 2 · 1012 + 0, so the gcd is 1012.</p></details>
+<details><summary>Method: Prime factors</summary><p>2024 = 2^3 · 11 · 23 and 1012 = 2^2 · 11 · 23; the common part is 1012.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem x24.</b> What is the exponent of the prime 5 in 125! ?</p><details><summary>Hint</summary>Legendre's formula: add ⌊n/p⌋ + ⌊n/p²⌋ + …</details><details><summary>Answer</summary>31</details>
+<details><summary>Method: Legendre</summary><p>25 + 5 + 1 = 31.</p></details>
+<details><summary>Method: Digit sum</summary><p>125 has base-5 digit sum 1, so the exponent is (125 − 1)/4 = 31.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>
+<div class=p><p><b>Problem x25.</b> How many zeros does 250! end with?</p><details><summary>Hint</summary>Count the factors of 5; there are plenty of 2s.</details><details><summary>Answer</summary>62</details>
+<details><summary>Method: Legendre</summary><p>50 + 10 + 2 = 62.</p></details>
+<details><summary>Method: Digit sum</summary><p>250 has base-5 digit sum 2, so the exponent is (250 − 2)/4 = 62.</p></details>
+<p class=ref>Source: AoPS Volume 2, floor function chapter; Engel ch. 6</p></div>

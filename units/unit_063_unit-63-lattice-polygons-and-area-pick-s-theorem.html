@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 63</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 63: Unit 63: Lattice polygons and area: Pick&#x27;s theorem</h1><p class=ref>Book: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry) (25 problems)<br>Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 1.1-1.5 (geometry), with the lattice-point idea from Pick&#x27;s theorem.</p>
+<h2>Reading</h2>
+<h3>1. Pick's theorem</h3><p>A <b>lattice polygon</b> has its vertices at points with integer coordinates. <b>Pick's theorem:</b> if the polygon has I lattice points strictly inside and B on its boundary, its area is <b>A = I + B/2 − 1</b>. For the triangle (0, 0), (4, 0), (0, 3): B = 4 + 3 + 1 = 8 (the hypotenuse from (4, 0) to (0, 3) has no lattice points strictly between its ends), I = 3, and A = 3 + 4 − 1 = 6 ✓. For the 3 × 3 square: I = 4, B = 12, A = 4 + 6 − 1 = 9 ✓. The smallest lattice triangle has I = 0, B = 3 and area 1/2.</p><p><b>Counting boundary points.</b> The number of lattice points on a segment from (x₁, y₁) to (x₂, y₂), counting both ends, is gcd(|Δx|, |Δy|) + 1; for (0, 0) to (12, 18) that is 7. So for a polygon, B is the sum of gcd(|Δx|, |Δy|) over the sides.</p><p><b>Using it both ways.</b> Compute the area by the shoelace formula, count B by gcds, then deduce I = A − B/2 + 1. For the pentagon (0, 0), (6, 0), (6, 4), (3, 6), (0, 4) the shoelace area is 30, B = 6 + 4 + 1 + 1 + 4 = 16 and so I = 30 − 8 + 1 = 23, and a direct count of interior points agrees (the program verified the identity on several polygons).</p><details class="try"><summary>Try it</summary><p>A lattice triangle has 5 boundary points and area 6. How many interior lattice points?</p><p><b>Answer.</b> I = A − B/2 + 1 = 6 − 2.5 + 1 = 4.5, which is not an integer, so no such triangle exists: Pick's theorem forces 2A − B to be even, i.e. 2A and B must have the same parity.</p></details>
+<h3>2. Applications</h3><p><b>Why no equilateral lattice triangle exists.</b> The area of an equilateral triangle with squared side n is n√3/4, irrational, but Pick's theorem makes every lattice-polygon area a multiple of 1/2: contradiction. <b>Counting.</b> A rectangle a × b has B = 2(a + b) and I = (a − 1)(b − 1). A right triangle with legs a and b has area ab/2 and B = a + b + gcd(a, b), so I = (ab − a − b − gcd(a, b))/2 + 1.</p><p><b>Strategy.</b> For a polygon on a grid, make a table of the vertices, compute the area by shoelace, compute B by gcds and use Pick to find I (or the reverse). It is much faster than counting by hand.</p><details class="try"><summary>Try it</summary><p>Find I for the right triangle with legs 6 and 9.</p><p><b>Answer.</b> A = 27, B = 6 + 9 + gcd(6, 9) = 18, I = 27 − 9 + 1 = 19.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> The triangle with vertices (0, 0), (5, 2), (2, 7) is a lattice triangle. Find its area, the number of boundary points, and the number of interior points.</p><p><b>Solution.</b> Area = ½|5 · 7 − 2 · 2| = 31/2. Boundary: gcd(5, 2) = 1, gcd(3, 5) = 1, gcd(2, 7) = 1, so B = 3. Pick gives I = 31/2 − 3/2 + 1 = 15. A direct count of the lattice points inside the triangle also gives 15.</p><p><b>Reflection.</b> Three independent routes (shoelace, gcds, brute force) agree. The brute-force count is the safest check for a first example.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Forgetting that boundary points include the vertices. (2) Using gcd(Δx, Δy) without adding 1 for the number of points on a single segment (but not for the polygon's B, where the endpoints are shared). (3) Applying Pick's theorem to non-lattice polygons. (4) Forgetting the −1.</p><p><b>Checks.</b> A unit square must give I = 0, B = 4, A = 1.</p><p><b>How to practise.</b> Draw the polygon on grid paper first. In Unlimited practice, rotate the Pick and lattice-point families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Rectangle.</b> The 4 × 3 rectangle has area 12 and 14 boundary lattice points, so Pick's theorem A = I + B/2 − 1 gives I = 12 − 7 + 1 = 6 interior points (the 3 × 2 grid inside). <b>Triangle.</b> The triangle (0, 0), (6, 0), (0, 4) has area 12 and boundary points 6 + 4 + gcd(6, 4) = 12 (the hypotenuse contributes gcd(6, 4) = 2 steps), so I = 12 − 6 + 1 = 7.</p><details class="try"><summary>Try it<p>A lattice triangle has 5 interior points and 7 boundary points. What is its area?</p><p><b>Answer.</b> 5 + 7/2 − 1 = 7.5.</p></details><details class="try"><summary>Try it<p>How many lattice points lie on the segment from (0, 0) to (12, 18) including both endpoints?</p><p><b>Answer.</b> gcd(12, 18) + 1 = 7.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Find the area of the lattice quadrilateral (0, 0), (5, 1), (6, 4), (1, 3), and check with Pick's theorem. <b>Solution.</b> The shoelace formula gives half of |0·1 − 5·0 + 5·4 − 6·1 + 6·3 − 1·4 + 1·0 − 0·3| = |0 + 14 + 14 + 0|/2 = 14. The sides have gcd values 1, 1, 1, 1, so B = 4 and Pick gives I = 14 − 2 + 1 = 13.</p><p><b>Reflection.</b> Pick's theorem is a fast check on a shoelace computation.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> In an equilateral triangle of side 6, a point inside is joined by perpendiculars to the three sides. What is the sum of the three perpendicular lengths? Write as k√3.</p><details><summary>Hint</summary>Viviani's theorem.</details><details><summary>Answer</summary>3√3</details>
+<details><summary>Method: Areas</summary><p>Split the triangle into three triangles with the point as common vertex: (1/2)·6·(d₁ + d₂ + d₃) = area = 9√3, so d₁ + d₂ + d₃ = 3√3, the altitude.</p></details>
+<details><summary>Method: Special point</summary><p>At the centre each distance is the inradius √3, and 3·√3 = 3√3.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem p2.</b> A polygon has vertices (0,0), (6,0), (6,4), (0,4). Use Pick's theorem: how many lattice points are strictly inside it?</p><details><summary>Hint</summary>Area = I + B/2 − 1.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Pick</summary><p>Area = 24, boundary B = 2(6 + 4) = 20, so 24 = I + 10 − 1 and I = 15.</p></details>
+<details><summary>Method: Direct count</summary><p>The interior points have x = 1…5 and y = 1…3: 5·3 = 15.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem p3.</b> A triangle has vertices (0,0), (6,0) and (0,6). How many lattice points are on its boundary?</p><details><summary>Hint</summary>Sum of gcds.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: gcd rule</summary><p>The sides have lattice lengths gcd(6, 0) = 6, gcd(0, 6) = 6 and gcd(6, 6) = 6, so B = 18.</p></details>
+<details><summary>Method: Count</summary><p>Each leg has 7 points including endpoints and the hypotenuse x + y = 6 has 7; the vertices are shared by two sides: 7 + 7 + 7 − 3 = 18.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem p4.</b> A triangle has vertices (0,0), (6,0) and (0,6). How many lattice points are strictly inside it?</p><details><summary>Hint</summary>Pick's theorem with B = 18.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Pick</summary><p>Area = 18, B = 18: 18 = I + 9 − 1, so I = 10.</p></details>
+<details><summary>Method: Direct</summary><p>Interior points have x, y ≥ 1 and x + y ≤ 5: 4 + 3 + 2 + 1 = 10.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem p5.</b> A lattice triangle has vertices (0,0), (5,2), (1,4). Find its area.</p><details><summary>Hint</summary>Half the determinant.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Determinant</summary><p>|5·4 − 2·1|/2 = 18/2 = 9.</p></details>
+<details><summary>Method: Pick cross-check</summary><p>Boundary points B = gcd(5,2) + gcd(4,2) + gcd(1,4) = 1 + 2 + 1 = 4. With area 9, Pick gives 9 = I + 2 − 1, so I = 8 interior points, consistent with a lattice triangle.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem p6.</b> What is the area of a regular hexagon with side 2? Write as k√3.</p><details><summary>Hint</summary>Six equilateral triangles.</details><details><summary>Answer</summary>6√3</details>
+<details><summary>Method: Triangles</summary><p>6·(√3/4)·4 = 6√3.</p></details>
+<details><summary>Method: Formula</summary><p>(3√3/2)s² = (3√3/2)·4 = 6√3.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem p7.</b> A square of side 10 has its four corners cut off by isosceles right triangles with legs 3. Find the area of the resulting octagon.</p><details><summary>Hint</summary>Subtract the four corners.</details><details><summary>Answer</summary>82</details>
+<details><summary>Method: Subtract</summary><p>100 − 4·(3·3/2) = 100 − 18 = 82.</p></details>
+<details><summary>Method: Pieces</summary><p>The corners are four right triangles of area 4.5.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem p8.</b> What is the sum of the interior angles, in degrees, of a regular polygon with 15 sides?</p><details><summary>Hint</summary>(n − 2)·180.</details><details><summary>Answer</summary>2340</details>
+<details><summary>Method: Formula</summary><p>13·180 = 2340.</p></details>
+<details><summary>Method: Triangles</summary><p>A 15-gon is cut from one vertex into 13 triangles.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem p9.</b> Two squares of side 4 overlap so that a corner of one is at the centre of the other, with sides parallel. What is the area of the overlap?</p><details><summary>Hint</summary>The overlap is a smaller square.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Overlap square</summary><p>The overlap is a 2 × 2 square: 4.</p></details>
+<details><summary>Method: Reason</summary><p>The centre of the first square is 2 from its sides, so the overlapping region spans 2 in each direction.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem p10.</b> A lattice polygon has 10 interior lattice points and 8 on its boundary. Find its area.</p><details><summary>Hint</summary>Pick's theorem A = I + B/2 − 1.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Pick</summary><p>A = 10 + 4 − 1 = 13.</p></details>
+<details><summary>Method: Check</summary><p>A 1 × 1 square has I = 0, B = 4 and A = 0 + 2 − 1 = 1, consistent with the formula.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem p11.</b> Find the number of interior lattice points of the triangle with vertices (0, 0), (6, 0) and (0, 4).</p><details><summary>Hint</summary>Count boundary points with gcd.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Pick</summary><p>A = 12 and B = 6 + 4 + gcd(6, 4) = 12, so I = 12 − 6 + 1 = 7.</p></details>
+<details><summary>Method: Count by rows</summary><p>Inside means x > 0, y > 0 and 2x + 3y < 12. Row y = 1 has x = 1 to 4 (4 points), row y = 2 has x = 1, 2 (2 points), row y = 3 has x = 1 (1 point). Total 7.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem p12.</b> A lattice rectangle has side lengths 3 and 5 with sides along the axes. How many lattice points lie strictly inside?</p><details><summary>Hint</summary>(3 − 1)(5 − 1).</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Direct</summary><p>The interior points form a 2 × 4 grid: 8.</p></details>
+<details><summary>Method: Pick</summary><p>A = 15 and B = 16, so I = 15 − 8 + 1 = 8.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem p13.</b> An equilateral triangle has altitude 9. A point inside it is 2 from one side and 3 from another. How far is it from the third side?</p><details><summary>Hint</summary>Viviani: the three distances sum to the altitude.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Viviani</summary><p>2 + 3 + d = 9, so d = 4.</p></details>
+<details><summary>Method: Areas</summary><p>Splitting the triangle into three from the point gives ½ · s · (d₁ + d₂ + d₃) = ½ · s · 9, so the sum is 9.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem p14.</b> How many lattice points lie on the segment from (0, 0) to (12, 18), including both endpoints?</p><details><summary>Hint</summary>gcd + 1.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Formula</summary><p>gcd(12, 18) + 1 = 7.</p></details>
+<details><summary>Method: Reduce</summary><p>The primitive step is (2, 3), so the points are k(2, 3) for k = 0 to 6: 7.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem p15.</b> Find the number of interior lattice points of the triangle (0, 0), (4, 1), (1, 3).</p><details><summary>Hint</summary>Area by the shoelace formula, then Pick.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Pick</summary><p>A = |0·1 + 4·3 + 1·0 − (0·4 + 1·1 + 3·0)|/2 = 11/2. Each side has gcd 1, so B = 3 and I = 11/2 − 3/2 + 1 = 5.</p></details>
+<details><summary>Method: Listing</summary><p>The interior points are (1, 1), (2, 1), (3, 1), (1, 2) and (2, 2): five points.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem p16.</b> A lattice polygon has 3 interior and 7 boundary lattice points. Find its area.</p><details><summary>Hint</summary>Pick.</details><details><summary>Answer</summary>11/2</details>
+<details><summary>Method: Pick</summary><p>A = 3 + 3.5 − 1 = 11/2.</p></details>
+<details><summary>Method: Check</summary><p>Doubling gives 2A = 2I + B − 2 = 11, odd, as expected when B is odd.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem p17.</b> An equilateral triangle has altitude 12. Find the radius of its inscribed circle.</p><details><summary>Hint</summary>The incentre has equal distances to all sides.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Viviani</summary><p>The three equal distances r sum to the altitude: 3r = 12, so r = 4.</p></details>
+<details><summary>Method: Centroid</summary><p>The incentre is the centroid, which is 1/3 of the way up the altitude: 12/3 = 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem x18.</b> A lattice polygon has 7 interior and 10 boundary lattice points. Find its area.</p><details><summary>Hint</summary>Pick's theorem.</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: Pick</summary><p>A = I + B/2 − 1 = 7 + 5 − 1 = 11.</p></details>
+<details><summary>Method: Doubling</summary><p>2A = 2I + B − 2 = 22, so A = 11.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem x19.</b> Find the area of the triangle with vertices (0, 0), (8, 0) and (3, 5).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Shoelace</summary><p>|0(0 − 5) + 8(5 − 0) + 3(0 − 0)|/2 = 20.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (8, 0) and (3, 5); half the absolute value of 8 · 5 − 0 · 3 is 20.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem x20.</b> Find the sum of the interior angles of a convex 14-gon, in degrees.</p><details><summary>Hint</summary>(n − 2) · 180.</details><details><summary>Answer</summary>2160</details>
+<details><summary>Method: Formula</summary><p>(14 − 2) · 180 = 2160.</p></details>
+<details><summary>Method: Triangles</summary><p>Drawing diagonals from one vertex splits the polygon into 12 triangles of 180° each: 2160.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem x21.</b> A lattice polygon has 12 interior and 9 boundary lattice points. Find its area.</p><details><summary>Hint</summary>Pick's theorem.</details><details><summary>Answer</summary>31/2</details>
+<details><summary>Method: Pick</summary><p>A = I + B/2 − 1 = 12 + 9/2 − 1 = 31/2.</p></details>
+<details><summary>Method: Doubling</summary><p>2A = 2I + B − 2 = 31, so A = 31/2.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem x22.</b> Find the area of the triangle with vertices (1, 2), (7, 4) and (3, 9).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: Shoelace</summary><p>|1(4 − 9) + 7(9 − 2) + 3(2 − 4)|/2 = 19.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (6, 2) and (2, 7); half the absolute value of 6 · 7 − 2 · 2 is 19.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem x23.</b> Find the sum of the interior angles of a convex 16-gon, in degrees.</p><details><summary>Hint</summary>(n − 2) · 180.</details><details><summary>Answer</summary>2520</details>
+<details><summary>Method: Formula</summary><p>(16 − 2) · 180 = 2520.</p></details>
+<details><summary>Method: Triangles</summary><p>Drawing diagonals from one vertex splits the polygon into 14 triangles of 180° each: 2520.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem x24.</b> A lattice polygon has 5 interior and 14 boundary lattice points. Find its area.</p><details><summary>Hint</summary>Pick's theorem.</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: Pick</summary><p>A = I + B/2 − 1 = 5 + 7 − 1 = 11.</p></details>
+<details><summary>Method: Doubling</summary><p>2A = 2I + B − 2 = 22, so A = 11.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>
+<div class=p><p><b>Problem x25.</b> Find the area of the triangle with vertices (-2, 1), (4, -3) and (5, 6).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Shoelace</summary><p>|-2(-3 − 6) + 4(6 − 1) + 5(1 − -3)|/2 = 29.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (6, -4) and (7, 5); half the absolute value of 6 · 5 − -4 · 7 is 29.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, ch. 1 (geometry)</p></div>

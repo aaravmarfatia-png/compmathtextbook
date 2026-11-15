@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 140</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 140: Unit 140: Algebra: sequences, telescoping and extremal inequalities</h1><p class=ref>Book: Djukić et al., The IMO Compendium; Gelca &amp; Andreescu, Putnam and Beyond; Andreescu &amp; Enescu, Mathematical Olympiad Treasures (25 problems)<br>Djukić et al., The IMO Compendium, 2.1.2–2.1.3 (recurrences, inequalities) and the shortlisted problems of 1959–2009; Gelca &amp; Andreescu 3.1.6 (telescopic series and products); Andreescu &amp; Enescu 1.7 and 3.4.</p>
+<h2>Reading</h2>
+<h3>1. Telescoping and recurrences</h3><p>A sum telescopes when each term is a difference g(k + 1) − g(k). Examples: 1/(k(k + 2)) = ½(1/k − 1/(k + 2)), k·k! = (k + 1)! − k!, and 1/(√k + √(k + 1)) = √(k + 1) − √k. For a recurrence a_(n+1) = 2aₙ + 1 with a₁ = 1 the fixed point is −1, so aₙ + 1 doubles each step and aₙ = 2ⁿ − 1.</p><p><b>Inequality minima.</b> For x > 0, x + k/x ≥ 2√k with equality at x = √k; x² + 16/x ≥ 12 at x = 2 by splitting 16/x into 8/x + 8/x and applying 3-term AM-GM.</p><details class="try"><summary>Try it<p>1/(1·2) + 1/(2·3) + … + 1/(9·10)?</p><p><b>Answer.</b> 9/10.</p></details><details class="try"><summary>Try it<p>Minimum of x + 25/x?</p><p><b>Answer.</b> 10.</p></details>
+<h3>2. Floors, gcds and Fibonacci</h3><p>⌊√k⌋ equals j for j² ≤ k < (j + 1)², i.e. on 2j + 1 consecutive values. The sum ⌊√1⌋ + … + ⌊√15⌋ is 1·3 + 2·5 + 3·7 = 34 (k = 1..3, 4..8, 9..15). Fibonacci numbers obey gcd(F_m, F_n) = F_gcd(m,n): gcd(F₁₂, F₁₈) = F₆ = 8.</p><details class="try"><summary>Try it<p>⌊√1⌋ + … + ⌊√8⌋?</p><p><b>Answer.</b> 1·3 + 2·5 = 13.</p></details><details class="try"><summary>Try it<p>gcd(F₁₀, F₁₅)?</p><p><b>Answer.</b> F₅ = 5.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> Compute Σ_{k=1}^{99} 1/(√k + √(k + 1)). <b>Solution.</b> Each term equals √(k + 1) − √k, so the sum telescopes to √100 − √1 = 9.</p><p><b>Check.</b> The first terms are √2 − 1, √3 − √2, √4 − √3 — only the first and last survive ✓.</p>
+<h3>4. In the books</h3><p><b>IMO Compendium, ch. 2.</b> Section 2.1 collects the background facts used in algebra problems: polynomials (2.1.1), recurrence relations (2.1.2) and inequalities (2.1.3). The book's shortlist sections, for the years 1959 to 2009, list problems by country code and number (for example POL 5) rather than by the A/C/G/N labels used in recent shortlists, so I can only match topics, not letters.</p><p><b>Putnam and Beyond.</b> 3.1.6 covers telescopic series and products, 3.1.1 searching for a pattern. <b>Olympiad Treasures.</b> 1.7 (&ldquo;Induction at Work&rdquo;) and 3.4 (&ldquo;Sequences of Integers&rdquo;).</p><p><b>Honest note.</b> My problems are my own, written in the style of the topic. They are not shortlist problems.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> a₁ = 1 and a_(n+1) = 2·aₙ + 1. Find a_8.</p><details><summary>Hint</summary>Subtract the fixed point -1 to get a geometric sequence.</details><details><summary>Answer</summary>255</details>
+<details><summary>Method: Fixed point</summary><p>With fixed point -1, aₙ − -1 is multiplied by 2 each step, so a_8 = (1 − -1)·2^7 + -1 = 255.</p></details>
+<details><summary>Method: Iterate</summary><p>Apply the rule 7 times starting from 1: a_8 = 255.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> a₁ = 2 and a_(n+1) = 3·aₙ + 1. Find a_6.</p><details><summary>Hint</summary>Subtract the fixed point -1/2 to get a geometric sequence.</details><details><summary>Answer</summary>607</details>
+<details><summary>Method: Fixed point</summary><p>With fixed point -1/2, aₙ − -1/2 is multiplied by 3 each step, so a_6 = (2 − -1/2)·3^5 + -1/2 = 607.</p></details>
+<details><summary>Method: Iterate</summary><p>Apply the rule 5 times starting from 2: a_6 = 607.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> a₁ = 3 and a_(n+1) = 2·aₙ − 1. Find a_7.</p><details><summary>Hint</summary>Subtract the fixed point 1 to get a geometric sequence.</details><details><summary>Answer</summary>129</details>
+<details><summary>Method: Fixed point</summary><p>With fixed point 1, aₙ − 1 is multiplied by 2 each step, so a_7 = (3 − 1)·2^6 + 1 = 129.</p></details>
+<details><summary>Method: Iterate</summary><p>Apply the rule 6 times starting from 3: a_7 = 129.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> a₁ = 1 and a_(n+1) = 3·aₙ + 2. Find a_6.</p><details><summary>Hint</summary>Subtract the fixed point -1 to get a geometric sequence.</details><details><summary>Answer</summary>485</details>
+<details><summary>Method: Fixed point</summary><p>With fixed point -1, aₙ − -1 is multiplied by 3 each step, so a_6 = (1 − -1)·3^5 + -1 = 485.</p></details>
+<details><summary>Method: Iterate</summary><p>Apply the rule 5 times starting from 1: a_6 = 485.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> Compute 1/(1·3) + 1/(2·4) + 1/(3·5) + … + 1/(9·11). (fraction)</p><details><summary>Hint</summary>Write 1/(k(k+2)) = ½(1/k − 1/(k+2)).</details><details><summary>Answer</summary>36/55</details>
+<details><summary>Method: Telescoping</summary><p>The sum is ½(1 + ½ − 1/10 − 1/11) = 36/55.</p></details>
+<details><summary>Method: Pattern</summary><p>Compute the first few partial sums 1/3, 3/8, 11/30, … and use the closed form 3/4 − ½(1/(n+1) + 1/(n+2)): 36/55.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> Compute 1/(1·3) + 1/(2·4) + 1/(3·5) + … + 1/(19·21). (fraction)</p><details><summary>Hint</summary>Write 1/(k(k+2)) = ½(1/k − 1/(k+2)).</details><details><summary>Answer</summary>589/840</details>
+<details><summary>Method: Telescoping</summary><p>The sum is ½(1 + ½ − 1/20 − 1/21) = 589/840.</p></details>
+<details><summary>Method: Pattern</summary><p>Compute the first few partial sums 1/3, 3/8, 11/30, … and use the closed form 3/4 − ½(1/(n+1) + 1/(n+2)): 589/840.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> Compute 1/(1·3) + 1/(2·4) + 1/(3·5) + … + 1/(29·31). (fraction)</p><details><summary>Hint</summary>Write 1/(k(k+2)) = ½(1/k − 1/(k+2)).</details><details><summary>Answer</summary>667/930</details>
+<details><summary>Method: Telescoping</summary><p>The sum is ½(1 + ½ − 1/30 − 1/31) = 667/930.</p></details>
+<details><summary>Method: Pattern</summary><p>Compute the first few partial sums 1/3, 3/8, 11/30, … and use the closed form 3/4 − ½(1/(n+1) + 1/(n+2)): 667/930.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> Compute 1/(1·3) + 1/(2·4) + 1/(3·5) + … + 1/(49·51). (fraction)</p><details><summary>Hint</summary>Write 1/(k(k+2)) = ½(1/k − 1/(k+2)).</details><details><summary>Answer</summary>931/1275</details>
+<details><summary>Method: Telescoping</summary><p>The sum is ½(1 + ½ − 1/50 − 1/51) = 931/1275.</p></details>
+<details><summary>Method: Pattern</summary><p>Compute the first few partial sums 1/3, 3/8, 11/30, … and use the closed form 3/4 − ½(1/(n+1) + 1/(n+2)): 931/1275.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> Compute 1·1! + 2·2! + … + 5·5!.</p><details><summary>Hint</summary>Use k·k! = (k + 1)! − k!.</details><details><summary>Answer</summary>719</details>
+<details><summary>Method: Telescoping</summary><p>The sum is (5 + 1)! − 1 = 719.</p></details>
+<details><summary>Method: Induction</summary><p>The pattern (n + 1)! − 1 holds for n = 1, 2, and each step adds (n + 1)(n + 1)! giving 719 at n = 5.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> Compute 1·1! + 2·2! + … + 6·6!.</p><details><summary>Hint</summary>Use k·k! = (k + 1)! − k!.</details><details><summary>Answer</summary>5039</details>
+<details><summary>Method: Telescoping</summary><p>The sum is (6 + 1)! − 1 = 5039.</p></details>
+<details><summary>Method: Induction</summary><p>The pattern (n + 1)! − 1 holds for n = 1, 2, and each step adds (n + 1)(n + 1)! giving 5039 at n = 6.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> Compute 1·1! + 2·2! + … + 7·7!.</p><details><summary>Hint</summary>Use k·k! = (k + 1)! − k!.</details><details><summary>Answer</summary>40319</details>
+<details><summary>Method: Telescoping</summary><p>The sum is (7 + 1)! − 1 = 40319.</p></details>
+<details><summary>Method: Induction</summary><p>The pattern (n + 1)! − 1 holds for n = 1, 2, and each step adds (n + 1)(n + 1)! giving 40319 at n = 7.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> Find ⌊√1⌋ + ⌊√2⌋ + … + ⌊√30⌋.</p><details><summary>Hint</summary>The value j appears for k from j² to (j + 1)² − 1.</details><details><summary>Answer</summary>100</details>
+<details><summary>Method: Blocks</summary><p>Value j appears 2j + 1 times (truncated at 30); summing gives 100.</p></details>
+<details><summary>Method: Direct sum</summary><p>Add ⌊√k⌋ for k = 1, …, 30 term by term: 100.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> Find ⌊√1⌋ + ⌊√2⌋ + … + ⌊√50⌋.</p><details><summary>Hint</summary>The value j appears for k from j² to (j + 1)² − 1.</details><details><summary>Answer</summary>217</details>
+<details><summary>Method: Blocks</summary><p>Value j appears 2j + 1 times (truncated at 50); summing gives 217.</p></details>
+<details><summary>Method: Direct sum</summary><p>Add ⌊√k⌋ for k = 1, …, 50 term by term: 217.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> Find ⌊√1⌋ + ⌊√2⌋ + … + ⌊√100⌋.</p><details><summary>Hint</summary>The value j appears for k from j² to (j + 1)² − 1.</details><details><summary>Answer</summary>625</details>
+<details><summary>Method: Blocks</summary><p>Value j appears 2j + 1 times (truncated at 100); summing gives 625.</p></details>
+<details><summary>Method: Direct sum</summary><p>Add ⌊√k⌋ for k = 1, …, 100 term by term: 625.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> Let F₁ = F₂ = 1 and Fₖ₊₂ = Fₖ₊₁ + Fₖ. Find gcd(F_12, F_18).</p><details><summary>Hint</summary>For Fibonacci numbers gcd(F_m, F_n) = F_gcd(m,n).</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: GCD property</summary><p>gcd(12, 18) = 6 so the answer is F_6 = 8.</p></details>
+<details><summary>Method: Compute</summary><p>F_12 = 144 and F_18 = 2584; their gcd is 8.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> Let F₁ = F₂ = 1 and Fₖ₊₂ = Fₖ₊₁ + Fₖ. Find gcd(F_20, F_30).</p><details><summary>Hint</summary>For Fibonacci numbers gcd(F_m, F_n) = F_gcd(m,n).</details><details><summary>Answer</summary>55</details>
+<details><summary>Method: GCD property</summary><p>gcd(20, 30) = 10 so the answer is F_10 = 55.</p></details>
+<details><summary>Method: Compute</summary><p>F_20 = 6765 and F_30 = 832040; their gcd is 55.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> Let F₁ = F₂ = 1 and Fₖ₊₂ = Fₖ₊₁ + Fₖ. Find gcd(F_15, F_25).</p><details><summary>Hint</summary>For Fibonacci numbers gcd(F_m, F_n) = F_gcd(m,n).</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: GCD property</summary><p>gcd(15, 25) = 5 so the answer is F_5 = 5.</p></details>
+<details><summary>Method: Compute</summary><p>F_15 = 610 and F_25 = 75025; their gcd is 5.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> What is the minimum value of x + 9/x for x > 0?</p><details><summary>Hint</summary>AM-GM on x and 9/x.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: AM-GM</summary><p>x + 9/x ≥ 2√9 = 6, with equality at x = 3.</p></details>
+<details><summary>Method: Calculus</summary><p>The derivative 1 − 9/x² vanishes at x = 3 where the value is 6.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> What is the minimum value of x + 16/x for x > 0?</p><details><summary>Hint</summary>AM-GM on x and 16/x.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: AM-GM</summary><p>x + 16/x ≥ 2√16 = 8, with equality at x = 4.</p></details>
+<details><summary>Method: Calculus</summary><p>The derivative 1 − 16/x² vanishes at x = 4 where the value is 8.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> What is the minimum value of x + 25/x for x > 0?</p><details><summary>Hint</summary>AM-GM on x and 25/x.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: AM-GM</summary><p>x + 25/x ≥ 2√25 = 10, with equality at x = 5.</p></details>
+<details><summary>Method: Calculus</summary><p>The derivative 1 − 25/x² vanishes at x = 5 where the value is 10.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> What is the minimum value of x² + 16/x for x > 0?</p><details><summary>Hint</summary>Split 16/x into two equal parts and use AM-GM on three terms.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: AM-GM</summary><p>x² + 16/(2x) + 16/(2x) ≥ 3·∛(x²·16·16/(4x²)) = 12, with equality at x = 2.</p></details>
+<details><summary>Method: Calculus</summary><p>The derivative 2x − 16/x² vanishes at x = 2, giving 12.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> What is the minimum value of x² + 54/x for x > 0?</p><details><summary>Hint</summary>Split 54/x into two equal parts and use AM-GM on three terms.</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: AM-GM</summary><p>x² + 54/(2x) + 54/(2x) ≥ 3·∛(x²·54·54/(4x²)) = 27, with equality at x = 3.</p></details>
+<details><summary>Method: Calculus</summary><p>The derivative 2x − 54/x² vanishes at x = 3, giving 27.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> What is the minimum value of x² + 128/x for x > 0?</p><details><summary>Hint</summary>Split 128/x into two equal parts and use AM-GM on three terms.</details><details><summary>Answer</summary>48</details>
+<details><summary>Method: AM-GM</summary><p>x² + 128/(2x) + 128/(2x) ≥ 3·∛(x²·128·128/(4x²)) = 48, with equality at x = 4.</p></details>
+<details><summary>Method: Calculus</summary><p>The derivative 2x − 128/x² vanishes at x = 4, giving 48.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> Compute 1/(√1 + √2) + 1/(√2 + √3) + … + 1/(√99 + √100).</p><details><summary>Hint</summary>Rationalise each denominator.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Telescoping</summary><p>1/(√k + √(k+1)) = √(k+1) − √k, so the sum is √100 − 1 = 9.</p></details>
+<details><summary>Method: Numerical</summary><p>Adding the 99 terms numerically gives 9.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> Compute 1/(√1 + √2) + 1/(√2 + √3) + … + 1/(√48 + √49).</p><details><summary>Hint</summary>Rationalise each denominator.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Telescoping</summary><p>1/(√k + √(k+1)) = √(k+1) − √k, so the sum is √49 − 1 = 6.</p></details>
+<details><summary>Method: Numerical</summary><p>Adding the 48 terms numerically gives 6.</p></details>
+<p class=ref>Source: Technique from the IMO Compendium §2.1, Gelca &amp; Andreescu 3.1.6 (original problem)</p></div>

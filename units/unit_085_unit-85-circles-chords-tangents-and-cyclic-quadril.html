@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 85</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 85: Unit 85: Circles: chords, tangents and cyclic quadrilaterals</h1><p class=ref>Book: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1 (25 problems)<br>Coxeter &amp; Greitzer, Geometry Revisited, chapter 2, and Chen, Euclidean Geometry in Mathematical Olympiads, chapter 1 (power of a point and cyclic quadrilaterals).</p>
+<h2>Reading</h2>
+<h3>1. Tangential quadrilaterals and Pitot's theorem</h3><p>A quadrilateral with an inscribed circle (tangent to all four sides) satisfies <b>Pitot's theorem</b>: the sums of opposite sides are equal, a + c = b + d. The reason: the tangent lengths from each vertex are equal, so each side is a sum of two tangent lengths and both sums equal the total of all four tangent lengths. Conversely, a convex quadrilateral with a + c = b + d has an incircle.</p><p><b>Worked example.</b> A tangential quadrilateral has sides 5, 6, 7 and d (in order). Then 5 + 7 = 6 + d, so d = 6. Its area is r × s, where s is the semiperimeter: s = 12.</p><p><b>Cyclic and tangential.</b> A quadrilateral that is both has area √(abcd) (Brahmagupta's formula with s − a = c, etc.).</p>
+<h3>2. Chords, secants and tangents</h3><p><b>Intersecting chords:</b> PA · PB = PC · PD. <b>Tangent–secant:</b> PT² = PA · PB. <b>Two secants from an outside point:</b> PA · PB = PC · PD. The angle between a tangent and a chord equals the inscribed angle on the other side of the chord. The angle between two chords meeting inside the circle is half the sum of the intercepted arcs; for two secants meeting outside, half the difference.</p><p><b>Worked example.</b> Two chords AB and CD meet at P inside the circle, with arcs AC = 70° and BD = 50° (the arcs opposite each other across the intersection). Then angle APC = ½(70° + 50°) = 60°.</p><p><b>Worked example 2.</b> Two secants from P meet the circle at A, B and C, D with arcs BD = 100° (far) and AC = 40° (near). The angle at P is ½(100° − 40°) = 30°.</p>
+<h3>3. Cyclic quadrilateral tests</h3><p>To show four points concyclic, show any one of these: opposite angles add to 180°; an exterior angle equals the opposite interior angle; two angles subtending the same segment on the same side are equal; the power-of-a-point equation PA · PB = PC · PD holds for lines meeting at P. <b>Ptolemy's equation</b> AC · BD = AB · CD + AD · BC also characterises cyclic quadrilaterals.</p><p><b>Worked example.</b> In triangle ABC, the feet D and E of the altitudes from A and B lie on a circle with diameter AB, since angles ADB and AEB are right angles. So ABDE is cyclic, and angle CDE = angle BAC (exterior angle of the cyclic quadrilateral).</p><p><b>Miquel's theorem.</b> Points D, E, F on the sides BC, CA, AB of a triangle: the circles AEF, BFD, CDE meet at one point.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Mixing the near and far arcs. Using the sum when it should be a difference. Forgetting that Pitot's theorem needs the sides taken in order.</p><p><b>Checks.</b> Test your angle on a symmetric case.</p><p><b>Practice.</b> Mark each angle with the arc it intercepts.</p>
+<h3>Worked examples with Try-its: Power of a point</h3><p>If two chords AB and CD of a circle meet at P, then PA · PB = PC · PD; for chords cut into 3 and 4, and 2 and 6, 3 · 4 = 2 · 6 = 12. For a point outside, the tangent length t satisfies t² = PA · PB for any secant. A tangent from a point at distance 13 from the centre of a circle of radius 5 has length √(169 − 25) = 12.</p><details class="try"><summary>Try it<p>A secant from P meets a circle at distances 4 and 9 from P. How long is the tangent from P?</p><p><b>Answer.</b> √36 = 6.</p></details>
+<h3>Worked examples with Try-its: Cyclic quadrilaterals</h3><p>A quadrilateral is cyclic exactly when opposite angles sum to 180°. <b>Ptolemy:</b> for a cyclic quadrilateral with sides a, b, c, d (in order) and diagonals p, q we have pq = ac + bd. For a 3 × 4 rectangle the diagonals are both 5, and 5 · 5 = 3 · 3 + 4 · 4 = 25. For two circles with centres 13 apart and radii 3 and 8, the external common tangent has length √(13² − 5²) = 12 and the internal one has length √(13² − 11²) = √48.</p><details class="try"><summary>Try it<p>In cyclic quadrilateral ABCD, angle A = 80° and angle B = 95°. Find angles C and D.</p><p><b>Answer.</b> C = 180° − 80° = 100° and D = 180° − 95° = 85°.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> In a circle, chords AB and CD intersect at P with AP = 2, PB = 6 and CP = 3. Find PD and the product of the two chords' lengths. <b>Solution.</b> PD = 2 · 6/3 = 4, so CD = 7 and AB = 8, product 56.</p><p><b>Reflection.</b> The product of the two segments is the same for every chord through P.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Inscribed angle.</b> A chord that subtends a central angle of 100° subtends an inscribed angle of 50° on the major arc and 130° on the minor arc. <b>Tangent length.</b> A secant from P meeting the circle at distances 3 and 12 has tangent length √36 = 6. <b>Incircle.</b> A right triangle with sides 6, 8, 10 has inradius (6 + 8 − 10)/2 = 2.</p><details class="try"><summary>Try it<p>Two tangents from an outside point are 7 and x long. Find x.</p><p><b>Answer.</b> 7: tangents from a point are equal.</p></details><details class="try"><summary>Try it<p>An inscribed angle intercepts an arc of 140°. What is the angle?</p><p><b>Answer.</b> 70°.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Chord AB of length 8 is 3 units from the centre of a circle. Find the radius. <b>Solution.</b> The perpendicular from the centre bisects the chord, so r² = 4² + 3² = 25 and r = 5.</p><p><b>Check.</b> The 3-4-5 right triangle has hypotenuse 5 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Chords AB and CD of a circle meet at P inside it. PA = 4, PB = 6, PC = 3. Find PD.</p><details><summary>Hint</summary>PA · PB = PC · PD.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Power of a point</summary><p>4 · 6 = 3 · PD, so PD = 8.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles PAC and PDB are similar (equal inscribed angles), so PA/PD = PC/PB, giving PD = 4 · 6/3 = 8.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem p2.</b> From a point P outside a circle, a secant meets the circle at A (nearer) and B with PA = 4 and AB = 5. Find the tangent length PT.</p><details><summary>Hint</summary>PT² = PA · PB.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Power</summary><p>PB = 9, so PT² = 36 and PT = 6.</p></details>
+<details><summary>Method: Check</summary><p>Triangles PTA and PBT are similar, giving PT/PB = PA/PT, the same relation.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem p3.</b> In a cyclic quadrilateral ABCD angle A = 70°. Find angle C in degrees.</p><details><summary>Hint</summary>Opposite angles are supplementary.</details><details><summary>Answer</summary>110</details>
+<details><summary>Method: Theorem</summary><p>A + C = 180°, so C = 110°.</p></details>
+<details><summary>Method: Arcs</summary><p>Angle A subtends arc BCD of 140° and angle C subtends the remaining arc of 220°, giving 110°.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem p4.</b> An isosceles trapezoid has parallel sides 14 and 4 and legs 13. Find the length of a diagonal.</p><details><summary>Hint</summary>It is cyclic, so use Ptolemy.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Ptolemy</summary><p>d · d = 14 · 4 + 13 · 13 = 225, so d = 15.</p></details>
+<details><summary>Method: Coordinates</summary><p>The legs each stick out (14 − 4)/2 = 5, so the height is √(169 − 25) = 12. A diagonal spans horizontally 5 + 4 = 9 and vertically 12, so d = √(81 + 144) = 15.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem p5.</b> A right triangle with legs 6 and 8 is inscribed in a circle. Find the circle's radius.</p><details><summary>Hint</summary>The hypotenuse is a diameter.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Thales</summary><p>The hypotenuse is 10 and is a diameter, so R = 5.</p></details>
+<details><summary>Method: Formula</summary><p>R = abc/(4K) = 6 · 8 · 10/(4 · 24) = 5.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem p6.</b> In a circle of radius 5, a chord is 3 from the centre. Find the chord's length.</p><details><summary>Hint</summary>Right triangle with half-chord.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Pythagoras</summary><p>The half-chord is √(25 − 9) = 4, so the chord is 8.</p></details>
+<details><summary>Method: Power</summary><p>The midpoint M of the chord is at distance 3 from the centre, and the half-chord squared equals 5² − 3² = 16.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem p7.</b> A point P is 13 from the centre of a circle of radius 5. Find the length of the tangent from P.</p><details><summary>Hint</summary>Radius is perpendicular to the tangent.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Pythagoras</summary><p>√(13² − 5²) = 12.</p></details>
+<details><summary>Method: Power</summary><p>The power of P is 13² − 5² = 144 = PT², so PT = 12.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem p8.</b> Two chords of a circle meet at P. One chord is split by P into pieces 3 and 8, and the other into pieces 4 and z. Find z.</p><details><summary>Hint</summary>3 · 8 = 4 · z.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Power</summary><p>24 = 4z, so z = 6.</p></details>
+<details><summary>Method: Check</summary><p>The product 3 · 8 equals 4 · 6.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem p9.</b> Find the area of a rectangle with sides 3 and 4 using Brahmagupta's formula for cyclic quadrilaterals.</p><details><summary>Hint</summary>s = 7.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Formula</summary><p>√(4 · 3 · 4 · 3) = 12.</p></details>
+<details><summary>Method: Direct</summary><p>The rectangle is cyclic and has area 3 · 4 = 12.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem p10.</b> Chords AB and CD meet at P inside a circle with AP = 4, PB = 9 and CP = 6. Find PD.</p><details><summary>Hint</summary>AP · PB = CP · PD.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Intersecting chords</summary><p>4 · 9 = 6 · PD, so PD = 6.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles APC and DPB are similar, so AP/DP = CP/BP, giving the same equation 4 · 9 = 6 · PD.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem p11.</b> A point is 13 from the centre of a circle of radius 5. How long is a tangent segment from the point to the circle?</p><details><summary>Hint</summary>Radius is perpendicular to the tangent.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Pythagoras</summary><p>The tangent, the radius and the line to the centre form a right triangle: √(169 − 25) = 12.</p></details>
+<details><summary>Method: Power of a point</summary><p>The power is 13² − 5² = 144, so the tangent is 12.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem p12.</b> From an external point P a secant meets a circle at A and B with PA = 3 and PB = 12, and a tangent touches it at T. Find PT.</p><details><summary>Hint</summary>PT² = PA · PB.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Power of a point</summary><p>PT² = 3 · 12 = 36, so PT = 6.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles PTA and PBT are similar, so PT/PA = PB/PT.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem p13.</b> An inscribed angle intercepts an arc of 80°. How large is the angle in degrees?</p><details><summary>Hint</summary>Half the arc.</details><details><summary>Answer</summary>40</details>
+<details><summary>Method: Theorem</summary><p>An inscribed angle is half its intercepted arc: 40°.</p></details>
+<details><summary>Method: Central angle</summary><p>The central angle on the same arc is 80°, and the inscribed angle is half of it.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem p14.</b> In a cyclic quadrilateral one angle is 70°. How large is the opposite angle in degrees?</p><details><summary>Hint</summary>Opposite angles sum to 180°.</details><details><summary>Answer</summary>110</details>
+<details><summary>Method: Theorem</summary><p>180° − 70° = 110°.</p></details>
+<details><summary>Method: Arcs</summary><p>The two angles intercept arcs that together make the whole 360° circle, so their sum is 180°.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem p15.</b> A chord lies 3 from the centre of a circle of radius 5. How long is the chord?</p><details><summary>Hint</summary>Half-chord, distance and radius form a right triangle.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Pythagoras</summary><p>Half the chord is √(25 − 9) = 4, so the chord is 8.</p></details>
+<details><summary>Method: Power of a point</summary><p>Take the foot of the perpendicular M. Its power is 25 − 9 = 16 = (half chord)², so half chord 4.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem p16.</b> Chords AB and CD meet at P inside a circle with AP = 3, PB = 8 and CP = 4. Find PD.</p><details><summary>Hint</summary>Intersecting chords.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Theorem</summary><p>3 · 8 = 4 · PD gives PD = 6.</p></details>
+<details><summary>Method: Check</summary><p>4 · 6 = 24 = 3 · 8.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem p17.</b> What is the circumradius of the 5-12-13 right triangle?</p><details><summary>Hint</summary>The hypotenuse is a diameter.</details><details><summary>Answer</summary>13/2</details>
+<details><summary>Method: Right angle</summary><p>The hypotenuse is a diameter, so R = 13/2.</p></details>
+<details><summary>Method: Formula</summary><p>R = abc/(4K) = 5 · 12 · 13/(4 · 30) = 780/120 = 13/2.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem x18.</b> Chords AB and CD of a circle meet at P inside it with AP = 10, PB = 12 and CP = 15. Find PD.</p><details><summary>Hint</summary>Intersecting chords theorem.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Theorem</summary><p>AP · PB = CP · PD, so 10 · 12 = 15 · PD and PD = 8.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles APC and DPB are similar, so AP/DP = CP/BP, giving the same equation 10 · 12 = 15 · PD.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem x19.</b> A point is 25 from the centre of a circle of radius 7. How long is a tangent segment from the point?</p><details><summary>Hint</summary>The radius is perpendicular to the tangent.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Pythagoras</summary><p>√(25² − 7²) = √576 = 24.</p></details>
+<details><summary>Method: Power of a point</summary><p>The power of the point is 25² − 7² = 576, which is the tangent length squared, so 24.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem x20.</b> From an external point P a tangent touches a circle at T with PT = 9, and a secant meets it at A and B with PA = 3. Find PB.</p><details><summary>Hint</summary>PT² = PA · PB.</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: Power of a point</summary><p>9² = 3 · PB, so PB = 27.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles PTA and PBT are similar, so PT/PA = PB/PT, giving PB = 9²/3 = 27.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem x21.</b> Find the circumradius of the triangle with sides 13, 20 and 21.</p><details><summary>Hint</summary>R = abc/(4K).</details><details><summary>Answer</summary>65/6</details>
+<details><summary>Method: Formula</summary><p>K = 126, so R = 5460/(4 · 126) = 65/6.</p></details>
+<details><summary>Method: Law of sines</summary><p>The altitude to side 21 is 12, so sin of the adjacent angle is 3/5; then 2R = 13/3/5 gives R = 65/6.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem x22.</b> Chords AB and CD of a circle meet at P inside it with AP = 7, PB = 8 and CP = 14. Find PD.</p><details><summary>Hint</summary>Intersecting chords theorem.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Theorem</summary><p>AP · PB = CP · PD, so 7 · 8 = 14 · PD and PD = 4.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles APC and DPB are similar, so AP/DP = CP/BP, giving the same equation 7 · 8 = 14 · PD.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem x23.</b> A point is 15 from the centre of a circle of radius 9. How long is a tangent segment from the point?</p><details><summary>Hint</summary>The radius is perpendicular to the tangent.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Pythagoras</summary><p>√(15² − 9²) = √144 = 12.</p></details>
+<details><summary>Method: Power of a point</summary><p>The power of the point is 15² − 9² = 144, which is the tangent length squared, so 12.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem x24.</b> From an external point P a tangent touches a circle at T with PT = 15, and a secant meets it at A and B with PA = 5. Find PB.</p><details><summary>Hint</summary>PT² = PA · PB.</details><details><summary>Answer</summary>45</details>
+<details><summary>Method: Power of a point</summary><p>15² = 5 · PB, so PB = 45.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles PTA and PBT are similar, so PT/PA = PB/PT, giving PB = 15²/5 = 45.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>
+<div class=p><p><b>Problem x25.</b> Find the circumradius of the triangle with sides 8, 15 and 17.</p><details><summary>Hint</summary>R = abc/(4K).</details><details><summary>Answer</summary>17/2</details>
+<details><summary>Method: Formula</summary><p>K = 60, so R = 2040/(4 · 60) = 17/2.</p></details>
+<details><summary>Method: Law of sines</summary><p>The altitude to side 17 is 120/17, so sin of the adjacent angle is 8/17; then 2R = 8/8/17 gives R = 17/2.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 2 and Chen ch. 1</p></div>

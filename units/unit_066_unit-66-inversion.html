@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 66</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 66: Unit 66: Inversion</h1><p class=ref>Book: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8 (25 problems)<br>Coxeter &amp; Greitzer, Geometry Revisited, chapter 5 (An introduction to inversive geometry) and Chen, Euclidean Geometry in Mathematical Olympiads, chapter 8 (Inversion).</p>
+<h2>Reading</h2>
+<h3>1. Inversion in a circle</h3><p><b>Inversion</b> about a circle of centre O and radius r sends a point P ≠ O to the point P′ on ray OP with OP · OP′ = r². Points inside the circle go outside and vice versa; points on the circle stay fixed. In the unit circle (2, 0) goes to (1/2, 0) and (1, 1) goes to (1/2, 1/2); in a circle of radius 5, the point (3, 4) (at distance 5) is fixed. Applying inversion twice returns the original point.</p><p><b>What it does to lines and circles.</b> A line through O maps to itself. A line not through O maps to a circle through O: the line x = 1 maps to the circle with centre (1/2, 0) and radius 1/2 (every image point (1/(1 + t²), t/(1 + t²)) was verified to lie on it). Conversely a circle through O maps to a line not through O, and a circle not through O maps to a circle. Angles are preserved (though orientation reverses), and tangent circles map to tangent circles or lines.</p><details class="try"><summary>Try it</summary><p>Find the image of (3, 4) under inversion in the unit circle.</p><p><b>Answer.</b> (3/25, 4/25).</p></details>
+<h3>2. Using inversion</h3><p>Inversion straightens circles through the centre of inversion into lines, turning hard circle problems into easier line problems. <b>Example.</b> Two circles tangent at O invert to two parallel lines; a chain of circles tangent to both becomes a chain of equal circles between parallel lines (Pappus chain). <b>Ptolemy via inversion.</b> Invert about one vertex of a cyclic quadrilateral: the other three vertices land on a line and the length relation becomes collinearity (A′B′ + B′C′ = A′C′), which is Ptolemy's equality.</p><p><b>Distance formula.</b> If A′ and B′ are the inverses of A and B, then A′B′ = r² · AB/(OA · OB). Check: with r = 1, A = (2, 0), B = (0, 3): AB = √13, OA · OB = 6, so A′B′ = √13/6; and A′ = (1/2, 0), B′ = (0, 1/3) have distance √(1/4 + 1/9) = √13/6 ✓.</p><details class="try"><summary>Try it</summary><p>Under inversion in the unit circle, what is the image of the circle x² + y² = 4?</p><p><b>Answer.</b> The circle of radius 1/2 about the origin.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> Invert the line x + y = 2 in the unit circle. Describe the image.</p><p><b>Solution.</b> The line does not pass through the origin; its nearest point to O is (1, 1), at distance √2. The image is a circle through O with diameter from O to the inverse of (1, 1), which is (1/2, 1/2): so the circle has centre (1/4, 1/4) and radius √2/4, i.e. x² + y² = (x + y)/2.</p><p><b>Reflection.</b> The foot of the perpendicular from O to the line inverts to the far end of the diameter of the image circle.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Forgetting that O itself has no image. (2) Thinking that a circle's centre maps to the centre of its image. (3) Using OP + OP′ instead of the product. (4) Forgetting that inversion changes lengths according to the distance formula.</p><p><b>Checks.</b> Compute the inverse of a couple of points and check the product OP · OP′.</p><p><b>How to practise.</b> Always invert at a point where many circles meet. In Unlimited practice, rotate the inversion families.</p>
+<h3>More worked examples: Worked examples</h3><p>Inversion in the unit circle sends z to 1/z̄: the point 2 goes to 1/2, and 1 + i goes to (1 + i)/2. The line x = 2 (not through the centre) goes to a circle through the origin with diameter from 0 to 1/2. Distances change: for P, Q with images P′, Q′ we have P′Q′ = r² · PQ/(OP · OQ), so for r = 1, P = 2 and Q = 3 on the same ray, P′Q′ = 1/2 − 1/3 = 1/6 = 1 · 1/(2 · 3) ✓.</p><details class="try"><summary>Try it<p>Where does 3 + 4i go under inversion in the unit circle?</p><p><b>Answer.</b> (3 + 4i)/25.</p></details><details class="try"><summary>Try it<p>What does inversion do to a circle through the centre of inversion?</p><p><b>Answer.</b> It maps it to a line not through the centre.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Show that inversion maps the circle |z − 1| = 1 (which passes through 0) to the line Re(z) = 1/2. <b>Solution.</b> A point z on the circle satisfies |z|² = 2 Re z. The image w = 1/z̄ has w̄ = 1/z, so Re w = Re(1/z̄) = Re z/|z|² = 1/2.</p><p><b>Check.</b> The point 2 on the circle goes to 1/2, which lies on the line Re z = 1/2; the point 1 + i goes to (1 + i)/2, real part 1/2 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Inversion has radius 6 and centre O. P is 4 from O. How far is the inverse P' from O?</p><details><summary>Hint</summary>OP · OP' = r².</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Rule</summary><p>4 · OP' = 36, so OP' = 9.</p></details>
+<details><summary>Method: Check</summary><p>4 · 9 = 36.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem p2.</b> Inversion in a circle of radius 5 centred at the origin. Find the inverse of (6, 8), and give x + y of the inverse as a fraction.</p><details><summary>Hint</summary>Inverse = (r²/|P|²)·P.</details><details><summary>Answer</summary>7/2</details>
+<details><summary>Method: Scale</summary><p>|P|² = 100, so the inverse is (25/100)(6, 8) = (3/2, 2), with x + y = 7/2.</p></details>
+<details><summary>Method: Distance</summary><p>OP = 10 and OP' = 25/10 = 5/2 along the same ray: (5/2)(3/5, 4/5) = (3/2, 2).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem p3.</b> Invert the line x = 2 in the unit circle centred at the origin. The image is a circle through O. Find its radius, as a fraction.</p><details><summary>Hint</summary>The foot (2,0) inverts to (1/2, 0), the far point of the circle.</details><details><summary>Answer</summary>1/4</details>
+<details><summary>Method: Foot point</summary><p>(2,0) is the closest point of the line to O. Its inverse is (1/2, 0), which is the diameter's far end, so the diameter is 1/2 and the radius is 1/4.</p></details>
+<details><summary>Method: Check</summary><p>The circle (x − 1/4)² + y² = 1/16 passes through O and (1/2, 0), consistent with radius 1/4.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem p4.</b> Invert in the unit circle about the origin the circle with centre (3, 0) and radius 1. Find the radius of the image, as a fraction.</p><details><summary>Hint</summary>Invert the points (2,0) and (4,0).</details><details><summary>Answer</summary>1/8</details>
+<details><summary>Method: Diameter</summary><p>The extreme points (2,0) and (4,0) invert to (1/2, 0) and (1/4, 0). They are the ends of a diameter of the image, so the radius is (1/2 − 1/4)/2 = 1/8.</p></details>
+<details><summary>Method: Formula</summary><p>For a circle with centre at distance d and radius ρ, the image radius is r²ρ/|d² − ρ²| = 1/8.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem p5.</b> Inversion has radius 10. P and Q are 5 and 20 from O, and PQ = 18. Find the distance P'Q'.</p><details><summary>Hint</summary>P'Q' = r²·PQ/(OP·OQ).</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: Formula</summary><p>P'Q' = 100 · 18/(5 · 20) = 18.</p></details>
+<details><summary>Method: Similar triangles</summary><p>OP · OP' = OQ · OQ' means triangles OPQ and OQ'P' are similar, giving the same ratio.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem p6.</b> ABCD is a rectangle with AB = 3 and BC = 4. Find AC · BD (Ptolemy).</p><details><summary>Hint</summary>A rectangle is a cyclic quadrilateral.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Ptolemy</summary><p>AC · BD = AB · CD + BC · DA = 9 + 16 = 25.</p></details>
+<details><summary>Method: Diagonals</summary><p>Each diagonal is 5, so AC · BD = 25.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem p7.</b> Inversion has radius 2. A point is 8 from O. If P' is its inverse, find OP + OP' as a fraction.</p><details><summary>Hint</summary>OP' = r²/OP.</details><details><summary>Answer</summary>17/2</details>
+<details><summary>Method: Compute</summary><p>OP' = 4/8 = 1/2, so the sum is 8 + 1/2 = 17/2.</p></details>
+<details><summary>Method: Check</summary><p>8 · 1/2 = 4 = r².</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem p8.</b> Inversion has radius 10. A circle through O has diameter 10, so its centre is 5 from O. It inverts to a line. How far is that line from O?</p><details><summary>Hint</summary>The far end of the diameter inverts to the nearest point of the line.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Far end</summary><p>The diameter's far end is 10 from O and inverts to 100/10 = 10 from O. The line is perpendicular to the diameter there, so its distance is 10.</p></details>
+<details><summary>Method: Check</summary><p>The circle through O and a line at distance d are inverses when d = r²/diameter = 100/10.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem p9.</b> Inversion has radius 4. A circle not through O has centre 5 from O and radius 3. Find the radius of its image.</p><details><summary>Hint</summary>Invert the two extreme points on the line through O.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Extremes</summary><p>The circle meets that line at distances 2 and 8 from O. They invert to 16/2 = 8 and 16/8 = 2, so the image diameter is 6 and the radius is 3.</p></details>
+<details><summary>Method: Formula</summary><p>r²ρ/|d² − ρ²| = 16 · 3/(25 − 9) = 3.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem p10.</b> An inversion has radius 6 and centre O. A point P is at distance 4 from O. How far from O is its image P′?</p><details><summary>Hint</summary>OP · OP′ = r².</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Formula</summary><p>OP′ = 36/4 = 9.</p></details>
+<details><summary>Method: Check</summary><p>4 · 9 = 36 and both lie on one ray from O.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem p11.</b> An inversion has radius 6. A point is 12 from the centre. How far is its image from the centre?</p><details><summary>Hint</summary>r²/d.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Formula</summary><p>36/12 = 3.</p></details>
+<details><summary>Method: Symmetry</summary><p>Inversion swaps 4 and 9 above and likewise 12 and 3.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem p12.</b> The inversion has radius 5. A point on the circle of inversion is 5 from O. How far is its image?</p><details><summary>Hint</summary>Points on the circle are fixed.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Formula</summary><p>25/5 = 5.</p></details>
+<details><summary>Method: Meaning</summary><p>The inversion circle is fixed point by point.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem p13.</b> With inversion radius 7, a point P is at distance 2 from O. Find OP′.</p><details><summary>Hint</summary>r²/d.</details><details><summary>Answer</summary>49/2</details>
+<details><summary>Method: Formula</summary><p>49/2.</p></details>
+<details><summary>Method: Check</summary><p>2 · 49/2 = 49.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem p14.</b> An inversion has radius 10 and a line is at distance 4 from the centre. The image is a circle through O. What is its diameter?</p><details><summary>Hint</summary>The foot maps to the far point of the circle.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Foot</summary><p>The foot of the perpendicular at distance 4 maps to the point at distance 100/4 = 25, which is the opposite end of the diameter from O.</p></details>
+<details><summary>Method: Formula</summary><p>The diameter is r²/d = 25.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem p15.</b> Under an inversion of radius 4, a circle through O has diameter 8. The image is a line. How far is it from O?</p><details><summary>Hint</summary>Reverse the previous idea.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Formula</summary><p>The far point of the circle is at distance 8 and maps to distance 16/8 = 2, which is the foot of the line.</p></details>
+<details><summary>Method: Distance</summary><p>The line is at distance 2 from O.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem p16.</b> With r² = 12, points P and Q lie on one ray from O at distances 2 and 3. How far apart are their images?</p><details><summary>Hint</summary>Images are at 12/d.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Compute</summary><p>P′ is at 6 and Q′ at 4 on the same ray, so the distance is 2.</p></details>
+<details><summary>Method: Order</summary><p>Inversion reverses the order along the ray.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem p17.</b> The inversion has radius 10 and centre at the origin. What is the distance from the origin to the image of (3, 4)?</p><details><summary>Hint</summary>The point is at distance 5.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Formula</summary><p>100/5 = 20.</p></details>
+<details><summary>Method: Coordinates</summary><p>The image is (3, 4) · 100/25 = (12, 16), at distance 20.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem x18.</b> Find the distance between (2, -1) and (9, 23).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Formula</summary><p>√(7² + 24²) = √625 = 25.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 7 and 24 form a right triangle with hypotenuse 25 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem x19.</b> Two similar triangles have corresponding sides in the ratio 3 : 7. The smaller has area 18. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square of the ratio.</details><details><summary>Answer</summary>98</details>
+<details><summary>Method: Area ratio</summary><p>The areas are in the ratio 9 : 49, so the larger area is 18 · 49/9 = 98.</p></details>
+<details><summary>Method: Scale factor</summary><p>The linear factor is 7/3, so the area factor is 49/9; 18 · 49/9 = 98.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem x20.</b> Find the distance between (-4, -2) and (16, 19).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Formula</summary><p>√(20² + 21²) = √841 = 29.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 20 and 21 form a right triangle with hypotenuse 29 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem x21.</b> Two similar triangles have corresponding sides in the ratio 3 : 4. The smaller has area 27. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square of the ratio.</details><details><summary>Answer</summary>48</details>
+<details><summary>Method: Area ratio</summary><p>The areas are in the ratio 9 : 16, so the larger area is 27 · 16/9 = 48.</p></details>
+<details><summary>Method: Scale factor</summary><p>The linear factor is 4/3, so the area factor is 16/9; 27 · 16/9 = 48.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem x22.</b> Find the distance between (5, 5) and (14, 17).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Formula</summary><p>√(9² + 12²) = √225 = 15.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 9 and 12 form a right triangle with hypotenuse 15 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem x23.</b> Two similar triangles have corresponding sides in the ratio 4 : 9. The smaller has area 16. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square of the ratio.</details><details><summary>Answer</summary>81</details>
+<details><summary>Method: Area ratio</summary><p>The areas are in the ratio 16 : 81, so the larger area is 16 · 81/16 = 81.</p></details>
+<details><summary>Method: Scale factor</summary><p>The linear factor is 9/4, so the area factor is 81/16; 16 · 81/16 = 81.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem x24.</b> Find the distance between (1, -3) and (13, 13).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Formula</summary><p>√(12² + 16²) = √400 = 20.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 12 and 16 form a right triangle with hypotenuse 20 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>
+<div class=p><p><b>Problem x25.</b> Two similar triangles have corresponding sides in the ratio 5 : 8. The smaller has area 25. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square of the ratio.</details><details><summary>Answer</summary>64</details>
+<details><summary>Method: Area ratio</summary><p>The areas are in the ratio 25 : 64, so the larger area is 25 · 64/25 = 64.</p></details>
+<details><summary>Method: Scale factor</summary><p>The linear factor is 8/5, so the area factor is 64/25; 25 · 64/25 = 64.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 and Chen ch. 8</p></div>

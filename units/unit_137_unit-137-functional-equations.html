@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 137</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 137: Unit 137: Functional equations</h1><p class=ref>Book: Small, Functional Equations and How to Solve Them; Gelca &amp; Andreescu, Putnam and Beyond (25 problems)<br>Small, Functional Equations and How to Solve Them, ch. 2 (Cauchy, Jensen, exponential, Pexider equations), ch. 3 (one-variable equations) and 4.3 (arithmetic functions).</p>
+<h2>Reading</h2>
+<h3>1. Standard substitutions</h3><p>To solve a functional equation try: set variables to 0, 1 or each other; swap x with 1/x to produce a second equation; telescope a recurrence; prove the guess works. Example: f(x) + 2f(1/x) = x. Replacing x by 1/x gives f(1/x) + 2f(x) = 1/x; eliminating f(1/x) gives f(x) = (2/x − x)/3. Check at x = 1: f(1) + 2f(1) = 1 ✓ and f(1) = 1/3 ✓.</p><p><b>Cauchy.</b> If f(x + y) = f(x) + f(y) on the rationals then f(x) = f(1)x. <b>Exponential.</b> A positive solution of f(x + y) = f(x)f(y) is f(x) = a^x. <b>Involutions.</b> f(f(x)) = x on {1,…,n} counts involutions: 1, 2, 4, 10, 26, 76, 232, …</p><details class="try"><summary>Try it<p>f(x) + 3f(1/x) = x. What is f(1)?</p><p><b>Answer.</b> f(1) = 1/4.</p></details><details class="try"><summary>Try it<p>f(x + 1) = f(x) + 2x + 1 and f(0) = 0: find f(6).</p><p><b>Answer.</b> 36.</p></details>
+<h3>2. Proving that a guess works</h3><p>A candidate such as f(x) = ax + b must be substituted back. If f(f(x)) = 4x + 3 and f is linear with a > 0 then a² = 4, (a + 1)b = 3, so f(x) = 2x + 1; check f(f(x)) = 2(2x + 1) + 1 = 4x + 3 ✓. A solution found by elimination is a candidate only until it is verified.</p><details class="try"><summary>Try it<p>Linear f with a > 0 and f(f(x)) = 9x + 8: find f(1).</p><p><b>Answer.</b> a = 3, b = 2: f(1) = 5.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> A completely multiplicative f has f(2) = 3 and f(3) = 2. Find f(72). <b>Solution.</b> 72 = 2³ · 3², so f(72) = 3³ · 2² = 108.</p><p><b>Check.</b> f(72) = f(8)f(9) = 27 · 4 = 108 ✓.</p>
+<h3>4. In the books</h3><p><b>Small, ch. 2 (two variables).</b> 2.1 Cauchy's equation f(x + y) = f(x) + f(y) and 2.2 its applications; 2.3 Jensen's equation; 2.4 the linear equation; 2.5 Cauchy's exponential equation f(x + y) = f(x)f(y); 2.6 Pexider's equation; 2.7 Vincze's equation; 2.8 Cauchy's inequality; 2.9 equations in two variables. The book stresses that over the reals one needs an extra condition such as continuity or monotonicity, while over the rationals the solution is f(x) = cx.</p><p><b>Ch. 3 (one variable).</b> Linearisation (3.2), basic families (3.3), conjugacy equations (3.4 to 3.5), iterative roots (3.7) and nested radicals (3.8). <b>Ch. 4.</b> Polynomial equations (4.1), power series (4.2) and equations involving arithmetic functions (4.3), which is where completely multiplicative functions appear.</p><p><b>Honest note.</b> The unit only touches the basics (Cauchy over the rationals, substitution x → 1/x, recurrences, multiplicativity, a counting problem on involutions). The pathological solutions over the reals (Hamel bases, an appendix in the book) are not covered.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> A function f on the rationals satisfies f(x + y) = f(x) + f(y) and f(1) = 3. Find f(5/2).</p><details><summary>Hint</summary>Show first that f(n) = n·f(1) for integers, then f(1/q) = f(1)/q.</details><details><summary>Answer</summary>15/2</details>
+<details><summary>Method: Integers then fractions</summary><p>f(n) = nf(1); q·f(1/q) = f(1) so f(1/q) = 3/2, and f(5/2) = 15/2.</p></details>
+<details><summary>Method: Subtract the line</summary><p>g(x) = f(x) − 3x is additive and zero at every integer, so 2·g(5/2) = g(5) = 0 and f(5/2) = 15/2.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> A function f on the rationals satisfies f(x + y) = f(x) + f(y) and f(1) = 4. Find f(7/3).</p><details><summary>Hint</summary>Show first that f(n) = n·f(1) for integers, then f(1/q) = f(1)/q.</details><details><summary>Answer</summary>28/3</details>
+<details><summary>Method: Integers then fractions</summary><p>f(n) = nf(1); q·f(1/q) = f(1) so f(1/q) = 4/3, and f(7/3) = 28/3.</p></details>
+<details><summary>Method: Subtract the line</summary><p>g(x) = f(x) − 4x is additive and zero at every integer, so 3·g(7/3) = g(7) = 0 and f(7/3) = 28/3.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> A function f on the rationals satisfies f(x + y) = f(x) + f(y) and f(1) = -2. Find f(3/4).</p><details><summary>Hint</summary>Show first that f(n) = n·f(1) for integers, then f(1/q) = f(1)/q.</details><details><summary>Answer</summary>-3/2</details>
+<details><summary>Method: Integers then fractions</summary><p>f(n) = nf(1); q·f(1/q) = f(1) so f(1/q) = -2/4, and f(3/4) = -3/2.</p></details>
+<details><summary>Method: Subtract the line</summary><p>g(x) = f(x) − -2x is additive and zero at every integer, so 4·g(3/4) = g(3) = 0 and f(3/4) = -3/2.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> f satisfies f(x) + 2·f(1/x) = x for every non-zero real x. Find f(2). (fraction)</p><details><summary>Hint</summary>Substitute x → 1/x to get a second equation.</details><details><summary>Answer</summary>-1/3</details>
+<details><summary>Method: Solve the system</summary><p>With a = f(2), b = f(1/2): a + 2b = 2 and b + 2a = 1/2, so a = -1/3.</p></details>
+<details><summary>Method: General formula</summary><p>f(x) = (x − 2/x)/(1 − 4) = -1/3 at x = 2.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> f satisfies f(x) + 3·f(1/x) = x for every non-zero real x. Find f(3). (fraction)</p><details><summary>Hint</summary>Substitute x → 1/x to get a second equation.</details><details><summary>Answer</summary>-1/4</details>
+<details><summary>Method: Solve the system</summary><p>With a = f(3), b = f(1/3): a + 3b = 3 and b + 3a = 1/3, so a = -1/4.</p></details>
+<details><summary>Method: General formula</summary><p>f(x) = (x − 3/x)/(1 − 9) = -1/4 at x = 3.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> f satisfies f(x) + 4·f(1/x) = x for every non-zero real x. Find f(2). (fraction)</p><details><summary>Hint</summary>Substitute x → 1/x to get a second equation.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Solve the system</summary><p>With a = f(2), b = f(1/2): a + 4b = 2 and b + 4a = 1/2, so a = 0.</p></details>
+<details><summary>Method: General formula</summary><p>f(x) = (x − 4/x)/(1 − 16) = 0 at x = 2.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> f satisfies f(x) + 5·f(1/x) = x for every non-zero real x. Find f(4). (fraction)</p><details><summary>Hint</summary>Substitute x → 1/x to get a second equation.</details><details><summary>Answer</summary>-11/96</details>
+<details><summary>Method: Solve the system</summary><p>With a = f(4), b = f(1/4): a + 5b = 4 and b + 5a = 1/4, so a = -11/96.</p></details>
+<details><summary>Method: General formula</summary><p>f(x) = (x − 5/x)/(1 − 25) = -11/96 at x = 4.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> f(x + 1) = f(x) + 2x + 1 for integers x and f(0) = 5. Find f(10).</p><details><summary>Hint</summary>Add up the differences f(k + 1) − f(k).</details><details><summary>Answer</summary>105</details>
+<details><summary>Method: Telescoping</summary><p>f(10) = 5 + Σ_{k=0}^{9}(2k + 1) = 5 + 100 = 105.</p></details>
+<details><summary>Method: Guess and verify</summary><p>f(x) = x² + 5 satisfies both conditions, so f(10) = 105.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> f(x + 1) = f(x) + 2x + 1 for integers x and f(0) = 2. Find f(7).</p><details><summary>Hint</summary>Add up the differences f(k + 1) − f(k).</details><details><summary>Answer</summary>51</details>
+<details><summary>Method: Telescoping</summary><p>f(7) = 2 + Σ_{k=0}^{6}(2k + 1) = 2 + 49 = 51.</p></details>
+<details><summary>Method: Guess and verify</summary><p>f(x) = x² + 2 satisfies both conditions, so f(7) = 51.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> f(x + 1) = f(x) + 2x + 1 for integers x and f(0) = -3. Find f(9).</p><details><summary>Hint</summary>Add up the differences f(k + 1) − f(k).</details><details><summary>Answer</summary>78</details>
+<details><summary>Method: Telescoping</summary><p>f(9) = -3 + Σ_{k=0}^{8}(2k + 1) = -3 + 81 = 78.</p></details>
+<details><summary>Method: Guess and verify</summary><p>f(x) = x² + -3 satisfies both conditions, so f(9) = 78.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> f is completely multiplicative on the positive integers (f(mn) = f(m)f(n)) with f(2) = 3 and f(3) = 2. Find f(72).</p><details><summary>Hint</summary>Factor the number into primes.</details><details><summary>Answer</summary>108</details>
+<details><summary>Method: Factorise</summary><p>72 = 2·2·2·3·3, so f(72) = 108.</p></details>
+<details><summary>Method: Split</summary><p>Break 72 into products of smaller numbers and use f(mn) = f(m)f(n); the result is 108.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> f is completely multiplicative on the positive integers (f(mn) = f(m)f(n)) with f(2) = 5 and f(3) = 2. Find f(36).</p><details><summary>Hint</summary>Factor the number into primes.</details><details><summary>Answer</summary>100</details>
+<details><summary>Method: Factorise</summary><p>36 = 2·2·3·3, so f(36) = 100.</p></details>
+<details><summary>Method: Split</summary><p>Break 36 into products of smaller numbers and use f(mn) = f(m)f(n); the result is 100.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> f is completely multiplicative on the positive integers (f(mn) = f(m)f(n)) with f(3) = 2 and f(5) = 4. Find f(45).</p><details><summary>Hint</summary>Factor the number into primes.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Factorise</summary><p>45 = 3·3·5, so f(45) = 16.</p></details>
+<details><summary>Method: Split</summary><p>Break 45 into products of smaller numbers and use f(mn) = f(m)f(n); the result is 16.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> f is completely multiplicative on the positive integers (f(mn) = f(m)f(n)) with f(5) = 3 and f(7) = 2. Find f(175).</p><details><summary>Hint</summary>Factor the number into primes.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: Factorise</summary><p>175 = 5·5·7, so f(175) = 18.</p></details>
+<details><summary>Method: Split</summary><p>Break 175 into products of smaller numbers and use f(mn) = f(m)f(n); the result is 18.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> f(x) = ax + b with a > 0 satisfies f(f(x)) = 4x + 9 for all x. Find f(10).</p><details><summary>Hint</summary>Compare coefficients of f(f(x)) = a²x + (a + 1)b.</details><details><summary>Answer</summary>23</details>
+<details><summary>Method: Coefficients</summary><p>a² = 4 gives a = 2, and (a + 1)b = 9 gives b = 3, so f(10) = 23.</p></details>
+<details><summary>Method: Test a value</summary><p>f(f(0)) = (a + 1)b = 9 and f(f(1)) − f(f(0)) = a² = 4; so a = 2, b = 3, f(10) = 23.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> f(x) = ax + b with a > 0 satisfies f(f(x)) = 9x + 8 for all x. Find f(10).</p><details><summary>Hint</summary>Compare coefficients of f(f(x)) = a²x + (a + 1)b.</details><details><summary>Answer</summary>32</details>
+<details><summary>Method: Coefficients</summary><p>a² = 9 gives a = 3, and (a + 1)b = 8 gives b = 2, so f(10) = 32.</p></details>
+<details><summary>Method: Test a value</summary><p>f(f(0)) = (a + 1)b = 8 and f(f(1)) − f(f(0)) = a² = 9; so a = 3, b = 2, f(10) = 32.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> f(x) = ax + b with a > 0 satisfies f(f(x)) = 16x + 15 for all x. Find f(10).</p><details><summary>Hint</summary>Compare coefficients of f(f(x)) = a²x + (a + 1)b.</details><details><summary>Answer</summary>43</details>
+<details><summary>Method: Coefficients</summary><p>a² = 16 gives a = 4, and (a + 1)b = 15 gives b = 3, so f(10) = 43.</p></details>
+<details><summary>Method: Test a value</summary><p>f(f(0)) = (a + 1)b = 15 and f(f(1)) − f(f(0)) = a² = 16; so a = 4, b = 3, f(10) = 43.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> f(x) = ax + b with a > 0 satisfies f(f(x)) = 25x + 12 for all x. Find f(10).</p><details><summary>Hint</summary>Compare coefficients of f(f(x)) = a²x + (a + 1)b.</details><details><summary>Answer</summary>52</details>
+<details><summary>Method: Coefficients</summary><p>a² = 25 gives a = 5, and (a + 1)b = 12 gives b = 2, so f(10) = 52.</p></details>
+<details><summary>Method: Test a value</summary><p>f(f(0)) = (a + 1)b = 12 and f(f(1)) − f(f(0)) = a² = 25; so a = 5, b = 2, f(10) = 52.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> How many functions f from {1,…,4} to itself satisfy f(f(x)) = x for every x?</p><details><summary>Hint</summary>These are the involutions; count by the number of 2-cycles.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Recurrence</summary><p>a_n = a_(n−1) + (n − 1)a_(n−2) with a₁ = 1, a₂ = 2 gives a_4 = 10.</p></details>
+<details><summary>Method: Cycle counting</summary><p>Σ over j pairs of n!/(2^j j! (n − 2j)!) = 10.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> How many functions f from {1,…,5} to itself satisfy f(f(x)) = x for every x?</p><details><summary>Hint</summary>These are the involutions; count by the number of 2-cycles.</details><details><summary>Answer</summary>26</details>
+<details><summary>Method: Recurrence</summary><p>a_n = a_(n−1) + (n − 1)a_(n−2) with a₁ = 1, a₂ = 2 gives a_5 = 26.</p></details>
+<details><summary>Method: Cycle counting</summary><p>Σ over j pairs of n!/(2^j j! (n − 2j)!) = 26.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> How many functions f from {1,…,6} to itself satisfy f(f(x)) = x for every x?</p><details><summary>Hint</summary>These are the involutions; count by the number of 2-cycles.</details><details><summary>Answer</summary>76</details>
+<details><summary>Method: Recurrence</summary><p>a_n = a_(n−1) + (n − 1)a_(n−2) with a₁ = 1, a₂ = 2 gives a_6 = 76.</p></details>
+<details><summary>Method: Cycle counting</summary><p>Σ over j pairs of n!/(2^j j! (n − 2j)!) = 76.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> How many functions f from {1,…,7} to itself satisfy f(f(x)) = x for every x?</p><details><summary>Hint</summary>These are the involutions; count by the number of 2-cycles.</details><details><summary>Answer</summary>232</details>
+<details><summary>Method: Recurrence</summary><p>a_n = a_(n−1) + (n − 1)a_(n−2) with a₁ = 1, a₂ = 2 gives a_7 = 232.</p></details>
+<details><summary>Method: Cycle counting</summary><p>Σ over j pairs of n!/(2^j j! (n − 2j)!) = 232.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> f is a positive function with f(x + y) = f(x)f(y) for all real x, y and f(2) = 9. Find f(5).</p><details><summary>Hint</summary>First find f(1) from f(2) = f(1)².</details><details><summary>Answer</summary>243</details>
+<details><summary>Method: Find f(1)</summary><p>f(2) = f(1)² gives f(1) = 3 (it is positive), so f(5) = 243.</p></details>
+<details><summary>Method: Exponential form</summary><p>f(x) = 3^x, and f(5) = 243.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> f is a positive function with f(x + y) = f(x)f(y) for all real x, y and f(2) = 4. Find f(5).</p><details><summary>Hint</summary>First find f(1) from f(2) = f(1)².</details><details><summary>Answer</summary>32</details>
+<details><summary>Method: Find f(1)</summary><p>f(2) = f(1)² gives f(1) = 2 (it is positive), so f(5) = 32.</p></details>
+<details><summary>Method: Exponential form</summary><p>f(x) = 2^x, and f(5) = 32.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> f is a positive function with f(x + y) = f(x)f(y) for all real x, y and f(2) = 16. Find f(3).</p><details><summary>Hint</summary>First find f(1) from f(2) = f(1)².</details><details><summary>Answer</summary>64</details>
+<details><summary>Method: Find f(1)</summary><p>f(2) = f(1)² gives f(1) = 4 (it is positive), so f(3) = 64.</p></details>
+<details><summary>Method: Exponential form</summary><p>f(x) = 4^x, and f(3) = 64.</p></details>
+<p class=ref>Source: Technique from Small ch. 2–4 (original problem)</p></div>

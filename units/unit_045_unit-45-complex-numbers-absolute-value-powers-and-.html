@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 45</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 45: Unit 45: Complex numbers: absolute value, powers and roots of unity</h1><p class=ref>Book: Rusczyk, Art of Problem Solving Vol. 2, ch. 9 (25 problems)<br>Rusczyk, AoPS Vol. 2, chapter 9 (Complex Numbers), printed pp. 88-99.</p>
+<h2>Reading</h2>
+<h3>1. The complex plane</h3><p>A complex number is a + bi with i² = −1. We plot it at (a, b). The <b>conjugate</b> of z = a + bi is a − bi, the <b>modulus</b> (absolute value) is |z| = √(a² + b²), and z · z̄ = |z|². For z = 3 + 4i, |z| = 5 and z z̄ = 25. Division uses the conjugate: (3 + 4i)/(1 − 2i) = (3 + 4i)(1 + 2i)/5 = (−5 + 10i)/5 = −1 + 2i. Moduli multiply: |z₁z₂| = |z₁||z₂|, so |(1 + i)⁸| = (√2)⁸ = 16, and indeed (1 + i)⁸ = 16.</p><p><b>Powers of i</b> repeat with period 4: i, −1, −i, 1. Hence i²⁰²³ = i³ = −i (2023 = 4 · 505 + 3), and the sum 1 + i + i² + … + i²⁰²³ over 2024 terms is 0, because every block of four sums to 0.</p><p><b>Quadratics.</b> x² + 2x + 5 = 0 has roots −1 ± 2i by the quadratic formula. Complex roots of real polynomials come in conjugate pairs.</p><details class="try"><summary>Try it</summary><p>Compute (2 + i)² and |2 + i|.</p><p><b>Answer.</b> (2 + i)² = 4 + 4i − 1 = 3 + 4i; |2 + i| = √5.</p></details>
+<h3>2. Polar form, De Moivre and roots of unity</h3><p>Write z = r(cos θ + i sin θ) = r cis θ, with r = |z| and θ the argument. Multiplying complex numbers multiplies the moduli and adds the arguments; so powers obey <b>De Moivre's theorem</b>: (r cis θ)ⁿ = rⁿ cis nθ. The number −1 + i√3 has modulus 2 and argument 120°; (1 + i)/(1 − i) = i since the arguments are 45° and −45°, giving 90°.</p><p><b>Roots of unity.</b> The solutions of zⁿ = 1 are cis(2πk/n) for k = 0, …, n − 1, which are the vertices of a regular n-gon on the unit circle. Their sum is 0 for n ≥ 2 (checked numerically for n = 5), and their product is (−1)ⁿ⁺¹. The cube roots of unity are 1, ω, ω² with ω = cis 120°, satisfying 1 + ω + ω² = 0.</p><p><b>Taking roots.</b> To solve z² = i, write i = cis 90°: z = ±cis 45° = ±(1 + i)/√2. For z³ = 8 we get z = 2 cis(120°k): 2, −1 + i√3, −1 − i√3.</p><details class="try"><summary>Try it</summary><p>Find all solutions of z⁴ = 1.</p><p><b>Answer.</b> 1, i, −1, −i.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> Let ω = cis 72° be a primitive 5th root of unity. Show that (1 − ω)(1 − ω²)(1 − ω³)(1 − ω⁴) = 5 and find |1 − ω|.</p><p><b>Solution.</b> The polynomial (zⁿ − 1)/(z − 1) = 1 + z + z² + z³ + z⁴ = Π(z − ωᵏ) for k = 1, …, 4. Setting z = 1 gives 5 = Π(1 − ωᵏ). Also |1 − ω| = 2 sin 36° ≈ 1.1756, the side of a regular pentagon inscribed in the unit circle.</p><p><b>Reflection.</b> Factoring zⁿ − 1 over its roots and evaluating at a convenient point is the standard trick.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Forgetting that i² = −1 when multiplying. (2) Dividing without the conjugate. (3) Adding arguments in degrees and radians together. (4) Missing roots in zⁿ = c (there are always n).</p><p><b>Checks.</b> |z₁z₂| = |z₁||z₂| should hold; roots of unity should sum to zero.</p><p><b>How to practise.</b> Plot every number. In Unlimited practice, rotate the complex arithmetic and roots-of-unity families.</p>
+<h3>More worked examples: Worked examples</h3><p>|3 − 4i| = 5 and (2 + i)(2 − i) = 5 = |2 + i|²: multiplying by the conjugate gives the squared modulus. For z = 1 + i = √2 e^{iπ/4}, z⁸ = (√2)⁸e^{2πi} = 16. If |z| = 1 then 1/z = z̄. The three cube roots of unity add to zero, and ∏(x − ωᵏ) = xⁿ − 1 for the n-th roots of unity ωᵏ.</p><details class="try"><summary>Try it<p>Compute (1 − i)⁴.</p><p><b>Answer.</b> (1 − i)² = −2i, so (−2i)² = −4.</p></details><details class="try"><summary>Try it<p>How many solutions has z⁶ = 1 and what is their sum?</p><p><b>Answer.</b> Six solutions; the sum is 0.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Find all complex z with z³ = −8. <b>Solution.</b> −8 = 8e^{iπ}, so z = 2e^{i(π + 2πk)/3}: 2e^{iπ/3} = 1 + i√3, 2e^{iπ} = −2, and 2e^{5iπ/3} = 1 − i√3. Check: (−2)³ = −8 ✓ and |1 + i√3| = 2.</p><p><b>Reflection.</b> The roots lie on a circle of radius 2 at 120° spacing.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find |3 + 4i|.</p><details><summary>Hint</summary>Distance from the origin.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Formula</summary><p>√(9 + 16) = 5.</p></details>
+<details><summary>Method: Triangle</summary><p>The point (3, 4) is the corner of a 3-4-5 right triangle.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem p2.</b> Compute |(1 + i)(2 − 2i)|.</p><details><summary>Hint</summary>Absolute values multiply.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Multiply sizes</summary><p>|1 + i| = √2 and |2 − 2i| = 2√2, product √2·2√2 = 4.</p></details>
+<details><summary>Method: Multiply out</summary><p>(1 + i)(2 − 2i) = 2 − 2i + 2i − 2i² = 4, which has absolute value 4.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem p3.</b> What is (1 + i)⁴?</p><details><summary>Hint</summary>(1 + i)² = 2i.</details><details><summary>Answer</summary>-4</details>
+<details><summary>Method: Squares</summary><p>(1 + i)² = 2i, and (2i)² = −4.</p></details>
+<details><summary>Method: DeMoivre</summary><p>1 + i = √2(cos 45° + i sin 45°); the fourth power is 4(cos 180° + i sin 180°) = −4.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem p4.</b> Rotate the point 3 + 2i by 90° counterclockwise about the origin. Give the result as a + bi (type it like -2+3i).</p><details><summary>Hint</summary>Multiply by i.</details><details><summary>Answer</summary>-2+3i</details>
+<details><summary>Method: Multiply by i</summary><p>i(3 + 2i) = 3i + 2i² = −2 + 3i.</p></details>
+<details><summary>Method: Coordinates</summary><p>The rotation (x, y) → (−y, x) sends (3, 2) to (−2, 3).</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem p5.</b> What is the sum of all 7th roots of unity?</p><details><summary>Hint</summary>They are evenly spaced around a circle.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Vieta</summary><p>They are the roots of x⁷ − 1, with no x⁶ term, so their sum is 0.</p></details>
+<details><summary>Method: Symmetry</summary><p>The seven points are symmetric around the origin: their centre of mass is the origin.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem p6.</b> How many complex numbers z satisfy z⁶ = 1?</p><details><summary>Hint</summary>Degree of the polynomial.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Degree</summary><p>A degree-6 polynomial has 6 complex roots, and z⁶ − 1 has 6 distinct ones.</p></details>
+<details><summary>Method: Unit circle</summary><p>The sixth roots of unity are at angles 0°, 60°, …, 300°.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem p7.</b> Find the product of all four 4th roots of unity (the solutions of z⁴ = 1).</p><details><summary>Hint</summary>1, i, −1, −i.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Multiply</summary><p>1·i·(−1)·(−i) = (i·(−i))·(−1) = 1·(−1) = −1.</p></details>
+<details><summary>Method: Vieta</summary><p>For z⁴ − 1 the product of roots is (−1)⁴·(−1) = −1.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem p8.</b> What is the value of i + i² + i³ + … + i¹⁰⁰?</p><details><summary>Hint</summary>Each block of four sums to 0.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Blocks</summary><p>i + i² + i³ + i⁴ = i − 1 − i + 1 = 0, and 100 terms make 25 such blocks.</p></details>
+<details><summary>Method: Geometric series</summary><p>i(i¹⁰⁰ − 1)/(i − 1) = i(1 − 1)/(i − 1) = 0.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem p9.</b> Find the distance between the points 1 + 2i and 4 + 6i in the complex plane.</p><details><summary>Hint</summary>|z − w|.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Absolute value</summary><p>|3 + 4i| = 5.</p></details>
+<details><summary>Method: Coordinates</summary><p>The points are (1, 2) and (4, 6): √(9 + 16) = 5.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem p10.</b> If z + 1/z = 1, find z³ (assume z is a complex number).</p><details><summary>Hint</summary>Multiply by z to get z² − z + 1 = 0, and then multiply by (z + 1).</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Multiply</summary><p>z² − z + 1 = 0, so (z + 1)(z² − z + 1) = z³ + 1 = 0, giving z³ = −1.</p></details>
+<details><summary>Method: Polar</summary><p>z = cos 60° + i sin 60°, and z³ has angle 180°, which is −1.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem x11.</b> Find |3 + 4i|.</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Formula</summary><p>√(9 + 16) = 5.</p></details>
+<details><summary>Method: Triple</summary><p>3-4-5.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem x12.</b> Evaluate i²⁰²⁶. Give the real number it equals.</p><details><summary>Hint</summary>Powers of i cycle with period 4.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Cycle</summary><p>2026 ≡ 2 (mod 4), so i²⁰²⁶ = i² = −1.</p></details>
+<details><summary>Method: Pairs</summary><p>i⁴ = 1, so only the exponent mod 4 matters.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem x13.</b> Evaluate (1 + i)⁴.</p><details><summary>Hint</summary>(1 + i)² = 2i.</details><details><summary>Answer</summary>-4</details>
+<details><summary>Method: Square</summary><p>(2i)² = −4.</p></details>
+<details><summary>Method: Polar</summary><p>(√2)⁴ = 4 with angle 180°, so −4.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem x14.</b> What is the sum of the 7th roots of unity?</p><details><summary>Hint</summary>Vieta.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Vieta</summary><p>They are the roots of x⁷ − 1, whose x⁶ coefficient is 0.</p></details>
+<details><summary>Method: Geometry</summary><p>A regular heptagon centred at the origin has centroid 0.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem x15.</b> Find (2 + i)(2 − i).</p><details><summary>Hint</summary>z · conjugate.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Product</summary><p>4 − i² = 5.</p></details>
+<details><summary>Method: Modulus</summary><p>|2 + i|² = 5.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem x16.</b> Find |1 + 2i|⁶, the sixth power of the modulus.</p><details><summary>Hint</summary>|z|² = 5.</details><details><summary>Answer</summary>125</details>
+<details><summary>Method: Powers</summary><p>(|z|²)³ = 5³ = 125.</p></details>
+<details><summary>Method: Direct</summary><p>(1 + 2i)³ = −11 − 2i, whose squared modulus is 125, i.e. |z³|² = 125 = |z|⁶.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem x17.</b> Find the real part of (2 + 3i)².</p><details><summary>Hint</summary>Expand.</details><details><summary>Answer</summary>-5</details>
+<details><summary>Method: Expand</summary><p>4 + 12i − 9 = −5 + 12i, real part −5.</p></details>
+<details><summary>Method: Formula</summary><p>Re(z²) = a² − b² = 4 − 9.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem x18.</b> How many of the sixth roots of unity have positive real part?</p><details><summary>Hint</summary>Angles 0°, 60°, …</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Angles</summary><p>The roots at 0°, 60° and 300° have real parts 1, 1/2, 1/2; the roots at 120°, 180°, 240° have negative real part: 3.</p></details>
+<details><summary>Method: Symmetry</summary><p>The roots with positive real part lie within 90° of the positive real axis.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem x19.</b> Find the distance between (2, -1) and (9, 23).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Formula</summary><p>√(7² + 24²) = √625 = 25.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 7 and 24 form a right triangle with hypotenuse 25 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem x20.</b> Find the slope of the line through (3, -1) and (9, 8).</p><details><summary>Hint</summary>Rise over run.</details><details><summary>Answer</summary>3/2</details>
+<details><summary>Method: Formula</summary><p>(8 − -1)/(9 − 3) = 3/2.</p></details>
+<details><summary>Method: Line equation</summary><p>The line y = 3/2·x + -11/2 passes through both points, so its slope is 3/2.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem x21.</b> Find the sum of the coordinates of the midpoint of (10, 7) and (-4, 3).</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Average</summary><p>The midpoint is (3, 5), with sum 8.</p></details>
+<details><summary>Method: Vector</summary><p>Start at (10, 7) and move half the way to (-4, 3): (10 + -7, 7 + -2) = (3, 5).</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem x22.</b> What is the remainder when 6^45 is divided by 13?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 6, 6², 6³, … are 6, 10, 8, 9, 2, 12, 7, 3, 5, 4, 11, 1, and then they repeat from position 1 with period 12. Exponent 45 lands on 5.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 45 = 101101 in binary. The squares 6^(2^i) mod 13 are 6, 10, 9, 3, 9, 3; multiplying the ones for the 1-bits gives 5.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem x23.</b> What is the last digit of 9^2031?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 9, 9², 9³, … are 9, 1, and then they repeat from position 1 with period 2. Exponent 2031 lands on 9.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 2031 = 11111101111 in binary. The squares 9^(2^i) mod 10 are 9, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1; multiplying the ones for the 1-bits gives 9.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem x24.</b> Find 1² + 2² + … + 18².</p><details><summary>Hint</summary>n(n + 1)(2n + 1)/6.</details><details><summary>Answer</summary>2109</details>
+<details><summary>Method: Formula</summary><p>18 · 19 · 37/6 = 2109.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100 + 121 + 144 + 169 + 196 + 225 + 256 + 289 + 324 = 2109.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>
+<div class=p><p><b>Problem x25.</b> Find the distance between (-4, -2) and (16, 19).</p><details><summary>Hint</summary>Pythagoras.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Formula</summary><p>√(20² + 21²) = √841 = 29.</p></details>
+<details><summary>Method: Right triangle</summary><p>The legs 20 and 21 form a right triangle with hypotenuse 29 (a scaled Pythagorean triple).</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 9</p></div>

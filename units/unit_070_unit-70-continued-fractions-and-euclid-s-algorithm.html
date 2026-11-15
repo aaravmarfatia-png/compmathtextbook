@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 70</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 70: Unit 70: Continued fractions and Euclid&#x27;s algorithm</h1><p class=ref>Book: AoPS Volume 2, continued fractions (25 problems)<br>AoPS Volume 2, continued fractions chapter, with Euclid&#x27;s algorithm and Pell-type equations.</p>
+<h2>Reading</h2>
+<h3>1. Euclid's algorithm and continued fractions</h3><p>The <b>Euclidean algorithm</b> finds gcd(a, b) by repeated division: gcd(1071, 462): 1071 = 2 · 462 + 147; 462 = 3 · 147 + 21; 147 = 7 · 21, so the gcd is 21 and the quotients are 2, 3, 7. The same quotients form the <b>continued fraction</b> 1071/462 = [2; 3, 7] = 2 + 1/(3 + 1/7). Similarly 43/19 = [2; 3, 1, 4], and 355/113 = [3; 7, 16] (famously close to π).</p><p><b>Convergents.</b> Truncating the continued fraction gives the best rational approximations: for π ≈ [3; 7, 15, 1, …] the convergents 3, 22/7, 333/106, 355/113 are successively better. For √2 = [1; 2, 2, 2, …] the convergents are 1, 3/2, 7/5, 17/12, 41/29, …, each within 1/q² of √2; their numerators and denominators solve x² − 2y² = ±1 (17² − 2 · 12² = 1, 41² − 2 · 29² = −1), connecting to Pell's equation. For φ = [1; 1, 1, 1, …] the convergents are ratios of consecutive Fibonacci numbers.</p><details class="try"><summary>Try it</summary><p>Write 17/5 as a continued fraction.</p><p><b>Answer.</b> 17 = 3 · 5 + 2, 5 = 2 · 2 + 1, 2 = 2 · 1: [3; 2, 2].</p></details>
+<h3>2. Using the algorithm for Diophantine equations</h3><p>Back-substitution through the Euclidean steps solves ax + by = gcd(a, b). For 43x − 19y = 1: the continued fraction [2; 3, 1, 4] has convergents 2, 7/3, 9/4, 43/19, and the last two give 43 · 4 − 19 · 9 = 1, so x = 4, y = 9 is a solution (checked). In general consecutive convergents p/q and p′/q′ satisfy pq′ − p′q = ±1.</p><p><b>Evaluating a continued fraction.</b> Work from the bottom: [2; 3, 1, 4] = 2 + 1/(3 + 1/(1 + 1/4)) = 2 + 1/(3 + 4/5) = 2 + 5/19 = 43/19 ✓.</p><details class="try"><summary>Try it</summary><p>Solve 17x − 5y = 1 using the continued fraction of 17/5.</p><p><b>Answer.</b> [3; 2, 2] has convergents 3, 7/2, 17/5: 17 · 2 − 5 · 7 = −1, so x = −2, y = −7 solves 17x − 5y = 1 (and x = 3, y = 10 gives 51 − 50 = 1).</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> Find the continued fraction of √3 = 1.7320508… and its first four convergents; relate them to x² − 3y² = 1.</p><p><b>Solution.</b> √3 = [1; 1, 2, 1, 2, 1, 2, …]. Convergents: 1, 2, 5/3, 7/4, 19/11, 26/15. Pairs (x, y) with x² − 3y² = 1 appear as 2/1, 7/4, 26/15: 4 − 3 = 1, 49 − 48 = 1, 676 − 675 = 1 ✓, the usual Pell solutions.</p><p><b>Reflection.</b> Periodic continued fractions of quadratic irrationals connect directly to Pell equations.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Stopping the Euclidean algorithm one step early. (2) Evaluating from the top instead of the bottom. (3) Forgetting sign conventions for ± in the convergent identity.</p><p><b>Checks.</b> Evaluate the continued fraction back to the original fraction.</p><p><b>How to practise.</b> Work a dozen Euclidean algorithms by hand. In Unlimited practice, rotate the Euclid and continued-fraction families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Continued fractions.</b> 13/8 = 1 + 5/8 = 1 + 1/(8/5) and continuing gives [1; 1, 1, 1, 2] (the Euclidean quotients). The gcd of 1071 and 462 is 21 and the quotients are 2, 3, 7. A fraction's continued fraction ends where the Euclidean algorithm ends, so rational numbers have finite continued fractions.</p><details class="try"><summary>Try it<p>Find the continued fraction of 7/3.</p><p><b>Answer.</b> [2; 3].</p></details><details class="try"><summary>Try it<p>Evaluate [1; 2, 3].</p><p><b>Answer.</b> 1 + 1/(2 + 1/3) = 1 + 3/7 = 10/7.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Find the smallest positive integers x, y with 13x − 8y = 1. <b>Solution.</b> The convergents of 13/8 = [1; 1, 1, 1, 2] are 1, 2, 3/2, 5/3 and 13/8, and the last two give 13 · 3 − 8 · 5 = −1, so the sign is wrong. Instead reduce mod 8: 13 ≡ 5 and 5 · 5 = 25 ≡ 1, so x = 5, and then y = (13 · 5 − 1)/8 = 8.</p><p><b>Check.</b> 13 · 5 − 8 · 8 = 1 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Evaluate [2; 3, 4] = 2 + 1/(3 + 1/4). Give numerator + denominator of the reduced fraction.</p><details><summary>Hint</summary>Work from the inside out.</details><details><summary>Answer</summary>43</details>
+<details><summary>Method: Inside out</summary><p>3 + 1/4 = 13/4, then 1/(13/4) = 4/13, so the value is 30/13 and 30 + 13 = 43.</p></details>
+<details><summary>Method: Check</summary><p>30/13 ≈ 2.31 = 2 + 0.31, and 4/13 ≈ 0.31.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem p2.</b> Write 17/5 as [a₀; a₁, a₂]. What is a₀ + a₁ + a₂?</p><details><summary>Hint</summary>Euclid's algorithm.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Euclid</summary><p>17 = 3·5 + 2, 5 = 2·2 + 1, 2 = 2·1, so the quotients are 3, 2, 2 with sum 7.</p></details>
+<details><summary>Method: Rebuild</summary><p>[3; 2, 2] = 3 + 1/(2 + 1/2) = 3 + 2/5 = 17/5.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem p3.</b> Find the value of [1; 2, 2, 2], an approximation to √2. Give numerator + denominator.</p><details><summary>Hint</summary>Evaluate from the inside.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Inside out</summary><p>2 + 1/2 = 5/2, then 2 + 2/5 = 12/5, so the value is 1 + 5/12 = 17/12 and 17 + 12 = 29.</p></details>
+<details><summary>Method: Accuracy</summary><p>17/12 = 1.4167, close to √2 = 1.4142.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem p4.</b> Find the smallest positive solution of x² − 2y² = 1 and give x + y.</p><details><summary>Hint</summary>Try y = 1, 2, …</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Search</summary><p>y = 1: 1 + 2 = 3 not a square; y = 2: 1 + 8 = 9 = 3². So (3, 2) and x + y = 5.</p></details>
+<details><summary>Method: Convergent</summary><p>3/2 is a convergent of √2 = [1; 2, 2, …].</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem p5.</b> Find the smallest positive solution of x² − 3y² = 1 and give x + y.</p><details><summary>Hint</summary>Try y = 1.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Search</summary><p>y = 1: 1 + 3 = 4 = 2². So (2, 1) and x + y = 3.</p></details>
+<details><summary>Method: Check</summary><p>4 − 3 = 1.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem p6.</b> x = 1 + 1/x with x > 0 is the golden ratio. Find ⌊100x⌋.</p><details><summary>Hint</summary>Solve x² = x + 1.</details><details><summary>Answer</summary>161</details>
+<details><summary>Method: Quadratic</summary><p>x = (1 + √5)/2 ≈ 1.618, so ⌊100x⌋ = 161.</p></details>
+<details><summary>Method: Convergents</summary><p>[1; 1, 1, 1, 1, 1, 1] = 21/13 ≈ 1.615 and the sequence of ratios converges to 1.618.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem p7.</b> How many division steps does Euclid's algorithm take on (233, 144)?</p><details><summary>Hint</summary>Each step replaces (a, b) by (b, a mod b) until the remainder is 0.</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: Run</summary><p>233 = 1·144 + 89, 144 = 1·89 + 55, 89 = 1·55 + 34, 55 = 1·34 + 21, 34 = 1·21 + 13, 21 = 1·13 + 8, 13 = 1·8 + 5, 8 = 1·5 + 3, 5 = 1·3 + 2, 3 = 1·2 + 1, 2 = 2·1: 11 steps.</p></details>
+<details><summary>Method: Why</summary><p>Consecutive Fibonacci numbers give the slowest case, one step per index.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem p8.</b> Find the smallest positive x with 13x ≡ 1 (mod 47).</p><details><summary>Hint</summary>Extended Euclid.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Extended Euclid</summary><p>47 = 3·13 + 8, 13 = 1·8 + 5, 8 = 1·5 + 3, 5 = 1·3 + 2, 3 = 1·2 + 1. Back-substituting gives 1 = 13·29 − 47·8, so x = 29.</p></details>
+<details><summary>Method: Check</summary><p>13 · 29 = 377 = 8 · 47 + 1.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem p9.</b> The convergent [1; 1, 1, 1, 1, 1] has the form p/q in lowest terms. Find p + q.</p><details><summary>Hint</summary>Evaluate from the inside.</details><details><summary>Answer</summary>21</details>
+<details><summary>Method: Fibonacci</summary><p>The values go 1, 2, 3/2, 5/3, 8/5, 13/8, so [1;1,1,1,1,1] = 13/8 and p + q = 21.</p></details>
+<details><summary>Method: Check</summary><p>13/8 = 1.625, near the golden ratio.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem p10.</b> Evaluate the continued fraction [2; 3, 4] = 2 + 1/(3 + 1/4).</p><details><summary>Hint</summary>Work from the bottom.</details><details><summary>Answer</summary>30/13</details>
+<details><summary>Method: Bottom up</summary><p>3 + 1/4 = 13/4, then 2 + 4/13 = 30/13.</p></details>
+<details><summary>Method: Check</summary><p>30/13 ≈ 2.31 and 2 + 1/3.25 ≈ 2.31.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem p11.</b> Evaluate [1; 2, 3] = 1 + 1/(2 + 1/3).</p><details><summary>Hint</summary>Bottom up.</details><details><summary>Answer</summary>10/7</details>
+<details><summary>Method: Bottom up</summary><p>2 + 1/3 = 7/3, then 1 + 3/7 = 10/7.</p></details>
+<details><summary>Method: Decimal</summary><p>1 + 1/2.333 ≈ 1.4286 ≈ 10/7.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem p12.</b> Evaluate [1; 2, 3, 4].</p><details><summary>Hint</summary>Bottom up.</details><details><summary>Answer</summary>43/30</details>
+<details><summary>Method: Bottom up</summary><p>3 + 1/4 = 13/4; 2 + 4/13 = 30/13; 1 + 13/30 = 43/30.</p></details>
+<details><summary>Method: Check</summary><p>43/30 ≈ 1.4333 and 1 + 1/2.3077 ≈ 1.4333.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem p13.</b> The number √2 has continued fraction [1; 2, 2, 2, …]. Evaluate the convergent [1; 2, 2, 2].</p><details><summary>Hint</summary>Bottom up.</details><details><summary>Answer</summary>17/12</details>
+<details><summary>Method: Bottom up</summary><p>2 + 1/2 = 5/2; 2 + 2/5 = 12/5; 1 + 5/12 = 17/12.</p></details>
+<details><summary>Method: Closeness</summary><p>(17/12)² = 289/144, just above 2.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem p14.</b> Evaluate the convergent [1; 1, 1, 1, 1], an approximation to the golden ratio.</p><details><summary>Hint</summary>Bottom up.</details><details><summary>Answer</summary>8/5</details>
+<details><summary>Method: Bottom up</summary><p>1 + 1/1 = 2; 1 + 1/2 = 3/2; 1 + 2/3 = 5/3; 1 + 3/5 = 8/5.</p></details>
+<details><summary>Method: Fibonacci</summary><p>The convergents are ratios of consecutive Fibonacci numbers: 1, 2, 3/2, 5/3, 8/5.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem p15.</b> How many terms does the continued fraction expansion of 61/27 have?</p><details><summary>Hint</summary>Euclid's algorithm.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Euclid</summary><p>61 = 2 · 27 + 7, 27 = 3 · 7 + 6, 7 = 1 · 6 + 1, 6 = 6 · 1, so [2; 3, 1, 6] has 4 terms.</p></details>
+<details><summary>Method: Check</summary><p>2 + 1/(3 + 1/(1 + 1/6)) = 2 + 1/(3 + 6/7) = 2 + 7/27 = 61/27.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem p16.</b> Let x = [3; 3, 3, 3, …]. Find x² − 3x.</p><details><summary>Hint</summary>x = 3 + 1/x.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Self-similarity</summary><p>x = 3 + 1/x, so x² = 3x + 1 and x² − 3x = 1.</p></details>
+<details><summary>Method: Value</summary><p>x = (3 + √13)/2, and x² − 3x = 1 checks numerically: 3.3028² − 9.9083 ≈ 1.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem p17.</b> The number 355/113 has the expansion [3; 7, 16]. Find the convergent [3; 7].</p><details><summary>Hint</summary>3 + 1/7.</details><details><summary>Answer</summary>22/7</details>
+<details><summary>Method: Compute</summary><p>3 + 1/7 = 22/7.</p></details>
+<details><summary>Method: Meaning</summary><p>It is the famous approximation to π.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem x18.</b> Evaluate 1/(1·2) + 1/(2·3) + … + 1/(119·120).</p><details><summary>Hint</summary>1/(k(k + 1)) = 1/k − 1/(k + 1).</details><details><summary>Answer</summary>119/120</details>
+<details><summary>Method: Telescoping</summary><p>Each term is 1/k − 1/(k + 1); everything cancels except 1 − 1/120 = 119/120.</p></details>
+<details><summary>Method: Small cases</summary><p>Up to n = 1, 2, 3 the sums are 1/2, 2/3, 3/4, so up to n = 119 the sum is 119/120.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem x19.</b> An arithmetic sequence has first term 100 and common difference -4. Find term number 20.</p><details><summary>Hint</summary>aₙ = a₁ + (n − 1)d.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Formula</summary><p>100 + 19 · -4 = 24.</p></details>
+<details><summary>Method: Linear form</summary><p>The terms are 100, 96, 92, 88, …, so term k equals -4·k + 104; at k = 20 this is 24.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem x20.</b> A sequence has a₁ = 1 and aₖ₊₁ = 3·aₖ + 2. Find a_5.</p><details><summary>Hint</summary>Compute term by term, or find a closed form.</details><details><summary>Answer</summary>161</details>
+<details><summary>Method: Step by step</summary><p>The terms are 1, 5, 17, 53, 161, so a_5 = 161.</p></details>
+<details><summary>Method: Closed form</summary><p>The fixed point is K = -1, so aₙ = (a₁ − K)·3^(n−1) + K. For n = 5 this is 161.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem x21.</b> The Fibonacci numbers start F₁ = F₂ = 1. Find F_17.</p><details><summary>Hint</summary>Add the previous two.</details><details><summary>Answer</summary>1597</details>
+<details><summary>Method: List</summary><p>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597; so F_17 = 1597.</p></details>
+<details><summary>Method: Splitting identity</summary><p>F_{a+b} = F_a F_{b+1} + F_{a−1} F_b with a = 8, b = 9 gives 21 · 55 + 13 · 34 = 1597.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem x22.</b> Evaluate 1/(1·2) + 1/(2·3) + … + 1/(149·150).</p><details><summary>Hint</summary>1/(k(k + 1)) = 1/k − 1/(k + 1).</details><details><summary>Answer</summary>149/150</details>
+<details><summary>Method: Telescoping</summary><p>Each term is 1/k − 1/(k + 1); everything cancels except 1 − 1/150 = 149/150.</p></details>
+<details><summary>Method: Small cases</summary><p>Up to n = 1, 2, 3 the sums are 1/2, 2/3, 3/4, so up to n = 149 the sum is 149/150.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem x23.</b> An arithmetic sequence has first term 9 and common difference 6. Find term number 30.</p><details><summary>Hint</summary>aₙ = a₁ + (n − 1)d.</details><details><summary>Answer</summary>183</details>
+<details><summary>Method: Formula</summary><p>9 + 29 · 6 = 183.</p></details>
+<details><summary>Method: Linear form</summary><p>The terms are 9, 15, 21, 27, …, so term k equals 6·k + 3; at k = 30 this is 183.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem x24.</b> A sequence has a₁ = 5 and aₖ₊₁ = 2·aₖ + 3. Find a_6.</p><details><summary>Hint</summary>Compute term by term, or find a closed form.</details><details><summary>Answer</summary>253</details>
+<details><summary>Method: Step by step</summary><p>The terms are 5, 13, 29, 61, 125, 253, so a_6 = 253.</p></details>
+<details><summary>Method: Closed form</summary><p>The fixed point is K = -3, so aₙ = (a₁ − K)·2^(n−1) + K. For n = 6 this is 253.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>
+<div class=p><p><b>Problem x25.</b> The Fibonacci numbers start F₁ = F₂ = 1. Find F_18.</p><details><summary>Hint</summary>Add the previous two.</details><details><summary>Answer</summary>2584</details>
+<details><summary>Method: List</summary><p>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584; so F_18 = 2584.</p></details>
+<details><summary>Method: Splitting identity</summary><p>F_{a+b} = F_a F_{b+1} + F_{a−1} F_b with a = 9, b = 9 gives 34 · 55 + 21 · 34 = 2584.</p></details>
+<p class=ref>Source: AoPS Volume 2, continued fractions</p></div>

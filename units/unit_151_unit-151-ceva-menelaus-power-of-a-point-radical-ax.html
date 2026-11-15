@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 151</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 151: Unit 151: Ceva, Menelaus, power of a point, radical axis and inversion</h1><p class=ref>Book: Kedlaya, Geometry Unbound; Andreescu et al., Lemmas in Olympiad Geometry (25 problems)<br>Kedlaya, Geometry Unbound, ch. 5 (Ceva, Menelaus), ch. 6 (power of a point, radical axis), ch. 10 (inversion).</p>
+<h2>Reading</h2>
+<h3>1. Ceva and Menelaus</h3><p><b>Ceva.</b> If cevians AD, BE, CF of a triangle are concurrent, then (AF/FB)(BD/DC)(CE/EA) = 1, and conversely. <b>Menelaus.</b> If a line meets lines BC, CA, AB at D, E, F, then (AF/FB)(BD/DC)(CE/EA) = −1 with signed lengths. Example: if BD : DC = 1 : 2 and CE : EA = 3 : 1 in a concurrent configuration, then AF/FB = (2 · 1)/(1 · 3) = 2/3. For the angle bisectors, BD/DC = AB/AC, so Ceva immediately proves the bisectors are concurrent.</p><details class="try"><summary>Try it<p>Concurrent cevians with BD/DC = 2 and CE/EA = 3. What is AF/FB?</p><p><b>Answer.</b> 1/6.</p></details><details class="try"><summary>Try it<p>Menelaus with BD/DC = 1/2, CE/EA = 2, what is |AF/FB|?</p><p><b>Answer.</b> 1/(1/2 · 2) = 1.</p></details>
+<h3>2. Power of a point, radical axis and inversion</h3><p>The <b>power</b> of a point P with respect to a circle is PA·PB for any line through P meeting the circle at A, B; it equals PT² for a tangent length PT from outside. Two circles have a <b>radical axis</b>, the line of points of equal power; it is found by subtracting the equations (for x² + y² = 25 and (x − 8)² + y² = 25 it is x = 4). Three circles have a <b>radical centre</b>. <b>Inversion</b> about O with radius k sends P to P′ on ray OP with OP·OP′ = k²; a circle through O becomes a line not through O.</p><details class="try"><summary>Try it<p>PA = 3, PB = 12 for an outside secant; PT?</p><p><b>Answer.</b> 6.</p></details><details class="try"><summary>Try it<p>Inversion radius 6, OP = 9; OP′?</p><p><b>Answer.</b> 4.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> Circles x² + y² = 25 and (x − 8)² + y² = 25 meet at two points. Find the common chord. <b>Solution.</b> Subtract: x² − (x − 8)² = 0 gives 16x − 64 = 0, x = 4, so y² = 25 − 16 = 9 and the chord has length 6.</p><p><b>Check.</b> (4, 3) is 5 from (0, 0) and from (8, 0) ✓.</p>
+<h3>4. In the books</h3><p>Kedlaya, <i>Geometry Unbound</i> treats Ceva and Menelaus in ch. 5, power of a point and the radical axis in ch. 6, and inversion in ch. 10 (with a lot of problems). This unit only introduces the three tools with numerical problems and does not cover Kedlaya's proof-style problems. <b>Honest note:</b> the problems here are my own numerical templates, not Kedlaya's.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> In triangle ABC, D lies on BC with BD : DC = 1 : 2, and E lies on CA with CE : EA = 3 : 1. The cevians AD and BE meet at P, and line CP meets AB at F. What is AF : FB, as a fraction AF/FB?</p><details><summary>Hint</summary>Ceva's theorem: (AF/FB)(BD/DC)(CE/EA) = 1.</details><details><summary>Answer</summary>2/3</details>
+<details><summary>Method: Ceva</summary><p>(AF/FB)·(1/2)·(3/1) = 1, so AF/FB = 2·1/(1·3) = 2/3.</p></details>
+<details><summary>Method: Mass points</summary><p>Mass points: choose mass(C)=1·... the balancing masses give F dividing AB with AF : FB = mass(B) : mass(A) = 2/3 (checked with coordinates).</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> In triangle ABC, D lies on BC with BD : DC = 2 : 3, and E lies on CA with CE : EA = 1 : 4. The cevians AD and BE meet at P, and line CP meets AB at F. What is AF : FB, as a fraction AF/FB?</p><details><summary>Hint</summary>Ceva's theorem: (AF/FB)(BD/DC)(CE/EA) = 1.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Ceva</summary><p>(AF/FB)·(2/3)·(1/4) = 1, so AF/FB = 3·4/(2·1) = 6.</p></details>
+<details><summary>Method: Mass points</summary><p>Mass points: choose mass(C)=1·... the balancing masses give F dividing AB with AF : FB = mass(B) : mass(A) = 6 (checked with coordinates).</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> In triangle ABC, D lies on BC with BD : DC = 3 : 1, and E lies on CA with CE : EA = 2 : 5. The cevians AD and BE meet at P, and line CP meets AB at F. What is AF : FB, as a fraction AF/FB?</p><details><summary>Hint</summary>Ceva's theorem: (AF/FB)(BD/DC)(CE/EA) = 1.</details><details><summary>Answer</summary>5/6</details>
+<details><summary>Method: Ceva</summary><p>(AF/FB)·(3/1)·(2/5) = 1, so AF/FB = 1·5/(3·2) = 5/6.</p></details>
+<details><summary>Method: Mass points</summary><p>Mass points: choose mass(C)=1·... the balancing masses give F dividing AB with AF : FB = mass(B) : mass(A) = 5/6 (checked with coordinates).</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> In triangle ABC, D lies on BC with BD : DC = 1 : 1, and E lies on CA with CE : EA = 2 : 3. The cevians AD and BE meet at P, and line CP meets AB at F. What is AF : FB, as a fraction AF/FB?</p><details><summary>Hint</summary>Ceva's theorem: (AF/FB)(BD/DC)(CE/EA) = 1.</details><details><summary>Answer</summary>3/2</details>
+<details><summary>Method: Ceva</summary><p>(AF/FB)·(1/1)·(2/3) = 1, so AF/FB = 1·3/(1·2) = 3/2.</p></details>
+<details><summary>Method: Mass points</summary><p>Mass points: choose mass(C)=1·... the balancing masses give F dividing AB with AF : FB = mass(B) : mass(A) = 3/2 (checked with coordinates).</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> In triangle ABC, D lies on BC with BD : DC = 4 : 3, and E lies on CA with CE : EA = 5 : 2. The cevians AD and BE meet at P, and line CP meets AB at F. What is AF : FB, as a fraction AF/FB?</p><details><summary>Hint</summary>Ceva's theorem: (AF/FB)(BD/DC)(CE/EA) = 1.</details><details><summary>Answer</summary>3/10</details>
+<details><summary>Method: Ceva</summary><p>(AF/FB)·(4/3)·(5/2) = 1, so AF/FB = 3·2/(4·5) = 3/10.</p></details>
+<details><summary>Method: Mass points</summary><p>Mass points: choose mass(C)=1·... the balancing masses give F dividing AB with AF : FB = mass(B) : mass(A) = 3/10 (checked with coordinates).</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> In triangle ABC, D is on side BC with BD : DC = 2 : 3 and E is on side CA with CE : EA = 3 : 4. Line DE meets line AB at F (outside the segment). What is FA/FB, as a fraction?</p><details><summary>Hint</summary>Menelaus: (AF/FB)(BD/DC)(CE/EA) = −1 for signed lengths.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Menelaus</summary><p>Taking absolute values, (FA/FB)·(2/3)·(3/4) = 1, so FA/FB = 2.</p></details>
+<details><summary>Method: Coordinates</summary><p>Placing A = (0,0), B = (7,0), C = (2,5) and intersecting line DE with AB gives FA/FB = 2.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> In triangle ABC, D is on side BC with BD : DC = 1 : 3 and E is on side CA with CE : EA = 2 : 1. Line DE meets line AB at F (outside the segment). What is FA/FB, as a fraction?</p><details><summary>Hint</summary>Menelaus: (AF/FB)(BD/DC)(CE/EA) = −1 for signed lengths.</details><details><summary>Answer</summary>3/2</details>
+<details><summary>Method: Menelaus</summary><p>Taking absolute values, (FA/FB)·(1/3)·(2/1) = 1, so FA/FB = 3/2.</p></details>
+<details><summary>Method: Coordinates</summary><p>Placing A = (0,0), B = (7,0), C = (2,5) and intersecting line DE with AB gives FA/FB = 3/2.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> In triangle ABC, D is on side BC with BD : DC = 5 : 2 and E is on side CA with CE : EA = 1 : 3. Line DE meets line AB at F (outside the segment). What is FA/FB, as a fraction?</p><details><summary>Hint</summary>Menelaus: (AF/FB)(BD/DC)(CE/EA) = −1 for signed lengths.</details><details><summary>Answer</summary>6/5</details>
+<details><summary>Method: Menelaus</summary><p>Taking absolute values, (FA/FB)·(5/2)·(1/3) = 1, so FA/FB = 6/5.</p></details>
+<details><summary>Method: Coordinates</summary><p>Placing A = (0,0), B = (7,0), C = (2,5) and intersecting line DE with AB gives FA/FB = 6/5.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> Two chords AB and CD of a circle meet at an interior point P with PA = 6, PB = 4 and PC = 3. What is PD?</p><details><summary>Hint</summary>Power of a point: PA·PB = PC·PD.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Power of a point</summary><p>PD = PA·PB/PC = 6·4/3 = 8.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles PAC and PDB are similar, so PA/PD = PC/PB and PD = 8.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> Two chords AB and CD of a circle meet at an interior point P with PA = 10, PB = 6 and PC = 5. What is PD?</p><details><summary>Hint</summary>Power of a point: PA·PB = PC·PD.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Power of a point</summary><p>PD = PA·PB/PC = 10·6/5 = 12.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles PAC and PDB are similar, so PA/PD = PC/PB and PD = 12.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> Two chords AB and CD of a circle meet at an interior point P with PA = 12, PB = 3 and PC = 9. What is PD?</p><details><summary>Hint</summary>Power of a point: PA·PB = PC·PD.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Power of a point</summary><p>PD = PA·PB/PC = 12·3/9 = 4.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles PAC and PDB are similar, so PA/PD = PC/PB and PD = 4.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> From an external point P a tangent PT and a secant meeting the circle at A (nearer) and B (farther) are drawn, with PA = 4 and PB = 9. What is PT?</p><details><summary>Hint</summary>Tangent-secant: PT² = PA·PB.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Power of a point</summary><p>PT² = PA·PB = 36, so PT = 6.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles PTA and PBT are similar, so PT/PB = PA/PT, giving PT² = 36.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> From an external point P a tangent PT and a secant meeting the circle at A (nearer) and B (farther) are drawn, with PA = 2 and PB = 8. What is PT?</p><details><summary>Hint</summary>Tangent-secant: PT² = PA·PB.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Power of a point</summary><p>PT² = PA·PB = 16, so PT = 4.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles PTA and PBT are similar, so PT/PB = PA/PT, giving PT² = 16.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> From an external point P a tangent PT and a secant meeting the circle at A (nearer) and B (farther) are drawn, with PA = 5 and PB = 20. What is PT?</p><details><summary>Hint</summary>Tangent-secant: PT² = PA·PB.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Power of a point</summary><p>PT² = PA·PB = 100, so PT = 10.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles PTA and PBT are similar, so PT/PB = PA/PT, giving PT² = 100.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> From P the tangent length is PT = 6. A secant from P meets the circle at A and B with PA = 4 (A nearer). What is the length of chord AB?</p><details><summary>Hint</summary>PT² = PA · PB, and AB = PB − PA.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Power of a point</summary><p>PB = 6²/4 = 9, so AB = PB − PA = 5.</p></details>
+<details><summary>Method: Check</summary><p>PA·PB = 4·9 = 36 = PT² ✓, so AB = 5.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> Circle 1 has centre (0, 0) and radius 5; circle 2 has centre (8, 0) and radius 5. They meet at two points. What is the length of their common chord?</p><details><summary>Hint</summary>The common chord lies on the radical axis: subtract the two circle equations.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Radical axis</summary><p>Subtracting x² + y² = 25 from (x − 8)² + y² = 25 gives x = 4; then y² = 25 − 16 = 9, so y = ±3 and the chord is 6.</p></details>
+<details><summary>Method: Right triangles</summary><p>The chord is perpendicular to the line of centres at distance 4 from the first centre, so half-chord = √(5² − 4²) = 3 and the chord is 6.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> Circle 1 has centre (0, 0) and radius 13; circle 2 has centre (14, 0) and radius 15. They meet at two points. What is the length of their common chord?</p><details><summary>Hint</summary>The common chord lies on the radical axis: subtract the two circle equations.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Radical axis</summary><p>Subtracting x² + y² = 169 from (x − 14)² + y² = 225 gives x = 5; then y² = 169 − 25 = 144, so y = ±12 and the chord is 24.</p></details>
+<details><summary>Method: Right triangles</summary><p>The chord is perpendicular to the line of centres at distance 5 from the first centre, so half-chord = √(13² − 5²) = 12 and the chord is 24.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> Circle 1 has centre (0, 0) and radius 25; circle 2 has centre (20, 0) and radius 15. They meet at two points. What is the length of their common chord?</p><details><summary>Hint</summary>The common chord lies on the radical axis: subtract the two circle equations.</details><details><summary>Answer</summary>30</details>
+<details><summary>Method: Radical axis</summary><p>Subtracting x² + y² = 625 from (x − 20)² + y² = 225 gives x = 20; then y² = 625 − 400 = 225, so y = ±15 and the chord is 30.</p></details>
+<details><summary>Method: Right triangles</summary><p>The chord is perpendicular to the line of centres at distance 20 from the first centre, so half-chord = √(25² − 20²) = 15 and the chord is 30.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> Circle 1 is x² + y² − 6x − 4y − 12 = 0 and circle 2 is x² + y² + 2x − 8y + 4 = 0. The radical axis meets the x-axis at the point (a, 0). What is a?</p><details><summary>Hint</summary>Subtract the two equations to get the line of equal power.</details><details><summary>Answer</summary>-2</details>
+<details><summary>Method: Subtraction</summary><p>Circle 1 − circle 2 gives −8x + 4y − 16 = 0. At y = 0: x = −2.</p></details>
+<details><summary>Method: Power</summary><p>The point (a, 0) has equal powers: a² − 6a − 12 = a² + 2a + 4, so −8a = 16 and a = −2.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> The circles x² + y² − 4x + 2y − 4 = 0, x² + y² + 2x − 4y − 5 = 0 and x² + y² − 2x − 2y − 8 = 0 have a common radical centre (h, k). What is 6(h + k)?</p><details><summary>Hint</summary>The radical centre is where the three pairwise radical axes meet.</details><details><summary>Answer</summary>-21</details>
+<details><summary>Method: Two axes</summary><p>Subtracting the first two gives −6x + 6y + 1 = 0; subtracting the first and third gives −2x + 4y + 4 = 0. Solving gives (h, k) = (-5/3, -11/6), so 6(h + k) = -21.</p></details>
+<details><summary>Method: Equal power</summary><p>The point (h, k) has the same power 185/36 with respect to all three circles (computed from each equation), so it lies on every axis.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> Inversion about O with radius 6 sends P to P′ on ray OP with OP · OP′ = 6². If OP = 4, what is OP′?</p><details><summary>Hint</summary>The definition of inversion.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Definition</summary><p>OP′ = 6²/4 = 9.</p></details>
+<details><summary>Method: Fixed circle</summary><p>P is inside the circle of radius 6 exactly when P′ is outside it; here OP′ = 9.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> Inversion about O with radius 10 sends P to P′ on ray OP with OP · OP′ = 10². If OP = 25, what is OP′?</p><details><summary>Hint</summary>The definition of inversion.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Definition</summary><p>OP′ = 10²/25 = 4.</p></details>
+<details><summary>Method: Fixed circle</summary><p>P is outside the circle of radius 10 so P′ is inside it, at distance 4.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> A circle passes through O and has diameter OA = 4. Under inversion about O with radius 6, its image is a line perpendicular to OA. How far is that line from O?</p><details><summary>Hint</summary>Invert the far end A of the diameter.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Invert A</summary><p>A is at distance 4, so A′ is at distance 6²/4 = 9 along the same ray; the image line passes through A′ perpendicular to OA.</p></details>
+<details><summary>Method: Coordinates</summary><p>Points of the circle are (D cos²t, D cos t sin t); their images all have x-coordinate k²/D = 9.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> The incircle of triangle ABC with BC = 13, CA = 14, AB = 15 touches BC at D, CA at E and AB at F. What is AF?</p><details><summary>Hint</summary>Tangent lengths from a vertex are equal; AF = s − a.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Tangent lengths</summary><p>s = 21 and AF = AE = s − BC = 8.</p></details>
+<details><summary>Method: System</summary><p>Let AF = x, BF = y, CD = z; then x + y = 15, y + z = 13, z + x = 14 and x = 8.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> The incircle of triangle ABC with BC = 7, CA = 8, AB = 9 touches BC at D, CA at E and AB at F. What is AF?</p><details><summary>Hint</summary>Tangent lengths from a vertex are equal; AF = s − a.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Tangent lengths</summary><p>s = 12 and AF = AE = s − BC = 5.</p></details>
+<details><summary>Method: System</summary><p>Let AF = x, BF = y, CD = z; then x + y = 9, y + z = 7, z + x = 8 and x = 5.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 5, 6, 10 (original problem)</p></div>

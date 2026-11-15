@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 142</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 142: Unit 142: Number theory III: arithmetic functions, gcd identities and factorials</h1><p class=ref>Book: Khurmi, Modern Olympiad Number Theory; Djukić et al., The IMO Compendium; Andreescu &amp; Feng, 104 Number Theory Problems (25 problems)<br>Khurmi, Modern Olympiad Number Theory, ch. 3 (arithmetic functions) and 6.2 (Legendre&#x27;s formula); Djukić et al., The IMO Compendium, 2.4.1–2.4.2; Andreescu &amp; Feng, 104 Number Theory Problems, ch. 1.</p>
+<h2>Reading</h2>
+<h3>1. Arithmetic functions</h3><p>If n = ∏ p^e then τ(n) = ∏(e + 1), σ(n) = ∏(p^(e+1) − 1)/(p − 1) and φ(n) = n∏(1 − 1/p). For n = 12: τ = 6, σ = 28, φ = 4. The number of ordered pairs with lcm(a, b) = n is ∏(2e + 1); for n = 12 this is 5 · 3 = 15.</p><p><b>Legendre.</b> v_p(n!) = Σ ⌊n/pᵏ⌋; so 25! ends in 5 + 1 = 6 zeros. <b>Kummer.</b> v_p of C(a + b, a) is the number of carries when adding a and b in base p. In particular v₂(C(2n, n)) is the number of 1's in the binary expansion of n.</p><details class="try"><summary>Try it<p>σ(12)?</p><p><b>Answer.</b> 28.</p></details><details class="try"><summary>Try it<p>Zeros at the end of 25!?</p><p><b>Answer.</b> 6.</p></details>
+<h3>2. Gcd identities</h3><p>gcd(2^a − 1, 2^b − 1) = 2^gcd(a,b) − 1 because Euclid's algorithm acts on the exponents: for a = 12, b = 18 the answer is 2⁶ − 1 = 63. The same pattern holds for aⁿ − 1 and for Fibonacci numbers.</p><details class="try"><summary>Try it<p>gcd(2⁸ − 1, 2¹² − 1)?</p><p><b>Answer.</b> 2⁴ − 1 = 15.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> How many positive divisors of 360 are perfect squares? <b>Solution.</b> 360 = 2³ · 3² · 5. A square divisor has even exponents: 2⁰ or 2², 3⁰ or 3², 5⁰, giving 2 · 2 · 1 = 4: 1, 4, 9, 36.</p><p><b>Check.</b> 1, 4, 9, 36 all divide 360 and are squares ✓.</p>
+<h3>4. In the books</h3><p><b>Khurmi, ch. 3.</b> 3.1 number of divisors, 3.2 sum of divisors, 3.3 Euler's totient with Gauss's identity Σ φ(d) = n, 3.4 multiplicative functions (Theorem 3.4.1: if f is multiplicative so is Σ_{d|n} f(d)), Möbius inversion (Theorem 3.4.5), 3.5 floor and ceiling functions with Hermite's identity.</p><p><b>Ch. 6.</b> Legendre's formula v_p(n!) = Σ ⌊n/pⁱ⌋, equivalent to (n − s_p(n))/(p − 1) with s_p the base-p digit sum. That second form is what gives the exponent of 2 in C(2n, n), the digit count of n in binary.</p><p><b>IMO Compendium 2.4</b> covers divisibility and congruences (2.4.1) and exponential congruences (2.4.2). <b>104 Number Theory Problems</b> (ch. 1 foundations, then 2 introductory and 3 advanced problems) mentions Kummer's theorem once.</p><p><b>Honest note.</b> The counting formulas for the lcm and the gcd identity gcd(2ᵃ − 1, 2ᵇ − 1) = 2^gcd(a,b) − 1 are standard; I did not trace them to a specific section.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find the sum of all positive divisors of 360.</p><details><summary>Hint</summary>σ is multiplicative: σ(p^e) = 1 + p + … + p^e.</details><details><summary>Answer</summary>1170</details>
+<details><summary>Method: Multiplicative formula</summary><p>Factorise 360 = 2·2·2·3·3·5 and multiply σ(p^e) over the prime powers: 1170.</p></details>
+<details><summary>Method: List divisors</summary><p>Add the 24 divisors of 360: 1170.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> Find the sum of all positive divisors of 720.</p><details><summary>Hint</summary>σ is multiplicative: σ(p^e) = 1 + p + … + p^e.</details><details><summary>Answer</summary>2418</details>
+<details><summary>Method: Multiplicative formula</summary><p>Factorise 720 = 2·2·2·2·3·3·5 and multiply σ(p^e) over the prime powers: 2418.</p></details>
+<details><summary>Method: List divisors</summary><p>Add the 30 divisors of 720: 2418.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> Find the sum of all positive divisors of 1001.</p><details><summary>Hint</summary>σ is multiplicative: σ(p^e) = 1 + p + … + p^e.</details><details><summary>Answer</summary>1344</details>
+<details><summary>Method: Multiplicative formula</summary><p>Factorise 1001 = 7·11·13 and multiply σ(p^e) over the prime powers: 1344.</p></details>
+<details><summary>Method: List divisors</summary><p>Add the 8 divisors of 1001: 1344.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> Find the sum of all positive divisors of 2024.</p><details><summary>Hint</summary>σ is multiplicative: σ(p^e) = 1 + p + … + p^e.</details><details><summary>Answer</summary>4320</details>
+<details><summary>Method: Multiplicative formula</summary><p>Factorise 2024 = 2·2·2·11·23 and multiply σ(p^e) over the prime powers: 4320.</p></details>
+<details><summary>Method: List divisors</summary><p>Add the 16 divisors of 2024: 4320.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> How many positive divisors of 2^6·3^4·5^2 are perfect squares?</p><details><summary>Hint</summary>A divisor is a square iff every exponent is even.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Even exponents</summary><p>Exponents of 2, 3, 5 can be chosen in 4, 3, 2 ways: 24 divisors.</p></details>
+<details><summary>Method: Square root</summary><p>Divisors that are squares correspond to divisors of √(largest square divisor) = 2^3·3^2·5^1: 24 of them.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> How many positive divisors of 2^4·3^2·5^2 are perfect squares?</p><details><summary>Hint</summary>A divisor is a square iff every exponent is even.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Even exponents</summary><p>Exponents of 2, 3, 5 can be chosen in 3, 2, 2 ways: 12 divisors.</p></details>
+<details><summary>Method: Square root</summary><p>Divisors that are squares correspond to divisors of √(largest square divisor) = 2^2·3^1·5^1: 12 of them.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> How many positive divisors of 2^8·3^6·5^2 are perfect squares?</p><details><summary>Hint</summary>A divisor is a square iff every exponent is even.</details><details><summary>Answer</summary>40</details>
+<details><summary>Method: Even exponents</summary><p>Exponents of 2, 3, 5 can be chosen in 5, 4, 2 ways: 40 divisors.</p></details>
+<details><summary>Method: Square root</summary><p>Divisors that are squares correspond to divisors of √(largest square divisor) = 2^4·3^3·5^1: 40 of them.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> How many integers from 1 to 360 are coprime to 360?</p><details><summary>Hint</summary>Use φ(n) = n·Π(1 − 1/p).</details><details><summary>Answer</summary>96</details>
+<details><summary>Method: Euler's phi</summary><p>φ(360) = 96.</p></details>
+<details><summary>Method: Direct</summary><p>Test gcd(t, 360) for t = 1, …, 360: 96 integers.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> How many integers from 1 to 1001 are coprime to 1001?</p><details><summary>Hint</summary>Use φ(n) = n·Π(1 − 1/p).</details><details><summary>Answer</summary>720</details>
+<details><summary>Method: Euler's phi</summary><p>φ(1001) = 720.</p></details>
+<details><summary>Method: Direct</summary><p>Test gcd(t, 1001) for t = 1, …, 1001: 720 integers.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> How many integers from 1 to 2025 are coprime to 2025?</p><details><summary>Hint</summary>Use φ(n) = n·Π(1 − 1/p).</details><details><summary>Answer</summary>1080</details>
+<details><summary>Method: Euler's phi</summary><p>φ(2025) = 1080.</p></details>
+<details><summary>Method: Direct</summary><p>Test gcd(t, 2025) for t = 1, …, 2025: 1080 integers.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> How many ordered pairs (a, b) of positive integers have lcm(a, b) = 36?</p><details><summary>Hint</summary>For each prime power p^e at least one of the exponents must equal e.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Exponent pairs</summary><p>For p^e there are 2e + 1 ordered exponent pairs with max e; multiplying over primes gives 25.</p></details>
+<details><summary>Method: Search</summary><p>Test all pairs of divisors of 36: 25 have lcm 36.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> How many ordered pairs (a, b) of positive integers have lcm(a, b) = 60?</p><details><summary>Hint</summary>For each prime power p^e at least one of the exponents must equal e.</details><details><summary>Answer</summary>45</details>
+<details><summary>Method: Exponent pairs</summary><p>For p^e there are 2e + 1 ordered exponent pairs with max e; multiplying over primes gives 45.</p></details>
+<details><summary>Method: Search</summary><p>Test all pairs of divisors of 60: 45 have lcm 60.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> How many ordered pairs (a, b) of positive integers have lcm(a, b) = 72?</p><details><summary>Hint</summary>For each prime power p^e at least one of the exponents must equal e.</details><details><summary>Answer</summary>35</details>
+<details><summary>Method: Exponent pairs</summary><p>For p^e there are 2e + 1 ordered exponent pairs with max e; multiplying over primes gives 35.</p></details>
+<details><summary>Method: Search</summary><p>Test all pairs of divisors of 72: 35 have lcm 72.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> How many ordered pairs (a, b) of positive integers have lcm(a, b) = 2024?</p><details><summary>Hint</summary>For each prime power p^e at least one of the exponents must equal e.</details><details><summary>Answer</summary>63</details>
+<details><summary>Method: Exponent pairs</summary><p>For p^e there are 2e + 1 ordered exponent pairs with max e; multiplying over primes gives 63.</p></details>
+<details><summary>Method: Search</summary><p>Test all pairs of divisors of 2024: 63 have lcm 2024.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> Find gcd(2^30 − 1, 2^42 − 1).</p><details><summary>Hint</summary>gcd(2^a − 1, 2^b − 1) = 2^gcd(a,b) − 1.</details><details><summary>Answer</summary>63</details>
+<details><summary>Method: Exponent gcd</summary><p>gcd(30, 42) = 6 so the answer is 2^6 − 1 = 63.</p></details>
+<details><summary>Method: Euclid</summary><p>Reduce 2^30 − 1 modulo 2^42 − 1 as in the Euclidean algorithm on exponents; this ends at 2^6 − 1 = 63.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> Find gcd(2^24 − 1, 2^36 − 1).</p><details><summary>Hint</summary>gcd(2^a − 1, 2^b − 1) = 2^gcd(a,b) − 1.</details><details><summary>Answer</summary>4095</details>
+<details><summary>Method: Exponent gcd</summary><p>gcd(24, 36) = 12 so the answer is 2^12 − 1 = 4095.</p></details>
+<details><summary>Method: Euclid</summary><p>Reduce 2^24 − 1 modulo 2^36 − 1 as in the Euclidean algorithm on exponents; this ends at 2^12 − 1 = 4095.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> Find gcd(2^35 − 1, 2^21 − 1).</p><details><summary>Hint</summary>gcd(2^a − 1, 2^b − 1) = 2^gcd(a,b) − 1.</details><details><summary>Answer</summary>127</details>
+<details><summary>Method: Exponent gcd</summary><p>gcd(35, 21) = 7 so the answer is 2^7 − 1 = 127.</p></details>
+<details><summary>Method: Euclid</summary><p>Reduce 2^35 − 1 modulo 2^21 − 1 as in the Euclidean algorithm on exponents; this ends at 2^7 − 1 = 127.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> How many zeros does 100! end with?</p><details><summary>Hint</summary>Count factors of 5 using Legendre's formula.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Legendre</summary><p>⌊100/5⌋ + ⌊100/25⌋ + ⌊100/125⌋ + … = 24.</p></details>
+<details><summary>Method: Count fives</summary><p>Count multiples of 5, then extra factors from multiples of 25, 125, …: 24.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> How many zeros does 200! end with?</p><details><summary>Hint</summary>Count factors of 5 using Legendre's formula.</details><details><summary>Answer</summary>49</details>
+<details><summary>Method: Legendre</summary><p>⌊200/5⌋ + ⌊200/25⌋ + ⌊200/125⌋ + … = 49.</p></details>
+<details><summary>Method: Count fives</summary><p>Count multiples of 5, then extra factors from multiples of 25, 125, …: 49.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> How many zeros does 500! end with?</p><details><summary>Hint</summary>Count factors of 5 using Legendre's formula.</details><details><summary>Answer</summary>124</details>
+<details><summary>Method: Legendre</summary><p>⌊500/5⌋ + ⌊500/25⌋ + ⌊500/125⌋ + … = 124.</p></details>
+<details><summary>Method: Count fives</summary><p>Count multiples of 5, then extra factors from multiples of 25, 125, …: 124.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> How many zeros does 1000! end with?</p><details><summary>Hint</summary>Count factors of 5 using Legendre's formula.</details><details><summary>Answer</summary>249</details>
+<details><summary>Method: Legendre</summary><p>⌊1000/5⌋ + ⌊1000/25⌋ + ⌊1000/125⌋ + … = 249.</p></details>
+<details><summary>Method: Count fives</summary><p>Count multiples of 5, then extra factors from multiples of 25, 125, …: 249.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> What is the exponent of 2 in C(2000, 1000)?</p><details><summary>Hint</summary>Kummer: it is the number of carries adding 1000 + 1000 in binary.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Carries</summary><p>Adding 1000 to itself in binary produces 6 carries, the number of 1's in 1000.</p></details>
+<details><summary>Method: Legendre</summary><p>v₂((2n)!) − 2v₂(n!) = 6.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> What is the exponent of 2 in C(2046, 1023)?</p><details><summary>Hint</summary>Kummer: it is the number of carries adding 1023 + 1023 in binary.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Carries</summary><p>Adding 1023 to itself in binary produces 10 carries, the number of 1's in 1023.</p></details>
+<details><summary>Method: Legendre</summary><p>v₂((2n)!) − 2v₂(n!) = 10.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> What is the exponent of 2 in C(4094, 2047)?</p><details><summary>Hint</summary>Kummer: it is the number of carries adding 2047 + 2047 in binary.</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: Carries</summary><p>Adding 2047 to itself in binary produces 11 carries, the number of 1's in 2047.</p></details>
+<details><summary>Method: Legendre</summary><p>v₂((2n)!) − 2v₂(n!) = 11.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> What is the smallest positive integer n for which n! is divisible by 10^12?</p><details><summary>Hint</summary>You need at least 12 factors of 5 (there are always enough 2's).</details><details><summary>Answer</summary>50</details>
+<details><summary>Method: Count fives</summary><p>⌊n/5⌋ + ⌊n/25⌋ ≥ 12 first holds at n = 50.</p></details>
+<details><summary>Method: Check neighbours</summary><p>49! has 10 + 1 = 11 factors of 5 and 50! has 12.</p></details>
+<p class=ref>Source: Technique from Khurmi ch. 3, 6.2 and the IMO Compendium §2.4 (original problem)</p></div>

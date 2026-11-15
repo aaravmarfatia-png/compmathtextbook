@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 102</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 102: Unit 102: Existence and construction</h1><p class=ref>Book: Sriram, Olympiad Combinatorics, ch. 4 (Existence) (25 problems)<br>Sriram, Olympiad Combinatorics, chapter 4 (Existence): showing an arrangement exists by building one, and counting small cases.</p>
+<h2>Reading</h2>
+<h3>1. Two ways to show something exists</h3><p>A statement 'there exists an x with property P' can be proved <b>constructively</b> (write down such an x) or <b>non-constructively</b> (show that none existing leads to a contradiction, or count). Constructions often start with small cases and look for the pattern.</p><p><b>Worked example 1.</b> There are arbitrarily long runs of consecutive composite numbers. For n = 5 take 6! + 2, …, 6! + 6 = 722, 723, 724, 725, 726: 722 = 2·361, 723 = 3·241, 724 = 4·181, 725 = 5·145, 726 = 6·121. Each is divisible by a number in 2 to 6 and is bigger than it, so all five are composite. In general (n + 1)! + 2, …, (n + 1)! + (n + 1).</p><p><b>Worked example 2.</b> There are infinitely many Pythagorean triples: for k = 1, 2, 3, … the triple (2k + 1, 2k² + 2k, 2k² + 2k + 1) gives (3, 4, 5), (5, 12, 13), (7, 24, 25), and in general (2k+1)² + (2k²+2k)² = (2k²+2k+1)².</p>
+<h3>3. Existence by continuity and counting</h3><p><b>Intermediate value theorem.</b> A continuous function that takes values of opposite sign at the ends of an interval has a root inside. For f(x) = x³ + x − 1: f(0) = −1 and f(1) = 1, so there is a root between 0 and 1.</p><p><b>Pigeonhole.</b> Among any 5 integers, two have the same remainder mod 4; so two of them differ by a multiple of 4. Among any n + 1 integers, two differ by a multiple of n.</p><p><b>Counting.</b> If there are more objects than something that could distinguish them, two coincide. Example: a 10-element set has 1024 subsets, while the possible subset sums of {1, …, 10} lie in 0 to 55, which is only 56 values, so two different subsets must have the same sum.</p>
+<h3>4. Constructing examples</h3><p>To disprove a claim you need only one <b>counterexample</b>. To prove an upper bound is best possible you must <b>construct</b> an example reaching it. Good habits: begin with small n; look for structure (symmetry, arithmetic progressions, powers of 2); modify an example that almost works.</p><p><b>Worked example.</b> Show that a set of 8 integers can have no three terms in arithmetic progression: {1, 2, 4, 5, 10, 11, 13, 14} works (checked by computing every triple).</p><p><b>A bound with matching construction.</b> The largest subset of {1, …, 20} with no two consecutive numbers has 10 elements: it cannot have more by pairing (1,2), (3,4), …, and the odd numbers reach 10.</p>
+<h3>5. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Giving an example for a single case and calling it a proof of 'for all'. Forgetting to check every condition in the construction.</p><p><b>Checks.</b> Verify the example by direct computation.</p><p><b>Practice.</b> Start by trying to make the claim fail; the obstruction suggests the proof.</p>
+<h3>Worked examples with Try-its: Proving something exists</h3><p>Existence proofs can be <b>constructive</b> (build the object) or <b>non-constructive</b> (pigeonhole, extremal choice, intermediate value, counting). Example: there exist 5 consecutive composites (722 to 726). The Chicken McNugget problem: with packs of 6, 9 and 20 the largest unreachable total is 43. A <b>counterexample</b> disproves a universal claim: n² + n + 41 is prime for n = 0 to 39 but not for n = 40 (1681 = 41²).</p><details class="try"><summary>Try it<p>Is n² − n + 41 prime when n = 41?</p><p><b>Answer.</b> 41² − 41 + 41 = 41², composite.</p></details>
+<h3>Worked examples with Try-its: Construction techniques</h3><p>Try small cases, look for a pattern, then prove it. Build by induction (add one element to a valid example of size n). When asked to place numbers or objects so that a property holds, start from a symmetric or extremal arrangement and adjust.</p><details class="try"><summary>Try it<p>Construct 4 consecutive integers none of which is prime.</p><p><b>Answer.</b> 24, 25, 26, 27 (or 8, 9, 10 for three).</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Show that there exist two powers of 2 whose difference is divisible by 1000. <b>Solution.</b> Consider 2⁰, 2¹, …, 2¹⁰⁰⁰, which is 1001 numbers; two share a remainder mod 1000 by pigeonhole, so their difference is divisible by 1000.</p><p><b>Reflection.</b> The proof gives no explicit pair; it only shows one exists.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Intermediate value.</b> The function f(x) = x³ − x − 1 has f(1) = −1 < 0 and f(2) = 5 > 0, so it has a root between 1 and 2 (in fact between 1.3 and 1.4, since f(1.3) < 0 < f(1.4)). <b>Non-constructive.</b> Either √2^√2 is rational, or (√2^√2)^√2 = 2 is a rational power of an irrational one; in either case irrational a and b exist with aᵇ rational.</p><details class="try"><summary>Try it<p>Show that x⁵ + x − 1 = 0 has a real root in (0, 1).</p><p><b>Answer.</b> f(0) = −1 < 0 and f(1) = 1 > 0, so by the intermediate value theorem there is a root.</p></details><details class="try"><summary>Try it<p>Construct 5 consecutive composite numbers.</p><p><b>Answer.</b> 722, 723, 724, 725, 726 (6! + 2 to 6! + 6).</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Show that there is a multiple of 7 whose decimal digits are all 1s and 0s. <b>Solution.</b> Consider the 8 numbers 1, 11, 111, …, 11111111. Two have the same remainder mod 7, so their difference, a number of the form 11…100…0, is divisible by 7.</p><p><b>Check.</b> 1111111 − 1 = 1111110 = 7 · 158730.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> How many ways can 8 queens be placed on an 8 × 8 chessboard so that no two attack each other?</p><details><summary>Hint</summary>Place one queen per row and search.</details><details><summary>Answer</summary>92</details>
+<details><summary>Method: Backtracking</summary><p>Place the queens row by row, rejecting a column or diagonal that is already used. The search finds 92 solutions.</p></details>
+<details><summary>Method: Structure</summary><p>Of these, 12 are essentially different once rotations and reflections are identified.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem p2.</b> How many 3 × 3 Latin squares (each row and each column uses the symbols 1, 2, 3 once) are there?</p><details><summary>Hint</summary>Build row by row.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Count</summary><p>The first row can be any of 6 permutations; for each, the second row must be a derangement of it (2 choices) and the third row is then forced: 6 · 2 · 1 = 12.</p></details>
+<details><summary>Method: Search</summary><p>An exhaustive search over row choices gives 12.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem p3.</b> How many 4 × 4 Latin squares are there?</p><details><summary>Hint</summary>Search by rows.</details><details><summary>Answer</summary>576</details>
+<details><summary>Method: Search</summary><p>An exhaustive search gives 576 = 24 · 24: 24 choices for the first row and 24 completions for each.</p></details>
+<details><summary>Method: Check</summary><p>Fixing the first row as 1234, there are 24 Latin squares, and there are 24 possible first rows.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem p4.</b> How many different 3 × 3 magic squares can be made from the numbers 1 to 9 (all rows, columns and both diagonals have the same sum)? Count rotations and reflections as different.</p><details><summary>Hint</summary>The common sum must be 15 and the centre must be 5.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Structure</summary><p>The row sum is 15 and the centre is 5; there is essentially one square, with 8 rotations and reflections, so 8.</p></details>
+<details><summary>Method: Search</summary><p>An exhaustive search over the 362880 arrangements finds 8.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem p5.</b> What is the largest number of non-attacking kings on an 8 × 8 board?</p><details><summary>Hint</summary>Split the board into 2 × 2 blocks.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Blocks</summary><p>Each 2 × 2 block holds at most one king, and there are 16 blocks, so at most 16. Placing a king in the top-left square of every block gives 16.</p></details>
+<details><summary>Method: Check</summary><p>Those kings are at least 2 apart in each direction, so they do not attack.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem p6.</b> What is the largest number of non-attacking knights on an 8 × 8 board?</p><details><summary>Hint</summary>A knight attacks only squares of the opposite colour.</details><details><summary>Answer</summary>32</details>
+<details><summary>Method: Colour</summary><p>Put all knights on squares of one colour; a knight move changes colour, so none attack. That gives 32.</p></details>
+<details><summary>Method: Bound</summary><p>Cut the board into eight 2 × 4 rectangles. In each one, the 8 squares form 4 pairs a knight's move apart, so a rectangle holds at most 4 non-attacking knights, and the board at most 8 · 4 = 32.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem p7.</b> What is the largest number of non-attacking bishops on an 8 × 8 board?</p><details><summary>Hint</summary>2n − 2.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Formula</summary><p>2 · 8 − 2 = 14.</p></details>
+<details><summary>Method: Construction</summary><p>Place bishops along the whole top row and the whole bottom row except the two corners of the bottom row: 8 + 6 = 14, and no two attack.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem p8.</b> What is the fewest straight lines needed to cover all 9 points of a 3 × 3 grid of points?</p><details><summary>Hint</summary>A line contains at most 3 of the points.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Bound</summary><p>Each line covers at most 3 points, so at least 3 lines are needed, and the 3 rows work.</p></details>
+<details><summary>Method: Two lines</summary><p>Two lines cover at most 6 points, which is less than 9.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem p9.</b> What is the longest run of consecutive composite numbers below 100?</p><details><summary>Hint</summary>Look at the gaps between primes.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Gaps</summary><p>The primes 89 and 97 have the largest gap below 100: the numbers 90 to 96, which is 7 composites.</p></details>
+<details><summary>Method: Why exist</summary><p>Runs of any length exist: n! + 2, …, n! + n are all composite.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem p10.</b> What is the smallest positive integer with exactly 6 positive divisors?</p><details><summary>Hint</summary>Try 2²·3.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Forms</summary><p>6 = 6 · 1 = 3 · 2 so the number is p⁵ or p²q; the smallest is 2² · 3 = 12.</p></details>
+<details><summary>Method: List</summary><p>12 has divisors 1, 2, 3, 4, 6, 12.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem p11.</b> What is the smallest positive integer with exactly 10 positive divisors?</p><details><summary>Hint</summary>10 = 5 · 2.</details><details><summary>Answer</summary>48</details>
+<details><summary>Method: Forms</summary><p>The forms are p⁹ and p⁴q; the smallest is 2⁴ · 3 = 48.</p></details>
+<details><summary>Method: Compare</summary><p>2⁹ = 512 is much larger.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem p12.</b> What is the smallest positive integer divisible by every integer from 1 to 10?</p><details><summary>Hint</summary>Least common multiple.</details><details><summary>Answer</summary>2520</details>
+<details><summary>Method: Prime powers</summary><p>2³ · 3² · 5 · 7 = 2520.</p></details>
+<details><summary>Method: LCM steps</summary><p>lcm(1..4) = 12, with 5 it is 60, with 6 it stays 60, with 7 it is 420, with 8 it is 840, with 9 it is 2520, and 10 keeps 2520.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem p13.</b> In a 3 × 3 magic square using 1 to 9 each once, every row, column and diagonal has the same sum. What is that sum?</p><details><summary>Hint</summary>Total of all entries divided by 3.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Total</summary><p>1 + … + 9 = 45, split into 3 rows: 15.</p></details>
+<details><summary>Method: Example</summary><p>The square 2 7 6 / 9 5 1 / 4 3 8 works.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem p14.</b> What is the smallest positive integer with distinct digits whose digits sum to 20?</p><details><summary>Hint</summary>Use as few digits as possible, larger at the end.</details><details><summary>Answer</summary>389</details>
+<details><summary>Method: Three digits</summary><p>Two digits give at most 9 + 8 = 17, so 3 digits are needed. The smallest hundreds digit is 3 (3 + 9 + 8 = 20), leaving 389.</p></details>
+<details><summary>Method: Check</summary><p>With hundreds digit 1 or 2 the remaining two digits would need to sum to 19 or 18, impossible with distinct digits.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem p15.</b> What is the smallest positive multiple of 7 whose digits are all 0 or 1?</p><details><summary>Hint</summary>Test 10, 11, 100, 101, 110, 111, 1000, 1001.</details><details><summary>Answer</summary>1001</details>
+<details><summary>Method: Search</summary><p>1001 = 7 · 143, and none of 1, 10, 11, 100, 101, 110, 111, 1000 is a multiple of 7.</p></details>
+<details><summary>Method: Mod 7</summary><p>Powers of 10 are 1, 3, 2, 6 mod 7, so 1 + 6 ≡ 0 gives 1001 (10³ + 1).</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem p16.</b> What is the smallest positive integer that can be written as a sum of two positive cubes in two different ways?</p><details><summary>Hint</summary>Taxicab number.</details><details><summary>Answer</summary>1729</details>
+<details><summary>Method: Ramanujan</summary><p>1729 = 1³ + 12³ = 9³ + 10³.</p></details>
+<details><summary>Method: Check</summary><p>1 + 1728 = 729 + 1000 = 1729.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem p17.</b> What is the smallest positive integer n with 2ⁿ greater than 1,000,000?</p><details><summary>Hint</summary>2¹⁰ = 1024.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Powers</summary><p>2²⁰ = 1,048,576 > 10⁶ while 2¹⁹ = 524,288, so n = 20.</p></details>
+<details><summary>Method: Estimate</summary><p>2¹⁰ ≈ 10³, so 2²⁰ ≈ 10⁶.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem x18.</b> Find σ(96), the sum of all positive divisors of 96.</p><details><summary>Hint</summary>Factor 96 into primes and use that σ is multiplicative.</details><details><summary>Answer</summary>252</details>
+<details><summary>Method: Multiplicative</summary><p>96 = 2^5 · 3. σ(p^k) = 1 + p + … + p^k, giving 63 and 4, whose product is 252.</p></details>
+<details><summary>Method: List the divisors</summary><p>The divisors are 1, 2, 3, 4, 6, 8, 12, 16, 24, 32, 48, 96, and their sum is 252.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem x19.</b> How many positive divisors does 240 have?</p><details><summary>Hint</summary>Factor first.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Exponent formula</summary><p>240 = 2^4 · 3 · 5, so the count is 5 · 2 · 2 = 20.</p></details>
+<details><summary>Method: Pairing</summary><p>Divisors pair as d and 240/d: 1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 16, 20, 24, 30, 40, 48, 60, 80, 120, 240. There are 20 of them.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem x20.</b> Find lcm(18, 24).</p><details><summary>Hint</summary>lcm · gcd = product.</details><details><summary>Answer</summary>72</details>
+<details><summary>Method: Using the gcd</summary><p>gcd = 6, so lcm = 18 · 24/6 = 72.</p></details>
+<details><summary>Method: Prime powers</summary><p>18 = 2 · 3^2 and 24 = 2^3 · 3; take the larger power of each prime to get 72.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem x21.</b> Find σ(100), the sum of all positive divisors of 100.</p><details><summary>Hint</summary>Factor 100 into primes and use that σ is multiplicative.</details><details><summary>Answer</summary>217</details>
+<details><summary>Method: Multiplicative</summary><p>100 = 2^2 · 5^2. σ(p^k) = 1 + p + … + p^k, giving 7 and 31, whose product is 217.</p></details>
+<details><summary>Method: List the divisors</summary><p>The divisors are 1, 2, 4, 5, 10, 20, 25, 50, 100, and their sum is 217.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem x22.</b> How many positive divisors does 360 have?</p><details><summary>Hint</summary>Factor first.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Exponent formula</summary><p>360 = 2^3 · 3^2 · 5, so the count is 4 · 3 · 2 = 24.</p></details>
+<details><summary>Method: Pairing</summary><p>Divisors pair as d and 360/d: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180, 360. There are 24 of them.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem x23.</b> Find lcm(30, 45).</p><details><summary>Hint</summary>lcm · gcd = product.</details><details><summary>Answer</summary>90</details>
+<details><summary>Method: Using the gcd</summary><p>gcd = 15, so lcm = 30 · 45/15 = 90.</p></details>
+<details><summary>Method: Prime powers</summary><p>30 = 2 · 3 · 5 and 45 = 3^2 · 5; take the larger power of each prime to get 90.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem x24.</b> Find σ(120), the sum of all positive divisors of 120.</p><details><summary>Hint</summary>Factor 120 into primes and use that σ is multiplicative.</details><details><summary>Answer</summary>360</details>
+<details><summary>Method: Multiplicative</summary><p>120 = 2^3 · 3 · 5. σ(p^k) = 1 + p + … + p^k, giving 15 and 4 and 6, whose product is 360.</p></details>
+<details><summary>Method: List the divisors</summary><p>The divisors are 1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 24, 30, 40, 60, 120, and their sum is 360.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>
+<div class=p><p><b>Problem x25.</b> How many positive divisors does 420 have?</p><details><summary>Hint</summary>Factor first.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Exponent formula</summary><p>420 = 2^2 · 3 · 5 · 7, so the count is 3 · 2 · 2 · 2 = 24.</p></details>
+<details><summary>Method: Pairing</summary><p>Divisors pair as d and 420/d: 1, 2, 3, 4, 5, 6, 7, 10, 12, 14, 15, 20, 21, 28, 30, 35, 42, 60, 70, 84, 105, 140, 210, 420. There are 24 of them.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 (Existence)</p></div>

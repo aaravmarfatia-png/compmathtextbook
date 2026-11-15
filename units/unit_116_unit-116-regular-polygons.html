@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 116</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 116: Unit 116: Regular polygons</h1><p class=ref>Book: Andreescu &amp; Gelca, 1.5 (25 problems)<br>Andreescu &amp; Gelca, Mathematical Olympiad Challenges, section 1.5 (Regular Polygons).</p>
+<h2>Reading</h2>
+<h3>1. Angles, sides and area</h3><p>A regular n-gon has interior angle (n − 2) × 180°/n, exterior angle 360°/n, and n(n − 3)/2 diagonals. With circumradius R: side s = 2R sin(π/n), apothem a = R cos(π/n), area = ½ n R² sin(2π/n) = ½ × perimeter × apothem.</p><p><b>Worked example 1 (hexagon, side 1).</b> R = 1, area = 6 × (√3/4) = 3√3/2 ≈ 2.598. <b>Example 2 (octagon, side 1).</b> Area = 2(1 + √2) ≈ 4.828. <b>Example 3.</b> A regular octagon has 8 × 5/2 = 20 diagonals; interior angle 135°.</p>
+<h3>2. Diagonals and the golden ratio</h3><p>In a regular pentagon with side 1 the diagonal has length φ = (1 + √5)/2 ≈ 1.618. The diagonals divide each other in the golden ratio. The product of the distances from one vertex of a regular n-gon inscribed in a unit circle to all the other vertices equals n. For the pentagon: (2 sin 36° × 2 sin 72°)² = (1.1756 × 1.9021)² = 2.2361² = 5 ✓.</p><p><b>Roots of unity.</b> The vertices of a regular n-gon in the complex plane are the nth roots of unity. The identity Π_{k=1}^{n−1}(1 − ω^k) = n explains the product above.</p><p><b>Worked example.</b> A regular hexagon with side 2 has long diagonals 4 and short diagonals 2√3.</p>
+<h3>3. Constructions and tiling</h3><p>Regular polygons tile the plane alone only for n = 3, 4, 6 (interior angles 60°, 90°, 120° divide 360°). Combinations of several kinds of polygon around each vertex also work, provided the angles add to 360°: for example 3.6.3.6 (60° + 120° + 60° + 120° = 360°) and 4.8.8 (90° + 135° + 135° = 360°).</p><p><b>Constructible polygons.</b> A regular n-gon is constructible with compass and straightedge for n = 3, 4, 5, 6, 8, 10, 12, 15, 16, 17, …; not 7, 9, 11, 13, 14.</p><p><b>Worked example.</b> The central angle for a regular 12-gon is 30°, so each side subtends 30° at the centre, and its area is 3R².</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Using degrees where radians are required in the area formula. Confusing the apothem with the circumradius. Counting diagonals as n(n − 1)/2 instead of n(n − 3)/2.</p><p><b>Checks.</b> Test your area formula on a square (n = 4, R = 1: area 2).</p><p><b>Practice.</b> Split the polygon into n isosceles triangles from the centre.</p>
+<h3>Worked examples with Try-its: Angles, area and radii</h3><p>A regular n-gon has interior angle (n − 2) · 180°/n and central angle 360°/n. With side s the hexagon has area (3√3/2)s², circumradius s, and apothem (√3/2)s. A regular octagon of side 1 has area 2 + 2√2 ≈ 4.83. The diagonal of a regular pentagon is the golden ratio (1 + √5)/2 times its side (checked on a pentagon inscribed in the unit circle).</p><details class="try"><summary>Try it<p>What is the interior angle of a regular 15-gon?</p><p><b>Answer.</b> 13 · 180/15 = 156°.</p></details>
+<h3>Worked examples with Try-its: Using the circumscribed circle</h3><p>A regular n-gon of circumradius R has area ½nR² sin(2π/n) and side 2R sin(π/n). Its inradius (apothem) is R cos(π/n). For a regular hexagon, six equilateral triangles of side s fit together, which is why R = s.</p><details class="try"><summary>Try it<p>Find the area of a regular hexagon with side 2.</p><p><b>Answer.</b> 6 · (√3/4) · 4 = 6√3.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> A regular hexagon of side 1 is inscribed in a circle. What is the area of the circle outside the hexagon? <b>Solution.</b> The circle has radius 1 and area π; the hexagon has area 3√3/2, so the difference is π − 3√3/2 ≈ 0.544.</p><p><b>Reflection.</b> Decompose polygons into triangles from the centre.</p>
+<h3>More worked examples: Worked examples</h3><p>A regular dodecagon inscribed in a unit circle has area ½ · 12 · sin 30° = 3. A regular 20-gon has interior angle 18 · 180°/20 = 162°. A regular hexagon inscribed in a unit circle has perimeter 6, and a regular octagon of side 1 has area 2 + 2√2.</p><details class="try"><summary>Try it<p>How many diagonals has a regular decagon?</p><p><b>Answer.</b> 35.</p></details><details class="try"><summary>Try it<p>What is the exterior angle of a regular 18-gon?</p><p><b>Answer.</b> 20°.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> The interior angle of a regular polygon is 150°. How many sides does it have? <b>Solution.</b> The exterior angle is 30°, and the exterior angles add to 360°, so n = 12.</p><p><b>Check.</b> (12 − 2) · 180/12 = 150 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> How many diagonals does a regular 20-gon have?</p><details><summary>Hint</summary>n(n − 3)/2.</details><details><summary>Answer</summary>170</details>
+<details><summary>Method: Formula</summary><p>20 · 17/2 = 170.</p></details>
+<details><summary>Method: Pairs</summary><p>C(20,2) = 190 pairs of vertices minus 20 sides = 170.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem p2.</b> What is each interior angle, in degrees, of a regular 18-gon?</p><details><summary>Hint</summary>(n − 2)·180/n.</details><details><summary>Answer</summary>160</details>
+<details><summary>Method: Formula</summary><p>16 · 180/18 = 160.</p></details>
+<details><summary>Method: Exterior</summary><p>The exterior angle is 360/18 = 20, so the interior angle is 160.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem p3.</b> Each interior angle of a regular polygon is 156°. How many sides does it have?</p><details><summary>Hint</summary>Exterior angle 24°.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Exterior angle</summary><p>The exterior angle is 180 − 156 = 24°, so n = 360/24 = 15.</p></details>
+<details><summary>Method: Equation</summary><p>(n − 2)·180/n = 156 gives 24n = 360.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem p4.</b> What is the area of a regular hexagon with side 4? (write like 24√3)</p><details><summary>Hint</summary>Six equilateral triangles.</details><details><summary>Answer</summary>24√3</details>
+<details><summary>Method: Triangles</summary><p>Each triangle of side 4 has area (√3/4)·16 = 4√3, so six give 24√3.</p></details>
+<details><summary>Method: Formula</summary><p>(3√3/2)·16 = 24√3.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem p5.</b> A regular hexagon has circumradius 7. What is its side?</p><details><summary>Hint</summary>The hexagon is six equilateral triangles with side equal to the radius.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Triangles</summary><p>The triangle from the centre to two adjacent vertices has angle 60° and equal sides, so it is equilateral and the side is 7.</p></details>
+<details><summary>Method: Chord</summary><p>The chord for a 60° arc is 2R sin 30° = R = 7.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem p6.</b> How many of the diagonals of a regular octagon pass through its centre?</p><details><summary>Hint</summary>Joining opposite vertices.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Opposite pairs</summary><p>Each vertex has one opposite vertex, giving 8/2 = 4.</p></details>
+<details><summary>Method: Check</summary><p>The diagonals through the centre are the 4 longest diagonals.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem p7.</b> Each exterior angle of a regular 40-gon is how many degrees?</p><details><summary>Hint</summary>360/n.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Formula</summary><p>360/40 = 9.</p></details>
+<details><summary>Method: Interior</summary><p>The interior angle is 171°, and 180 − 171 = 9.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem p8.</b> A square is inscribed in a circle of radius 5. What is its area?</p><details><summary>Hint</summary>Its diagonal is the diameter.</details><details><summary>Answer</summary>50</details>
+<details><summary>Method: Diagonal</summary><p>The diagonal is 10, so the area is d²/2 = 50.</p></details>
+<details><summary>Method: Side</summary><p>The side is 5√2, and (5√2)² = 50.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem p9.</b> How many equilateral triangles have their vertices among the vertices of a regular 12-gon?</p><details><summary>Hint</summary>Take every 4th vertex.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Starting points</summary><p>The vertices k, k + 4, k + 8 form one for each k = 0, 1, 2, 3: 4 triangles.</p></details>
+<details><summary>Method: Reason</summary><p>An equilateral triangle needs arcs of 120° = 4 steps between its vertices.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem p10.</b> How large is each interior angle of a regular 12-gon, in degrees?</p><details><summary>Hint</summary>180 − 360/n.</details><details><summary>Answer</summary>150</details>
+<details><summary>Method: Exterior</summary><p>The exterior angle is 30, so the interior angle is 150.</p></details>
+<details><summary>Method: Sum</summary><p>(12 − 2) · 180/12 = 150.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem p11.</b> How many diagonals does a regular decagon have?</p><details><summary>Hint</summary>C(10, 2) − 10.</details><details><summary>Answer</summary>35</details>
+<details><summary>Method: Pairs</summary><p>45 − 10 = 35.</p></details>
+<details><summary>Method: Per vertex</summary><p>Each vertex has 7 diagonals, so 10 · 7/2 = 35.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem p12.</b> A regular hexagon has side 4. How long is its longest diagonal?</p><details><summary>Hint</summary>It passes through the centre.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Radius</summary><p>The distance from the centre to a vertex equals the side, so the diameter is 8.</p></details>
+<details><summary>Method: Triangles</summary><p>The hexagon splits into 6 equilateral triangles of side 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem p13.</b> How large is each exterior angle of a regular 18-gon, in degrees?</p><details><summary>Hint</summary>360/n.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Formula</summary><p>360/18 = 20.</p></details>
+<details><summary>Method: Interior</summary><p>The interior angle is 160, and 180 − 160 = 20.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem p14.</b> Each interior angle of a regular polygon is 156°. How many sides does it have?</p><details><summary>Hint</summary>Exterior angle is 24°.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Exterior</summary><p>360/24 = 15.</p></details>
+<details><summary>Method: Formula</summary><p>(n − 2) · 180 = 156n gives 24n = 360, so n = 15.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem p15.</b> Find the sum of the interior angles of a regular 9-gon in degrees.</p><details><summary>Hint</summary>(n − 2) · 180.</details><details><summary>Answer</summary>1260</details>
+<details><summary>Method: Formula</summary><p>7 · 180 = 1260.</p></details>
+<details><summary>Method: Each angle</summary><p>Each angle is 140 and 9 · 140 = 1260.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem p16.</b> A regular octagon is inscribed in a circle. What is the central angle of each side, in degrees?</p><details><summary>Hint</summary>360/n.</details><details><summary>Answer</summary>45</details>
+<details><summary>Method: Formula</summary><p>360/8 = 45.</p></details>
+<details><summary>Method: Check</summary><p>Eight of them make a full turn.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem p17.</b> How many isosceles triangles (including equilateral ones) can be formed using the vertices of a regular 12-gon?</p><details><summary>Hint</summary>Choose the apex, then a symmetric pair of other vertices.</details><details><summary>Answer</summary>52</details>
+<details><summary>Method: Apex count</summary><p>Each apex has 5 symmetric pairs, giving 12 · 5 = 60, but each of the 4 equilateral triangles was counted 3 times, so the total is 60 − 2 · 4 = 52.</p></details>
+<details><summary>Method: Check</summary><p>The triples of vertices number 220, and 52 of them are isosceles.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem x18.</b> Find the sum of the interior angles of a convex 10-gon, in degrees.</p><details><summary>Hint</summary>(n − 2) · 180.</details><details><summary>Answer</summary>1440</details>
+<details><summary>Method: Formula</summary><p>(10 − 2) · 180 = 1440.</p></details>
+<details><summary>Method: Triangles</summary><p>Drawing diagonals from one vertex splits the polygon into 8 triangles of 180° each: 1440.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem x19.</b> How many diagonals does a convex 11-gon have?</p><details><summary>Hint</summary>n(n − 3)/2.</details><details><summary>Answer</summary>44</details>
+<details><summary>Method: Formula</summary><p>11 · 8/2 = 44.</p></details>
+<details><summary>Method: Pairs</summary><p>C(11, 2) = 55 pairs of vertices, minus the 11 sides: 44.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem x20.</b> Find each exterior angle of a regular 10-gon, in degrees.</p><details><summary>Hint</summary>The exterior angles sum to 360°.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Formula</summary><p>360/10 = 36.</p></details>
+<details><summary>Method: Interior angle</summary><p>Each interior angle is 144, and 180 − 144 = 36.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem x21.</b> Find the sum of the interior angles of a convex 11-gon, in degrees.</p><details><summary>Hint</summary>(n − 2) · 180.</details><details><summary>Answer</summary>1620</details>
+<details><summary>Method: Formula</summary><p>(11 − 2) · 180 = 1620.</p></details>
+<details><summary>Method: Triangles</summary><p>Drawing diagonals from one vertex splits the polygon into 9 triangles of 180° each: 1620.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem x22.</b> How many diagonals does a convex 13-gon have?</p><details><summary>Hint</summary>n(n − 3)/2.</details><details><summary>Answer</summary>65</details>
+<details><summary>Method: Formula</summary><p>13 · 10/2 = 65.</p></details>
+<details><summary>Method: Pairs</summary><p>C(13, 2) = 78 pairs of vertices, minus the 13 sides: 65.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem x23.</b> Find each exterior angle of a regular 12-gon, in degrees.</p><details><summary>Hint</summary>The exterior angles sum to 360°.</details><details><summary>Answer</summary>30</details>
+<details><summary>Method: Formula</summary><p>360/12 = 30.</p></details>
+<details><summary>Method: Interior angle</summary><p>Each interior angle is 150, and 180 − 150 = 30.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem x24.</b> Find the sum of the interior angles of a convex 13-gon, in degrees.</p><details><summary>Hint</summary>(n − 2) · 180.</details><details><summary>Answer</summary>1980</details>
+<details><summary>Method: Formula</summary><p>(13 − 2) · 180 = 1980.</p></details>
+<details><summary>Method: Triangles</summary><p>Drawing diagonals from one vertex splits the polygon into 11 triangles of 180° each: 1980.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>
+<div class=p><p><b>Problem x25.</b> How many diagonals does a convex 14-gon have?</p><details><summary>Hint</summary>n(n − 3)/2.</details><details><summary>Answer</summary>77</details>
+<details><summary>Method: Formula</summary><p>14 · 11/2 = 77.</p></details>
+<details><summary>Method: Pairs</summary><p>C(14, 2) = 91 pairs of vertices, minus the 14 sides: 77.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 1.5</p></div>

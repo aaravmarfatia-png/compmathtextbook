@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 132</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 132: Unit 132: Diophantine equations and mixed problems</h1><p class=ref>Book: AoPS Vol. 2 ch. 24, 26 (25 problems)<br>Rusczyk, The Art of Problem Solving Volume 2, chapter 24 (Diophantine Equations: linear equations, sums of squares, the Pell equation, general methods) and chapter 26 (Parting Shots).</p>
+<h2>Reading</h2>
+<h3>1. Linear Diophantine equations</h3><p>The equation ax + by = c has integer solutions iff gcd(a, b) divides c. If (x₀, y₀) is one solution, all are (x₀ + (b/g)t, y₀ − (a/g)t).</p><p><b>Worked example.</b> 7x + 11y = 100 in positive integers. Reduce mod 7: 11y ≡ 100, 4y ≡ 2 (mod 7), so y ≡ 4 (mod 7) (since 4 × 4 = 16 ≡ 2). Then y = 4 gives 7x = 56, x = 8. The next solution has y = 11, too large. So (8, 4) is the only positive solution (found also by search).</p>
+<h3>2. Factoring tricks</h3><p>Many Diophantine equations factor. <b>Difference of squares:</b> x² − y² = (x − y)(x + y). <b>Simon's trick:</b> xy + ax + by = (x + b)(y + a) − ab. <b>Sophie Germain:</b> n⁴ + 4 = (n² + 2n + 2)(n² − 2n + 2).</p><p><b>Worked example 1.</b> x² − y² = 105 in positive integers. The factor pairs of 105 are (1, 105), (3, 35), (5, 21), (7, 15) with x − y the smaller and x + y the larger: (x, y) = (53, 52), (19, 16), (13, 8), (11, 4).</p><p><b>Worked example 2.</b> For n = 3: 3⁴ + 4 = 85 = 17 × 5, matching (9 + 6 + 2)(9 − 6 + 2). So n⁴ + 4 is composite for n > 1.</p>
+<h3>3. Sums of squares and mixed problems</h3><p>A positive integer is a sum of two squares iff every prime ≡ 3 (mod 4) appears to an even power in its factorisation. 325 = 5² × 13 can be written in several ways: 1² + 18², 6² + 17², 10² + 15² (and the reversed pairs).</p><p><b>Mixed problems.</b> Combine tools: modular arithmetic to exclude cases, bounding to limit the search, factoring to reduce to divisors, and a direct check.</p><p><b>Worked example (a bound).</b> Find positive integers with x² + y² = 325 and x < y. The list x = 1, 6, 10 above gives the triples (1, 18), (6, 17), (10, 15).</p><p><b>Infinite descent.</b> If x² + y² is divisible by 3 then 3 divides both x and y; repeating the argument shows x² + y² = 3z² has only the trivial solution.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Forgetting negative factor pairs when negative solutions are allowed. Forgetting to check that x and y are integers (x − y and x + y must have the same parity). Missing the trivial solution.</p><p><b>Checks.</b> Substitute each answer into the original equation.</p><p><b>Practice.</b> Before solving, decide: is a congruence, a bound or a factorisation the key?</p>
+<h3>Worked examples with Try-its: Factoring Diophantine equations</h3><p>To solve x² − y² = 45 in positive integers write (x − y)(x + y) = 45 with both factors odd and x − y < x + y: the pairs (1, 45), (3, 15), (5, 9) give (x, y) = (23, 22), (9, 6), (7, 2). For linear equations such as 2x + 3y = 20 the positive solutions are (1, 6), (4, 4), (7, 2).</p><details class="try"><summary>Try it<p>Solve x² − y² = 15 in positive integers.</p><p><b>Answer.</b> (x − y)(x + y) = 15: (1, 15) gives (8, 7) and (3, 5) gives (4, 1).</p></details>
+<h3>Worked examples with Try-its: Mixed strategies</h3><p>Combine tools: bound the variables, use residues to rule out cases, factor, and finally check small values. For example x² + y² = 3z² has no non-trivial solutions: squares are 0 or 1 (mod 3), so x² + y² ≡ 0 needs both x and y divisible by 3, and then descent shows z is as well.</p><details class="try"><summary>Try it<p>Can x² + y² = 2023 have integer solutions?</p><p><b>Answer.</b> 2023 ≡ 3 (mod 4) but a sum of two squares is 0, 1 or 2 (mod 4): no.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Find all pairs of positive integers (m, n) with n² − m² = 9. <b>Solution.</b> (n − m)(n + m) = 9 with n + m > n − m > 0 gives (1, 9) and (3, 3); the first yields (n, m) = (5, 4), the second m = 0 which is not positive. So the only solution is m = 4, n = 5.</p><p><b>Reflection.</b> Factorisation reduces an equation to a finite list.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Linear.</b> 3x + 5y = 47 has the positive solutions (4, 7), (9, 4), (14, 1). <b>Squares.</b> x² − y² = 45 has (23, 22), (9, 6), (7, 2). <b>Residues.</b> x² + y² = 4k + 3 has no integer solutions, since a sum of two squares is 0, 1 or 2 mod 4.</p><details class="try"><summary>Try it<p>Does 2x + 4y = 13 have integer solutions?</p><p><b>Answer.</b> No: the left side is even.</p></details><details class="try"><summary>Try it<p>Find positive integers x ≤ y with xy = 2(x + y).</p><p><b>Answer.</b> (x − 2)(y − 2) = 4: (3, 6) and (4, 4).</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Find all integers n for which n² + 19 is a perfect square. <b>Solution.</b> Write n² + 19 = m², so (m − n)(m + n) = 19, which is prime: m − n = 1 and m + n = 19, giving m = 10 and n = 9 (and n = −9).</p><p><b>Check.</b> 81 + 19 = 100 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> How many ordered pairs of positive integers (x, y) satisfy xy + 2x + 3y = 20?</p><details><summary>Hint</summary>Add 6 to both sides and factor.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Factor</summary><p>(x + 3)(y + 2) = 26. Divisors d of 26 with d > 3 and 26/d > 2 give x = d − 3: none. That is 0 pairs.</p></details>
+<details><summary>Method: Test x</summary><p>For each x from 1 up, y = (20 − 2x)/(x + 3) must be a positive integer; this works for x = none only.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p2.</b> How many ordered pairs of positive integers (x, y) satisfy xy + 1x + 5y = 40?</p><details><summary>Hint</summary>Add 5 to both sides and factor.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Factor</summary><p>(x + 5)(y + 1) = 45. Divisors d of 45 with d > 5 and 45/d > 1 give x = d − 5: (4, 4), (10, 2). That is 2 pairs.</p></details>
+<details><summary>Method: Test x</summary><p>For each x from 1 up, y = (40 − 1x)/(x + 5) must be a positive integer; this works for x = 4, 10 only.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p3.</b> How many ordered pairs of positive integers (x, y) satisfy xy + 3x + 4y = 60?</p><details><summary>Hint</summary>Add 12 to both sides and factor.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Factor</summary><p>(x + 4)(y + 3) = 72. Divisors d of 72 with d > 4 and 72/d > 3 give x = d − 4: (2, 9), (4, 6), (5, 5), (8, 3), (14, 1). That is 5 pairs.</p></details>
+<details><summary>Method: Test x</summary><p>For each x from 1 up, y = (60 − 3x)/(x + 4) must be a positive integer; this works for x = 2, 4, 5, 8, 14 only.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p4.</b> How many ordered pairs of positive integers (x, y) satisfy xy + 2x + 5y = 50?</p><details><summary>Hint</summary>Add 10 to both sides and factor.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Factor</summary><p>(x + 5)(y + 2) = 60. Divisors d of 60 with d > 5 and 60/d > 2 give x = d − 5: (1, 8), (5, 4), (7, 3), (10, 2), (15, 1). That is 5 pairs.</p></details>
+<details><summary>Method: Test x</summary><p>For each x from 1 up, y = (50 − 2x)/(x + 5) must be a positive integer; this works for x = 1, 5, 7, 10, 15 only.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p5.</b> How many ordered pairs of positive integers (x, y) satisfy 1/x + 1/y = 1/6?</p><details><summary>Hint</summary>Multiply out and factor (x − 6)(y − 6).</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Factor</summary><p>1/x + 1/y = 1/6 gives (x − 6)(y − 6) = 36. Each divisor of 36 gives one pair, and 36 has 9 divisors, so 9 pairs.</p></details>
+<details><summary>Method: List</summary><p>The pairs are (7, 42), (8, 24), (9, 18), (10, 15), (12, 12), (15, 10), (18, 9), (24, 8), (42, 7): 9 in all.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p6.</b> How many ordered pairs of positive integers (x, y) satisfy 1/x + 1/y = 1/10?</p><details><summary>Hint</summary>Multiply out and factor (x − 10)(y − 10).</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Factor</summary><p>1/x + 1/y = 1/10 gives (x − 10)(y − 10) = 100. Each divisor of 100 gives one pair, and 100 has 9 divisors, so 9 pairs.</p></details>
+<details><summary>Method: List</summary><p>The pairs are (11, 110), (12, 60), (14, 35), (15, 30), (20, 20), (30, 15), (35, 14), (60, 12), (110, 11): 9 in all.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p7.</b> How many ordered pairs of positive integers (x, y) satisfy 1/x + 1/y = 1/12?</p><details><summary>Hint</summary>Multiply out and factor (x − 12)(y − 12).</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Factor</summary><p>1/x + 1/y = 1/12 gives (x − 12)(y − 12) = 144. Each divisor of 144 gives one pair, and 144 has 15 divisors, so 15 pairs.</p></details>
+<details><summary>Method: List</summary><p>The pairs are (13, 156), (14, 84), (15, 60), (16, 48), (18, 36), (20, 30), (21, 28), (24, 24), (28, 21), (30, 20), (36, 18), (48, 16), (60, 15), (84, 14), (156, 13): 15 in all.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p8.</b> How many ordered pairs of positive integers (x, y) satisfy x² − y² = 45?</p><details><summary>Hint</summary>Factor the left side as (x − y)(x + y).</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Factor</summary><p>(x − y)(x + y) = 45 with both factors the same parity and x − y < x + y. The factorisations are 5 · 9, 3 · 15, 1 · 45, giving 3 pairs.</p></details>
+<details><summary>Method: Search</summary><p>Trying y from 1 upwards and checking whether 45 + y² is a perfect square gives y = 2, y = 6, y = 22.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p9.</b> How many ordered pairs of positive integers (x, y) satisfy x² − y² = 60?</p><details><summary>Hint</summary>Factor the left side as (x − y)(x + y).</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Factor</summary><p>(x − y)(x + y) = 60 with both factors the same parity and x − y < x + y. The factorisations are 6 · 10, 2 · 30, giving 2 pairs.</p></details>
+<details><summary>Method: Search</summary><p>Trying y from 1 upwards and checking whether 60 + y² is a perfect square gives y = 2, y = 14.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p10.</b> How many ordered pairs of positive integers (x, y) satisfy x² − y² = 105?</p><details><summary>Hint</summary>Factor the left side as (x − y)(x + y).</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Factor</summary><p>(x − y)(x + y) = 105 with both factors the same parity and x − y < x + y. The factorisations are 7 · 15, 5 · 21, 3 · 35, 1 · 105, giving 4 pairs.</p></details>
+<details><summary>Method: Search</summary><p>Trying y from 1 upwards and checking whether 105 + y² is a perfect square gives y = 4, y = 8, y = 16, y = 52.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p11.</b> Find the smallest positive integer solution (x, y) of x² − 2y² = 1. Give x + y.</p><details><summary>Hint</summary>Try small values of y.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Search</summary><p>Testing y = 1, 2, 3, … until 2·y² + 1 is a perfect square first happens at y = 2, with x = 3, so x + y = 5.</p></details>
+<details><summary>Method: Check</summary><p>3² − 2 · 2² = 9 − 8 = 1 ✓.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p12.</b> Find the smallest positive integer solution (x, y) of x² − 3y² = 1. Give x + y.</p><details><summary>Hint</summary>Try small values of y.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Search</summary><p>Testing y = 1, 2, 3, … until 3·y² + 1 is a perfect square first happens at y = 1, with x = 2, so x + y = 3.</p></details>
+<details><summary>Method: Check</summary><p>2² − 3 · 1² = 4 − 3 = 1 ✓.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p13.</b> Find the smallest positive integer solution (x, y) of x² − 6y² = 1. Give x + y.</p><details><summary>Hint</summary>Try small values of y.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Search</summary><p>Testing y = 1, 2, 3, … until 6·y² + 1 is a perfect square first happens at y = 2, with x = 5, so x + y = 7.</p></details>
+<details><summary>Method: Check</summary><p>5² − 6 · 2² = 25 − 24 = 1 ✓.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p14.</b> How many right triangles with integer sides have one leg equal to 12? (Triangles that are mirror images count once.)</p><details><summary>Hint</summary>Write c² − b² = 12² and factor.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Factor</summary><p>(c − b)(c + b) = 144, with both factors of the same parity: 2 · 72, 4 · 36, 6 · 24, 8 · 18. This gives 4 triangles.</p></details>
+<details><summary>Method: Search</summary><p>Looking at hypotenuses c from 13 upward and testing whether c² − 144 is a square gives 4 solutions.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p15.</b> How many right triangles with integer sides have one leg equal to 15? (Triangles that are mirror images count once.)</p><details><summary>Hint</summary>Write c² − b² = 15² and factor.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Factor</summary><p>(c − b)(c + b) = 225, with both factors of the same parity: 1 · 225, 3 · 75, 5 · 45, 9 · 25. This gives 4 triangles.</p></details>
+<details><summary>Method: Search</summary><p>Looking at hypotenuses c from 16 upward and testing whether c² − 225 is a square gives 4 solutions.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p16.</b> How many ordered pairs of integers (x, y) satisfy x² + y² = 25?</p><details><summary>Hint</summary>List the squares up to 25 and include the signs.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Squares</summary><p>0² + 5², 3² + 4². With all sign choices and orders these give 12 pairs.</p></details>
+<details><summary>Method: Divisor rule</summary><p>The number is 4 times (divisors ≡ 1 mod 4 minus divisors ≡ 3 mod 4) = 4(3 − 0) = 12.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p17.</b> How many ordered pairs of integers (x, y) satisfy x² + y² = 65?</p><details><summary>Hint</summary>List the squares up to 65 and include the signs.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Squares</summary><p>1² + 8², 4² + 7². With all sign choices and orders these give 16 pairs.</p></details>
+<details><summary>Method: Divisor rule</summary><p>The number is 4 times (divisors ≡ 1 mod 4 minus divisors ≡ 3 mod 4) = 4(4 − 0) = 16.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p18.</b> How many ordered pairs of integers (x, y) satisfy x² + y² = 50?</p><details><summary>Hint</summary>List the squares up to 50 and include the signs.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Squares</summary><p>1² + 7², 5² + 5². With all sign choices and orders these give 12 pairs.</p></details>
+<details><summary>Method: Divisor rule</summary><p>The number is 4 times (divisors ≡ 1 mod 4 minus divisors ≡ 3 mod 4) = 4(3 − 0) = 12.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p19.</b> How many pairs of positive integers (x, y) satisfy 5x + 8y = 100?</p><details><summary>Hint</summary>Test values of one variable.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: List</summary><p>The solutions are (4, 10), (12, 5), which is 2 pairs.</p></details>
+<details><summary>Method: Step pattern</summary><p>Solutions are spaced by (8, −5) since gcd(5, 8) = 1, so they form a short arithmetic list: 2 in total.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p20.</b> What is the largest amount that cannot be paid exactly with coins of 5 and 9?</p><details><summary>Hint</summary>The Chicken McNugget (Frobenius) formula.</details><details><summary>Answer</summary>31</details>
+<details><summary>Method: Formula</summary><p>For coprime a, b the answer is ab − a − b = 45 − 5 − 9 = 31.</p></details>
+<details><summary>Method: Check</summary><p>The numbers 31 − 5k are 31, 26, 21, 16, 11, 6, 1, and none is a multiple of 9, so 31 cannot be made.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p21.</b> For how many integers n from 1 to 20 is n² + n + 1 divisible by 3?</p><details><summary>Hint</summary>Test n mod 3.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Residues</summary><p>If n ≡ 0, 1, 2 mod 3 then n² + n + 1 ≡ 1, 0, 1. So it is divisible by 3 exactly when n ≡ 1 mod 3: 7 values up to 20.</p></details>
+<details><summary>Method: List</summary><p>The values are 1, 4, 7, 10, 13, 16, 19: 7 of them.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p22.</b> For how many integers n from 1 to 100 is n² + n + 1 divisible by 3?</p><details><summary>Hint</summary>Test n mod 3.</details><details><summary>Answer</summary>34</details>
+<details><summary>Method: Residues</summary><p>If n ≡ 0, 1, 2 mod 3 then n² + n + 1 ≡ 1, 0, 1. So it is divisible by 3 exactly when n ≡ 1 mod 3: 34 values up to 100.</p></details>
+<details><summary>Method: List</summary><p>The values are 1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34 …: 34 of them.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p23.</b> For how many positive integers n does n divide n + 2026?</p><details><summary>Hint</summary>n divides n + 2026 exactly when n divides 2026.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Reduce</summary><p>n | (n + 2026) ⇔ n | 2026. 2026 = 2 · 1013 has 4 divisors.</p></details>
+<details><summary>Method: List</summary><p>The divisors are 1, 2, 1013, 2026.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p24.</b> Find the sum of all positive integers n for which n + 1 divides n² + 11.</p><details><summary>Hint</summary>Since n ≡ −1 mod (n + 1), n² + 11 ≡ 12 mod (n + 1).</details><details><summary>Answer</summary>22</details>
+<details><summary>Method: Reduce</summary><p>n² + 11 ≡ 1 + 11 = 12 (mod n + 1), so n + 1 must divide 12. The divisors of 12 above 1 are 2, 3, 4, 6, 12, so n = 1, 2, 3, 5, 11 with sum 22.</p></details>
+<details><summary>Method: Check</summary><p>For n = 1, 2, 3, 5, 11 the quotient (n² + 11)/(n + 1) is 6, 5, 5, 6, 11, all whole numbers.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>
+<div class=p><p><b>Problem p25.</b> Find the sum of all positive integers n for which n + 1 divides n² + 23.</p><details><summary>Hint</summary>Since n ≡ −1 mod (n + 1), n² + 23 ≡ 24 mod (n + 1).</details><details><summary>Answer</summary>52</details>
+<details><summary>Method: Reduce</summary><p>n² + 23 ≡ 1 + 23 = 24 (mod n + 1), so n + 1 must divide 24. The divisors of 24 above 1 are 2, 3, 4, 6, 8, 12, 24, so n = 1, 2, 3, 5, 7, 11, 23 with sum 52.</p></details>
+<details><summary>Method: Check</summary><p>For n = 1, 2, 3, 5, 7, 11, 23 the quotient (n² + 23)/(n + 1) is 12, 9, 8, 8, 9, 12, 23, all whole numbers.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 24, 26</p></div>

@@ -1,0 +1,111 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 41</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 41: Unit 41: Exponents, radicals and logarithms</h1><p class=ref>Book: Rusczyk, Art of Problem Solving Vol. 1, ch. 1 (25 problems)<br>Rusczyk, AoPS Vol. 1, chapter 1 (Exponents and Logarithms).</p>
+<h2>Reading</h2>
+<h3>1. Exponent rules and fractional powers</h3><p>aᵐ · aⁿ = aᵐ⁺ⁿ, (aᵐ)ⁿ = aᵐⁿ, aᵐ/aⁿ = aᵐ⁻ⁿ, a⁰ = 1, a⁻ⁿ = 1/aⁿ, and a^(1/n) is the n-th root: 8^(2/3) = (∛8)² = 4, 16^(3/4) = 8, 27^(−1/3) = 1/3. Always take the root first, then the power, to keep numbers small. Compare sizes by writing with a common base or exponent: 3⁶⁴ > 2¹⁰⁰ since log₁₀ 3⁶⁴ ≈ 30.5 and log₁₀ 2¹⁰⁰ ≈ 30.1.</p><p><b>Exponent equations.</b> To solve 4ˣ − 5 · 2ˣ + 4 = 0, put t = 2ˣ: t² − 5t + 4 = 0, so t = 1 or 4, and x = 0 or 2. The substitution works because 4ˣ = (2ˣ)².</p><details class="try"><summary>Try it</summary><p>Simplify (2³ · 4²)/8² .</p><p><b>Answer.</b> (8 · 16)/64 = 2.</p></details>
+<h3>2. Radicals</h3><p>√72 = √(36 · 2) = 6√2; √50 + √18 = 5√2 + 3√2 = 8√2. <b>Rationalising</b> removes radicals from a denominator: 1/(√5 − 2) = (√5 + 2)/((√5 − 2)(√5 + 2)) = (√5 + 2)/1 = √5 + 2. The conjugate product is a difference of squares: (3 + √2)(3 − √2) = 7. Squaring: (1 + √3)² = 4 + 2√3.</p><p><b>Nested radicals.</b> √(4 + 2√3) = 1 + √3 since (1 + √3)² = 4 + 2√3. To denest √(a + 2√b), find p and q with p + q = a and pq = b.</p><details class="try"><summary>Try it</summary><p>Rationalise 6/(√7 − 1).</p><p><b>Answer.</b> 6(√7 + 1)/6 = √7 + 1.</p></details>
+<h3>3. Logarithms</h3><p>log_b(N) = k means bᵏ = N. So log₂ 8 = 3 and log₁₀ 1000 = 3. Rules: log(MN) = log M + log N, log(M/N) = log M − log N, log(Mᵖ) = p log M, and change of base log_b N = log N/log b. Hence log₁₀ 2 + log₁₀ 5 = log₁₀ 10 = 1, log₃ 81 = 4, and log₂ 3 · log₃ 4 = 2 (the product telescopes: (log 3/log 2)(log 4/log 3) = log 4/log 2).</p><p><b>Log equations.</b> log₂ x + log₂(x − 2) = 3 gives x(x − 2) = 8, x = 4 or −2; the domain requires x > 2, so x = 4 (Unit 24). <b>Number of digits.</b> The number N has ⌊log₁₀ N⌋ + 1 digits.</p><details class="try"><summary>Try it</summary><p>Evaluate log₂ 12 + log₂ (2/3).</p><p><b>Answer.</b> log₂ 8 = 3.</p></details>
+<h3>4. A longer problem</h3><p><b>Problem.</b> Solve 9ˣ − 4 · 3ˣ⁺¹ + 27 = 0, and simplify (√3 + √2)/(√3 − √2).</p><p><b>Solution.</b> Put t = 3ˣ: t² − 12t + 27 = 0, so t = 3 or 9, x = 1 or 2. For the fraction multiply by the conjugate: (√3 + √2)²/(3 − 2) = 5 + 2√6.</p><p><b>Reflection.</b> Recognise the hidden quadratic: 9ˣ = (3ˣ)² and 3ˣ⁺¹ = 3 · 3ˣ.</p>
+<h3>5. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) (a + b)ⁿ ≠ aⁿ + bⁿ. (2) √(a + b) ≠ √a + √b. (3) log(a + b) ≠ log a + log b. (4) Forgetting the domain x > 0.</p><p><b>Checks.</b> Test rules with small numbers. Substitute solutions into the original.</p><p><b>How to practise.</b> Convert everything to a common base. In Unlimited practice, rotate the exponent and logarithm families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Exponents.</b> 8^(2/3) = (∛8)² = 4 and 2¹⁰ = 1024. <b>Radicals.</b> √72 = √(36 · 2) = 6√2, and to rationalise 1/(√3 − 1) multiply top and bottom by √3 + 1: (√3 + 1)/(3 − 1) = (√3 + 1)/2. <b>Logarithms.</b> log₂ 8 = 3, log₃ 81 = 4, log 2 + log 5 = log 10 = 1 and log₄ 8 = (log₂ 8)/(log₂ 4) = 3/2.</p><p><b>A log equation.</b> To solve log₂ x + log₂(x − 2) = 3 combine: log₂(x(x − 2)) = 3, so x² − 2x = 8, giving x = 4 or x = −2. The argument x − 2 must be positive, so only x = 4 is valid. For an exponential equation such as 2ˣ = 5 take logarithms: x = log₂ 5 ≈ 2.32.</p><details class="try"><summary>Try it<p>Simplify (27)^(−2/3).</p><p><b>Answer.</b> 1/9.</p></details><details class="try"><summary>Try it<p>Solve log₃(x + 1) = 2.</p><p><b>Answer.</b> x + 1 = 9, so x = 8.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Solve 4ˣ − 3 · 2ˣ − 4 = 0. <b>Solution.</b> Put t = 2ˣ > 0: t² − 3t − 4 = 0, so t = 4 or t = −1. Only t = 4 is allowed, giving x = 2. Check: 16 − 12 − 4 = 0.</p><p><b>Reflection.</b> A substitution turns an exponential equation into a quadratic; always discard t ≤ 0, since 2ˣ is positive.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Simplify 2⁵ · 2⁻² ÷ 2⁴ to a fraction.</p><details><summary>Hint</summary>Add and subtract exponents.</details><details><summary>Answer</summary>1/2</details>
+<details><summary>Method: Exponent laws</summary><p>2^(5 − 2 − 4) = 2⁻¹ = 1/2.</p></details>
+<details><summary>Method: Numbers</summary><p>32 · (1/4) = 8, and 8 ÷ 16 = 1/2.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem p2.</b> Write √72 as k√2. What is k?</p><details><summary>Hint</summary>72 = 36·2.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Pull out a square</summary><p>√72 = √36 · √2 = 6√2.</p></details>
+<details><summary>Method: Prime factors</summary><p>72 = 2³·3² = 2²·3²·2, so √72 = 2·3·√2 = 6√2.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem p3.</b> Evaluate log₂ 64 + log₃ 81.</p><details><summary>Hint</summary>What power gives each number?</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Definition</summary><p>2⁶ = 64 so log₂ 64 = 6; 3⁴ = 81 so log₃ 81 = 4. Sum 10.</p></details>
+<details><summary>Method: Rules</summary><p>log₂ 64 = 6·log₂ 2 = 6, log₃ 81 = 4·log₃ 3 = 4.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem p4.</b> Solve 2ˣ = 1/32 for x.</p><details><summary>Hint</summary>Write 1/32 as a power of 2.</details><details><summary>Answer</summary>-5</details>
+<details><summary>Method: Same base</summary><p>1/32 = 2⁻⁵, so x = −5.</p></details>
+<details><summary>Method: Logarithm</summary><p>x = log₂(1/32) = −log₂ 32 = −5.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem p5.</b> Evaluate 27^(2/3).</p><details><summary>Hint</summary>Cube root first.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Root then power</summary><p>∛27 = 3, 3² = 9.</p></details>
+<details><summary>Method: Power then root</summary><p>27² = 729, ∛729 = 9.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem p6.</b> If log₁₀ 2 + log₁₀ x = 2, find x.</p><details><summary>Hint</summary>Combine logs.</details><details><summary>Answer</summary>50</details>
+<details><summary>Method: Combine</summary><p>log₁₀(2x) = 2, so 2x = 100 and x = 50.</p></details>
+<details><summary>Method: Substitute</summary><p>log₁₀ 2 + log₁₀ 50 = log₁₀ 100 = 2.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem p7.</b> Rationalise 6/(√5 − √2). Give the answer as √5 + √2 times what number?</p><details><summary>Hint</summary>Multiply by the conjugate.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Conjugate</summary><p>6(√5 + √2)/(5 − 2) = 2(√5 + √2). The number is 2.</p></details>
+<details><summary>Method: Numerical check</summary><p>6/(2.236 − 1.414) = 7.30 and 2(3.650) = 7.30.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem p8.</b> If 3ˣ = 5, find 3^(2x + 1).</p><details><summary>Hint</summary>3^(2x+1) = 3·(3ˣ)².</details><details><summary>Answer</summary>75</details>
+<details><summary>Method: Exponent laws</summary><p>3·(3ˣ)² = 3·25 = 75.</p></details>
+<details><summary>Method: Logs</summary><p>x = log₃ 5, so 3^(2x+1) = 3·3^(log₃ 25) = 3·25 = 75.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem p9.</b> How many digits does 2¹⁰⁰ have? (Use log₁₀ 2 ≈ 0.30103.)</p><details><summary>Hint</summary>Digits = ⌊log₁₀ N⌋ + 1.</details><details><summary>Answer</summary>31</details>
+<details><summary>Method: Log estimate</summary><p>log₁₀ 2¹⁰⁰ = 30.103, so the number has 31 digits.</p></details>
+<details><summary>Method: Exact check</summary><p>2¹⁰⁰ = 1267650600228229401496703205376, which has 31 digits.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem p10.</b> Simplify (x³)⁴ ÷ x⁵ and give the exponent of x.</p><details><summary>Hint</summary>Multiply then subtract.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Laws</summary><p>x¹² ÷ x⁵ = x⁷.</p></details>
+<details><summary>Method: Test value</summary><p>With x = 2: 4096/32 = 128 = 2⁷.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem x11.</b> Evaluate log₂ 64.</p><details><summary>Hint</summary>2ˣ = 64.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Power</summary><p>2⁶ = 64.</p></details>
+<details><summary>Method: Halving</summary><p>64 → 32 → 16 → 8 → 4 → 2 → 1 takes 6 steps.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem x12.</b> Solve 2ˣ = 1/8.</p><details><summary>Hint</summary>Negative exponent.</details><details><summary>Answer</summary>-3</details>
+<details><summary>Method: Power</summary><p>1/8 = 2⁻³, so x = −3.</p></details>
+<details><summary>Method: Check</summary><p>2⁻³ = 1/8.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem x13.</b> Evaluate log₁₀ 0.001.</p><details><summary>Hint</summary>0.001 = 10⁻³.</details><details><summary>Answer</summary>-3</details>
+<details><summary>Method: Power</summary><p>−3.</p></details>
+<details><summary>Method: Digits</summary><p>Each factor of 10 shifts the logarithm by 1.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem x14.</b> Evaluate 8^(2/3).</p><details><summary>Hint</summary>Cube root first.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Root</summary><p>∛8 = 2 and 2² = 4.</p></details>
+<details><summary>Method: Exponents</summary><p>8 = 2³, so 8^(2/3) = 2².</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem x15.</b> Write √72 as a√2. Find a.</p><details><summary>Hint</summary>72 = 36 · 2.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Simplify</summary><p>√72 = 6√2.</p></details>
+<details><summary>Method: Check</summary><p>(6√2)² = 72.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem x16.</b> Evaluate log₃ 81 + log₂ 8.</p><details><summary>Hint</summary>Powers.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Values</summary><p>4 + 3 = 7.</p></details>
+<details><summary>Method: Powers</summary><p>3⁴ = 81 and 2³ = 8.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem x17.</b> Evaluate log₂ 40 − log₂ 5.</p><details><summary>Hint</summary>Quotient rule.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Rule</summary><p>log₂(40/5) = log₂ 8 = 3.</p></details>
+<details><summary>Method: Numerical</summary><p>log₂ 40 ≈ 5.32 and log₂ 5 ≈ 2.32.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem x18.</b> Evaluate 27^(−2/3).</p><details><summary>Hint</summary>Cube root, then reciprocal square.</details><details><summary>Answer</summary>1/9</details>
+<details><summary>Method: Root</summary><p>∛27 = 3, 3⁻² = 1/9.</p></details>
+<details><summary>Method: Exponents</summary><p>27 = 3³, so 27^(−2/3) = 3⁻².</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem x19.</b> Find the sum of the first 5 terms of the geometric sequence 3, 12, 48, …</p><details><summary>Hint</summary>a(rⁿ − 1)/(r − 1).</details><details><summary>Answer</summary>1023</details>
+<details><summary>Method: Formula</summary><p>3(4^5 − 1)/(4 − 1) = 1023.</p></details>
+<details><summary>Method: Add the terms</summary><p>3 + 12 + 48 + 192 + 768 = 1023.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem x20.</b> Find the sum of the first 15 terms of the arithmetic sequence 10, 13, 16, 19, …</p><details><summary>Hint</summary>n(first + last)/2.</details><details><summary>Answer</summary>465</details>
+<details><summary>Method: Formula</summary><p>The last term is 52, so the sum is 15(10 + 52)/2 = 465.</p></details>
+<details><summary>Method: Pairing</summary><p>Pair terms from the two ends; each pair sums to 62 and there are 15/2 pairs, giving 465.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem x21.</b> An arithmetic sequence has first term 100 and common difference -4. Find term number 20.</p><details><summary>Hint</summary>aₙ = a₁ + (n − 1)d.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Formula</summary><p>100 + 19 · -4 = 24.</p></details>
+<details><summary>Method: Linear form</summary><p>The terms are 100, 96, 92, 88, …, so term k equals -4·k + 104; at k = 20 this is 24.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem x22.</b> What is the last digit of 8^2030?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 8, 8², 8³, … are 8, 4, 2, 6, and then they repeat from position 1 with period 4. Exponent 2030 lands on 4.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 2030 = 11111101110 in binary. The squares 8^(2^i) mod 10 are 8, 4, 6, 6, 6, 6, 6, 6, 6, 6, 6; multiplying the ones for the 1-bits gives 4.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem x23.</b> What is the remainder when 4^99 is divided by 9?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 4, 4², 4³, … are 4, 7, 1, and then they repeat from position 1 with period 3. Exponent 99 lands on 1.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 99 = 1100011 in binary. The squares 4^(2^i) mod 9 are 4, 7, 4, 7, 4, 7, 4; multiplying the ones for the 1-bits gives 1.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem x24.</b> Evaluate 1/(1·2) + 1/(2·3) + … + 1/(49·50).</p><details><summary>Hint</summary>1/(k(k + 1)) = 1/k − 1/(k + 1).</details><details><summary>Answer</summary>49/50</details>
+<details><summary>Method: Telescoping</summary><p>Each term is 1/k − 1/(k + 1); everything cancels except 1 − 1/50 = 49/50.</p></details>
+<details><summary>Method: Small cases</summary><p>Up to n = 1, 2, 3 the sums are 1/2, 2/3, 3/4, so up to n = 49 the sum is 49/50.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>
+<div class=p><p><b>Problem x25.</b> Find the sum of the first 6 terms of the geometric sequence 1, 5, 25, …</p><details><summary>Hint</summary>a(rⁿ − 1)/(r − 1).</details><details><summary>Answer</summary>3906</details>
+<details><summary>Method: Formula</summary><p>1(5^6 − 1)/(5 − 1) = 3906.</p></details>
+<details><summary>Method: Add the terms</summary><p>1 + 5 + 25 + 125 + 625 + 3125 = 3906.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 1</p></div>

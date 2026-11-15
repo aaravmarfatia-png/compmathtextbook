@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 60</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 60: Unit 60: Inequalities: Cauchy–Schwarz and rearrangement</h1><p class=ref>Book: Engel, Problem-Solving Strategies, ch. 7 (25 problems)<br>Engel, Problem-Solving Strategies, chapter 7 (Inequalities).</p>
+<h2>Reading</h2>
+<h3>1. The Cauchy–Schwarz inequality</h3><p>For real numbers a₁, …, aₙ and b₁, …, bₙ: <b>(Σaᵢ²)(Σbᵢ²) ≥ (Σaᵢbᵢ)²</b>, with equality exactly when the vectors are proportional. For (1, 2, 3) and (4, 5, 6): 14 · 77 = 1078 ≥ 32² = 1024. A useful variant (Titu/Engel form): Σ aᵢ²/bᵢ ≥ (Σaᵢ)²/Σbᵢ for positive bᵢ, which gives 1/a + 1/b + 1/c ≥ 9/(a + b + c). A random test of 500 triples confirmed this and Nesbitt's inequality a/(b + c) + b/(c + a) + c/(a + b) ≥ 3/2.</p><p><b>Optimisation.</b> Minimise x² + y² given x + y = 10: by Cauchy (1 + 1)(x² + y²) ≥ (x + y)² = 100, so x² + y² ≥ 50, with equality at x = y = 5. Maximise xy given 2x + 3y = 12: AM–GM on 2x and 3y gives 12 = 2x + 3y ≥ 2√(6xy), so xy ≤ 6, equality at 2x = 3y = 6, x = 3, y = 2.</p><details class="try"><summary>Try it</summary><p>If a + b + c = 6, find the minimum of a² + b² + c².</p><p><b>Answer.</b> (1 + 1 + 1)(a² + b² + c²) ≥ 36, so at least 12 at a = b = c = 2.</p></details>
+<h3>2. The rearrangement inequality and means</h3><p>If a₁ ≤ a₂ ≤ … ≤ aₙ and b₁ ≤ … ≤ bₙ, then the sum a₁b₁ + … + aₙbₙ (same order) is the <i>largest</i> over all pairings and the oppositely ordered pairing is the smallest. For (1, 2, 3) and (4, 5, 6): same order 32, opposite order 28, and every one of the six pairings lies between (confirmed by listing). It proves a² + b² + c² ≥ ab + bc + ca.</p><p><b>The mean inequalities.</b> For positive numbers: HM ≤ GM ≤ AM ≤ QM. For 2 and 8: HM = 3.2, GM = 4, AM = 5, QM = √34 ≈ 5.83. The AM–GM inequality for three numbers: (a + b + c)/3 ≥ ∛(abc), equality iff a = b = c.</p><details class="try"><summary>Try it</summary><p>Prove a/b + b/c + c/a ≥ 3 for positive a, b, c.</p><p><b>Answer.</b> By AM–GM the sum is at least 3 · ∛((a/b)(b/c)(c/a)) = 3.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> Let a, b, c > 0 with a + b + c = 1. Show that 1/a + 1/b + 1/c ≥ 9 and find the minimum of a² + b² + c².</p><p><b>Solution.</b> By Titu, 1/a + 1/b + 1/c ≥ 9/(a + b + c) = 9. By Cauchy, (1 + 1 + 1)(a² + b² + c²) ≥ 1, so a² + b² + c² ≥ 1/3, equality at a = b = c = 1/3.</p><p><b>Reflection.</b> Both used equality at a = b = c, the typical situation for symmetric constraints.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Using AM–GM with negative numbers. (2) Forgetting to state when equality holds and whether it is reachable. (3) Using the wrong form of Cauchy. (4) Assuming a minimum exists at an interior point without checking.</p><p><b>Checks.</b> Test equality case numerically and a nearby point.</p><p><b>How to practise.</b> Always check the equality case first. In Unlimited practice, rotate the inequality families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Cauchy–Schwarz.</b> (a² + b²)(c² + d²) ≥ (ac + bd)². With (a, b) = (1, 3) and (c, d) = (2, 4): (1 + 9)(4 + 16) = 200 ≥ (2 + 12)² = 196. <b>Rearrangement.</b> Pairing the sequences 1, 2, 3 and 4, 5, 6 in the same order gives 1 · 4 + 2 · 5 + 3 · 6 = 32, the maximum, and in opposite order 1 · 6 + 2 · 5 + 3 · 4 = 28, the minimum. <b>AM-GM.</b> If abc = 8 for positive a, b, c then a + b + c ≥ 3 · ∛8 = 6.</p><details class="try"><summary>Try it<p>If x + y = 6, what is the smallest value of x² + y²?</p><p><b>Answer.</b> By Cauchy–Schwarz (x² + y²)(1 + 1) ≥ 36, so 18, at x = y = 3.</p></details><details class="try"><summary>Try it<p>Find the largest value of 2x + 3y if x² + y² = 13.</p><p><b>Answer.</b> √(13 · 13) = 13, at (2, 3).</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> For positive a, b, c with a + b + c = 1 show that 1/a + 1/b + 1/c ≥ 9. <b>Solution.</b> By Cauchy–Schwarz, (a + b + c)(1/a + 1/b + 1/c) ≥ (1 + 1 + 1)² = 9, with equality at a = b = c = 1/3.</p><p><b>Check.</b> At a = b = c = 1/3 the sum is 9, so the bound is attained.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Real numbers satisfy x + 2y + 3z = 14. What is the smallest possible value of x² + y² + z²?</p><details><summary>Hint</summary>Cauchy–Schwarz with (1, 2, 3).</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(x² + y² + z²)(1 + 4 + 9) ≥ 14² = 196, so x² + y² + z² ≥ 14, with equality at (1, 2, 3).</p></details>
+<details><summary>Method: Check</summary><p>x = 1, y = 2, z = 3 gives 1 + 4 + 9 = 14 and 1 + 4 + 9 = 14.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem p2.</b> Positive numbers satisfy 2x + 3y = 12. What is the largest possible value of xy?</p><details><summary>Hint</summary>AM–GM on 2x and 3y.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: AM–GM</summary><p>√(2x·3y) ≤ (2x + 3y)/2 = 6, so 6xy ≤ 36 and xy ≤ 6, with equality at 2x = 3y = 6, i.e. x = 3, y = 2.</p></details>
+<details><summary>Method: Substitute</summary><p>xy = x(12 − 2x)/3 = (12x − 2x²)/3, largest at x = 3 with value 6.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem p3.</b> For positive a, b what is the smallest value of (a + b)(1/a + 1/b)?</p><details><summary>Hint</summary>Expand.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Expand</summary><p>= 2 + a/b + b/a ≥ 2 + 2 = 4.</p></details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(a + b)(1/a + 1/b) ≥ (√a·1/√a + √b·1/√b)² = 4.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem p4.</b> What is the smallest value of x² + 16/x² for positive x?</p><details><summary>Hint</summary>AM–GM.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: AM–GM</summary><p>x² + 16/x² ≥ 2√16 = 8, with equality at x² = 4.</p></details>
+<details><summary>Method: Substitute</summary><p>Let u = x²: u + 16/u has minimum 8 at u = 4.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem p5.</b> The numbers 1, 2, 3 and 4, 5, 6 are paired up. What is the largest possible sum of the three products?</p><details><summary>Hint</summary>Pair in the same order.</details><details><summary>Answer</summary>32</details>
+<details><summary>Method: Rearrangement</summary><p>Largest to largest: 1·4 + 2·5 + 3·6 = 32.</p></details>
+<details><summary>Method: All six pairings</summary><p>The six pairings give 32, 31, 31, 29, 29 and 28, so the maximum is 32.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem p6.</b> The numbers 1, 2, 3 and 4, 5, 6 are paired up. What is the smallest possible sum of the three products?</p><details><summary>Hint</summary>Pair in opposite order.</details><details><summary>Answer</summary>28</details>
+<details><summary>Method: Rearrangement</summary><p>Smallest with largest: 1·6 + 2·5 + 3·4 = 28.</p></details>
+<details><summary>Method: All six pairings</summary><p>The six sums are 32, 31, 31, 29, 29, 28.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem p7.</b> For positive a, b, c with a + b + c = 6, what is the largest possible value of abc?</p><details><summary>Hint</summary>AM–GM.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: AM–GM</summary><p>abc ≤ ((a + b + c)/3)³ = 8, equality at a = b = c = 2.</p></details>
+<details><summary>Method: Smoothing</summary><p>If two numbers differ, replacing them by their average raises the product, so the maximum is at equal values.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem p8.</b> What is the smallest value of x + 4/(x − 1) for x > 1? (Write x = (x − 1) + 1.)</p><details><summary>Hint</summary>AM–GM on (x − 1) and 4/(x − 1).</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: AM–GM</summary><p>x + 4/(x − 1) = (x − 1) + 4/(x − 1) + 1 ≥ 2·2 + 1 = 5, equality at x − 1 = 2, x = 3.</p></details>
+<details><summary>Method: Calculus-free check</summary><p>x = 3 gives 3 + 2 = 5, and x = 2 gives 6, x = 4 gives 5.33.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem p9.</b> What is the largest possible value of 3x + 4y if x² + y² = 25?</p><details><summary>Hint</summary>Cauchy–Schwarz.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(3x + 4y)² ≤ (9 + 16)(x² + y²) = 625, so 3x + 4y ≤ 25, achieved at (3, 4).</p></details>
+<details><summary>Method: Geometry</summary><p>3x + 4y = 5·(cos of the angle between (x, y) and (3, 4))·|(x, y)|, at most 5·5 = 25.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem p10.</b> Real numbers satisfy 2x + 3y + 6z = 49. What is the smallest possible value of x² + y² + z²?</p><details><summary>Hint</summary>Cauchy-Schwarz with (2, 3, 6).</details><details><summary>Answer</summary>49</details>
+<details><summary>Method: Cauchy</summary><p>(2x + 3y + 6z)² ≤ (4 + 9 + 36)(x² + y² + z²), so x² + y² + z² ≥ 49²/49 = 49.</p></details>
+<details><summary>Method: Equality</summary><p>Equality holds for (x, y, z) = (2, 3, 6), which satisfies 4 + 9 + 36 = 49.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem p11.</b> For positive x and y with 3x + 4y = 24, what is the largest possible value of xy?</p><details><summary>Hint</summary>AM-GM on 3x and 4y.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: AM-GM</summary><p>12xy = (3x)(4y) ≤ ((3x + 4y)/2)² = 144, so xy ≤ 12, with x = 4, y = 3.</p></details>
+<details><summary>Method: Substitution</summary><p>y = (24 − 3x)/4 gives xy = (24x − 3x²)/4, maximised at x = 4: 12.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem p12.</b> For positive a, b, c what is the smallest value of (a + b + c)(1/a + 1/b + 1/c)?</p><details><summary>Hint</summary>Cauchy-Schwarz or AM-GM.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Cauchy</summary><p>(a + b + c)(1/a + 1/b + 1/c) ≥ (1 + 1 + 1)² = 9.</p></details>
+<details><summary>Method: Equality</summary><p>At a = b = c the product is 3 · 3 = 9.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem p13.</b> What is the smallest value of x + 9/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: AM-GM</summary><p>x + 9/x ≥ 2√9 = 6, with equality at x = 3.</p></details>
+<details><summary>Method: Calculus</summary><p>The derivative 1 − 9/x² vanishes at x = 3, giving 6.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem p14.</b> Positive x and y satisfy x + y = 6. What is the largest possible value of x²y?</p><details><summary>Hint</summary>Split x into two halves.</details><details><summary>Answer</summary>32</details>
+<details><summary>Method: AM-GM</summary><p>x²y = 4 · (x/2)(x/2)y ≤ 4((x/2 + x/2 + y)/3)³ = 4 · 8 = 32, with x/2 = y, so x = 4, y = 2.</p></details>
+<details><summary>Method: Substitution</summary><p>x²(6 − x) = 6x² − x³ has derivative 12x − 3x² = 0 at x = 4, giving 16 · 2 = 32.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem p15.</b> The numbers 1, 2, 3, 4 are paired with 5, 6, 7, 8 in some order and the four products are added. What is the largest possible sum?</p><details><summary>Hint</summary>Rearrangement: pair largest with largest.</details><details><summary>Answer</summary>70</details>
+<details><summary>Method: Rearrangement</summary><p>1·5 + 2·6 + 3·7 + 4·8 = 5 + 12 + 21 + 32 = 70.</p></details>
+<details><summary>Method: Swap argument</summary><p>If a larger a is paired with a smaller b, swapping to the matched order increases the sum, so the sorted order is best.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem p16.</b> With the same numbers, what is the smallest possible sum of the four products?</p><details><summary>Hint</summary>Pair largest with smallest.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Rearrangement</summary><p>1·8 + 2·7 + 3·6 + 4·5 = 8 + 14 + 18 + 20 = 60.</p></details>
+<details><summary>Method: Check</summary><p>Checking another ordering, 1·6 + 2·5 + 3·8 + 4·7 = 68, which lies between 60 and 70 as it should.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem p17.</b> Positive x and y satisfy x + y = 8. What is the largest possible value of √x + √y?</p><details><summary>Hint</summary>Cauchy-Schwarz or concavity.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Cauchy</summary><p>(√x + √y)² ≤ 2(x + y) = 16, so √x + √y ≤ 4, with equality at x = y = 4.</p></details>
+<details><summary>Method: Check</summary><p>At x = y = 4 the value is 2 + 2 = 4, and at x = 1, y = 7 it is about 3.65.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem x18.</b> What is the smallest value of x + 16/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: AM-GM</summary><p>x + 16/x ≥ 2√16 = 8, with equality when x = 4.</p></details>
+<details><summary>Method: Table</summary><p>x = 3, 4, 5 give 25/3, 8, 41/5; the minimum is 8 at x = 4.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem x19.</b> If x + 1/x = 12, find x² + 1/x².</p><details><summary>Hint</summary>Square both sides.</details><details><summary>Answer</summary>142</details>
+<details><summary>Method: Square</summary><p>(x + 1/x)² = x² + 2 + 1/x², so x² + 1/x² = 144 − 2 = 142.</p></details>
+<details><summary>Method: Recurrence</summary><p>With pₙ = xⁿ + x⁻ⁿ we have p₀ = 2, p₁ = 12 and p₂ = 12 · p₁ − p₀ = 142.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem x20.</b> The roots of x² − 11x + 5 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>111</details>
+<details><summary>Method: Vieta</summary><p>r + s = 11 and rs = 5, so r² + s² = (r + s)² − 2rs = 121 − 10 = 111.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 11 and p₂ = 11 · p₁ − 5 · p₀ = 121 − 10 = 111.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem x21.</b> The roots of x² − 10x + 21 = 0 are r and s. Find r³ + s³.</p><details><summary>Hint</summary>(r + s)³ − 3rs(r + s).</details><details><summary>Answer</summary>370</details>
+<details><summary>Method: Identity</summary><p>r³ + s³ = (r + s)³ − 3rs(r + s) = 1000 − 630 = 370.</p></details>
+<details><summary>Method: Recurrence</summary><p>p₁ = 10, p₂ = 58, so p₃ = 10 · p₂ − 21 · p₁ = 580 − 210 = 370.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem x22.</b> Find 1² + 2² + … + 25².</p><details><summary>Hint</summary>n(n + 1)(2n + 1)/6.</details><details><summary>Answer</summary>5525</details>
+<details><summary>Method: Formula</summary><p>25 · 26 · 51/6 = 5525.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100 + 121 + 144 + 169 + 196 + 225 + 256 + 289 + 324 + 361 + 400 + 441 + 484 + 529 + 576 + 625 = 5525.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem x23.</b> What is the smallest value of x + 25/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: AM-GM</summary><p>x + 25/x ≥ 2√25 = 10, with equality when x = 5.</p></details>
+<details><summary>Method: Table</summary><p>x = 4, 5, 6 give 41/4, 10, 61/6; the minimum is 10 at x = 5.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem x24.</b> If x + 1/x = 4, find x² + 1/x².</p><details><summary>Hint</summary>Square both sides.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Square</summary><p>(x + 1/x)² = x² + 2 + 1/x², so x² + 1/x² = 16 − 2 = 14.</p></details>
+<details><summary>Method: Recurrence</summary><p>With pₙ = xⁿ + x⁻ⁿ we have p₀ = 2, p₁ = 4 and p₂ = 4 · p₁ − p₀ = 14.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>
+<div class=p><p><b>Problem x25.</b> The roots of x² − 12x + 20 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>104</details>
+<details><summary>Method: Vieta</summary><p>r + s = 12 and rs = 20, so r² + s² = (r + s)² − 2rs = 144 − 40 = 104.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 12 and p₂ = 12 · p₁ − 20 · p₀ = 144 − 40 = 104.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 7</p></div>

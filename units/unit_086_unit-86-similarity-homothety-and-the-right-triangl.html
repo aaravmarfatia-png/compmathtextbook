@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 86</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 86: Unit 86: Similarity, homothety and the right triangle</h1><p class=ref>Book: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles (25 problems)<br>Coxeter &amp; Greitzer, Geometry Revisited, chapters 1-2, and AoPS Volume 1 on similar triangles.</p>
+<h2>Reading</h2>
+<h3>1. Similarity and the right triangle</h3><p>Two triangles are <b>similar</b> if their angles are equal; then corresponding sides are proportional. Tests: AA, SAS (two sides proportional with the included angle equal), SSS. In a right triangle with legs a, b, hypotenuse c and altitude h to the hypotenuse, the altitude splits the triangle into two triangles similar to the original. This gives: h² = p q, a² = p c, b² = q c where p and q are the pieces of the hypotenuse.</p><p><b>Worked example 1.</b> In a 3-4-5 triangle the altitude to the hypotenuse is h = 12/5. The pieces are p = 9/5 (next to the leg 3) and q = 16/5: check pq = 144/25 = h² ✓ and 3² = 5 × 9/5 ✓.</p><p><b>Worked example 2.</b> In the 5-12-13 triangle: h = 60/13, with pieces 25/13 and 144/13. Check 25 × 144/169 = 3,600/169 = (60/13)² ✓.</p>
+<h3>2. Homothety</h3><p>A <b>homothety</b> (dilation) with centre O and ratio k sends every point P to P′ on line OP with OP′ = k · OP. It maps every line to a parallel line and every circle to a circle, multiplying lengths by |k| and areas by k². Two similar figures with parallel corresponding sides are related by a homothety.</p><p><b>Worked example 1.</b> The medial triangle (of the midpoints of the sides) is the image of the original triangle under a homothety centred at the centroid with ratio −1/2.</p><p><b>Worked example 2.</b> A circle of radius 2 and a circle of radius 6 are externally tangent. The tangent point is the homothety centre (ratio −3) sending one onto the other.</p><p><b>Centres of similitude.</b> Two circles with different radii have an external centre of similitude (on the line of centres, dividing it externally in the ratio of the radii) and an internal one. Common tangents pass through these points.</p>
+<h3>3. Useful similar-triangle arguments</h3><p><b>Thales's theorem.</b> A line parallel to one side of a triangle divides the other two sides proportionally. If DE ∥ BC with D on AB and E on AC, then AD/AB = AE/AC = DE/BC.</p><p><b>Worked example.</b> In triangle ABC, DE ∥ BC with AD = 4, DB = 6, BC = 15. Then DE = 15 × 4/10 = 6 and the area ratio of ADE to ABC is (4/10)² = 4/25.</p><p><b>Shadows and heights.</b> A pole of 3 m casts a 2 m shadow while a tree casts a 14 m shadow: tree height 21 m.</p><p><b>The geometric mean.</b> In the right triangle, the altitude is the geometric mean of the two pieces of the hypotenuse, and each leg is the geometric mean of the hypotenuse and its adjacent piece.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Matching the wrong vertices in a similarity. Squaring ratios for lengths. Forgetting that a homothety with negative ratio flips the figure.</p><p><b>Checks.</b> Check the ratios of all three pairs of sides.</p><p><b>Practice.</b> Write the similarity in order: △ABC ∼ △DEF.</p>
+<h3>Worked examples with Try-its: The right triangle altitude</h3><p>In a right triangle with legs a, b and hypotenuse c, the altitude h to the hypotenuse splits it into p and q (p + q = c) and creates two triangles similar to the original. Hence h² = pq, a² = pc, b² = qc and h = ab/c. For the 3-4-5 triangle h = 12/5, p = 9/5, q = 16/5 and indeed (12/5)² = 144/25 = (9/5)(16/5). For 5-12-13, h = 60/13.</p><details class="try"><summary>Try it<p>In a right triangle the altitude to the hypotenuse divides it into pieces 4 and 9. How long is the altitude?</p><p><b>Answer.</b> √36 = 6.</p></details>
+<h3>Worked examples with Try-its: Similarity and homothety</h3><p>If two figures are similar with ratio k, lengths scale by k, areas by k² and volumes by k³. A <b>homothety</b> (dilation) with centre O and ratio k sends each point P to the point P′ on ray OP with OP′ = k · OP. The medial triangle is the image of the original under a homothety with ratio −1/2 about the centroid, so its area is a quarter of the original.</p><details class="try"><summary>Try it<p>Two similar triangles have areas 18 and 50. What is the ratio of their sides?</p><p><b>Answer.</b> 3 : 5.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> A tree casts a 12 m shadow when a 2 m pole casts a 3 m shadow. How tall is the tree? <b>Solution.</b> The triangles are similar, so the height is 12 · 2/3 = 8 m.</p><p><b>Reflection.</b> Identify the matching vertices before writing the proportion.</p>
+<h3>More worked examples: Worked examples</h3><p>In a right triangle with legs 6 and 8 the altitude to the hypotenuse is 6 · 8/10 = 24/5 = 4.8. If DE ∥ BC in triangle ABC with AD = 3 and DB = 5, then DE/BC = AD/AB = 3/8. A dilation with ratio 3 multiplies lengths by 3 and areas by 9.</p><details class="try"><summary>Try it<p>Triangles ABC and DEF are similar with AB = 6, DE = 9. If the area of ABC is 20, what is the area of DEF?</p><p><b>Answer.</b> 20 · (9/6)² = 45.</p></details><details class="try"><summary>Try it<p>A 2 m pole casts a 3 m shadow while a tree casts a 15 m shadow. How tall is the tree?</p><p><b>Answer.</b> 10 m.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> In right triangle ABC with right angle at C, CD is the altitude to AB, AD = 4 and DB = 9. Find CD, AC and BC. <b>Solution.</b> CD² = 4 · 9 = 36, so CD = 6. AC² = AD · AB = 4 · 13 = 52 and BC² = 9 · 13 = 117, so AC = 2√13 and BC = 3√13. Check: AC² + BC² = 169 = 13².</p><p><b>Reflection.</b> The three similar triangles give all of these relations.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Two similar triangles have corresponding sides in ratio 3:5. The smaller has area 18. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square.</details><details><summary>Answer</summary>50</details>
+<details><summary>Method: Square of ratio</summary><p>18 · 25/9 = 50.</p></details>
+<details><summary>Method: Scale factor</summary><p>The scale factor is 5/3, so the area scales by 25/9.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem p2.</b> A 6 m pole casts a 4 m shadow. At the same time a tree casts a 10 m shadow. How tall is the tree?</p><details><summary>Hint</summary>Similar triangles.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Ratio</summary><p>Height/shadow = 6/4 = 3/2, so 10 · 3/2 = 15.</p></details>
+<details><summary>Method: Proportion</summary><p>6/4 = h/10 gives h = 15.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem p3.</b> A homothety with centre the origin and ratio −2 sends (3, −1) to (a, b). Find a + b.</p><details><summary>Hint</summary>Multiply the coordinates by −2.</details><details><summary>Answer</summary>-4</details>
+<details><summary>Method: Multiply</summary><p>(−6, 2), so a + b = −4.</p></details>
+<details><summary>Method: Reasoning</summary><p>The image is on the opposite side of O at twice the distance.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem p4.</b> A triangle has a side of length 14. A segment joins the midpoints of the other two sides. How long is it?</p><details><summary>Hint</summary>Midsegment theorem.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Midsegment</summary><p>It is parallel to the side and half as long: 7.</p></details>
+<details><summary>Method: Homothety</summary><p>It is the image of that side under the homothety with ratio 1/2 at the common vertex.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem p5.</b> A triangle has sides 13, 14, 15. Find the perimeter of the triangle formed by joining the midpoints of its sides.</p><details><summary>Hint</summary>Medial triangle has half the sides.</details><details><summary>Answer</summary>21</details>
+<details><summary>Method: Half</summary><p>The medial triangle's sides are 13/2, 7, 15/2 with sum 21.</p></details>
+<details><summary>Method: Ratio</summary><p>Perimeter scales by 1/2: 42/2 = 21.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem p6.</b> A trapezoid has parallel sides 6 and 10. A segment through the intersection of the diagonals, parallel to the bases, has endpoints on the legs. Find its length as a fraction.</p><details><summary>Hint</summary>It is the harmonic mean 2ab/(a + b).</details><details><summary>Answer</summary>15/2</details>
+<details><summary>Method: Harmonic mean</summary><p>2 · 6 · 10/16 = 15/2.</p></details>
+<details><summary>Method: Similar triangles</summary><p>The diagonals divide each other in ratio 6:10, so the segment through the intersection has half-length (6·10)/(6 + 10) = 15/4 on each side, total 15/2.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem p7.</b> A right triangle has legs 6 and 8. Find the altitude to the hypotenuse, as a fraction.</p><details><summary>Hint</summary>Area two ways.</details><details><summary>Answer</summary>24/5</details>
+<details><summary>Method: Area</summary><p>(1/2)(6)(8) = 24 = (1/2)(10)h, so h = 24/5.</p></details>
+<details><summary>Method: Similar triangles</summary><p>The small triangle with hypotenuse 6 is similar to the big one, so h/6 = 8/10 and h = 24/5.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem p8.</b> The altitude to the hypotenuse of a right triangle divides the hypotenuse into segments 4 and 9. Find the altitude.</p><details><summary>Hint</summary>h² = pq.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Geometric mean</summary><p>h² = 4 · 9 = 36 so h = 6.</p></details>
+<details><summary>Method: Legs</summary><p>The legs are √(4 · 13) and √(9 · 13), and the area gives h = (√52 · √117)/13 = 6.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem p9.</b> By what factor does the area of a triangle change when the triangle formed by joining midpoints of its sides is compared to it? (Give the area of the original divided by the area of the medial triangle.)</p><details><summary>Hint</summary>Ratio 1/2 in lengths.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Square</summary><p>The medial triangle has half the lengths, hence a quarter of the area, so the ratio is 4.</p></details>
+<details><summary>Method: Dissection</summary><p>The medial triangle and three corner triangles are four congruent triangles.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem p10.</b> Two similar triangles have corresponding sides in ratio 3:5. The smaller has area 18. Find the larger area.</p><details><summary>Hint</summary>Areas scale by the square.</details><details><summary>Answer</summary>50</details>
+<details><summary>Method: Ratio</summary><p>The area ratio is 9:25, so the larger area is 18 · 25/9 = 50.</p></details>
+<details><summary>Method: Scale factor</summary><p>Linear factor 5/3 gives area factor 25/9, so 18 · 25/9 = 50.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem p11.</b> A 2 m stick casts a 3 m shadow while a tree casts a 24 m shadow. How tall is the tree in metres?</p><details><summary>Hint</summary>Similar right triangles.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Proportion</summary><p>h/24 = 2/3, so h = 16.</p></details>
+<details><summary>Method: Scale</summary><p>The shadow is 8 times longer, so the tree is 8 · 2 = 16 m.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem p12.</b> A homothety with centre (0, 0) and ratio 3 sends (2, 1) to a point. What is the sum of that point's coordinates?</p><details><summary>Hint</summary>Multiply the coordinates by 3.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Scale</summary><p>(2, 1) goes to (6, 3), sum 9.</p></details>
+<details><summary>Method: Vector</summary><p>The image is O + 3(P − O) = 3P.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem p13.</b> In triangle ABC, D is on AB and E on AC with DE parallel to BC, AD = 3, DB = 2 and BC = 10. Find DE.</p><details><summary>Hint</summary>Triangle ADE is similar to ABC.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Similarity</summary><p>AD/AB = 3/5, so DE = 10 · 3/5 = 6.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put A at the origin; the homothety with ratio 3/5 maps B, C to D, E, so DE = (3/5)BC.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem p14.</b> In triangle ABC, D is on AB and E on AC with DE parallel to BC and AD:AB = 2:5. The area of ABC is 75. Find the area of ADE.</p><details><summary>Hint</summary>Area ratio is 4:25.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Ratio</summary><p>75 · 4/25 = 12.</p></details>
+<details><summary>Method: Trapezoid</summary><p>The trapezoid DBCE has area 75 − 12 = 63, ratio 12:63 = 4:21, as expected for 4:25.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem p15.</b> A model is built at scale 1:50. A real room is 3.5 m long. How long is the model in centimetres?</p><details><summary>Hint</summary>Convert 3.5 m to cm first.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Convert</summary><p>350 cm / 50 = 7 cm.</p></details>
+<details><summary>Method: Metres</summary><p>3.5/50 = 0.07 m = 7 cm.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem p16.</b> Two similar triangles have perimeters in the ratio 2:3. The smaller has perimeter 24. Find the larger perimeter.</p><details><summary>Hint</summary>Perimeters scale linearly.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Ratio</summary><p>24 · 3/2 = 36.</p></details>
+<details><summary>Method: Scale</summary><p>The scale factor is 3/2, so 24 · 3/2 = 36.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem p17.</b> The midpoints of the sides of a triangle of area 48 form a smaller triangle. What is its area?</p><details><summary>Hint</summary>The ratio of similarity is 1/2.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Similarity</summary><p>The medial triangle has half the sides, so a quarter of the area: 12.</p></details>
+<details><summary>Method: Dissection</summary><p>The four triangles formed are congruent, each of area 48/4 = 12.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem x18.</b> Two similar triangles have corresponding sides in the ratio 2 : 7. The smaller has area 10. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square of the ratio.</details><details><summary>Answer</summary>245/2</details>
+<details><summary>Method: Area ratio</summary><p>The areas are in the ratio 4 : 49, so the larger area is 10 · 49/4 = 245/2.</p></details>
+<details><summary>Method: Scale factor</summary><p>The linear factor is 7/2, so the area factor is 49/4; 10 · 49/4 = 245/2.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem x19.</b> Find the area of the triangle with sides 9, 12 and 15.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>54</details>
+<details><summary>Method: Heron</summary><p>s = 18, so K = √(18 · 9 · 6 · 3) = 54.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 15 is 2K/15 = 36/5, so the area is ½ · 15 · 36/5 = 54.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem x20.</b> Two similar triangles have corresponding sides in the ratio 3 : 5. The smaller has area 36. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square of the ratio.</details><details><summary>Answer</summary>100</details>
+<details><summary>Method: Area ratio</summary><p>The areas are in the ratio 9 : 25, so the larger area is 36 · 25/9 = 100.</p></details>
+<details><summary>Method: Scale factor</summary><p>The linear factor is 5/3, so the area factor is 25/9; 36 · 25/9 = 100.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem x21.</b> Find the area of the triangle with sides 6, 25 and 29.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Heron</summary><p>s = 30, so K = √(30 · 24 · 5 · 1) = 60.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 29 is 2K/29 = 120/29, so the area is ½ · 29 · 120/29 = 60.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem x22.</b> Two similar triangles have corresponding sides in the ratio 4 : 7. The smaller has area 48. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square of the ratio.</details><details><summary>Answer</summary>147</details>
+<details><summary>Method: Area ratio</summary><p>The areas are in the ratio 16 : 49, so the larger area is 48 · 49/16 = 147.</p></details>
+<details><summary>Method: Scale factor</summary><p>The linear factor is 7/4, so the area factor is 49/16; 48 · 49/16 = 147.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem x23.</b> Find the area of the triangle with sides 13, 13 and 24.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Heron</summary><p>s = 25, so K = √(25 · 12 · 12 · 1) = 60.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 24 is 2K/24 = 5, so the area is ½ · 24 · 5 = 60.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem x24.</b> Two similar triangles have corresponding sides in the ratio 2 : 5. The smaller has area 12. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square of the ratio.</details><details><summary>Answer</summary>75</details>
+<details><summary>Method: Area ratio</summary><p>The areas are in the ratio 4 : 25, so the larger area is 12 · 25/4 = 75.</p></details>
+<details><summary>Method: Scale factor</summary><p>The linear factor is 5/2, so the area factor is 25/4; 12 · 25/4 = 75.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>
+<div class=p><p><b>Problem x25.</b> Find the area of the triangle with sides 17, 25 and 26.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>204</details>
+<details><summary>Method: Heron</summary><p>s = 34, so K = √(34 · 17 · 9 · 8) = 204.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 26 is 2K/26 = 204/13, so the area is ½ · 26 · 204/13 = 204.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 1-2; AoPS Vol. 1 similar triangles</p></div>

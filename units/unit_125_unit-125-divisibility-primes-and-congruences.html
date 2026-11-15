@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 125</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 125: Unit 125: Divisibility, primes and congruences</h1><p class=ref>Book: Zeitz ch. 7 (25 problems)<br>Zeitz, The Art and Craft of Problem Solving, chapter 7 (Number Theory: divisibility, primes, congruences, Diophantine problems).</p>
+<h2>Reading</h2>
+<h3>1. Divisibility and gcd</h3><p>Divisibility rules: by 2 (last digit even), 3 and 9 (digit sum), 4 (last two digits), 5, 8 (last three digits), 11 (alternating digit sum). The <b>greatest common divisor</b> is found by the Euclidean algorithm: gcd(a, b) = gcd(b, a mod b).</p><p><b>Worked example.</b> gcd(252, 198): 252 = 1 × 198 + 54; 198 = 3 × 54 + 36; 54 = 1 × 36 + 18; 36 = 2 × 18. So gcd = 18. Also gcd(a, b) is the smallest positive value of ax + by (Bézout).</p><p><b>Useful fact.</b> If d divides both a and b then d divides ax + by for all x, y. Hence gcd(n, n + 1) = 1, and gcd(2n + 1, n) = 1.</p>
+<h3>2. Primes</h3><p>A number n > 1 is composite iff it has a prime factor at most √n. So to test 221 you only need primes up to 14: 13 divides it, 221 = 13 × 17. There are infinitely many primes (Euclid: N = p₁ … p_k + 1 has a prime factor not on the list). The number of divisors of n = p₁^{a₁} … is Π(a_i + 1); 360 = 2³ · 3² · 5 has 4 × 3 × 2 = 24 divisors.</p><p><b>Worked example.</b> n⁵ − n is divisible by 30 for every integer n: factor n(n − 1)(n + 1)(n² + 1). It is divisible by 2 and 3 (consecutive integers), and by 5 by Fermat (n⁵ ≡ n mod 5). We confirmed it for n up to 199.</p><p><b>Primes in arithmetic progressions.</b> Every prime above 3 is ≡ 1 or 5 mod 6.</p>
+<h3>3. Congruences and the Chinese remainder theorem</h3><p>a ≡ b (mod m) means m divides a − b. Congruences can be added and multiplied, and divided by a number coprime to the modulus. The <b>Chinese remainder theorem:</b> if the moduli are pairwise coprime, a system x ≡ r_i (mod m_i) has a unique solution mod the product.</p><p><b>Worked example.</b> x ≡ 2 (mod 3), x ≡ 3 (mod 5), x ≡ 2 (mod 7). From the first and third, x ≡ 2 (mod 21): x = 2, 23, 44, … ; the second needs x ≡ 3 mod 5: 23 works (23 = 4 × 5 + 3). So x ≡ 23 (mod 105).</p><p><b>Last digits.</b> 7⁴ = 2401 ≡ 1 (mod 100), so the last two digits of 7⁴ᵏ are 01; 3²⁰ ≡ 1 mod 100 as well.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Dividing a congruence by a number not coprime to the modulus. Forgetting that 1 is not prime. Applying CRT when moduli share a factor.</p><p><b>Checks.</b> Substitute the solution into every congruence.</p><p><b>Practice.</b> Write numbers as qm + r and track r.</p>
+<h3>Worked examples with Try-its: Divisibility and primes</h3><p>There are 15 primes below 50: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47. To test whether n is prime, check divisibility by primes up to √n. gcd(84, 36) = 12. Useful facts: n⁵ − n is divisible by 30 for every integer n, and n⁷ − n is divisible by 7 (Fermat's little theorem).</p><details class="try"><summary>Try it<p>Is 247 prime?</p><p><b>Answer.</b> No: 247 = 13 · 19.</p></details>
+<h3>Worked examples with Try-its: Working with congruences</h3><p>If a ≡ b and c ≡ d (mod m) then a + c ≡ b + d and ac ≡ bd. To find the last digit of 7²⁰²⁶, note the cycle 7, 9, 3, 1 of length 4 and 2026 ≡ 2 (mod 4), so the last digit is 9. To divide in a congruence the divisor must be coprime to the modulus.</p><details class="try"><summary>Try it<p>What is the remainder when 2¹⁰⁰ is divided by 7?</p><p><b>Answer.</b> 2³ ≡ 1 (mod 7) and 100 = 3 · 33 + 1, so the remainder is 2.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Find all primes p such that p + 2 and p + 4 are also prime. <b>Solution.</b> One of p, p + 2, p + 4 is divisible by 3 (they cover all three residues mod 3), so one of them equals 3, which forces p = 3. Indeed 3, 5, 7 are all prime.</p><p><b>Reflection.</b> Residue classes force one member of the triple to be a multiple of 3.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Primes.</b> The primes p below 20 for which p + 6 is also prime include 5, 7, 11, 13 and 17. <b>gcd of powers.</b> gcd(2¹² − 1, 2¹⁸ − 1) = 2^gcd(12, 18) − 1 = 2⁶ − 1 = 63. <b>Divisibility.</b> n² + n is always even, so n(n + 1)(n + 2) is divisible by 6.</p><details class="try"><summary>Try it<p>Find gcd(2⁸ − 1, 2¹² − 1).</p><p><b>Answer.</b> 2⁴ − 1 = 15.</p></details><details class="try"><summary>Try it<p>Is 91 prime?</p><p><b>Answer.</b> No: 91 = 7 · 13.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Prove that the product of any 3 consecutive integers is divisible by 6. <b>Solution.</b> Among 3 consecutive integers one is divisible by 3 and at least one is even, so the product is divisible by 2 · 3 = 6.</p><p><b>Check.</b> 4 · 5 · 6 = 120 = 6 · 20 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> How many positive divisors does 360 have?</p><details><summary>Hint</summary>Factor first.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Exponent formula</summary><p>360 = 2^3 · 3^2 · 5, so the count is 4 · 3 · 2 = 24.</p></details>
+<details><summary>Method: Pairing</summary><p>Divisors pair as d and 360/d: 1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180, 360. There are 24 of them.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p2.</b> Find σ(252), the sum of all positive divisors of 252.</p><details><summary>Hint</summary>Factor 252 into primes and use that σ is multiplicative.</details><details><summary>Answer</summary>728</details>
+<details><summary>Method: Multiplicative</summary><p>252 = 2^2 · 3^2 · 7. σ(p^k) = 1 + p + … + p^k, giving 7 and 13 and 8, whose product is 728.</p></details>
+<details><summary>Method: List the divisors</summary><p>The divisors are 1, 2, 3, 4, 6, 7, 9, 12, 14, 18, 21, 28, 36, 42, 63, 84, 126, 252, and their sum is 728.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p3.</b> Find φ(210), the number of integers from 1 to 210 that are coprime to 210.</p><details><summary>Hint</summary>Use the product formula over the prime factors.</details><details><summary>Answer</summary>48</details>
+<details><summary>Method: Multiplicative formula</summary><p>210 = 2 · 3 · 5 · 7, so φ = 1 · 2 · 4 · 6 = 48.</p></details>
+<details><summary>Method: Inclusion-exclusion</summary><p>Start with 210 and remove multiples of each prime, add back overlaps: 210 −105 −70 −42 −30 +35 +21 +15 +14 +10 +6 −7 −5 −3 −2 +1 = 48.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p4.</b> Find gcd(1547, 1105).</p><details><summary>Hint</summary>Use Euclid's algorithm.</details><details><summary>Answer</summary>221</details>
+<details><summary>Method: Euclid</summary><p>1547 = 1 · 1105 + 442; 1105 = 2 · 442 + 221; 442 = 2 · 221 + 0, so the gcd is 221.</p></details>
+<details><summary>Method: Prime factors</summary><p>1547 = 7 · 13 · 17 and 1105 = 5 · 13 · 17; the common part is 221.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p5.</b> Find lcm(84, 126).</p><details><summary>Hint</summary>lcm · gcd = product.</details><details><summary>Answer</summary>252</details>
+<details><summary>Method: Using the gcd</summary><p>gcd = 42, so lcm = 84 · 126/42 = 252.</p></details>
+<details><summary>Method: Prime powers</summary><p>84 = 2^2 · 3 · 7 and 126 = 2 · 3^2 · 7; take the larger power of each prime to get 252.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p6.</b> What is the remainder when 7^2026 is divided by 13?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 7, 7², 7³, … are 7, 10, 5, 9, 11, 12, 6, 3, 8, 4, 2, 1, and then they repeat from position 1 with period 12. Exponent 2026 lands on 4.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 2026 = 11111101010 in binary. The squares 7^(2^i) mod 13 are 7, 10, 9, 3, 9, 3, 9, 3, 9, 3, 9; multiplying the ones for the 1-bits gives 4.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p7.</b> What is the last digit of 13^2027?</p><details><summary>Hint</summary>Find the pattern of remainders of successive powers.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Cycle of remainders</summary><p>The remainders of 13, 13², 13³, … are 3, 9, 7, 1, and then they repeat from position 1 with period 4. Exponent 2027 lands on 7.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Write 2027 = 11111101011 in binary. The squares 13^(2^i) mod 10 are 3, 9, 1, 1, 1, 1, 1, 1, 1, 1, 1; multiplying the ones for the 1-bits gives 7.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p8.</b> Find the smallest positive integer x with x ≡ 3 (mod 7) and x ≡ 5 (mod 11).</p><details><summary>Hint</summary>List numbers of the first kind and test the second.</details><details><summary>Answer</summary>38</details>
+<details><summary>Method: Listing</summary><p>Numbers ≡ 3 (mod 7): 3, 10, 17, 24, 31, 38. The first with remainder 5 mod 11 is 38.</p></details>
+<details><summary>Method: Algebra</summary><p>Write x = 3 + 7t. Then 3 + 7t ≡ 5 (mod 11) gives t ≡ 5, so x = 3 + 7 · 5 = 38.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p9.</b> Find the smallest positive x with 17x ≡ 1 (mod 43).</p><details><summary>Hint</summary>Try multiples, or use the Euclidean algorithm.</details><details><summary>Answer</summary>38</details>
+<details><summary>Method: Table</summary><p>17 · k mod 43 for k = 1, 2, …: 17, 34, 8, 25, 42, 16, 33, 7, 24, 41, 15, 32, 6, 23, 40, 14, 31, 5, 22, 39, 13, 30, 4, 21, 38, 12, 29, 3, 20, 37, 11, 28, 2, 19, 36, 10, 27, 1; the first 1 appears at k = 38.</p></details>
+<details><summary>Method: Equation</summary><p>We need 17 · x = 1 + 43 · t. With x = 38 we get 646 = 1 + 43 · 15, which checks.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p10.</b> How many zeros does 150! end with?</p><details><summary>Hint</summary>Count the factors of 5; there are plenty of 2s.</details><details><summary>Answer</summary>37</details>
+<details><summary>Method: Legendre</summary><p>30 + 6 + 1 = 37.</p></details>
+<details><summary>Method: Digit sum</summary><p>150 has base-5 digit sum 2, so the exponent is (150 − 2)/4 = 37.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p11.</b> How many pairs of positive integers (x, y) satisfy 7x + 11y = 200?</p><details><summary>Hint</summary>Test values of one variable.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: List</summary><p>The solutions are (5, 15), (16, 8), (27, 1), which is 3 pairs.</p></details>
+<details><summary>Method: Step pattern</summary><p>Solutions are spaced by (11, −7) since gcd(7, 11) = 1, so they form a short arithmetic list: 3 in total.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p12.</b> What is the largest amount that cannot be paid exactly with coins of 7 and 12?</p><details><summary>Hint</summary>The Chicken McNugget (Frobenius) formula.</details><details><summary>Answer</summary>65</details>
+<details><summary>Method: Formula</summary><p>For coprime a, b the answer is ab − a − b = 84 − 7 − 12 = 65.</p></details>
+<details><summary>Method: Check</summary><p>The numbers 65 − 7k are 65, 58, 51, 44, 37, 30, 23, 16, 9, 2, and none is a multiple of 12, so 65 cannot be made.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p13.</b> Write 2026 in base 7.</p><details><summary>Hint</summary>Divide repeatedly by 7 and record remainders.</details><details><summary>Answer</summary>5623</details>
+<details><summary>Method: Repeated division</summary><p>Dividing by 7 repeatedly gives the remainders 3, 2, 6, 5 in that order; reading them backwards gives 5623.</p></details>
+<details><summary>Method: Place values</summary><p>5623: 5·7^3 + 6·7^2 + 2·7^1 + 3·7^0, which total 2026.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p14.</b> Convert 4325 (base 6) to base 10.</p><details><summary>Hint</summary>Use place values.</details><details><summary>Answer</summary>989</details>
+<details><summary>Method: Place values</summary><p>4·6^3 + 3·6^2 + 2·6^1 + 5·6^0 = 989.</p></details>
+<details><summary>Method: Horner</summary><p>Double-and-add style: starting from 0, multiply by 6 and add each digit: 4, 27, 164, 989, ending at 989.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p15.</b> How many integers n with 1 ≤ n ≤ 100 satisfy n² ≡ 1 (mod 24)?</p><details><summary>Hint</summary>Find the residues mod 24 first.</details><details><summary>Answer</summary>33</details>
+<details><summary>Method: Residues</summary><p>Checking n = 0 … 23, the square is 1 only for n = 1, 5, 7, 11, 13, 17, 19, 23. These repeat every 24, giving 33 values up to 100: 1, 5, 7, 11, 13, 17, 19, 23, 25, 29, 31, 35, 37, 41, 43, 47, 49, 53, 55, 59, 61, 65, 67, 71, 73, 77, 79, 83, 85, 89, 91, 95, 97.</p></details>
+<details><summary>Method: Split the modulus</summary><p>n² ≡ 1 mod 8 needs n odd (4 residues mod 8: 1, 3, 5, 7), and n² ≡ 1 mod 3 needs n ≢ 0 mod 3 (2 residues mod 3). Together that is 4 · 2 = 8 residues mod 24, and 8 of them occur in each block of 24, so up to 100 we get 33.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p16.</b> What is the smallest positive integer k such that 12k is a perfect square?</p><details><summary>Hint</summary>Make every prime exponent even.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Prime exponents</summary><p>12 = 2^2 · 3. Each odd exponent needs one more factor of that prime, so k = 3.</p></details>
+<details><summary>Method: Square-free part</summary><p>Remove the largest square factor of 12: 12 = 2² · 3, so the square-free part is 3, and k equals it.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p17.</b> What is the smallest positive integer k such that 18k is a perfect square?</p><details><summary>Hint</summary>Make every prime exponent even.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Prime exponents</summary><p>18 = 2 · 3^2. Each odd exponent needs one more factor of that prime, so k = 2.</p></details>
+<details><summary>Method: Square-free part</summary><p>Remove the largest square factor of 18: 18 = 3² · 2, so the square-free part is 2, and k equals it.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p18.</b> What is the smallest positive integer k such that 50k is a perfect square?</p><details><summary>Hint</summary>Make every prime exponent even.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Prime exponents</summary><p>50 = 2 · 5^2. Each odd exponent needs one more factor of that prime, so k = 2.</p></details>
+<details><summary>Method: Square-free part</summary><p>Remove the largest square factor of 50: 50 = 5² · 2, so the square-free part is 2, and k equals it.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p19.</b> How many odd positive divisors does 2024 have?</p><details><summary>Hint</summary>Remove all the factors of 2 first.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Factor</summary><p>2024 = 2^3 · 11 · 23, so the odd divisors come from the odd part only: 4.</p></details>
+<details><summary>Method: List</summary><p>The odd divisors are 1, 11, 23, 253: 4 of them.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p20.</b> How many positive integers divide both 144 and 60?</p><details><summary>Hint</summary>Common divisors are divisors of the gcd.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Via the gcd</summary><p>gcd(144, 60) = 12, which has 6 divisors.</p></details>
+<details><summary>Method: Test divisors</summary><p>The divisors of 144 are 1, 2, 3, 4, 6, 8, 9, 12, 16, 18, 24, 36, 48, 72, 144; those that also divide 60 are 1, 2, 3, 4, 6, 12.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p21.</b> How many integers from 1 to 1000 are relatively prime to 1000?</p><details><summary>Hint</summary>Use φ.</details><details><summary>Answer</summary>400</details>
+<details><summary>Method: φ formula</summary><p>1000 = 2^3 · 5^3, so φ = 400.</p></details>
+<details><summary>Method: Remove multiples</summary><p>Remove the 500 multiples of 2 and the 200 multiples of 5, add back the 100 multiples of 10: 1000 − 500 − 200 + 100 = 400.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p22.</b> What is the remainder when 2^100 is divided by 7?</p><details><summary>Hint</summary>Look for the cycle of powers.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Cycle</summary><p>Powers of 2 mod 7 repeat 2, 4, 1 with period 3. Since 100 = 3 · 33 + 1, 2^100 ≡ 2^1 = 2.</p></details>
+<details><summary>Method: Fermat</summary><p>2^6 ≡ 1 mod 7, and 100 = 6 · 16 + 4, so 2^100 ≡ 2^4 = 16 ≡ 2.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p23.</b> What is 3^100 mod 100?</p><details><summary>Hint</summary>Find the period of 3^k mod 100.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Squaring</summary><p>3^10 = 59049 ≡ 49, so 3^20 ≡ 49² = 2401 ≡ 1 mod 100. Then 3^100 = (3^20)^5 ≡ 1.</p></details>
+<details><summary>Method: Mod 4 and mod 25</summary><p>3^100 ≡ 1 mod 4 as 3² ≡ 1. Mod 25, φ(25) = 20 so 3^20 ≡ 1 and 3^100 ≡ 1. Combining gives 1 mod 100.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p24.</b> Find φ(360), the number of integers from 1 to 360 that are coprime to 360.</p><details><summary>Hint</summary>Use the product formula over the prime factors.</details><details><summary>Answer</summary>96</details>
+<details><summary>Method: Multiplicative formula</summary><p>360 = 2^3 · 3^2 · 5, so φ = 4 · 6 · 4 = 96.</p></details>
+<details><summary>Method: Inclusion-exclusion</summary><p>Start with 360 and remove multiples of each prime, add back overlaps: 360 −180 −120 −72 +60 +36 +24 −12 = 96.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>
+<div class=p><p><b>Problem p25.</b> Find gcd(2431, 1989).</p><details><summary>Hint</summary>Use Euclid's algorithm.</details><details><summary>Answer</summary>221</details>
+<details><summary>Method: Euclid</summary><p>2431 = 1 · 1989 + 442; 1989 = 4 · 442 + 221; 442 = 2 · 221 + 0, so the gcd is 221.</p></details>
+<details><summary>Method: Prime factors</summary><p>2431 = 11 · 13 · 17 and 1989 = 3^2 · 13 · 17; the common part is 221.</p></details>
+<p class=ref>Source: Zeitz ch. 7</p></div>

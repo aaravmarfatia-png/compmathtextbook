@@ -1,0 +1,111 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 30</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 30: Unit 30: No square is negative; the expression x + 1/x</h1><p class=ref>Book: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1 and 2.8 (25 problems)<br>Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8.</p>
+<h2>Reading</h2>
+<h3>1. No square is negative</h3><p>The fact that every real number squared is at least zero, and equals zero only for zero, is a source of many beautiful inequalities. The basic one is (x − y)² ≥ 0, which expands to x² − 2xy + y² ≥ 0, i.e. <b>x² + y² ≥ 2xy</b>, with equality exactly when x = y. Every argument in this unit is a variation on this single idea: <i>rewrite an expression as a sum of squares plus a constant</i>.</p><p><b>Completing the square.</b> x² − 6x + 11 = (x − 3)² + 2 ≥ 2, so the smallest value is 2, reached when x = 3. And −x² + 4x + 1 = 5 − (x − 2)², so the largest value is 5, at x = 2. For a general quadratic ax² + bx + c with a > 0, the minimum is at x = −b/(2a); for 3x² − 12x + 7 = 3(x − 2)² − 5 the minimum is −5 at x = 2. The identities were confirmed by algebra software.</p><p><b>Products with a fixed sum.</b> If x + y = 10, then xy = x(10 − x) = 25 − (x − 5)² ≤ 25, so the product is at most 25 and the maximum occurs when x = y = 5. The general rule: among all rectangles of the same perimeter, the square has the greatest area.</p><p><b>A sum of squares equal to zero.</b> If x² + y² − 4x + 6y + 13 = 0, then (x − 2)² + (y + 3)² = 0. Each square is non-negative and their sum is zero, so each is zero: x = 2 and y = −3. This 'sum of squares' trick turns one equation into two.</p><details class="try"><summary>Try it</summary><p>Find the minimum of x² + 4x + 9 and where it occurs.</p><p><b>Answer.</b> (x + 2)² + 5, so the minimum is 5, at x = −2.</p></details>
+<h3>2. The expression x + 1/x</h3><p>For x > 0 we have x + 1/x ≥ 2, with equality only at x = 1. Proof: x + 1/x − 2 = (x − 1)²/x ≥ 0, or (√x − 1/√x)² ≥ 0. For x < 0 the sum is at most −2 (apply the result to −x). So x + 1/x never takes values strictly between −2 and 2 for real x. Similarly, x + 4/x ≥ 4 for x > 0, with equality at x = 2: a computer scan agrees that the smallest value is exactly 4.</p><p><b>Ratios.</b> For positive a and b, a/b + b/a ≥ 2; and (a + b)(1/a + 1/b) ≥ 4, because expanding gives 2 + a/b + b/a. Both were tested on a thousand random positive pairs.</p><p><b>The idea of a substitution.</b> Put t = x + 1/x. Then x² + 1/x² = t² − 2, because t² = x² + 2 + 1/x². For example, if x + 1/x = 3, then x² + 1/x² = 7, and x³ + 1/x³ = t³ − 3t = 27 − 9 = 18, and x⁴ + 1/x⁴ = 7² − 2 = 47. Numerically, with x = (3 + √5)/2 all of these hold. Each new power follows from the recurrence pₙ = t pₙ₋₁ − pₙ₋₂ with p₀ = 2, p₁ = t: for t = 3 the sequence is 2, 3, 7, 18, 47, 123.</p><p><b>Differences.</b> If x − 1/x = 2, then x² + 1/x² = (x − 1/x)² + 2 = 6 and x³ − 1/x³ = (x − 1/x)³ + 3(x − 1/x) = 8 + 6 = 14, checked at x = 1 + √2.</p><details class="try"><summary>Try it</summary><p>If x + 1/x = 5, find x² + 1/x².</p><p><b>Answer.</b> 25 − 2 = 23.</p></details>
+<h3>3. Solving equations with x + 1/x</h3><p><b>Reciprocal equations.</b> A polynomial whose coefficients read the same forwards and backwards can be solved by dividing by a power of x and substituting t = x + 1/x. Consider x⁴ − 5x³ + 8x² − 5x + 1 = 0. Divide by x²: x² + 1/x² − 5(x + 1/x) + 8 = 0. With t = x + 1/x this becomes (t² − 2) − 5t + 8 = t² − 5t + 6 = 0, so t = 2 or t = 3. Then x + 1/x = 2 gives x = 1 (a double root), and x + 1/x = 3 gives x = (3 ± √5)/2. Check by factoring: the quartic equals (x − 1)²(x² − 3x + 1).</p><p><b>Direct use.</b> x + 1/x = 5/2 means 2x² − 5x + 2 = 0, so x = 2 or x = 1/2: the two solutions are reciprocals of each other, as they always are for equations in x + 1/x.</p><p><b>Which values of t are possible?</b> For real x, t = x + 1/x requires |t| ≥ 2. If your substitution yields a value of t with |t| < 2, the original equation has no real root from that branch (it has complex ones).</p><details class="try"><summary>Try it</summary><p>Solve x + 1/x = 10/3.</p><p><b>Answer.</b> 3x² − 10x + 3 = 0, so x = 3 or x = 1/3.</p></details>
+<h3>4. Inequalities from squares</h3><p><b>Three variables.</b> a² + b² + c² − ab − bc − ca = ½[(a − b)² + (b − c)² + (c − a)²] ≥ 0, so a² + b² + c² ≥ ab + bc + ca. Adding 2(ab + bc + ca) to both sides: (a + b + c)² ≥ 3(ab + bc + ca). Both identities were checked algebraically.</p><p><b>Averages.</b> From (a − b)² ≥ 0 we get (a + b)² ≤ 2(a² + b²): the square of the sum is at most twice the sum of the squares. So if a² + b² = 1, then a + b ≤ √2, with equality when a = b = 1/√2.</p><p><b>Cauchy in two variables.</b> The identity (x² + 1)(1 + y²) = (x + y)² + (xy − 1)² shows that (x² + 1)(y² + 1) ≥ (x + y)², with equality exactly when xy = 1. It is the two-variable case of the Cauchy–Schwarz inequality from Unit 14.</p><p><b>A bounded fraction.</b> x/(x² + 1) ≤ 1/2 for every real x, because (x − 1)² ≥ 0 gives x² + 1 ≥ 2x. Equality at x = 1. When a fraction involves x and 1/x, divide top and bottom by x.</p><details class="try"><summary>Try it</summary><p>Prove that a² + b² + 1 ≥ ab + a + b.</p><p><b>Answer.</b> Multiply by 2: (a − b)² + (a − 1)² + (b − 1)² ≥ 0.</p></details>
+<h3>5. Optimisation problems</h3><p><b>The method.</b> To find the greatest or least value of an expression: (1) rewrite it as a perfect square (or sum of squares) plus a constant, or use x + 1/x ≥ 2; (2) read off the extreme value; (3) say when equality holds and check that such values of the variables are allowed.</p><p><b>Example 1.</b> Minimise x² + 1/x² + x + 1/x for x > 0. With t = x + 1/x ≥ 2, the expression is t² − 2 + t, increasing for t ≥ 2, so the minimum is 4 − 2 + 2 = 4, at x = 1. <b>Example 2.</b> A rectangle has perimeter 20. Its area is x(10 − x) = 25 − (x − 5)² ≤ 25: the maximum area is 25. <b>Example 3.</b> Find the minimum of 3x² − 12x + 7: it is −5 at x = 2.</p><p><b>Common trap.</b> Making sure that equality can actually be achieved. The inequality x + 1/x ≥ 2 gives the minimum of (x + 1/x) + something only when the other terms can also be minimised at x = 1.</p><details class="try"><summary>Try it</summary><p>Find the maximum of x(12 − 2x) for real x.</p><p><b>Answer.</b> 2x(6 − x) = 2(9 − (x − 3)²) = 18 − 2(x − 3)², maximum 18 at x = 3.</p></details>
+<h3>6. A longer problem</h3><p><b>Problem.</b> Let x be a positive real number with x + 1/x = 4. Find x² + 1/x², x⁴ + 1/x⁴ and x³ + 1/x³. Then find the smallest possible value of (x + 1/x)² + (x² + 1/x²) over all positive real x, and say when it occurs.</p><p><b>Solution.</b> x² + 1/x² = 16 − 2 = 14. x⁴ + 1/x⁴ = 14² − 2 = 194. x³ + 1/x³ = 4³ − 3 · 4 = 52. For the optimisation, put t = x + 1/x ≥ 2: then the expression is t² + (t² − 2) = 2t² − 2 ≥ 2 · 4 − 2 = 6, with equality at t = 2, i.e. x = 1.</p><p><b>Reflection.</b> The substitution t = x + 1/x lets one function of x serve every power, and the range t ≥ 2 gives the optimisation for free. Always ask what restriction the new variable obeys.</p>
+<h3>7. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Using x + 1/x ≥ 2 for negative x. (2) Forgetting to state when equality holds. (3) Taking the square root of both sides without ±. (4) Believing a minimum is attained when the equality case is impossible. (5) Substituting t = x + 1/x and forgetting that t must satisfy |t| ≥ 2.</p><p><b>Checks.</b> Test your extreme value by trying numbers on either side of the claimed minimiser. Substitute the claimed equality case. Check the identity you used by expanding both sides.</p><p><b>How to practise.</b> Complete the square on every quadratic you meet. In Unlimited practice, rotate the x + 1/x and sum-of-squares families.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find the smallest value of x² − 6x + 13 for real x.</p><details><summary>Hint</summary>Complete the square.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Complete the square</summary><p>x² − 6x + 13 = (x − 3)² + 4 ≥ 4, with equality at x = 3.</p></details>
+<details><summary>Method: Vertex formula</summary><p>The parabola has its minimum at x = 6/2 = 3, where the value is 9 − 18 + 13 = 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem p2.</b> Real numbers x and y satisfy x² + y² − 4x + 6y + 13 = 0. Find x + y.</p><details><summary>Hint</summary>Write the left side as a sum of squares.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Sum of squares</summary><p>x² − 4x + 4 + y² + 6y + 9 = (x − 2)² + (y + 3)². The equation says this is 0, so x = 2, y = −3, and x + y = −1.</p></details>
+<details><summary>Method: Check</summary><p>4 + 9 − 8 − 18 + 13 = 0.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8 (no square is negative)</p></div>
+<div class=p><p><b>Problem p3.</b> If x + 1/x = 3, find x² + 1/x².</p><details><summary>Hint</summary>Square the given equation.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Square</summary><p>(x + 1/x)² = x² + 2 + 1/x² = 9, so x² + 1/x² = 7.</p></details>
+<details><summary>Method: Solve for x</summary><p>x² − 3x + 1 = 0, x = (3 ± √5)/2. Then x² = (7 ± 3√5)/2 and 1/x² = (7 ∓ 3√5)/2; their sum is 7.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8 §2.8</p></div>
+<div class=p><p><b>Problem p4.</b> If x + 1/x = 3, find x³ + 1/x³.</p><details><summary>Hint</summary>(x + 1/x)³ = x³ + 3(x + 1/x) + 1/x³.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: Cube</summary><p>27 = x³ + 1/x³ + 3·3, so x³ + 1/x³ = 18.</p></details>
+<details><summary>Method: Multiply</summary><p>(x + 1/x)(x² + 1/x²) = x³ + 1/x³ + (x + 1/x), so 3·7 = x³ + 1/x³ + 3, giving 18.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8 §2.8</p></div>
+<div class=p><p><b>Problem p5.</b> If x + 1/x = 4, find x⁴ + 1/x⁴.</p><details><summary>Hint</summary>Square twice.</details><details><summary>Answer</summary>194</details>
+<details><summary>Method: Square twice</summary><p>x² + 1/x² = 16 − 2 = 14, then x⁴ + 1/x⁴ = 196 − 2 = 194.</p></details>
+<details><summary>Method: Numbers</summary><p>x = 2 + √3 gives x² = 7 + 4√3, x⁴ = 97 + 56√3, and 1/x⁴ = 97 − 56√3; the sum is 194.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8 §2.8</p></div>
+<div class=p><p><b>Problem p6.</b> If x − 1/x = 2, find x² + 1/x².</p><details><summary>Hint</summary>Square the equation.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Square</summary><p>(x − 1/x)² = x² − 2 + 1/x² = 4, so x² + 1/x² = 6.</p></details>
+<details><summary>Method: Solve</summary><p>x² − 2x − 1 = 0 gives x = 1 ± √2; x² = 3 ± 2√2 and 1/x² = 3 ∓ 2√2, sum 6.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8 §2.8</p></div>
+<div class=p><p><b>Problem p7.</b> Real numbers a, b, c satisfy a² + b² + c² = ab + bc + ca and a + b + c = 12. Find abc.</p><details><summary>Hint</summary>Subtract to get (a − b)² + (b − c)² + (c − a)² = 0.</details><details><summary>Answer</summary>64</details>
+<details><summary>Method: Sum of squares</summary><p>2(a² + b² + c²) − 2(ab + bc + ca) = (a − b)² + (b − c)² + (c − a)² = 0, so a = b = c = 4 and abc = 64.</p></details>
+<details><summary>Method: Check</summary><p>16·3 = 48 = 16·3 for the products, and 4 + 4 + 4 = 12.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8 (no square is negative)</p></div>
+<div class=p><p><b>Problem p8.</b> What is the smallest value of x² + y² when x + y = 10?</p><details><summary>Hint</summary>Write y = 10 − x and complete the square.</details><details><summary>Answer</summary>50</details>
+<details><summary>Method: Complete the square</summary><p>x² + (10 − x)² = 2x² − 20x + 100 = 2(x − 5)² + 50 ≥ 50.</p></details>
+<details><summary>Method: Inequality</summary><p>x² + y² ≥ (x + y)²/2 = 50 (since (x − y)² ≥ 0), equality at x = y = 5.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem p9.</b> Find the smallest value of x² + 4y² − 4x + 8y for real x, y.</p><details><summary>Hint</summary>Complete the square in both variables.</details><details><summary>Answer</summary>-8</details>
+<details><summary>Method: Two squares</summary><p>(x − 2)² − 4 + 4(y + 1)² − 4 = (x − 2)² + 4(y + 1)² − 8 ≥ −8, attained at (2, −1).</p></details>
+<details><summary>Method: Check</summary><p>4 + 4 − 8 − 8 = −8 at (2, −1).</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem x10.</b> Find the minimum value of x² + 4/x² for x ≠ 0.</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: AM-GM</summary><p>x² + 4/x² ≥ 2√4 = 4, with x² = 2.</p></details>
+<details><summary>Method: Square</summary><p>(x − 2/x)² ≥ 0 gives x² + 4/x² ≥ 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem x11.</b> Find the minimum value of x + 4/x for x > 0.</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: AM-GM</summary><p>x + 4/x ≥ 2√4 = 4, with x = 2.</p></details>
+<details><summary>Method: Calculus</summary><p>1 − 4/x² = 0 at x = 2 gives 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem x12.</b> If x + 1/x = 3, find x² + 1/x².</p><details><summary>Hint</summary>Square.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Square</summary><p>9 − 2 = 7.</p></details>
+<details><summary>Method: Roots</summary><p>x = (3 ± √5)/2, and (x + 1/x)² − 2 = 7.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem x13.</b> If x − 1/x = 2, find x² + 1/x².</p><details><summary>Hint</summary>Square.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Square</summary><p>(x − 1/x)² = x² − 2 + 1/x², so x² + 1/x² = 4 + 2 = 6.</p></details>
+<details><summary>Method: Roots</summary><p>x = 1 ± √2.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem x14.</b> Find the minimum value of x² − 10x + 30.</p><details><summary>Hint</summary>Complete the square.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Square</summary><p>(x − 5)² + 5.</p></details>
+<details><summary>Method: Vertex</summary><p>At x = 5: 25 − 50 + 30 = 5.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem x15.</b> Real x, y satisfy x² + y² − 6x + 8y + 25 = 0. Find x + y.</p><details><summary>Hint</summary>Complete the squares.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Squares</summary><p>(x − 3)² + (y + 4)² = 0, so x = 3 and y = −4, sum −1.</p></details>
+<details><summary>Method: Check</summary><p>9 + 16 − 18 − 32 + 25 = 0.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem x16.</b> Find the maximum value of 12x − x².</p><details><summary>Hint</summary>Vertex.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Square</summary><p>36 − (x − 6)² ≤ 36.</p></details>
+<details><summary>Method: Symmetry</summary><p>The roots are 0 and 12, with the maximum at x = 6.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem x17.</b> If x + 1/x = 5, find x³ + 1/x³.</p><details><summary>Hint</summary>(x + 1/x)³ = x³ + 3(x + 1/x) + 1/x³.</details><details><summary>Answer</summary>110</details>
+<details><summary>Method: Cube</summary><p>125 − 15 = 110.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = xⁿ + x⁻ⁿ. Then pₙ₊₁ = 5pₙ − pₙ₋₁ with p₀ = 2, p₁ = 5, so p₂ = 23 and p₃ = 5 · 23 − 5 = 110.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem x18.</b> If x + 1/x = 5, find x² + 1/x².</p><details><summary>Hint</summary>Square both sides.</details><details><summary>Answer</summary>23</details>
+<details><summary>Method: Square</summary><p>(x + 1/x)² = x² + 2 + 1/x², so x² + 1/x² = 25 − 2 = 23.</p></details>
+<details><summary>Method: Recurrence</summary><p>With pₙ = xⁿ + x⁻ⁿ we have p₀ = 2, p₁ = 5 and p₂ = 5 · p₁ − p₀ = 23.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem x19.</b> What is the smallest value of x + 16/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: AM-GM</summary><p>x + 16/x ≥ 2√16 = 8, with equality when x = 4.</p></details>
+<details><summary>Method: Table</summary><p>x = 3, 4, 5 give 25/3, 8, 41/5; the minimum is 8 at x = 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem x20.</b> The roots of x² − 9x + 14 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>53</details>
+<details><summary>Method: Vieta</summary><p>r + s = 9 and rs = 14, so r² + s² = (r + s)² − 2rs = 81 − 28 = 53.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 9 and p₂ = 9 · p₁ − 14 · p₀ = 81 − 28 = 53.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem x21.</b> The roots of x² − 7x + 10 = 0 are r and s. Find r³ + s³.</p><details><summary>Hint</summary>(r + s)³ − 3rs(r + s).</details><details><summary>Answer</summary>133</details>
+<details><summary>Method: Identity</summary><p>r³ + s³ = (r + s)³ − 3rs(r + s) = 343 − 210 = 133.</p></details>
+<details><summary>Method: Recurrence</summary><p>p₁ = 7, p₂ = 29, so p₃ = 7 · p₂ − 10 · p₁ = 203 − 70 = 133.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem x22.</b> Find 1² + 2² + … + 16².</p><details><summary>Hint</summary>n(n + 1)(2n + 1)/6.</details><details><summary>Answer</summary>1496</details>
+<details><summary>Method: Formula</summary><p>16 · 17 · 33/6 = 1496.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100 + 121 + 144 + 169 + 196 + 225 + 256 = 1496.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem x23.</b> A sequence has a₁ = 3 and aₖ₊₁ = 2·aₖ + -1. Find a_7.</p><details><summary>Hint</summary>Compute term by term, or find a closed form.</details><details><summary>Answer</summary>129</details>
+<details><summary>Method: Step by step</summary><p>The terms are 3, 5, 9, 17, 33, 65, 129, so a_7 = 129.</p></details>
+<details><summary>Method: Closed form</summary><p>The fixed point is K = 1, so aₙ = (a₁ − K)·2^(n−1) + K. For n = 7 this is 129.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem x24.</b> If x + 1/x = 6, find x² + 1/x².</p><details><summary>Hint</summary>Square both sides.</details><details><summary>Answer</summary>34</details>
+<details><summary>Method: Square</summary><p>(x + 1/x)² = x² + 2 + 1/x², so x² + 1/x² = 36 − 2 = 34.</p></details>
+<details><summary>Method: Recurrence</summary><p>With pₙ = xⁿ + x⁻ⁿ we have p₀ = 2, p₁ = 6 and p₂ = 6 · p₁ − p₀ = 34.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>
+<div class=p><p><b>Problem x25.</b> What is the smallest value of x + 25/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: AM-GM</summary><p>x + 25/x ≥ 2√25 = 10, with equality when x = 5.</p></details>
+<details><summary>Method: Table</summary><p>x = 4, 5, 6 give 41/4, 10, 61/6; the minimum is 10 at x = 5.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 and 2.8</p></div>

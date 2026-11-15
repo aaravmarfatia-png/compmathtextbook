@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 68</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 68: Unit 68: Graph theory basics</h1><p class=ref>Book: Sriram, Olympiad Combinatorics, ch. 3 (25 problems)<br>Sriram, Olympiad Combinatorics, chapter 3 (Graph theory: degrees, trees, cycles, colourings and Turán-type bounds).</p>
+<h2>Reading</h2>
+<h3>1. Degrees, paths and connectivity</h3><p>A graph is <b>connected</b> if every pair of vertices is joined by a path. The <b>handshake lemma</b> says the sum of degrees equals twice the edges, so the number of odd-degree vertices is even. A degree sequence like (3, 3, 2, 2, 2) is realisable by a simple graph (sum 12, so 6 edges), but (4, 4, 4, 1, 1) is not (three vertices of degree 4 in a 5-vertex graph would be adjacent to everyone, forcing every vertex to have degree at least 3) and (3, 3, 3, 1) is not (the three degree-3 vertices must all be joined to the degree-1 vertex). The Havel–Hakimi procedure checks this: remove the largest degree d and subtract 1 from the next d largest; repeat.</p><p><b>Trees.</b> A tree is a connected graph with no cycle. A tree on n vertices has exactly n − 1 edges and at least two leaves (vertices of degree 1). A forest with k components has n − k edges. Cayley's formula counts labelled trees: nⁿ⁻² (16 for n = 4).</p><details class="try"><summary>Try it</summary><p>A tree has 10 vertices. How many edges? A graph with 10 vertices and 8 edges is a forest with how many components if it has no cycles?</p><p><b>Answer.</b> 9 edges; 10 − 8 = 2 components.</p></details>
+<h3>2. Bipartite graphs and planarity</h3><p>A graph is <b>bipartite</b> if its vertices can be split into two groups with all edges between the groups, equivalently if it has no odd cycle. A bipartite graph with parts of size a and b has at most ab edges. A <b>planar</b> graph can be drawn in the plane without crossing; for a connected planar graph, <b>Euler's formula</b> V − E + F = 2 holds, where F counts the regions including the outer one. Check: cube V = 8, E = 12, F = 6; dodecahedron 20 − 30 + 12 = 2, icosahedron 12 − 30 + 20 = 2.</p><p><b>Consequences.</b> A simple planar graph has E ≤ 3V − 6 (and E ≤ 2V − 4 if it is bipartite). Hence K₅ (10 edges, bound 9) and K₃,₃ (9 edges, bound 2 · 6 − 4 = 8) are not planar.</p><details class="try"><summary>Try it</summary><p>Can a connected planar graph have 7 vertices and 16 edges?</p><p><b>Answer.</b> 3 · 7 − 6 = 15 < 16, so no.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> Prove that in any group of at least two people, two have the same number of acquaintances within the group.</p><p><b>Solution.</b> Let n ≥ 2 people have degrees between 0 and n − 1. If someone has degree 0, nobody has degree n − 1; if someone has degree n − 1, nobody has degree 0. So only n − 1 distinct degree values are available for n people, and by pigeonhole two share a value.</p><p><b>Reflection.</b> The key is noticing that 0 and n − 1 cannot both occur. This pattern — two extreme values being mutually exclusive — is very common.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Forgetting loops and multiple edges are excluded in a simple graph. (2) Applying Euler's formula to a disconnected graph. (3) Miscounting the outer region.</p><p><b>Checks.</b> Test claims on small graphs (the triangle, K₄, a path).</p><p><b>How to practise.</b> Draw the graph. In Unlimited practice, rotate the graph-theory families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Havel–Hakimi.</b> Is (3, 3, 2, 2, 2) a graph's degree sequence? Remove the 3 and subtract 1 from the next three: (2, 1, 1, 2) → sorted (2, 2, 1, 1). Remove 2 and subtract from the next two: (1, 0, 1) → (1, 1, 0). Remove 1 and subtract from the next one: (0, 0). Yes. For (4, 4, 4, 1, 1) the first step gives (3, 3, 0, 0), then (2, −1, 0): impossible. A computer implementation of this test agrees with both answers.</p><details class="try"><summary>Try it<p>Is (2, 2, 2, 2) a degree sequence?</p><p><b>Answer.</b> Yes: the 4-cycle.</p></details><details class="try"><summary>Try it<p>A tree has 6 leaves and every other vertex has degree 3. How many vertices does it have?</p><p><b>Answer.</b> A tree on n vertices has n − 1 edges so the degree sum is 2(n − 1). With 6 leaves and k vertices of degree 3: 6 + 3k = 2(6 + k − 1), so k = 4 and n = 10.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Prove that every tree with at least 2 vertices has at least 2 leaves. <b>Solution.</b> Take a longest path in the tree. Its two end vertices have no neighbours off the path (else the path would be longer) and no neighbours on the path other than the next vertex (else there would be a cycle), so both have degree 1.</p><p><b>Reflection.</b> Extremal path arguments often prove graph facts.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> A graph has 7 vertices, each of degree 4. How many edges does it have?</p><details><summary>Hint</summary>Handshake lemma.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Handshake</summary><p>The degree sum is 28 and equals twice the number of edges, so there are 14.</p></details>
+<details><summary>Method: Counting ends</summary><p>Each edge has two ends; 28 ends means 14 edges.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem p2.</b> What is the maximum number of edges in a triangle-free graph on 10 vertices?</p><details><summary>Hint</summary>Mantel's theorem.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Mantel</summary><p>⌊100/4⌋ = 25, attained by K_{5,5}.</p></details>
+<details><summary>Method: Bipartite check</summary><p>K_{a,10−a} has a(10 − a) edges, maximised at a = 5 giving 25.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem p3.</b> How many edges does a tree on 12 vertices have?</p><details><summary>Hint</summary>n − 1.</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: Rule</summary><p>A tree on n vertices has n − 1 edges: 11.</p></details>
+<details><summary>Method: Build up</summary><p>Start from one vertex and add each of the other 11 as a new leaf with one edge.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem p4.</b> How many edges does the complete graph K_8 have?</p><details><summary>Hint</summary>Choose 2 of 8.</details><details><summary>Answer</summary>28</details>
+<details><summary>Method: Choose</summary><p>C(8,2) = 28.</p></details>
+<details><summary>Method: Degrees</summary><p>Each of 8 vertices has degree 7, so the edges number 8 · 7/2 = 28.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem p5.</b> What is the minimum number of edges in a connected graph on 20 vertices?</p><details><summary>Hint</summary>A connected graph contains a spanning tree.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: Spanning tree</summary><p>A connected graph contains a spanning tree with 19 edges, so at least 19.</p></details>
+<details><summary>Method: Components</summary><p>Each edge reduces the number of components by at most 1, so going from 20 components to 1 needs at least 19 edges.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem p6.</b> How many edges does the complete bipartite graph K_{4,6} have?</p><details><summary>Hint</summary>Every vertex of one part meets every vertex of the other.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Product</summary><p>4 · 6 = 24.</p></details>
+<details><summary>Method: Degrees</summary><p>Each of 4 vertices has degree 6, so the edge count is 24.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem p7.</b> What is the chromatic number of a cycle with 9 vertices?</p><details><summary>Hint</summary>Odd cycles are not bipartite.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Odd cycle</summary><p>Two colours would have to alternate around the cycle, but 9 is odd, so a third colour is needed; 3 suffice.</p></details>
+<details><summary>Method: Explicit</summary><p>Colour the vertices 1, 2, 1, 2, 1, 2, 1, 2, 3.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem p8.</b> How many labelled trees are there on 6 vertices?</p><details><summary>Hint</summary>Cayley's formula n^(n−2).</details><details><summary>Answer</summary>1296</details>
+<details><summary>Method: Cayley</summary><p>6⁴ = 1296.</p></details>
+<details><summary>Method: Matrix-tree</summary><p>The determinant of any 5×5 reduced Laplacian of K_6 is also 1296.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem p9.</b> What is the maximum number of edges in a planar graph on 10 vertices?</p><details><summary>Hint</summary>3n − 6.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Formula</summary><p>3 · 10 − 6 = 24.</p></details>
+<details><summary>Method: Euler</summary><p>Euler's formula V − E + F = 2 and 3F ≤ 2E give E ≤ 3V − 6 = 24.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem p10.</b> How many edges does K₁₂ have?</p><details><summary>Hint</summary>C(12, 2).</details><details><summary>Answer</summary>66</details>
+<details><summary>Method: Choose</summary><p>12 · 11/2 = 66.</p></details>
+<details><summary>Method: Degrees</summary><p>Each of 12 vertices has degree 11, so 12 · 11/2 = 66.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem p11.</b> How many edges does a tree on 30 vertices have?</p><details><summary>Hint</summary>n − 1.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Rule</summary><p>29.</p></details>
+<details><summary>Method: Leaves</summary><p>Add the 29 other vertices one at a time as new leaves.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem p12.</b> What is the maximum number of edges in a triangle-free graph on 14 vertices?</p><details><summary>Hint</summary>Mantel.</details><details><summary>Answer</summary>49</details>
+<details><summary>Method: Mantel</summary><p>⌊196/4⌋ = 49, achieved by K₇,₇.</p></details>
+<details><summary>Method: Parts</summary><p>a(14 − a) is maximised at a = 7, giving 49.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem p13.</b> A graph has 9 vertices, each of degree 4. How many edges does it have?</p><details><summary>Hint</summary>Handshake lemma.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: Handshake</summary><p>9 · 4/2 = 18.</p></details>
+<details><summary>Method: Ends</summary><p>There are 36 edge-ends, two per edge.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem p14.</b> How many edges does the complete bipartite graph K₅,₇ have?</p><details><summary>Hint</summary>Product of part sizes.</details><details><summary>Answer</summary>35</details>
+<details><summary>Method: Product</summary><p>5 · 7 = 35.</p></details>
+<details><summary>Method: Degrees</summary><p>Each of the 5 vertices has degree 7.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem p15.</b> What is the chromatic number of a cycle with 10 vertices?</p><details><summary>Hint</summary>Even cycles are bipartite.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Alternate</summary><p>Colour the vertices alternately; an even cycle closes up consistently, so 2.</p></details>
+<details><summary>Method: Lower bound</summary><p>It has an edge, so at least 2 colours are needed.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem p16.</b> How many labelled trees are there on 5 vertices?</p><details><summary>Hint</summary>Cayley.</details><details><summary>Answer</summary>125</details>
+<details><summary>Method: Cayley</summary><p>5³ = 125.</p></details>
+<details><summary>Method: Check</summary><p>For n = 3 the formula gives 3, the three paths.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem p17.</b> What is the maximum number of edges in a planar graph on 20 vertices?</p><details><summary>Hint</summary>3n − 6.</details><details><summary>Answer</summary>54</details>
+<details><summary>Method: Formula</summary><p>3 · 20 − 6 = 54.</p></details>
+<details><summary>Method: Euler</summary><p>From V − E + F = 2 and 3F ≤ 2E.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem x18.</b> How many edges does the complete graph K_9 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Pairs</summary><p>C(9, 2) = 36.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 9 vertices has degree 8, so the edges number 9 · 8/2 = 36.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem x19.</b> 125 objects are placed into 13 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈125/13⌉ = 10.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 9 objects, there would be at most 13 · 9 = 117 < 125 objects in all.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem x20.</b> Find the nim-sum (XOR) of the piles 2, 5, 7.</p><details><summary>Hint</summary>Write each pile in binary.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Binary columns</summary><p>In binary the piles are 010, 101, 111; adding each column mod 2 gives 000 = 0.</p></details>
+<details><summary>Method: Step by step</summary><p>XOR them one at a time: 2, 7, 0.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem x21.</b> How many edges does the complete graph K_11 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>55</details>
+<details><summary>Method: Pairs</summary><p>C(11, 2) = 55.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 11 vertices has degree 10, so the edges number 11 · 10/2 = 55.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem x22.</b> 25 objects are placed into 6 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈25/6⌉ = 5.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 4 objects, there would be at most 6 · 4 = 24 < 25 objects in all.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem x23.</b> Find the nim-sum (XOR) of the piles 9, 12, 13.</p><details><summary>Hint</summary>Write each pile in binary.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Binary columns</summary><p>In binary the piles are 1001, 1100, 1101; adding each column mod 2 gives 1000 = 8.</p></details>
+<details><summary>Method: Step by step</summary><p>XOR them one at a time: 9, 5, 8.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem x24.</b> How many edges does the complete graph K_12 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>66</details>
+<details><summary>Method: Pairs</summary><p>C(12, 2) = 66.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 12 vertices has degree 11, so the edges number 12 · 11/2 = 66.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>
+<div class=p><p><b>Problem x25.</b> 40 objects are placed into 7 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈40/7⌉ = 6.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 5 objects, there would be at most 7 · 5 = 35 < 40 objects in all.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 3</p></div>

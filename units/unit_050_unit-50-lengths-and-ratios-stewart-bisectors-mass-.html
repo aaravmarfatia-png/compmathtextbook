@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 50</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 50: Unit 50: Lengths and ratios: Stewart, bisectors, mass points</h1><p class=ref>Book: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3 (25 problems)<br>Chen, Euclidean Geometry in Mathematical Olympiads, chapter 3 (Lengths and Ratios).</p>
+<h2>Reading</h2>
+<h3>1. Stewart's theorem and the length of a cevian</h3><p>Let D lie on side BC of triangle ABC with BD = m, DC = n, BC = a = m + n, and let d = AD. <b>Stewart's theorem</b>: b²m + c²n = a(d² + mn), where b = CA and c = AB. For the 13-14-15 triangle with BD = 6, DC = 8 (so m = 6, n = 8, b = 15, c = 13): 225 · 6 + 169 · 8 = 14(d² + 48), giving d² = 2702/14 − 48 = 145. So AD = √145 (matches the coordinate computation in Unit 33). <b>Medians:</b> m = n = a/2 gives the median-length formula; here d² = 148. <b>Angle bisector:</b> BD : DC = c : b = 13 : 15, and its length satisfies d² = bc(1 − a²/(b + c)²) = 195(1 − 196/784) = 146.25.</p><p><b>The angle bisector theorem.</b> The bisector of angle A divides the opposite side in the ratio of the adjacent sides: BD/DC = AB/AC. In the 13-14-15 triangle BD = 14 · 13/28 = 6.5.</p><details class="try"><summary>Try it</summary><p>In a triangle with AB = 5, AC = 7, BC = 8, the bisector of angle A meets BC at D. Find BD.</p><p><b>Answer.</b> BD = 8 · 5/12 = 10/3.</p></details>
+<h3>2. Mass points</h3><p><b>Mass points</b> turn ratio problems into balance problems. Assign masses to the vertices so that on each cevian the point where it meets the side balances the masses at its ends: if BD : DC = 2 : 3, put mass 3 at B and mass 2 at C, so D has mass 5. If CE : EA = 1 : 2 then masses at C and A are in the ratio 2 : 1 — consistent with C = 2 if A = 1. Scale to make C agree: B = 3, C = 2, A = 1.</p><p>The intersection P of AD and BE has mass 6 (1 + 3 + 2), and on the cevian AD the ratio AP : PD = (mass of D) : (mass of A) = 5 : 1, so AP = (5/6)AD. A coordinate computation with A = (0, 0), B = (10, 0), C = (0, 10) gives AP/AD = 5/6 ✓.</p><p><b>When it works.</b> Mass points handle ratios on cevians that are concurrent; for a transversal, use Menelaus. The method is Ceva's theorem in physical clothing.</p><details class="try"><summary>Try it</summary><p>In triangle ABC, D on BC with BD : DC = 1 : 2 and E on AC with AE : EC = 3 : 1. Cevians AD and BE meet at P. Find BP : PE.</p><p><b>Answer.</b> Give B mass 2 and C mass 1 so that BD : DC = 1 : 2 (D has mass 3). For AE : EC = 3 : 1 the masses at A and C are in the ratio 1 : 3, so scale the first assignment by 3: B = 6, C = 3, D = 9, and A = 1, E = A + C = 4. Then BP : PE = (mass of E) : (mass of B) = 4 : 6 = 2 : 3, which a coordinate check confirms.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> In triangle ABC, AB = 9, AC = 12, BC = 15. D is the foot of the angle bisector from A. (a) Find BD and DC. (b) Find AD. (c) Is the triangle right-angled?</p><p><b>Solution.</b> (c) 9² + 12² = 225 = 15², so yes, right-angled at A. (a) BD = 15 · 9/21 = 45/7, DC = 60/7. (b) AD² = bc(1 − a²/(b + c)²) = 108(1 − 225/441) = 108 · 216/441 = 23328/441, so AD = 108√2/21 = 36√2/7.</p><p><b>Reflection.</b> Because the angle at A is right, the bisector makes a 45° angle with each leg and AD = (bc√2)/(b + c) = 108√2/21 ✓, an easy check.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Writing Stewart's theorem with the wrong pairing of sides and segments. (2) Mixing up which segment is m and which is n. (3) Reversing the mass assignment (the longer segment gets the <i>smaller</i> mass). (4) Using mass points when the cevians are not concurrent.</p><p><b>Checks.</b> Test Stewart's theorem on a median or an altitude where you know the answer.</p><p><b>How to practise.</b> Write m, n, a, b, c on a diagram first. In Unlimited practice, rotate the Stewart and mass-point families.</p>
+<h3>More worked examples: Worked examples</h3><p>In triangle ABC with AB = 6, AC = 9, BC = 10, the angle bisector from A meets BC at D with BD : DC = 6 : 9, so BD = 4 and DC = 6. Stewart's theorem gives AC² · BD + AB² · DC = BC(AD² + BD · DC): 81 · 4 + 36 · 6 = 540 = 10(AD² + 24), so AD² = 30. The bisector-length formula bc(1 − a²/(b + c)²) = 54(1 − 100/225) = 30 agrees.</p><details class="try"><summary>Try it<p>In triangle ABC, AB = 4 and AC = 6, BC = 5. Where does the angle bisector from A meet BC (distance from B)?</p><p><b>Answer.</b> BD = 5 · 4/10 = 2.</p></details><details class="try"><summary>Try it<p>A cevian divides BC in the ratio 2 : 3. What masses at B and C balance the point?</p><p><b>Answer.</b> Mass 3 at B and 2 at C.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> In triangle ABC, D lies on BC with BD : DC = 1 : 2 and E is the midpoint of AD. The line BE meets AC at F. Find AF : FC using mass points. <b>Solution.</b> Give C mass 1 and B mass 2 so D has mass 3. E is the midpoint of AD, so A has mass 3. Then F on AC has mass 3 + 1 = 4 and AF : FC = 1 : 3.</p><p><b>Check with coordinates.</b> Take B = (0, 0), C = (3, 0), A = (0, 3), so D = (1, 0), E = (1/2, 3/2). The line BE is y = 3x, meeting AC (x + y = 3) at x = 3/4, y = 9/4. Then AF/AC = (3/4)/3 = 1/4, so AF : FC = 1 : 3 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> In triangle ABC, AB = 7, AC = 9, BC = 8. D is on BC with BD = 3 and DC = 5. Find AD².</p><details><summary>Hint</summary>Stewart's theorem.</details><details><summary>Answer</summary>46</details>
+<details><summary>Method: Stewart</summary><p>AB²·DC + AC²·BD = BC(AD² + BD·DC): 49·5 + 81·3 = 488 = 8(AD² + 15), so AD² = 61 − 15 = 46.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put B = (0,0), C = (8,0), A = (x, y) with x² + y² = 49 and (x − 8)² + y² = 81. Subtracting: 16x − 64 = −32, so x = 2 and y² = 45. D = (3, 0), so AD² = 1 + 45 = 46.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem p2.</b> In triangle ABC, AB = 6, AC = 3 and BC = 5. Find the square of the length of the bisector from A, as a fraction.</p><details><summary>Hint</summary>Length² = bc(1 − a²/(b + c)²).</details><details><summary>Answer</summary>112/9</details>
+<details><summary>Method: Formula</summary><p>bc = 18 and a²/(b + c)² = 25/81, so length² = 18·56/81 = 112/9.</p></details>
+<details><summary>Method: Bisector theorem and Stewart</summary><p>BD = 5·6/9 = 10/3, DC = 5/3; Stewart gives 36·(5/3) + 9·(10/3) = 90 = 5(AD² + 50/9), so AD² = 18 − 50/9 = 112/9.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem p3.</b> In triangle ABC, D is the midpoint of BC and E lies on AC with AE : EC = 1 : 2. AD and BE meet at P. Find AP / PD.</p><details><summary>Hint</summary>Mass points: B = C = 1.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Mass points</summary><p>B and C have mass 1, so D has mass 2. For AE : EC = 1 : 2 give C mass 1 and A mass 2. Then AP : PD = (mass of D) : (mass of A) = 2 : 2 = 1.</p></details>
+<details><summary>Method: Coordinates</summary><p>With A = (0,0), B = (2,0), C = (0,3): D = (1, 1.5), E = (0,1). BE: x/2 + y = 1, AD: y = 1.5x. They meet at x = 0.5, y = 0.75, the midpoint of AD, so AP/PD = 1.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem p4.</b> In a trapezoid with parallel sides 12 and 18, one diagonal is 20 long. The diagonals cross at a point. How long is the longer part of that diagonal?</p><details><summary>Hint</summary>The diagonals divide each other in the ratio 12 : 18.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Similar triangles</summary><p>The two triangles formed with the parallel sides are similar with ratio 12 : 18 = 2 : 3. The diagonal of length 20 is cut into 8 and 12, so the longer part is 12.</p></details>
+<details><summary>Method: Ratio</summary><p>Parts 2/5 and 3/5 of 20 are 8 and 12.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem p5.</b> In a trapezoid with parallel sides 12 and 18, a segment parallel to them passes through the intersection of the diagonals with endpoints on the legs. How long is it? (As a fraction.)</p><details><summary>Hint</summary>It is the harmonic mean of the bases.</details><details><summary>Answer</summary>72/5</details>
+<details><summary>Method: Harmonic mean</summary><p>The length is 2ab/(a + b) = 2·12·18/30 = 72/5.</p></details>
+<details><summary>Method: Similar triangles</summary><p>The diagonals meet in the ratio 2 : 3, so the parallel segment through that point is 12·3/5 + 18·2/5 = 36/5 + 36/5 = 72/5.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem p6.</b> In triangle ABC, AB = 10, AC = 14 and BC = 12. The bisector of angle A meets BC at D. Find BD.</p><details><summary>Hint</summary>BD/DC = AB/AC.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Angle bisector theorem</summary><p>BD/DC = 10/14 = 5/7 and BD + DC = 12, so BD = 12·5/12 = 5.</p></details>
+<details><summary>Method: Check</summary><p>DC = 7 and 5/7 = 10/14.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem p7.</b> Triangle ABC has area 60. D is the midpoint of AB and E lies on BC with BE : EC = 1 : 2. Find the area of triangle BDE.</p><details><summary>Hint</summary>Multiply the ratios BD/BA and BE/BC.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Ratio of sides</summary><p>BD/BA = 1/2 and BE/BC = 1/3, so area BDE = 60·(1/2)(1/3) = 10.</p></details>
+<details><summary>Method: Coordinates</summary><p>With B = (0,0), A = (20,0), C = (0,6): area 60, D = (10, 0), E = (0, 2), area BDE = 10·2/2 = 10.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem p8.</b> A right triangle has legs 6 and 8. The altitude to the hypotenuse divides it into two segments. How long is the shorter one? (As a fraction.)</p><details><summary>Hint</summary>Leg² = hypotenuse segment × hypotenuse.</details><details><summary>Answer</summary>18/5</details>
+<details><summary>Method: Leg theorem</summary><p>The hypotenuse is 10, and 6² = 10·s gives s = 3.6 = 18/5, the shorter segment (the other is 6.4).</p></details>
+<details><summary>Method: Similar triangles</summary><p>The small triangle with hypotenuse 6 is similar to the big one with ratio 6/10, so its short side is 6·6/10 = 18/5.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x9.</b> In triangle ABC, AB = 12, AC = 8 and BC = 10. The bisector of angle A meets BC at D. Find BD.</p><details><summary>Hint</summary>BD/DC = AB/AC.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Theorem</summary><p>BD : DC = 12 : 8 = 3 : 2, so BD = 6.</p></details>
+<details><summary>Method: Check</summary><p>BD = 6 and DC = 4.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x10.</b> In triangle ABC, AB = 7, AC = 9 and BC = 8. D lies on BC with BD = 3. Find AD².</p><details><summary>Hint</summary>Stewart.</details><details><summary>Answer</summary>46</details>
+<details><summary>Method: Stewart</summary><p>AD² = (AC² · BD + AB² · DC)/BC − BD · DC = (243 + 245)/8 − 15 = 61 − 15 = 46.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put B = (0, 0), C = (8, 0); A has x = (49 + 64 − 81)/16 = 2 and y² = 49 − 4 = 45. D = (3, 0), so AD² = 1 + 45 = 46.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x11.</b> In triangle ABC, D is the midpoint of BC and E lies on AC with AE : EC = 1 : 2. AD and BE meet at P. Find AP/PD.</p><details><summary>Hint</summary>Mass points.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Masses</summary><p>A = 2, C = 1 balance E; B = C = 1 balance D with mass 2. Then AP/PD = 2/2 = 1.</p></details>
+<details><summary>Method: Coordinates</summary><p>Take A = (0, 0), B = (6, 0), C = (0, 3). Then E = (0, 1) and D = (3, 3/2). The line BE is x/6 + y = 1 and the point t · D on AD satisfies t/2 + 3t/2 = 1, so t = 1/2 and P is the midpoint of AD.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x12.</b> In the 13-14-15 triangle the bisector from the vertex opposite the side 14 meets that side. How far is the foot from the vertex joining the sides 14 and 13?</p><details><summary>Hint</summary>The adjacent sides are 13 and 15.</details><details><summary>Answer</summary>13/2</details>
+<details><summary>Method: Theorem</summary><p>The side 14 is divided in the ratio 13 : 15, so the piece next to the side 13 is 14 · 13/28 = 13/2.</p></details>
+<details><summary>Method: Check</summary><p>The other piece is 15/2 and 13/2 + 15/2 = 14.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x13.</b> A triangle has sides 5, 12 and 13. Find the square of the median to the side of length 12.</p><details><summary>Hint</summary>m² = (2b² + 2c² − a²)/4.</details><details><summary>Answer</summary>61</details>
+<details><summary>Method: Formula</summary><p>(2 · 25 + 2 · 169 − 144)/4 = 244/4 = 61.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put the right angle at the origin with the leg of 12 along the x-axis and the leg of 5 along the y-axis. The median runs from (0, 5) to the midpoint (6, 0), so its square is 36 + 25 = 61.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x14.</b> Point D divides AB with AD : DB = 2 : 3 and E is the midpoint of BC. CD and AE meet at P. Find AP/PE.</p><details><summary>Hint</summary>Mass points.</details><details><summary>Answer</summary>4/3</details>
+<details><summary>Method: Masses</summary><p>A = 3, B = 2, C = 2, so E has mass 4 and AP/PE = 4/3.</p></details>
+<details><summary>Method: Check</summary><p>D has mass 5 and CP/PD = 5/2.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x15.</b> The bisector of angle A in a triangle with AB = 12 and AC = 8 splits it into two triangles. If the whole area is 100, find the area of the triangle containing AB.</p><details><summary>Hint</summary>Areas are proportional to BD : DC.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Ratio</summary><p>The areas are in ratio 12 : 8, so the AB-part is 100 · 3/5 = 60.</p></details>
+<details><summary>Method: Heights</summary><p>Both triangles have the same altitude from A, with bases BD : DC = 3 : 2.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x16.</b> An equilateral triangle has side 6. Find the square of the median.</p><details><summary>Hint</summary>Stewart or Pythagoras.</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: Pythagoras</summary><p>The median is also an altitude: 36 − 9 = 27.</p></details>
+<details><summary>Method: Formula</summary><p>(2 · 36 + 2 · 36 − 36)/4 = 27.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x17.</b> In triangle ABC, BC = 10, CA = 7 and AB = 9. D lies on BC with BD = 4. Find AD².</p><details><summary>Hint</summary>Stewart's theorem.</details><details><summary>Answer</summary>221/5</details>
+<details><summary>Method: Stewart</summary><p>AD² = (CA² · BD + AB² · DC)/BC − BD · DC = (49 · 4 + 81 · 6)/10 − 24 = 221/5.</p></details>
+<details><summary>Method: Law of cosines</summary><p>cos B = 11/15. Then AD² = AB² + BD² − 2 · AB · BD · cos B = 81 + 16 − 264/5 = 221/5.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x18.</b> A triangle has sides 5, 5 and 6. Find the square of the median to the side of length 5.</p><details><summary>Hint</summary>m² = (2b² + 2c² − a²)/4.</details><details><summary>Answer</summary>97/4</details>
+<details><summary>Method: Median formula</summary><p>(2 · 25 + 2 · 36 − 25)/4 = 97/4.</p></details>
+<details><summary>Method: Parallelogram law</summary><p>Doubling the median completes a parallelogram with diagonals 5 and 2m; the law gives 25 + 4m² = 2(25 + 36), so m² = 97/4.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x19.</b> Cevians AD, BE, CF of triangle ABC are concurrent with BD/DC = 4 and CE/EA = 5. Find AF/FB.</p><details><summary>Hint</summary>Ceva's theorem.</details><details><summary>Answer</summary>1/20</details>
+<details><summary>Method: Ceva</summary><p>(BD/DC)(CE/EA)(AF/FB) = 1, so AF/FB = 1/(4 · 5) = 1/20.</p></details>
+<details><summary>Method: Check</summary><p>4 · 5 · 1/20 = 1.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x20.</b> A line meets the side lines of triangle ABC with AF/FB = 2 and BD/DC = 5. Find CE/EA.</p><details><summary>Hint</summary>Menelaus' theorem.</details><details><summary>Answer</summary>1/10</details>
+<details><summary>Method: Menelaus</summary><p>(AF/FB)(BD/DC)(CE/EA) = 1, so CE/EA = 1/10.</p></details>
+<details><summary>Method: Check</summary><p>2 · 5 · 1/10 = 1.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x21.</b> A triangle has sides 5 and 7 with an included angle of 60°. Find the square of the third side.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>39</details>
+<details><summary>Method: Law of cosines</summary><p>c² = 25 + 49 − 2 · 5 · 7 · (1/2) = 39.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put the vertex at the origin, one side along the x-axis to (7, 0) and the other to 5(1/2, √3/2). The squared distance is 39.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x22.</b> Find the altitude to the side of length 6 in the triangle with sides 5, 5 and 6.</p><details><summary>Hint</summary>Use the area.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Area</summary><p>K = 12, so the altitude is 2K/6 = 4.</p></details>
+<details><summary>Method: Check</summary><p>½ · 6 · 4 = 12, matching K.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x23.</b> In triangle ABC, BC = 12, CA = 8 and AB = 10. D lies on BC with BD = 5. Find AD².</p><details><summary>Hint</summary>Stewart's theorem.</details><details><summary>Answer</summary>50</details>
+<details><summary>Method: Stewart</summary><p>AD² = (CA² · BD + AB² · DC)/BC − BD · DC = (64 · 5 + 100 · 7)/12 − 35 = 50.</p></details>
+<details><summary>Method: Law of cosines</summary><p>cos B = 3/4. Then AD² = AB² + BD² − 2 · AB · BD · cos B = 100 + 25 − 75 = 50.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x24.</b> A triangle has sides 5, 5 and 8. Find the square of the median to the side of length 5.</p><details><summary>Hint</summary>m² = (2b² + 2c² − a²)/4.</details><details><summary>Answer</summary>153/4</details>
+<details><summary>Method: Median formula</summary><p>(2 · 25 + 2 · 64 − 25)/4 = 153/4.</p></details>
+<details><summary>Method: Parallelogram law</summary><p>Doubling the median completes a parallelogram with diagonals 5 and 2m; the law gives 25 + 4m² = 2(25 + 64), so m² = 153/4.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>
+<div class=p><p><b>Problem x25.</b> Cevians AD, BE, CF of triangle ABC are concurrent with BD/DC = 3 and CE/EA = 5. Find AF/FB.</p><details><summary>Hint</summary>Ceva's theorem.</details><details><summary>Answer</summary>1/15</details>
+<details><summary>Method: Ceva</summary><p>(BD/DC)(CE/EA)(AF/FB) = 1, so AF/FB = 1/(3 · 5) = 1/15.</p></details>
+<details><summary>Method: Check</summary><p>3 · 5 · 1/15 = 1.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 3</p></div>

@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 143</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 143: Unit 143: Geometry: circles, triangle centres and Ptolemy</h1><p class=ref>Book: Kedlaya, Geometry Unbound; Djukić et al., The IMO Compendium; Andreescu &amp; Enescu, Mathematical Olympiad Treasures (25 problems)<br>Kedlaya, Geometry Unbound, ch. 1–2, 6.1 (power of a point), 7 (triangle trivia), 8.2 (cyclic quadrilaterals); IMO Compendium 2.3.1, 2.3.4, 2.3.5; Andreescu &amp; Enescu 2.3.</p>
+<h2>Reading</h2>
+<h3>1. Triangle quantities</h3><p>With sides a, b, c, semiperimeter s and area K (Heron): R = abc/(4K), r = K/s. For the 13-14-15 triangle s = 21, K = 84, R = 2730/336 = 65/8, r = 4. A right triangle with legs a, b has an altitude to the hypotenuse of ab/c; for 5-12-13 that is 60/13.</p><details class="try"><summary>Try it<p>Inradius of the 5-12-13 triangle?</p><p><b>Answer.</b> K = 30, s = 15, r = 2.</p></details><details class="try"><summary>Try it<p>Circumradius of the 6-8-10 triangle?</p><p><b>Answer.</b> 5, half the hypotenuse.</p></details>
+<h3>2. Circles, bisectors and Ptolemy</h3><p><b>Power of a point.</b> For two chords through P inside a circle, PA·PB = PC·PD; from outside, tangent² = PA·PB for the secant PAB. If PA = 4 and AB = 5 the tangent has t² = 4 · 9 = 36 so t = 6. <b>Bisector.</b> BD/DC = AB/AC. <b>Ptolemy.</b> In a cyclic quadrilateral the product of the diagonals equals the sum of products of opposite sides.</p><details class="try"><summary>Try it<p>PA = 2, PB = 8, PC = 4 (chords): PD?</p><p><b>Answer.</b> 4.</p></details><details class="try"><summary>Try it<p>Triangle BC = 10, AB = 6, AC = 4: BD?</p><p><b>Answer.</b> 6 (BD/DC = 6/4, so BD = 6).</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> Points A, B, C, D lie on a circle in order, AB = 7, BC = 24, CD = 15, DA = 20. Find BD. <b>Solution.</b> 7² + 24² = 25² and 15² + 20² = 25², so AC = 25 is a diameter. Ptolemy: 25·BD = 7·15 + 24·20 = 585, so BD = 117/5.</p><p><b>Check.</b> 585/25 = 23.4 = 117/5 ✓; BD is shorter than the diameter 25 ✓.</p>
+<h3>4. In the books</h3><p><b>Kedlaya.</b> Ch. 1 builds the plane from coordinates (1.2 distances and circles, 1.4 areas of polygons). Section 2.1 is trigonometry (law of sines, law of cosines, the inradius-circumradius relation r = 4R sin(A/2) sin(B/2) sin(C/2)). Ptolemy appears as Theorem 2.3.1 in the form AC·BD ≤ AB·CD + BC·DA, with equality exactly for a convex cyclic quadrilateral. Ch. 6 covers power of a point (6.1) and the radical axis (6.2); 8.2 is cyclic quadrilaterals.</p><p><b>IMO Compendium 2.3.</b> 2.3.1 triangle geometry, 2.3.4 quadrilaterals, 2.3.5 circle geometry, 2.3.9 formulas in geometry (areas and Heron). <b>Olympiad Treasures</b> 2.3 is &ldquo;Cyclic Quads&rdquo; and 2.7 &ldquo;Quadrilaterals with an Inscribed Circle&rdquo;.</p><p><b>Honest note.</b> I did not read all of Kedlaya's body text; I read the contents and the sections on coordinates, trigonometry and Ptolemy.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Triangle ABC has sides 13, 14, 15. Find its circumradius. (fraction)</p><details><summary>Hint</summary>R = abc/(4K) and use Heron's formula for the area K.</details><details><summary>Answer</summary>65/8</details>
+<details><summary>Method: Area formula</summary><p>s = 21, K = 84, so R = 13·14·15/(4·84) = 65/8.</p></details>
+<details><summary>Method: Law of sines</summary><p>With C the angle opposite 15, sin C = 2K/(ab) = 12/13 and R = 15/(2 sin C) = 65/8.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> Triangle ABC has sides 5, 12, 13. Find its circumradius. (fraction)</p><details><summary>Hint</summary>R = abc/(4K) and use Heron's formula for the area K.</details><details><summary>Answer</summary>13/2</details>
+<details><summary>Method: Area formula</summary><p>s = 15, K = 30, so R = 5·12·13/(4·30) = 13/2.</p></details>
+<details><summary>Method: Law of sines</summary><p>With C the angle opposite 13, sin C = 2K/(ab) = 1 and R = 13/(2 sin C) = 13/2.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> Triangle ABC has sides 7, 15, 20. Find its circumradius. (fraction)</p><details><summary>Hint</summary>R = abc/(4K) and use Heron's formula for the area K.</details><details><summary>Answer</summary>25/2</details>
+<details><summary>Method: Area formula</summary><p>s = 21, K = 42, so R = 7·15·20/(4·42) = 25/2.</p></details>
+<details><summary>Method: Law of sines</summary><p>With C the angle opposite 20, sin C = 2K/(ab) = 4/5 and R = 20/(2 sin C) = 25/2.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> Triangle ABC has sides 9, 10, 17. Find its circumradius. (fraction)</p><details><summary>Hint</summary>R = abc/(4K) and use Heron's formula for the area K.</details><details><summary>Answer</summary>85/8</details>
+<details><summary>Method: Area formula</summary><p>s = 18, K = 36, so R = 9·10·17/(4·36) = 85/8.</p></details>
+<details><summary>Method: Law of sines</summary><p>With C the angle opposite 17, sin C = 2K/(ab) = 4/5 and R = 17/(2 sin C) = 85/8.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> Triangle ABC has sides 13, 14, 15. Find its inradius. (fraction)</p><details><summary>Hint</summary>r = K/s.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Area over semiperimeter</summary><p>s = 21, K = 84, so r = 4.</p></details>
+<details><summary>Method: Tangent lengths</summary><p>The incircle touches the sides; r equals the area of the triangle divided by its semiperimeter: 4.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> Triangle ABC has sides 8, 15, 17. Find its inradius. (fraction)</p><details><summary>Hint</summary>r = K/s.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Area over semiperimeter</summary><p>s = 20, K = 60, so r = 3.</p></details>
+<details><summary>Method: Tangent lengths</summary><p>The incircle touches the sides; r equals the area of the triangle divided by its semiperimeter: 3.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> Triangle ABC has sides 20, 21, 29. Find its inradius. (fraction)</p><details><summary>Hint</summary>r = K/s.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Area over semiperimeter</summary><p>s = 35, K = 210, so r = 6.</p></details>
+<details><summary>Method: Tangent lengths</summary><p>The incircle touches the sides; r equals the area of the triangle divided by its semiperimeter: 6.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> Chords AB and CD of a circle meet at P inside the circle. PA = 4, PB = 9 and PC = 6. Find PD. (fraction)</p><details><summary>Hint</summary>Power of a point: PA·PB = PC·PD.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Power of a point</summary><p>PD = PA·PB/PC = 4·9/6 = 6.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles PAC and PDB are similar, so PA/PD = PC/PB giving PD = 6.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> Chords AB and CD of a circle meet at P inside the circle. PA = 3, PB = 8 and PC = 2. Find PD. (fraction)</p><details><summary>Hint</summary>Power of a point: PA·PB = PC·PD.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Power of a point</summary><p>PD = PA·PB/PC = 3·8/2 = 12.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles PAC and PDB are similar, so PA/PD = PC/PB giving PD = 12.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> Chords AB and CD of a circle meet at P inside the circle. PA = 5, PB = 12 and PC = 10. Find PD. (fraction)</p><details><summary>Hint</summary>Power of a point: PA·PB = PC·PD.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Power of a point</summary><p>PD = PA·PB/PC = 5·12/10 = 6.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles PAC and PDB are similar, so PA/PD = PC/PB giving PD = 6.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> Chords AB and CD of a circle meet at P inside the circle. PA = 6, PB = 10 and PC = 5. Find PD. (fraction)</p><details><summary>Hint</summary>Power of a point: PA·PB = PC·PD.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Power of a point</summary><p>PD = PA·PB/PC = 6·10/5 = 12.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles PAC and PDB are similar, so PA/PD = PC/PB giving PD = 12.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> From a point P outside a circle a secant meets the circle at A and B with PA = 4 and AB = 5. Find the length of a tangent from P.</p><details><summary>Hint</summary>Tangent² = PA · PB.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Power of a point</summary><p>PB = 9, so t² = 4·9 = 36 and t = 6.</p></details>
+<details><summary>Method: Similar triangles</summary><p>The tangent triangle gives t/PA = PB/t so t² = PA·PB = 36.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> From a point P outside a circle a secant meets the circle at A and B with PA = 2 and AB = 6. Find the length of a tangent from P.</p><details><summary>Hint</summary>Tangent² = PA · PB.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Power of a point</summary><p>PB = 8, so t² = 2·8 = 16 and t = 4.</p></details>
+<details><summary>Method: Similar triangles</summary><p>The tangent triangle gives t/PA = PB/t so t² = PA·PB = 16.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> From a point P outside a circle a secant meets the circle at A and B with PA = 3 and AB = 9. Find the length of a tangent from P.</p><details><summary>Hint</summary>Tangent² = PA · PB.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Power of a point</summary><p>PB = 12, so t² = 3·12 = 36 and t = 6.</p></details>
+<details><summary>Method: Similar triangles</summary><p>The tangent triangle gives t/PA = PB/t so t² = PA·PB = 36.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> In triangle ABC, BC = 7, CA = 8 and AB = 9. The bisector of angle A meets BC at D. Find BD. (fraction)</p><details><summary>Hint</summary>Angle bisector theorem: BD/DC = AB/AC.</details><details><summary>Answer</summary>63/17</details>
+<details><summary>Method: Bisector theorem</summary><p>BD/DC = 9/8, so BD = 7·9/(8 + 9) = 63/17.</p></details>
+<details><summary>Method: Ratio</summary><p>Divide BC = 7 in the ratio 9 : 8; the part next to B is 63/17.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> In triangle ABC, BC = 6, CA = 10 and AB = 12. The bisector of angle A meets BC at D. Find BD. (fraction)</p><details><summary>Hint</summary>Angle bisector theorem: BD/DC = AB/AC.</details><details><summary>Answer</summary>36/11</details>
+<details><summary>Method: Bisector theorem</summary><p>BD/DC = 12/10, so BD = 6·12/(10 + 12) = 36/11.</p></details>
+<details><summary>Method: Ratio</summary><p>Divide BC = 6 in the ratio 12 : 10; the part next to B is 36/11.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> In triangle ABC, BC = 8, CA = 9 and AB = 11. The bisector of angle A meets BC at D. Find BD. (fraction)</p><details><summary>Hint</summary>Angle bisector theorem: BD/DC = AB/AC.</details><details><summary>Answer</summary>22/5</details>
+<details><summary>Method: Bisector theorem</summary><p>BD/DC = 11/9, so BD = 8·11/(9 + 11) = 22/5.</p></details>
+<details><summary>Method: Ratio</summary><p>Divide BC = 8 in the ratio 11 : 9; the part next to B is 22/5.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> Find the area of the triangle with vertices (0,0), (7,1), (3,5). (fraction)</p><details><summary>Hint</summary>Use the shoelace formula.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Shoelace</summary><p>|x₁(y₂ − y₃) + x₂(y₃ − y₁) + x₃(y₁ − y₂)|/2 = 16.</p></details>
+<details><summary>Method: Enclosing rectangle</summary><p>Draw the bounding rectangle and subtract the three corner triangles: 16.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> Find the area of the triangle with vertices (1,1), (6,2), (4,7). (fraction)</p><details><summary>Hint</summary>Use the shoelace formula.</details><details><summary>Answer</summary>27/2</details>
+<details><summary>Method: Shoelace</summary><p>|x₁(y₂ − y₃) + x₂(y₃ − y₁) + x₃(y₁ − y₂)|/2 = 27/2.</p></details>
+<details><summary>Method: Enclosing rectangle</summary><p>Draw the bounding rectangle and subtract the three corner triangles: 27/2.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> Find the area of the triangle with vertices (-2,0), (4,1), (1,6). (fraction)</p><details><summary>Hint</summary>Use the shoelace formula.</details><details><summary>Answer</summary>33/2</details>
+<details><summary>Method: Shoelace</summary><p>|x₁(y₂ − y₃) + x₂(y₃ − y₁) + x₃(y₁ − y₂)|/2 = 33/2.</p></details>
+<details><summary>Method: Enclosing rectangle</summary><p>Draw the bounding rectangle and subtract the three corner triangles: 33/2.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> Points A, B, C, D lie on a circle in that order with AB = 7, BC = 24, CD = 15 and DA = 20. Find BD. (fraction)</p><details><summary>Hint</summary>Ptolemy: AC · BD = AB · CD + BC · DA, and AC is the diameter.</details><details><summary>Answer</summary>117/5</details>
+<details><summary>Method: Ptolemy</summary><p>AC = 25, so BD = (7·15 + 24·20)/25 = 117/5.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put AC on the x-axis and compute B and D from the right angles at B and D; the distance BD is 117/5.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> Points A, B, C, D lie on a circle in that order with AB = 16, BC = 63, CD = 33 and DA = 56. Find BD. (fraction)</p><details><summary>Hint</summary>Ptolemy: AC · BD = AB · CD + BC · DA, and AC is the diameter.</details><details><summary>Answer</summary>312/5</details>
+<details><summary>Method: Ptolemy</summary><p>AC = 65, so BD = (16·33 + 63·56)/65 = 312/5.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put AC on the x-axis and compute B and D from the right angles at B and D; the distance BD is 312/5.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> Points A, B, C, D lie on a circle in that order with AB = 14, BC = 48, CD = 30 and DA = 40. Find BD. (fraction)</p><details><summary>Hint</summary>Ptolemy: AC · BD = AB · CD + BC · DA, and AC is the diameter.</details><details><summary>Answer</summary>234/5</details>
+<details><summary>Method: Ptolemy</summary><p>AC = 50, so BD = (14·30 + 48·40)/50 = 234/5.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put AC on the x-axis and compute B and D from the right angles at B and D; the distance BD is 234/5.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> A right triangle has legs 5 and 12. Find the altitude to the hypotenuse. (fraction)</p><details><summary>Hint</summary>Area two ways.</details><details><summary>Answer</summary>60/13</details>
+<details><summary>Method: Area two ways</summary><p>Hypotenuse 13; ½·5·12 = ½·13·h so h = 60/13.</p></details>
+<details><summary>Method: Similar triangles</summary><p>The altitude splits the triangle into similar ones: h/5 = 12/13, so h = 60/13.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> A right triangle has legs 8 and 15. Find the altitude to the hypotenuse. (fraction)</p><details><summary>Hint</summary>Area two ways.</details><details><summary>Answer</summary>120/17</details>
+<details><summary>Method: Area two ways</summary><p>Hypotenuse 17; ½·8·15 = ½·17·h so h = 120/17.</p></details>
+<details><summary>Method: Similar triangles</summary><p>The altitude splits the triangle into similar ones: h/8 = 15/17, so h = 120/17.</p></details>
+<p class=ref>Source: Technique from Kedlaya ch. 6–8 and the IMO Compendium §2.3 (original problem)</p></div>

@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 47</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 47: Unit 47: Functional equations and special functions</h1><p class=ref>Book: Rusczyk, Art of Problem Solving Vol. 2, ch. 7 (25 problems)<br>Rusczyk, AoPS Vol. 2, chapter 7 (Functions): functional identities, substituting values, cyclic functions.</p>
+<h2>Reading</h2>
+<h3>1. Solving functional equations</h3><p>A <b>functional equation</b> describes a function by a property it satisfies. The skills are substitution and pattern recognition. <b>Example 1.</b> If f(2x + 1) = x², put t = 2x + 1, so x = (t − 1)/2 and f(t) = ((t − 1)/2)²; hence f(5) = 4. <b>Example 2.</b> If f is linear with f(f(x)) = 4x + 3, write f(x) = ax + b: then a²x + ab + b = 4x + 3, so a² = 4 and b(a + 1) = 3: (a, b) = (2, 1) or (−2, −3) (solved by computer algebra as a check).</p><p><b>Example 3 (a system of two unknown values).</b> If f(x) + 2f(1/x) = 3x for all x ≠ 0, replace x by 1/x to get f(1/x) + 2f(x) = 3/x. Solving the two equations as a linear system in f(x) and f(1/x): f(x) = 2/x − x. Check: f(2) + 2f(1/2) = (1 − 2) + 2(4 − 1/2) = −1 + 7 = 6 = 3 · 2 ✓.</p><p><b>Example 4 (recursion).</b> If f(x + 1) = f(x) + 2x + 1 and f(0) = 0, then f(n) = n², since the increments 1, 3, 5, … sum to a square: f(100) = 10 000.</p><details class="try"><summary>Try it</summary><p>If f(x + y) = f(x) + f(y) for all integers and f(1) = 3, find f(10).</p><p><b>Answer.</b> f(n) = 3n by repeated addition, so 30.</p></details>
+<h3>2. Standard types</h3><p><b>Additive</b> (Cauchy): f(x + y) = f(x) + f(y). On the integers (and rationals) this forces f(x) = cx with c = f(1). <b>Multiplicative:</b> f(x + y) = f(x)f(y) with f(1) = 2 gives f(n) = 2ⁿ, so f(5) = 32. <b>Logarithmic:</b> f(xy) = f(x) + f(y) with f(2) = 1 gives f(8) = 3. <b>Periodic:</b> if f(x + 3) = f(x) and f(1) = 5 then f(100) = f(1) = 5 since 100 ≡ 1 (mod 3).</p><p><b>Symmetric:</b> f(x) + f(1 − x) = 1 gives f(1/2) = 1/2 by taking x = 1/2.</p><p><b>Strategy.</b> (1) Try special values x = 0, 1, −1. (2) Try to prove injectivity or surjectivity. (3) Guess a family (linear, power, exponential) and check which parameters fit. (4) Always verify the final answer in the original equation.</p><details class="try"><summary>Try it</summary><p>If f(xy) = f(x) + f(y) and f(3) = 5, find f(81).</p><p><b>Answer.</b> f(81) = f(3⁴) = 4 f(3) = 20.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> Find all functions f with f(x) + 3f(−x) = 4x + 8 for all real x, and find f(2).</p><p><b>Solution.</b> Replace x by −x: f(−x) + 3f(x) = −4x + 8. Multiply the first equation by 3: 3f(x) + 9f(−x) = 12x + 24. Subtract the second: 8f(−x) = 16x + 16, so f(−x) = 2x + 2 and f(x) = −2x + 2. Check: f(x) + 3f(−x) = (−2x + 2) + 3(2x + 2) = 4x + 8 ✓. So f(2) = −2.</p><p><b>Reflection.</b> The substitution x → −x doubled the number of equations; then ordinary elimination finished the job.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Assuming f is linear without proof. (2) Not checking the answer in the original equation. (3) Substituting a value outside the domain. (4) Dividing by f(x) when it can be zero.</p><p><b>Checks.</b> Verify with two or three numerical values.</p><p><b>How to practise.</b> Collect the standard types. In Unlimited practice, rotate the functional-equation families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Substitution trick.</b> Solve f(x) + 2f(1/x) = x for x ≠ 0. Replace x by 1/x: f(1/x) + 2f(x) = 1/x. Multiply this by 2 and subtract the original: 3f(x) = 2/x − x, so f(x) = (2/x − x)/3. Check at x = 2: f(2) = −1/3, f(1/2) = 7/6, and −1/3 + 2 · 7/6 = 2 ✓. <b>Cauchy's equation.</b> If f(x + y) = f(x) + f(y) for all integers and f(1) = 3 then f(n) = 3n by induction, so f(5) = 15.</p><details class="try"><summary>Try it<p>If f(x + 1) = f(x) + 2 and f(0) = 1, find f(10).</p><p><b>Answer.</b> 21.</p></details><details class="try"><summary>Try it<p>If f(xy) = f(x) + f(y) for positive reals and f(2) = 1, find f(8).</p><p><b>Answer.</b> f(8) = 3f(2) = 3.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Does a function f: ℝ → ℝ exist with f(x) + f(1 − x) = x for all x? <b>Solution.</b> Replace x by 1 − x: f(1 − x) + f(x) = 1 − x. The left sides are equal, so x = 1 − x for every x, which is false (for example at x = 0). No such function exists.</p><p><b>Reflection.</b> Substituting x ↦ 1 − x can reveal that the conditions contradict each other; the same substitution with right side 1 gives f(x) = 1/2 as a valid solution when the sum is the constant 1.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> If f(x) + 2f(1/x) = 3x for all x ≠ 0, find f(2) as a fraction.</p><details><summary>Hint</summary>Also use x = 1/2.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Two equations</summary><p>x = 2: f(2) + 2f(1/2) = 6. x = 1/2: f(1/2) + 2f(2) = 3/2. Multiply the second by 2: 2f(1/2) + 4f(2) = 3. Subtract the first equation: 3f(2) = 3 − 6 = −3, so f(2) = −1.</p></details>
+<details><summary>Method: General solution</summary><p>Solving the pair for all x gives f(x) = 2/x − x. At x = 2 this is 1 − 2 = −1.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem p2.</b> f(x + y) = f(x) + f(y) for all x, y, and f(1) = 5. Find f(7).</p><details><summary>Hint</summary>f(2) = f(1) + f(1), and so on.</details><details><summary>Answer</summary>35</details>
+<details><summary>Method: Build up</summary><p>f(7) = 7f(1) = 35.</p></details>
+<details><summary>Method: Linear form</summary><p>The only reasonable (continuous) solution is f(x) = 5x, and f(7) = 35. The step-by-step argument f(n + 1) = f(n) + f(1) already gives it for whole numbers.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem p3.</b> f(x + 1) = f(x) + 2x + 1 and f(0) = 0. Find f(10).</p><details><summary>Hint</summary>Sum the differences.</details><details><summary>Answer</summary>100</details>
+<details><summary>Method: Telescoping</summary><p>f(10) = Σ_{k=0}^{9} (2k + 1) = 100 (the sum of the first ten odd numbers).</p></details>
+<details><summary>Method: Guess and check</summary><p>f(x) = x² satisfies (x + 1)² = x² + 2x + 1 and f(0) = 0, so f(10) = 100.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem p4.</b> f(x) = x² + 1. Find f(f(2)).</p><details><summary>Hint</summary>f(2) = 5.</details><details><summary>Answer</summary>26</details>
+<details><summary>Method: Stepwise</summary><p>f(2) = 5 and f(5) = 26.</p></details>
+<details><summary>Method: Composite</summary><p>f(f(x)) = (x² + 1)² + 1; at x = 2 it is 26.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem p5.</b> f(x) = 2x + 3. Find all x with f(f(x)) = x. How many?</p><details><summary>Hint</summary>Solve the composite equation.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Solve</summary><p>f(f(x)) = 4x + 9 = x gives x = −3, one solution.</p></details>
+<details><summary>Method: Fixed point</summary><p>f(−3) = −3 already, so f(f(−3)) = −3.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem p6.</b> Let f(x) = 1/(1 − x). Find f(f(f(5))).</p><details><summary>Hint</summary>Compute step by step.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Three steps</summary><p>f(5) = −1/4, f(−1/4) = 4/5, f(4/5) = 5. It returns to 5.</p></details>
+<details><summary>Method: Cyclic</summary><p>f(f(f(x))) = x for all x ≠ 0, 1: the function has order 3.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem p7.</b> How many functions f from {1, 2, 3} to {1, 2, 3} satisfy f(f(x)) = x for every x?</p><details><summary>Hint</summary>Count the involutions on 3 elements.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Cases</summary><p>Involutions swap some disjoint pairs: no swap (the identity), or one swap (3 choices). Total 4.</p></details>
+<details><summary>Method: Brute force</summary><p>Checking all 27 functions gives 4.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem p8.</b> The function f satisfies f(2x) = 2f(x) + 1 and f(1) = 3. Find f(8).</p><details><summary>Hint</summary>Double repeatedly.</details><details><summary>Answer</summary>31</details>
+<details><summary>Method: Doubling</summary><p>f(2) = 7, f(4) = 15, f(8) = 31.</p></details>
+<details><summary>Method: Closed form</summary><p>f(2ⁿ) = 2ⁿ⁺² − 1; at n = 3 it is 31.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem p9.</b> If g(x) = x/(x + 1), find g(g(1)).</p><details><summary>Hint</summary>g(1) = 1/2.</details><details><summary>Answer</summary>1/3</details>
+<details><summary>Method: Stepwise</summary><p>g(1) = 1/2 and g(1/2) = (1/2)/(3/2) = 1/3.</p></details>
+<details><summary>Method: Pattern</summary><p>g(g(x)) = x/(2x + 1), so g(g(1)) = 1/3.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem x10.</b> A function satisfies f(x + y) = f(x) + f(y) for integers and f(1) = 3. Find f(5).</p><details><summary>Hint</summary>Add repeatedly.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Induction</summary><p>f(n) = 3n, so f(5) = 15.</p></details>
+<details><summary>Method: Steps</summary><p>f(2) = 6, f(3) = 9, f(4) = 12, f(5) = 15.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem x11.</b> A function satisfies f(2x) = f(x) + 3 and f(1) = 0. Find f(8).</p><details><summary>Hint</summary>Halve repeatedly.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Chain</summary><p>f(2) = 3, f(4) = 6, f(8) = 9.</p></details>
+<details><summary>Method: Formula</summary><p>f(2ᵏ) = 3k.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem x12.</b> A function satisfies f(x) + 2f(1/x) = 3x for x ≠ 0. Find f(2).</p><details><summary>Hint</summary>Substitute x = 2 and x = 1/2.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: System</summary><p>f(2) + 2f(1/2) = 6 and f(1/2) + 2f(2) = 3/2. Then f(1/2) = 3/2 − 2f(2), so f(2) + 3 − 4f(2) = 6 and f(2) = −1.</p></details>
+<details><summary>Method: Check</summary><p>f(1/2) = 3/2 + 2 = 7/2, and −1 + 7 = 6.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem x13.</b> If f(x) = x² + 1, find f(f(1)).</p><details><summary>Hint</summary>Inside first.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Compute</summary><p>f(1) = 2 and f(2) = 5.</p></details>
+<details><summary>Method: Formula</summary><p>f(f(x)) = (x² + 1)² + 1, which at x = 1 is 5.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem x14.</b> A function satisfies f(f(x)) = x for all x, and f(1) = 4. Find f(4).</p><details><summary>Hint</summary>Apply f again.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Involution</summary><p>f(4) = f(f(1)) = 1.</p></details>
+<details><summary>Method: Pairing</summary><p>f swaps 1 and 4.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem x15.</b> A function satisfies f(xy) = f(x)f(y) for positive integers and f(2) = 3. Find f(8).</p><details><summary>Hint</summary>8 = 2 · 2 · 2.</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: Multiplicative</summary><p>f(8) = f(2)³ = 27.</p></details>
+<details><summary>Method: Steps</summary><p>f(4) = 9, f(8) = f(4)f(2) = 27.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem x16.</b> A function satisfies f(x + 1) = f(x) + 2x + 1 and f(0) = 0. Find f(10).</p><details><summary>Hint</summary>Telescoping.</details><details><summary>Answer</summary>100</details>
+<details><summary>Method: Pattern</summary><p>f(n) = n², since (x + 1)² − x² = 2x + 1.</p></details>
+<details><summary>Method: Sum</summary><p>f(10) = 1 + 3 + 5 + … + 19 = 100.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem x17.</b> A function has period 3 and f(1) = 5. Find f(100).</p><details><summary>Hint</summary>100 mod 3.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Period</summary><p>100 ≡ 1 (mod 3), so f(100) = f(1) = 5.</p></details>
+<details><summary>Method: Steps</summary><p>f(100) = f(97) = … = f(1).</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem x18.</b> A sequence has a₁ = 4 and aₖ₊₁ = 3·aₖ + -2. Find a_5.</p><details><summary>Hint</summary>Compute term by term, or find a closed form.</details><details><summary>Answer</summary>244</details>
+<details><summary>Method: Step by step</summary><p>The terms are 4, 10, 28, 82, 244, so a_5 = 244.</p></details>
+<details><summary>Method: Closed form</summary><p>The fixed point is K = 1, so aₙ = (a₁ − K)·3^(n−1) + K. For n = 5 this is 244.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem x19.</b> The Fibonacci numbers start F₁ = F₂ = 1. Find F_13.</p><details><summary>Hint</summary>Add the previous two.</details><details><summary>Answer</summary>233</details>
+<details><summary>Method: List</summary><p>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233; so F_13 = 233.</p></details>
+<details><summary>Method: Splitting identity</summary><p>F_{a+b} = F_a F_{b+1} + F_{a−1} F_b with a = 6, b = 7 gives 8 · 21 + 5 · 13 = 233.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem x20.</b> An arithmetic sequence has first term 7 and common difference 4. Find term number 60.</p><details><summary>Hint</summary>aₙ = a₁ + (n − 1)d.</details><details><summary>Answer</summary>243</details>
+<details><summary>Method: Formula</summary><p>7 + 59 · 4 = 243.</p></details>
+<details><summary>Method: Linear form</summary><p>The terms are 7, 11, 15, 19, …, so term k equals 4·k + 3; at k = 60 this is 243.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem x21.</b> Solve x + y = 12 and x − y = 4. Find x.</p><details><summary>Hint</summary>Add the equations.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Elimination</summary><p>Adding gives 2x = 16, so x = 8.</p></details>
+<details><summary>Method: Substitution</summary><p>From the second equation y = x − 4, so x + x − 4 = 12 and x = 8.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem x22.</b> Find 1³ + 2³ + … + 9³.</p><details><summary>Hint</summary>The sum equals the square of 1 + 2 + … + n.</details><details><summary>Answer</summary>2025</details>
+<details><summary>Method: Square of a sum</summary><p>(9 · 10/2)² = 45² = 2025.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 8 + 27 + 64 + 125 + 216 + 343 + 512 + 729 = 2025.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem x23.</b> A sequence has a₁ = 1 and aₖ₊₁ = 4·aₖ + 3. Find a_5.</p><details><summary>Hint</summary>Compute term by term, or find a closed form.</details><details><summary>Answer</summary>511</details>
+<details><summary>Method: Step by step</summary><p>The terms are 1, 7, 31, 127, 511, so a_5 = 511.</p></details>
+<details><summary>Method: Closed form</summary><p>The fixed point is K = -1, so aₙ = (a₁ − K)·4^(n−1) + K. For n = 5 this is 511.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem x24.</b> The Fibonacci numbers start F₁ = F₂ = 1. Find F_14.</p><details><summary>Hint</summary>Add the previous two.</details><details><summary>Answer</summary>377</details>
+<details><summary>Method: List</summary><p>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377; so F_14 = 377.</p></details>
+<details><summary>Method: Splitting identity</summary><p>F_{a+b} = F_a F_{b+1} + F_{a−1} F_b with a = 7, b = 7 gives 13 · 21 + 8 · 13 = 377.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>
+<div class=p><p><b>Problem x25.</b> An arithmetic sequence has first term 15 and common difference 5. Find term number 35.</p><details><summary>Hint</summary>aₙ = a₁ + (n − 1)d.</details><details><summary>Answer</summary>185</details>
+<details><summary>Method: Formula</summary><p>15 + 34 · 5 = 185.</p></details>
+<details><summary>Method: Linear form</summary><p>The terms are 15, 20, 25, 30, …, so term k equals 5·k + 10; at k = 35 this is 185.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 2, ch. 7</p></div>

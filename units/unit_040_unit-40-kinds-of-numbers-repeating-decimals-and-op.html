@@ -1,0 +1,111 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 40</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 40: Unit 40: Kinds of numbers, repeating decimals and operations</h1><p class=ref>Book: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23 (25 problems)<br>Rusczyk, AoPS Vol. 1, chapters 8 (What Numbers Really Are) and 23 (Operations and Relations), printed pp. 75-80 and 206-210.</p>
+<h2>Reading</h2>
+<h3>1. Kinds of numbers</h3><p>The <b>natural numbers</b> 1, 2, 3, …; the <b>integers</b> (including 0 and negatives); the <b>rationals</b> (fractions of integers); the <b>reals</b> (all points on the number line, including irrationals such as √2 and π). A number is rational exactly when its decimal expansion terminates or eventually repeats. Terminating decimals come from fractions whose denominator in lowest terms has only the prime factors 2 and 5: of the denominators below 30 these are 2, 4, 5, 8, 10, 16, 20, 25.</p><p><b>Irrational numbers.</b> √2 is irrational (Unit 29 gave the descent proof). The sum of a rational and an irrational number is irrational; the sum of two irrationals can be rational (√2 + (−√2) = 0). Between any two real numbers there are infinitely many rationals and irrationals.</p><details class="try"><summary>Try it</summary><p>Is 0.375 rational? Write it as a fraction.</p><p><b>Answer.</b> Yes: 375/1000 = 3/8.</p></details>
+<h3>2. Repeating decimals</h3><p>Dividing 1 by 7 gives 0.142857 142857…, a repeating block of six digits. In general 1/n has a repeating block whose length is the least k with 10ᵏ ≡ 1 (mod n) (when n is coprime to 10): 1 for n = 3, 2 for n = 11, 6 for n = 7 and 13, 3 for n = 37, 16 for n = 17 (all found by computer).</p><p><b>Converting to a fraction.</b> For 0.4545…, multiply by 100: 100N − N = 45, so N = 45/99 = 5/11. For 0.1666…, the repeating part starts after one digit: 10N = 1.666…, 100N − 10N = 15, N = 15/90 = 1/6. For 0.12343434… compute as (1234 − 12)/9900 = 1222/9900 = 611/4950; the general rule: (all digits up to the end of the first repeat − non-repeating digits) over (as many 9s as the repeat, followed by as many 0s as the non-repeating digits).</p><p><b>The surprising 0.999… = 1.</b> N = 0.999… gives 10N − N = 9, so N = 1. There is no number between 0.999… and 1.</p><details class="try"><summary>Try it</summary><p>Write 0.2(7) = 0.2777… as a fraction.</p><p><b>Answer.</b> (27 − 2)/90 = 25/90 = 5/18.</p></details>
+<h3>3. Operations, order and estimation</h3><p>Order of operations: brackets, exponents, multiplication and division left to right, addition and subtraction left to right. Fractions: a/b + c/d = (ad + bc)/bd; compare fractions by cross-multiplying. 7/8 − 3/8 = 1/2.</p><p><b>Counting integers in a range.</b> How many integers n satisfy √50 < n < √500? √50 ≈ 7.07 and √500 ≈ 22.36, so n = 8, …, 22: 15 integers. To avoid errors, square the inequality: 50 < n² < 500.</p><p><b>Estimation.</b> Bound unfamiliar numbers between known squares or powers: 2¹⁰ = 1024 ≈ 10³ gives 2¹⁰⁰ ≈ 10³⁰.</p><details class="try"><summary>Try it</summary><p>How many integers lie strictly between √20 and √200?</p><p><b>Answer.</b> √20 ≈ 4.47, √200 ≈ 14.14: 5, …, 14, so 10.</p></details>
+<h3>4. A longer problem</h3><p><b>Problem.</b> Show that 0.(142857) × 7 = 0.(999999…) = 1, find the decimal of 3/7, and write 1.2(36) as a fraction.</p><p><b>Solution.</b> 1/7 = 0.142857… times 7 gives 0.999… = 1, consistent with 1/7 · 7 = 1. 3/7 = 3 · 0.142857… = 0.428571… (the same block rotated). For 1.2(36): the repeating part 36 starts after one digit; value = 1 + (236 − 2)/990 = 1 + 234/990 = 1 + 13/55 = 68/55.</p><p><b>Reflection.</b> Multiples of 1/7 are rotations of the same six-digit block, because 7 is a full-period prime (10 has order 6 mod 7).</p>
+<h3>5. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Writing 0.4545… as 45/100. (2) Using the wrong number of 9s and 0s in the conversion. (3) Believing that every non-terminating decimal is irrational. (4) Forgetting to reduce the fraction.</p><p><b>Checks.</b> Divide the fraction to see whether you get the decimal you started with.</p><p><b>How to practise.</b> Convert ten repeating decimals by hand. In Unlimited practice, rotate the decimal and fraction families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Repeating decimals.</b> 0.363636… = 36/99 = 4/11. For a decimal with a non-repeating part use subtraction: x = 0.12333…, 1000x − 100x = 123 − 12 = 111, so x = 111/900 = 37/300. Also 0.1666… = (16 − 1)/90 = 1/6 and 0.999… = 1. The repeating block of 1/7 is 142857, so 3.142857142857… = 22/7.</p><p><b>Order of operations.</b> 2 + 3 · 4² = 2 + 48 = 50 (powers first, then multiplication, then addition). <b>Estimating.</b> 49.8 × 20.1 ≈ 50 × 20 = 1000. Rational numbers have terminating or repeating decimals; irrational numbers such as √2 and π do not.</p><details class="try"><summary>Try it<p>Write 0.454545… as a fraction in lowest terms.</p><p><b>Answer.</b> 45/99 = 5/11.</p></details><details class="try"><summary>Try it<p>Is 0.101001000100001… (the number of zeros keeps increasing) rational?</p><p><b>Answer.</b> No: it neither terminates nor repeats.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Show that 0.999… = 1. <b>Solution.</b> Let x = 0.999…. Then 10x = 9.999…, and subtracting gives 9x = 9, so x = 1. This agrees with 1/3 + 2/3 = 0.333… + 0.666… = 1.</p><p><b>Reflection.</b> 0.999… and 1 are two decimal names for the same number.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Write 0.272727… as a fraction in lowest terms.</p><details><summary>Hint</summary>Multiply by 100 and subtract.</details><details><summary>Answer</summary>3/11</details>
+<details><summary>Method: Subtract</summary><p>x = 0.2727…, 100x = 27.2727…, so 99x = 27 and x = 3/11.</p></details>
+<details><summary>Method: Block of digits</summary><p>A two-digit repeating block ab equals ab/99: 27/99 = 3/11.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem p2.</b> Write 0.1666… (the 6 repeats) as a fraction in lowest terms.</p><details><summary>Hint</summary>10x and 100x.</details><details><summary>Answer</summary>1/6</details>
+<details><summary>Method: Subtract</summary><p>x = 0.1666…, 10x = 1.666…, 100x = 16.666…. 100x − 10x = 15, so 90x = 15 and x = 1/6.</p></details>
+<details><summary>Method: Split</summary><p>0.1666… = 0.1 + 0.0666… = 1/10 + 1/15 = 1/6.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem p3.</b> Compute (1 + i)⁸.</p><details><summary>Hint</summary>Square (1 + i) first.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Repeated squaring</summary><p>(1 + i)² = 2i; (2i)² = −4; (−4)² = 16.</p></details>
+<details><summary>Method: Polar idea</summary><p>1 + i has size √2 and angle 45°. Raising to the 8th power gives size 16 and angle 360°, which is 16.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem p4.</b> Compute i²⁰²³ as a number: is it i, −1, −i or 1? Type your answer.</p><details><summary>Hint</summary>The powers of i repeat every 4.</details><details><summary>Answer</summary>-i</details>
+<details><summary>Method: Cycle</summary><p>2023 = 4·505 + 3, and i³ = −i.</p></details>
+<details><summary>Method: Check</summary><p>i² = −1, i³ = i·(−1) = −i.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem p5.</b> Find (3 + 4i)(3 − 4i).</p><details><summary>Hint</summary>a² + b².</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Conjugate</summary><p>9 + 16 = 25.</p></details>
+<details><summary>Method: Expand</summary><p>9 − 12i + 12i − 16i² = 9 + 16 = 25.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem p6.</b> Define a ∗ b = 2a + b. Find (3 ∗ 4) ∗ 5.</p><details><summary>Hint</summary>Inside the brackets first.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Evaluate</summary><p>3 ∗ 4 = 6 + 4 = 10; 10 ∗ 5 = 20 + 5 = 25.</p></details>
+<details><summary>Method: Order matters</summary><p>3 ∗ (4 ∗ 5) = 3 ∗ 14 = 20, so ∗ is not associative.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem p7.</b> Define a ⊕ b = a + b − ab. Find 2 ⊕ 3.</p><details><summary>Hint</summary>Substitute.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Substitute</summary><p>2 + 3 − 6 = −1.</p></details>
+<details><summary>Method: Rewrite</summary><p>a ⊕ b = 1 − (1 − a)(1 − b), and 1 − (−1)(−2) = −1.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem p8.</b> Define a ∗ b = a + b + ab. Find the inverse of 2: the number b with 2 ∗ b equal to the identity element. Give b as a fraction.</p><details><summary>Hint</summary>Find the identity e first: a ∗ e = a.</details><details><summary>Answer</summary>-2/3</details>
+<details><summary>Method: Identity then inverse</summary><p>a + e + ae = a gives e(1 + a) = 0, so e = 0. Then 2 + b + 2b = 0 gives 3b = −2 and b = −2/3.</p></details>
+<details><summary>Method: Product form</summary><p>a ∗ b + 1 = (a + 1)(b + 1), so the identity makes (a + 1)(b + 1) = 1, giving b + 1 = 1/3 and b = −2/3.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem p9.</b> How many fractions k/60 with 0 < k < 60 are already in lowest terms?</p><details><summary>Hint</summary>Count k coprime to 60.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Totient</summary><p>60 = 4·3·5, so φ(60) = 60·(1/2)(2/3)(4/5) = 16.</p></details>
+<details><summary>Method: Computer check</summary><p>Counting the k with gcd(k, 60) = 1 gives 16.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem p10.</b> Is √2 + √3 rational? Answer yes or no.</p><details><summary>Hint</summary>Suppose it equals a fraction and square it.</details><details><summary>Answer</summary>no</details>
+<details><summary>Method: Contradiction</summary><p>If √2 + √3 = q were rational then squaring gives 5 + 2√6 = q², so √6 would be rational, which it is not (6 is not a perfect square).</p></details>
+<details><summary>Method: Numerical</summary><p>The value 3.146… does not terminate or repeat, which is consistent (the proof above is the real argument).</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem x11.</b> Write 0.272727… (27 repeating) as a fraction in lowest terms.</p><details><summary>Hint</summary>Multiply by 100.</details><details><summary>Answer</summary>3/11</details>
+<details><summary>Method: Algebra</summary><p>100x − x = 27, so x = 27/99 = 3/11.</p></details>
+<details><summary>Method: Check</summary><p>3/11 = 0.2727…</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem x12.</b> Write 0.1666… (6 repeating) as a fraction in lowest terms.</p><details><summary>Hint</summary>Multiply by 10 and 100.</details><details><summary>Answer</summary>1/6</details>
+<details><summary>Method: Algebra</summary><p>100x − 10x = 16 − 1 = 15, so x = 15/90 = 1/6.</p></details>
+<details><summary>Method: Check</summary><p>1/6 = 0.1666…</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem x13.</b> What is the value of 0.999… ?</p><details><summary>Hint</summary>Subtract.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Algebra</summary><p>10x − x = 9 gives x = 1.</p></details>
+<details><summary>Method: Fractions</summary><p>1/3 = 0.333… so 3 · (1/3) = 0.999… = 1.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem x14.</b> How many digits are in the repeating block of the decimal expansion of 1/7?</p><details><summary>Hint</summary>Long division.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Division</summary><p>1/7 = 0.142857142857…, block length 6.</p></details>
+<details><summary>Method: Order</summary><p>The length equals the order of 10 mod 7, which is 6.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem x15.</b> Write 0.121212… (12 repeating) as a fraction in lowest terms.</p><details><summary>Hint</summary>Multiply by 100.</details><details><summary>Answer</summary>4/33</details>
+<details><summary>Method: Algebra</summary><p>12/99 = 4/33.</p></details>
+<details><summary>Method: Check</summary><p>4/33 = 0.1212…</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem x16.</b> Write √50 as a√2. Find a.</p><details><summary>Hint</summary>50 = 25 · 2.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Simplify</summary><p>√50 = √25 · √2 = 5√2.</p></details>
+<details><summary>Method: Check</summary><p>(5√2)² = 50.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem x17.</b> Is 0.101001000100001… (with one more 0 each time) rational? Answer 1 for yes and 0 for no.</p><details><summary>Hint</summary>Rational decimals eventually repeat.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Non-repeating</summary><p>The gaps keep growing, so the expansion never becomes periodic. Irrational: 0.</p></details>
+<details><summary>Method: Fact</summary><p>Rational numbers have terminating or repeating decimals.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem x18.</b> How many integers lie strictly between √20 and √200?</p><details><summary>Hint</summary>√20 ≈ 4.47 and √200 ≈ 14.14.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Bounds</summary><p>The integers are 5 to 14: 10.</p></details>
+<details><summary>Method: Squares</summary><p>n > √20 means n² > 20, so n ≥ 5, and n < √200 means n² < 200, so n ≤ 14.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem x19.</b> Write 123 in base 4.</p><details><summary>Hint</summary>Divide repeatedly by 4 and record remainders.</details><details><summary>Answer</summary>1323</details>
+<details><summary>Method: Repeated division</summary><p>Dividing by 4 repeatedly gives the remainders 3, 2, 3, 1 in that order; reading them backwards gives 1323.</p></details>
+<details><summary>Method: Place values</summary><p>1323: 1·4^3 + 3·4^2 + 2·4^1 + 3·4^0, which total 123.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem x20.</b> Convert 4021 (base 5) to base 10.</p><details><summary>Hint</summary>Use place values.</details><details><summary>Answer</summary>511</details>
+<details><summary>Method: Place values</summary><p>4·5^3 + 0·5^2 + 2·5^1 + 1·5^0 = 511.</p></details>
+<details><summary>Method: Horner</summary><p>Double-and-add style: starting from 0, multiply by 5 and add each digit: 4, 20, 102, 511, ending at 511.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem x21.</b> Find gcd(299, 391).</p><details><summary>Hint</summary>Use Euclid's algorithm.</details><details><summary>Answer</summary>23</details>
+<details><summary>Method: Euclid</summary><p>299 = 0 · 391 + 299; 391 = 1 · 299 + 92; 299 = 3 · 92 + 23; 92 = 4 · 23 + 0, so the gcd is 23.</p></details>
+<details><summary>Method: Prime factors</summary><p>299 = 13 · 23 and 391 = 17 · 23; the common part is 23.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem x22.</b> Find lcm(15, 20).</p><details><summary>Hint</summary>lcm · gcd = product.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Using the gcd</summary><p>gcd = 5, so lcm = 15 · 20/5 = 60.</p></details>
+<details><summary>Method: Prime powers</summary><p>15 = 3 · 5 and 20 = 2^2 · 5; take the larger power of each prime to get 60.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem x23.</b> Find σ(84), the sum of all positive divisors of 84.</p><details><summary>Hint</summary>Factor 84 into primes and use that σ is multiplicative.</details><details><summary>Answer</summary>224</details>
+<details><summary>Method: Multiplicative</summary><p>84 = 2^2 · 3 · 7. σ(p^k) = 1 + p + … + p^k, giving 7 and 4 and 8, whose product is 224.</p></details>
+<details><summary>Method: List the divisors</summary><p>The divisors are 1, 2, 3, 4, 6, 7, 12, 14, 21, 28, 42, 84, and their sum is 224.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem x24.</b> How many positive divisors does 180 have?</p><details><summary>Hint</summary>Factor first.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: Exponent formula</summary><p>180 = 2^2 · 3^2 · 5, so the count is 3 · 3 · 2 = 18.</p></details>
+<details><summary>Method: Pairing</summary><p>Divisors pair as d and 180/d: 1, 2, 3, 4, 5, 6, 9, 10, 12, 15, 18, 20, 30, 36, 45, 60, 90, 180. There are 18 of them.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>
+<div class=p><p><b>Problem x25.</b> Write 200 in base 6.</p><details><summary>Hint</summary>Divide repeatedly by 6 and record remainders.</details><details><summary>Answer</summary>532</details>
+<details><summary>Method: Repeated division</summary><p>Dividing by 6 repeatedly gives the remainders 2, 3, 5 in that order; reading them backwards gives 532.</p></details>
+<details><summary>Method: Place values</summary><p>532: 5·6^2 + 3·6^1 + 2·6^0, which total 200.</p></details>
+<p class=ref>Source: Rusczyk, Art of Problem Solving Vol. 1, ch. 8 and 23</p></div>

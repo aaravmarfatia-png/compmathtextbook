@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 145</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 145: Unit 145: Olympiad treasures: pigeonhole, invariants and games</h1><p class=ref>Book: Andreescu &amp; Enescu, Mathematical Olympiad Treasures; Aigner &amp; Ziegler, Proofs from THE BOOK (25 problems)<br>Andreescu &amp; Enescu, Mathematical Olympiad Treasures, ch. 3 (3.1 arrays of numbers, 3.3 Count Twice!, 3.9 the Marriage Lemma); Aigner &amp; Ziegler, ch. 25 and ch. 10 (lines in the plane).</p>
+<h2>Reading</h2>
+<h3>1. Pigeonhole and extremal counting</h3><p>Every integer is 2ˢ times an odd number, so {1, …, 10} splits into 5 chains by odd part (1,2,4,8; 3,6; 5,10; 7; 9). Any 6 numbers put two in the same chain, so one divides the other, and the numbers 6 to 10 show 5 is not enough: the answer for N = 10 is 6. n lines in general position make 1 + n + C(n,2) regions: 4 lines give 11; n planes make 1 + n + C(n,2) + C(n,3).</p><details class="try"><summary>Try it<p>Regions made by 3 lines in general position?</p><p><b>Answer.</b> 7.</p></details><details class="try"><summary>Try it<p>Smallest k forcing divisibility in {1,…,8}?</p><p><b>Answer.</b> 5.</p></details>
+<h3>2. Invariants and games</h3><p>A move that keeps some quantity fixed pins down the end state. Replacing a, b by a + b − 1 lowers the sum by 1 each time, so from 1..4 the final number is 10 − 3 = 7. Replacing by ab + a + b keeps ∏(x + 1), so from 1,2,3 we end at 4! − 1 = 23. <b>Nim.</b> With piles 3, 4, 5 the XOR is 2, and the only winning move is 3 → 1. <b>Josephus.</b> Eliminating every second person from n = 2ᵐ + L leaves 2L + 1.</p><details class="try"><summary>Try it<p>Final number from 1,2,3,4,5 using a + b − 1?</p><p><b>Answer.</b> 15 − 4 = 11.</p></details><details class="try"><summary>Try it<p>Josephus survivor for n = 6?</p><p><b>Answer.</b> L = 2, survivor 5.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> Find the survivor for n = 41. <b>Solution.</b> 41 = 32 + 9, so the survivor is 2 · 9 + 1 = 19.</p><p><b>Check.</b> A direct simulation of the circle of 41 agrees (checked by program) ✓.</p>
+<h3>4. In the books</h3><p><b>Olympiad Treasures, ch. 3 (Number Theory and Combinatorics).</b> 3.1 arrays of numbers, 3.2 functions defined on sets of points, 3.3 Count Twice!, 3.4 sequences of integers, 3.5 equations with infinitely many solutions, 3.6 equations with no solutions, 3.7 powers of 2, 3.8 progressions, 3.9 the Marriage Lemma. The book is a set of non-routine problems grouped by method.</p><p><b>Aigner &amp; Ziegler.</b> Ch. 10 treats lines in the plane and decompositions of graphs; ch. 25 pigeon-hole and double counting.</p><p><b>Honest note.</b> The antichain (divisibility) problem, the invariant problems and regions made by lines are classics; the Nim and Josephus problems are my own additions and do not appear in these books.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> What is the smallest k such that every k-element subset of {1, …, 10} contains two numbers, one dividing the other?</p><details><summary>Hint</summary>Write each number as 2^s times an odd number and use pigeonhole.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Pigeonhole</summary><p>The 10 numbers fall into 5 chains by their odd part; 6 numbers force two in the same chain, so k = 6.</p></details>
+<details><summary>Method: Antichain</summary><p>The 5 numbers from 6 to 10 have no divisibility among them, so k > 5; the chain bound gives k = 6.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> What is the smallest k such that every k-element subset of {1, …, 16} contains two numbers, one dividing the other?</p><details><summary>Hint</summary>Write each number as 2^s times an odd number and use pigeonhole.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Pigeonhole</summary><p>The 16 numbers fall into 8 chains by their odd part; 9 numbers force two in the same chain, so k = 9.</p></details>
+<details><summary>Method: Antichain</summary><p>The 8 numbers from 9 to 16 have no divisibility among them, so k > 8; the chain bound gives k = 9.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> What is the smallest k such that every k-element subset of {1, …, 20} contains two numbers, one dividing the other?</p><details><summary>Hint</summary>Write each number as 2^s times an odd number and use pigeonhole.</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: Pigeonhole</summary><p>The 20 numbers fall into 10 chains by their odd part; 11 numbers force two in the same chain, so k = 11.</p></details>
+<details><summary>Method: Antichain</summary><p>The 10 numbers from 11 to 20 have no divisibility among them, so k > 10; the chain bound gives k = 11.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> What is the smallest k such that every k-element subset of {1, …, 50} contains two numbers, one dividing the other?</p><details><summary>Hint</summary>Write each number as 2^s times an odd number and use pigeonhole.</details><details><summary>Answer</summary>26</details>
+<details><summary>Method: Pigeonhole</summary><p>The 50 numbers fall into 25 chains by their odd part; 26 numbers force two in the same chain, so k = 26.</p></details>
+<details><summary>Method: Antichain</summary><p>The 25 numbers from 26 to 50 have no divisibility among them, so k > 25; the chain bound gives k = 26.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> 5 lines in the plane, no two parallel and no three through a point, divide the plane into how many regions?</p><details><summary>Hint</summary>Adding the kth line adds k new regions.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Recurrence</summary><p>R_n = R_(n−1) + n with R₀ = 1: R_5 = 16.</p></details>
+<details><summary>Method: Formula</summary><p>1 + n + C(n,2) = 16.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> 8 lines in the plane, no two parallel and no three through a point, divide the plane into how many regions?</p><details><summary>Hint</summary>Adding the kth line adds k new regions.</details><details><summary>Answer</summary>37</details>
+<details><summary>Method: Recurrence</summary><p>R_n = R_(n−1) + n with R₀ = 1: R_8 = 37.</p></details>
+<details><summary>Method: Formula</summary><p>1 + n + C(n,2) = 37.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> 10 lines in the plane, no two parallel and no three through a point, divide the plane into how many regions?</p><details><summary>Hint</summary>Adding the kth line adds k new regions.</details><details><summary>Answer</summary>56</details>
+<details><summary>Method: Recurrence</summary><p>R_n = R_(n−1) + n with R₀ = 1: R_10 = 56.</p></details>
+<details><summary>Method: Formula</summary><p>1 + n + C(n,2) = 56.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> 4 planes in space in general position divide it into how many regions?</p><details><summary>Hint</summary>Count by dimension: 1 + n + C(n,2) + C(n,3).</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Formula</summary><p>C(4,0) + C(4,1) + C(4,2) + C(4,3) = 15.</p></details>
+<details><summary>Method: Recurrence</summary><p>The kth plane is cut by the earlier ones into 1 + (k − 1) + C(k − 1, 2) pieces, each splitting a region; summing gives 15.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> 5 planes in space in general position divide it into how many regions?</p><details><summary>Hint</summary>Count by dimension: 1 + n + C(n,2) + C(n,3).</details><details><summary>Answer</summary>26</details>
+<details><summary>Method: Formula</summary><p>C(5,0) + C(5,1) + C(5,2) + C(5,3) = 26.</p></details>
+<details><summary>Method: Recurrence</summary><p>The kth plane is cut by the earlier ones into 1 + (k − 1) + C(k − 1, 2) pieces, each splitting a region; summing gives 26.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> 6 planes in space in general position divide it into how many regions?</p><details><summary>Hint</summary>Count by dimension: 1 + n + C(n,2) + C(n,3).</details><details><summary>Answer</summary>42</details>
+<details><summary>Method: Formula</summary><p>C(6,0) + C(6,1) + C(6,2) + C(6,3) = 42.</p></details>
+<details><summary>Method: Recurrence</summary><p>The kth plane is cut by the earlier ones into 1 + (k − 1) + C(k − 1, 2) pieces, each splitting a region; summing gives 42.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> In Nim with piles 3, 4, 5, how many different first moves leave the opponent in a losing position?</p><details><summary>Hint</summary>A position is losing exactly when the XOR of the pile sizes is 0.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: XOR</summary><p>The XOR of the piles is 2; a move to XOR 0 changes a pile p to p ⊕ 2 and is legal when that is smaller: 1 such piles.</p></details>
+<details><summary>Method: Exhaustive search</summary><p>Check every move from the position and test whether the result is a losing position: 1 moves work.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> In Nim with piles 7, 9, 12, how many different first moves leave the opponent in a losing position?</p><details><summary>Hint</summary>A position is losing exactly when the XOR of the pile sizes is 0.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: XOR</summary><p>The XOR of the piles is 2; a move to XOR 0 changes a pile p to p ⊕ 2 and is legal when that is smaller: 1 such piles.</p></details>
+<details><summary>Method: Exhaustive search</summary><p>Check every move from the position and test whether the result is a losing position: 1 moves work.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> In Nim with piles 5, 6, 7, how many different first moves leave the opponent in a losing position?</p><details><summary>Hint</summary>A position is losing exactly when the XOR of the pile sizes is 0.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: XOR</summary><p>The XOR of the piles is 4; a move to XOR 0 changes a pile p to p ⊕ 4 and is legal when that is smaller: 3 such piles.</p></details>
+<details><summary>Method: Exhaustive search</summary><p>Check every move from the position and test whether the result is a losing position: 3 moves work.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> In Nim with piles 6, 10, 13, how many different first moves leave the opponent in a losing position?</p><details><summary>Hint</summary>A position is losing exactly when the XOR of the pile sizes is 0.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: XOR</summary><p>The XOR of the piles is 1; a move to XOR 0 changes a pile p to p ⊕ 1 and is legal when that is smaller: 1 such piles.</p></details>
+<details><summary>Method: Exhaustive search</summary><p>Check every move from the position and test whether the result is a losing position: 1 moves work.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> The numbers 1, 2, …, 10 are written on a board. A move replaces two numbers a, b by a + b − 1. What number is left after 9 moves?</p><details><summary>Hint</summary>Find a quantity that never changes.</details><details><summary>Answer</summary>46</details>
+<details><summary>Method: Invariant</summary><p>The sum drops by 1 each move, so the final number is 55 − 9 = 46.</p></details>
+<details><summary>Method: Small case</summary><p>Try n = 3: 1,2,3 → 2,3 → 4 = 6 − 2. The same pattern gives 46.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> The numbers 1, 2, …, 20 are written on a board. A move replaces two numbers a, b by a + b − 1. What number is left after 19 moves?</p><details><summary>Hint</summary>Find a quantity that never changes.</details><details><summary>Answer</summary>191</details>
+<details><summary>Method: Invariant</summary><p>The sum drops by 1 each move, so the final number is 210 − 19 = 191.</p></details>
+<details><summary>Method: Small case</summary><p>Try n = 3: 1,2,3 → 2,3 → 4 = 6 − 2. The same pattern gives 191.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> The numbers 1, 2, …, 30 are written on a board. A move replaces two numbers a, b by a + b − 1. What number is left after 29 moves?</p><details><summary>Hint</summary>Find a quantity that never changes.</details><details><summary>Answer</summary>436</details>
+<details><summary>Method: Invariant</summary><p>The sum drops by 1 each move, so the final number is 465 − 29 = 436.</p></details>
+<details><summary>Method: Small case</summary><p>Try n = 3: 1,2,3 → 2,3 → 4 = 6 − 2. The same pattern gives 436.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> The numbers 1, 2, …, 4 are on a board. A move replaces two numbers a, b by ab + a + b. What number is left at the end?</p><details><summary>Hint</summary>Consider the product of (number + 1).</details><details><summary>Answer</summary>119</details>
+<details><summary>Method: Invariant</summary><p>(ab + a + b) + 1 = (a + 1)(b + 1), so the product of (x + 1) is unchanged: the final number is 5! − 1 = 119.</p></details>
+<details><summary>Method: Small case</summary><p>For 1, 2, 3: (1,2) → 5; then (5,3) → 23 = 4! − 1; the pattern gives 119 for n = 4.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> The numbers 1, 2, …, 5 are on a board. A move replaces two numbers a, b by ab + a + b. What number is left at the end?</p><details><summary>Hint</summary>Consider the product of (number + 1).</details><details><summary>Answer</summary>719</details>
+<details><summary>Method: Invariant</summary><p>(ab + a + b) + 1 = (a + 1)(b + 1), so the product of (x + 1) is unchanged: the final number is 6! − 1 = 719.</p></details>
+<details><summary>Method: Small case</summary><p>For 1, 2, 3: (1,2) → 5; then (5,3) → 23 = 4! − 1; the pattern gives 719 for n = 5.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> The numbers 1, 2, …, 6 are on a board. A move replaces two numbers a, b by ab + a + b. What number is left at the end?</p><details><summary>Hint</summary>Consider the product of (number + 1).</details><details><summary>Answer</summary>5039</details>
+<details><summary>Method: Invariant</summary><p>(ab + a + b) + 1 = (a + 1)(b + 1), so the product of (x + 1) is unchanged: the final number is 7! − 1 = 5039.</p></details>
+<details><summary>Method: Small case</summary><p>For 1, 2, 3: (1,2) → 5; then (5,3) → 23 = 4! − 1; the pattern gives 5039 for n = 6.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> 7 people stand in a circle numbered 1 to 7. Starting at 1, every second person (2, 4, …) is removed, going round the circle. Who survives?</p><details><summary>Hint</summary>Write n = 2^m + L; the survivor is 2L + 1.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Josephus formula</summary><p>7 = 4 + 3, so the survivor is 2·3 + 1 = 7.</p></details>
+<details><summary>Method: Simulation</summary><p>Remove 2, 4, 6, … round after round; the last person left is number 7.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> 10 people stand in a circle numbered 1 to 10. Starting at 1, every second person (2, 4, …) is removed, going round the circle. Who survives?</p><details><summary>Hint</summary>Write n = 2^m + L; the survivor is 2L + 1.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Josephus formula</summary><p>10 = 8 + 2, so the survivor is 2·2 + 1 = 5.</p></details>
+<details><summary>Method: Simulation</summary><p>Remove 2, 4, 6, … round after round; the last person left is number 5.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> 41 people stand in a circle numbered 1 to 41. Starting at 1, every second person (2, 4, …) is removed, going round the circle. Who survives?</p><details><summary>Hint</summary>Write n = 2^m + L; the survivor is 2L + 1.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: Josephus formula</summary><p>41 = 32 + 9, so the survivor is 2·9 + 1 = 19.</p></details>
+<details><summary>Method: Simulation</summary><p>Remove 2, 4, 6, … round after round; the last person left is number 19.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> 64 people stand in a circle numbered 1 to 64. Starting at 1, every second person (2, 4, …) is removed, going round the circle. Who survives?</p><details><summary>Hint</summary>Write n = 2^m + L; the survivor is 2L + 1.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Josephus formula</summary><p>64 = 64 + 0, so the survivor is 2·0 + 1 = 1.</p></details>
+<details><summary>Method: Simulation</summary><p>Remove 2, 4, 6, … round after round; the last person left is number 1.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> 100 people stand in a circle numbered 1 to 100. Starting at 1, every second person (2, 4, …) is removed, going round the circle. Who survives?</p><details><summary>Hint</summary>Write n = 2^m + L; the survivor is 2L + 1.</details><details><summary>Answer</summary>73</details>
+<details><summary>Method: Josephus formula</summary><p>100 = 64 + 36, so the survivor is 2·36 + 1 = 73.</p></details>
+<details><summary>Method: Simulation</summary><p>Remove 2, 4, 6, … round after round; the last person left is number 73.</p></details>
+<p class=ref>Source: Technique from Olympiad Treasures ch. 3 and Aigner &amp; Ziegler ch. 10, 25 (original problem)</p></div>

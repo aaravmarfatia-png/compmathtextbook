@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 131</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 131: Unit 131: Equations and expressions</h1><p class=ref>Book: AoPS Vol. 2 ch. 13 (25 problems)<br>Rusczyk, The Art of Problem Solving Volume 2, chapter 13 (Equations and Expressions).</p>
+<h2>Reading</h2>
+<h3>1. Radical equations</h3><p>To solve √(f(x)) = g(x), first require g(x) ≥ 0, then square, solve, and <b>check every candidate</b>, because squaring may introduce extra roots.</p><p><b>Worked example.</b> √(x + 5) = x − 1. Squaring: x + 5 = x² − 2x + 1, so x² − 3x − 4 = 0 and x = 4 or x = −1. For x = 4: √9 = 3 = 4 − 1 ✓. For x = −1: √4 = 2 but x − 1 = −2, so it is rejected. The only solution is x = 4.</p>
+<h3>2. Absolute values</h3><p>|a| is the distance from a to 0. Solve equations with absolute values by splitting into cases where each expression inside is positive or negative, or by using the distance interpretation.</p><p><b>Worked example.</b> |x − 2| + |x + 1| = 5 means: the sum of the distances from x to 2 and to −1 equals 5. The two points are 3 apart, so the sum is at least 3 and equals 5 outside the segment: x = 3 (1 + 4 = 5 ✓) or x = −2 (4 + 1 = 5 ✓).</p><p><b>Inequalities.</b> |x − 2| < 3 means −1 < x < 5.</p>
+<h3>3. Substitution and factoring</h3><p>Recognise a hidden quadratic: x⁴ − 5x² + 4 = 0 becomes u² − 5u + 4 = 0 with u = x², so u = 1 or 4 and x = ±1, ±2. Expressions in √x become polynomials with u = √x.</p><p><b>Worked example (Vieta).</b> If the roots of x² − 5x + 3 = 0 are p and q, then p + q = 5 and pq = 3, so p² + q² = 25 − 6 = 19 and 1/p + 1/q = 5/3.</p><p><b>Rational equations.</b> Multiply by the common denominator and reject any solution that makes a denominator zero: 1/(x − 1) + 1/(x + 1) = 1 gives 2x = x² − 1, x² − 2x − 1 = 0, x = 1 ± √2.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Squaring both sides and not checking. Losing a case in absolute values. Cancelling a factor that can be zero.</p><p><b>Checks.</b> Plug each solution into the original equation.</p><p><b>Practice.</b> Write 'Check:' after every radical or rational equation.</p>
+<h3>Worked examples with Try-its: Factoring tricks</h3><p>Difference of squares: 2023² − 2022² = (2023 − 2022)(2023 + 2022) = 4045. <b>Sophie Germain:</b> x⁴ + 4y⁴ = (x² + 2y² − 2xy)(x² + 2y² + 2xy). <b>Four consecutive factors:</b> (x + 1)(x + 2)(x + 3)(x + 4) + 1 = (x² + 5x + 5)². These identities turn a hard-looking expression into a perfect square or a product.</p><details class="try"><summary>Try it<p>Factor x⁴ + 4.</p><p><b>Answer.</b> (x² − 2x + 2)(x² + 2x + 2).</p></details>
+<h3>Worked examples with Try-its: Symmetric and completing the square</h3><p>x² + y² = (x + y)² − 2xy and x² − y² = (x − y)(x + y). To solve x² + 6x + 5 = 0 write (x + 3)² = 4. A quadratic ax² + bx + c has roots (−b ± √(b² − 4ac))/2a, and the discriminant b² − 4ac tells how many real roots there are.</p><details class="try"><summary>Try it<p>For which k does x² + kx + 9 = 0 have exactly one real root?</p><p><b>Answer.</b> k² = 36, so k = ±6.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Evaluate 1 · 2 · 3 · 4 + 1 and 2 · 3 · 4 · 5 + 1 and explain the pattern. <b>Solution.</b> 25 = 5² and 121 = 11². With x = 0 and x = 1 in the identity above, (x² + 5x + 5)² gives 25 and 121; so the product of four consecutive integers plus 1 is always a perfect square.</p><p><b>Reflection.</b> Test the pattern on small numbers before trying to prove it.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Cubes.</b> x³ + y³ = (x + y)(x² − xy + y²) = (x + y)³ − 3xy(x + y). So if x + y = 5 and xy = 6 then x³ + y³ = 125 − 90 = 35 (indeed x, y = 2, 3 and 8 + 27 = 35). <b>Completing the square.</b> x² − 6x + 10 = (x − 3)² + 1.</p><details class="try"><summary>Try it<p>Factor 8x³ + 27.</p><p><b>Answer.</b> (2x + 3)(4x² − 6x + 9).</p></details><details class="try"><summary>Try it<p>If a − b = 2 and ab = 3, find a² + b².</p><p><b>Answer.</b> 4 + 6 = 10.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Simplify (x² + 3x + 2)/(x² − 1). <b>Solution.</b> The numerator factors as (x + 1)(x + 2) and the denominator as (x − 1)(x + 1), so the fraction is (x + 2)/(x − 1) for x ≠ ±1.</p><p><b>Check.</b> At x = 3: 20/8 = 5/2 and 5/2 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Solve the system x + y + z = 6; x − y + 2z = 5; 2x + y − z = 1. Find x + y + z.</p><details><summary>Hint</summary>Eliminate one variable at a time.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Elimination</summary><p>Eliminating one variable from pairs of equations gives a 2 × 2 system whose solution is (x, y, z) = (1, 2, 3), so x + y + z = 6.</p></details>
+<details><summary>Method: Cramer's rule</summary><p>The determinant of the coefficients is 7, and the three replaced determinants give x = 1, y = 2, z = 3, with sum 6.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p2.</b> Solve the system x + 2y + z = 4; 2x + y − z = -1; x − y + 2z = 11. Find x + y + z.</p><details><summary>Hint</summary>Eliminate one variable at a time.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Elimination</summary><p>Eliminating one variable from pairs of equations gives a 2 × 2 system whose solution is (x, y, z) = (2, -1, 4), so x + y + z = 5.</p></details>
+<details><summary>Method: Cramer's rule</summary><p>The determinant of the coefficients is -12, and the three replaced determinants give x = 2, y = -1, z = 4, with sum 5.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p3.</b> Solve the system 2x + y + z = 9; x + 2y + z = 7; x + y + 2z = 8. Find x + y + z.</p><details><summary>Hint</summary>Eliminate one variable at a time.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Elimination</summary><p>Eliminating one variable from pairs of equations gives a 2 × 2 system whose solution is (x, y, z) = (3, 1, 2), so x + y + z = 6.</p></details>
+<details><summary>Method: Cramer's rule</summary><p>The determinant of the coefficients is 4, and the three replaced determinants give x = 3, y = 1, z = 2, with sum 6.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p4.</b> Solve the system x + y + 2z = 4; 3x − y + z = 9; x + 2y − z = 9. Find x + y + z.</p><details><summary>Hint</summary>Eliminate one variable at a time.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Elimination</summary><p>Eliminating one variable from pairs of equations gives a 2 × 2 system whose solution is (x, y, z) = (4, 2, -1), so x + y + z = 5.</p></details>
+<details><summary>Method: Cramer's rule</summary><p>The determinant of the coefficients is 17, and the three replaced determinants give x = 4, y = 2, z = -1, with sum 5.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p5.</b> Real numbers satisfy x + y = 7, y + z = 9 and z + x = 12. Find xyz.</p><details><summary>Hint</summary>Add all three equations.</details><details><summary>Answer</summary>70</details>
+<details><summary>Method: Add</summary><p>Adding gives 2(x + y + z) = 28, so x + y + z = 14. Subtracting each given sum: z = 7, x = 5, y = 2, so xyz = 70.</p></details>
+<details><summary>Method: Substitute</summary><p>From the first equation y = 7 − x; the second gives z = 9 − y = 2 + x; the third becomes 2 + 2x = 12, so x = 5 and the rest follow: xyz = 70.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p6.</b> Real numbers satisfy x + y = 10, y + z = 13 and z + x = 15. Find xyz.</p><details><summary>Hint</summary>Add all three equations.</details><details><summary>Answer</summary>216</details>
+<details><summary>Method: Add</summary><p>Adding gives 2(x + y + z) = 38, so x + y + z = 19. Subtracting each given sum: z = 9, x = 6, y = 4, so xyz = 216.</p></details>
+<details><summary>Method: Substitute</summary><p>From the first equation y = 10 − x; the second gives z = 13 − y = 3 + x; the third becomes 3 + 2x = 15, so x = 6 and the rest follow: xyz = 216.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p7.</b> Real numbers satisfy x + y = 5, y + z = 8 and z + x = 9. Find xyz.</p><details><summary>Hint</summary>Add all three equations.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Add</summary><p>Adding gives 2(x + y + z) = 22, so x + y + z = 11. Subtracting each given sum: z = 6, x = 3, y = 2, so xyz = 36.</p></details>
+<details><summary>Method: Substitute</summary><p>From the first equation y = 5 − x; the second gives z = 8 − y = 3 + x; the third becomes 3 + 2x = 9, so x = 3 and the rest follow: xyz = 36.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p8.</b> Two numbers have sum 9 and product 14. Find the square of their difference.</p><details><summary>Hint</summary>(x − y)² = (x + y)² − 4xy.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Identity</summary><p>(x − y)² = 81 − 56 = 25.</p></details>
+<details><summary>Method: Find the numbers</summary><p>They are the roots of t² − 9t + 14 = 0, namely 7, 2, and their difference squared is 25.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p9.</b> Two numbers have sum 11 and product 24. Find the square of their difference.</p><details><summary>Hint</summary>(x − y)² = (x + y)² − 4xy.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Identity</summary><p>(x − y)² = 121 − 96 = 25.</p></details>
+<details><summary>Method: Find the numbers</summary><p>They are the roots of t² − 11t + 24 = 0, namely 8, 3, and their difference squared is 25.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p10.</b> Two numbers have sum 10 and product 21. Find the square of their difference.</p><details><summary>Hint</summary>(x − y)² = (x + y)² − 4xy.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Identity</summary><p>(x − y)² = 100 − 84 = 16.</p></details>
+<details><summary>Method: Find the numbers</summary><p>They are the roots of t² − 10t + 21 = 0, namely 7, 3, and their difference squared is 16.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p11.</b> Find the sum of all real solutions of |x − 2| + |x − 10| = 10.</p><details><summary>Hint</summary>Split at the points 2 and 10.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Cases</summary><p>For x ≥ 10: 2x − 12 = 10 gives x = 11. For x ≤ 2: 12 − 2x = 10 gives x = 1. The middle case gives a constant 8 ≠ 10. Sum = 12.</p></details>
+<details><summary>Method: Distances</summary><p>The distances from x to 2 and 10 add to 10, which is larger than the distance 8 between them, so x lies outside by (10 − 8)/2 = 1 on each side: x = 1 and 11.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p12.</b> Find the sum of all real solutions of |x − 1| + |x − 7| = 8.</p><details><summary>Hint</summary>Split at the points 1 and 7.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Cases</summary><p>For x ≥ 7: 2x − 8 = 8 gives x = 8. For x ≤ 1: 8 − 2x = 8 gives x = 0. The middle case gives a constant 6 ≠ 8. Sum = 8.</p></details>
+<details><summary>Method: Distances</summary><p>The distances from x to 1 and 7 add to 8, which is larger than the distance 6 between them, so x lies outside by (8 − 6)/2 = 1 on each side: x = 0 and 8.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p13.</b> Find the sum of all real solutions of |x − 3| + |x − 9| = 10.</p><details><summary>Hint</summary>Split at the points 3 and 9.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Cases</summary><p>For x ≥ 9: 2x − 12 = 10 gives x = 11. For x ≤ 3: 12 − 2x = 10 gives x = 1. The middle case gives a constant 6 ≠ 10. Sum = 12.</p></details>
+<details><summary>Method: Distances</summary><p>The distances from x to 3 and 9 add to 10, which is larger than the distance 6 between them, so x lies outside by (10 − 6)/2 = 2 on each side: x = 1 and 11.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p14.</b> Find the sum of all real solutions of √(x + 7) = x − 3.</p><details><summary>Hint</summary>Square both sides, then check for extraneous roots.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Square</summary><p>x + 7 = x² − 6x + 9, so x² − 7x + 2 = 0, with integer roots . Only those with x ≥ 3 work: . Sum 0.</p></details>
+<details><summary>Method: Test</summary><p>Test each candidate in the original equation: .</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p15.</b> Find the sum of all real solutions of √(x + 10) = x − 4.</p><details><summary>Hint</summary>Square both sides, then check for extraneous roots.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Square</summary><p>x + 10 = x² − 8x + 16, so x² − 9x + 6 = 0, with integer roots . Only those with x ≥ 4 work: . Sum 0.</p></details>
+<details><summary>Method: Test</summary><p>Test each candidate in the original equation: .</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p16.</b> Find the sum of all real solutions of √(x + 13) = x − 5.</p><details><summary>Hint</summary>Square both sides, then check for extraneous roots.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Square</summary><p>x + 13 = x² − 10x + 25, so x² − 11x + 12 = 0, with integer roots . Only those with x ≥ 5 work: . Sum 0.</p></details>
+<details><summary>Method: Test</summary><p>Test each candidate in the original equation: .</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p17.</b> One pipe fills a tank in 6 hours and another in 12 hours. How many hours do both take together? (answer as a fraction if needed)</p><details><summary>Hint</summary>Add the rates.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Rates</summary><p>1/6 + 1/12 = 1/4 per hour, so the time is 4 hours.</p></details>
+<details><summary>Method: Tank units</summary><p>Use a tank of 72 units: the pipes fill 12 and 6 units per hour, together 18 per hour, so 72/18 = 4 hours.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p18.</b> One pipe fills a tank in 10 hours and another in 15 hours. How many hours do both take together? (answer as a fraction if needed)</p><details><summary>Hint</summary>Add the rates.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Rates</summary><p>1/10 + 1/15 = 1/6 per hour, so the time is 6 hours.</p></details>
+<details><summary>Method: Tank units</summary><p>Use a tank of 150 units: the pipes fill 15 and 10 units per hour, together 25 per hour, so 150/25 = 6 hours.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p19.</b> One pipe fills a tank in 8 hours and another in 24 hours. How many hours do both take together? (answer as a fraction if needed)</p><details><summary>Hint</summary>Add the rates.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Rates</summary><p>1/8 + 1/24 = 1/6 per hour, so the time is 6 hours.</p></details>
+<details><summary>Method: Tank units</summary><p>Use a tank of 192 units: the pipes fill 24 and 8 units per hour, together 32 per hour, so 192/32 = 6 hours.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p20.</b> Two numbers are in the ratio 3 : 5 and add to 40. Find the larger.</p><details><summary>Hint</summary>Write them as 3k and 5k.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Ratio</summary><p>3k + 5k = 40 gives k = 5, so the numbers are 15 and 25.</p></details>
+<details><summary>Method: Fractions</summary><p>The numbers are 3/8 and 5/8 of the total: 15 and 25.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p21.</b> Two numbers are in the ratio 2 : 7 and add to 45. Find the larger.</p><details><summary>Hint</summary>Write them as 2k and 7k.</details><details><summary>Answer</summary>35</details>
+<details><summary>Method: Ratio</summary><p>2k + 7k = 45 gives k = 5, so the numbers are 10 and 35.</p></details>
+<details><summary>Method: Fractions</summary><p>The numbers are 2/9 and 7/9 of the total: 10 and 35.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p22.</b> Two towns are 30 km apart. Two people start walking towards each other at 6 km/h and 4 km/h. After how many hours do they meet?</p><details><summary>Hint</summary>Their speeds add.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Closing speed</summary><p>They close the gap at 6 + 4 = 10 km/h, so the time is 30/10 = 3 hours.</p></details>
+<details><summary>Method: Distances</summary><p>After 3 hours they have walked 18 and 12 km, which add to 30.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p23.</b> Two towns are 20 km apart. Two people start walking towards each other at 5 km/h and 3 km/h. After how many hours do they meet?</p><details><summary>Hint</summary>Their speeds add.</details><details><summary>Answer</summary>5/2</details>
+<details><summary>Method: Closing speed</summary><p>They close the gap at 5 + 3 = 8 km/h, so the time is 20/8 = 5/2 hours.</p></details>
+<details><summary>Method: Distances</summary><p>After 5/2 hours they have walked 25/2 and 15/2 km, which add to 20.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p24.</b> Two towns are 45 km apart. Two people start walking towards each other at 9 km/h and 6 km/h. After how many hours do they meet?</p><details><summary>Hint</summary>Their speeds add.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Closing speed</summary><p>They close the gap at 9 + 6 = 15 km/h, so the time is 45/15 = 3 hours.</p></details>
+<details><summary>Method: Distances</summary><p>After 3 hours they have walked 27 and 18 km, which add to 45.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>
+<div class=p><p><b>Problem p25.</b> Two numbers have sum 13 and product 36. Find the square of their difference.</p><details><summary>Hint</summary>(x − y)² = (x + y)² − 4xy.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Identity</summary><p>(x − y)² = 169 − 144 = 25.</p></details>
+<details><summary>Method: Find the numbers</summary><p>They are the roots of t² − 13t + 36 = 0, namely 4 and 9, and their difference squared is 25.</p></details>
+<p class=ref>Source: AoPS Vol. 2 ch. 13</p></div>

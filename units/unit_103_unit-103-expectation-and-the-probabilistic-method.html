@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 103</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 103: Unit 103: Expectation and the probabilistic method</h1><p class=ref>Book: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method) (25 problems)<br>Sriram, Olympiad Combinatorics, chapter 9: linearity of expectation and using an average to prove existence.</p>
+<h2>Reading</h2>
+<h3>1. Expected value and linearity</h3><p>The <b>expected value</b> of a random quantity X taking values x_i with probabilities p_i is E[X] = Σ x_i p_i. A fair die has E = (1 + 2 + … + 6)/6 = 3.5. The key tool is <b>linearity of expectation</b>: E[X + Y] = E[X] + E[Y], always, even when X and Y are dependent.</p><p><b>Worked example 1.</b> The sum of two dice has expectation 3.5 + 3.5 = 7. <b>Example 2.</b> In a random permutation of n objects the expected number of fixed points is n × (1/n) = 1: each position is fixed with probability 1/n, and we add these n indicators.</p><p><b>Example 3.</b> A coin lands heads with probability 1/2. The expected number of tosses until the first head is 2 (since E = 1 + E/2).</p>
+<h3>2. Indicator variables and the coupon collector</h3><p>Write a count as a sum of indicator variables (each is 1 if an event occurs, 0 otherwise); then E[count] is the sum of the probabilities of the events.</p><p><b>Coupon collector.</b> With 6 equally likely coupon types, the expected number of draws to collect all six is 6/6 + 6/5 + 6/4 + 6/3 + 6/2 + 6/1 = 6(1 + 1/2 + … + 1/6) = 6 × 49/20 = 14.7. After you have collected j types, the wait for a new type has expectation 6/(6 − j).</p><p><b>Worked example.</b> Among 10 people, the expected number of pairs sharing a birthday (365 days, ignoring leap years) is C(10, 2)/365 = 45/365 ≈ 0.123.</p>
+<h3>3. The probabilistic method</h3><p>To prove that an object with some property exists, show that a random object has the property with positive probability, or that a random object has an average above the target, so some object does at least as well.</p><p><b>Worked example (large cut).</b> Colour each vertex of a graph with m edges red or blue at random. An edge is 'cut' (endpoints different colours) with probability 1/2, so the expected number of cut edges is m/2. Hence <b>some colouring cuts at least m/2 edges</b>. No construction needed.</p><p><b>Averaging.</b> If the average score of a class is 70, some student scored at least 70, and some at most 70. Many existence proofs reduce to this.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Multiplying expectations of dependent quantities (E[XY] ≠ E[X]E[Y] in general; linearity is only for sums). Forgetting to define the indicator variable carefully. Treating expectation as the most likely value.</p><p><b>Checks.</b> Test on a tiny case you can enumerate (e.g. permutations of 3 objects have average fixed points (3 + 1 + 1 + 0 + 0 + 0)/6 = 1).</p><p><b>Practice.</b> Split every counting expectation into indicators first.</p>
+<h3>Worked examples with Try-its: Expectation as a tool</h3><p>If a random object has average value m, some object has value at least m (and some at most m). <b>Cuts.</b> Colour each vertex of a graph red or blue by a fair coin. Each edge is bichromatic with probability 1/2, so the expected number of bichromatic edges is m/2, hence every graph with m edges has a cut of size at least m/2 (for a triangle m/2 = 1.5 and the best cut is 2). <b>Cycles.</b> The expected number of cycles in a random permutation of n objects is 1 + 1/2 + … + 1/n, which for n = 4 is 25/12 (checked by averaging over all 24 permutations).</p><details class="try"><summary>Try it<p>A random permutation of 3 objects: what is the expected number of cycles?</p><p><b>Answer.</b> 1 + 1/2 + 1/3 = 11/6.</p></details>
+<h3>Worked examples with Try-its: The probabilistic method</h3><p>To prove an object with some property exists, show that a random object has the property with positive probability. For example, if the expected number of 'bad' features is below 1 then some object has no bad feature at all. The method is non-constructive: it tells you the object exists, not how to find it.</p><details class="try"><summary>Try it<p>A random 2-colouring of the points 1 to 10 is chosen. What is the expected number of adjacent pairs (k, k + 1) with the same colour?</p><p><b>Answer.</b> 9 pairs, each with probability 1/2: 4.5.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Five people sit at random in a row of 5 seats, each person having one reserved seat. What is the expected number in the correct seat? <b>Solution.</b> Each person is correct with probability 1/5, so the expectation is 5 · 1/5 = 1, regardless of dependence.</p><p><b>Reflection.</b> Linearity of expectation needs no independence.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Coupon collector.</b> To collect all 3 coupon types the expected number of draws is 3(1 + 1/2 + 1/3) = 11/2. <b>Runs.</b> In 10 fair coin tosses the expected number of runs (maximal blocks of equal results) is 1 + 9/2 = 11/2, since each of the 9 adjacent pairs begins a new run with probability 1/2 (an average over all 1024 sequences confirms it). <b>Average argument.</b> If the average of a set of numbers is 5.5, some number is at least 5.5.</p><details class="try"><summary>Try it<p>A fair die is rolled 12 times. What is the expected number of 6s?</p><p><b>Answer.</b> 2.</p></details><details class="try"><summary>Try it<p>What is the expected number of heads before the first tail with a fair coin?</p><p><b>Answer.</b> 1.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Show that some 2-colouring of the edges of K₄ has at most 1 monochromatic triangle. <b>Solution.</b> A random colouring makes each of the 4 triangles monochromatic with probability 2/8 = 1/4, so the expected number is 1; hence some colouring has at most 1 monochromatic triangle.</p><p><b>Reflection.</b> The average is 1, so some colouring is at or below 1.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> A random arrangement of 10 distinct objects is made. What is the expected number of objects in their original position?</p><details><summary>Hint</summary>Indicator for each object.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Linearity</summary><p>Each object is in place with probability 1/10, so the expected number is 10 · 1/10 = 1.</p></details>
+<details><summary>Method: Small case</summary><p>For 3 objects the counts over the 6 arrangements are 3, 1, 1, 1, 1, 0, with mean 1.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem p2.</b> A fair coin is flipped 10 times. A run is a maximal block of equal results. What is the expected number of runs, as a fraction?</p><details><summary>Hint</summary>Count the places where the result changes, plus 1.</details><details><summary>Answer</summary>11/2</details>
+<details><summary>Method: Indicators</summary><p>There are 9 adjacent pairs and each differs with probability 1/2, so the expected number of changes is 9/2 and the runs number 1 + 9/2 = 11/2.</p></details>
+<details><summary>Method: Small case</summary><p>For 2 flips the run counts are 1, 2, 2, 1 with mean 3/2 = 1 + 1/2.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem p3.</b> Twenty people have birthdays uniform over 365 days. What is the expected number of pairs sharing a birthday, as a fraction?</p><details><summary>Hint</summary>C(20,2) pairs, each with probability 1/365.</details><details><summary>Answer</summary>38/73</details>
+<details><summary>Method: Linearity</summary><p>190/365 = 38/73.</p></details>
+<details><summary>Method: Reading</summary><p>The expected number of matching pairs is about 0.52, which is why a shared birthday is about as likely as not.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem p4.</b> A graph has 10 edges. Each vertex is coloured red or blue independently with probability 1/2. What is the expected number of edges with endpoints of different colours?</p><details><summary>Hint</summary>Each edge is cut with probability 1/2.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Linearity</summary><p>10 · 1/2 = 5, so some colouring cuts at least 5 edges.</p></details>
+<details><summary>Method: Existence</summary><p>Since the average is 5, at least one colouring achieves 5 or more.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem p5.</b> Two fair dice are rolled. What is the expected value of the larger of the two numbers, as a fraction?</p><details><summary>Hint</summary>Count the outcomes for each maximum.</details><details><summary>Answer</summary>161/36</details>
+<details><summary>Method: Distribution</summary><p>The maximum is k in 2k − 1 of the 36 outcomes, so E = Σ k(2k − 1)/36 = (1 + 6 + 15 + 28 + 45 + 66)/36 = 161/36.</p></details>
+<details><summary>Method: Complement</summary><p>E[max] + E[min] = 7, and E[min] = 91/36, so E[max] = 252/36 − 91/36 = 161/36.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem p6.</b> A standard deck has 52 cards including 4 aces. The cards are dealt in random order. What is the expected position of the first ace, as a fraction?</p><details><summary>Hint</summary>The 4 aces split the other 48 cards into 5 gaps.</details><details><summary>Answer</summary>53/5</details>
+<details><summary>Method: Gaps</summary><p>Each of the 48 non-aces is before all aces with probability 1/5, so the expected number before the first ace is 48/5 and the position is 48/5 + 1 = 53/5.</p></details>
+<details><summary>Method: Check</summary><p>This equals (52 + 1)/(4 + 1) = 53/5.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem p7.</b> Three fair dice are rolled. What is the expected sum, as a fraction?</p><details><summary>Hint</summary>Add the expectations.</details><details><summary>Answer</summary>21/2</details>
+<details><summary>Method: Linearity</summary><p>3 · 7/2 = 21/2.</p></details>
+<details><summary>Method: Symmetry</summary><p>The sum is symmetric about 10.5, the midpoint of 3 and 18.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem p8.</b> In a random ordering of the numbers 1 to 5, what is the expected number of inversions (pairs in the wrong order), as a number?</p><details><summary>Hint</summary>Each pair is inverted with probability 1/2.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Indicators</summary><p>C(5,2) = 10 pairs each inverted with probability 1/2, giving 5.</p></details>
+<details><summary>Method: Symmetry</summary><p>Reversing the order sends k inversions to 10 − k, so the average is 5.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem p9.</b> Three balls are thrown independently and uniformly into 3 boxes. What is the expected number of empty boxes, as a fraction?</p><details><summary>Hint</summary>A given box is empty with probability (2/3)³.</details><details><summary>Answer</summary>8/9</details>
+<details><summary>Method: Indicators</summary><p>Each box is empty with probability 8/27, so the expected number is 3 · 8/27 = 8/9.</p></details>
+<details><summary>Method: Check</summary><p>A direct enumeration over the 27 outcomes gives the same average, 8/9.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem p10.</b> What is the expected sum when two fair dice are rolled?</p><details><summary>Hint</summary>Linearity of expectation.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Linearity</summary><p>Each die averages 3.5, so the sum averages 7.</p></details>
+<details><summary>Method: Table</summary><p>The 36 outcomes sum to 252, and 252/36 = 7.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem p11.</b> What is the expected number of heads in 10 fair coin flips?</p><details><summary>Hint</summary>Add the indicators.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Linearity</summary><p>Each flip contributes 1/2, so 10 · 1/2 = 5.</p></details>
+<details><summary>Method: Symmetry</summary><p>Heads and tails are symmetric, so the average is half of 10.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem p12.</b> A random permutation of 7 objects is chosen. What is the expected number of objects that stay in their original place?</p><details><summary>Hint</summary>Indicator for each position.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Linearity</summary><p>Each position is fixed with probability 1/7, so the expectation is 7 · 1/7 = 1.</p></details>
+<details><summary>Method: Check for n = 2</summary><p>The two permutations have 2 and 0 fixed points, averaging 1.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem p13.</b> What is the expected number of flips of a fair coin until the first head?</p><details><summary>Hint</summary>E = 1 + E/2.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Equation</summary><p>After one flip, with probability 1/2 we are done and otherwise start again: E = 1 + E/2, so E = 2.</p></details>
+<details><summary>Method: Series</summary><p>Σ n/2ⁿ = 2.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem p14.</b> Two fair dice are rolled. What is the expected value of the larger of the two?</p><details><summary>Hint</summary>Count outcomes with maximum k.</details><details><summary>Answer</summary>161/36</details>
+<details><summary>Method: Distribution</summary><p>Maximum k occurs 2k − 1 times out of 36, so E = Σ k(2k − 1)/36 = 161/36.</p></details>
+<details><summary>Method: Sum</summary><p>The 36 maxima total 161.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem p15.</b> A fair coin is flipped 10 times. What is the expected number of adjacent pairs of flips that are both heads?</p><details><summary>Hint</summary>9 adjacent pairs.</details><details><summary>Answer</summary>9/4</details>
+<details><summary>Method: Linearity</summary><p>Each of the 9 adjacent pairs is HH with probability 1/4, so 9/4.</p></details>
+<details><summary>Method: Small case</summary><p>For 3 flips there are 2 pairs and the expectation 2/4 = 1/2 can be checked over 8 outcomes.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem p16.</b> 12 fair dice are rolled. What is the expected number of sixes?</p><details><summary>Hint</summary>12 · 1/6.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Linearity</summary><p>12 · 1/6 = 2.</p></details>
+<details><summary>Method: Binomial</summary><p>The count is binomial with mean np = 2.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem p17.</b> A game pays 9 dollars with probability 1/3 and nothing otherwise, and costs 2 dollars to play. What is the expected profit in dollars?</p><details><summary>Hint</summary>Expected prize minus cost.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Expectation</summary><p>The expected prize is 3, so the profit is 3 − 2 = 1.</p></details>
+<details><summary>Method: Many plays</summary><p>In 3 plays you expect to win once, 9 − 6 = 3 profit, or 1 per play.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem x18.</b> Two fair dice are rolled. Find the probability that the sum is 11.</p><details><summary>Hint</summary>Count the favourable outcomes out of 36.</details><details><summary>Answer</summary>1/18</details>
+<details><summary>Method: Count</summary><p>The pairs are (5, 6), (6, 5): 2 outcomes out of 36, so the probability is 1/18.</p></details>
+<details><summary>Method: Symmetry</summary><p>The sums s and 14 − s are equally likely, so sum 11 has the same count as sum 3, namely 2 outcomes, giving 1/18.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem x19.</b> A fair coin is flipped 5 times. Find the probability of exactly 2 heads.</p><details><summary>Hint</summary>C(n, k)/2ⁿ.</details><details><summary>Answer</summary>5/16</details>
+<details><summary>Method: Binomial</summary><p>C(5, 2)/2^5 = 10/32 = 5/16.</p></details>
+<details><summary>Method: Pascal row</summary><p>Row 5 of Pascal's triangle is 1, 5, 10, 10, 5, 1, total 32, and entry 2 is 10.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem x20.</b> Two fair dice are rolled. Find the probability that the sum is 6.</p><details><summary>Hint</summary>Count the favourable outcomes out of 36.</details><details><summary>Answer</summary>5/36</details>
+<details><summary>Method: Count</summary><p>The pairs are (1, 5), (2, 4), (3, 3), (4, 2), (5, 1): 5 outcomes out of 36, so the probability is 5/36.</p></details>
+<details><summary>Method: Symmetry</summary><p>The sums s and 14 − s are equally likely, so sum 6 has the same count as sum 8, namely 5 outcomes, giving 5/36.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem x21.</b> A fair coin is flipped 9 times. Find the probability of exactly 4 heads.</p><details><summary>Hint</summary>C(n, k)/2ⁿ.</details><details><summary>Answer</summary>63/256</details>
+<details><summary>Method: Binomial</summary><p>C(9, 4)/2^9 = 126/512 = 63/256.</p></details>
+<details><summary>Method: Pascal row</summary><p>Row 9 of Pascal's triangle is 1, 9, 36, 84, 126, 126, 84, 36, 9, 1, total 512, and entry 4 is 126.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem x22.</b> Two fair dice are rolled. Find the probability that the sum is 8.</p><details><summary>Hint</summary>Count the favourable outcomes out of 36.</details><details><summary>Answer</summary>5/36</details>
+<details><summary>Method: Count</summary><p>The pairs are (2, 6), (3, 5), (4, 4), (5, 3), (6, 2): 5 outcomes out of 36, so the probability is 5/36.</p></details>
+<details><summary>Method: Symmetry</summary><p>The sums s and 14 − s are equally likely, so sum 8 has the same count as sum 6, namely 5 outcomes, giving 5/36.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem x23.</b> A fair coin is flipped 12 times. Find the probability of exactly 6 heads.</p><details><summary>Hint</summary>C(n, k)/2ⁿ.</details><details><summary>Answer</summary>231/1024</details>
+<details><summary>Method: Binomial</summary><p>C(12, 6)/2^12 = 924/4096 = 231/1024.</p></details>
+<details><summary>Method: Pascal row</summary><p>Row 12 of Pascal's triangle is 1, 12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1, total 4096, and entry 6 is 924.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem x24.</b> Two fair dice are rolled. Find the probability that the sum is 3.</p><details><summary>Hint</summary>Count the favourable outcomes out of 36.</details><details><summary>Answer</summary>1/18</details>
+<details><summary>Method: Count</summary><p>The pairs are (1, 2), (2, 1): 2 outcomes out of 36, so the probability is 1/18.</p></details>
+<details><summary>Method: Symmetry</summary><p>The sums s and 14 − s are equally likely, so sum 3 has the same count as sum 11, namely 2 outcomes, giving 1/18.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>
+<div class=p><p><b>Problem x25.</b> A fair coin is flipped 6 times. Find the probability of exactly 4 heads.</p><details><summary>Hint</summary>C(n, k)/2ⁿ.</details><details><summary>Answer</summary>15/64</details>
+<details><summary>Method: Binomial</summary><p>C(6, 4)/2^6 = 15/64 = 15/64.</p></details>
+<details><summary>Method: Pascal row</summary><p>Row 6 of Pascal's triangle is 1, 6, 15, 20, 15, 6, 1, total 64, and entry 4 is 15.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 9 (The Probabilistic Method)</p></div>

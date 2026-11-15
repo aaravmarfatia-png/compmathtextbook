@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 64</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 64: Unit 64: Ceva, Menelaus and mass points</h1><p class=ref>Book: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3 (25 problems)<br>Coxeter &amp; Greitzer, Geometry Revisited, chapter 3 (Collinearity and Concurrence: Menelaus&#x27; and Ceva&#x27;s theorems).</p>
+<h2>Reading</h2>
+<h3>1. Ceva and Menelaus revisited</h3><p>Unit 27 introduced Ceva's theorem (concurrent cevians satisfy (BD/DC)(CE/EA)(AF/FB) = 1) and Menelaus' theorem (collinear points satisfy the same product equal to −1 with signed ratios). Here we use them to solve ratio problems. <b>Problem.</b> D divides BC with BD : DC = 2 : 3 and E divides CA with CE : EA = 3 : 4. For the cevians AD, BE, CF to be concurrent, AF : FB must equal 1/((2/3)(3/4)) = 2 : 1, i.e. F is two thirds of the way from A to B.</p><p><b>Using Menelaus for a ratio.</b> A line meets sides BC, CA, AB at X, Y, Z. If CY : YA = 1 : 2 and AZ : ZB = 3 : 1 then, with unsigned ratios, BX : XC = 1/((1/2)(3)) = 2 : 3, and X lies outside the segment BC (an even number of the three points are inside the triangle's sides, so exactly one or three points are on extensions; here Y and Z are interior, so X is exterior).</p><details class="try"><summary>Try it</summary><p>In triangle ABC, D on BC with BD : DC = 3 : 2, F on AB with AF : FB = 1 : 3. If AD, CF and a third cevian BE are concurrent, find CE : EA.</p><p><b>Answer.</b> (3/2)(CE/EA)(1/3) = 1, so CE/EA = 2.</p></details>
+<h3>2. Mass points in problems</h3><p>Assign masses to vertices so that each cevian foot balances. If AD, BE meet at P with BD : DC = 2 : 3 and CE : EA = 1 : 2, then masses are B = 3, C = 2, A = 1, and the mass of P is 6. Hence AP : PD = 5 : 1 and BP : PE = (mass E) : (mass B) = 3 : 3 = 1 : 1 (E has mass A + C = 3). A coordinate check with A = (0, 0), B = (10, 0), C = (0, 10) confirms AP/AD = 5/6 and BP/BE = 1/2.</p><p><b>Area ratios.</b> The area of each of the triangles PBC, PCA, PAB is proportional to the mass at the <i>opposite</i> vertex: with masses A = 1, B = 3, C = 2, [PBC] : [PCA] : [PAB] = 1 : 3 : 2.</p><details class="try"><summary>Try it</summary><p>Cevians AD and BE of triangle ABC meet at P with AP : PD = 3 : 1 and BP : PE = 2 : 1. What is BD : DC?</p><p><b>Answer.</b> Give A mass 1, so D has mass 3 (AP : PD = 3 : 1). BP : PE = 2 : 1 means E has twice the mass of B, so with B = k we get E = 2k = A + C = 1 + C, i.e. C = 2k − 1. Since D = B + C = 3: 3k − 1 = 3, k = 4/3, B = 4/3 and C = 5/3. Then BD : DC = C : B = 5 : 4.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> In triangle ABC, D is the midpoint of BC, E divides CA with CE : EA = 1 : 3, and AD meets BE at P. Find AP : PD and the area of triangle PBC as a fraction of ABC.</p><p><b>Solution.</b> Masses: B = C = 1 (D is the midpoint), D = 2. E: CE : EA = 1 : 3 means mass A : mass C = 1 : 3, so A = 1/3 if C = 1; scale by 3: B = C = 3, D = 6, A = 1, E = 4. P has mass 7 and AP : PD = mass D : mass A = 6 : 1. The area of PBC is the fraction of the triangle whose height from P is proportional to PD/AD = 1/7 of the height from A: [PBC] = (1/7)[ABC].</p><p><b>Reflection.</b> The height argument (distance from P to BC is PD/AD times the distance from A) converts a ratio of lengths on a cevian into an area ratio.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Assigning masses the wrong way round (the shorter segment gets the larger mass). (2) Adding masses incorrectly at a foot. (3) Using Ceva with directed ratios inconsistently.</p><p><b>Checks.</b> Verify with coordinates on a right triangle.</p><p><b>How to practise.</b> Keep a table of masses. In Unlimited practice, rotate the Ceva, Menelaus and mass-point families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Ceva.</b> Cevians AD, BE, CF are concurrent exactly when (BD/DC)(CE/EA)(AF/FB) = 1. If BD/DC = 2 and CE/EA = 1/3 then concurrency needs AF/FB = 3/2, since 2 · (1/3) · (3/2) = 1. The medians (all ratios 1) and the incircle cevians are examples. <b>Mass points.</b> For BD/DC = 2 put mass 1 at B and mass 2 at C; the cevians' ratios then follow from masses adding at the junction.</p><details class="try"><summary>Try it<p>Cevians in a triangle satisfy BD/DC = 3/2 and CE/EA = 2/5. For concurrency, what is AF/FB?</p><p><b>Answer.</b> (3/2)(2/5) = 3/5, so AF/FB = 5/3.</p></details><details class="try"><summary>Try it<p>In triangle ABC, AB = 6 and AC = 9. In what ratio does the angle bisector from A divide BC?</p><p><b>Answer.</b> BD : DC = 6 : 9 = 2 : 3.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> In triangle ABC, D is on BC with BD : DC = 2 : 3, and E is on CA with CE : EA = 1 : 4. The cevians AD and BE meet at P. Find AP : PD. <b>Solution.</b> Masses: B = 3, C = 2 (so D = 5). For E, CE : EA = 1 : 4 gives C : A = 4 : 1, so scale: C = 4, A = 1 and then B = 6, D = 10. P is on AD with A = 1 and D = 10, so AP : PD = 10 : 1.</p><p><b>Check with coordinates.</b> Take A = (0, 0), B = (5, 0) and C = (0, 5): D = (3, 2), E = (0, 4) (CE : EA = 1 : 4). Line AD: y = 2x/3; line BE: x/5 + y/4 = 1. Solving: x/5 + x/6 = 1, x = 30/11, y = 20/11, so AP/AD = (30/11)/3 = 10/11 and AP : PD = 10 : 1 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> In triangle ABC, D is on BC with BD:DC = 2:3 and E is on CA with CE:EA = 3:4. If AD, BE, CF are concurrent with F on AB, find AF/FB.</p><details><summary>Hint</summary>Ceva: the three ratios multiply to 1.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Ceva</summary><p>(2/3)(3/4)(AF/FB) = 1, so AF/FB = 2.</p></details>
+<details><summary>Method: Mass points</summary><p>BD:DC = 2:3 means mass B : mass C = 3:2. CE:EA = 3:4 means mass C : mass A = 4:3. Scale the first to B = 6, C = 4 and keep C = 4, A = 3. Then AF/FB = mass B / mass A = 6/3 = 2.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem p2.</b> Cevians AD, BE, CF are concurrent with BD/DC = 1/2 and CE/EA = 3/5. Find AF/FB.</p><details><summary>Hint</summary>Same product rule.</details><details><summary>Answer</summary>10/3</details>
+<details><summary>Method: Ceva</summary><p>(1/2)(3/5)(AF/FB) = 1 gives AF/FB = 10/3.</p></details>
+<details><summary>Method: Check</summary><p>(1/2)(3/5)(10/3) = 1, as required.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem p3.</b> A line meets triangle ABC's sides with AF/FB = 3/2 and CE/EA = 5 (E on CA, F on AB), and meets line BC at D. Find BD/DC.</p><details><summary>Hint</summary>Menelaus: product is 1.</details><details><summary>Answer</summary>2/15</details>
+<details><summary>Method: Menelaus</summary><p>(3/2)(BD/DC)(5) = 1, so BD/DC = 2/15.</p></details>
+<details><summary>Method: Check</summary><p>(3/2)(2/15)(5) = 1.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem p4.</b> In triangle ABC, D is on BC with BD:DC = 1:2 and E is the midpoint of AC. AD and BE meet at P. Find AP/PD.</p><details><summary>Hint</summary>Mass points, or Menelaus.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Mass points</summary><p>B = 2, C = 1 balance D (weight 3). E is the midpoint so A = C = 1. On AD the weights are A = 1 and D = 3, so AP:PD = 3:1, giving 3.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put B = (0,0), C = (3,0), A = (0,3), so D = (1,0), E = (3/2, 3/2). BE is y = x and AD is y = 3 − 3x, meeting at x = 3/4. P is 3/4 of the way from A to D, so AP/PD = (3/4)/(1/4) = 3.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem p5.</b> Triangle ABC has AB = 13, BC = 14, CA = 15. The incircle touches BC at D. Find BD.</p><details><summary>Hint</summary>Tangent lengths from one vertex are equal: BD = s − CA.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Tangent lengths</summary><p>s = 21 and BD = s − CA = 21 − 15 = 6.</p></details>
+<details><summary>Method: Equations</summary><p>Let the tangent lengths from A, B, C be x, y, z. Then x + y = 13, y + z = 14, x + z = 15. Adding gives x + y + z = 21, so y = 21 − 15 = 6.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem p6.</b> D, E, F lie on BC, CA, AB with BD/DC = 2 and CE/EA = 3. For what AF/FB are AD, BE, CF concurrent?</p><details><summary>Hint</summary>Ceva.</details><details><summary>Answer</summary>1/6</details>
+<details><summary>Method: Ceva</summary><p>2 · 3 · (AF/FB) = 1, so AF/FB = 1/6.</p></details>
+<details><summary>Method: Check</summary><p>2 · 3 · 1/6 = 1.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem p7.</b> Triangle ABC has AB = 6, AC = 10, BC = 8. The bisector of angle A meets BC at D. Find BD.</p><details><summary>Hint</summary>Angle bisector theorem: BD/DC = AB/AC.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Bisector theorem</summary><p>BD/DC = 6/10, so BD = 8 · 6/16 = 3.</p></details>
+<details><summary>Method: Other side</summary><p>DC = 8 − 3 = 5 and 3/5 = 6/10, which confirms the ratio.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem p8.</b> E is on AC with AE:EC = 2:1 and F is on AB with AF:FB = 1:3. Line EF meets line BC at D. Find BD/DC.</p><details><summary>Hint</summary>Menelaus.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Menelaus</summary><p>(AF/FB)(BD/DC)(CE/EA) = (1/3)(BD/DC)(1/2) = 1, so BD/DC = 6.</p></details>
+<details><summary>Method: Coordinates</summary><p>Take A = (0,0), B = (4,0), C = (0,3), so E = (0,2) and F = (1,0). Line EF is 2x + y = 2 and line BC is 3x + 4y = 12. They meet at D = (−4/5, 18/5). Then BD = 6 and DC = 1, so BD/DC = 6.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem p9.</b> Cevians AD, BE, CF are concurrent with BD/DC = 3/4 and CE/EA = 2/5. Find AF/FB.</p><details><summary>Hint</summary>Ceva.</details><details><summary>Answer</summary>10/3</details>
+<details><summary>Method: Ceva</summary><p>(3/4)(2/5)(AF/FB) = 1 so AF/FB = 10/3.</p></details>
+<details><summary>Method: Check</summary><p>(3/4)(2/5)(10/3) = 1.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem p10.</b> D and E are the midpoints of BC and CA, and F lies on AB. For the cevians AD, BE, CF to be concurrent, what must AF/FB be?</p><details><summary>Hint</summary>Two ratios equal 1.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Ceva</summary><p>1 · 1 · (AF/FB) = 1, so AF/FB = 1 and F is the midpoint (the medians meet at the centroid).</p></details>
+<details><summary>Method: Check</summary><p>The three medians are always concurrent.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem p11.</b> A line meets the side lines of triangle ABC with AF/FB = 2 and BD/DC = 3. Find CE/EA.</p><details><summary>Hint</summary>Menelaus.</details><details><summary>Answer</summary>1/6</details>
+<details><summary>Method: Menelaus</summary><p>2 · 3 · (CE/EA) = 1, so CE/EA = 1/6.</p></details>
+<details><summary>Method: Check</summary><p>2 · 3 · 1/6 = 1.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem p12.</b> In triangle ABC, AB = 10, AC = 15 and BC = 20. The bisector of angle A meets BC at D. Find BD.</p><details><summary>Hint</summary>Angle bisector theorem.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Theorem</summary><p>BD/DC = 10/15 = 2/3, so BD = 20 · 2/5 = 8.</p></details>
+<details><summary>Method: Check</summary><p>DC = 12 and 8/12 = 2/3.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem p13.</b> Triangle ABC has AB = 9, BC = 10, CA = 11. The incircle touches AB and AC at points. Find the tangent length from A.</p><details><summary>Hint</summary>s − a with a = BC.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Formula</summary><p>s = 15, so the tangent length from A is 15 − 10 = 5.</p></details>
+<details><summary>Method: Equations</summary><p>With tangent lengths x, y, z from A, B, C: x + y = 9, y + z = 10, x + z = 11 gives x = 5.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem p14.</b> In triangle ABC, D is on BC with BD:DC = 2:1 and E is the midpoint of AD. BE meets AC at F. Find AF/FC as a fraction.</p><details><summary>Hint</summary>Mass points.</details><details><summary>Answer</summary>2/3</details>
+<details><summary>Method: Mass points</summary><p>B = 1 and C = 2 balance D (weight 3). E is the midpoint of AD so A = D = 3. On AC, AF/FC = mass C / mass A = 2/3.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put B = (0, 0), C = (3, 0), A = (0, 3). D = (2, 0), E = (1, 3/2), BE is y = (3/2)x, and AC is x + y = 3, meeting at x = 6/5. So AF/FC = (6/5)/(3 − 6/5) = (6/5)/(9/5) = 2/3.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem p15.</b> The incircle of the 13-14-15 triangle touches the side of length 14 at D. How far is D from the vertex between the sides 13 and 14?</p><details><summary>Hint</summary>Tangent lengths.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Formula</summary><p>s = 21 and the tangent length from that vertex is s − 15 = 6.</p></details>
+<details><summary>Method: Equations</summary><p>Tangent lengths x, y, z with x + y = 13, y + z = 15, x + z = 14 give y = 7, x = 6.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem p16.</b> A line cuts triangle ABC with AF/FB = 1/2 and BD/DC = 4. Find CE/EA.</p><details><summary>Hint</summary>Menelaus.</details><details><summary>Answer</summary>1/2</details>
+<details><summary>Method: Menelaus</summary><p>(1/2)(4)(CE/EA) = 1 so CE/EA = 1/2.</p></details>
+<details><summary>Method: Check</summary><p>(1/2)(4)(1/2) = 1.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem x17.</b> Cevians AD, BE, CF of triangle ABC are concurrent with BD/DC = 5 and CE/EA = 6. Find AF/FB.</p><details><summary>Hint</summary>Ceva's theorem.</details><details><summary>Answer</summary>1/30</details>
+<details><summary>Method: Ceva</summary><p>(BD/DC)(CE/EA)(AF/FB) = 1, so AF/FB = 1/(5 · 6) = 1/30.</p></details>
+<details><summary>Method: Check</summary><p>5 · 6 · 1/30 = 1.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem x18.</b> A line meets the side lines of triangle ABC with AF/FB = 4 and BD/DC = 5. Find CE/EA.</p><details><summary>Hint</summary>Menelaus' theorem.</details><details><summary>Answer</summary>1/20</details>
+<details><summary>Method: Menelaus</summary><p>(AF/FB)(BD/DC)(CE/EA) = 1, so CE/EA = 1/20.</p></details>
+<details><summary>Method: Check</summary><p>4 · 5 · 1/20 = 1.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem x19.</b> In triangle ABC, BC = 14, CA = 9 and AB = 11. D lies on BC with BD = 6. Find AD².</p><details><summary>Hint</summary>Stewart's theorem.</details><details><summary>Answer</summary>391/7</details>
+<details><summary>Method: Stewart</summary><p>AD² = (CA² · BD + AB² · DC)/BC − BD · DC = (81 · 6 + 121 · 8)/14 − 48 = 391/7.</p></details>
+<details><summary>Method: Law of cosines</summary><p>cos B = 59/77. Then AD² = AB² + BD² − 2 · AB · BD · cos B = 121 + 36 − 708/7 = 391/7.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem x20.</b> A triangle has sides 9, 10 and 17. Find the square of the median to the side of length 9.</p><details><summary>Hint</summary>m² = (2b² + 2c² − a²)/4.</details><details><summary>Answer</summary>697/4</details>
+<details><summary>Method: Median formula</summary><p>(2 · 100 + 2 · 289 − 81)/4 = 697/4.</p></details>
+<details><summary>Method: Parallelogram law</summary><p>Doubling the median completes a parallelogram with diagonals 9 and 2m; the law gives 81 + 4m² = 2(100 + 289), so m² = 697/4.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem x21.</b> Find the inradius of the triangle with sides 9, 10 and 17.</p><details><summary>Hint</summary>r = K/s.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Formula</summary><p>The area is 36 and s = 18, so r = 2.</p></details>
+<details><summary>Method: Tangent lengths</summary><p>The tangent lengths from the vertices are 9, 8, 1; splitting the area into three triangles with height r gives K = r·s, so r = 2.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem x22.</b> Cevians AD, BE, CF of triangle ABC are concurrent with BD/DC = 2 and CE/EA = 7. Find AF/FB.</p><details><summary>Hint</summary>Ceva's theorem.</details><details><summary>Answer</summary>1/14</details>
+<details><summary>Method: Ceva</summary><p>(BD/DC)(CE/EA)(AF/FB) = 1, so AF/FB = 1/(2 · 7) = 1/14.</p></details>
+<details><summary>Method: Check</summary><p>2 · 7 · 1/14 = 1.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem x23.</b> A line meets the side lines of triangle ABC with AF/FB = 3 and BD/DC = 5. Find CE/EA.</p><details><summary>Hint</summary>Menelaus' theorem.</details><details><summary>Answer</summary>1/15</details>
+<details><summary>Method: Menelaus</summary><p>(AF/FB)(BD/DC)(CE/EA) = 1, so CE/EA = 1/15.</p></details>
+<details><summary>Method: Check</summary><p>3 · 5 · 1/15 = 1.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem x24.</b> In triangle ABC, BC = 9, CA = 6 and AB = 7. D lies on BC with BD = 4. Find AD².</p><details><summary>Hint</summary>Stewart's theorem.</details><details><summary>Answer</summary>209/9</details>
+<details><summary>Method: Stewart</summary><p>AD² = (CA² · BD + AB² · DC)/BC − BD · DC = (36 · 4 + 49 · 5)/9 − 20 = 209/9.</p></details>
+<details><summary>Method: Law of cosines</summary><p>cos B = 47/63. Then AD² = AB² + BD² − 2 · AB · BD · cos B = 49 + 16 − 376/9 = 209/9.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>
+<div class=p><p><b>Problem x25.</b> A triangle has sides 10, 13 and 13. Find the square of the median to the side of length 10.</p><details><summary>Hint</summary>m² = (2b² + 2c² − a²)/4.</details><details><summary>Answer</summary>144</details>
+<details><summary>Method: Median formula</summary><p>(2 · 169 + 2 · 169 − 100)/4 = 144.</p></details>
+<details><summary>Method: Parallelogram law</summary><p>Doubling the median completes a parallelogram with diagonals 10 and 2m; the law gives 100 + 4m² = 2(169 + 169), so m² = 144.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 3</p></div>

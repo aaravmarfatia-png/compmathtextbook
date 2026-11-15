@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 75</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 75: Unit 75: Systems, Vieta and radical equations</h1><p class=ref>Book: AoPS Volume 2, equations chapters (25 problems)<br>AoPS Volume 2, chapters on equations: systems, quadratics and Vieta&#x27;s formulas, absolute values and radicals.</p>
+<h2>Reading</h2>
+<h3>1. Systems of equations</h3><p>Two unknowns need two equations. <b>Substitution</b>: solve one for a variable and substitute. <b>Elimination</b>: add multiples of the equations to cancel a variable. <b>Symmetric systems</b>: use sum and product. For x + y = 7 and x² + y² = 25: xy = (49 − 25)/2 = 12, so x and y are the roots of t² − 7t + 12: (3, 4) or (4, 3).</p><p><b>Worked example 1.</b> Solve x + y = 5 and xy = 6: x, y = 2, 3.</p><p><b>Worked example 2.</b> Solve 2x + 3y = 12 and 4x − y = 10. From the second y = 4x − 10, substitute: 2x + 12x − 30 = 12, x = 3, y = 2. Check: 6 + 6 = 12 ✓; 12 − 2 = 10 ✓.</p><p><b>Worked example 3.</b> Solve x/y = 3/2 and x + y = 10: x = 6, y = 4.</p>
+<h3>2. Radical equations</h3><p>An equation with square roots is solved by isolating a radical and squaring, then <b>checking for false roots</b> (Unit 24). A nicer method uses substitution.</p><p><b>Worked example 1.</b> Solve √(x + 7) − √(x − 1) = 2. Let a = √(x + 7) and b = √(x − 1). Then a − b = 2 and a² − b² = 8, so a + b = 4, a = 3, b = 1, and x − 1 = 1 gives x = 2. Check: √9 − √1 = 2 ✓.</p><p><b>Worked example 2.</b> Solve √(x² + 9) = x + 1. Square: x² + 9 = x² + 2x + 1, so x = 4. Check: √25 = 5 = 4 + 1 ✓.</p><p><b>Worked example 3.</b> Solve x + √(x + 6) = 6. Isolate: √(x + 6) = 6 − x, square: x + 6 = 36 − 12x + x², so x² − 13x + 30 = 0, x = 3 or 10. Check x = 3: 3 + 3 = 6 ✓. x = 10: 10 + 4 = 14 ✗. Only x = 3.</p>
+<h3>3. Vieta and symmetric systems</h3><p><b>Using Vieta.</b> If x, y are roots of t² − st + p = 0 then x + y = s and xy = p. For the system x + y = 4 and x³ + y³ = 28: x³ + y³ = s³ − 3ps = 64 − 12p = 28, so p = 3, and x, y = 1, 3. Check 1 + 27 = 28 ✓.</p><p><b>Three variables.</b> x + y + z = 6, xy + yz + zx = 11, xyz = 6 have x, y, z as the roots of t³ − 6t² + 11t − 6 = 0, i.e. 1, 2, 3 in some order.</p><p><b>Worked example.</b> Solve xy = 6 and x² + y² = 13 (so (x + y)² = 25, x + y = ±5): x + y = 5 gives (2, 3), (3, 2); x + y = −5 gives (−2, −3), (−3, −2). Four solutions.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Squaring without checking. Forgetting the negative sum solutions. Missing the ordered pairs (x, y) versus (y, x). Dividing by a variable that could be zero.</p><p><b>Checks.</b> Substitute every solution into every original equation.</p><p><b>Practice.</b> Isolate one radical at a time.</p>
+<h3>Worked examples with Try-its: Vieta's formulas</h3><p>If r and s are the roots of x² − px + q = 0 then r + s = p and rs = q. Everything symmetric in the roots can be found without the roots themselves. For x² − 7x + 3 = 0: r² + s² = (r + s)² − 2rs = 49 − 6 = 43; r³ + s³ = (r + s)³ − 3rs(r + s) = 343 − 63 = 280; 1/r + 1/s = (r + s)/rs = 7/3. For a cubic x³ − ax² + bx − c the roots satisfy sum = a, sum of pairs = b, product = c; x³ − 6x² + 11x − 6 has roots 1, 2, 3.</p><details class="try"><summary>Try it</summary><p>If r, s are the roots of x² − 5x + 2 = 0, find r² + s².</p><p><b>Answer.</b> 25 − 4 = 21.</p></details>
+<h3>Worked examples with Try-its: Symmetric systems</h3><p>For x + y = 5 and x² + y² = 13, use xy = ((x + y)² − (x² + y²))/2 = 6, so x and y are the roots of t² − 5t + 6 = 0, that is 2 and 3. The solutions are (2, 3) and (3, 2). Whenever a system is symmetric, introduce s = x + y and p = xy.</p><p><b>Radical equations.</b> To solve √(x + 7) = x − 5, square: x + 7 = x² − 10x + 25, so x² − 11x + 18 = 0 and x = 2 or 9. Squaring can create false roots, so check: x = 9 gives 4 = 4, while x = 2 gives 3 = −3, which fails. The only solution is x = 9.</p><details class="try"><summary>Try it</summary><p>Solve √(2x + 1) = x − 1.</p><p><b>Answer.</b> Squaring: x² − 4x = 0, x = 0 or 4; x = 0 fails (1 ≠ −1); x = 4 works (3 = 3).</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> The numbers a and b satisfy a + b = 6 and ab = 4. Find a³ + b³ and a⁴ + b⁴. <b>Solution.</b> a² + b² = 36 − 8 = 28. a³ + b³ = 216 − 3 · 4 · 6 = 144. a⁴ + b⁴ = (a² + b²)² − 2(ab)² = 784 − 32 = 752.</p><p><b>Reflection.</b> Power sums obey pₙ = s·pₙ₋₁ − q·pₙ₋₂ (here pₙ = 6pₙ₋₁ − 4pₙ₋₂: p₂ = 28, p₃ = 168 − 24 = 144, p₄ = 864 − 112 = 752).</p>
+<h3>More worked examples: Worked examples</h3><p><b>System.</b> If x + y = 7 and xy = 10 then x and y are the roots of t² − 7t + 10 = 0, so {x, y} = {2, 5}. <b>Radical.</b> To solve √(2x + 3) = x square to get x² − 2x − 3 = 0, so x = 3 or x = −1; since the square root is non-negative, x = −1 gives √1 = −1, which is false, and only x = 3 works (√9 = 3). <b>Vieta.</b> For r, s the roots of x² − 3x + 1: r³ + s³ = 27 − 3 · 1 · 3 = 18.</p><details class="try"><summary>Try it<p>If r + s = 4 and rs = 1, find r² + s².</p><p><b>Answer.</b> 14.</p></details><details class="try"><summary>Try it<p>Solve √(x + 6) = x.</p><p><b>Answer.</b> x² − x − 6 = 0, so x = 3 or −2; only x = 3 works.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Solve x² + y² = 25 and x + y = 7. <b>Solution.</b> xy = (49 − 25)/2 = 12, so x and y are the roots of t² − 7t + 12 = 0, namely 3 and 4. The solutions are (3, 4) and (4, 3).</p><p><b>Check.</b> 9 + 16 = 25 and 3 + 4 = 7 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> x + y = 10 and xy = 21. Find x² + y².</p><details><summary>Hint</summary>(x + y)² = x² + y² + 2xy.</details><details><summary>Answer</summary>58</details>
+<details><summary>Method: Identity</summary><p>x² + y² = 100 − 42 = 58.</p></details>
+<details><summary>Method: Solve</summary><p>x and y are 3 and 7, so 9 + 49 = 58.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem p2.</b> Find r³ + s³ where r and s are the roots of x² − 5x + 6.</p><details><summary>Hint</summary>r³ + s³ = (r + s)³ − 3rs(r + s).</details><details><summary>Answer</summary>35</details>
+<details><summary>Method: Vieta</summary><p>125 − 90 = 35.</p></details>
+<details><summary>Method: Roots</summary><p>The roots are 2 and 3, and 8 + 27 = 35.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem p3.</b> What is the larger root of x² − 7x + 12 = 0?</p><details><summary>Hint</summary>Factor.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Factor</summary><p>(x − 3)(x − 4) = 0, so the larger root is 4.</p></details>
+<details><summary>Method: Formula</summary><p>x = (7 ± √(49 − 48))/2 = (7 ± 1)/2, so 4 or 3.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem p4.</b> 3x + 2y = 16 and x − y = 2. Find xy.</p><details><summary>Hint</summary>Substitute x = y + 2.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Substitution</summary><p>3(y + 2) + 2y = 16 gives 5y = 10, y = 2, x = 4, so xy = 8.</p></details>
+<details><summary>Method: Elimination</summary><p>Multiply the second equation by 2 and add: 5x = 20, x = 4, then y = 2.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem p5.</b> r + s = 6 and rs = 4. Find r² + s².</p><details><summary>Hint</summary>Square the sum.</details><details><summary>Answer</summary>28</details>
+<details><summary>Method: Identity</summary><p>r² + s² = 36 − 8 = 28.</p></details>
+<details><summary>Method: Roots</summary><p>r, s = 3 ± √5, and (3 + √5)² + (3 − √5)² = 2(9 + 5) = 28.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem p6.</b> For what positive k does x² + kx + 9 = 0 have a double root?</p><details><summary>Hint</summary>Discriminant zero.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Discriminant</summary><p>k² − 36 = 0 gives k = 6 for positive k.</p></details>
+<details><summary>Method: Perfect square</summary><p>x² + 6x + 9 = (x + 3)².</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem p7.</b> Find the sum of all real solutions of |2x − 3| = 7.</p><details><summary>Hint</summary>Two cases.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Cases</summary><p>2x − 3 = 7 gives x = 5 and 2x − 3 = −7 gives x = −2; the sum is 3.</p></details>
+<details><summary>Method: Midpoint</summary><p>The solutions are symmetric about x = 3/2 with sum 2 · 3/2 = 3.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem p8.</b> Solve √(x + 7) = x − 5. What is x?</p><details><summary>Hint</summary>Square, then check.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Square</summary><p>x + 7 = x² − 10x + 25 gives x² − 11x + 18 = 0, so x = 9 or 2. Substituting, x = 2 gives 3 = −3, which is false, so x = 9.</p></details>
+<details><summary>Method: Check</summary><p>√16 = 4 = 9 − 5.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem p9.</b> Find the sum of the reciprocals of the roots of x² − 5x + 2, as a fraction.</p><details><summary>Hint</summary>1/r + 1/s = (r + s)/(rs).</details><details><summary>Answer</summary>5/2</details>
+<details><summary>Method: Vieta</summary><p>(r + s)/(rs) = 5/2.</p></details>
+<details><summary>Method: Reversed polynomial</summary><p>The reciprocals are the roots of 2x² − 5x + 1, whose sum is 5/2.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem p10.</b> The roots of x² − 7x + 10 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>(r + s)² − 2rs.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Vieta</summary><p>r + s = 7 and rs = 10, so r² + s² = 49 − 20 = 29.</p></details>
+<details><summary>Method: Roots</summary><p>The roots are 2 and 5, and 4 + 25 = 29.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem p11.</b> The roots of x² − 5x + 3 = 0 are r and s. Find 1/r + 1/s.</p><details><summary>Hint</summary>(r + s)/rs.</details><details><summary>Answer</summary>5/3</details>
+<details><summary>Method: Vieta</summary><p>(r + s)/(rs) = 5/3.</p></details>
+<details><summary>Method: Check</summary><p>The reciprocals are roots of 3x² − 5x + 1 = 0, whose sum is 5/3.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem p12.</b> Solve x + y = 10 and xy = 21 and give the larger of x and y.</p><details><summary>Hint</summary>They are roots of t² − 10t + 21.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Quadratic</summary><p>t² − 10t + 21 = (t − 3)(t − 7), so 3 and 7.</p></details>
+<details><summary>Method: Check</summary><p>3 + 7 = 10 and 3 · 7 = 21.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem p13.</b> For what value of k does x² − 6x + k = 0 have a double root?</p><details><summary>Hint</summary>Discriminant zero.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Discriminant</summary><p>36 − 4k = 0 gives k = 9.</p></details>
+<details><summary>Method: Square</summary><p>x² − 6x + 9 = (x − 3)².</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem p14.</b> The roots of x² − 4x + 1 = 0 are r and s. Find r³ + s³.</p><details><summary>Hint</summary>(r + s)³ − 3rs(r + s).</details><details><summary>Answer</summary>52</details>
+<details><summary>Method: Vieta</summary><p>(4)³ − 3 · 1 · 4 = 52.</p></details>
+<details><summary>Method: Recurrence</summary><p>pₙ = 4pₙ₋₁ − pₙ₋₂ with p₀ = 2, p₁ = 4 gives 14, 52.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem p15.</b> If x + 1/x = 5, find x² + 1/x².</p><details><summary>Hint</summary>Square both sides.</details><details><summary>Answer</summary>23</details>
+<details><summary>Method: Square</summary><p>(x + 1/x)² = x² + 2 + 1/x², so the answer is 25 − 2 = 23.</p></details>
+<details><summary>Method: Check</summary><p>x is a root of x² − 5x + 1 = 0 with r + s = 5, rs = 1, and r² + s² = 25 − 2.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem p16.</b> Solve x + y = 8 and x² + y² = 34 for xy.</p><details><summary>Hint</summary>(x + y)² = x² + 2xy + y².</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Identity</summary><p>64 = 34 + 2xy so xy = 15.</p></details>
+<details><summary>Method: Roots</summary><p>x and y are 3 and 5, giving 9 + 25 = 34.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem p17.</b> The sum of two numbers is 14 and their product is 40. What is the positive difference?</p><details><summary>Hint</summary>(x − y)² = (x + y)² − 4xy.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Identity</summary><p>196 − 160 = 36, so the difference is 6.</p></details>
+<details><summary>Method: Numbers</summary><p>The numbers are 4 and 10.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem x18.</b> The roots of x² − 5x + 3 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: Vieta</summary><p>r + s = 5 and rs = 3, so r² + s² = (r + s)² − 2rs = 25 − 6 = 19.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 5 and p₂ = 5 · p₁ − 3 · p₀ = 25 − 6 = 19.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem x19.</b> The roots of x² − 12x + 20 = 0 are r and s. Find r³ + s³.</p><details><summary>Hint</summary>(r + s)³ − 3rs(r + s).</details><details><summary>Answer</summary>1008</details>
+<details><summary>Method: Identity</summary><p>r³ + s³ = (r + s)³ − 3rs(r + s) = 1728 − 720 = 1008.</p></details>
+<details><summary>Method: Recurrence</summary><p>p₁ = 12, p₂ = 104, so p₃ = 12 · p₂ − 20 · p₁ = 1248 − 240 = 1008.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem x20.</b> Solve x + y = 20 and x − y = 6. Find x.</p><details><summary>Hint</summary>Add the equations.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Elimination</summary><p>Adding gives 2x = 26, so x = 13.</p></details>
+<details><summary>Method: Substitution</summary><p>From the second equation y = x − 6, so x + x − 6 = 20 and x = 13.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem x21.</b> If x + 1/x = 6, find x² + 1/x².</p><details><summary>Hint</summary>Square both sides.</details><details><summary>Answer</summary>34</details>
+<details><summary>Method: Square</summary><p>(x + 1/x)² = x² + 2 + 1/x², so x² + 1/x² = 36 − 2 = 34.</p></details>
+<details><summary>Method: Recurrence</summary><p>With pₙ = xⁿ + x⁻ⁿ we have p₀ = 2, p₁ = 6 and p₂ = 6 · p₁ − p₀ = 34.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem x22.</b> The roots of x² − 8x + 11 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>42</details>
+<details><summary>Method: Vieta</summary><p>r + s = 8 and rs = 11, so r² + s² = (r + s)² − 2rs = 64 − 22 = 42.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 8 and p₂ = 8 · p₁ − 11 · p₀ = 64 − 22 = 42.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem x23.</b> The roots of x² − 7x + 10 = 0 are r and s. Find r³ + s³.</p><details><summary>Hint</summary>(r + s)³ − 3rs(r + s).</details><details><summary>Answer</summary>133</details>
+<details><summary>Method: Identity</summary><p>r³ + s³ = (r + s)³ − 3rs(r + s) = 343 − 210 = 133.</p></details>
+<details><summary>Method: Recurrence</summary><p>p₁ = 7, p₂ = 29, so p₃ = 7 · p₂ − 10 · p₁ = 203 − 70 = 133.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem x24.</b> Solve x + y = 15 and x − y = 3. Find x.</p><details><summary>Hint</summary>Add the equations.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Elimination</summary><p>Adding gives 2x = 18, so x = 9.</p></details>
+<details><summary>Method: Substitution</summary><p>From the second equation y = x − 3, so x + x − 3 = 15 and x = 9.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>
+<div class=p><p><b>Problem x25.</b> If x + 1/x = 7, find x² + 1/x².</p><details><summary>Hint</summary>Square both sides.</details><details><summary>Answer</summary>47</details>
+<details><summary>Method: Square</summary><p>(x + 1/x)² = x² + 2 + 1/x², so x² + 1/x² = 49 − 2 = 47.</p></details>
+<details><summary>Method: Recurrence</summary><p>With pₙ = xⁿ + x⁻ⁿ we have p₀ = 2, p₁ = 7 and p₂ = 7 · p₁ − p₀ = 47.</p></details>
+<p class=ref>Source: AoPS Volume 2, equations chapters</p></div>

@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 147</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 147: Unit 147: Lemmas in olympiad geometry: centres, excircles and Euler</h1><p class=ref>Book: Singhal, Lemmas in Olympiad Geometry (short note); Kedlaya, Geometry Unbound; Djukić et al., The IMO Compendium (25 problems)<br>Singhal, Lemmas in Olympiad Geometry (an 8-page note); Kedlaya, Geometry Unbound, 6.2 (radical axis), 7.2 (incenter and excenters), 7.3 (circumcenter and orthocenter); IMO Compendium 2.3.1.</p>
+<h2>Reading</h2>
+<h3>1. Tangent lengths and excircles</h3><p>In a triangle with semiperimeter s the tangent length from vertex A to the incircle is s − a. The excircle opposite A has radius r_a = K/(s − a). For the 13-14-15 triangle s = 21, K = 84: the tangent from A is 8 and r_a = 84/8 = 21/2.</p><details class="try"><summary>Try it<p>Tangent length from B in the 13-14-15 triangle (side CA = 15 opposite B)?</p><p><b>Answer.</b> s − b = 6.</p></details><details class="try"><summary>Try it<p>r_c for the 13-14-15 triangle, c = 15?</p><p><b>Answer.</b> 84/6 = 14.</p></details>
+<h3>2. Centres and distances</h3><p><b>Orthocentre.</b> AH = 2R|cos A| and OM = R|cos A| (so AH = 2·OM). <b>Euler.</b> OI² = R² − 2Rr: for 13-14-15 this is (65/8)² − 2 · (65/8) · 4 = 65/64. The nine-point circle has radius R/2. <b>Medians.</b> mₐ² = (2b² + 2c² − a²)/4. <b>Brahmagupta.</b> K = √((s − a)(s − b)(s − c)(s − d)) for a cyclic quadrilateral.</p><details class="try"><summary>Try it<p>AH for a triangle with R = 5 and A = 60°?</p><p><b>Answer.</b> 2 · 5 · ½ = 5.</p></details><details class="try"><summary>Try it<p>Radius of the nine-point circle when R = 10?</p><p><b>Answer.</b> 5.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> Two circles with radii 13 and 15 have centres 14 apart. How long is their common chord? <b>Solution.</b> The triangle with sides 13, 14, 15 has area 84; its altitude to the side of length 14 is 12, so the chord has length 24.</p><p><b>Check.</b> 4K/d = 336/14 = 24 ✓.</p>
+<h3>4. In the books</h3><p><b>What the Lemmas file is.</b> The &ldquo;Lemmas in Olympiad Geometry&rdquo; PDF is an 8-page list of lemmas by Navneel Singhal, not the book by Andreescu and others. Its lemmas include: the circle with diameter AH, the circumcircle of BHC and the median AM are concurrent (lemma 1); OI is the Euler line of the contact triangle (lemma 4); the medial triangle and the Nagel-point triangle share an incircle (lemma 14). It states them without proofs.</p><p><b>Kedlaya.</b> 6.2 radical axis (the common chord of two circles lies on it), 7.2 incenter and excenters, 7.3 circumcenter and orthocenter. <b>IMO Compendium 2.3.1</b> lists the triangle formulas (Euler's OI² = R² − 2Rr and the distances from the orthocenter).</p><p><b>Honest note.</b> The numeric formulas here (tangent lengths s − a, r_a = K/(s − a), AH = 2R cos A, OI²) are standard and appear in the sources above in some form; the Singhal lemmas are not used directly in the problems.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> In triangle ABC with BC = 13, CA = 14, AB = 15 the incircle touches BC at D. Find the tangent length AE from A to the incircle (E on AC). (fraction)</p><details><summary>Hint</summary>The tangent length from A is s − a.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Tangent lengths</summary><p>With s = 21 the tangent from A has length s − a = 8.</p></details>
+<details><summary>Method: Equations</summary><p>x + y = 15, y + z = 13, z + x = 14 for the three tangent lengths; the tangent from A is 8.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> In triangle ABC with BC = 7, CA = 15, AB = 20 the incircle touches BC at D. Find the tangent length AE from A to the incircle (E on AC). (fraction)</p><details><summary>Hint</summary>The tangent length from A is s − a.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Tangent lengths</summary><p>With s = 21 the tangent from A has length s − a = 14.</p></details>
+<details><summary>Method: Equations</summary><p>x + y = 20, y + z = 7, z + x = 15 for the three tangent lengths; the tangent from A is 14.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> In triangle ABC with BC = 9, CA = 10, AB = 17 the incircle touches BC at D. Find the tangent length AE from A to the incircle (E on AC). (fraction)</p><details><summary>Hint</summary>The tangent length from A is s − a.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Tangent lengths</summary><p>With s = 18 the tangent from A has length s − a = 9.</p></details>
+<details><summary>Method: Equations</summary><p>x + y = 17, y + z = 9, z + x = 10 for the three tangent lengths; the tangent from A is 9.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> Triangle ABC has sides BC = 13, CA = 14, AB = 15. Find the radius r_a of the excircle opposite A. (fraction)</p><details><summary>Hint</summary>r_a = K/(s − a).</details><details><summary>Answer</summary>21/2</details>
+<details><summary>Method: Area formula</summary><p>K = 84, s − a = 8, so r_a = 21/2.</p></details>
+<details><summary>Method: Area decomposition</summary><p>K = (r_a/2)(b + c − a) = r_a(s − a), giving r_a = 21/2.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> Triangle ABC has sides BC = 8, CA = 15, AB = 17. Find the radius r_a of the excircle opposite A. (fraction)</p><details><summary>Hint</summary>r_a = K/(s − a).</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Area formula</summary><p>K = 60, s − a = 12, so r_a = 5.</p></details>
+<details><summary>Method: Area decomposition</summary><p>K = (r_a/2)(b + c − a) = r_a(s − a), giving r_a = 5.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> Triangle ABC has sides BC = 20, CA = 21, AB = 29. Find the radius r_a of the excircle opposite A. (fraction)</p><details><summary>Hint</summary>r_a = K/(s − a).</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Area formula</summary><p>K = 210, s − a = 15, so r_a = 14.</p></details>
+<details><summary>Method: Area decomposition</summary><p>K = (r_a/2)(b + c − a) = r_a(s − a), giving r_a = 14.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> Triangle ABC has BC = 12, CA = 17, AB = 19. Find the length of the median from A. (fraction)</p><details><summary>Hint</summary>Apollonius: 4mₐ² = 2b² + 2c² − a².</details><details><summary>Answer</summary>17</details>
+<details><summary>Method: Apollonius</summary><p>mₐ² = (2·289 + 2·361 − 144)/4, so mₐ = 17.</p></details>
+<details><summary>Method: Parallelogram</summary><p>Complete ABDC to a parallelogram; the diagonals satisfy AD² + BC² = 2AB² + 2AC², and mₐ = AD/2 = 17.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> Triangle ABC has BC = 14, CA = 21, AB = 25. Find the length of the median from A. (fraction)</p><details><summary>Hint</summary>Apollonius: 4mₐ² = 2b² + 2c² − a².</details><details><summary>Answer</summary>22</details>
+<details><summary>Method: Apollonius</summary><p>mₐ² = (2·441 + 2·625 − 196)/4, so mₐ = 22.</p></details>
+<details><summary>Method: Parallelogram</summary><p>Complete ABDC to a parallelogram; the diagonals satisfy AD² + BC² = 2AB² + 2AC², and mₐ = AD/2 = 22.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> Triangle ABC has BC = 16, CA = 25, AB = 31. Find the length of the median from A. (fraction)</p><details><summary>Hint</summary>Apollonius: 4mₐ² = 2b² + 2c² − a².</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: Apollonius</summary><p>mₐ² = (2·625 + 2·961 − 256)/4, so mₐ = 27.</p></details>
+<details><summary>Method: Parallelogram</summary><p>Complete ABDC to a parallelogram; the diagonals satisfy AD² + BC² = 2AB² + 2AC², and mₐ = AD/2 = 27.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> In triangle ABC with BC = 13, CA = 14, AB = 15, H is the orthocentre. Find AH. (fraction)</p><details><summary>Hint</summary>AH = 2R|cos A|.</details><details><summary>Answer</summary>39/4</details>
+<details><summary>Method: Formula</summary><p>R = 65/8 and cos A = 3/5, so AH = 39/4.</p></details>
+<details><summary>Method: Coordinates</summary><p>Place BC on the x-axis; H lies on the altitude from A at height x_A(BC − x_A)/y_A; AH = 39/4.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> In triangle ABC with BC = 5, CA = 12, AB = 13, H is the orthocentre. Find AH. (fraction)</p><details><summary>Hint</summary>AH = 2R|cos A|.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Formula</summary><p>R = 13/2 and cos A = 12/13, so AH = 12.</p></details>
+<details><summary>Method: Coordinates</summary><p>Place BC on the x-axis; H lies on the altitude from A at height x_A(BC − x_A)/y_A; AH = 12.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> In triangle ABC with BC = 8, CA = 15, AB = 17, H is the orthocentre. Find AH. (fraction)</p><details><summary>Hint</summary>AH = 2R|cos A|.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Formula</summary><p>R = 17/2 and cos A = 15/17, so AH = 15.</p></details>
+<details><summary>Method: Coordinates</summary><p>Place BC on the x-axis; H lies on the altitude from A at height x_A(BC − x_A)/y_A; AH = 15.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> In triangle ABC with BC = 13, CA = 14, AB = 15, O is the circumcentre. Find the distance from O to BC. (fraction)</p><details><summary>Hint</summary>OM = R|cos A|, where M is the midpoint of BC.</details><details><summary>Answer</summary>39/8</details>
+<details><summary>Method: Formula</summary><p>R = 65/8, cos A = 3/5, so OM = 39/8.</p></details>
+<details><summary>Method: Pythagoras</summary><p>OM² = R² − (BC/2)² = 1521/64, so OM = 39/8.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> In triangle ABC with BC = 8, CA = 15, AB = 17, O is the circumcentre. Find the distance from O to BC. (fraction)</p><details><summary>Hint</summary>OM = R|cos A|, where M is the midpoint of BC.</details><details><summary>Answer</summary>15/2</details>
+<details><summary>Method: Formula</summary><p>R = 17/2, cos A = 15/17, so OM = 15/2.</p></details>
+<details><summary>Method: Pythagoras</summary><p>OM² = R² − (BC/2)² = 225/4, so OM = 15/2.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> In triangle ABC with BC = 5, CA = 12, AB = 13, O is the circumcentre. Find the distance from O to BC. (fraction)</p><details><summary>Hint</summary>OM = R|cos A|, where M is the midpoint of BC.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Formula</summary><p>R = 13/2, cos A = 12/13, so OM = 6.</p></details>
+<details><summary>Method: Pythagoras</summary><p>OM² = R² − (BC/2)² = 36, so OM = 6.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> Triangle ABC has sides 13, 14, 15 with circumradius R and inradius r. Find OI², where O and I are the circumcentre and incentre. (fraction)</p><details><summary>Hint</summary>Euler: OI² = R² − 2Rr.</details><details><summary>Answer</summary>65/64</details>
+<details><summary>Method: Euler's formula</summary><p>R = 65/8 and r = 4, so OI² = R² − 2Rr = 65/64.</p></details>
+<details><summary>Method: Power of a point</summary><p>The power of I with respect to the circumcircle is R² − OI² = 2Rr, so OI² = 65/64.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> Triangle ABC has sides 8, 15, 17 with circumradius R and inradius r. Find OI², where O and I are the circumcentre and incentre. (fraction)</p><details><summary>Hint</summary>Euler: OI² = R² − 2Rr.</details><details><summary>Answer</summary>85/4</details>
+<details><summary>Method: Euler's formula</summary><p>R = 17/2 and r = 3, so OI² = R² − 2Rr = 85/4.</p></details>
+<details><summary>Method: Power of a point</summary><p>The power of I with respect to the circumcircle is R² − OI² = 2Rr, so OI² = 85/4.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> Triangle ABC has sides 20, 21, 29 with circumradius R and inradius r. Find OI², where O and I are the circumcentre and incentre. (fraction)</p><details><summary>Hint</summary>Euler: OI² = R² − 2Rr.</details><details><summary>Answer</summary>145/4</details>
+<details><summary>Method: Euler's formula</summary><p>R = 29/2 and r = 6, so OI² = R² − 2Rr = 145/4.</p></details>
+<details><summary>Method: Power of a point</summary><p>The power of I with respect to the circumcircle is R² − OI² = 2Rr, so OI² = 145/4.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> A cyclic quadrilateral has sides 7, 24, 15, 20 in order. Find its area.</p><details><summary>Hint</summary>Brahmagupta: K = √((s − a)(s − b)(s − c)(s − d)).</details><details><summary>Answer</summary>234</details>
+<details><summary>Method: Brahmagupta</summary><p>s = 33, so K = √(26·9·18·13) = 234.</p></details>
+<details><summary>Method: Right angles</summary><p>The diagonal is a diameter and the quadrilateral is two right triangles: ½·7·24 + ½·15·20 = 234.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> A cyclic quadrilateral has sides 16, 63, 33, 56 in order. Find its area.</p><details><summary>Hint</summary>Brahmagupta: K = √((s − a)(s − b)(s − c)(s − d)).</details><details><summary>Answer</summary>1428</details>
+<details><summary>Method: Brahmagupta</summary><p>s = 84, so K = √(68·21·51·28) = 1428.</p></details>
+<details><summary>Method: Right angles</summary><p>The diagonal is a diameter and the quadrilateral is two right triangles: ½·16·63 + ½·33·56 = 1428.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> A cyclic quadrilateral has sides 14, 48, 30, 40 in order. Find its area.</p><details><summary>Hint</summary>Brahmagupta: K = √((s − a)(s − b)(s − c)(s − d)).</details><details><summary>Answer</summary>936</details>
+<details><summary>Method: Brahmagupta</summary><p>s = 66, so K = √(52·18·36·26) = 936.</p></details>
+<details><summary>Method: Right angles</summary><p>The diagonal is a diameter and the quadrilateral is two right triangles: ½·14·48 + ½·30·40 = 936.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> Two circles of radii 13 and 15 have centres 14 apart and meet at two points. Find the length of their common chord. (fraction)</p><details><summary>Hint</summary>The common chord is twice the altitude from an intersection point onto the line of centres in the triangle with sides 13, 15, 14.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Triangle altitude</summary><p>The triangle of the two centres and one intersection point has area 84; the altitude to side 14 is 2K/14, so the chord is 4K/14 = 24.</p></details>
+<details><summary>Method: Radical axis</summary><p>The chord lies on the radical axis, perpendicular to the line of centres; solving for the foot gives half-chord 12.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> Two circles of radii 5 and 12 have centres 13 apart and meet at two points. Find the length of their common chord. (fraction)</p><details><summary>Hint</summary>The common chord is twice the altitude from an intersection point onto the line of centres in the triangle with sides 5, 12, 13.</details><details><summary>Answer</summary>120/13</details>
+<details><summary>Method: Triangle altitude</summary><p>The triangle of the two centres and one intersection point has area 30; the altitude to side 13 is 2K/13, so the chord is 4K/13 = 120/13.</p></details>
+<details><summary>Method: Radical axis</summary><p>The chord lies on the radical axis, perpendicular to the line of centres; solving for the foot gives half-chord 60/13.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> Two circles of radii 10 and 17 have centres 9 apart and meet at two points. Find the length of their common chord. (fraction)</p><details><summary>Hint</summary>The common chord is twice the altitude from an intersection point onto the line of centres in the triangle with sides 10, 17, 9.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Triangle altitude</summary><p>The triangle of the two centres and one intersection point has area 36; the altitude to side 9 is 2K/9, so the chord is 4K/9 = 16.</p></details>
+<details><summary>Method: Radical axis</summary><p>The chord lies on the radical axis, perpendicular to the line of centres; solving for the foot gives half-chord 8.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> What is the radius of the nine-point circle of the triangle with sides 13, 14, 15? (fraction)</p><details><summary>Hint</summary>The nine-point circle has radius R/2.</details><details><summary>Answer</summary>65/16</details>
+<details><summary>Method: R/2</summary><p>R = 65/8, so the radius is 65/16.</p></details>
+<details><summary>Method: Feuerbach</summary><p>The nine-point circle passes through the midpoints of the sides, whose triangle has circumradius R/2 = 65/16.</p></details>
+<p class=ref>Source: Technique from Singhal&#x27;s note, Kedlaya ch. 6–7 and the IMO Compendium §2.3 (original problem)</p></div>

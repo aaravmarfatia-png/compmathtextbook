@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 121</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 121: Unit 121: Extremal combinatorics</h1><p class=ref>Book: Sriram, Olympiad Combinatorics, ch. 7 (25 problems)<br>Sriram, Olympiad Combinatorics, chapter 7 (Extremal Combinatorics): Turan, Sperner, Erdos-Ko-Rado and Erdos-Szekeres.</p>
+<h2>Reading</h2>
+<h3>1. The extremal principle</h3><p>An extremal question asks for the largest or smallest size of a structure with a property. Two steps are always needed: <b>(1) a bound</b> showing that no structure can exceed the number, and <b>(2) a construction</b> reaching the number. A proof of only one of them is incomplete.</p><p><b>Worked example.</b> What is the largest subset of {1, 2, …, 20} with no two consecutive numbers? The 10 pairs (1, 2), (3, 4), …, (19, 20) each contain at most one chosen number, so at most 10. The odd numbers 1, 3, …, 19 achieve 10. So the answer is 10.</p><p><b>Pigeonhole variant.</b> Any 11 numbers from {1, …, 20} must contain two consecutive ones (same pairs, 10 boxes, 11 numbers).</p>
+<h3>2. Divisibility-free sets</h3><p>What is the largest subset of {1, …, 2n} in which no element divides another? Write each number as 2^a × (odd part m). There are n odd parts, so among any n + 1 chosen numbers two share an odd part m, and then one divides the other. Hence at most n. The set {n + 1, …, 2n} reaches n, since two numbers there cannot divide each other (the larger is less than twice the smaller).</p><p><b>Worked example.</b> For {1, …, 10}, n = 5 and the answer is 5, e.g. {6, 7, 8, 9, 10} (confirmed by checking all subsets).</p><p><b>Same technique.</b> Pigeonhole on the odd part is typical for divisibility questions.</p>
+<h3>3. Graph extremes</h3><p><b>Mantel's theorem:</b> a graph on n vertices with no triangle has at most ⌊n²/4⌋ edges, with equality for the complete bipartite graph with parts of size ⌊n/2⌋ and ⌈n/2⌉. For n = 6 the maximum is 9, achieved by K₃,₃ (confirmed by exhaustive search over all graphs on 6 vertices).</p><p><b>Why.</b> If a vertex v has degree d(v), its neighbours are pairwise non-adjacent, so the degrees satisfy d(u) + d(v) ≤ n for every edge uv. Summing over edges gives Σ d(v)² ≤ n · m, and Σ d(v)² ≥ (2m)²/n by Cauchy-Schwarz, so 4m²/n ≤ nm, which gives m ≤ n²/4.</p><p><b>Extremal choices.</b> In a proof you can pick the vertex of largest degree, the longest path, the smallest counterexample, and so on, then show a contradiction or a better choice.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Proving a bound without showing it can be reached. Constructing an example and calling it the maximum. Mixing up 'maximal' (cannot be extended) with 'maximum' (the largest of all).</p><p><b>Checks.</b> Test the bound for tiny n by brute force.</p><p><b>Practice.</b> For each extremal problem write 'Bound:' and 'Construction:' as separate headings.</p>
+<h3>Worked examples with Try-its: Turán-type problems</h3><p>What is the largest number of edges in a triangle-free graph on n vertices? The answer is ⌊n²/4⌋, achieved by the complete bipartite graph with parts as equal as possible: 6 edges for n = 5 (confirmed by testing all graphs on 5 vertices) and 9 for n = 6 (K₃,₃). Mantel's theorem proves it: adjacent vertices have no common neighbour, so d(u) + d(v) ≤ n for every edge uv.</p><details class="try"><summary>Try it<p>How many edges can a triangle-free graph on 8 vertices have at most?</p><p><b>Answer.</b> 16.</p></details>
+<h3>Worked examples with Try-its: Monotone subsequences</h3><p><b>Erdős–Szekeres.</b> Any sequence of n² + 1 distinct numbers contains an increasing or decreasing subsequence of length n + 1. So 10 distinct numbers always have a monotone subsequence of length 4, while 9 numbers may not: 3, 2, 1, 6, 5, 4, 9, 8, 7 has none of length 4.</p><details class="try"><summary>Try it<p>What is the least length of a sequence of distinct numbers that forces a monotone subsequence of length 5?</p><p><b>Answer.</b> 17.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Show that among any 6 people there are 3 mutual friends or 3 mutual strangers. <b>Solution.</b> Fix a person; among the other 5, at least 3 are friends or at least 3 are strangers. Say 3 are friends with her. If any two of those 3 are friends we have a friendly triangle; otherwise those 3 are mutual strangers.</p><p><b>Reflection.</b> This is R(3, 3) = 6, the first Ramsey number.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Triangle-free graphs.</b> On 7 vertices the largest triangle-free graph has ⌊49/4⌋ = 12 edges (K₃,₄). <b>Ramsey.</b> Among any 6 people there are 3 mutual friends or 3 mutual strangers, but 5 people can avoid this: colour the edges of a pentagon one colour and the diagonals another. <b>Monotone subsequences.</b> Any sequence of 10 distinct numbers has a monotone subsequence of length 4.</p><details class="try"><summary>Try it<p>What is the largest number of edges in a triangle-free graph on 10 vertices?</p><p><b>Answer.</b> 25.</p></details><details class="try"><summary>Try it<p>How many distinct numbers guarantee a monotone subsequence of length 3?</p><p><b>Answer.</b> 5 (since 2² + 1).</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Show that among any 5 points in a unit square two are within √2/2 of each other. <b>Solution.</b> Divide the square into four squares of side 1/2, each of diameter √2/2; two of the five points share a small square.</p><p><b>Reflection.</b> This is pigeonhole used as an extremal bound.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> What is the largest number of edges in a graph on 9 vertices that contains no K₄?</p><details><summary>Hint</summary>Turan: balanced complete 3-partite graph.</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: Turan</summary><p>The parts have sizes 3, 3, 3, with 3·3 + 3·3 + 3·3 = 27 edges.</p></details>
+<details><summary>Method: Check</summary><p>An unbalanced split 4, 3, 2 gives 12 + 8 + 6 = 26, which is smaller.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem p2.</b> Subsets of {1, 2, …, 8} are chosen so that none contains another. What is the largest possible number of subsets?</p><details><summary>Hint</summary>Sperner's theorem.</details><details><summary>Answer</summary>70</details>
+<details><summary>Method: Sperner</summary><p>C(8, 4) = 70, using all subsets of size 4.</p></details>
+<details><summary>Method: Chains</summary><p>The 8! maximal chains each contain at most one chosen subset, which proves the bound.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem p3.</b> A family of 3-element subsets of {1, …, 8} has the property that any two members share an element. What is the largest possible size?</p><details><summary>Hint</summary>Erdos-Ko-Rado: C(n − 1, k − 1).</details><details><summary>Answer</summary>21</details>
+<details><summary>Method: EKR</summary><p>C(7, 2) = 21, taking all triples containing 1.</p></details>
+<details><summary>Method: Reason</summary><p>Fixing one element and choosing the other two from the remaining 7 gives 21 triples that pairwise intersect.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem p4.</b> What is the largest number of edges in a graph on 8 vertices that contains no cycle?</p><details><summary>Hint</summary>A forest.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Tree</summary><p>A connected acyclic graph is a tree with n − 1 = 7 edges, and a forest has fewer.</p></details>
+<details><summary>Method: Counting</summary><p>Each edge reduces the number of components by one without creating a cycle.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem p5.</b> What is the largest number of integers that can be chosen from {1, 2, …, 30} with none dividing another?</p><details><summary>Hint</summary>Take 16..30.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Bound</summary><p>The 15 numbers 16 to 30 work since twice any of them exceeds 30. Chains {m, 2m, 4m, …} for odd m ≤ 29 number 15, and each chain gives at most one chosen number, so 15 is maximal.</p></details>
+<details><summary>Method: Chains</summary><p>There are 15 odd numbers up to 30, giving 15 chains that partition the set.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem p6.</b> A sequence of 17 distinct numbers always contains a monotone subsequence of what length at least?</p><details><summary>Hint</summary>n² + 1 numbers give length n + 1.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Erdos-Szekeres</summary><p>17 = 4² + 1, so there is a monotone subsequence of length 5.</p></details>
+<details><summary>Method: Reason</summary><p>Otherwise label each term by the lengths (i, d) of the longest increasing and decreasing subsequences ending there; there are at most 16 labels but 17 terms, and distinct terms receive distinct labels.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem p7.</b> What is the largest number of edges in a bipartite graph on 10 vertices?</p><details><summary>Hint</summary>Balanced complete bipartite graph.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Product</summary><p>The maximum of a(10 − a) is 25.</p></details>
+<details><summary>Method: Mantel</summary><p>This equals Mantel's bound ⌊100/4⌋ = 25.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem p8.</b> What is the largest subset of {1, …, 10} that contains no two numbers adding up to 11?</p><details><summary>Hint</summary>Pair x with 11 − x.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Pairs</summary><p>The five pairs (1,10), (2,9), …, (5,6) each give at most one number, so at most 5, achieved by 1 to 5.</p></details>
+<details><summary>Method: Check</summary><p>The largest sum among 1 to 5 is 9 < 11.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem p9.</b> What is the smallest number of edges in a graph on 10 vertices that forces a triangle?</p><details><summary>Hint</summary>One more than the maximum triangle-free count.</details><details><summary>Answer</summary>26</details>
+<details><summary>Method: Mantel</summary><p>A triangle-free graph has at most 25 edges, so 26 edges force a triangle.</p></details>
+<details><summary>Method: Sharpness</summary><p>The complete bipartite graph K₅,₅ has 25 edges and no triangle.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem p10.</b> What is the largest number of edges in a triangle-free graph on 9 vertices?</p><details><summary>Hint</summary>Mantel's theorem.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Mantel</summary><p>⌊81/4⌋ = 20, from K₄,₅.</p></details>
+<details><summary>Method: Parts</summary><p>a(9 − a) is largest for a = 4, giving 20.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem p11.</b> What is the largest number of kings that can be placed on an 8 × 8 board so that no two attack each other?</p><details><summary>Hint</summary>Split into 2 × 2 blocks.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Blocks</summary><p>Each 2 × 2 block holds at most one king, and there are 16 blocks.</p></details>
+<details><summary>Method: Construction</summary><p>Put kings on every other square in every other row: 16.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem p12.</b> What is the largest subset of {1, 2, …, 20} containing no two consecutive integers?</p><details><summary>Hint</summary>Pair up 1-2, 3-4, …</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Pairs</summary><p>There are 10 pairs {1,2}, {3,4}, …, and at most one from each can be chosen.</p></details>
+<details><summary>Method: Example</summary><p>The odd numbers 1, 3, …, 19.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem p13.</b> What is the largest subset of {1, 2, …, 30} in which no element divides another?</p><details><summary>Hint</summary>Chains by odd part.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Chains</summary><p>Write each number as 2ᵏ times an odd number; the 15 odd parts give 15 chains, and two numbers in a chain divide each other, so at most 15.</p></details>
+<details><summary>Method: Example</summary><p>The numbers 16 to 30 work, 15 of them.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem p14.</b> What is the largest subset of {1, 2, …, 10} with no two elements summing to 11?</p><details><summary>Hint</summary>Pair x with 11 − x.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Pairs</summary><p>The 5 pairs {1, 10}, {2, 9}, …, {5, 6} each allow at most one element.</p></details>
+<details><summary>Method: Example</summary><p>1, 2, 3, 4, 5.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem p15.</b> What is the largest number of edges in a graph on 7 vertices with no cycles?</p><details><summary>Hint</summary>A forest.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Tree</summary><p>A graph without cycles with c components has 7 − c edges, at most 6 for a tree.</p></details>
+<details><summary>Method: Example</summary><p>A path on 7 vertices has 6 edges.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem p16.</b> What is the largest number of dominoes (1 × 2) that fit on a 4 × 4 board without overlap?</p><details><summary>Hint</summary>Area bound.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Area</summary><p>Each domino covers 2 of the 16 squares, so at most 8, achieved by a tiling.</p></details>
+<details><summary>Method: Tiling</summary><p>Place 2 horizontal dominoes in each of the 4 rows.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem p17.</b> What is the largest number of non-attacking queens on a 6 × 6 board?</p><details><summary>Hint</summary>One per row at most.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Bound</summary><p>At most one per row gives 6.</p></details>
+<details><summary>Method: Construction</summary><p>Queens at columns 2, 4, 6, 1, 3, 5 in rows 1 to 6 do not attack each other.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem x18.</b> How many edges does the complete graph K_30 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>435</details>
+<details><summary>Method: Pairs</summary><p>C(30, 2) = 435.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 30 vertices has degree 29, so the edges number 30 · 29/2 = 435.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem x19.</b> 25 objects are placed into 6 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈25/6⌉ = 5.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 4 objects, there would be at most 6 · 4 = 24 < 25 objects in all.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem x20.</b> How many edges does the complete graph K_6 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Pairs</summary><p>C(6, 2) = 15.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 6 vertices has degree 5, so the edges number 6 · 5/2 = 15.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem x21.</b> 40 objects are placed into 7 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈40/7⌉ = 6.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 5 objects, there would be at most 7 · 5 = 35 < 40 objects in all.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem x22.</b> How many edges does the complete graph K_8 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>28</details>
+<details><summary>Method: Pairs</summary><p>C(8, 2) = 28.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 8 vertices has degree 7, so the edges number 8 · 7/2 = 28.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem x23.</b> 50 objects are placed into 8 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈50/8⌉ = 7.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 6 objects, there would be at most 8 · 6 = 48 < 50 objects in all.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem x24.</b> How many edges does the complete graph K_9 have?</p><details><summary>Hint</summary>Every pair of vertices is joined.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Pairs</summary><p>C(9, 2) = 36.</p></details>
+<details><summary>Method: Handshake lemma</summary><p>Each of the 9 vertices has degree 8, so the edges number 9 · 8/2 = 36.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>
+<div class=p><p><b>Problem x25.</b> 100 objects are placed into 9 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈100/9⌉ = 12.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 11 objects, there would be at most 9 · 11 = 99 < 100 objects in all.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 7</p></div>

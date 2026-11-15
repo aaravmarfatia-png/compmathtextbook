@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 123</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 123: Unit 123: Tangent circles and Descartes&#x27; theorem</h1><p class=ref>Book: Coxeter &amp; Greitzer ch. 5 (inversion applications) (25 problems)<br>Coxeter &amp; Greitzer, Geometry Revisited, chapter 5, with Descartes&#x27; circle theorem as an application.</p>
+<h2>Reading</h2>
+<h3>1. Tangent circles: distances and tangent lengths</h3><p>Two circles with radii r₁ and r₂ are <b>externally tangent</b> when the distance between centres is r₁ + r₂ and <b>internally tangent</b> when it is |r₁ − r₂|. For two externally tangent circles, the length of a common external tangent segment between the points of contact is 2√(r₁r₂).</p><p><b>Worked example.</b> Circles of radii 4 and 9 are externally tangent. The centres are 13 apart and the radii differ by 5, so the tangent has length √(13² − 5²) = 12 = 2√(4 × 9) ✓.</p><p><b>The circle between.</b> A small circle tangent to both circles and to the common tangent line has radius r with 1/√r = 1/√r₁ + 1/√r₂. For radii 4 and 9: 1/2 + 1/3 = 5/6, so r = 36/25 = 1.44.</p>
+<h3>2. Descartes' circle theorem</h3><p>For four mutually tangent circles with <b>curvatures</b> k = 1/r (negative if the circle encloses the others), (k₁ + k₂ + k₃ + k₄)² = 2(k₁² + k₂² + k₃² + k₄²). Given three circles, this is a quadratic for k₄ with two solutions k₄ = k₁ + k₂ + k₃ ± 2√(k₁k₂ + k₂k₃ + k₃k₁).</p><p><b>Worked example 1.</b> Three unit circles mutually tangent: k = 1, 1, 1. Then k₄ = 3 ± 2√3. The plus sign gives k₄ = 6.464 (radius 0.1547), the small circle in the gap; the minus sign gives k₄ = −0.464, the large circle that encloses all three (radius 2.155).</p><p><b>Worked example 2.</b> The curvatures (−1, 2, 2, 3) satisfy the theorem: the sum is 6 and its square is 36, and 2(1 + 4 + 4 + 9) = 36 ✓. This is a circle of radius 1 containing two circles of radius ½ and one of radius ⅓.</p>
+<h3>3. Using the theorem</h3><p>After finding one new circle you can feed any three of the four into the formula to find yet another, which produces an infinite packing (the Apollonian gasket). Starting from (−1, 2, 2, 3), the next curvature from (−1, 2, 3) is 4 ± 2√(−2 + 6 − 3) = 4 ± 2: so 6 or 2 (the 2 already present). The new circle has curvature 6.</p><p><b>Reducing to lines.</b> A line is a circle with curvature 0. Two tangent circles of radius 1 and a common tangent line: k = 0, 1, 1 gives k₄ = 2 ± 2√(1) = 4 or 0. So the circle in the gap has radius ¼. ✓ (Check with the earlier formula for a circle in the gap: 1/√r = 1/√1 + 1/√1 = 2, so r = 1/4.)</p><p><b>Integer packings.</b> Starting from integer curvatures, all further curvatures stay integers when the discriminant is a perfect square.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Forgetting the negative sign for an enclosing circle. Mixing up radius and curvature. Using the theorem when the circles are not mutually tangent.</p><p><b>Checks.</b> Plug the final four curvatures into the original equation.</p><p><b>Practice.</b> For every figure, first list curvatures, signs included.</p>
+<h3>Worked examples with Try-its: Descartes' circle theorem</h3><p>For four mutually tangent circles with curvatures k = 1/r (negative for a circle enclosing the others) we have (k₁ + k₂ + k₃ + k₄)² = 2(k₁² + k₂² + k₃² + k₄²). With three unit circles k = 1, 1, 1 the fourth circle has k₄ = 3 ± 2√3. The small inner circle has k₄ = 3 + 2√3, so r = 1/(3 + 2√3) = (2√3 − 3)/3 ≈ 0.1547.</p><details class="try"><summary>Try it<p>Three mutually tangent circles have radii 2, 3 and 6 (curvatures 1/2, 1/3, 1/6). What is the curvature k₄ of the small circle between them?</p><p><b>Answer.</b> The curvatures sum to 1 and the pairwise products sum to 1/6 + 1/18 + 1/12 = 11/36, so k₄ = 1 + 2√(11/36) = 1 + √11/3.</p></details>
+<h3>Worked examples with Try-its: Tangent circles and lengths</h3><p>Two circles of radii r and R tangent externally have centre distance r + R, and their common external tangent has length 2√(rR): for radii 2 and 3 that is 2√6. Chains of tangent circles and the line they touch often use the right triangle with hypotenuse r + R and one leg R − r.</p><details class="try"><summary>Try it<p>Two externally tangent circles of radii 4 and 9 sit on a line. How far apart are their contact points with the line?</p><p><b>Answer.</b> 2√36 = 12.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Two circles of radii 1 and 4 touch externally and both touch a line. A third circle touches both circles and the line. Find its radius. <b>Solution.</b> In terms of curvature, 1/√r₃ = 1/√1 + 1/√4 = 3/2, so r₃ = 4/9.</p><p><b>Reflection.</b> The relation 1/√r₃ = 1/√r₁ + 1/√r₂ is Descartes' theorem with a straight line (curvature 0).</p>
+<h3>More worked examples: Worked examples</h3><p><b>Curvature.</b> Take three mutually tangent circles of radii 1, 1 and 1/4 (curvatures 1, 1, 4). Descartes' theorem gives k₄ = k₁ + k₂ + k₃ ± 2√(k₁k₂ + k₂k₃ + k₃k₁) = 6 ± 2√9 = 12 or 0. The value 0 is a straight line tangent to all three circles.</p><details class="try"><summary>Try it<p>Two circles of radii 1 and 3 touch externally. How long is their common external tangent segment?</p><p><b>Answer.</b> 2√(1 · 3) = 2√3.</p></details><details class="try"><summary>Try it<p>Write the curvature of a circle of radius 1/5.</p><p><b>Answer.</b> 5.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Two circles of radii 2 and 8 touch externally and a third small circle touches both and their common tangent line. Find its radius. <b>Solution.</b> 1/√r = 1/√2 + 1/√8 = 1/√2 + 1/(2√2) = 3/(2√2), so r = 8/9.</p><p><b>Check.</b> √r = 2√2/3 gives r = 8/9.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Three mutually tangent circles have curvatures 2, 3 and 6. A fourth circle tangent to all three (in the gap) has curvature k. Find k.</p><details><summary>Hint</summary>k₄ = k₁ + k₂ + k₃ + 2√(k₁k₂ + k₂k₃ + k₃k₁).</details><details><summary>Answer</summary>23</details>
+<details><summary>Method: Formula</summary><p>k = 11 + 2√(6 + 18 + 12) = 11 + 2 · 6 = 23, so the circle has radius 1/23.</p></details>
+<details><summary>Method: Other root</summary><p>The other root is 11 − 12 = −1, the circle of radius 1 enclosing all three.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem p2.</b> Two unit circles are tangent to each other and to a line. A circle in the gap is tangent to all three. Find its curvature.</p><details><summary>Hint</summary>Curvatures 1, 1, 0.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Formula</summary><p>k = 2 + 2√1 = 4, so the radius is 1/4. (The other root, 0, is the second line.)</p></details>
+<details><summary>Method: Geometry</summary><p>The small circle sits between the unit circles and the line with radius 1/4.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem p3.</b> Two circles of radii 4 and 9 are externally tangent. Find the length of their common external tangent segment.</p><details><summary>Hint</summary>2√(r₁r₂).</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Formula</summary><p>2√36 = 12.</p></details>
+<details><summary>Method: Right triangle</summary><p>The centres are 13 apart and the radii differ by 5, so the tangent length is √(169 − 25) = 12.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem p4.</b> Circles of radii 4 and 9 are externally tangent and both touch a common line. A third circle lies between them touching both and the line. Find its radius as a fraction.</p><details><summary>Hint</summary>1/√r = 1/√4 + 1/√9.</details><details><summary>Answer</summary>36/25</details>
+<details><summary>Method: Formula</summary><p>1/√r = 1/2 + 1/3 = 5/6, so √r = 6/5 and r = 36/25.</p></details>
+<details><summary>Method: Descartes</summary><p>Curvatures 1/4, 1/9, 0 give k = 13/36 + 2√(1/36) = 13/36 + 12/36 = 25/36, so r = 36/25.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem p5.</b> Find the radius of the incircle of the 3-4-5 right triangle.</p><details><summary>Hint</summary>r = (a + b − c)/2.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Formula</summary><p>(3 + 4 − 5)/2 = 1.</p></details>
+<details><summary>Method: Area</summary><p>Area 6 and semiperimeter 6.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem p6.</b> A circle of radius 1 lies inside a circle of radius 3 and touches it. How far apart are the centres?</p><details><summary>Hint</summary>Internal tangency.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Distance</summary><p>3 − 1 = 2.</p></details>
+<details><summary>Method: Reason</summary><p>The tangent point lies on the line of centres, 3 from the big centre and 1 from the small one.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem p7.</b> Three mutually tangent circles are given. How many circles are tangent to all three? (Count only the two Apollonius circles of this tangent type.)</p><details><summary>Hint</summary>Descartes gives two roots.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Roots</summary><p>The quadratic for k₄ has two roots: the circle in the gap and the outer circle, so 2.</p></details>
+<details><summary>Method: Example</summary><p>For curvatures 2, 3, 6 these are 23 and −1.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem p8.</b> Circles of radii 5 and 8 are externally tangent. How far apart are their centres?</p><details><summary>Hint</summary>r₁ + r₂.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Sum</summary><p>5 + 8 = 13.</p></details>
+<details><summary>Method: Common point</summary><p>The tangent point is on the segment between the centres.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem p9.</b> A circle is tangent to both coordinate axes and passes through the point (2, 1). Find its smaller possible radius.</p><details><summary>Hint</summary>The centre is (r, r).</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Equation</summary><p>(r − 2)² + (r − 1)² = r² gives r² − 6r + 5 = 0, so r = 1 or 5. The smaller is 1.</p></details>
+<details><summary>Method: Check</summary><p>The circle of radius 1 centred at (1, 1) passes through (2, 1).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem p10.</b> Three mutually tangent circles have curvatures 2, 3 and 6. Find the larger curvature of a fourth circle tangent to all three.</p><details><summary>Hint</summary>k₄ = k₁ + k₂ + k₃ ± 2√(k₁k₂ + k₂k₃ + k₃k₁).</details><details><summary>Answer</summary>23</details>
+<details><summary>Method: Descartes</summary><p>11 ± 2√36 = 11 ± 12, giving 23 or −1.</p></details>
+<details><summary>Method: Check</summary><p>(2 + 3 + 6 + 23)² = 34² = 1156 and 2(4 + 9 + 36 + 529) = 1156.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem p11.</b> Three mutually tangent circles have curvatures −1, 2 and 2 (the first encloses the others). Find the curvature of the fourth circle tangent to all three, lying in the gap between them.</p><details><summary>Hint</summary>Descartes.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Descartes</summary><p>3 ± 2√(−2 − 2 + 4) = 3 ± 0, so 3.</p></details>
+<details><summary>Method: Check</summary><p>(−1 + 2 + 2 + 3)² = 36 and 2(1 + 4 + 4 + 9) = 36.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem p12.</b> Three mutually tangent circles have curvatures 2, 2 and 3. Find the larger curvature of the fourth.</p><details><summary>Hint</summary>Descartes.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Descartes</summary><p>7 ± 2√(4 + 6 + 6) = 7 ± 8, giving 15 or −1.</p></details>
+<details><summary>Method: Check</summary><p>(2 + 2 + 3 + 15)² = 484 and 2(4 + 4 + 9 + 225) = 484.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem p13.</b> Three mutually tangent circles have curvatures 3, 6 and 7. Find the larger curvature of the fourth.</p><details><summary>Hint</summary>Descartes.</details><details><summary>Answer</summary>34</details>
+<details><summary>Method: Descartes</summary><p>16 ± 2√(18 + 42 + 21) = 16 ± 18, giving 34 or −2.</p></details>
+<details><summary>Method: Check</summary><p>(3 + 6 + 7 + 34)² = 2500 and 2(9 + 36 + 49 + 1156) = 2500.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem p14.</b> Two circles of radii 3 and 6 are externally tangent. How far apart are their centres?</p><details><summary>Hint</summary>Sum of radii.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Sum</summary><p>3 + 6 = 9.</p></details>
+<details><summary>Method: Touching point</summary><p>The centres and the touching point are collinear.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem p15.</b> Two circles of radii 10 and 4 are internally tangent. How far apart are their centres?</p><details><summary>Hint</summary>Difference of radii.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Difference</summary><p>10 − 4 = 6.</p></details>
+<details><summary>Method: Touching point</summary><p>The small circle's centre is 4 from the touching point and the large one's is 10, on the same ray.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem p16.</b> Two circles of radii 4 and 9 are externally tangent. How long is a common external tangent segment between its touching points?</p><details><summary>Hint</summary>2√(rR).</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Formula</summary><p>2√36 = 12.</p></details>
+<details><summary>Method: Right triangle</summary><p>The centres are 13 apart and the radii differ by 5, so the tangent is √(169 − 25) = 12.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem p17.</b> Three mutually tangent circles have radii 3, 4 and 5. What is the perimeter of the triangle joining their centres?</p><details><summary>Hint</summary>Sides are sums of radii.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Sides</summary><p>The sides are 7, 8 and 9, which sum to 24.</p></details>
+<details><summary>Method: Total</summary><p>The perimeter is 2(3 + 4 + 5) = 24.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem x18.</b> A point is 20 from the centre of a circle of radius 12. How long is a tangent segment from the point?</p><details><summary>Hint</summary>The radius is perpendicular to the tangent.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Pythagoras</summary><p>√(20² − 12²) = √256 = 16.</p></details>
+<details><summary>Method: Power of a point</summary><p>The power of the point is 20² − 12² = 256, which is the tangent length squared, so 16.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem x19.</b> Find the circumradius of the triangle with sides 6, 25 and 29.</p><details><summary>Hint</summary>R = abc/(4K).</details><details><summary>Answer</summary>145/8</details>
+<details><summary>Method: Formula</summary><p>K = 60, so R = 4350/(4 · 60) = 145/8.</p></details>
+<details><summary>Method: Law of sines</summary><p>The altitude to side 29 is 120/29, so sin of the adjacent angle is 24/145; then 2R = 6/24/145 gives R = 145/8.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem x20.</b> A point is 26 from the centre of a circle of radius 10. How long is a tangent segment from the point?</p><details><summary>Hint</summary>The radius is perpendicular to the tangent.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Pythagoras</summary><p>√(26² − 10²) = √576 = 24.</p></details>
+<details><summary>Method: Power of a point</summary><p>The power of the point is 26² − 10² = 576, which is the tangent length squared, so 24.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem x21.</b> Find the circumradius of the triangle with sides 13, 13 and 24.</p><details><summary>Hint</summary>R = abc/(4K).</details><details><summary>Answer</summary>169/10</details>
+<details><summary>Method: Formula</summary><p>K = 60, so R = 4056/(4 · 60) = 169/10.</p></details>
+<details><summary>Method: Law of sines</summary><p>The altitude to side 24 is 5, so sin of the adjacent angle is 5/13; then 2R = 13/5/13 gives R = 169/10.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem x22.</b> A point is 25 from the centre of a circle of radius 15. How long is a tangent segment from the point?</p><details><summary>Hint</summary>The radius is perpendicular to the tangent.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Pythagoras</summary><p>√(25² − 15²) = √400 = 20.</p></details>
+<details><summary>Method: Power of a point</summary><p>The power of the point is 25² − 15² = 400, which is the tangent length squared, so 20.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem x23.</b> Find the circumradius of the triangle with sides 17, 25 and 26.</p><details><summary>Hint</summary>R = abc/(4K).</details><details><summary>Answer</summary>325/24</details>
+<details><summary>Method: Formula</summary><p>K = 204, so R = 11050/(4 · 204) = 325/24.</p></details>
+<details><summary>Method: Law of sines</summary><p>The altitude to side 26 is 204/13, so sin of the adjacent angle is 204/325; then 2R = 17/204/325 gives R = 325/24.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem x24.</b> A point is 10 from the centre of a circle of radius 6. How long is a tangent segment from the point?</p><details><summary>Hint</summary>The radius is perpendicular to the tangent.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Pythagoras</summary><p>√(10² − 6²) = √64 = 8.</p></details>
+<details><summary>Method: Power of a point</summary><p>The power of the point is 10² − 6² = 64, which is the tangent length squared, so 8.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>
+<div class=p><p><b>Problem x25.</b> Find the circumradius of the triangle with sides 11, 13 and 20.</p><details><summary>Hint</summary>R = abc/(4K).</details><details><summary>Answer</summary>65/6</details>
+<details><summary>Method: Formula</summary><p>K = 66, so R = 2860/(4 · 66) = 65/6.</p></details>
+<details><summary>Method: Law of sines</summary><p>The altitude to side 20 is 33/5, so sin of the adjacent angle is 33/65; then 2R = 11/33/65 gives R = 65/6.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer ch. 5 (inversion applications)</p></div>

@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 58</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 58: Unit 58: Combinatorial games and Nim</h1><p class=ref>Book: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics (25 problems)<br>Engel, Problem-Solving Strategies, chapter 13 (Games); Sriram, Olympiad Combinatorics, chapters on games.</p>
+<h2>Reading</h2>
+<h3>1. Take-away games and losing positions</h3><p>In a <b>combinatorial game</b> two players alternate moves, there is no chance, and the player who cannot move (or who takes the last object, depending on the rules) loses (or wins). A position is a <b>P-position</b> if the previous player wins (the player to move loses) and an <b>N-position</b> if the next player wins. Rules: every move from a P-position leads to an N-position; from every N-position some move leads to a P-position.</p><p><b>Subtraction game.</b> From a pile you may take 1, 2 or 3 objects; the player who takes the last wins. The P-positions are the multiples of 4 (0, 4, 8, …): from a multiple of 4 any move leaves a non-multiple, and from a non-multiple one can move to a multiple. So with 100 coins and moves 1–5 the first player takes 100 mod 6 = 4 and then answers every move m of the opponent with 6 − m. If the moves are 1, 3 or 4, the P-positions are 0, 2, 7, 9, 14, 16, …, found by marking positions from which every move leads to an N-position.</p><details class="try"><summary>Try it</summary><p>Take-away game with moves 1, 2 or 3; pile 27. Who wins and how?</p><p><b>Answer.</b> 27 mod 4 = 3, so the first player wins by taking 3 and thereafter completing 4 with each pair of moves.</p></details>
+<h3>2. Nim</h3><p>In <b>Nim</b> there are several piles; a move removes any positive number of objects from one pile; the player taking the last object wins. <b>Bouton's theorem:</b> a position is a P-position iff the bitwise XOR of the pile sizes is 0. For (1, 2, 3): 1 ⊕ 2 ⊕ 3 = 0, so the player to move loses. For (3, 4, 5): 3 ⊕ 4 ⊕ 5 = 2 ≠ 0, so the first player wins: to restore XOR 0, reduce the pile whose size decreases when XORed with 2, namely 3 → 1 (since 3 ⊕ 2 = 1 < 3), giving (1, 4, 5) with 1 ⊕ 4 ⊕ 5 = 0.</p><p><b>Why XOR works.</b> From XOR 0, any move changes exactly one pile, so the XOR becomes non-zero; from XOR ≠ 0 take the highest set bit of the XOR: some pile has that bit set, and reducing it appropriately makes the XOR zero.</p><p><b>Strategy stealing and symmetry.</b> Other games are solved by pairing moves (a symmetric strategy) or by strategy stealing: in 'chomp' on a rectangular board the first player wins, since if the second player had a winning reply to the first player's move of taking just the top-right square, the first player could have made that move himself.</p><details class="try"><summary>Try it</summary><p>Is the Nim position (2, 5, 7) a win for the player to move? Give a winning move if so.</p><p><b>Answer.</b> 2 ⊕ 5 ⊕ 7 = 0, so it is a loss for the player to move.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> Two players alternately remove 1, 2 or 3 stones from a pile of 30; the player who removes the last stone <i>loses</i> (misère). Who wins?</p><p><b>Solution.</b> Work backwards. With 1 stone the player to move loses (must take the last stone). So 2, 3, 4 stones are wins (leave 1). With 5 stones every move leaves 4, 3 or 2, all wins for the opponent: loss. The losing positions are 1, 5, 9, 13, … ≡ 1 (mod 4). 30 ≡ 2 (mod 4), a winning position: the first player takes 1 leaving 29 ≡ 1 (mod 4).</p><p><b>Reflection.</b> Misère rules shift the losing positions by one. Always re-derive from the base cases.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Mixing normal and misère rules. (2) Forgetting to check that every move from a P-position leads to an N-position. (3) Using XOR for games that are not sums of Nim piles.</p><p><b>Checks.</b> Compute the P-positions of the first dozen positions by hand and look for a pattern.</p><p><b>How to practise.</b> Always work out small cases first. In Unlimited practice, rotate the game and Nim families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Grundy values.</b> In the game where a player removes 1 or 2 stones from a pile, the Grundy value of a pile of n is n mod 3: 0, 1, 2, 0, 1, 2, … For several piles, XOR the Grundy values: piles of 4 and 5 give 1 ⊕ 2 = 3 ≠ 0, so the first player wins; piles of 3 and 6 give 0 ⊕ 0 = 0, so the second player wins.</p><details class="try"><summary>Try it<p>In the take-1-or-2 game with piles 4, 5 and 6, who wins?</p><p><b>Answer.</b> Grundy values 1, 2, 0 give XOR 3, so the first player wins.</p></details><details class="try"><summary>Try it<p>What is the Grundy value of a Nim pile of size 7?</p><p><b>Answer.</b> 7.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Two players alternately remove 1, 2 or 3 stones from a pile of 21; the player taking the last stone wins. Describe the winning strategy. <b>Solution.</b> The losing positions are the multiples of 4. Since 21 = 5 · 4 + 1, the first player removes 1 and thereafter answers each opponent move by x with a move of 4 − x.</p><p><b>Check.</b> After the first move 20 remain, and the totals after each round are 16, 12, 8, 4, 0, so the first player takes the last stone.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> 21 stones are in a pile. Players alternately take 1, 2 or 3 stones; the player taking the last stone wins. How many stones should the first player take to win?</p><details><summary>Hint</summary>Leave a multiple of 4.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Multiples of 4</summary><p>Multiples of 4 are losing for the player to move: whatever they take (1–3), you take 4 minus that. 21 − 1 = 20.</p></details>
+<details><summary>Method: Backward table</summary><p>Positions 0, 4, 8, 12, 16, 20 are losing, and the first move to 20 takes 1.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem p2.</b> Nim piles 3, 5, 6: does the first or second player win with best play? Type first or second.</p><details><summary>Hint</summary>XOR the piles.</details><details><summary>Answer</summary>second</details>
+<details><summary>Method: XOR</summary><p>3 ⊕ 5 ⊕ 6 = 0, a P-position: the player to move loses, so the second player wins.</p></details>
+<details><summary>Method: Reasoning</summary><p>In binary: 011, 101, 110; each bit column has an even number of 1s.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem p3.</b> Nim piles 4, 7, 9. The first player wants a winning move. How many stones should be removed (from the one pile that works)?</p><details><summary>Hint</summary>XOR is 10.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: XOR</summary><p>4 ⊕ 7 ⊕ 9 = 10. Only the pile 9 satisfies 9 ⊕ 10 = 3 &lt; 9, so reduce 9 to 3: remove 6.</p></details>
+<details><summary>Method: Check</summary><p>4 ⊕ 7 ⊕ 3 = 0.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem p4.</b> Players take 1, 3 or 4 stones from a pile; the player taking the last stone wins. Among piles of size 0 to 20, how many are losing for the player to move?</p><details><summary>Hint</summary>Build a table.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Table</summary><p>Position n is losing if every move leads to a winning position (0 is losing). Working up: 0 L; 1 W (to 0); 2 L (its only move goes to 1, a winning position); 3 W (to 0); 4 W (to 0); 5 W (to 2); 6 W (taking 4 reaches 2); 7 L (moves to 6, 4, 3 are all winning); and the pattern repeats every 7. The losing positions are 0, 2, 7, 9, 14, 16: six of them.</p></details>
+<details><summary>Method: Computer check</summary><p>Marking n losing when none of n − 1, n − 3, n − 4 is losing, for n up to 20, gives exactly 0, 2, 7, 9, 14, 16.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem p5.</b> Players take 1 to 10 stones from a pile of 100; the player taking the last stone wins. How many should the first player take to win?</p><details><summary>Hint</summary>Leave a multiple of 11.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Multiples of 11</summary><p>Losing positions are the multiples of 11. 100 = 99 + 1, so take 1.</p></details>
+<details><summary>Method: Strategy</summary><p>After that, answer each move of k with 11 − k.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem p6.</b> Players take 2 or 5 stones from a pile; the player who cannot move loses. Among piles of size 0 to 20, how many are losing for the player to move?</p><details><summary>Hint</summary>Build a table.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Table</summary><p>0 and 1 are losing (no move possible). 2 W (to 0), 3 W (to 1), 4 L (its only move goes to 2, which is winning), 5 W (to 0), 6 W (to 4), 7 L (moves to 5 and 2, both winning), 8 L (moves to 6 and 3, both winning), 9 W (to 7), 10 W, and the pattern repeats every 7. The losing positions are 0, 1, 4, 7, 8, 11, 14, 15, 18: nine of them.</p></details>
+<details><summary>Method: Computer check</summary><p>Marking n losing when neither n − 2 nor n − 5 is losing gives exactly those nine positions up to 20.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem p7.</b> Nim piles 1, 2, 3: who wins with best play? Type first or second.</p><details><summary>Hint</summary>XOR.</details><details><summary>Answer</summary>second</details>
+<details><summary>Method: XOR</summary><p>1 ⊕ 2 ⊕ 3 = 0, so the player to move loses.</p></details>
+<details><summary>Method: Case check</summary><p>Whatever the first player takes, the second can restore an XOR of 0.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem p8.</b> In the Nim game with piles 3, 5, 7, how many different winning first moves does the first player have?</p><details><summary>Hint</summary>A move is winning if it makes XOR 0.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: XOR</summary><p>3 ⊕ 5 ⊕ 7 = 1. A pile p can be reduced to p ⊕ 1 if that is smaller: 3 → 2, 5 → 4, 7 → 6. Three winning moves.</p></details>
+<details><summary>Method: Check</summary><p>For example 2 ⊕ 5 ⊕ 7 = 0.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem p9.</b> How many positions (a, b) with 0 ≤ a, b ≤ 10 are losing for the player to move in two-pile Nim?</p><details><summary>Hint</summary>XOR zero means a = b.</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: XOR</summary><p>a ⊕ b = 0 exactly when a = b: 11 positions (including (0,0)).</p></details>
+<details><summary>Method: Strategy</summary><p>With equal piles the second player mirrors every move.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem x10.</b> In Nim with piles 1, 2 and 3, who wins with perfect play: the first player (1) or the second (2)?</p><details><summary>Hint</summary>Nim-sum.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: XOR</summary><p>1 XOR 2 XOR 3 = 0, so the player to move loses: the second player wins.</p></details>
+<details><summary>Method: Binary</summary><p>01, 10 and 11 pair up bit by bit.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem x11.</b> In Nim with piles 5 and 7, the first player removes stones from the larger pile to reach nim-sum 0. How many stones are removed?</p><details><summary>Hint</summary>The target is 5.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: XOR</summary><p>5 XOR 7 = 2, and 7 XOR 2 = 5 < 7, so remove 7 − 5 = 2 stones.</p></details>
+<details><summary>Method: Mirror</summary><p>Equal piles of 5 and 5 are a losing position.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem x12.</b> In the subtraction game with moves of 1, 3 or 4 stones (the player who cannot move loses), how many of the positions 0, 1, …, 10 are losing for the player to move?</p><details><summary>Hint</summary>A position is losing if all moves lead to winning positions.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Table</summary><p>Losing positions: 0, 2, 7, 9. Winning: 1, 3, 4, 5, 6, 8, 10. So 4 are losing.</p></details>
+<details><summary>Method: Check</summary><p>From 7 the moves go to 6, 4, 3, all winning; from 9 they go to 8, 6, 5, all winning.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem x13.</b> Find the nim-sum of the piles 3, 4 and 5.</p><details><summary>Hint</summary>XOR.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Binary</summary><p>011 XOR 100 = 111 and 111 XOR 101 = 010, which is 2.</p></details>
+<details><summary>Method: Meaning</summary><p>Nonzero, so the first player wins.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem x14.</b> A pile of 20 stones; players alternately take 1 to 4 and the player taking the last stone wins. Does the first player win? Answer 1 for yes and 0 for no.</p><details><summary>Hint</summary>Multiples of 5.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Strategy</summary><p>20 is a multiple of 5, so the second player answers each move k with 5 − k and wins: 0.</p></details>
+<details><summary>Method: Small cases</summary><p>5 and 10 are also losing for the player to move.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem x15.</b> In Nim with piles 3, 5 and 6, how many winning first moves does the first player have?</p><details><summary>Hint</summary>Compute the nim-sum.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: XOR</summary><p>3 XOR 5 XOR 6 = 0, so every move loses: 0 winning moves.</p></details>
+<details><summary>Method: Check</summary><p>Any move changes the nim-sum to nonzero, giving the opponent a winning reply.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem x16.</b> In Nim with piles 4, 6 and 7, how many winning first moves are there?</p><details><summary>Hint</summary>The nim-sum is 5; a move must reduce some pile p to p XOR 5.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Check each pile</summary><p>4 XOR 5 = 1 < 4, 6 XOR 5 = 3 < 6 and 7 XOR 5 = 2 < 7, so each pile gives one winning move: 3.</p></details>
+<details><summary>Method: Nim-sum</summary><p>4 XOR 6 XOR 7 = 5.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem x17.</b> In Nim with piles 2 and 3, the winning move reduces a pile. To what size is the larger pile reduced?</p><details><summary>Hint</summary>Make the piles equal.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: XOR</summary><p>The nim-sum is 1, and 3 XOR 1 = 2 < 3, so the 3 becomes 2.</p></details>
+<details><summary>Method: Mirror</summary><p>Piles 2 and 2 are losing for the player to move.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem x18.</b> Find the nim-sum (XOR) of the piles 1, 6, 10, 13.</p><details><summary>Hint</summary>Write each pile in binary.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Binary columns</summary><p>In binary the piles are 0001, 0110, 1010, 1101; adding each column mod 2 gives 0000 = 0.</p></details>
+<details><summary>Method: Step by step</summary><p>XOR them one at a time: 1, 7, 13, 0.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem x19.</b> A staircase has 9 steps and you climb 1 or 2 steps at a time. How many ways are there to climb it?</p><details><summary>Hint</summary>Consider the last move.</details><details><summary>Answer</summary>55</details>
+<details><summary>Method: Recurrence</summary><p>Ways(n) = Ways(n − 1) + Ways(n − 2): 1, 2, 3, 5, 8, 13, 21, 34, 55, so 55 ways.</p></details>
+<details><summary>Method: By number of 2-steps</summary><p>With j two-steps there are C(9 − j, j) orders; summing over j gives 55.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem x20.</b> How many binary strings of length 10 contain no two consecutive 1s?</p><details><summary>Hint</summary>Condition on the last symbol.</details><details><summary>Answer</summary>144</details>
+<details><summary>Method: Recurrence</summary><p>aₙ = aₙ₋₁ + aₙ₋₂ with a₁ = 2, a₂ = 3: 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, so a_10 = 144.</p></details>
+<details><summary>Method: Fibonacci</summary><p>aₙ = F_{n+2}, so a_10 = F_12 = 144.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem x21.</b> 100 objects are placed into 9 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈100/9⌉ = 12.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 11 objects, there would be at most 9 · 11 = 99 < 100 objects in all.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem x22.</b> Find the nim-sum (XOR) of the piles 8, 11, 3, 5.</p><details><summary>Hint</summary>Write each pile in binary.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Binary columns</summary><p>In binary the piles are 1000, 1011, 0011, 0101; adding each column mod 2 gives 0101 = 5.</p></details>
+<details><summary>Method: Step by step</summary><p>XOR them one at a time: 8, 3, 0, 5.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem x23.</b> A staircase has 11 steps and you climb 1 or 2 steps at a time. How many ways are there to climb it?</p><details><summary>Hint</summary>Consider the last move.</details><details><summary>Answer</summary>144</details>
+<details><summary>Method: Recurrence</summary><p>Ways(n) = Ways(n − 1) + Ways(n − 2): 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, so 144 ways.</p></details>
+<details><summary>Method: By number of 2-steps</summary><p>With j two-steps there are C(11 − j, j) orders; summing over j gives 144.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem x24.</b> How many binary strings of length 11 contain no two consecutive 1s?</p><details><summary>Hint</summary>Condition on the last symbol.</details><details><summary>Answer</summary>233</details>
+<details><summary>Method: Recurrence</summary><p>aₙ = aₙ₋₁ + aₙ₋₂ with a₁ = 2, a₂ = 3: 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, so a_11 = 233.</p></details>
+<details><summary>Method: Fibonacci</summary><p>aₙ = F_{n+2}, so a_11 = F_13 = 233.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>
+<div class=p><p><b>Problem x25.</b> 61 objects are placed into 12 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈61/12⌉ = 6.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 5 objects, there would be at most 12 · 5 = 60 < 61 objects in all.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 13; Sriram, Olympiad Combinatorics</p></div>

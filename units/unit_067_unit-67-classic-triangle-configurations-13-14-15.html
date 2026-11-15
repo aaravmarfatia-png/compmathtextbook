@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 67</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 67: Unit 67: Classic triangle configurations (13-14-15)</h1><p class=ref>Book: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4 (25 problems)<br>Chen, Euclidean Geometry in Mathematical Olympiads, chapter 4 (assorted configurations: incircle, excircle, Euler line), practised on the 13-14-15 triangle.</p>
+<h2>Reading</h2>
+<h3>1. The 13-14-15 triangle: a catalogue</h3><p>The triangle with sides 13, 14, 15 is the most famous 'nice' scalene triangle: its area is 84 (Heron: s = 21, √(21 · 8 · 7 · 6) = 84), and almost every associated length is rational. Placing B = (0, 0), C = (14, 0), A = (5, 12) splits it into the 5-12-13 triangle (left) and the 9-12-15 triangle (right). Altitudes: onto 14 it is 12, onto 15 it is 2 · 84/15 = 56/5, onto 13 it is 168/13. Inradius 4, circumradius 65/8, semiperimeter 21, tangent lengths 7, 6, 8.</p><p><b>Centres.</b> Centroid (19/3, 4), incentre (6, 4), circumcentre (7, 33/8), orthocentre (5, 15/4). Notice that the incentre has integer coordinates and lies at the same height 4 as the centroid. <b>Excircle radii</b> 12, 14, 10.5, and 1/r = 1/rₐ + 1/r_b + 1/r_c holds.</p><p><b>Why it appears so often.</b> Two Pythagorean triples (5, 12, 13) and (9, 12, 15) share the leg 12, so gluing along it gives integer sides. The same trick generates other 'Heronian' triangles (integer sides and area): glue two copies of 3-4-5 along the leg 4 to get the isosceles 5-5-6 (area 12), or glue 9-12-15 and 5-12-13 along 12 to get 13-14-15.</p><details class="try"><summary>Try it</summary><p>Find the length of the altitude from B to side AC in the 13-14-15 triangle.</p><p><b>Answer.</b> 2 · 84/15 = 56/5 = 11.2.</p></details>
+<h3>2. Facts to use</h3><p><b>Angle bisector from A</b> meets BC at distance 6.5 from B; its length is √146.25 ≈ 12.09. <b>Median from A</b> has length √148. <b>Cosines:</b> cos B = 5/13, cos C = 3/5, cos A = 33/65, with sines 12/13, 4/5 and 56/65. Check that the angles sum to 180°: arccos(5/13) ≈ 67.38°, arccos(3/5) ≈ 53.13°, arccos(33/65) ≈ 59.49°, total 180.00°.</p><p><b>Integer relatives.</b> The 13-14-15 triangle has area 84, which equals 6 × 14: the area is 6 times the side 14, because the altitude to 14 is 12 and ½ · 12 = 6. Other Heronian triangles: 5-5-6 (area 12), 7-15-20 (area 42), 17-25-28 (area 210).</p><details class="try"><summary>Try it</summary><p>Find cos B in the 13-14-15 triangle where B is the angle at vertex B between sides 13 and 14.</p><p><b>Answer.</b> (169 + 196 − 225)/(2 · 13 · 14) = 140/364 = 5/13.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> In the 13-14-15 triangle ABC (BC = 14), the incircle touches BC at D. Find AD.</p><p><b>Solution.</b> BD = s − b = 21 − 15 = 6, so D = (6, 0) in the coordinates above; A = (5, 12), so AD = √(1 + 144) = √145.</p><p><b>Reflection.</b> Having a coordinate model of the standard triangle makes every such question a short distance computation.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Placing the triangle so that the altitude foot falls outside BC (for 13-14-15 with BC = 14 the foot is inside). (2) Mixing up which side is a, b, c. (3) Forgetting that tangent lengths are s − a, etc.</p><p><b>Checks.</b> Verify every length with the distance formula.</p><p><b>How to practise.</b> Memorise the triangle's six or seven key numbers. In Unlimited practice, rotate the standard-triangle families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Euler's distance formula.</b> The distance between the circumcentre O and incentre I satisfies OI² = R² − 2Rr. For the 13-14-15 triangle R = 65/8 and r = 4, so OI² = 4225/64 − 65 = 65/64, matching the coordinates O = (7, 33/8) and I = (6, 4): (1)² + (1/8)² = 65/64 ✓. <b>Other facts.</b> The altitude to the side 14 is 12, the area is 84, and the three altitudes are 12, 56/5 and 168/13. The 3-4-5 triangle has inradius 1 and circumradius 5/2. Because OI² cannot be negative, Euler's formula implies R ≥ 2r in every triangle.</p><details class="try"><summary>Try it<p>Use Euler's formula to find OI² for a 3-4-5 triangle.</p><p><b>Answer.</b> R = 5/2, r = 1: OI² = 25/4 − 5 = 5/4.</p></details><details class="try"><summary>Try it<p>What is the inradius of the 5-12-13 triangle?</p><p><b>Answer.</b> (5 + 12 − 13)/2 = 2.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> The 13-14-15 triangle ABC has BC = 14. The altitude from A meets BC at H. Find the distance from H to the point where the incircle touches BC. <b>Solution.</b> With B = (0, 0), the foot of the altitude is H = (5, 0), and the incircle touches BC at (s − b, 0) = (6, 0), so the distance is 1.</p><p><b>Reflection.</b> The foot of the altitude and the touch point both come from the same coordinate model.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find the area of the triangle with sides 13, 14, 15.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>84</details>
+<details><summary>Method: Heron</summary><p>s = 21, K = √(21·8·7·6) = √7056 = 84.</p></details>
+<details><summary>Method: Altitude</summary><p>Drop the altitude 12 on the side 14 (a 5-12-13 and 9-12-15 split): (1/2)·14·12 = 84.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem p2.</b> Find the inradius of the 13-14-15 triangle.</p><details><summary>Hint</summary>r = K/s.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Formula</summary><p>r = 84/21 = 4.</p></details>
+<details><summary>Method: Half-angle</summary><p>The tangent length from B is 6 and the inradius is 4, so tan(B/2) = 4/6 = 2/3. Check: cos B = (13² + 14² − 15²)/(2·13·14) = 5/13, and tan(B/2) = sin B/(1 + cos B) = (12/13)/(18/13) = 2/3.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem p3.</b> Find the circumradius of the 13-14-15 triangle, as a fraction.</p><details><summary>Hint</summary>R = abc/(4K).</details><details><summary>Answer</summary>65/8</details>
+<details><summary>Method: Formula</summary><p>R = 13·14·15/(4·84) = 2730/336 = 65/8.</p></details>
+<details><summary>Method: Check</summary><p>65/8 = 8.125, larger than half the longest side 7.5, as required.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem p4.</b> The exradius opposite the side of length 14 in the 13-14-15 triangle?</p><details><summary>Hint</summary>r_a = K/(s − a).</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Formula</summary><p>r_a = 84/(21 − 14) = 12.</p></details>
+<details><summary>Method: Check</summary><p>Area also equals r_a(s − a) = 12 · 7 = 84.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem p5.</b> What is the altitude to the side of length 14?</p><details><summary>Hint</summary>h = 2K/a.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Formula</summary><p>h = 168/14 = 12.</p></details>
+<details><summary>Method: Split</summary><p>The foot splits 14 into 5 and 9, and 5² + 12² = 13², 9² + 12² = 15².</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem p6.</b> Find OH² for the 13-14-15 triangle, as a fraction.</p><details><summary>Hint</summary>OH² = 9R² − (a² + b² + c²).</details><details><summary>Answer</summary>265/64</details>
+<details><summary>Method: Formula</summary><p>9 · 4225/64 − 590 = 38025/64 − 37760/64 = 265/64.</p></details>
+<details><summary>Method: Numeric</summary><p>R = 8.125 gives 9R² = 594.14 and 594.14 − 590 = 4.14, which is 265/64.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem p7.</b> Find OI² for the 13-14-15 triangle, as a fraction.</p><details><summary>Hint</summary>Euler: OI² = R² − 2Rr.</details><details><summary>Answer</summary>65/64</details>
+<details><summary>Method: Formula</summary><p>4225/64 − 2·(65/8)·4 = 4225/64 − 65 = 65/64.</p></details>
+<details><summary>Method: Numeric</summary><p>R² = 66.02 and 2Rr = 65, giving 1.02 = 65/64.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem p8.</b> What is the radius of the nine-point circle of the 13-14-15 triangle, as a fraction?</p><details><summary>Hint</summary>It is R/2.</details><details><summary>Answer</summary>65/16</details>
+<details><summary>Method: Half R</summary><p>(65/8)/2 = 65/16.</p></details>
+<details><summary>Method: Why</summary><p>The nine-point circle is the image of the circumcircle under the homothety with centre H and ratio 1/2.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem p9.</b> The incircle of the 13-14-15 triangle touches the side of length 15 at a point. How far is it from the vertex between the sides 13 and 15?</p><details><summary>Hint</summary>Tangent length = s − (opposite side).</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Tangent length</summary><p>The vertex between 13 and 15 is opposite the side 14, so the tangent length is s − 14 = 7.</p></details>
+<details><summary>Method: Equations</summary><p>x + y = 13, y + z = 14, x + z = 15 gives x = 7 for the vertex between 13 and 15.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem p10.</b> Find the area of the triangle with sides 13, 14 and 15.</p><details><summary>Hint</summary>Heron.</details><details><summary>Answer</summary>84</details>
+<details><summary>Method: Heron</summary><p>s = 21, so √(21 · 8 · 7 · 6) = √7056 = 84.</p></details>
+<details><summary>Method: Coordinates</summary><p>B = (0, 0), C = (14, 0), A = (5, 12) gives ½ · 14 · 12 = 84.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem p11.</b> Find the altitude to the side of length 15 in the 13-14-15 triangle.</p><details><summary>Hint</summary>Area = ½ · base · height.</details><details><summary>Answer</summary>56/5</details>
+<details><summary>Method: Area</summary><p>84 = ½ · 15 · h gives h = 168/15 = 56/5.</p></details>
+<details><summary>Method: Check</summary><p>The altitudes 12, 168/13 and 56/5 each multiply their sides to 168.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem p12.</b> Find the exradius opposite the side of length 14 in the 13-14-15 triangle.</p><details><summary>Hint</summary>r_a = K/(s − a).</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Formula</summary><p>84/(21 − 14) = 12.</p></details>
+<details><summary>Method: Ordering</summary><p>The exradius is larger than the inradius 4, as it should be.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem p13.</b> Find the altitude to the side of length 13 in the 13-14-15 triangle.</p><details><summary>Hint</summary>Area formula.</details><details><summary>Answer</summary>168/13</details>
+<details><summary>Method: Area</summary><p>84 = ½ · 13 · h so h = 168/13.</p></details>
+<details><summary>Method: Ratio</summary><p>Altitudes are inversely proportional to sides: 12 · 14/13 = 168/13.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem p14.</b> Let I be the incentre of the 13-14-15 triangle and let A be the vertex between the sides 13 and 14. Find AI².</p><details><summary>Hint</summary>Tangent length from A is s − 15 = 6 and r = 4.</details><details><summary>Answer</summary>52</details>
+<details><summary>Method: Right triangle</summary><p>AI is the hypotenuse of a right triangle with legs 6 and 4, so AI² = 52.</p></details>
+<details><summary>Method: Half-angle</summary><p>AI = r / sin(A/2) and the same right triangle gives sin²(A/2) = 16/52.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem p15.</b> Place B = (0, 0), C = (14, 0), A = (5, 12). Find the y-coordinate of the centroid.</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Average</summary><p>(0 + 0 + 12)/3 = 4.</p></details>
+<details><summary>Method: Medians</summary><p>The centroid is 1/3 of the way up the altitude: 12/3 = 4.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem p16.</b> With B = (0, 0), C = (14, 0), A = (5, 12), find the y-coordinate of the circumcentre.</p><details><summary>Hint</summary>It lies on x = 7 at distance R = 65/8 from B.</details><details><summary>Answer</summary>33/8</details>
+<details><summary>Method: Distance</summary><p>y² = (65/8)² − 7² = 4225/64 − 3136/64 = 1089/64, so y = 33/8.</p></details>
+<details><summary>Method: Equal distances</summary><p>From (7, y) the distances to B and A agree: 49 + y² = (7 − 5)² + (y − 12)², giving 49 + y² = 4 + y² − 24y + 144, so 24y = 99 and y = 33/8.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem p17.</b> With B = (0, 0), C = (14, 0), A = (5, 12), find the y-coordinate of the orthocentre.</p><details><summary>Hint</summary>The altitude from A is x = 5; the altitude from B is perpendicular to AC.</details><details><summary>Answer</summary>15/4</details>
+<details><summary>Method: Altitudes</summary><p>AC has direction (9, −12), so the altitude from B is 9x − 12y = 0, i.e. y = 3x/4. At x = 5 this gives 15/4.</p></details>
+<details><summary>Method: Euler</summary><p>H = A + B + C − 2O = (19, 12) − (14, 33/4) = (5, 15/4).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem x18.</b> Find the area of the triangle with sides 8, 15 and 17.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Heron</summary><p>s = 20, so K = √(20 · 12 · 5 · 3) = 60.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 17 is 2K/17 = 120/17, so the area is ½ · 17 · 120/17 = 60.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem x19.</b> Find the inradius of the triangle with sides 10, 13 and 13.</p><details><summary>Hint</summary>r = K/s.</details><details><summary>Answer</summary>10/3</details>
+<details><summary>Method: Formula</summary><p>The area is 60 and s = 18, so r = 10/3.</p></details>
+<details><summary>Method: Tangent lengths</summary><p>The tangent lengths from the vertices are 8, 5, 5; splitting the area into three triangles with height r gives K = r·s, so r = 10/3.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem x20.</b> Find the circumradius of the triangle with sides 10, 13 and 13.</p><details><summary>Hint</summary>R = abc/(4K).</details><details><summary>Answer</summary>169/24</details>
+<details><summary>Method: Formula</summary><p>K = 60, so R = 1690/(4 · 60) = 169/24.</p></details>
+<details><summary>Method: Law of sines</summary><p>The altitude to side 13 is 120/13, so sin of the adjacent angle is 120/169; then 2R = 10/120/169 gives R = 169/24.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem x21.</b> Find the altitude to the side of length 10 in the triangle with sides 6, 8 and 10.</p><details><summary>Hint</summary>Use the area.</details><details><summary>Answer</summary>24/5</details>
+<details><summary>Method: Area</summary><p>K = 24, so the altitude is 2K/10 = 24/5.</p></details>
+<details><summary>Method: Check</summary><p>½ · 10 · 24/5 = 24, matching K.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem x22.</b> A triangle has sides 13, 14 and 15. Find the square of the median to the side of length 13.</p><details><summary>Hint</summary>m² = (2b² + 2c² − a²)/4.</details><details><summary>Answer</summary>673/4</details>
+<details><summary>Method: Median formula</summary><p>(2 · 196 + 2 · 225 − 169)/4 = 673/4.</p></details>
+<details><summary>Method: Parallelogram law</summary><p>Doubling the median completes a parallelogram with diagonals 13 and 2m; the law gives 169 + 4m² = 2(196 + 225), so m² = 673/4.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem x23.</b> Find the area of the triangle with sides 10, 17 and 21.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>84</details>
+<details><summary>Method: Heron</summary><p>s = 24, so K = √(24 · 14 · 7 · 3) = 84.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 21 is 2K/21 = 8, so the area is ½ · 21 · 8 = 84.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem x24.</b> Find the inradius of the triangle with sides 13, 14 and 15.</p><details><summary>Hint</summary>r = K/s.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Formula</summary><p>The area is 84 and s = 21, so r = 4.</p></details>
+<details><summary>Method: Tangent lengths</summary><p>The tangent lengths from the vertices are 8, 7, 6; splitting the area into three triangles with height r gives K = r·s, so r = 4.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>
+<div class=p><p><b>Problem x25.</b> Find the circumradius of the triangle with sides 13, 14 and 15.</p><details><summary>Hint</summary>R = abc/(4K).</details><details><summary>Answer</summary>65/8</details>
+<details><summary>Method: Formula</summary><p>K = 84, so R = 2730/(4 · 84) = 65/8.</p></details>
+<details><summary>Method: Law of sines</summary><p>The altitude to side 15 is 56/5, so sin of the adjacent angle is 4/5; then 2R = 13/4/5 gives R = 65/8.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 4</p></div>

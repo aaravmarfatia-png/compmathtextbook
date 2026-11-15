@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 79</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 79: Unit 79: Combinatorial geometry</h1><p class=ref>Book: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca (25 problems)<br>Sriram, Olympiad Combinatorics, chapters on combinatorial geometry; Andreescu &amp; Gelca, Mathematical Olympiad Challenges.</p>
+<h2>Reading</h2>
+<h3>1. Counting lines, regions and diagonals</h3><p><b>Lines from points.</b> n points, no three on a line, determine C(n, 2) lines. <b>Regions from lines.</b> n lines in general position (no two parallel, no three concurrent) divide the plane into 1 + n(n + 1)/2 regions: 2 lines give 4, 3 lines give 7, 4 lines give 11. <b>Regions from circles.</b> n circles, every two meeting in two points and no three through a point, give n² − n + 2 regions: 1 circle: 2; 2 circles: 4; 3 circles: 8.</p><p><b>Worked example.</b> How many regions do 10 lines cut the plane into if no two are parallel and no three concurrent? 1 + 10 × 11/2 = 56.</p><p><b>Diagonals.</b> A convex n-gon has n(n − 3)/2 diagonals; a triangulation uses n − 3 non-crossing diagonals and has n − 2 triangles.</p>
+<h3>2. Convex position</h3><p>A set of points is in <b>convex position</b> if each is a vertex of the convex hull. <b>Happy ending theorem (small case):</b> among any 5 points in the plane, no three collinear, some 4 form a convex quadrilateral. Proof: look at the convex hull. If it has 4 or 5 vertices, take 4 hull vertices. If it has 3 vertices (a triangle ABC) with two points D, E inside, the line DE leaves one side of the triangle on one side and two vertices on the other, say A, B and then the points A, B, D, E form a convex quadrilateral.</p><p><b>Worked example.</b> Four points can fail to be in convex position (one inside the triangle of the other three), so the 'happy ending' result needs five points. For pentagons the number needed is nine: among any 9 points in general position some 5 form a convex pentagon, while 8 points can avoid it.</p>
+<h3>3. Covering, packing and combinatorial arguments</h3><p><b>Averaging.</b> If the points of a unit square carry total weight W spread unevenly, some region has at least average weight. If 9 points lie in a unit square, some three of them form a triangle of area at most 1/8: divide the square into 4 strips and use pigeonhole.</p><p><b>Sylvester–Gallai.</b> For a finite set of points not all collinear, there is a line through exactly two of them. (The proof takes a point and a line with the smallest positive distance and shows a contradiction otherwise.)</p><p><b>Helly (1D).</b> If every two of a finite family of intervals on a line intersect, then all of them share a common point: the left-most right endpoint is to the right of every left endpoint.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Allowing three concurrent lines in a count that assumes general position. Not checking collinear cases. Forgetting that the count of regions depends on the configuration.</p><p><b>Checks.</b> Draw 3 or 4 objects and count regions to test the formula.</p><p><b>Practice.</b> State the general-position assumptions at the start.</p>
+<h3>Worked examples with Try-its: Counting regions and intersections</h3><p><b>Lines.</b> n lines in general position (no two parallel, no three through a point) cut the plane into n(n + 1)/2 + 1 regions: 5 lines give 16. Each new line crosses all earlier ones and so adds (number of earlier lines) + 1 regions. <b>Circles.</b> n circles, each pair meeting in two points and no three through one point, make n² − n + 2 regions: 4 circles give 14.</p><p><b>Polygons.</b> A convex n-gon has n(n − 3)/2 diagonals (an octagon has 20) and, if no three diagonals are concurrent, C(n, 4) interior intersection points (15 for a hexagon). Joining n points on a circle by all chords gives C(n, 4) + C(n, 2) + 1 regions: 31 for n = 6.</p><details class="try"><summary>Try it</summary><p>How many regions do 6 lines in general position make?</p><p><b>Answer.</b> 6 · 7/2 + 1 = 22.</p></details>
+<h3>Worked examples with Try-its: Convex position and angle sums</h3><p>The interior angles of a convex n-gon add up to (n − 2) · 180°, so a regular hexagon has angles of 120°. Any 5 points in the plane with no three collinear contain 4 that form a convex quadrilateral (a classical result of Esther Klein). Pick's theorem and Euler's formula (earlier units) also appear in this area.</p><details class="try"><summary>Try it</summary><p>What is each interior angle of a regular 12-gon?</p><p><b>Answer.</b> 10 · 180/12 = 150°.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> How many triangles are formed by the diagonals of a convex hexagon in the sense that three vertices of the hexagon give a triangle? And how many pairs of diagonals cross inside it? <b>Solution.</b> Triangles from vertices: C(6, 3) = 20. Crossing pairs of diagonals inside correspond to choosing 4 vertices: C(6, 4) = 15.</p><p><b>Reflection.</b> Each crossing of two diagonals is determined by the four endpoints, which is why C(n, 4) appears.</p>
+<h3>More worked examples: Worked examples</h3><p>Seven lines in general position make 7 · 8/2 + 1 = 29 regions, and 5 circles make 5² − 5 + 2 = 22. A convex decagon has 10 · 7/2 = 35 diagonals, and a convex heptagon with no three diagonals concurrent has C(7, 4) = 35 interior intersection points of diagonals.</p><details class="try"><summary>Try it<p>A convex polygon has 27 diagonals. How many sides?</p><p><b>Answer.</b> n(n − 3)/2 = 27 gives n = 9.</p></details><details class="try"><summary>Try it<p>Into how many regions do 3 lines divide the plane if two are parallel and the third crosses both?</p><p><b>Answer.</b> 6.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Prove that in any convex n-gon the diagonals from one vertex divide it into n − 2 triangles. <b>Solution.</b> From a vertex there are n − 3 diagonals, which cut the polygon into (n − 3) + 1 = n − 2 triangles, so the angle sum is (n − 2) · 180°.</p><p><b>Check.</b> A hexagon gives 4 triangles and 720°.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> How many diagonals does a convex 12-gon have?</p><details><summary>Hint</summary>n(n − 3)/2.</details><details><summary>Answer</summary>54</details>
+<details><summary>Method: Formula</summary><p>12 · 9/2 = 54.</p></details>
+<details><summary>Method: Subtract sides</summary><p>All pairs of vertices: C(12,2) = 66, minus the 12 sides gives 54.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem p2.</b> In how many ways can a convex hexagon be cut into triangles by non-crossing diagonals?</p><details><summary>Hint</summary>Catalan number C₄.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Catalan</summary><p>C₄ = 14.</p></details>
+<details><summary>Method: Recursion</summary><p>Fix one side; the triangle on it has apex at one of the other 4 vertices, giving 1·5 + 1·2 + 2·1 + 5·1 = 14 with T(3), T(4), T(5) = 1, 2, 5.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem p3.</b> How many triangles have their vertices among the vertices of a convex 10-gon?</p><details><summary>Hint</summary>Choose 3.</details><details><summary>Answer</summary>120</details>
+<details><summary>Method: Choose</summary><p>C(10,3) = 120.</p></details>
+<details><summary>Method: Ordered</summary><p>10·9·8/6 = 120.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem p4.</b> A convex 8-gon has no three diagonals through a common interior point. How many interior intersection points do its diagonals have?</p><details><summary>Hint</summary>Each set of 4 vertices gives one crossing.</details><details><summary>Answer</summary>70</details>
+<details><summary>Method: Four vertices</summary><p>C(8,4) = 70.</p></details>
+<details><summary>Method: Check on a square</summary><p>A square (n = 4) has C(4,4) = 1 crossing, the centre, as expected.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem p5.</b> Five lines in the plane, no two parallel and no three through a point. Into how many regions do they cut the plane?</p><details><summary>Hint</summary>Each new line adds as many regions as lines it crosses plus 1.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Formula</summary><p>1 + 5·6/2 = 16.</p></details>
+<details><summary>Method: Adding lines</summary><p>The regions go 1, 2, 4, 7, 11, 16.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem p6.</b> Three circles in the plane, each pair meeting in two points and no three through a point. How many regions do they make?</p><details><summary>Hint</summary>Each new circle adds as many regions as intersection points it has.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Adding circles</summary><p>One circle makes 2 regions; the second adds 2 for 4; the third adds 4 for 8.</p></details>
+<details><summary>Method: Formula</summary><p>n² − n + 2 with n = 3 gives 8.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem p7.</b> What is the largest number of acute angles a convex polygon can have?</p><details><summary>Hint</summary>Look at the exterior angles.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Exterior angles</summary><p>Each acute interior angle has an exterior angle above 90°, and exterior angles sum to 360°, so at most 3 are above 90°.</p></details>
+<details><summary>Method: Example</summary><p>A triangle has 3 acute angles, and a quadrilateral with 3 acute angles exists, so 3 is reached.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem p8.</b> Five horizontal and four vertical lines make a grid. How many rectangles use these lines as sides?</p><details><summary>Hint</summary>Choose 2 horizontal and 2 vertical lines.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Choose</summary><p>C(5,2) · C(4,2) = 10 · 6 = 60.</p></details>
+<details><summary>Method: Sum</summary><p>The grid has 4 × 3 cells; counting rectangles by width and height gives the same 60.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem p9.</b> Six points lie in the plane with no three collinear. How many lines do they determine?</p><details><summary>Hint</summary>Each pair gives a line.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Pairs</summary><p>C(6,2) = 15.</p></details>
+<details><summary>Method: Reason</summary><p>No three are collinear, so different pairs give different lines.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem p10.</b> What is the maximum number of regions that 5 lines can divide a plane into?</p><details><summary>Hint</summary>Each new line adds as many regions as lines it crosses plus one.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Formula</summary><p>1 + n + C(n, 2) = 1 + 5 + 10 = 16.</p></details>
+<details><summary>Method: Recursion</summary><p>Lines add 1, 2, 3, 4, 5 regions to the starting 1: 1 + 15 = 16.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem p11.</b> What is the maximum number of regions that 4 circles can divide the plane into?</p><details><summary>Hint</summary>Each pair meets in 2 points.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Formula</summary><p>n² − n + 2 = 14.</p></details>
+<details><summary>Method: Recursion</summary><p>The first circle makes 2 regions and the 2nd, 3rd and 4th circles add 2, 4 and 6 more: 2, 4, 8, 14.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem p12.</b> In a convex octagon, how many pairs of diagonals cross inside it, assuming no three diagonals are concurrent?</p><details><summary>Hint</summary>Four vertices determine one crossing.</details><details><summary>Answer</summary>70</details>
+<details><summary>Method: Choose four</summary><p>Any 4 vertices give exactly one crossing pair: C(8, 4) = 70.</p></details>
+<details><summary>Method: Check</summary><p>For a convex quadrilateral C(4, 4) = 1, its two diagonals.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem p13.</b> Eight points lie in the plane with no three on a line. How many lines do they determine?</p><details><summary>Hint</summary>Pairs.</details><details><summary>Answer</summary>28</details>
+<details><summary>Method: Choose</summary><p>C(8, 2) = 28.</p></details>
+<details><summary>Method: Degrees</summary><p>Each point lies on 7 lines, and each line has 2 points: 8 · 7/2 = 28.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem p14.</b> What is the maximum number of pieces a cake (a ball) can be cut into with 5 planar cuts?</p><details><summary>Hint</summary>1 + n + C(n, 2) + C(n, 3).</details><details><summary>Answer</summary>26</details>
+<details><summary>Method: Formula</summary><p>1 + 5 + 10 + 10 = 26.</p></details>
+<details><summary>Method: Recursion</summary><p>The nth cut adds as many pieces as regions it makes in a plane with n − 1 lines: 1 + 2 + 4 + 7 + 11 = 25, plus the start 1 = 26.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem p15.</b> A convex pentagon has all its diagonals drawn, with no three concurrent. How many regions is it divided into?</p><details><summary>Hint</summary>Regions = C(n, 4) + C(n − 1, 2).</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: Formula</summary><p>C(5, 4) + C(4, 2) = 5 + 6 = 11.</p></details>
+<details><summary>Method: Euler</summary><p>The 5 diagonals form a central pentagon, 5 small triangles pointing outward from it, and 5 triangles along the sides: 1 + 5 + 5 = 11 regions.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem p16.</b> How many squares of all sizes are there in a 4 × 4 grid of unit squares?</p><details><summary>Hint</summary>Sum of squares.</details><details><summary>Answer</summary>30</details>
+<details><summary>Method: Count</summary><p>16 of size 1, 9 of size 2, 4 of size 3, 1 of size 4: 30.</p></details>
+<details><summary>Method: Formula</summary><p>1² + 2² + 3² + 4² = 4 · 5 · 9/6 = 30.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem p17.</b> How many rectangles of all sizes are there in a 3 × 5 grid of unit squares?</p><details><summary>Hint</summary>Choose two vertical and two horizontal grid lines.</details><details><summary>Answer</summary>90</details>
+<details><summary>Method: Choose lines</summary><p>C(4, 2) · C(6, 2) = 6 · 15 = 90.</p></details>
+<details><summary>Method: Sum</summary><p>(1 + 2 + 3)(1 + 2 + 3 + 4 + 5) = 6 · 15 = 90.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem x18.</b> How many rectangles of all sizes are there in a 4 × 4 grid of unit squares?</p><details><summary>Hint</summary>Choose two vertical and two horizontal grid lines.</details><details><summary>Answer</summary>100</details>
+<details><summary>Method: Choose lines</summary><p>C(5, 2) · C(5, 2) = 10 · 10 = 100.</p></details>
+<details><summary>Method: Sums</summary><p>(1 + … + 4)(1 + … + 4) = 10 · 10 = 100.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem x19.</b> How many shortest lattice paths lead from (0, 0) to (7, 3) with steps right or up?</p><details><summary>Hint</summary>Choose the positions of the up-steps.</details><details><summary>Answer</summary>120</details>
+<details><summary>Method: Choose</summary><p>C(10, 7) = 120.</p></details>
+<details><summary>Method: Last step</summary><p>Paths ending with a right step plus those ending with an up step: C(9, 6) + C(9, 7) = 84 + 36.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem x20.</b> In how many ways can 3 people be chosen from 18?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>816</details>
+<details><summary>Method: Formula</summary><p>C(18, 3) = 816.</p></details>
+<details><summary>Method: Pascal</summary><p>C(17, 2) + C(17, 3) = 136 + 680 = 816.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem x21.</b> How many rectangles of all sizes are there in a 6 × 7 grid of unit squares?</p><details><summary>Hint</summary>Choose two vertical and two horizontal grid lines.</details><details><summary>Answer</summary>588</details>
+<details><summary>Method: Choose lines</summary><p>C(7, 2) · C(8, 2) = 21 · 28 = 588.</p></details>
+<details><summary>Method: Sums</summary><p>(1 + … + 6)(1 + … + 7) = 21 · 28 = 588.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem x22.</b> How many shortest lattice paths lead from (0, 0) to (4, 4) with steps right or up?</p><details><summary>Hint</summary>Choose the positions of the up-steps.</details><details><summary>Answer</summary>70</details>
+<details><summary>Method: Choose</summary><p>C(8, 4) = 70.</p></details>
+<details><summary>Method: Last step</summary><p>Paths ending with a right step plus those ending with an up step: C(7, 3) + C(7, 4) = 35 + 35.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem x23.</b> In how many ways can 4 people be chosen from 11?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>330</details>
+<details><summary>Method: Formula</summary><p>C(11, 4) = 330.</p></details>
+<details><summary>Method: Pascal</summary><p>C(10, 3) + C(10, 4) = 120 + 210 = 330.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem x24.</b> How many rectangles of all sizes are there in a 3 × 8 grid of unit squares?</p><details><summary>Hint</summary>Choose two vertical and two horizontal grid lines.</details><details><summary>Answer</summary>216</details>
+<details><summary>Method: Choose lines</summary><p>C(4, 2) · C(9, 2) = 6 · 36 = 216.</p></details>
+<details><summary>Method: Sums</summary><p>(1 + … + 3)(1 + … + 8) = 6 · 36 = 216.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>
+<div class=p><p><b>Problem x25.</b> How many shortest lattice paths lead from (0, 0) to (8, 5) with steps right or up?</p><details><summary>Hint</summary>Choose the positions of the up-steps.</details><details><summary>Answer</summary>1287</details>
+<details><summary>Method: Choose</summary><p>C(13, 8) = 1287.</p></details>
+<details><summary>Method: Last step</summary><p>Paths ending with a right step plus those ending with an up step: C(12, 7) + C(12, 8) = 792 + 495.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics, ch. 4 and Andreescu &amp; Gelca</p></div>

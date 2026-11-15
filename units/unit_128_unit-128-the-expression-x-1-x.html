@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 128</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 128: Unit 128: The expression x + 1/x</h1><p class=ref>Book: Andreescu &amp; Gelca, 2.8 (25 problems)<br>Andreescu &amp; Gelca, Mathematical Olympiad Challenges, section 2.8 (x + 1/x).</p>
+<h2>Reading</h2>
+<h3>1. Powers of x + 1/x</h3><p>Put t = x + 1/x. Then x² + 1/x² = t² − 2 and x³ + 1/x³ = t³ − 3t. In general s_n = x^n + x^{−n} satisfies s_{n+1} = t · s_n − s_{n−1}, with s₀ = 2 and s₁ = t.</p><p><b>Worked example.</b> If x + 1/x = 3, then s₂ = 7, s₃ = 3 × 7 − 3 = 18, s₄ = 3 × 18 − 7 = 47. Direct check with x = (3 + √5)/2: s₄ = 47.000 ✓.</p>
+<h3>2. Range of t and the angle form</h3><p>For real x > 0, x + 1/x ≥ 2 with equality iff x = 1 (AM-GM, or (√x − 1/√x)² ≥ 0). For real x < 0, x + 1/x ≤ −2. So t cannot lie strictly between −2 and 2 for real x. If |x| = 1 and x = cos θ + i sin θ, then x + 1/x = 2 cos θ and x^n + x^{−n} = 2 cos nθ, which makes t ∈ [−2, 2] possible only for complex x on the unit circle.</p><p><b>Worked example.</b> For x > 0 the minimum of x + 4/x is 4, at x = 2, since by AM-GM x + 4/x ≥ 2√4 = 4.</p>
+<h3>3. Palindromic equations</h3><p>A palindromic polynomial (coefficients read the same forwards and backwards) can be divided by a power of x so that it becomes a polynomial in t = x + 1/x.</p><p><b>Worked example.</b> x⁴ + x³ + x² + x + 1 = 0: divide by x²: x² + 1/x² + x + 1/x + 1 = (t² − 2) + t + 1 = t² + t − 1 = 0, so t = (−1 ± √5)/2. These are 2 cos 72° ≈ 0.618 and 2 cos 144° ≈ −1.618, the primitive fifth roots of unity ✓.</p><p><b>Worked example.</b> 2x⁴ − 5x³ + 6x² − 5x + 2 = 0 divides by x² into 2(t² − 2) − 5t + 6 = 2t² − 5t + 2 = 0, so t = 2 or 1/2. t = 2 gives x = 1 (double root); t = 1/2 gives complex roots.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Forgetting that x = 0 is not allowed (division by x). Forgetting to solve for x after finding t. Using t between −2 and 2 for real x.</p><p><b>Checks.</b> Substitute back to confirm.</p><p><b>Practice.</b> Build the table s₀, s₁, s₂, … using the recurrence.</p>
+<h3>Worked examples with Try-its: Power sums of x and 1/x</h3><p>If x + 1/x = 3 then x² + 1/x² = 9 − 2 = 7, x³ + 1/x³ = 3 · 7 − 3 = 18 and x⁴ + 1/x⁴ = 7² − 2 = 47. In general pₙ₊₁ = (x + 1/x)pₙ − pₙ₋₁. For real positive x we always have x + 1/x ≥ 2 with equality at x = 1.</p><details class="try"><summary>Try it<p>If x + 1/x = 5, find x² + 1/x².</p><p><b>Answer.</b> 23.</p></details>
+<h3>Worked examples with Try-its: The trigonometric link</h3><p>If x = e^{iθ} then x + 1/x = 2 cos θ and xⁿ + 1/xⁿ = 2 cos nθ. So x + 1/x = 1 means θ = 60° and x⁶ + 1/x⁶ = 2 cos 360° = 2. Likewise x + 1/x = 0 gives x = ±i.</p><details class="try"><summary>Try it<p>If x + 1/x = 1, find x³ + 1/x³.</p><p><b>Answer.</b> 1³ − 3 · 1 = −2 (= 2 cos 180°).</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Solve x + 1/x = 5/2. <b>Solution.</b> 2x² − 5x + 2 = 0, so x = 2 or x = 1/2.</p><p><b>Reflection.</b> The two roots are reciprocals of each other, as always for this equation.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Golden ratio.</b> With φ = (1 + √5)/2, φ + 1/φ = √5, φ² + 1/φ² = 3 and φ⁴ + 1/φ⁴ = 7. <b>From a sum.</b> If x + 1/x = 5/2 then x² + 1/x² = 25/4 − 2 = 17/4. <b>Equation.</b> x + 1/x = 5/2 gives x = 2 or 1/2.</p><details class="try"><summary>Try it<p>If x + 1/x = 4, find x² + 1/x².</p><p><b>Answer.</b> 14.</p></details><details class="try"><summary>Try it<p>Find x + 1/x if x² + 1/x² = 18 and x > 0.</p><p><b>Answer.</b> √20 = 2√5.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> If x + 1/x = 3, find x⁵ + 1/x⁵. <b>Solution.</b> p₁ = 3, p₂ = 7, p₃ = 3 · 7 − 3 = 18, p₄ = 3 · 18 − 7 = 47 and p₅ = 3 · 47 − 18 = 123.</p><p><b>Check.</b> With x = (3 + √5)/2 the value is 123.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> If x + 1/x = 3, find x^2 + 1/x^2.</p><details><summary>Hint</summary>Let pₙ = xⁿ + x⁻ⁿ and use pₙ = k·pₙ₋₁ − pₙ₋₂.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Recurrence</summary><p>Since xⁿ + x⁻ⁿ = (x + 1/x)(xⁿ⁻¹ + x⁻ⁿ⁺¹) − (xⁿ⁻² + x⁻ⁿ⁺²), the values are 2, 3, 7, so p_2 = 7.</p></details>
+<details><summary>Method: Expand powers</summary><p>(x + 1/x)² = x² + 2 + 1/x², so p₂ = 9 − 2 = 7.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p2.</b> If x + 1/x = 4, find x^2 + 1/x^2.</p><details><summary>Hint</summary>Let pₙ = xⁿ + x⁻ⁿ and use pₙ = k·pₙ₋₁ − pₙ₋₂.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Recurrence</summary><p>Since xⁿ + x⁻ⁿ = (x + 1/x)(xⁿ⁻¹ + x⁻ⁿ⁺¹) − (xⁿ⁻² + x⁻ⁿ⁺²), the values are 2, 4, 14, so p_2 = 14.</p></details>
+<details><summary>Method: Expand powers</summary><p>(x + 1/x)² = x² + 2 + 1/x², so p₂ = 16 − 2 = 14.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p3.</b> If x + 1/x = 6, find x^2 + 1/x^2.</p><details><summary>Hint</summary>Let pₙ = xⁿ + x⁻ⁿ and use pₙ = k·pₙ₋₁ − pₙ₋₂.</details><details><summary>Answer</summary>34</details>
+<details><summary>Method: Recurrence</summary><p>Since xⁿ + x⁻ⁿ = (x + 1/x)(xⁿ⁻¹ + x⁻ⁿ⁺¹) − (xⁿ⁻² + x⁻ⁿ⁺²), the values are 2, 6, 34, so p_2 = 34.</p></details>
+<details><summary>Method: Expand powers</summary><p>(x + 1/x)² = x² + 2 + 1/x², so p₂ = 36 − 2 = 34.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p4.</b> If x + 1/x = 3, find x^3 + 1/x^3.</p><details><summary>Hint</summary>Let pₙ = xⁿ + x⁻ⁿ and use pₙ = k·pₙ₋₁ − pₙ₋₂.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: Recurrence</summary><p>Since xⁿ + x⁻ⁿ = (x + 1/x)(xⁿ⁻¹ + x⁻ⁿ⁺¹) − (xⁿ⁻² + x⁻ⁿ⁺²), the values are 2, 3, 7, 18, so p_3 = 18.</p></details>
+<details><summary>Method: Expand powers</summary><p>(x + 1/x)³ = x³ + 3(x + 1/x) + 1/x³, so p₃ = 27 − 3 · 3 = 18.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p5.</b> If x + 1/x = 4, find x^3 + 1/x^3.</p><details><summary>Hint</summary>Let pₙ = xⁿ + x⁻ⁿ and use pₙ = k·pₙ₋₁ − pₙ₋₂.</details><details><summary>Answer</summary>52</details>
+<details><summary>Method: Recurrence</summary><p>Since xⁿ + x⁻ⁿ = (x + 1/x)(xⁿ⁻¹ + x⁻ⁿ⁺¹) − (xⁿ⁻² + x⁻ⁿ⁺²), the values are 2, 4, 14, 52, so p_3 = 52.</p></details>
+<details><summary>Method: Expand powers</summary><p>(x + 1/x)³ = x³ + 3(x + 1/x) + 1/x³, so p₃ = 64 − 3 · 4 = 52.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p6.</b> If x + 1/x = 5, find x^3 + 1/x^3.</p><details><summary>Hint</summary>Let pₙ = xⁿ + x⁻ⁿ and use pₙ = k·pₙ₋₁ − pₙ₋₂.</details><details><summary>Answer</summary>110</details>
+<details><summary>Method: Recurrence</summary><p>Since xⁿ + x⁻ⁿ = (x + 1/x)(xⁿ⁻¹ + x⁻ⁿ⁺¹) − (xⁿ⁻² + x⁻ⁿ⁺²), the values are 2, 5, 23, 110, so p_3 = 110.</p></details>
+<details><summary>Method: Expand powers</summary><p>(x + 1/x)³ = x³ + 3(x + 1/x) + 1/x³, so p₃ = 125 − 3 · 5 = 110.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p7.</b> If x + 1/x = 3, find x^4 + 1/x^4.</p><details><summary>Hint</summary>Let pₙ = xⁿ + x⁻ⁿ and use pₙ = k·pₙ₋₁ − pₙ₋₂.</details><details><summary>Answer</summary>47</details>
+<details><summary>Method: Recurrence</summary><p>Since xⁿ + x⁻ⁿ = (x + 1/x)(xⁿ⁻¹ + x⁻ⁿ⁺¹) − (xⁿ⁻² + x⁻ⁿ⁺²), the values are 2, 3, 7, 18, 47, so p_4 = 47.</p></details>
+<details><summary>Method: Expand powers</summary><p>p₂² = x⁴ + 2 + 1/x⁴ with p₂ = 7, so p₄ = 49 − 2 = 47.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p8.</b> If x + 1/x = 5, find x^4 + 1/x^4.</p><details><summary>Hint</summary>Let pₙ = xⁿ + x⁻ⁿ and use pₙ = k·pₙ₋₁ − pₙ₋₂.</details><details><summary>Answer</summary>527</details>
+<details><summary>Method: Recurrence</summary><p>Since xⁿ + x⁻ⁿ = (x + 1/x)(xⁿ⁻¹ + x⁻ⁿ⁺¹) − (xⁿ⁻² + x⁻ⁿ⁺²), the values are 2, 5, 23, 110, 527, so p_4 = 527.</p></details>
+<details><summary>Method: Expand powers</summary><p>p₂² = x⁴ + 2 + 1/x⁴ with p₂ = 23, so p₄ = 529 − 2 = 527.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p9.</b> If x + 1/x = 3, find x^5 + 1/x^5.</p><details><summary>Hint</summary>Let pₙ = xⁿ + x⁻ⁿ and use pₙ = k·pₙ₋₁ − pₙ₋₂.</details><details><summary>Answer</summary>123</details>
+<details><summary>Method: Recurrence</summary><p>Since xⁿ + x⁻ⁿ = (x + 1/x)(xⁿ⁻¹ + x⁻ⁿ⁺¹) − (xⁿ⁻² + x⁻ⁿ⁺²), the values are 2, 3, 7, 18, 47, 123, so p_5 = 123.</p></details>
+<details><summary>Method: Expand powers</summary><p>p₂ · p₃ = p₅ + p₁, so p₅ = 7 · 18 − 3 = 123.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p10.</b> If x + 1/x = 5, find (x − 1/x)².</p><details><summary>Hint</summary>Compare with (x + 1/x)².</details><details><summary>Answer</summary>21</details>
+<details><summary>Method: Identity</summary><p>(x − 1/x)² = (x + 1/x)² − 4 = 25 − 4 = 21.</p></details>
+<details><summary>Method: Via x² + 1/x²</summary><p>x² + 1/x² = 23, and (x − 1/x)² = x² − 2 + 1/x² = 23 − 2 = 21.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p11.</b> If x + 1/x = 7, find (x − 1/x)².</p><details><summary>Hint</summary>Compare with (x + 1/x)².</details><details><summary>Answer</summary>45</details>
+<details><summary>Method: Identity</summary><p>(x − 1/x)² = (x + 1/x)² − 4 = 49 − 4 = 45.</p></details>
+<details><summary>Method: Via x² + 1/x²</summary><p>x² + 1/x² = 47, and (x − 1/x)² = x² − 2 + 1/x² = 47 − 2 = 45.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p12.</b> If x + 1/x = 1, find x^2026 + 1/x^2026.</p><details><summary>Hint</summary>The values pₙ repeat with a short period.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Period</summary><p>The recurrence pₙ = 1·pₙ₋₁ − pₙ₋₂ gives 2, 1, -1, -2, -1, 1, 2, 1, -1, -2, -1, 1, which repeats, and since 2026 leaves remainder 4 the answer is -1.</p></details>
+<details><summary>Method: Roots of unity</summary><p>x + 1/x = 1 means x = e^(iπ/3), so xⁿ + x⁻ⁿ = 2cos(2026 · 60°) = -1.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p13.</b> If x + 1/x = -1, find x^100 + 1/x^100.</p><details><summary>Hint</summary>The values pₙ repeat with a short period.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Period</summary><p>The recurrence pₙ = -1·pₙ₋₁ − pₙ₋₂ gives 2, -1, -1, 2, -1, -1, 2, -1, -1, 2, -1, -1, which repeats, and since 100 leaves remainder 1 the answer is -1.</p></details>
+<details><summary>Method: Roots of unity</summary><p>x + 1/x = -1 means x = e^(2πi/3), so xⁿ + x⁻ⁿ = 2cos(100 · 120°) = -1.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p14.</b> If x + 1/x = 1, find x^100 + 1/x^100.</p><details><summary>Hint</summary>The values pₙ repeat with a short period.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Period</summary><p>The recurrence pₙ = 1·pₙ₋₁ − pₙ₋₂ gives 2, 1, -1, -2, -1, 1, 2, 1, -1, -2, -1, 1, which repeats, and since 100 leaves remainder 4 the answer is -1.</p></details>
+<details><summary>Method: Roots of unity</summary><p>x + 1/x = 1 means x = e^(iπ/3), so xⁿ + x⁻ⁿ = 2cos(100 · 60°) = -1.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p15.</b> If x + 1/x = 0, find x^2026 + 1/x^2026.</p><details><summary>Hint</summary>The values pₙ repeat with a short period.</details><details><summary>Answer</summary>-2</details>
+<details><summary>Method: Period</summary><p>The recurrence pₙ = 0·pₙ₋₁ − pₙ₋₂ gives 2, 0, -2, 0, 2, 0, -2, 0, 2, 0, -2, 0, which repeats, and since 2026 leaves remainder 2 the answer is -2.</p></details>
+<details><summary>Method: Roots of unity</summary><p>x + 1/x = 0 means x = i, so xⁿ + x⁻ⁿ = 2cos(2026 · 90°) = -2.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p16.</b> How many distinct real solutions does x⁴ − 5x³ + 8x² − 5x + 1 = 0 have?</p><details><summary>Hint</summary>Divide by x² and set y = x + 1/x.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Substitution</summary><p>Dividing by x² gives (x² + 1/x²) + -5(x + 1/x) + 8 = 0, i.e. y² − 5y + 6 = 0 with y = x + 1/x. Its roots are y = 3, 2. A real x exists exactly when |y| ≥ 2, giving 2 values of x for |y| > 2 and 1 for |y| = 2: total 3.</p></details>
+<details><summary>Method: Numerical check</summary><p>Solving the quartic numerically gives the real roots 0.382, 1.0, 2.618, which are 3 distinct values.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p17.</b> How many distinct real solutions does x⁴ − 3x³ + 0x² − 3x + 1 = 0 have?</p><details><summary>Hint</summary>Divide by x² and set y = x + 1/x.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Substitution</summary><p>Dividing by x² gives (x² + 1/x²) + -3(x + 1/x) + 0 = 0, i.e. y² − 3y + -2 = 0 with y = x + 1/x. Its roots are y = 3.562, -0.5616. A real x exists exactly when |y| ≥ 2, giving 2 values of x for |y| > 2 and 1 for |y| = 2: total 2.</p></details>
+<details><summary>Method: Numerical check</summary><p>Solving the quartic numerically gives the real roots 0.3073, 3.2543, which are 2 distinct values.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p18.</b> How many distinct real solutions does x⁴ − 2x³ + -4x² − 2x + 1 = 0 have?</p><details><summary>Hint</summary>Divide by x² and set y = x + 1/x.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Substitution</summary><p>Dividing by x² gives (x² + 1/x²) + -2(x + 1/x) + -4 = 0, i.e. y² − 2y + -6 = 0 with y = x + 1/x. Its roots are y = 3.646, -1.646. A real x exists exactly when |y| ≥ 2, giving 2 values of x for |y| > 2 and 1 for |y| = 2: total 2.</p></details>
+<details><summary>Method: Numerical check</summary><p>Solving the quartic numerically gives the real roots 0.2988, 3.347, which are 2 distinct values.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p19.</b> A positive real x has x² + 1/x² = 7. Find x + 1/x.</p><details><summary>Hint</summary>Add 2 and take a square root.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Square</summary><p>(x + 1/x)² = x² + 2 + 1/x² = 9, and x > 0 makes x + 1/x positive, so it equals 3.</p></details>
+<details><summary>Method: Check</summary><p>If x + 1/x = 3 then x² + 1/x² = 9 − 2 = 7, matching.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p20.</b> A positive real x has x² + 1/x² = 14. Find x + 1/x.</p><details><summary>Hint</summary>Add 2 and take a square root.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Square</summary><p>(x + 1/x)² = x² + 2 + 1/x² = 16, and x > 0 makes x + 1/x positive, so it equals 4.</p></details>
+<details><summary>Method: Check</summary><p>If x + 1/x = 4 then x² + 1/x² = 16 − 2 = 14, matching.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p21.</b> What is the smallest value of x + 9/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: AM-GM</summary><p>x + 9/x ≥ 2√9 = 6, with equality when x = 3.</p></details>
+<details><summary>Method: Table</summary><p>x = 2, 3, 4 give 13/2, 6, 25/4; the minimum is 6 at x = 3.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p22.</b> What is the smallest value of x + 16/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: AM-GM</summary><p>x + 16/x ≥ 2√16 = 8, with equality when x = 4.</p></details>
+<details><summary>Method: Table</summary><p>x = 3, 4, 5 give 25/3, 8, 41/5; the minimum is 8 at x = 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p23.</b> What is the smallest value of x + 25/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: AM-GM</summary><p>x + 25/x ≥ 2√25 = 10, with equality when x = 5.</p></details>
+<details><summary>Method: Table</summary><p>x = 4, 5, 6 give 41/4, 10, 61/6; the minimum is 10 at x = 5.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p24.</b> If x + 1/x = 9, find x^3 + 1/x^3.</p><details><summary>Hint</summary>Let pₙ = xⁿ + x⁻ⁿ and use pₙ = k·pₙ₋₁ − pₙ₋₂.</details><details><summary>Answer</summary>702</details>
+<details><summary>Method: Recurrence</summary><p>Since xⁿ + x⁻ⁿ = (x + 1/x)(xⁿ⁻¹ + x⁻ⁿ⁺¹) − (xⁿ⁻² + x⁻ⁿ⁺²), the values are 2, 9, 79, 702, so p_3 = 702.</p></details>
+<details><summary>Method: Expand powers</summary><p>(x + 1/x)³ = x³ + 3(x + 1/x) + 1/x³, so p₃ = 729 − 3 · 9 = 702.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>
+<div class=p><p><b>Problem p25.</b> If x + 1/x = 10, find x^3 + 1/x^3.</p><details><summary>Hint</summary>Let pₙ = xⁿ + x⁻ⁿ and use pₙ = k·pₙ₋₁ − pₙ₋₂.</details><details><summary>Answer</summary>970</details>
+<details><summary>Method: Recurrence</summary><p>Since xⁿ + x⁻ⁿ = (x + 1/x)(xⁿ⁻¹ + x⁻ⁿ⁺¹) − (xⁿ⁻² + x⁻ⁿ⁺²), the values are 2, 10, 98, 970, so p_3 = 970.</p></details>
+<details><summary>Method: Expand powers</summary><p>(x + 1/x)³ = x³ + 3(x + 1/x) + 1/x³, so p₃ = 1000 − 3 · 10 = 970.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.8</p></div>

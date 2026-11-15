@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 57</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 57: Unit 57: Sequences and recurrences</h1><p class=ref>Book: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16 (25 problems)<br>Engel, Problem-Solving Strategies, chapter 9 (Sequences); Rusczyk, AoPS Vol. 2, chapter 16.</p>
+<h2>Reading</h2>
+<h3>1. Arithmetic and geometric sequences</h3><p>In an <b>arithmetic sequence</b> consecutive terms differ by a constant d: aₙ = a₁ + (n − 1)d and the sum of the first n terms is n(a₁ + aₙ)/2. For a₁ = 5, d = 3: a₂₀ = 62 and S₂₀ = 20 · 67/2 = 670. In a <b>geometric sequence</b> consecutive terms have a constant ratio r: aₙ = a₁rⁿ⁻¹ and Sₙ = a₁(rⁿ − 1)/(r − 1). For 3, 6, 12, … the sum of 10 terms is 3(2¹⁰ − 1) = 3069. If |r| < 1 the infinite sum is a₁/(1 − r).</p><p><b>Recognising them.</b> Three numbers a, b, c are in arithmetic progression iff 2b = a + c, in geometric progression iff b² = ac. If the sum of three numbers in arithmetic progression is 21, the middle one is 7.</p><details class="try"><summary>Try it</summary><p>Find the sum 2 + 5 + 8 + … + 62.</p><p><b>Answer.</b> Terms: 21; sum = 21 · 64/2 = 672.</p></details>
+<h3>2. Recurrences</h3><p>A recurrence defines each term from earlier ones. <b>Linear first order:</b> xₙ₊₁ = 2xₙ + 1 with x₁ = 1 gives 1, 3, 7, 15, … and xₙ = 2ⁿ − 1 (add 1 to both sides: xₙ₊₁ + 1 = 2(xₙ + 1)). <b>Second order:</b> aₙ = 5aₙ₋₁ − 6aₙ₋₂ with a₀ = 2, a₁ = 5: the characteristic equation r² = 5r − 6 has roots 2 and 3, so aₙ = A · 2ⁿ + B · 3ⁿ, and fitting a₀, a₁ gives A = B = 1: aₙ = 2ⁿ + 3ⁿ (confirmed for n up to 9).</p><p><b>Fibonacci and Binet.</b> Fₙ = (φⁿ − ψⁿ)/√5 with φ = (1 + √5)/2 and ψ = (1 − √5)/2; F₂₀ = 6765 (checked numerically). Closed forms come from the roots of the characteristic equation; repeated roots give n · rⁿ terms.</p><p><b>Periodic recurrences.</b> aₙ₊₁ = 1/(1 − aₙ) with a₁ = 2 gives 2, −1, 1/2, 2, −1, 1/2, …, period 3; since 2023 ≡ 1 (mod 3), a₂₀₂₃ = 2.</p><details class="try"><summary>Try it</summary><p>Find a closed form for aₙ₊₁ = 3aₙ + 2, a₁ = 1.</p><p><b>Answer.</b> aₙ + 1 triples each step: aₙ + 1 = 2 · 3ⁿ⁻¹, so aₙ = 2 · 3ⁿ⁻¹ − 1.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> The sequence satisfies a₁ = 1, a₂ = 3 and aₙ = aₙ₋₁ + 2aₙ₋₂. Find a closed form and a₁₀.</p><p><b>Solution.</b> r² = r + 2 has roots 2 and −1, so aₙ = A · 2ⁿ + B(−1)ⁿ. a₁: 2A − B = 1; a₂: 4A + B = 3; adding, 6A = 4, A = 2/3, B = 1/3. So aₙ = (2ⁿ⁺¹ + (−1)ⁿ)/3. Check: a₃ = a₂ + 2a₁ = 5 and (16 − 1)/3 = 5 ✓. a₁₀ = (2048 + 1)/3 = 683.</p><p><b>Reflection.</b> Verify the closed form with the first two or three terms before trusting it.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Off-by-one errors in aₙ = a₁ + (n − 1)d. (2) Using the wrong number of terms in a sum. (3) Forgetting to use initial values. (4) Applying the infinite sum formula when |r| ≥ 1.</p><p><b>Checks.</b> Compute the first three terms from the recurrence and from the closed form.</p><p><b>How to practise.</b> Write out the first five terms. In Unlimited practice, rotate the sequence and recurrence families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Fibonacci identity.</b> With F₁ = F₂ = 1, the sum of the first n squares is FₙFₙ₊₁: for n = 5 we get 1 + 1 + 4 + 9 + 25 = 40 = 5 · 8. <b>Odd numbers.</b> The first n odd numbers add up to n² (1 + 3 + 5 + 7 + 9 = 25). <b>Geometric.</b> A sequence with first term 3 and ratio 2 has sum of the first 6 terms 3(2⁶ − 1) = 189.</p><details class="try"><summary>Try it<p>Find the sum of the first 20 terms of 5, 8, 11, …</p><p><b>Answer.</b> (2 · 5 + 19 · 3) · 20/2 = 670.</p></details><details class="try"><summary>Try it<p>The sequence has a₁ = 2, a₂ = 3 and aₙ = aₙ₋₁ + aₙ₋₂. Find a₆.</p><p><b>Answer.</b> 2, 3, 5, 8, 13, 21, so a₆ = 21.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> A sequence has a₁ = 1 and aₙ₊₁ = aₙ + n. Find aₙ. <b>Solution.</b> aₙ = 1 + (1 + 2 + … + (n − 1)) = 1 + n(n − 1)/2. The first terms are 1, 2, 4, 7, 11.</p><p><b>Check.</b> a₅ = 1 + 5 · 4/2 = 11 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> a₁ = 1 and aₙ₊₁ = 2aₙ + 1. Find a₁₀.</p><details><summary>Hint</summary>Compute a few terms.</details><details><summary>Answer</summary>1023</details>
+<details><summary>Method: Pattern</summary><p>1, 3, 7, 15, … so aₙ = 2ⁿ − 1 and a₁₀ = 1023.</p></details>
+<details><summary>Method: Induction</summary><p>If aₙ = 2ⁿ − 1 then 2aₙ + 1 = 2ⁿ⁺¹ − 1.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem p2.</b> With F₁ = F₂ = 1 and Fₙ₊₂ = Fₙ₊₁ + Fₙ, find F₂₀.</p><details><summary>Hint</summary>Keep adding.</details><details><summary>Answer</summary>6765</details>
+<details><summary>Method: Add</summary><p>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765.</p></details>
+<details><summary>Method: Doubling</summary><p>F₁₀ = 55 and F₁₁ = 89, and F₂₀ = F₁₀(2F₁₁ − F₁₀) = 55·123 = 6765.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem p3.</b> a₀ = 2, a₁ = 3 and aₙ = 3aₙ₋₁ − 2aₙ₋₂. Find a₈.</p><details><summary>Hint</summary>Look for aₙ = 2ⁿ + 1.</details><details><summary>Answer</summary>257</details>
+<details><summary>Method: Closed form</summary><p>The roots of r² = 3r − 2 are 1 and 2, so aₙ = A + B·2ⁿ. a₀ = 2 and a₁ = 3 give A = 1, B = 1: aₙ = 2ⁿ + 1 and a₈ = 257.</p></details>
+<details><summary>Method: Compute</summary><p>2, 3, 5, 9, 17, 33, 65, 129, 257.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem p4.</b> Find 1·2 + 2·3 + … + 10·11.</p><details><summary>Hint</summary>k(k + 1) = k² + k.</details><details><summary>Answer</summary>440</details>
+<details><summary>Method: Sums</summary><p>Σk² + Σk = 385 + 55 = 440.</p></details>
+<details><summary>Method: Formula</summary><p>n(n + 1)(n + 2)/3 = 10·11·12/3 = 440.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem p5.</b> An arithmetic sequence has a₁ = 7 and a₅ = 23. Find a₂₀.</p><details><summary>Hint</summary>Common difference first.</details><details><summary>Answer</summary>83</details>
+<details><summary>Method: Difference</summary><p>d = (23 − 7)/4 = 4, so a₂₀ = 7 + 19·4 = 83.</p></details>
+<details><summary>Method: Check</summary><p>a₅ = 7 + 16 = 23.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem p6.</b> Find gcd(F₁₂, F₁₈), where F₁₂ = 144 and F₁₈ = 2584.</p><details><summary>Hint</summary>gcd(Fₘ, Fₙ) = F_gcd(m, n).</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Fibonacci property</summary><p>gcd(12, 18) = 6 and F₆ = 8.</p></details>
+<details><summary>Method: Euclid</summary><p>2584 = 17·144 + 136, 144 = 136 + 8, 136 = 17·8, so the gcd is 8.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem p7.</b> What is the smallest n with 2ⁿ > 10⁶?</p><details><summary>Hint</summary>2¹⁰ = 1024.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Powers</summary><p>2²⁰ = 1048576 &gt; 10⁶ while 2¹⁹ = 524288.</p></details>
+<details><summary>Method: Logs</summary><p>n > 6/log₁₀ 2 = 19.93, so n = 20.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem p8.</b> a₁ = 1 and aₙ = aₙ₋₁ + n. Find a₂₀.</p><details><summary>Hint</summary>Triangular numbers.</details><details><summary>Answer</summary>210</details>
+<details><summary>Method: Sum</summary><p>aₙ = 1 + 2 + … + n = n(n + 1)/2, so a₂₀ = 210.</p></details>
+<details><summary>Method: Table</summary><p>1, 3, 6, 10, 15, 21, …</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem p9.</b> x₁ = 2 and xₙ₊₁ = 1/(1 − xₙ). Find x₁₀₀.</p><details><summary>Hint</summary>The sequence repeats.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Cycle</summary><p>2, −1, 1/2, 2, −1, 1/2, … repeats every 3 terms. 100 = 3·33 + 1, so x₁₀₀ = x₁ = 2.</p></details>
+<details><summary>Method: Check</summary><p>1/(1 − 2) = −1, 1/(1 + 1) = 1/2, 1/(1 − 1/2) = 2.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem x10.</b> a₀ = 1, a₁ = 2 and aₙ = 3aₙ₋₁ − 2aₙ₋₂. Find a₁₀.</p><details><summary>Hint</summary>Compute a few terms.</details><details><summary>Answer</summary>1024</details>
+<details><summary>Method: Pattern</summary><p>1, 2, 4, 8, …, so aₙ = 2ⁿ and a₁₀ = 1024.</p></details>
+<details><summary>Method: Characteristic</summary><p>x² − 3x + 2 = 0 has roots 1 and 2; with a₀ = 1 and a₁ = 2 the solution is 2ⁿ.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem x11.</b> b₁ = 2, b₂ = 5 and bₙ = bₙ₋₁ + bₙ₋₂. Find b₈.</p><details><summary>Hint</summary>Add the previous two.</details><details><summary>Answer</summary>81</details>
+<details><summary>Method: List</summary><p>2, 5, 7, 12, 19, 31, 50, 81.</p></details>
+<details><summary>Method: Check</summary><p>b₈ = 50 + 31 = 81.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem x12.</b> An arithmetic sequence has a₁ = 7 and a₁₀ = 43. Find a₂₀.</p><details><summary>Hint</summary>Find the common difference.</details><details><summary>Answer</summary>83</details>
+<details><summary>Method: Difference</summary><p>d = 36/9 = 4, so a₂₀ = 7 + 19 · 4 = 83.</p></details>
+<details><summary>Method: Extend</summary><p>a₂₀ = a₁₀ + 10d = 43 + 40 = 83.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem x13.</b> Find the sum of the first 10 terms of the geometric sequence 3, 6, 12, …</p><details><summary>Hint</summary>a(rⁿ − 1)/(r − 1).</details><details><summary>Answer</summary>3069</details>
+<details><summary>Method: Formula</summary><p>3(1024 − 1) = 3069.</p></details>
+<details><summary>Method: Pattern</summary><p>The sum of the first n terms is 3(2ⁿ − 1).</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem x14.</b> A sequence has aₙ = n² − n + 1. Find a₁₀.</p><details><summary>Hint</summary>Substitute.</details><details><summary>Answer</summary>91</details>
+<details><summary>Method: Substitute</summary><p>100 − 10 + 1 = 91.</p></details>
+<details><summary>Method: Differences</summary><p>The differences 2, 4, 6, … add up: 1 + 2(1 + 2 + … + 9) = 91.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem x15.</b> Find 1² + 2² + … + 12².</p><details><summary>Hint</summary>n(n + 1)(2n + 1)/6.</details><details><summary>Answer</summary>650</details>
+<details><summary>Method: Formula</summary><p>12 · 13 · 25/6 = 650.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100 + 121 + 144 = 650.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem x16.</b> a₁ = 1 and aₙ₊₁ = aₙ + 2n. Find a₈.</p><details><summary>Hint</summary>Add 2, 4, 6, …</details><details><summary>Answer</summary>57</details>
+<details><summary>Method: Sum</summary><p>a₈ = 1 + 2(1 + 2 + … + 7) = 1 + 56 = 57.</p></details>
+<details><summary>Method: List</summary><p>1, 3, 7, 13, 21, 31, 43, 57.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem x17.</b> With F₁ = F₂ = 1, find F₁₅.</p><details><summary>Hint</summary>Add the previous two.</details><details><summary>Answer</summary>610</details>
+<details><summary>Method: List</summary><p>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610.</p></details>
+<details><summary>Method: Identity</summary><p>The recurrence F₁₅ = F₁₄ + F₁₃ = 377 + 233 = 610.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem x18.</b> An arithmetic sequence has first term 5 and common difference 3. Find term number 40.</p><details><summary>Hint</summary>aₙ = a₁ + (n − 1)d.</details><details><summary>Answer</summary>122</details>
+<details><summary>Method: Formula</summary><p>5 + 39 · 3 = 122.</p></details>
+<details><summary>Method: Linear form</summary><p>The terms are 5, 8, 11, 14, …, so term k equals 3·k + 2; at k = 40 this is 122.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem x19.</b> Find the sum of the first 25 terms of the arithmetic sequence 8, 10, 12, 14, …</p><details><summary>Hint</summary>n(first + last)/2.</details><details><summary>Answer</summary>800</details>
+<details><summary>Method: Formula</summary><p>The last term is 56, so the sum is 25(8 + 56)/2 = 800.</p></details>
+<details><summary>Method: Pairing</summary><p>Pair terms from the two ends; each pair sums to 64 and there are 25/2 pairs, giving 800.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem x20.</b> Find the sum of the first 4 terms of the geometric sequence 6, 18, 54, …</p><details><summary>Hint</summary>a(rⁿ − 1)/(r − 1).</details><details><summary>Answer</summary>240</details>
+<details><summary>Method: Formula</summary><p>6(3^4 − 1)/(3 − 1) = 240.</p></details>
+<details><summary>Method: Add the terms</summary><p>6 + 18 + 54 + 162 = 240.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem x21.</b> A sequence has a₁ = 1 and aₖ₊₁ = 2·aₖ + 3. Find a_6.</p><details><summary>Hint</summary>Compute term by term, or find a closed form.</details><details><summary>Answer</summary>125</details>
+<details><summary>Method: Step by step</summary><p>The terms are 1, 5, 13, 29, 61, 125, so a_6 = 125.</p></details>
+<details><summary>Method: Closed form</summary><p>The fixed point is K = -3, so aₙ = (a₁ − K)·2^(n−1) + K. For n = 6 this is 125.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem x22.</b> The Fibonacci numbers start F₁ = F₂ = 1. Find F_16.</p><details><summary>Hint</summary>Add the previous two.</details><details><summary>Answer</summary>987</details>
+<details><summary>Method: List</summary><p>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987; so F_16 = 987.</p></details>
+<details><summary>Method: Splitting identity</summary><p>F_{a+b} = F_a F_{b+1} + F_{a−1} F_b with a = 8, b = 8 gives 21 · 34 + 13 · 21 = 987.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem x23.</b> Find 1² + 2² + … + 22².</p><details><summary>Hint</summary>n(n + 1)(2n + 1)/6.</details><details><summary>Answer</summary>3795</details>
+<details><summary>Method: Formula</summary><p>22 · 23 · 45/6 = 3795.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 4 + 9 + 16 + 25 + 36 + 49 + 64 + 81 + 100 + 121 + 144 + 169 + 196 + 225 + 256 + 289 + 324 + 361 + 400 + 441 + 484 = 3795.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem x24.</b> Find 1³ + 2³ + … + 11³.</p><details><summary>Hint</summary>The sum equals the square of 1 + 2 + … + n.</details><details><summary>Answer</summary>4356</details>
+<details><summary>Method: Square of a sum</summary><p>(11 · 12/2)² = 66² = 4356.</p></details>
+<details><summary>Method: Direct</summary><p>1 + 8 + 27 + 64 + 125 + 216 + 343 + 512 + 729 + 1000 + 1331 = 4356.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>
+<div class=p><p><b>Problem x25.</b> Evaluate 1/(1·2) + 1/(2·3) + … + 1/(99·100).</p><details><summary>Hint</summary>1/(k(k + 1)) = 1/k − 1/(k + 1).</details><details><summary>Answer</summary>99/100</details>
+<details><summary>Method: Telescoping</summary><p>Each term is 1/k − 1/(k + 1); everything cancels except 1 − 1/100 = 99/100.</p></details>
+<details><summary>Method: Small cases</summary><p>Up to n = 1, 2, 3 the sums are 1/2, 2/3, 3/4, so up to n = 99 the sum is 99/100.</p></details>
+<p class=ref>Source: Engel, Problem-Solving Strategies, ch. 9; Rusczyk Vol. 2 ch. 16</p></div>

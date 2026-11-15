@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 118</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 118: Unit 118: Calculus toolkit: derivatives, optimisation and limits</h1><p class=ref>Book: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8 (25 problems)<br>Andreescu &amp; Gelca, section 2.10 (The Mean Value Theorem), Zeitz ch. 9 (calculus) and AoPS Volume 2, chapter 8 (limits).</p>
+<h2>Reading</h2>
+<h3>1. Derivatives</h3><p>The derivative f′(x) is the slope of the tangent line. Rules: (xⁿ)′ = nxⁿ⁻¹; (f + g)′ = f′ + g′; product rule (fg)′ = f′g + fg′; quotient rule; chain rule (f(g(x)))′ = f′(g(x)) g′(x); (eˣ)′ = eˣ; (ln x)′ = 1/x; (sin x)′ = cos x; (cos x)′ = −sin x.</p><p><b>Worked example 1.</b> The tangent to y = x² at x = 3 has slope 6 and passes through (3, 9): y = 6x − 9. <b>Example 2.</b> The derivative of (x² + 1)³ is 3(x² + 1)² × 2x = 6x(x² + 1)².</p>
+<h3>2. Maxima and minima</h3><p>At a local maximum or minimum of a smooth function f′(x) = 0 (a critical point). The second derivative tells which: f″ > 0 means a minimum, f″ < 0 a maximum. On a closed interval also compare the endpoint values.</p><p><b>Worked example.</b> f(x) = x³ − 3x has f′ = 3x² − 3 = 0 at x = ±1; f″ = 6x, so x = −1 is a local maximum (f = 2) and x = 1 is a local minimum (f = −2).</p><p><b>An optimisation.</b> Of all rectangles with perimeter 20, the area x(10 − x) has derivative 10 − 2x = 0 at x = 5, giving 25.</p>
+<h3>3. Integrals</h3><p>The integral ∫ₐᵇ f(x) dx is the signed area under the curve. The fundamental theorem: if F′ = f then ∫ₐᵇ f = F(b) − F(a). Basic antiderivatives: ∫xⁿ = xⁿ⁺¹/(n + 1), ∫1/x = ln x, ∫eˣ = eˣ.</p><p><b>Worked example 1.</b> ∫₀¹ x² dx = 1/3. <b>Example 2.</b> The area between y = x and y = x² on [0, 1] is ∫(x − x²) = 1/2 − 1/3 = 1/6. <b>Example 3.</b> Rotating y = x about the x-axis on [0, 1] gives a cone with volume π∫₀¹ x² dx = π/3, as the cone formula (π r² h/3 with r = h = 1) says.</p><p><b>Substitution.</b> ∫ 2x cos(x²) dx = sin(x²) + C by u = x².</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Forgetting the chain rule factor. Forgetting + C. Not checking endpoints of the interval. Treating a critical point as a maximum without testing.</p><p><b>Checks.</b> Differentiate your antiderivative to recover the integrand.</p><p><b>Practice.</b> Verify each formula by differentiating once.</p>
+<h3>Worked examples with Try-its: Derivatives and optimisation</h3><p>The derivative of xⁿ is nxⁿ⁻¹, and of eˣ is eˣ; the product rule gives (x eˣ)′ = (x + 1)eˣ. Extrema occur where f′ = 0. For f(x) = x³ − 3x, f′ = 3x² − 3 = 0 at x = ±1, and f(1) = −2 is a local minimum. <b>Box problem.</b> Cut squares of side x from the corners of a 12 × 12 sheet: V = x(12 − 2x)², V′ = 0 at x = 2, V = 128, the maximum.</p><details class="try"><summary>Try it<p>Maximise x(6 − x) using calculus.</p><p><b>Answer.</b> Derivative 6 − 2x = 0 at x = 3; maximum 9.</p></details>
+<h3>Worked examples with Try-its: Limits and integrals</h3><p>Key limits: sin x/x → 1 as x → 0, and (1 + 1/n)ⁿ → e. The integral ∫₀² x² dx = 8/3 gives the area under the parabola. The Fundamental Theorem says ∫ₐᵇ f = F(b) − F(a) where F′ = f.</p><details class="try"><summary>Try it<p>Evaluate ∫₀³ 2x dx.</p><p><b>Answer.</b> 9.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Find the area between y = x and y = x² for 0 ≤ x ≤ 1. <b>Solution.</b> ∫₀¹ (x − x²) dx = 1/2 − 1/3 = 1/6.</p><p><b>Reflection.</b> Always check which curve is on top.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Critical points.</b> For f(x) = x³ − 3x², f′(x) = 3x² − 6x = 0 at x = 0 and x = 2, with f(0) = 0 a local maximum and f(2) = −4 a local minimum. <b>Limit.</b> (eˣ − 1)/x → 1 as x → 0. <b>Integral.</b> ∫₀² x³ dx = 4.</p><details class="try"><summary>Try it<p>Differentiate x² sin x.</p><p><b>Answer.</b> 2x sin x + x² cos x.</p></details><details class="try"><summary>Try it<p>Find the minimum value of x² − 4x + 7.</p><p><b>Answer.</b> 3 at x = 2.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> A cylinder with no top and volume 27π is to be made with the least surface area. Find its radius. <b>Solution.</b> h = 27/r², area S = πr² + 2πrh = πr² + 54π/r. S′ = 2πr − 54π/r² = 0 gives r³ = 27, so r = 3 and h = 3.</p><p><b>Check.</b> S = 9π + 18π = 27π at r = 3.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find the local maximum value of f(x) = x³ − 6x² + 9x.</p><details><summary>Hint</summary>Solve f'(x) = 0.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Derivative</summary><p>f' = 3x² − 12x + 9 = 3(x − 1)(x − 3), zero at x = 1, 3; f(1) = 4 is the local maximum and f(3) = 0 the local minimum.</p></details>
+<details><summary>Method: Check</summary><p>f(0.9) = 3.969 and f(1.1) = 3.971, both below 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem p2.</b> Find the slope of the tangent to y = x² at x = 3.</p><details><summary>Hint</summary>Differentiate.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Derivative</summary><p>2x = 6 at x = 3.</p></details>
+<details><summary>Method: Secant limit</summary><p>((3 + h)² − 9)/h = 6 + h → 6.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem p3.</b> Find the limit of (x² − 9)/(x − 3) as x approaches 3.</p><details><summary>Hint</summary>Cancel the common factor.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Factor</summary><p>(x − 3)(x + 3)/(x − 3) = x + 3 → 6.</p></details>
+<details><summary>Method: Numeric</summary><p>At x = 3.001 the quotient is 6.001.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem p4.</b> Find the area under y = x² from x = 0 to x = 3.</p><details><summary>Hint</summary>The integral of x² is x³/3.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Antiderivative</summary><p>3³/3 = 9.</p></details>
+<details><summary>Method: Riemann sums</summary><p>With 3 equal strips, the left-hand sum is 5 and the right-hand sum is 14, bracketing 9; finer strips converge to 9.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem p5.</b> A box without a top is made from a 12 × 12 sheet by cutting a square of side x from each corner and folding. What is the largest possible volume?</p><details><summary>Hint</summary>V = x(12 − 2x)².</details><details><summary>Answer</summary>128</details>
+<details><summary>Method: Derivative</summary><p>V = 4x³ − 48x² + 144x gives V' = 12x² − 96x + 144 = 12(x − 2)(x − 6), so x = 2 and V = 2 · 64 = 128.</p></details>
+<details><summary>Method: AM-GM</summary><p>V = (1/4)(4x)(12 − 2x)(12 − 2x). The three factors have sum 24, so by AM-GM their product is at most 8³ = 512, and V ≤ 512/4 = 128, with equality when 4x = 12 − 2x, i.e. x = 2.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem p6.</b> By the mean value theorem, f(x) = x² on [1, 3] has a point c where f'(c) equals the average slope. Find c.</p><details><summary>Hint</summary>Average slope = (9 − 1)/2.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Equation</summary><p>2c = 4 so c = 2.</p></details>
+<details><summary>Method: Check</summary><p>The tangent at x = 2 has slope 4, parallel to the chord from (1, 1) to (3, 9).</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem p7.</b> Find the limit as n → ∞ of (2n + 1)/(n + 3).</p><details><summary>Hint</summary>Divide top and bottom by n.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Divide</summary><p>(2 + 1/n)/(1 + 3/n) → 2.</p></details>
+<details><summary>Method: Numeric</summary><p>For n = 1000 the value is 2001/1003 ≈ 1.995.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem p8.</b> Find the area under y = x³ from x = 0 to x = 2.</p><details><summary>Hint</summary>The integral of x³ is x⁴/4.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Antiderivative</summary><p>2⁴/4 = 4.</p></details>
+<details><summary>Method: Check</summary><p>The area is less than the 2 × 8 = 16 rectangle and more than the triangle-like bound, consistent with 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem p9.</b> Find the derivative of x⁵ at x = 2.</p><details><summary>Hint</summary>5x⁴.</details><details><summary>Answer</summary>80</details>
+<details><summary>Method: Rule</summary><p>5 · 16 = 80.</p></details>
+<details><summary>Method: Numeric</summary><p>(2.001⁵ − 2⁵)/0.001 ≈ 80.08.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem p10.</b> Find the derivative of x³ − 6x² + 9x at x = 2.</p><details><summary>Hint</summary>3x² − 12x + 9.</details><details><summary>Answer</summary>-3</details>
+<details><summary>Method: Power rule</summary><p>3 · 4 − 24 + 9 = −3.</p></details>
+<details><summary>Method: Difference quotient</summary><p>(f(2.001) − f(2))/0.001 ≈ −3.0 for f(x) = x³ − 6x² + 9x.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem p11.</b> What is the largest value of x(12 − x)?</p><details><summary>Hint</summary>Vertex.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Derivative</summary><p>12 − 2x = 0 at x = 6, giving 36.</p></details>
+<details><summary>Method: Symmetry</summary><p>The two roots are 0 and 12 and the maximum is at their midpoint.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem p12.</b> Evaluate lim (x² − 9)/(x − 3) as x → 3.</p><details><summary>Hint</summary>Factor.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Factor</summary><p>(x − 3)(x + 3)/(x − 3) = x + 3 → 6.</p></details>
+<details><summary>Method: Derivative</summary><p>The limit is the derivative of x² at 3, which is 6.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem p13.</b> Find the minimum value of x³ − 12x for x ≥ 0.</p><details><summary>Hint</summary>Set the derivative to zero.</details><details><summary>Answer</summary>-16</details>
+<details><summary>Method: Calculus</summary><p>3x² − 12 = 0 at x = 2, where the value is 8 − 24 = −16.</p></details>
+<details><summary>Method: Table</summary><p>At x = 0, 1, 2, 3 the values are 0, −11, −16, −9, so −16 is the lowest.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem p14.</b> Evaluate the integral of x² from 0 to 3.</p><details><summary>Hint</summary>x³/3.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Antiderivative</summary><p>27/3 − 0 = 9.</p></details>
+<details><summary>Method: Riemann sum</summary><p>The left sums with finer steps approach 9.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem p15.</b> Evaluate the integral of (2x + 1) from 1 to 4.</p><details><summary>Hint</summary>x² + x.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: Antiderivative</summary><p>(16 + 4) − (1 + 1) = 18.</p></details>
+<details><summary>Method: Geometry</summary><p>The region is a trapezoid with heights 3 and 9 and width 3: (3 + 9)/2 · 3 = 18.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem p16.</b> What is the slope of the tangent line to y = x² + 3x at x = 2?</p><details><summary>Hint</summary>Derivative 2x + 3.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Derivative</summary><p>2 · 2 + 3 = 7.</p></details>
+<details><summary>Method: Secant</summary><p>The slope from x = 2 to 2.001 is about 7.001.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem p17.</b> Evaluate lim sin(3x)/x as x → 0.</p><details><summary>Hint</summary>sin u ≈ u.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Small angle</summary><p>sin(3x) ≈ 3x, so the ratio tends to 3.</p></details>
+<details><summary>Method: Derivative</summary><p>It is the derivative of sin(3x) at 0, which is 3 cos 0 = 3.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem x18.</b> What is the smallest value of x + 64/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: AM-GM</summary><p>x + 64/x ≥ 2√64 = 16, with equality when x = 8.</p></details>
+<details><summary>Method: Table</summary><p>x = 7, 8, 9 give 113/7, 16, 145/9; the minimum is 16 at x = 8.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem x19.</b> An arithmetic sequence has first term 5 and common difference 3. Find term number 40.</p><details><summary>Hint</summary>aₙ = a₁ + (n − 1)d.</details><details><summary>Answer</summary>122</details>
+<details><summary>Method: Formula</summary><p>5 + 39 · 3 = 122.</p></details>
+<details><summary>Method: Linear form</summary><p>The terms are 5, 8, 11, 14, …, so term k equals 3·k + 2; at k = 40 this is 122.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem x20.</b> What is the smallest value of x + 81/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: AM-GM</summary><p>x + 81/x ≥ 2√81 = 18, with equality when x = 9.</p></details>
+<details><summary>Method: Table</summary><p>x = 8, 9, 10 give 145/8, 18, 181/10; the minimum is 18 at x = 9.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem x21.</b> An arithmetic sequence has first term 12 and common difference 7. Find term number 25.</p><details><summary>Hint</summary>aₙ = a₁ + (n − 1)d.</details><details><summary>Answer</summary>180</details>
+<details><summary>Method: Formula</summary><p>12 + 24 · 7 = 180.</p></details>
+<details><summary>Method: Linear form</summary><p>The terms are 12, 19, 26, 33, …, so term k equals 7·k + 5; at k = 25 this is 180.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem x22.</b> What is the smallest value of x + 100/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: AM-GM</summary><p>x + 100/x ≥ 2√100 = 20, with equality when x = 10.</p></details>
+<details><summary>Method: Table</summary><p>x = 9, 10, 11 give 181/9, 20, 221/11; the minimum is 20 at x = 10.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem x23.</b> An arithmetic sequence has first term 100 and common difference -4. Find term number 20.</p><details><summary>Hint</summary>aₙ = a₁ + (n − 1)d.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Formula</summary><p>100 + 19 · -4 = 24.</p></details>
+<details><summary>Method: Linear form</summary><p>The terms are 100, 96, 92, 88, …, so term k equals -4·k + 104; at k = 20 this is 24.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem x24.</b> What is the smallest value of x + 9/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: AM-GM</summary><p>x + 9/x ≥ 2√9 = 6, with equality when x = 3.</p></details>
+<details><summary>Method: Table</summary><p>x = 2, 3, 4 give 13/2, 6, 25/4; the minimum is 6 at x = 3.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>
+<div class=p><p><b>Problem x25.</b> An arithmetic sequence has first term 9 and common difference 6. Find term number 30.</p><details><summary>Hint</summary>aₙ = a₁ + (n − 1)d.</details><details><summary>Answer</summary>183</details>
+<details><summary>Method: Formula</summary><p>9 + 29 · 6 = 183.</p></details>
+<details><summary>Method: Linear form</summary><p>The terms are 9, 15, 21, 27, …, so term k equals 6·k + 3; at k = 30 this is 183.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.10; Zeitz ch. 9; AoPS Volume 2 ch. 8</p></div>

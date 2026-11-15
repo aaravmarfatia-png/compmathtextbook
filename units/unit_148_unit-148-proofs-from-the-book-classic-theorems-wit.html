@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 148</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 148: Unit 148: Proofs from THE BOOK: classic theorems with numbers</h1><p class=ref>Book: Aigner &amp; Ziegler, Proofs from THE BOOK; Gelca &amp; Andreescu, Putnam and Beyond; Djukić et al., The IMO Compendium (25 problems)<br>Aigner &amp; Ziegler, Proofs from THE BOOK, ch. 1 (primes), 2 (Bertrand), 4 (sums of two squares), 12 (Euler&#x27;s formula), 30 (Cayley); Gelca &amp; Andreescu 6.1.4 and 5.2.5 (Wilson).</p>
+<h2>Reading</h2>
+<h3>1. Classics: Euclid, Bertrand, Wilson, Fermat</h3><p><b>Euclid.</b> If p₁, …, pₖ are primes, N = p₁⋯pₖ + 1 has a prime factor outside the list: 2·3·5 + 1 = 31 is prime; 2·3·5·7·11·13 + 1 = 30031 = 59 · 509. <b>Wilson.</b> (p − 1)! ≡ −1 (mod p), so (p − 3)! ≡ (p − 1)/2: for p = 7, 4! = 24 ≡ 3 ✓. <b>Fermat.</b> p ≡ 1 mod 4 is a sum of two squares: 13 = 2² + 3².</p><details class="try"><summary>Try it<p>Smallest prime factor of 2·3·5·7 + 1?</p><p><b>Answer.</b> 211 is prime, so 211.</p></details><details class="try"><summary>Try it<p>Write 29 as a sum of two squares.</p><p><b>Answer.</b> 25 + 4.</p></details>
+<h3>2. Graphs and Euler's formula</h3><p>A connected plane graph has V − E + F = 2. A simple planar graph with V ≥ 3 has at most 3V − 6 edges. <b>Cayley:</b> nⁿ⁻² labelled trees; for n = 4 that is 16. <b>Erdős–Szekeres:</b> any (k − 1)² + 1 distinct numbers contain a monotone subsequence of length k; for k = 3 that is 5 numbers.</p><details class="try"><summary>Try it<p>Faces of a connected planar graph with 6 vertices and 9 edges?</p><p><b>Answer.</b> 5.</p></details><details class="try"><summary>Try it<p>Labelled trees on 3 vertices?</p><p><b>Answer.</b> 3.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> What is the largest number of edges in a simple planar graph on 6 vertices? <b>Solution.</b> 3·6 − 6 = 12, achieved by the octahedron graph (6 vertices, 12 edges, 8 triangular faces).</p><p><b>Check.</b> 6 − 12 + 8 = 2 ✓.</p>
+<h3>4. In the books</h3><p><b>Aigner &amp; Ziegler (4th ed.).</b> Ch. 1 gives six proofs of the infinitude of primes (the first is Euclid's p₁⋯pₖ + 1 argument), ch. 2 Bertrand's postulate, ch. 4 representing numbers as sums of two squares (a prime p ≡ 1 mod 4 is a sum of two squares), ch. 12 three applications of Euler's formula (with Pick's theorem), ch. 25 pigeon-hole and double counting, ch. 30 Cayley's formula for the number of trees, ch. 36 Turán's theorem.</p><p><b>Erdős–Szekeres</b> is not in this edition of the book; it appears in <b>Putnam and Beyond</b> and the <b>IMO Compendium</b>. Wilson's theorem is in <b>Putnam and Beyond 5.2.5</b>, Khurmi and 104 Number Theory Problems.</p><p><b>Honest note.</b> The book gives full proofs; this unit only practises the statements with numbers, so it is a companion to reading the proofs, not a substitute.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Let N be the product of all primes up to 5, plus 1. What is the smallest prime factor of N?</p><details><summary>Hint</summary>Euclid's argument: N has a prime factor larger than 5, but which?</details><details><summary>Answer</summary>31</details>
+<details><summary>Method: Factor</summary><p>N = 31 = 31; its smallest prime factor is 31.</p></details>
+<details><summary>Method: Trial division</summary><p>N is not divisible by any prime up to 5, so test the primes beyond 5 in order: 31 is the first divisor.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> Let N be the product of all primes up to 7, plus 1. What is the smallest prime factor of N?</p><details><summary>Hint</summary>Euclid's argument: N has a prime factor larger than 7, but which?</details><details><summary>Answer</summary>211</details>
+<details><summary>Method: Factor</summary><p>N = 211 = 211; its smallest prime factor is 211.</p></details>
+<details><summary>Method: Trial division</summary><p>N is not divisible by any prime up to 7, so test the primes beyond 7 in order: 211 is the first divisor.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> Let N be the product of all primes up to 13, plus 1. What is the smallest prime factor of N?</p><details><summary>Hint</summary>Euclid's argument: N has a prime factor larger than 13, but which?</details><details><summary>Answer</summary>59</details>
+<details><summary>Method: Factor</summary><p>N = 30031 = 59·509; its smallest prime factor is 59.</p></details>
+<details><summary>Method: Trial division</summary><p>N is not divisible by any prime up to 13, so test the primes beyond 13 in order: 59 is the first divisor.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> Find the smallest prime p with 100 < p < 200 (Bertrand's postulate says one exists).</p><details><summary>Hint</summary>Check the numbers after 100 one by one.</details><details><summary>Answer</summary>101</details>
+<details><summary>Method: Search</summary><p>Test 101, 102, … for primality; the first prime is 101.</p></details>
+<details><summary>Method: Sieve</summary><p>Sieve the numbers from 101 to 200 with the primes up to 14; the first survivor is 101.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> Find the smallest prime p with 200 < p < 400 (Bertrand's postulate says one exists).</p><details><summary>Hint</summary>Check the numbers after 200 one by one.</details><details><summary>Answer</summary>211</details>
+<details><summary>Method: Search</summary><p>Test 201, 202, … for primality; the first prime is 211.</p></details>
+<details><summary>Method: Sieve</summary><p>Sieve the numbers from 201 to 400 with the primes up to 20; the first survivor is 211.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> Find the smallest prime p with 500 < p < 1000 (Bertrand's postulate says one exists).</p><details><summary>Hint</summary>Check the numbers after 500 one by one.</details><details><summary>Answer</summary>503</details>
+<details><summary>Method: Search</summary><p>Test 501, 502, … for primality; the first prime is 503.</p></details>
+<details><summary>Method: Sieve</summary><p>Sieve the numbers from 501 to 1000 with the primes up to 31; the first survivor is 503.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> How many labelled trees are there on 5 vertices?</p><details><summary>Hint</summary>Cayley's formula: nⁿ⁻².</details><details><summary>Answer</summary>125</details>
+<details><summary>Method: Cayley</summary><p>5^3 = 125.</p></details>
+<details><summary>Method: Prüfer codes</summary><p>Trees correspond to sequences of length 3 with entries from 5 labels: 5^3 = 125.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> How many labelled trees are there on 6 vertices?</p><details><summary>Hint</summary>Cayley's formula: nⁿ⁻².</details><details><summary>Answer</summary>1296</details>
+<details><summary>Method: Cayley</summary><p>6^4 = 1296.</p></details>
+<details><summary>Method: Prüfer codes</summary><p>Trees correspond to sequences of length 4 with entries from 6 labels: 6^4 = 1296.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> How many labelled trees are there on 7 vertices?</p><details><summary>Hint</summary>Cayley's formula: nⁿ⁻².</details><details><summary>Answer</summary>16807</details>
+<details><summary>Method: Cayley</summary><p>7^5 = 16807.</p></details>
+<details><summary>Method: Prüfer codes</summary><p>Trees correspond to sequences of length 5 with entries from 7 labels: 7^5 = 16807.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> What is the smallest length L such that every sequence of L distinct numbers has an increasing or a decreasing subsequence of length 4?</p><details><summary>Hint</summary>Erdős–Szekeres: (k − 1)² + 1.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Theorem</summary><p>Every sequence of (k − 1)² + 1 numbers works, and a (k − 1) × (k − 1) block arrangement shows (k − 1)² does not: 10.</p></details>
+<details><summary>Method: Pigeonhole</summary><p>Label each term by (longest increasing run ending there, longest decreasing run ending there); with at most 3·3 labels, 10 terms force a repeat, which is impossible, so L = 10.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> What is the smallest length L such that every sequence of L distinct numbers has an increasing or a decreasing subsequence of length 5?</p><details><summary>Hint</summary>Erdős–Szekeres: (k − 1)² + 1.</details><details><summary>Answer</summary>17</details>
+<details><summary>Method: Theorem</summary><p>Every sequence of (k − 1)² + 1 numbers works, and a (k − 1) × (k − 1) block arrangement shows (k − 1)² does not: 17.</p></details>
+<details><summary>Method: Pigeonhole</summary><p>Label each term by (longest increasing run ending there, longest decreasing run ending there); with at most 4·4 labels, 17 terms force a repeat, which is impossible, so L = 17.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> What is the smallest length L such that every sequence of L distinct numbers has an increasing or a decreasing subsequence of length 6?</p><details><summary>Hint</summary>Erdős–Szekeres: (k − 1)² + 1.</details><details><summary>Answer</summary>26</details>
+<details><summary>Method: Theorem</summary><p>Every sequence of (k − 1)² + 1 numbers works, and a (k − 1) × (k − 1) block arrangement shows (k − 1)² does not: 26.</p></details>
+<details><summary>Method: Pigeonhole</summary><p>Label each term by (longest increasing run ending there, longest decreasing run ending there); with at most 5·5 labels, 26 terms force a repeat, which is impossible, so L = 26.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> A connected planar graph has 8 vertices and 12 edges. How many faces (including the outer one) does a plane drawing have?</p><details><summary>Hint</summary>Euler: V − E + F = 2.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Euler's formula</summary><p>F = 2 − V + E = 6.</p></details>
+<details><summary>Method: Build up</summary><p>A tree with 8 vertices has 1 face; each of the 5 extra edges adds one face, giving 6.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> A connected planar graph has 10 vertices and 15 edges. How many faces (including the outer one) does a plane drawing have?</p><details><summary>Hint</summary>Euler: V − E + F = 2.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Euler's formula</summary><p>F = 2 − V + E = 7.</p></details>
+<details><summary>Method: Build up</summary><p>A tree with 10 vertices has 1 face; each of the 6 extra edges adds one face, giving 7.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> A connected planar graph has 12 vertices and 18 edges. How many faces (including the outer one) does a plane drawing have?</p><details><summary>Hint</summary>Euler: V − E + F = 2.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Euler's formula</summary><p>F = 2 − V + E = 8.</p></details>
+<details><summary>Method: Build up</summary><p>A tree with 12 vertices has 1 face; each of the 7 extra edges adds one face, giving 8.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> What is the largest possible number of edges in a simple planar graph with 8 vertices?</p><details><summary>Hint</summary>Every face has at least 3 edges; combine with Euler's formula.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: Face count</summary><p>2E ≥ 3F and V − E + F = 2 give E ≤ 3V − 6 = 18.</p></details>
+<details><summary>Method: Triangulation</summary><p>A triangulated planar graph achieves it: 3·8 − 6 = 18.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> What is the largest possible number of edges in a simple planar graph with 10 vertices?</p><details><summary>Hint</summary>Every face has at least 3 edges; combine with Euler's formula.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Face count</summary><p>2E ≥ 3F and V − E + F = 2 give E ≤ 3V − 6 = 24.</p></details>
+<details><summary>Method: Triangulation</summary><p>A triangulated planar graph achieves it: 3·10 − 6 = 24.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> What is the largest possible number of edges in a simple planar graph with 12 vertices?</p><details><summary>Hint</summary>Every face has at least 3 edges; combine with Euler's formula.</details><details><summary>Answer</summary>30</details>
+<details><summary>Method: Face count</summary><p>2E ≥ 3F and V − E + F = 2 give E ≤ 3V − 6 = 30.</p></details>
+<details><summary>Method: Triangulation</summary><p>A triangulated planar graph achieves it: 3·12 − 6 = 30.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> The prime 13 is the sum of two squares a² + b² with 0 < a < b. Find ab.</p><details><summary>Hint</summary>Primes ≡ 1 (mod 4) are sums of two squares (Fermat–Euler).</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Search</summary><p>Test 13 − a² for a = 1, 2, …; it is a square only for a = 2 (giving b = 3), so ab = 6.</p></details>
+<details><summary>Method: Gaussian integers</summary><p>13 = (2 + 3i)(2 − 3i), so 13 = 2² + 3² and ab = 6.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> The prime 29 is the sum of two squares a² + b² with 0 < a < b. Find ab.</p><details><summary>Hint</summary>Primes ≡ 1 (mod 4) are sums of two squares (Fermat–Euler).</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Search</summary><p>Test 29 − a² for a = 1, 2, …; it is a square only for a = 2 (giving b = 5), so ab = 10.</p></details>
+<details><summary>Method: Gaussian integers</summary><p>29 = (2 + 5i)(2 − 5i), so 29 = 2² + 5² and ab = 10.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> The prime 37 is the sum of two squares a² + b² with 0 < a < b. Find ab.</p><details><summary>Hint</summary>Primes ≡ 1 (mod 4) are sums of two squares (Fermat–Euler).</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Search</summary><p>Test 37 − a² for a = 1, 2, …; it is a square only for a = 1 (giving b = 6), so ab = 6.</p></details>
+<details><summary>Method: Gaussian integers</summary><p>37 = (1 + 6i)(1 − 6i), so 37 = 1² + 6² and ab = 6.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> The prime 41 is the sum of two squares a² + b² with 0 < a < b. Find ab.</p><details><summary>Hint</summary>Primes ≡ 1 (mod 4) are sums of two squares (Fermat–Euler).</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Search</summary><p>Test 41 − a² for a = 1, 2, …; it is a square only for a = 4 (giving b = 5), so ab = 20.</p></details>
+<details><summary>Method: Gaussian integers</summary><p>41 = (4 + 5i)(4 − 5i), so 41 = 4² + 5² and ab = 20.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> Find (7 − 3)! mod 7.</p><details><summary>Hint</summary>Wilson: (p − 1)! ≡ −1 (mod p).</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Wilson</summary><p>(p − 1)! = (p − 1)(p − 2)(p − 3)! ≡ 2·(p − 3)! ≡ −1, so (p − 3)! ≡ (p − 1)/2 = 3.</p></details>
+<details><summary>Method: Direct</summary><p>Multiply 1·2·…·4 reducing mod 7: 3.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> Find (11 − 3)! mod 11.</p><details><summary>Hint</summary>Wilson: (p − 1)! ≡ −1 (mod p).</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Wilson</summary><p>(p − 1)! = (p − 1)(p − 2)(p − 3)! ≡ 2·(p − 3)! ≡ −1, so (p − 3)! ≡ (p − 1)/2 = 5.</p></details>
+<details><summary>Method: Direct</summary><p>Multiply 1·2·…·8 reducing mod 11: 5.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> Find (13 − 3)! mod 13.</p><details><summary>Hint</summary>Wilson: (p − 1)! ≡ −1 (mod p).</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Wilson</summary><p>(p − 1)! = (p − 1)(p − 2)(p − 3)! ≡ 2·(p − 3)! ≡ −1, so (p − 3)! ≡ (p − 1)/2 = 6.</p></details>
+<details><summary>Method: Direct</summary><p>Multiply 1·2·…·10 reducing mod 13: 6.</p></details>
+<p class=ref>Source: Theorems from Aigner &amp; Ziegler ch. 1, 2, 4, 12, 30 (original problem)</p></div>

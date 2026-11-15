@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 65</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 65: Unit 65: Barycentric coordinates and areas</h1><p class=ref>Book: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7 (25 problems)<br>Chen, Euclidean Geometry in Mathematical Olympiads, chapter 7 (Barycentric coordinates), introduced from scratch with area ratios.</p>
+<h2>Reading</h2>
+<h3>1. Barycentric coordinates</h3><p>Every point P in the plane of triangle ABC can be written P = (αA + βB + γC) with α + β + γ = 1; the triple (α, β, γ) gives the <b>barycentric coordinates</b>. P is inside the triangle iff all three are positive. The vertices are (1, 0, 0), (0, 1, 0), (0, 0, 1); the centroid is (1/3, 1/3, 1/3); the midpoint of BC is (0, 1/2, 1/2). With A = (0, 0), B = (10, 0), C = (0, 10), the point with coordinates (0.2, 0.3, 0.5) is (3, 5).</p><p><b>The area interpretation.</b> α = [PBC]/[ABC], β = [PCA]/[ABC], γ = [PAB]/[ABC]: the weights are the sub-triangle areas opposite each vertex (verified exactly for the point (3, 5) above). Hence the incentre of a triangle with sides a, b, c has coordinates (a : b : c), and the circumcentre has coordinates (a²(b² + c² − a²) : …).</p><details class="try"><summary>Try it</summary><p>Find the barycentric coordinates of the midpoint of AB.</p><p><b>Answer.</b> (1/2, 1/2, 0).</p></details>
+<h3>2. Areas and lines</h3><p>The area of the triangle whose vertices have barycentric coordinates (αᵢ, βᵢ, γᵢ) is [ABC] times the absolute value of the determinant of the 3 × 3 matrix of those coordinates. Three points are collinear iff this determinant is zero. A line has the equation ux + vy + wz = 0 in homogeneous coordinates.</p><p><b>Ceva and Menelaus in this language.</b> The cevians through (α : β : γ) meet the sides at (0 : β : γ), (α : 0 : γ), (α : β : 0), and their concurrency is immediate: no calculation is needed to verify Ceva.</p><details class="try"><summary>Try it</summary><p>Is the point (2 : 3 : −1) inside triangle ABC? (Normalise first.)</p><p><b>Answer.</b> Sum 4, so (1/2, 3/4, −1/4): γ < 0, so it is outside, beyond side AB.</p></details>
+<h3>3. A longer problem</h3><p><b>Problem.</b> For the triangle with A = (0, 0), B = (6, 0), C = (0, 6), find the barycentric coordinates of P = (2, 1) and the area of triangle PBC.</p><p><b>Solution.</b> P = αA + βB + γC gives (6β, 6γ) = (2, 1), so β = 1/3, γ = 1/6, α = 1/2. [ABC] = 18, so [PBC] = α · 18 = 9, [PCA] = β · 18 = 6, [PAB] = γ · 18 = 3 (they sum to 18).</p><p><b>Reflection.</b> Reading off areas from barycentric coordinates avoids computing three separate determinants.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Forgetting to normalise so the coordinates sum to 1. (2) Assigning the area opposite the wrong vertex. (3) Confusing barycentric with Cartesian coordinates.</p><p><b>Checks.</b> The three areas must sum to [ABC].</p><p><b>How to practise.</b> Convert a few points back and forth. In Unlimited practice, rotate the area-ratio families.</p>
+<h3>More worked examples: Worked examples</h3><p>A point with barycentric coordinates (α : β : γ) (not all zero, scaled so that α + β + γ = 1) is αA + βB + γC. In the triangle A = (0, 0), B = (6, 0), C = (0, 6) the point (1 : 2 : 3) is (1 · A + 2 · B + 3 · C)/6 = (2, 3), and the centroid (1 : 1 : 1) is (2, 2). The normalised coordinates are area ratios: the area of triangle ABP over the area of ABC equals the weight on C. For (1 : 2 : 3) that is 3/6 = 1/2 (checked with coordinates).</p><details class="try"><summary>Try it<p>Find the point with barycentric coordinates (2 : 1 : 1) in the triangle above.</p><p><b>Answer.</b> (2 · A + B + C)/4 = (6/4, 6/4) = (3/2, 3/2).</p></details><details class="try"><summary>Try it<p>The point P has barycentrics (1 : 1 : 2). What fraction of the area of ABC is triangle ABP?</p><p><b>Answer.</b> 2/4 = 1/2.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> A point P inside triangle ABC has areas [PBC] = 1, [PCA] = 2 and [PAB] = 3. Find the barycentric coordinates of P and the ratio in which line AP divides BC. <b>Solution.</b> The coordinates are proportional to the opposite areas: (1 : 2 : 3). Line AP meets BC at the point with coordinates (0 : 2 : 3), so BD : DC = 3 : 2.</p><p><b>Check.</b> With the coordinates above P = (2, 3) and the line from A = (0, 0) through (2, 3) hits BC (x + y = 6) at D = (12/5, 18/5). Since B = (6, 0) and C = (0, 6), D is (6 − 12/5)/6 = 3/5 of the way from B to C, so BD : DC = 3 : 2 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> P has barycentric coordinates (1 : 2 : 3) in triangle ABC of area 60. Find [PBC].</p><details><summary>Hint</summary>Normalise: [PBC] = (x/(x+y+z))·[ABC].</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Normalise</summary><p>(1, 2, 3)/6 = (1/6, 1/3, 1/2). [PBC] = 60/6 = 10.</p></details>
+<details><summary>Method: Check</summary><p>The three areas are 10, 20, 30, which sum to 60.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem p2.</b> D is on BC with BD:DC = 2:3. If [ABC] = 50, find [ABD].</p><details><summary>Hint</summary>Triangles with the same apex share the height.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Ratio of bases</summary><p>Triangles ABD and ABC have the same height from A, so [ABD]/[ABC] = BD/BC = 2/5, giving 20.</p></details>
+<details><summary>Method: Barycentric</summary><p>D = (0 : 3 : 2)/5. The weight of C is [ABD]/[ABC] = 2/5, so [ABD] = 20.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem p3.</b> Triangle ABC has BC = 14, CA = 15, AB = 13. The incentre I has barycentric coordinates (a : b : c). Find [IBC]/[ABC] as a fraction.</p><details><summary>Hint</summary>Normalise (14, 15, 13).</details><details><summary>Answer</summary>1/3</details>
+<details><summary>Method: Normalise</summary><p>14 + 15 + 13 = 42, so the ratio is 14/42 = 1/3.</p></details>
+<details><summary>Method: Inradius</summary><p>[IBC] = (1/2)·14·r and [ABC] = (1/2)·42·r, so the ratio is 14/42 = 1/3.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem p4.</b> A = (0,0), B = (10,0), C = (0,10) and P = (2 : 3 : 5) in barycentric coordinates. Find x + y for P = (x, y).</p><details><summary>Hint</summary>P = (2A + 3B + 5C)/10.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Weighted average</summary><p>x = (3·10)/10 = 3 and y = (5·10)/10 = 5, so x + y = 8.</p></details>
+<details><summary>Method: Areas</summary><p>P is 3/10 of the way along x and 5/10 along y by the weights of B and C, again 3 + 5 = 8.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem p5.</b> P has barycentric coordinates (1 : 1 : 2). The line AP meets BC at D. Find BD/DC.</p><details><summary>Hint</summary>Drop A's weight: D = (0 : y : z).</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Drop A</summary><p>D = (0 : 1 : 2), the weights of B and C. BD:DC is the inverse of the weight ratio y:z, so BD:DC = 2:1, giving 2.</p></details>
+<details><summary>Method: Balance</summary><p>With masses B = 1 and C = 2, the balance point D is closer to C, so BD = 2 · DC and BD/DC = 2.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem p6.</b> G is the centroid of triangle ABC and D is the midpoint of BC. Find AG/GD.</p><details><summary>Hint</summary>G = (1:1:1) and D = (0:1:1).</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Masses</summary><p>A has weight 2 when B and C (weight 1 each) are combined at D, so AG:GD = 2:1 and AG/GD = 2.</p></details>
+<details><summary>Method: Coordinates</summary><p>With A = (0,0), B = (6,0), C = (0,6): G = (2,2) and D = (3,3). AG = 2√2, GD = √2, ratio 2.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem p7.</b> A right triangle has vertices (0,0), (6,0), (0,8). Find its circumradius.</p><details><summary>Hint</summary>The circumcentre of a right triangle is the midpoint of the hypotenuse.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Hypotenuse</summary><p>The hypotenuse is 10, so R = 5.</p></details>
+<details><summary>Method: Midpoint</summary><p>The midpoint (3,4) is 5 from each vertex: distance from (0,0) is 5.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem p8.</b> Find the area of the triangle with vertices (1,2), (7,5), (4,11).</p><details><summary>Hint</summary>Half the absolute cross product.</details><details><summary>Answer</summary>45/2</details>
+<details><summary>Method: Cross product</summary><p>Vectors (6,3) and (3,9): |6·9 − 3·3|/2 = 45/2.</p></details>
+<details><summary>Method: Shoelace</summary><p>(1·5 + 7·11 + 4·2) − (2·7 + 5·4 + 11·1) = 90 − 45 = 45, half is 45/2.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem p9.</b> The centroid of the triangle with vertices (0,0), (9,3), (3,12) is (x, y). Find x + y.</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Average</summary><p>x = 12/3 = 4 and y = 15/3 = 5, so x + y = 9.</p></details>
+<details><summary>Method: Barycentric</summary><p>The centroid has weights (1/3, 1/3, 1/3), giving the same averages.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem p10.</b> P has barycentric coordinates (1 : 2 : 3) in triangle ABC of area 60. Find the area of triangle PCA.</p><details><summary>Hint</summary>The B-coordinate is the area share of PCA.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: Weights</summary><p>The coordinates sum to 6, and the share of PCA is 2/6, so 60 · 1/3 = 20.</p></details>
+<details><summary>Method: Check</summary><p>PBC, PCA, PAB have areas 10, 20, 30, which sum to 60.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem p11.</b> The centroid G of triangle ABC (area 24) has coordinates (1 : 1 : 1). Find the area of triangle GBC.</p><details><summary>Hint</summary>Each share is 1/3.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Weights</summary><p>24 · 1/3 = 8.</p></details>
+<details><summary>Method: Medians</summary><p>The medians cut the triangle into 6 equal areas, and GBC has 2 of them.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem p12.</b> D lies on BC with BD : DC = 2 : 3. In normalised barycentric coordinates, what is the C-coordinate of D?</p><details><summary>Hint</summary>D = (0 : 3 : 2), since the weight near B is the length DC.</details><details><summary>Answer</summary>2/5</details>
+<details><summary>Method: Weights</summary><p>D = (0 : 3 : 2), normalised to (0, 3/5, 2/5).</p></details>
+<details><summary>Method: Position</summary><p>D is closer to B, so its B-weight is the larger one: 3/5, leaving 2/5 for C.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem p13.</b> In triangle ABC with BC = 13, CA = 14 and AB = 15, the incentre is (a : b : c). What is its normalised A-coordinate?</p><details><summary>Hint</summary>Divide a by a + b + c.</details><details><summary>Answer</summary>13/42</details>
+<details><summary>Method: Formula</summary><p>13/(13 + 14 + 15) = 13/42.</p></details>
+<details><summary>Method: Meaning</summary><p>The coordinate equals the area share of IBC: (a · r/2)/K, i.e. a/(a + b + c).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem p14.</b> A = (0, 0), B = (6, 0), C = (0, 9). The point P has barycentric coordinates (1 : 2 : 3). Find x + y for P in Cartesian coordinates.</p><details><summary>Hint</summary>P = (A + 2B + 3C)/6.</details><details><summary>Answer</summary>13/2</details>
+<details><summary>Method: Weighted average</summary><p>x = (0 + 12 + 0)/6 = 2 and y = (0 + 0 + 27)/6 = 9/2, so x + y = 13/2.</p></details>
+<details><summary>Method: Check</summary><p>The point is inside the triangle: 2/6 + (9/2)/9 = 1/3 + 1/2 < 1.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem p15.</b> The midpoints of the sides of a triangle of area 100 form a smaller triangle. Find its area.</p><details><summary>Hint</summary>Barycentric midpoints.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Ratio</summary><p>The medial triangle is a quarter of the area: 25.</p></details>
+<details><summary>Method: Determinant</summary><p>The midpoints (0, 1, 1)/2, (1, 0, 1)/2, (1, 1, 0)/2 have determinant 1/4.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem p16.</b> P = (2 : 3 : 5) in barycentric coordinates. What is the largest normalised coordinate?</p><details><summary>Hint</summary>Divide by the sum 10.</details><details><summary>Answer</summary>1/2</details>
+<details><summary>Method: Normalise</summary><p>The coordinates are 1/5, 3/10, 1/2, so the largest is 1/2.</p></details>
+<details><summary>Method: Meaning</summary><p>P is closest to vertex C.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem p17.</b> M is the midpoint of BC, and P is the midpoint of AM. If ABC has area 60, find the area of PBC.</p><details><summary>Hint</summary>P = (2 : 1 : 1)/4.</details><details><summary>Answer</summary>30</details>
+<details><summary>Method: Coordinates</summary><p>The A-coordinate of P is 2/4 = 1/2, so PBC has half the area: 30.</p></details>
+<details><summary>Method: Heights</summary><p>P is halfway up from BC to A, so PBC has half the height of ABC.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem x18.</b> Find the area of the triangle with vertices (0, 0), (6, 2) and (2, 7).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: Shoelace</summary><p>|0(2 − 7) + 6(7 − 0) + 2(0 − 2)|/2 = 19.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (6, 2) and (2, 7); half the absolute value of 6 · 7 − 2 · 2 is 19.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem x19.</b> Find the sum of the coordinates of the midpoint of (4, 12) and (-6, 2).</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Average</summary><p>The midpoint is (-1, 7), with sum 6.</p></details>
+<details><summary>Method: Vector</summary><p>Start at (4, 12) and move half the way to (-6, 2): (4 + -5, 12 + -5) = (-1, 7).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem x20.</b> Two similar triangles have corresponding sides in the ratio 4 : 7. The smaller has area 48. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square of the ratio.</details><details><summary>Answer</summary>147</details>
+<details><summary>Method: Area ratio</summary><p>The areas are in the ratio 16 : 49, so the larger area is 48 · 49/16 = 147.</p></details>
+<details><summary>Method: Scale factor</summary><p>The linear factor is 7/4, so the area factor is 49/16; 48 · 49/16 = 147.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem x21.</b> Find the area of the triangle with sides 13, 14 and 15.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>84</details>
+<details><summary>Method: Heron</summary><p>s = 21, so K = √(21 · 8 · 7 · 6) = 84.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 15 is 2K/15 = 56/5, so the area is ½ · 15 · 56/5 = 84.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem x22.</b> Find the area of the triangle with vertices (1, 1), (9, 3) and (4, 8).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Shoelace</summary><p>|1(3 − 8) + 9(8 − 1) + 4(1 − 3)|/2 = 25.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (8, 2) and (3, 7); half the absolute value of 8 · 7 − 2 · 3 is 25.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem x23.</b> Find the sum of the coordinates of the midpoint of (2, 5) and (8, 11).</p><details><summary>Hint</summary>Average the coordinates.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Average</summary><p>The midpoint is (5, 8), with sum 13.</p></details>
+<details><summary>Method: Vector</summary><p>Start at (2, 5) and move half the way to (8, 11): (2 + 3, 5 + 3) = (5, 8).</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem x24.</b> Two similar triangles have corresponding sides in the ratio 2 : 5. The smaller has area 12. Find the larger area.</p><details><summary>Hint</summary>Areas scale as the square of the ratio.</details><details><summary>Answer</summary>75</details>
+<details><summary>Method: Area ratio</summary><p>The areas are in the ratio 4 : 25, so the larger area is 12 · 25/4 = 75.</p></details>
+<details><summary>Method: Scale factor</summary><p>The linear factor is 5/2, so the area factor is 25/4; 12 · 25/4 = 75.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>
+<div class=p><p><b>Problem x25.</b> Find the area of the triangle with sides 13, 20 and 21.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>126</details>
+<details><summary>Method: Heron</summary><p>s = 27, so K = √(27 · 14 · 7 · 6) = 126.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 21 is 2K/21 = 12, so the area is ½ · 21 · 12 = 126.</p></details>
+<p class=ref>Source: Chen, Euclidean Geometry in Mathematical Olympiads, ch. 7</p></div>

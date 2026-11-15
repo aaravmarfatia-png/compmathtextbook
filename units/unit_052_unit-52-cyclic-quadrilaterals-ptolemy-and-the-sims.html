@@ -1,0 +1,110 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 52</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 52: Unit 52: Cyclic quadrilaterals, Ptolemy and the Simson line</h1><p class=ref>Book: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2 (25 problems)<br>Coxeter &amp; Greitzer, Geometry Revisited, chapter 2 (Some Properties of Circles).</p>
+<h2>Reading</h2>
+<h3>1. Cyclic quadrilaterals and Ptolemy's theorem</h3><p>A quadrilateral is cyclic if its vertices lie on a circle; then its opposite angles sum to 180°. <b>Ptolemy's theorem:</b> in a cyclic quadrilateral ABCD, AC · BD = AB · CD + BC · DA — the product of the diagonals equals the sum of the products of opposite sides. For a square of side 1: √2 · √2 = 1 · 1 + 1 · 1. For a 3 × 4 rectangle: 5 · 5 = 3 · 3 + 4 · 4.</p><p><b>The regular pentagon.</b> Let the side be s and the diagonal d. The quadrilateral formed by four consecutive vertices is an isosceles trapezoid with bases s and d and legs s; Ptolemy gives d² = s² + sd, so with φ = d/s, φ² = φ + 1 and φ = (1 + √5)/2.</p><p><b>Equilateral triangle.</b> If P lies on the arc BC of the circumcircle of equilateral triangle ABC, then PA = PB + PC. Ptolemy applied to ABPC gives PA · BC = PB · AC + PC · AB, and all three sides are equal. A numerical test with a point at 200° confirms the sum relation: of the three distances the largest equals the sum of the other two.</p><details class="try"><summary>Try it</summary><p>A cyclic quadrilateral has consecutive sides 2, 3, 2, 3 (so it is a rectangle). Find its diagonal.</p><p><b>Answer.</b> Ptolemy: d · d = 2 · 2 + 3 · 3 = 13, so d = √13.</p></details>
+<h3>2. The Simson line</h3><p>Take a point P on the circumcircle of triangle ABC and drop perpendiculars from P to the three side lines. The three feet are <b>collinear</b>; the line through them is the <b>Simson line</b> of P. A numerical experiment with an equilateral triangle and P at 200° confirmed that the area of the triangle formed by the three feet is zero. If P is not on the circumcircle the feet form a triangle (the pedal triangle).</p><p><b>Why it works.</b> Let D, E, F be the feet on BC, CA, AB. The quadrilaterals PFBD and PDCE have right angles at F, D and D, E, so they are cyclic, and angle chasing with the cyclic quadrilateral PABC shows that angles PDF and PDE together make a straight angle, so F, D, E are collinear. The full proof is repeated in Unit 105.</p><details class="try"><summary>Try it</summary><p>What is the Simson line of a vertex of the triangle?</p><p><b>Answer.</b> The feet of the perpendiculars from a vertex are the vertex itself and the feet of the two altitudes; the Simson line is the altitude through that vertex.</p></details>
+<h3>3. Proving four points concyclic</h3><p>Standard criteria: opposite angles sum to 180°; an exterior angle equals the opposite interior angle; two equal angles subtend the same segment on the same side; the power-of-a-point converse PA · PB = PC · PD; Ptolemy's equality (AC · BD = AB · CD + BC · DA implies cyclic).</p><p><b>Example.</b> In acute triangle ABC the feet of the altitudes from B and C, say E and F, lie on the circle with diameter BC (right angles BEC and BFC), so B, C, E, F are concyclic. This is the starting point for the orthic triangle (Unit 93).</p><details class="try"><summary>Try it</summary><p>Why are the feet of the altitudes from B and C on the circle with diameter BC?</p><p><b>Answer.</b> Because ∠BEC = ∠BFC = 90°, and an angle subtending a diameter is a right angle (Thales).</p></details>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Applying Ptolemy to a quadrilateral that is not cyclic (it then gives only an inequality: AC · BD ≤ AB · CD + BC · DA). (2) Matching the wrong sides as 'opposite'. (3) Misreading which angles are on the same side of a chord.</p><p><b>Checks.</b> Verify with a rectangle or square.</p><p><b>How to practise.</b> Mark equal angles in two colours. In Unlimited practice, rotate the cyclic quadrilateral families.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Brahmagupta's formula.</b> A cyclic quadrilateral with sides a, b, c, d and semiperimeter s has area √((s − a)(s − b)(s − c)(s − d)). For sides 1, 2, 3, 4 we have s = 5 and the area is √(4 · 3 · 2 · 1) = √24 = 2√6. <b>Ptolemy.</b> In a regular pentagon with side s and diagonal d, the cyclic quadrilateral formed by four vertices has diagonals d, d and sides s, s, s, d, so d · d = s · s + s · d, that is d² = s² + sd, giving d/s = (1 + √5)/2.</p><details class="try"><summary>Try it<p>A cyclic quadrilateral has sides 5, 5, 5, 5. Find its area.</p><p><b>Answer.</b> It is a square of side 5, area 25; the formula gives √(5 · 5 · 5 · 5) = 25.</p></details><details class="try"><summary>Try it<p>In a cyclic quadrilateral ABCD, AB = 3, BC = 4, CD = 5, DA = 6. Find AC · BD.</p><p><b>Answer.</b> Both diagonals: AC · BD = AB · CD + BC · DA = 15 + 24 = 39.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Points A, B, C, D lie on a circle with AB = 6, BC = 8 and the diagonal AC a diameter of length 10. Find the area of triangle ABC and the radius. <b>Solution.</b> Since AC is a diameter, angle B is 90° and 6² + 8² = 10² confirms it. The area is ½ · 6 · 8 = 24 and the radius is 5.</p><p><b>Reflection.</b> A diameter forces a right angle: the converse of Thales is a useful cyclic-quadrilateral test.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> A quadrilateral with sides AB = 2, BC = 3, CD = 4, DA = 5 is inscribed in a circle. What is the product of its diagonals AC·BD?</p><details><summary>Hint</summary>Ptolemy.</details><details><summary>Answer</summary>23</details>
+<details><summary>Method: Ptolemy</summary><p>AC·BD = AB·CD + BC·AD = 2·4 + 3·5 = 23.</p></details>
+<details><summary>Method: Check on a rectangle</summary><p>For a rectangle with sides 3 and 4 the same rule gives 3·3 + 4·4 = 25 = 5·5, the product of the two diagonals.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem p2.</b> ABC is equilateral and P lies on the arc BC of its circumcircle (not containing A) with PB = 2 and PC = 4. Find PA.</p><details><summary>Hint</summary>Ptolemy on ABPC.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Ptolemy</summary><p>With side s, PA·s = PB·s + PC·s, so PA = PB + PC = 6.</p></details>
+<details><summary>Method: Coordinates</summary><p>Take the circle of radius 1, A at angle 90°, B at 210°, C at 330°; for any P on the arc BC numerically PA = PB + PC.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem p3.</b> A regular pentagon has side 1 and diagonal d. Use Ptolemy to find d, to three decimals.</p><details><summary>Hint</summary>d² = d + 1.</details><details><summary>Answer</summary>1.618</details>
+<details><summary>Method: Ptolemy</summary><p>Take four consecutive vertices A, B, C, D. The sides AB = BC = CD = 1 and DA is a diagonal d, and both diagonals AC and BD equal d. Ptolemy: AC·BD = AB·CD + BC·DA, so d² = 1 + d. Then d = (1 + √5)/2 ≈ 1.618.</p></details>
+<details><summary>Method: Numbers</summary><p>(1 + 2.236)/2 = 1.618.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem p4.</b> Triangle ABC has A = (0,0), B = (4,0), C = (0,3), and P = (4,3) lies on its circumcircle. The feet of the perpendiculars from P to AB and AC are at (4,0) and (0,3). How far apart are these two feet?</p><details><summary>Hint</summary>Distance formula.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Distance</summary><p>√(16 + 9) = 5.</p></details>
+<details><summary>Method: Simson line</summary><p>The foot on BC is also on the segment between them, since the three feet are collinear (here along BC itself).</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem p5.</b> A cyclic quadrilateral has sides 3, 3, 4, 4 in order. Find its area.</p><details><summary>Hint</summary>Brahmagupta's formula.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Brahmagupta</summary><p>s = 7: √(4·4·3·3) = 12.</p></details>
+<details><summary>Method: Two right triangles</summary><p>It is two 3-4-5 right triangles sharing the hypotenuse, with area 6 + 6 = 12.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem p6.</b> AB is a diameter of length 10 and C is on the circle with AC = 6. Find BC.</p><details><summary>Hint</summary>Angle C is 90°.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Thales</summary><p>Angle ACB = 90°, so BC = √(100 − 36) = 8.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put A = (−5, 0), B = (5, 0); C = (−5 + 36/10, 4.8) = (−1.4, 4.8) and BC = √(6.4² + 4.8²) = 8.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem p7.</b> Three circles of radius 1 are mutually tangent. A fourth circle is tangent to all three and lies in the gap between them. Find the radius to three decimals.</p><details><summary>Hint</summary>Descartes' circle theorem: k₄ = k₁ + k₂ + k₃ + 2√(k₁k₂ + k₁k₃ + k₂k₃).</details><details><summary>Answer</summary>0.155</details>
+<details><summary>Method: Descartes</summary><p>With curvatures 1, 1, 1: k₄ = 3 + 2√3 ≈ 6.464, so the radius is 1/6.464 ≈ 0.155.</p></details>
+<details><summary>Method: Geometry</summary><p>The centres of the unit circles form an equilateral triangle of side 2 whose centroid is 2/√3 from each vertex. The inner circle has radius 2/√3 − 1 ≈ 0.155.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem p8.</b> Two chords AB and CD of a circle meet at P inside it with AP = 4, PB = 9 and CP = 6. Find PD.</p><details><summary>Hint</summary>AP·PB = CP·PD.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Intersecting chords</summary><p>4·9 = 6·PD gives PD = 6.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles APC and DPB are similar, so AP/DP = CP/BP: 4/PD = 6/9 and PD = 6.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x9.</b> P is on the arc BC (not containing A) of the circumcircle of an equilateral triangle ABC. If PB = 2 and PC = 3, find PA.</p><details><summary>Hint</summary>Ptolemy.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Ptolemy</summary><p>PA · BC = PB · AC + PC · AB, and all sides are equal, so PA = PB + PC = 5.</p></details>
+<details><summary>Method: Check</summary><p>For P at the midpoint of the arc, PB = PC and PA is twice that, equal to the diameter-based length.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x10.</b> In a cyclic quadrilateral ABCD, angle A is 95°. Find angle C in degrees.</p><details><summary>Hint</summary>Opposite angles sum to 180°.</details><details><summary>Answer</summary>85</details>
+<details><summary>Method: Theorem</summary><p>180 − 95 = 85.</p></details>
+<details><summary>Method: Arcs</summary><p>The two angles intercept arcs making the full circle.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x11.</b> In a cyclic quadrilateral ABCD, angle B is 110°. Find angle D in degrees.</p><details><summary>Hint</summary>Opposite angles.</details><details><summary>Answer</summary>70</details>
+<details><summary>Method: Theorem</summary><p>180 − 110 = 70.</p></details>
+<details><summary>Method: Check</summary><p>The four angles sum to 360: A + C = 180 and B + D = 180.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x12.</b> In a cyclic quadrilateral the interior angle at A is 80°. Find the exterior angle at C in degrees.</p><details><summary>Hint</summary>Exterior angle equals the opposite interior angle.</details><details><summary>Answer</summary>80</details>
+<details><summary>Method: Theorem</summary><p>The interior angle at C is 100, so its exterior angle is 80.</p></details>
+<details><summary>Method: Rule</summary><p>An exterior angle of a cyclic quadrilateral equals the interior opposite angle.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x13.</b> A square has side 4 and is inscribed in a circle. By Ptolemy, find the product of its two diagonals.</p><details><summary>Hint</summary>AC · BD = AB · CD + BC · DA.</details><details><summary>Answer</summary>32</details>
+<details><summary>Method: Ptolemy</summary><p>16 + 16 = 32.</p></details>
+<details><summary>Method: Direct</summary><p>Each diagonal is 4√2, and (4√2)² = 32.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x14.</b> A triangle of area 48 is inscribed in a circle with centre O inside the triangle. Find the area of the pedal triangle of O.</p><details><summary>Hint</summary>The feet are the midpoints.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Medial</summary><p>The pedal triangle of the circumcentre is the medial triangle, of area 48/4 = 12.</p></details>
+<details><summary>Method: Simson</summary><p>For a point on the circle the area would be 0, but O is inside.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x15.</b> A cyclic quadrilateral has sides 6, 8, 6, 8. Find its area.</p><details><summary>Hint</summary>Brahmagupta or rectangle.</details><details><summary>Answer</summary>48</details>
+<details><summary>Method: Rectangle</summary><p>It is a rectangle, so the area is 6 · 8 = 48.</p></details>
+<details><summary>Method: Brahmagupta</summary><p>s = 14 and √((14 − 6)(14 − 8)(14 − 6)(14 − 8)) = √2304 = 48.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x16.</b> In a circle chords AC and BD meet inside, and arcs AB and CD measure 70° and 110°. Find the angle between the chords in degrees.</p><details><summary>Hint</summary>Half the sum of the intercepted arcs.</details><details><summary>Answer</summary>90</details>
+<details><summary>Method: Theorem</summary><p>(70 + 110)/2 = 90.</p></details>
+<details><summary>Method: Check</summary><p>The chords are perpendicular.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x17.</b> Find the sum of the interior angles of a convex 11-gon, in degrees.</p><details><summary>Hint</summary>(n − 2) · 180.</details><details><summary>Answer</summary>1620</details>
+<details><summary>Method: Formula</summary><p>(11 − 2) · 180 = 1620.</p></details>
+<details><summary>Method: Triangles</summary><p>Drawing diagonals from one vertex splits the polygon into 9 triangles of 180° each: 1620.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x18.</b> Chords AB and CD of a circle meet at P inside it with AP = 12, PB = 5 and CP = 6. Find PD.</p><details><summary>Hint</summary>Intersecting chords theorem.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Theorem</summary><p>AP · PB = CP · PD, so 12 · 5 = 6 · PD and PD = 10.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles APC and DPB are similar, so AP/DP = CP/BP, giving the same equation 12 · 5 = 6 · PD.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x19.</b> Find the circumradius of the triangle with sides 7, 15 and 20.</p><details><summary>Hint</summary>R = abc/(4K).</details><details><summary>Answer</summary>25/2</details>
+<details><summary>Method: Formula</summary><p>K = 42, so R = 2100/(4 · 42) = 25/2.</p></details>
+<details><summary>Method: Law of sines</summary><p>The altitude to side 20 is 21/5, so sin of the adjacent angle is 7/25; then 2R = 7/7/25 gives R = 25/2.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x20.</b> Find the area of the triangle with sides 9, 10 and 17.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: Heron</summary><p>s = 18, so K = √(18 · 9 · 8 · 1) = 36.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 17 is 2K/17 = 72/17, so the area is ½ · 17 · 72/17 = 36.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x21.</b> A triangle has sides 3 and 8 with an included angle of 120°. Find the square of the third side.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>97</details>
+<details><summary>Method: Law of cosines</summary><p>c² = 9 + 64 − 2 · 3 · 8 · (−1/2) = 97.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put the vertex at the origin, one side along the x-axis to (8, 0) and the other to 3(−1/2, √3/2). The squared distance is 97.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x22.</b> Find the sum of the interior angles of a convex 13-gon, in degrees.</p><details><summary>Hint</summary>(n − 2) · 180.</details><details><summary>Answer</summary>1980</details>
+<details><summary>Method: Formula</summary><p>(13 − 2) · 180 = 1980.</p></details>
+<details><summary>Method: Triangles</summary><p>Drawing diagonals from one vertex splits the polygon into 11 triangles of 180° each: 1980.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x23.</b> Chords AB and CD of a circle meet at P inside it with AP = 9, PB = 14 and CP = 18. Find PD.</p><details><summary>Hint</summary>Intersecting chords theorem.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Theorem</summary><p>AP · PB = CP · PD, so 9 · 14 = 18 · PD and PD = 7.</p></details>
+<details><summary>Method: Similar triangles</summary><p>Triangles APC and DPB are similar, so AP/DP = CP/BP, giving the same equation 9 · 14 = 18 · PD.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x24.</b> Find the circumradius of the triangle with sides 9, 10 and 17.</p><details><summary>Hint</summary>R = abc/(4K).</details><details><summary>Answer</summary>85/8</details>
+<details><summary>Method: Formula</summary><p>K = 36, so R = 1530/(4 · 36) = 85/8.</p></details>
+<details><summary>Method: Law of sines</summary><p>The altitude to side 17 is 72/17, so sin of the adjacent angle is 36/85; then 2R = 9/36/85 gives R = 85/8.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>
+<div class=p><p><b>Problem x25.</b> Find the area of the triangle with sides 10, 13 and 13.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Heron</summary><p>s = 18, so K = √(18 · 8 · 5 · 5) = 60.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 13 is 2K/13 = 120/13, so the area is ½ · 13 · 120/13 = 60.</p></details>
+<p class=ref>Source: Coxeter &amp; Greitzer, Geometry Revisited, ch. 2</p></div>

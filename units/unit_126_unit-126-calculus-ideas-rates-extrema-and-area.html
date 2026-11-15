@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 126</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 126: Unit 126: Calculus ideas: rates, extrema and area</h1><p class=ref>Book: Zeitz ch. 9 (25 problems)<br>Zeitz, The Art and Craft of Problem Solving, chapter 9 (Calculus), with the power rule, extrema and area under a polynomial.</p>
+<h2>Reading</h2>
+<h3>1. Rates of change</h3><p>If a quantity y depends on time t, dy/dt is its rate of change. In <b>related-rates</b> problems several quantities are linked by an equation; differentiate that equation with respect to t.</p><p><b>Worked example.</b> A 13-foot ladder leans against a wall; the foot is 5 ft from the wall and slides away at 2 ft/s. With x the foot's distance and y the height, x² + y² = 169 so x dx/dt + y dy/dt = 0. At x = 5, y = 12: 5 × 2 + 12 dy/dt = 0, so dy/dt = −5/6 ft/s: the top is dropping slowly.</p><p><b>Average and instantaneous.</b> Average rate = (f(b) − f(a))/(b − a); instantaneous = f′(t).</p>
+<h3>2. Extrema</h3><p>To maximise or minimise a quantity, express it as a function of one variable, set the derivative to 0, and check endpoints.</p><p><b>Worked example (open box).</b> Cut squares of side x from the corners of a 12 × 12 sheet and fold up the sides: V(x) = x(12 − 2x)². Then V′ = (12 − 2x)² − 4x(12 − 2x) = (12 − 2x)(12 − 6x), zero at x = 2 (x = 6 gives volume 0). V(2) = 2 × 8² = 128, the maximum.</p><p><b>Check.</b> V(1) = 100 and V(3) = 108 are both smaller than 128 ✓.</p><p><b>Fences and cans.</b> A can with volume fixed has least surface area when its height equals its diameter.</p>
+<h3>3. Area and accumulation</h3><p>The total change of a quantity equals the integral of its rate. Distance = ∫ speed dt; area under y = f(x) is ∫ f dx.</p><p><b>Worked example.</b> The area under y = x² from 0 to 3 is [x³/3]₀³ = 9. <b>Example.</b> A car's speed (in m/s) is v(t) = 2t for 0 ≤ t ≤ 5; the distance is ∫₀⁵ 2t dt = 25 m.</p><p><b>Average value.</b> The average of f on [a, b] is (1/(b − a))∫ f. For x² on [0, 3] the average is 9/3 = 3.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Substituting numbers before differentiating (in related rates). Forgetting units. Forgetting to check that the critical point is a maximum, not a minimum.</p><p><b>Checks.</b> Compare neighbouring values.</p><p><b>Practice.</b> Write the relation between variables, differentiate, and only then substitute.</p>
+<h3>Worked examples with Try-its: Rates</h3><p>A derivative is an instantaneous rate of change. If position is s = t² + t, the velocity is 2t + 1, which equals 7 at t = 3. <b>Related rates.</b> If a circle's radius grows at 2 cm/s, its area A = πr² grows at dA/dt = 2πr · dr/dt = 20π cm²/s when r = 5.</p><details class="try"><summary>Try it<p>A square's side grows at 3 cm/s. How fast is its area growing when the side is 10?</p><p><b>Answer.</b> 2 · 10 · 3 = 60 cm²/s.</p></details>
+<h3>Worked examples with Try-its: Extrema and area</h3><p>For a rectangle of perimeter 40 the area x(20 − x) is maximised at x = 10 (derivative 20 − 2x). The area under a curve is an integral: ∫₀^π sin x dx = 2. The mean value of f on [a, b] is the integral divided by (b − a).</p><details class="try"><summary>Try it<p>Find the area under y = x² from 0 to 3.</p><p><b>Answer.</b> 9.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> A ball is thrown so that its height is h(t) = 20t − 5t². Find the maximum height and when the ball lands. <b>Solution.</b> h′ = 20 − 10t = 0 at t = 2, h(2) = 20. It lands when 20t − 5t² = 0, that is t = 4.</p><p><b>Reflection.</b> The vertex of the parabola is the time-halfway point of the flight.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Rates.</b> If the height of a balloon is h = t³ metres, its speed at t = 2 is 3t² = 12 m/s. <b>Area.</b> ∫₁² 3x² dx = 2³ − 1³ = 7. <b>Extrema.</b> The rectangle of fixed perimeter 40 with greatest area is the 10 × 10 square.</p><details class="try"><summary>Try it<p>Find the average value of x² on [0, 3].</p><p><b>Answer.</b> (1/3) · 9 = 3.</p></details><details class="try"><summary>Try it<p>Water leaves a tank at a rate of 5 litres per minute for 8 minutes. How much leaves?</p><p><b>Answer.</b> 40 litres.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> A ladder 10 m long leans against a wall and its foot slides away at 1 m/s. How fast is the top sliding down when the foot is 6 m from the wall? <b>Solution.</b> x² + y² = 100, so x x′ + y y′ = 0. With x = 6, y = 8 and x′ = 1: 6 + 8y′ = 0 and y′ = −3/4 m/s.</p><p><b>Check.</b> The top moves down at 0.75 m/s.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Let f(x) = 2x^3 − 3x + 1. Find f′(2).</p><details><summary>Hint</summary>Power rule: the derivative of xⁿ is n xⁿ⁻¹.</details><details><summary>Answer</summary>21</details>
+<details><summary>Method: Power rule</summary><p>f′(x) = 6x^2 − 3, and at x = 2 this is 21.</p></details>
+<details><summary>Method: Difference quotient</summary><p>(f(2 + h) − f(2))/h for h = 0.001 is 21.012, which is close to the exact value 21.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p2.</b> Let f(x) = x^4 + 4x^2 + 5. Find f′(1).</p><details><summary>Hint</summary>Power rule: the derivative of xⁿ is n xⁿ⁻¹.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Power rule</summary><p>f′(x) = 4x^3 + 8x, and at x = 1 this is 12.</p></details>
+<details><summary>Method: Difference quotient</summary><p>(f(1 + h) − f(1))/h for h = 0.001 is 12.010, which is close to the exact value 12.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p3.</b> Let f(x) = 3x^5 − x^2 + 2x. Find f′(1).</p><details><summary>Hint</summary>Power rule: the derivative of xⁿ is n xⁿ⁻¹.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Power rule</summary><p>f′(x) = 15x^4 − 2x + 2, and at x = 1 this is 15.</p></details>
+<details><summary>Method: Difference quotient</summary><p>(f(1 + h) − f(1))/h for h = 0.001 is 15.029, which is close to the exact value 15.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p4.</b> Find the minimum value of x^2 − 6x + 5.</p><details><summary>Hint</summary>Set the derivative to zero.</details><details><summary>Answer</summary>-4</details>
+<details><summary>Method: Derivative</summary><p>f′(x) = 2x − 6 = 0 gives x = 3, and f = -4 there. Since the parabola opens upward this is the minimum.</p></details>
+<details><summary>Method: Completing the square</summary><p>x^2 − 6x + 5 = (x − 3)² − 4, so the minimum is -4.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p5.</b> Find the minimum value of 2x^2 − 8x + 3.</p><details><summary>Hint</summary>Set the derivative to zero.</details><details><summary>Answer</summary>-5</details>
+<details><summary>Method: Derivative</summary><p>f′(x) = 4x − 8 = 0 gives x = 2, and f = -5 there. Since the parabola opens upward this is the minimum.</p></details>
+<details><summary>Method: Completing the square</summary><p>2x^2 − 8x + 3 = 2(x − 2)² − 5, so the minimum is -5.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p6.</b> Find the maximum value of f(x) = x^3 − 12x on the interval from -3 to 3.</p><details><summary>Hint</summary>Compare the endpoints with the critical points.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Critical points</summary><p>f′(x) = 3x^2 − 12 = 0 gives x = -2, 2. Comparing f at -3, 3, -2, 2 gives 9, -9, 16, -16, so the largest is 16.</p></details>
+<details><summary>Method: Table</summary><p>Evaluating f at every integer from -3 to 3 gives 9, 16, 11, 0, -11, -16, -9; the maximum is 16.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p7.</b> Find the maximum value of f(x) = x^3 − 3x on the interval from -2 to 2.</p><details><summary>Hint</summary>Compare the endpoints with the critical points.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Critical points</summary><p>f′(x) = 3x^2 − 3 = 0 gives x = -1, 1. Comparing f at -2, 2, -1, 1 gives -2, 2, 2, -2, so the largest is 2.</p></details>
+<details><summary>Method: Table</summary><p>Evaluating f at every integer from -2 to 2 gives -2, 2, 0, -2, 2; the maximum is 2.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p8.</b> Find the maximum value of f(x) = −3x^2 + 6x on the interval from 0 to 3.</p><details><summary>Hint</summary>Compare the endpoints with the critical points.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Critical points</summary><p>f′(x) = −6x + 6 = 0 gives x = 1. Comparing f at 0, 3, 1 gives 0, -9, 3, so the largest is 3.</p></details>
+<details><summary>Method: Table</summary><p>Evaluating f at every integer from 0 to 3 gives 0, 3, 0, -9; the maximum is 3.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p9.</b> Find the area under y = 3x^2 from x = 0 to x = 2.</p><details><summary>Hint</summary>Antiderivative: xⁿ becomes xⁿ⁺¹/(n + 1).</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Antiderivative</summary><p>An antiderivative is x^3. Its value at 2 minus its value at 0 is 8 − 0 = 8.</p></details>
+<details><summary>Method: Riemann sum check</summary><p>With 1000 thin rectangles the left-sum is about 7.988, matching 8.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p10.</b> Find the area under y = 3x^2 + 2x + 1 from x = 0 to x = 3.</p><details><summary>Hint</summary>Antiderivative: xⁿ becomes xⁿ⁺¹/(n + 1).</details><details><summary>Answer</summary>39</details>
+<details><summary>Method: Antiderivative</summary><p>An antiderivative is x^3 + x^2 + x. Its value at 3 minus its value at 0 is 39 − 0 = 39.</p></details>
+<details><summary>Method: Riemann sum check</summary><p>With 1000 thin rectangles the left-sum is about 38.951, matching 39.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p11.</b> Find the area under y = 4x^3 from x = 1 to x = 3.</p><details><summary>Hint</summary>Antiderivative: xⁿ becomes xⁿ⁺¹/(n + 1).</details><details><summary>Answer</summary>80</details>
+<details><summary>Method: Antiderivative</summary><p>An antiderivative is x^4. Its value at 3 minus its value at 1 is 81 − 1 = 80.</p></details>
+<details><summary>Method: Riemann sum check</summary><p>With 1000 thin rectangles the left-sum is about 79.896, matching 80.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p12.</b> Find the area under y = 5x^4 + x from x = 0 to x = 1.</p><details><summary>Hint</summary>Antiderivative: xⁿ becomes xⁿ⁺¹/(n + 1).</details><details><summary>Answer</summary>3/2</details>
+<details><summary>Method: Antiderivative</summary><p>An antiderivative is x^5 + 1/2x^2. Its value at 1 minus its value at 0 is 3/2 − 0 = 3/2.</p></details>
+<details><summary>Method: Riemann sum check</summary><p>With 1000 thin rectangles the left-sum is about 1.497, matching 3/2.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p13.</b> Find the area under y = 6x^2 + 2 from x = 1 to x = 2.</p><details><summary>Hint</summary>Antiderivative: xⁿ becomes xⁿ⁺¹/(n + 1).</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Antiderivative</summary><p>An antiderivative is 2x^3 + 2x. Its value at 2 minus its value at 1 is 20 − 4 = 16.</p></details>
+<details><summary>Method: Riemann sum check</summary><p>With 1000 thin rectangles the left-sum is about 15.991, matching 16.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p14.</b> A rectangle has perimeter 40. What is its largest possible area?</p><details><summary>Hint</summary>Write the area as one variable and differentiate.</details><details><summary>Answer</summary>100</details>
+<details><summary>Method: Derivative</summary><p>With width w the area is w(20 − w) = 20 w − w². The derivative 20 − 2w = 0 at w = 10, which is a square, with area 100.</p></details>
+<details><summary>Method: AM-GM</summary><p>w + h = 20, so wh ≤ ((w + h)/2)² = 10² = 100, with equality when w = h.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p15.</b> A rectangle has perimeter 60. What is its largest possible area?</p><details><summary>Hint</summary>Write the area as one variable and differentiate.</details><details><summary>Answer</summary>225</details>
+<details><summary>Method: Derivative</summary><p>With width w the area is w(30 − w) = 30 w − w². The derivative 30 − 2w = 0 at w = 15, which is a square, with area 225.</p></details>
+<details><summary>Method: AM-GM</summary><p>w + h = 30, so wh ≤ ((w + h)/2)² = 15² = 225, with equality when w = h.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p16.</b> Find the limit as x → 3 of (x² − 9)/(x − 3).</p><details><summary>Hint</summary>Factor the numerator.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Factor</summary><p>(x − 3)(x + 3)/(x − 3) = x + 3, which tends to 6.</p></details>
+<details><summary>Method: Derivative</summary><p>This is the derivative of x² at 3, which is 2 · 3 = 6.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p17.</b> Find the limit as x → 5 of (x² − 25)/(x − 5).</p><details><summary>Hint</summary>Factor the numerator.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Factor</summary><p>(x − 5)(x + 5)/(x − 5) = x + 5, which tends to 10.</p></details>
+<details><summary>Method: Derivative</summary><p>This is the derivative of x² at 5, which is 2 · 5 = 10.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p18.</b> Find the limit as x → 7 of (x² − 49)/(x − 7).</p><details><summary>Hint</summary>Factor the numerator.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Factor</summary><p>(x − 7)(x + 7)/(x − 7) = x + 7, which tends to 14.</p></details>
+<details><summary>Method: Derivative</summary><p>This is the derivative of x² at 7, which is 2 · 7 = 14.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p19.</b> Find the y-intercept of the tangent line to y = x^3 at x = 2.</p><details><summary>Hint</summary>Tangent line: y − f(a) = f′(a)(x − a).</details><details><summary>Answer</summary>-16</details>
+<details><summary>Method: Tangent</summary><p>f(2) = 8 and f′(2) = 12, so y = 8 + 12(x − 2); at x = 0 this gives -16.</p></details>
+<details><summary>Method: Linear fit</summary><p>The line passes through (2, 8) with slope 12, so b = y − m·x = 8 − 12 · 2 = -16.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p20.</b> Find the y-intercept of the tangent line to y = 2x^2 + 1 at x = 3.</p><details><summary>Hint</summary>Tangent line: y − f(a) = f′(a)(x − a).</details><details><summary>Answer</summary>-17</details>
+<details><summary>Method: Tangent</summary><p>f(3) = 19 and f′(3) = 12, so y = 19 + 12(x − 3); at x = 0 this gives -17.</p></details>
+<details><summary>Method: Linear fit</summary><p>The line passes through (3, 19) with slope 12, so b = y − m·x = 19 − 12 · 3 = -17.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p21.</b> Find the limit as x → 2 of (x³ − 8)/(x − 2).</p><details><summary>Hint</summary>Factor x³ − a³.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Factor</summary><p>x³ − 8 = (x − 2)(x² + 2x + 4), so the quotient tends to 4 + 4 + 4 = 12.</p></details>
+<details><summary>Method: Derivative</summary><p>This is the derivative of x³ at 2, namely 3 · 2² = 12.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p22.</b> Find the limit as x → 4 of (x³ − 64)/(x − 4).</p><details><summary>Hint</summary>Factor x³ − a³.</details><details><summary>Answer</summary>48</details>
+<details><summary>Method: Factor</summary><p>x³ − 64 = (x − 4)(x² + 4x + 16), so the quotient tends to 16 + 16 + 16 = 48.</p></details>
+<details><summary>Method: Derivative</summary><p>This is the derivative of x³ at 4, namely 3 · 4² = 48.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p23.</b> Find the limit as x → 6 of (x³ − 216)/(x − 6).</p><details><summary>Hint</summary>Factor x³ − a³.</details><details><summary>Answer</summary>108</details>
+<details><summary>Method: Factor</summary><p>x³ − 216 = (x − 6)(x² + 6x + 36), so the quotient tends to 36 + 36 + 36 = 108.</p></details>
+<details><summary>Method: Derivative</summary><p>This is the derivative of x³ at 6, namely 3 · 6² = 108.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p24.</b> Let f(x) = x^4. Find the slope of the tangent line at x = 2.</p><details><summary>Hint</summary>Differentiate term by term.</details><details><summary>Answer</summary>32</details>
+<details><summary>Method: Power rule</summary><p>f′(x) = 4x^3, so the slope is 32.</p></details>
+<details><summary>Method: Secant check</summary><p>The secant slope between x = 2 and x = 2.001 is about 32.024, close to 32.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>
+<div class=p><p><b>Problem p25.</b> Let f(x) = 2x^3 + x + 4. Find the slope of the tangent line at x = 1.</p><details><summary>Hint</summary>Differentiate term by term.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Power rule</summary><p>f′(x) = 6x^2 + 1, so the slope is 7.</p></details>
+<details><summary>Method: Secant check</summary><p>The secant slope between x = 1 and x = 1.001 is about 7.006, close to 7.</p></details>
+<p class=ref>Source: Zeitz ch. 9</p></div>

@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 92</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 92: Unit 92: Logic puzzles and proof strategies</h1><p class=ref>Book: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof) (25 problems)<br>Zeitz, The Art and Craft of Problem Solving, chapter 2: logic, contradiction and constructing examples.</p>
+<h2>Reading</h2>
+<h3>1. Direct proof, contrapositive and contradiction</h3><p>A <b>direct proof</b> starts from the hypotheses and reaches the conclusion. The <b>contrapositive</b> of 'if P then Q' is 'if not Q then not P', which is logically equivalent and sometimes easier. To prove 'if n² is even then n is even', prove its contrapositive: if n is odd, n = 2k + 1, then n² = 4k² + 4k + 1 is odd. A <b>proof by contradiction</b> assumes the opposite of what you want and derives an absurdity.</p><p><b>Worked example.</b> There are infinitely many primes. Suppose there are only p₁, …, pₙ. The number N = p₁p₂⋯pₙ + 1 leaves remainder 1 when divided by each pᵢ, so no pᵢ divides it; but N > 1 has a prime factor, which is not on the list. Contradiction.</p><p><b>Counterexamples.</b> To disprove 'for all', give one example. The statement 'n² + n + 41 is prime for every n' fails at n = 40 (the value is 41²).</p>
+<h3>2. Knights and knaves</h3><p>On an island, knights always tell the truth and knaves always lie. <b>Puzzle 1.</b> A says 'We are both knaves.' If A were a knight, the statement would be true, making A a knave: contradiction. So A is a knave, the statement is false, and so B is a knight.</p><p><b>Puzzle 2.</b> A says 'B is a knave' and B says 'A and I are of the same type.' If A is a knight, B is a knave and B's statement is false (they are different types) ✓. If A is a knave, B is a knight, but then B's statement 'same type' would be false for a knight: contradiction. So A is a knight and B a knave.</p><p><b>Technique.</b> Assume one person's type, follow the consequences, and eliminate cases. Make a table of cases when there are three or more people.</p>
+<h3>3. Cases, WLOG and pigeonhole</h3><p><b>Proof by cases.</b> Split into exhaustive cases: for any integer n, n² mod 3 ∈ {0, 1} (n ≡ 0, 1, 2 mod 3 gives 0, 1, 1). <b>Without loss of generality (WLOG)</b> reduces symmetric cases: if a statement is symmetric in x and y, assume x ≤ y.</p><p><b>Worked example.</b> Prove that among any three integers, two have a sum divisible by 2: two of them have the same parity, so their sum is even.</p><p><b>Worked example 2.</b> Prove that the product of two consecutive integers is even: one of the two is even.</p><p><b>Writing a proof.</b> State what is given and what is to be shown; define notation; give each step with a reason; end by saying what has been shown.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Proving the converse instead of the statement. Testing examples and calling it a proof. Circular arguments. Dividing by zero in an algebraic proof.</p><p><b>Checks.</b> Look for the step where each hypothesis is used; if one is never used, ask why.</p><p><b>Practice.</b> Rewrite each claim as 'if …, then …' before trying to prove it.</p>
+<h3>Worked examples with Try-its: Knights and knaves</h3><p>Knights always tell the truth and knaves always lie. <b>Example.</b> A says: 'We are both knaves.' If A were a knight the statement would be true, making A a knave, a contradiction. So A is a knave; the statement is then false, so they are not both knaves, so B is a knight. A brute-force check over all four assignments of knight/knave gives the single consistent case (A knave, B knight).</p><details class="try"><summary>Try it<p>A says: 'At least one of us is a knave.' What are A and B?</p><p><b>Answer.</b> A knight (the statement is true and B is a knave).</p></details>
+<h3>Worked examples with Try-its: Proof strategies</h3><p><b>Contrapositive:</b> 'if P then Q' is equivalent to 'if not Q then not P'. <b>Contradiction:</b> assume the opposite and derive an impossibility, as in the proof that √2 is irrational. <b>Cases:</b> split into exhaustive cases (even/odd, positive/negative). <b>Induction:</b> prove a base case and the step. Write the negation of a statement carefully: the negation of 'every box is red' is 'some box is not red'.</p><details class="try"><summary>Try it<p>State the negation of: 'every student passed and some student got an A'.</p><p><b>Answer.</b> Some student failed, or no student got an A.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> There are three boxes labelled Apples, Oranges and Mixed, and every label is wrong. You may draw one fruit from one box. How can you fix all labels? <b>Solution.</b> Draw from the box labelled Mixed. If you get an apple, that box is Apples; the box labelled Oranges cannot be Oranges or Apples, so it is Mixed, and the remaining one is Oranges.</p><p><b>Reflection.</b> Using the assumption that every label is wrong cuts the possibilities from six to two.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Three speakers.</b> A says 'B is a liar'; B says 'C is a liar'; C says 'A and B are both liars'. Try all 8 assignments of truth-teller or liar: only (A liar, B truthful, C liar) is consistent. Check: A's claim is false (B tells the truth), B's claim is true (C lies), and C's claim is false (B is not a liar).</p><details class="try"><summary>Try it<p>What is the contrapositive of 'if n² is even then n is even'?</p><p><b>Answer.</b> If n is odd then n² is odd.</p></details><details class="try"><summary>Try it<p>Negate: 'every prime greater than 2 is odd'.</p><p><b>Answer.</b> Some prime greater than 2 is even.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Prove that √2 is irrational. <b>Solution.</b> Suppose √2 = p/q in lowest terms. Then p² = 2q², so p² is even and hence p is even, p = 2m. Then 4m² = 2q², so q² = 2m² and q is even too, contradicting lowest terms.</p><p><b>Reflection.</b> A proof by contradiction assumes the opposite and reaches an impossibility.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> On an island A says 'We are both knaves' (A and B are each a knight or a knave). How many of A and B are knights?</p><details><summary>Hint</summary>Test A as a knight.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Contradiction</summary><p>If A were a knight the statement would be true, so A would be a knave, which is a contradiction. So A is a knave and the statement is false, meaning at least one is a knight: B. So exactly 1 knight.</p></details>
+<details><summary>Method: Table</summary><p>Of the four assignments only (A knave, B knight) makes A's statement false as a knave's must be.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem p2.</b> A says 'exactly one of the three of us is a liar', B says 'exactly two of us are liars' and C says 'all three of us are liars'. Each is a truth-teller or a liar. How many are liars?</p><details><summary>Hint</summary>At most one statement can be true.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Cases</summary><p>The statements contradict each other, so at most one is true. C cannot be true (then C would be a liar), so if one is true it is A or B. If A is true there is 1 liar, but then two are truthful, contradiction. If B is true there are 2 liars, consistent. So 2 liars.</p></details>
+<details><summary>Method: Enumeration</summary><p>Checking all 8 assignments, only one is consistent, with exactly 2 liars.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem p3.</b> Among 9 coins one is heavier. What is the fewest weighings on a balance that always finds it?</p><details><summary>Hint</summary>Each weighing has 3 outcomes.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Thirds</summary><p>Weigh 3 against 3: either the heavy coin is on the heavier pan or among the 3 left aside. Then weigh 1 against 1 among 3. Two weighings suffice.</p></details>
+<details><summary>Method: Information</summary><p>One weighing gives at most 3 outcomes, so at most 3 coins can be settled, but 9 = 3² needs 2.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem p4.</b> For how many of the 8 truth assignments to p, q, r is (p ∨ q) ∧ ¬r true?</p><details><summary>Hint</summary>r must be false.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Count</summary><p>r is false, and (p, q) is anything but both false: 3 assignments.</p></details>
+<details><summary>Method: Table</summary><p>The true rows are (T,T,F), (T,F,F) and (F,T,F).</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem p5.</b> In the Monty Hall game you always switch. What is your probability of winning the car, as a fraction?</p><details><summary>Hint</summary>Enumerate car position and pick.</details><details><summary>Answer</summary>2/3</details>
+<details><summary>Method: Enumeration</summary><p>Switching wins exactly when your first pick was wrong, which has probability 2/3.</p></details>
+<details><summary>Method: Complement</summary><p>Staying wins 1/3 of the time, so switching wins the rest: 2/3.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem p6.</b> Three boxes are labelled Apples, Oranges and Mixed, and every label is wrong. What is the fewest number of fruits you must draw to relabel them correctly?</p><details><summary>Hint</summary>Draw from the 'Mixed' box.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Reasoning</summary><p>The box labelled Mixed is really pure. Whatever you draw from it names that box; the other two labels then follow because both were wrong.</p></details>
+<details><summary>Method: Check</summary><p>If you draw an apple, that box is Apples; the box labelled Oranges cannot be oranges, so it is Mixed, and the last is Oranges.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem p7.</b> How many different truth tables are there for a logical expression in two variables p and q?</p><details><summary>Hint</summary>Each of the 4 rows has 2 choices.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Count</summary><p>2⁴ = 16.</p></details>
+<details><summary>Method: Examples</summary><p>They include AND, OR, XOR, NAND, always true and always false.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem p8.</b> A lamp starts off and its switch is flipped 101 times. Is the lamp on (answer 1) or off (answer 0)?</p><details><summary>Hint</summary>Parity.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Parity</summary><p>An odd number of flips leaves it on: 1.</p></details>
+<details><summary>Method: Pairs</summary><p>100 of the flips cancel in pairs and one flip remains.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem p9.</b> Prove-by-contradiction check: if the sum of two integers is odd, how many of them are odd?</p><details><summary>Hint</summary>Parity.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Cases</summary><p>If both were odd or both even the sum would be even, so exactly one is odd.</p></details>
+<details><summary>Method: Contradiction</summary><p>Assume 0 or 2 are odd: the sum is even, contradicting oddness.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem p10.</b> Five statements say: 'Exactly 1 of these statements is false', 'Exactly 2 are false', …, 'Exactly 5 are false'. How many of the five are false?</p><details><summary>Hint</summary>At most one statement can be true.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Contradiction</summary><p>Two different statements cannot both be true, so at most one is true. Then 4 or 5 are false; if 5 were false, the statement 'exactly 5 are false' would be true. So exactly 4 are false.</p></details>
+<details><summary>Method: Check</summary><p>The true statement is 'Exactly 4 are false', consistent.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem p11.</b> There are 100 doors, all closed. For k = 1 to 100, person k toggles every kth door. How many doors are open at the end?</p><details><summary>Hint</summary>A door is toggled once per divisor.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Divisors</summary><p>Door n is open when it has an odd number of divisors, i.e. when n is a square: 1, 4, …, 100, so 10.</p></details>
+<details><summary>Method: Simulation</summary><p>Squares have an unpaired divisor √n.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem p12.</b> Same process with 50 lockers. How many are open at the end?</p><details><summary>Hint</summary>Perfect squares.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Squares</summary><p>1, 4, 9, 16, 25, 36, 49: 7.</p></details>
+<details><summary>Method: Count</summary><p>⌊√50⌋ = 7.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem p13.</b> How many rows does a truth table for 5 variables have?</p><details><summary>Hint</summary>Each variable is true or false.</details><details><summary>Answer</summary>32</details>
+<details><summary>Method: Power</summary><p>2⁵ = 32.</p></details>
+<details><summary>Method: Doubling</summary><p>Each added variable doubles the number of rows.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem p14.</b> Among the 4 true/false assignments to p and q, in how many is 'if p then q' false?</p><details><summary>Hint</summary>An implication fails only when the premise is true and the conclusion false.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Table</summary><p>Only p true and q false makes it false: 1.</p></details>
+<details><summary>Method: Equivalent</summary><p>'p → q' is the same as 'not p or q', which fails only if p is true and q false.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem p15.</b> Among the 8 true/false assignments to p, q and r, in how many is '(p or q) and not r' true?</p><details><summary>Hint</summary>Count (p, q) pairs with at least one true, then r false.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Count</summary><p>3 pairs (p, q) make 'p or q' true, and r must be false: 3.</p></details>
+<details><summary>Method: Complement</summary><p>There are 4 assignments with r false and 1 of them has p, q both false: 3.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem p16.</b> In a group of 100 people, 60 speak English, 50 speak French and 20 speak neither. How many speak both?</p><details><summary>Hint</summary>Inclusion-exclusion.</details><details><summary>Answer</summary>30</details>
+<details><summary>Method: Union</summary><p>80 speak at least one, and 60 + 50 − both = 80 gives both = 30.</p></details>
+<details><summary>Method: Venn</summary><p>English only 30, French only 20, both 30, neither 20: total 100.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem p17.</b> In how many of the 4 assignments to p and q is '(p and q) → p' true?</p><details><summary>Hint</summary>It is a tautology.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Table</summary><p>If p and q are true, p is true; otherwise the premise is false, so the implication is true. All 4.</p></details>
+<details><summary>Method: Meaning</summary><p>A statement true under every assignment is a tautology.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem x18.</b> 77 objects are placed into 10 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈77/10⌉ = 8.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 7 objects, there would be at most 10 · 7 = 70 < 77 objects in all.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem x19.</b> A fair coin is flipped 7 times. Find the probability of exactly 3 heads.</p><details><summary>Hint</summary>C(n, k)/2ⁿ.</details><details><summary>Answer</summary>35/128</details>
+<details><summary>Method: Binomial</summary><p>C(7, 3)/2^7 = 35/128 = 35/128.</p></details>
+<details><summary>Method: Pascal row</summary><p>Row 7 of Pascal's triangle is 1, 7, 21, 35, 35, 21, 7, 1, total 128, and entry 3 is 35.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem x20.</b> Two fair dice are rolled. Find the probability that the sum is 10.</p><details><summary>Hint</summary>Count the favourable outcomes out of 36.</details><details><summary>Answer</summary>1/12</details>
+<details><summary>Method: Count</summary><p>The pairs are (4, 6), (5, 5), (6, 4): 3 outcomes out of 36, so the probability is 1/12.</p></details>
+<details><summary>Method: Symmetry</summary><p>The sums s and 14 − s are equally likely, so sum 10 has the same count as sum 4, namely 3 outcomes, giving 1/12.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem x21.</b> How many integers from 1 to 120 are divisible by 4 or 5?</p><details><summary>Hint</summary>Inclusion-exclusion.</details><details><summary>Answer</summary>48</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>30 + 24 − 6 = 48.</p></details>
+<details><summary>Method: Complement</summary><p>Integers divisible by neither number 120 − 48 = 72, and 120 − 72 = 48 divisible by at least one.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem x22.</b> 125 objects are placed into 13 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈125/13⌉ = 10.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 9 objects, there would be at most 13 · 9 = 117 < 125 objects in all.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem x23.</b> A fair coin is flipped 10 times. Find the probability of exactly 4 heads.</p><details><summary>Hint</summary>C(n, k)/2ⁿ.</details><details><summary>Answer</summary>105/512</details>
+<details><summary>Method: Binomial</summary><p>C(10, 4)/2^10 = 210/1024 = 105/512.</p></details>
+<details><summary>Method: Pascal row</summary><p>Row 10 of Pascal's triangle is 1, 10, 45, 120, 210, 252, 210, 120, 45, 10, 1, total 1024, and entry 4 is 210.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem x24.</b> Two fair dice are rolled. Find the probability that the sum is 4.</p><details><summary>Hint</summary>Count the favourable outcomes out of 36.</details><details><summary>Answer</summary>1/12</details>
+<details><summary>Method: Count</summary><p>The pairs are (1, 3), (2, 2), (3, 1): 3 outcomes out of 36, so the probability is 1/12.</p></details>
+<details><summary>Method: Symmetry</summary><p>The sums s and 14 − s are equally likely, so sum 4 has the same count as sum 10, namely 3 outcomes, giving 1/12.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>
+<div class=p><p><b>Problem x25.</b> How many integers from 1 to 500 are divisible by 7 or 11?</p><details><summary>Hint</summary>Inclusion-exclusion.</details><details><summary>Answer</summary>110</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>71 + 45 − 6 = 110.</p></details>
+<details><summary>Method: Complement</summary><p>Integers divisible by neither number 500 − 110 = 390, and 500 − 390 = 110 divisible by at least one.</p></details>
+<p class=ref>Source: Zeitz, The Art and Craft of Problem Solving, ch. 2 (methods of proof)</p></div>

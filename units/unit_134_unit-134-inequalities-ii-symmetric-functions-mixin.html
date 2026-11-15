@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 134</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 134: Unit 134: Inequalities II: symmetric functions, mixing variables and tangent lines</h1><p class=ref>Book: Cîrtoaje, Algebraic Inequalities; Pham Kim Hung, Secrets in Inequalities vol. 1; Gelca &amp; Andreescu, Putnam and Beyond (25 problems)<br>Cîrtoaje, Algebraic Inequalities, ch. 5 (EV-Theorem) and ch. 6 (arithmetic and geometric compensation); Pham Kim Hung vol. 1, ch. 4, 6 and 8.2–8.4; Gelca &amp; Andreescu 2.1.6 (Sturm&#x27;s principle).</p>
+<h2>Reading</h2>
+<h3>1. Symmetric functions p, q, r</h3><p>For three numbers write p = a + b + c, q = ab + bc + ca and r = abc. Many symmetric expressions are polynomials in p, q, r: a³ + b³ + c³ = p³ − 3pq + 3r and (a + b)(b + c)(c + a) = pq − r. For the roots 1, 2, 3 we have p = 6, q = 11, r = 6, so the cube sum is 216 − 198 + 18 = 36 = 1 + 8 + 27 ✓ and the product of pair sums is 66 − 6 = 60 = 3 · 4 · 5 ✓.</p><p>The <b>uvw method</b> uses this: fix two of p, q, r, and an expression that is monotone or convex in the third attains its extreme when two variables are equal or one is zero. It reduces a three-variable inequality to checking the boundary cases b = c and c = 0.</p><details class="try"><summary>Try it<p>If p = 5, q = 8 and r = 4, find (a + b)(b + c)(c + a).</p><p><b>Answer.</b> pq − r = 40 − 4 = 36.</p></details><details class="try"><summary>Try it<p>Find a³ + b³ + c³ when p = 3, q = 0 and r = 1.</p><p><b>Answer.</b> 27 − 0 + 3 = 30.</p></details>
+<h3>2. Mixing variables, weighted AM-GM and convexity</h3><p><b>Mixing.</b> Replacing two variables by values closer together (keeping the sum) increases a product-like expression, so the extreme is at equal values. <b>Weighted AM-GM.</b> To maximise x² y with x + y = 12, split x into two equal parts: x/2, x/2, y has equal terms when x/2 = y, x = 8, y = 4, giving 64 · 4 = 256 (a grid check agrees). <b>Convexity.</b> For convex f, Jensen gives Σ f(xᵢ) ≥ 3f(mean): for 1/x with sum 9 the minimum of Σ 1/x is 3 · 1/3 = 1.</p><p><b>Tangent line trick.</b> To minimise Σ x³ with Σ x = 6, note x³ ≥ 12x − 16 (since x³ − 12x + 16 = (x − 2)²(x + 4)), so Σ x³ ≥ 12 · 6 − 48 = 24 with equality at x = y = z = 2.</p><details class="try"><summary>Try it<p>Maximise x · y² for x + y = 9, x, y ≥ 0.</p><p><b>Answer.</b> x = 3, y = 6: 3 · 36 = 108.</p></details><details class="try"><summary>Try it<p>Minimum of 1/x + 1/y + 1/z for x + y + z = 3, all positive?</p><p><b>Answer.</b> 3, at x = y = z = 1.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> For positive reals a, b, c with a + b + c = 6, find the minimum of a² + b² + c² and the maximum of ab + bc + ca. <b>Solution.</b> Since (a + b + c)² = Σa² + 2Σab, with the sum fixed at 36, minimising Σa² is the same as maximising Σab. The identity Σa² − Σab = ½Σ(a − b)² ≥ 0 gives Σa² ≥ Σab, so 36 = Σa² + 2Σab ≤ 3Σa²; thus Σa² ≥ 12 and Σab ≤ 12, both at a = b = c = 2.</p><p><b>Check.</b> At a = b = c = 2: Σa² = 12 and Σab = 12 ✓.</p>
+<h3>4. In the books</h3><p><b>Cîrtoaje, ch. 5 (EV-Theorem).</b> The Equal Variable Theorem says that for non-negative numbers with a fixed sum and a fixed sum of pth powers (p ≤ 0 or p > 1) the extreme values of a symmetric expression occur when all but one of the variables are equal, or when one variable is zero. It is the book's version of the uvw idea used in this unit.</p><p><b>Cîrtoaje, ch. 6.</b> The arithmetic and geometric compensation methods replace two variables by their arithmetic or geometric mean and show the expression moves in a fixed direction. This is the &ldquo;mixing variables&rdquo; idea.</p><p><b>Pham Kim Hung vol. 1.</b> Ch. 4 covers convex functions and Jensen's inequality, ch. 6 the method of balanced coefficients, and ch. 8.2 to 8.4 the primary symmetric polynomials (p, q, r), normalisation and symmetric separation. <b>Gelca &amp; Andreescu</b> 2.1.6 covers Sturm's principle, another name for mixing.</p><p><b>Honest note.</b> The problems are my own. I have not reproduced the books' proofs.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Real numbers a, b, c satisfy a + b + c = 6, ab + bc + ca = 11 and abc = 6. Find a³ + b³ + c³.</p><details><summary>Hint</summary>Use the identity a³ + b³ + c³ = p³ − 3pq + 3r.</details><details><summary>Answer</summary>36</details>
+<details><summary>Method: p, q, r identity</summary><p>a³ + b³ + c³ = p³ − 3pq + 3r = 216 − 198 + 18 = 36.</p></details>
+<details><summary>Method: Find the numbers</summary><p>The cubic t³ − 6t² + 11t − 6 has roots 1, 2, 3, so the cubes add to 36.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> Real numbers a, b, c satisfy a + b + c = 9, ab + bc + ca = 26 and abc = 24. Find a³ + b³ + c³.</p><details><summary>Hint</summary>Use the identity a³ + b³ + c³ = p³ − 3pq + 3r.</details><details><summary>Answer</summary>99</details>
+<details><summary>Method: p, q, r identity</summary><p>a³ + b³ + c³ = p³ − 3pq + 3r = 729 − 702 + 72 = 99.</p></details>
+<details><summary>Method: Find the numbers</summary><p>The cubic t³ − 9t² + 26t − 24 has roots 2, 3, 4, so the cubes add to 99.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> Real numbers a, b, c satisfy a + b + c = 10, ab + bc + ca = 29 and abc = 20. Find a³ + b³ + c³.</p><details><summary>Hint</summary>Use the identity a³ + b³ + c³ = p³ − 3pq + 3r.</details><details><summary>Answer</summary>190</details>
+<details><summary>Method: p, q, r identity</summary><p>a³ + b³ + c³ = p³ − 3pq + 3r = 1000 − 870 + 60 = 190.</p></details>
+<details><summary>Method: Find the numbers</summary><p>The cubic t³ − 10t² + 29t − 20 has roots 1, 4, 5, so the cubes add to 190.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> Real numbers a, b, c satisfy a + b + c = 9, ab + bc + ca = 24 and abc = 20. Find a³ + b³ + c³.</p><details><summary>Hint</summary>Use the identity a³ + b³ + c³ = p³ − 3pq + 3r.</details><details><summary>Answer</summary>141</details>
+<details><summary>Method: p, q, r identity</summary><p>a³ + b³ + c³ = p³ − 3pq + 3r = 729 − 648 + 60 = 141.</p></details>
+<details><summary>Method: Find the numbers</summary><p>The cubic t³ − 9t² + 24t − 20 has roots 2, 2, 5, so the cubes add to 141.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> If a + b + c = 6, ab + bc + ca = 11 and abc = 6, find (a + b)(b + c)(c + a).</p><details><summary>Hint</summary>Show that (a + b)(b + c)(c + a) = pq − r.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Identity</summary><p>(a + b)(b + c)(c + a) = pq − r = 6 · 11 − 6 = 60.</p></details>
+<details><summary>Method: Substitute</summary><p>a + b = 6 − c, and so on, so the product is (6 − a)(6 − b)(6 − c) = 60.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> If a + b + c = 9, ab + bc + ca = 26 and abc = 24, find (a + b)(b + c)(c + a).</p><details><summary>Hint</summary>Show that (a + b)(b + c)(c + a) = pq − r.</details><details><summary>Answer</summary>210</details>
+<details><summary>Method: Identity</summary><p>(a + b)(b + c)(c + a) = pq − r = 9 · 26 − 24 = 210.</p></details>
+<details><summary>Method: Substitute</summary><p>a + b = 9 − c, and so on, so the product is (9 − a)(9 − b)(9 − c) = 210.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> If a + b + c = 9, ab + bc + ca = 23 and abc = 15, find (a + b)(b + c)(c + a).</p><details><summary>Hint</summary>Show that (a + b)(b + c)(c + a) = pq − r.</details><details><summary>Answer</summary>192</details>
+<details><summary>Method: Identity</summary><p>(a + b)(b + c)(c + a) = pq − r = 9 · 23 − 15 = 192.</p></details>
+<details><summary>Method: Substitute</summary><p>a + b = 9 − c, and so on, so the product is (9 − a)(9 − b)(9 − c) = 192.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> Real numbers a, b, c have sum 6. What is the largest possible value of ab + bc + ca? (fraction if needed)</p><details><summary>Hint</summary>Compare (a + b + c)² with 3(ab + bc + ca).</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Inequality</summary><p>(a + b + c)² − 3(ab + bc + ca) = ½Σ(a − b)² ≥ 0, so ab + bc + ca ≤ 36/3 = 12.</p></details>
+<details><summary>Method: Equal values</summary><p>The maximum is at a = b = c = 6/3, where the sum of products is 3 · (6/3)² = 12.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> Real numbers a, b, c have sum 9. What is the largest possible value of ab + bc + ca? (fraction if needed)</p><details><summary>Hint</summary>Compare (a + b + c)² with 3(ab + bc + ca).</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: Inequality</summary><p>(a + b + c)² − 3(ab + bc + ca) = ½Σ(a − b)² ≥ 0, so ab + bc + ca ≤ 81/3 = 27.</p></details>
+<details><summary>Method: Equal values</summary><p>The maximum is at a = b = c = 9/3, where the sum of products is 3 · (9/3)² = 27.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> Real numbers a, b, c have sum 12. What is the largest possible value of ab + bc + ca? (fraction if needed)</p><details><summary>Hint</summary>Compare (a + b + c)² with 3(ab + bc + ca).</details><details><summary>Answer</summary>48</details>
+<details><summary>Method: Inequality</summary><p>(a + b + c)² − 3(ab + bc + ca) = ½Σ(a − b)² ≥ 0, so ab + bc + ca ≤ 144/3 = 48.</p></details>
+<details><summary>Method: Equal values</summary><p>The maximum is at a = b = c = 12/3, where the sum of products is 3 · (12/3)² = 48.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> For non-negative x, y with x + y = 12, find the maximum of x^1 · y^2. (fraction if needed)</p><details><summary>Hint</summary>Split x into 1 equal parts and y into 2 equal parts and use AM-GM.</details><details><summary>Answer</summary>256</details>
+<details><summary>Method: Weighted AM-GM</summary><p>Maximum when x/1 = y/2, i.e. x = 4, y = 8, giving 256.</p></details>
+<details><summary>Method: Calculus</summary><p>d/dx[x^1 (12 − x)^2] = 0 gives x = 1·12/3 = 4, and the value there is 256.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> For non-negative x, y with x + y = 9, find the maximum of x^2 · y^1. (fraction if needed)</p><details><summary>Hint</summary>Split x into 2 equal parts and y into 1 equal parts and use AM-GM.</details><details><summary>Answer</summary>108</details>
+<details><summary>Method: Weighted AM-GM</summary><p>Maximum when x/2 = y/1, i.e. x = 6, y = 3, giving 108.</p></details>
+<details><summary>Method: Calculus</summary><p>d/dx[x^2 (9 − x)^1] = 0 gives x = 2·9/3 = 6, and the value there is 108.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> For non-negative x, y with x + y = 10, find the maximum of x^2 · y^3. (fraction if needed)</p><details><summary>Hint</summary>Split x into 2 equal parts and y into 3 equal parts and use AM-GM.</details><details><summary>Answer</summary>3456</details>
+<details><summary>Method: Weighted AM-GM</summary><p>Maximum when x/2 = y/3, i.e. x = 4, y = 6, giving 3456.</p></details>
+<details><summary>Method: Calculus</summary><p>d/dx[x^2 (10 − x)^3] = 0 gives x = 2·10/5 = 4, and the value there is 3456.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> For non-negative x, y with x + y = 8, find the maximum of x^3 · y^1. (fraction if needed)</p><details><summary>Hint</summary>Split x into 3 equal parts and y into 1 equal parts and use AM-GM.</details><details><summary>Answer</summary>432</details>
+<details><summary>Method: Weighted AM-GM</summary><p>Maximum when x/3 = y/1, i.e. x = 6, y = 2, giving 432.</p></details>
+<details><summary>Method: Calculus</summary><p>d/dx[x^3 (8 − x)^1] = 0 gives x = 3·8/4 = 6, and the value there is 432.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> Positive reals x, y, z satisfy x + y + z = 3. What is the minimum value of x³ + y³ + z³?</p><details><summary>Hint</summary>Use the tangent-line trick or the power mean inequality.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Tangent line</summary><p>For each variable x³ ≥ 3k²x − 2k³ with k = 1 (since x³ − 3k²x + 2k³ = (x − k)²(x + 2k) ≥ 0). Summing: x³ + y³ + z³ ≥ 3k²·3 − 6k³ = 3.</p></details>
+<details><summary>Method: Power mean</summary><p>By the power mean inequality Σx³ ≥ (Σx)³/9 = 27/9 = 3.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> Positive reals x, y, z satisfy x + y + z = 6. What is the minimum value of x³ + y³ + z³?</p><details><summary>Hint</summary>Use the tangent-line trick or the power mean inequality.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Tangent line</summary><p>For each variable x³ ≥ 3k²x − 2k³ with k = 2 (since x³ − 3k²x + 2k³ = (x − k)²(x + 2k) ≥ 0). Summing: x³ + y³ + z³ ≥ 3k²·6 − 6k³ = 24.</p></details>
+<details><summary>Method: Power mean</summary><p>By the power mean inequality Σx³ ≥ (Σx)³/9 = 216/9 = 24.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> Positive reals x, y, z satisfy x + y + z = 9. What is the minimum value of x³ + y³ + z³?</p><details><summary>Hint</summary>Use the tangent-line trick or the power mean inequality.</details><details><summary>Answer</summary>81</details>
+<details><summary>Method: Tangent line</summary><p>For each variable x³ ≥ 3k²x − 2k³ with k = 3 (since x³ − 3k²x + 2k³ = (x − k)²(x + 2k) ≥ 0). Summing: x³ + y³ + z³ ≥ 3k²·9 − 6k³ = 81.</p></details>
+<details><summary>Method: Power mean</summary><p>By the power mean inequality Σx³ ≥ (Σx)³/9 = 729/9 = 81.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> Positive reals x, y, z satisfy x + y + z = 12. What is the minimum value of x³ + y³ + z³?</p><details><summary>Hint</summary>Use the tangent-line trick or the power mean inequality.</details><details><summary>Answer</summary>192</details>
+<details><summary>Method: Tangent line</summary><p>For each variable x³ ≥ 3k²x − 2k³ with k = 4 (since x³ − 3k²x + 2k³ = (x − k)²(x + 2k) ≥ 0). Summing: x³ + y³ + z³ ≥ 3k²·12 − 6k³ = 192.</p></details>
+<details><summary>Method: Power mean</summary><p>By the power mean inequality Σx³ ≥ (Σx)³/9 = 1728/9 = 192.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> Positive reals x, y, z have sum 6. What is the minimum of 1/x + 1/y + 1/z? (fraction)</p><details><summary>Hint</summary>Use (x + y + z)(1/x + 1/y + 1/z) ≥ 9.</details><details><summary>Answer</summary>3/2</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(x + y + z)(1/x + 1/y + 1/z) ≥ 9, so the sum of reciprocals is at least 9/6 = 3/2.</p></details>
+<details><summary>Method: Equal values</summary><p>By symmetry and convexity the minimum is at x = y = z = 6/3, giving 3 · 3/6 = 3/2.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> Positive reals x, y, z have sum 9. What is the minimum of 1/x + 1/y + 1/z? (fraction)</p><details><summary>Hint</summary>Use (x + y + z)(1/x + 1/y + 1/z) ≥ 9.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(x + y + z)(1/x + 1/y + 1/z) ≥ 9, so the sum of reciprocals is at least 9/9 = 1.</p></details>
+<details><summary>Method: Equal values</summary><p>By symmetry and convexity the minimum is at x = y = z = 9/3, giving 3 · 3/9 = 1.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> Positive reals x, y, z have sum 12. What is the minimum of 1/x + 1/y + 1/z? (fraction)</p><details><summary>Hint</summary>Use (x + y + z)(1/x + 1/y + 1/z) ≥ 9.</details><details><summary>Answer</summary>3/4</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(x + y + z)(1/x + 1/y + 1/z) ≥ 9, so the sum of reciprocals is at least 9/12 = 3/4.</p></details>
+<details><summary>Method: Equal values</summary><p>By symmetry and convexity the minimum is at x = y = z = 12/3, giving 3 · 3/12 = 3/4.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> Compute a²b + a²c + b²a + b²c + c²a + c²b − 6abc for a = 1, b = 2, c = 3.</p><details><summary>Hint</summary>This difference equals a(b − c)² + b(c − a)² + c(a − b)².</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: SOS form</summary><p>a(b − c)² + b(c − a)² + c(a − b)² = 1 + 8 + 3 = 12.</p></details>
+<details><summary>Method: Direct</summary><p>The six terms add to 48 and 6abc = 36, so the difference is 12.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> Compute a²b + a²c + b²a + b²c + c²a + c²b − 6abc for a = 2, b = 3, c = 5.</p><details><summary>Hint</summary>This difference equals a(b − c)² + b(c − a)² + c(a − b)².</details><details><summary>Answer</summary>40</details>
+<details><summary>Method: SOS form</summary><p>a(b − c)² + b(c − a)² + c(a − b)² = 8 + 27 + 5 = 40.</p></details>
+<details><summary>Method: Direct</summary><p>The six terms add to 220 and 6abc = 180, so the difference is 40.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> Compute a²b + a²c + b²a + b²c + c²a + c²b − 6abc for a = 1, b = 4, c = 6.</p><details><summary>Hint</summary>This difference equals a(b − c)² + b(c − a)² + c(a − b)².</details><details><summary>Answer</summary>158</details>
+<details><summary>Method: SOS form</summary><p>a(b − c)² + b(c − a)² + c(a − b)² = 4 + 100 + 54 = 158.</p></details>
+<details><summary>Method: Direct</summary><p>The six terms add to 302 and 6abc = 144, so the difference is 158.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> Compute a²b + a²c + b²a + b²c + c²a + c²b − 6abc for a = 3, b = 3, c = 7.</p><details><summary>Hint</summary>This difference equals a(b − c)² + b(c − a)² + c(a − b)².</details><details><summary>Answer</summary>96</details>
+<details><summary>Method: SOS form</summary><p>a(b − c)² + b(c − a)² + c(a − b)² = 48 + 48 + 0 = 96.</p></details>
+<details><summary>Method: Direct</summary><p>The six terms add to 474 and 6abc = 378, so the difference is 96.</p></details>
+<p class=ref>Source: Technique from Cîrtoaje ch. 5–6 and Pham Kim Hung ch. 4, 6, 8 (original problem)</p></div>

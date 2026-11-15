@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 120</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 120: Unit 120: Arranging in order and bounding integer solutions</h1><p class=ref>Book: Andreescu &amp; Gelca, 3.1 (25 problems)<br>Andreescu &amp; Gelca, Mathematical Olympiad Challenges, section 3.1 (Arrange in Order).</p>
+<h2>Reading</h2>
+<h3>1. Arranging in order</h3><p>When a problem is symmetric in several variables, you may assume an order such as a ≤ b ≤ c, a trick sometimes called <b>without loss of generality</b> (WLOG). This reduces the number of cases dramatically, since you handle only one arrangement of each solution, and then count permutations afterwards.</p><p><b>Worked example.</b> Find all positive integers with 1/a + 1/b + 1/c = 1. With a ≤ b ≤ c, we have 3/a ≥ 1, so a ≤ 3, and a ≥ 2 (a = 1 is too big). If a = 2 then 1/b + 1/c = 1/2 with b ≥ 3, so 2/b ≥ 1/2 and b ≤ 4: b = 3 gives c = 6; b = 4 gives c = 4. If a = 3, then 1/b + 1/c = 2/3 with b ≥ 3, so 2/b ≥ 2/3 and b = 3, c = 3. The solutions are (2, 3, 6), (2, 4, 4), (3, 3, 3) (confirmed by brute force).</p>
+<h3>2. Bounding integer solutions</h3><p>If the unknowns are positive integers, an equation may force each variable below some bound; then you check the finitely many cases. Typical bounds come from the ordering: the smallest variable is at most a certain value because the sum or product of the larger ones is at least as large.</p><p><b>Worked example.</b> Solve x + y + z = xyz in positive integers with x ≤ y ≤ z. Then xyz = x + y + z ≤ 3z, so xy ≤ 3. Hence (x, y) is (1, 1), (1, 2) or (1, 3). For (1, 1): 2 + z = z, impossible. For (1, 2): 3 + z = 2z, z = 3. For (1, 3): 4 + z = 3z, z = 2, but z ≥ y fails. So the only solution up to order is (1, 2, 3).</p><p><b>Example.</b> How many ordered triples satisfy it? 1 + 2 + 3 = 6 = 1 · 2 · 3, and the six orderings give 6 ordered triples.</p>
+<h3>3. Methods in practice</h3><p>1. Decide on the ordering. 2. Use the ordering to bound the smallest variable. 3. Substitute each possible value and solve the reduced equation for the remaining variables, again bounding the next smallest. 4. Check each candidate in the original equation. 5. Count permutations if the question asks for ordered solutions.</p><p><b>Worked example.</b> Positive integers with a + b = ab: rewrite as (a − 1)(b − 1) = 1, so a = b = 2 is the only solution. The trick (a − 1)(b − 1) = ab − a − b + 1 factors many two-variable equations.</p><p><b>Inequality bounding.</b> If a ≤ b ≤ c and abc = 2(a + b + c) then abc ≤ 6c, so ab ≤ 6: the cases (1, 1), …, (2, 3) are the only ones to check.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Forgetting to count permutations. Assuming strict inequalities when ties are allowed (a = b is a legal case). Not rechecking the final candidates.</p><p><b>Checks.</b> Substitute every solution into the original equation.</p><p><b>Practice.</b> Always write the bound explicitly (for instance 'so a ≤ 3').</p>
+<h3>Worked examples with Try-its: Ordering the unknowns</h3><p>When an equation is symmetric, assume a ≤ b ≤ c. To solve 1/a + 1/b + 1/c = 1 in positive integers: since the largest reciprocal 1/a must be at least 1/3, a ≤ 3, and a ≥ 2. Trying a = 2 and a = 3 gives exactly (2, 3, 6), (2, 4, 4) and (3, 3, 3). Finally permute the results if order matters.</p><details class="try"><summary>Try it<p>Solve a + b + c = abc in positive integers with a ≤ b ≤ c.</p><p><b>Answer.</b> Since abc = a + b + c ≤ 3c we get ab ≤ 3, so a = 1 and b ≤ 3, leading to (1, 2, 3).</p></details>
+<h3>Worked examples with Try-its: Bounding</h3><p>To find all integer solutions, show the unknowns must be small and then check. For xy = x + y + 3 rewrite (x − 1)(y − 1) = 4 and list the factor pairs. Bounding by the largest variable is the standard trick for symmetric equations.</p><details class="try"><summary>Try it<p>Find positive integer solutions of xy = x + y + 3.</p><p><b>Answer.</b> (x − 1)(y − 1) = 4: (2, 5), (3, 3), (5, 2).</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Find all positive integer solutions of 1/x + 1/y = 1/6. <b>Solution.</b> (x − 6)(y − 6) = 36, so (x, y) = (7, 42), (8, 24), (9, 18), (10, 15), (12, 12) and the swaps: 9 ordered solutions.</p><p><b>Reflection.</b> Clear denominators and factor.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Reciprocals.</b> Solving 1/x + 1/y = 1/4 with x ≤ y: (x − 4)(y − 4) = 16, so (x − 4, y − 4) = (1, 16), (2, 8), (4, 4) giving (x, y) = (5, 20), (6, 12), (8, 8). <b>Ordering.</b> To find positive integers a ≤ b ≤ c with abc = a + b + c we showed a = 1, b = 2, c = 3.</p><details class="try"><summary>Try it<p>Find all positive integer pairs x ≤ y with 1/x + 1/y = 1/2.</p><p><b>Answer.</b> (x − 2)(y − 2) = 4: (3, 6) and (4, 4).</p></details><details class="try"><summary>Try it<p>Find positive integers with x + y = xy.</p><p><b>Answer.</b> (x − 1)(y − 1) = 1, so x = y = 2.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> How many ordered pairs of positive integers (a, b) satisfy a² − b² = 60? <b>Solution.</b> (a − b)(a + b) = 60 with both factors even: (2, 30) and (6, 10), giving (a, b) = (16, 14) and (8, 2). Two pairs.</p><p><b>Check.</b> 256 − 196 = 60 and 64 − 4 = 60 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> How many ordered pairs of positive integers (a, b) satisfy 1/a + 1/b = 1/3?</p><details><summary>Hint</summary>(a − 3)(b − 3) = 9.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Factor</summary><p>(a − 3)(b − 3) = 9 with both factors positive: (1, 9), (3, 3), (9, 1), giving (4, 12), (6, 6), (12, 4): 3 pairs.</p></details>
+<details><summary>Method: Bound</summary><p>Both a and b exceed 3 and a ≤ 6 when a ≤ b, so check a = 4, 5, 6.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem p2.</b> How many solutions in positive integers with a ≤ b ≤ c are there to 1/a + 1/b + 1/c = 1?</p><details><summary>Hint</summary>a ≤ 3 since the smallest reciprocal is at least 1/3.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Cases</summary><p>a = 2 gives 1/b + 1/c = 1/2, so (b, c) = (3, 6) or (4, 4). a = 3 gives 1/b + 1/c = 2/3, so b = c = 3. So (2, 3, 6), (2, 4, 4), (3, 3, 3): 3 solutions.</p></details>
+<details><summary>Method: Bound</summary><p>a = 1 is impossible since then 1/b + 1/c = 0, and a ≥ 4 would make the sum at most 3/4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem p3.</b> How many ordered triples of positive integers (a, b, c) satisfy a + b + c = abc?</p><details><summary>Hint</summary>Assume a ≤ b ≤ c and bound a.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Ordered solution</summary><p>With a ≤ b ≤ c: abc = a + b + c ≤ 3c so ab ≤ 3. This gives (1, 1, c) impossible (c + 2 = c), (1, 2, 3) works and (1, 3, ...) fails. The only sorted solution is (1, 2, 3), which has 6 orderings.</p></details>
+<details><summary>Method: Check</summary><p>1 + 2 + 3 = 6 = 1 · 2 · 3.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem p4.</b> Among 2^100, 3^60 and 5^40, which is largest? Give 1 for 2^100, 2 for 3^60 and 3 for 5^40.</p><details><summary>Hint</summary>Compare logarithms or write each as a 20th power.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Common power</summary><p>2¹⁰⁰ = (2⁵)²⁰ = 32²⁰, 3⁶⁰ = (3³)²⁰ = 27²⁰ and 5⁴⁰ = (5²)²⁰ = 25²⁰. So 2¹⁰⁰ is largest.</p></details>
+<details><summary>Method: Logs</summary><p>100 ln 2 ≈ 69.3, 60 ln 3 ≈ 65.9, 40 ln 5 ≈ 64.4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem p5.</b> How many ordered pairs of positive integers (x, y) satisfy xy = 2(x + y)?</p><details><summary>Hint</summary>(x − 2)(y − 2) = 4.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Factor</summary><p>(x − 2)(y − 2) = 4: (1, 4), (2, 2), (4, 1) give (3, 6), (4, 4), (6, 3). Negative factor pairs would make x or y nonpositive. 3 pairs.</p></details>
+<details><summary>Method: Check</summary><p>3 · 6 = 18 = 2 · 9 and 4 · 4 = 16 = 2 · 8.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem p6.</b> What is the smallest n for which n! exceeds one million?</p><details><summary>Hint</summary>Compute factorials.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Table</summary><p>9! = 362880 and 10! = 3628800, so n = 10.</p></details>
+<details><summary>Method: Check</summary><p>8! = 40320 is far below.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem p7.</b> Which is largest of 2^(1/2), 3^(1/3) and 5^(1/5)? Give the number n whose nth root is largest (2, 3 or 5).</p><details><summary>Hint</summary>Compare sixth or thirtieth powers.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Powers of 30</summary><p>Raising to the 30th power: 2¹⁵ = 32768, 3¹⁰ = 59049, 5⁶ = 15625. The largest is 3¹⁰, so 3^(1/3) is largest.</p></details>
+<details><summary>Method: Numeric</summary><p>1.4142, 1.4422 and 1.3797.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem p8.</b> How many right triangles with positive integer sides have perimeter 24 (order of the legs ignored)?</p><details><summary>Hint</summary>List the Pythagorean triples.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: List</summary><p>The triple (6, 8, 10) has perimeter 24 and (3, 4, 5) scaled by 2. No other triple works, so 1.</p></details>
+<details><summary>Method: Bound</summary><p>The hypotenuse is less than 12 and more than 24/(2 + √2) ≈ 7, so check c = 8…11.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem p9.</b> How many triples of positive integers x ≤ y ≤ z satisfy x + y + z = 12?</p><details><summary>Hint</summary>Partitions of 12 into 3 parts.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Cases</summary><p>x = 1: (1, 1, 10), …, (1, 5, 6) gives 5; x = 2: (2, 2, 8) to (2, 5, 5) gives 4; x = 3: (3, 3, 6), (3, 4, 5) gives 2; x = 4: (4, 4, 4) gives 1. Total 12.</p></details>
+<details><summary>Method: Formula</summary><p>The number of partitions of n into 3 parts is the nearest integer to n²/12 = 12.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem p10.</b> How many triples of positive integers x ≤ y ≤ z satisfy 1/x + 1/y + 1/z = 1?</p><details><summary>Hint</summary>x is at most 3.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Bound</summary><p>Since x is smallest, 3/x ≥ 1 so x ≤ 3; x = 1 is impossible. x = 2 gives 1/y + 1/z = 1/2, with (3, 6) and (4, 4); x = 3 gives (3, 3, 3). Total 3.</p></details>
+<details><summary>Method: Check</summary><p>1/2 + 1/3 + 1/6 = 1/2 + 1/4 + 1/4 = 1/3 + 1/3 + 1/3 = 1.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem p11.</b> How many pairs of positive integers x ≤ y satisfy 1/x + 1/y = 1/6?</p><details><summary>Hint</summary>(x − 6)(y − 6) = 36.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Factor</summary><p>(x − 6)(y − 6) = 36 with factor pairs 1·36, 2·18, 3·12, 4·9, 6·6 gives 5 pairs.</p></details>
+<details><summary>Method: List</summary><p>(7, 42), (8, 24), (9, 18), (10, 15), (12, 12).</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem p12.</b> How many ordered pairs of positive integers (x, y) satisfy xy = 2(x + y)?</p><details><summary>Hint</summary>(x − 2)(y − 2) = 4.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Factor</summary><p>(x − 2)(y − 2) = 4 with positive factor pairs (1, 4), (2, 2), (4, 1), giving (3, 6), (4, 4), (6, 3): 3 pairs.</p></details>
+<details><summary>Method: Negative factors</summary><p>The factors −1 and −4 would give y = −2, which is not positive.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem p13.</b> What is the smallest positive n such that n! is divisible by 1000?</p><details><summary>Hint</summary>Count factors of 5.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Factors of 5</summary><p>1000 = 2³ · 5³ and 15! has ⌊15/5⌋ = 3 fives, while 14! has only 2.</p></details>
+<details><summary>Method: Check</summary><p>There are plenty of 2s by then.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem p14.</b> How many sets of three different positive integers x < y < z add to 15?</p><details><summary>Hint</summary>Partitions into distinct parts.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: List</summary><p>(1, 2, 12), (1, 3, 11), (1, 4, 10), (1, 5, 9), (1, 6, 8), (2, 3, 10), (2, 4, 9), (2, 5, 8), (2, 6, 7), (3, 4, 8), (3, 5, 7), (4, 5, 6): 12.</p></details>
+<details><summary>Method: Shift</summary><p>Subtracting 0, 1, 2 from x, y, z gives partitions of 12 into 3 parts, 12.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem p15.</b> How many sets of positive integers x ≤ y ≤ z satisfy x + y + z = xyz?</p><details><summary>Hint</summary>z is at most 3 + ... bound x.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Bound</summary><p>Since z is largest, xyz = x + y + z ≤ 3z so xy ≤ 3, which gives (1, 1), (1, 2), (1, 3). Only (1, 2, 3) works.</p></details>
+<details><summary>Method: Check</summary><p>1 + 2 + 3 = 6 = 1 · 2 · 3.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem p16.</b> Positive integers a ≤ b ≤ c have sum 30. What is the largest possible value of a?</p><details><summary>Hint</summary>a ≤ the average.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Average</summary><p>3a ≤ a + b + c = 30, so a ≤ 10, attained by (10, 10, 10).</p></details>
+<details><summary>Method: Check</summary><p>Taking a = 11 would force the sum to be at least 33.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem x17.</b> How many pairs of positive integers (x, y) satisfy 2x + 7y = 60?</p><details><summary>Hint</summary>Test values of one variable.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: List</summary><p>The solutions are (2, 8), (9, 6), (16, 4), (23, 2), which is 4 pairs.</p></details>
+<details><summary>Method: Step pattern</summary><p>Solutions are spaced by (7, −2) since gcd(2, 7) = 1, so they form a short arithmetic list: 4 in total.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem x18.</b> In how many ways can 3 people be chosen from 13?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>286</details>
+<details><summary>Method: Formula</summary><p>C(13, 3) = 286.</p></details>
+<details><summary>Method: Pascal</summary><p>C(12, 2) + C(12, 3) = 66 + 220 = 286.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem x19.</b> How many pairs of positive integers (x, y) satisfy 5x + 6y = 95?</p><details><summary>Hint</summary>Test values of one variable.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: List</summary><p>The solutions are (1, 15), (7, 10), (13, 5), which is 3 pairs.</p></details>
+<details><summary>Method: Step pattern</summary><p>Solutions are spaced by (6, −5) since gcd(5, 6) = 1, so they form a short arithmetic list: 3 in total.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem x20.</b> In how many ways can 6 people be chosen from 14?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>3003</details>
+<details><summary>Method: Formula</summary><p>C(14, 6) = 3003.</p></details>
+<details><summary>Method: Pascal</summary><p>C(13, 5) + C(13, 6) = 1287 + 1716 = 3003.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem x21.</b> How many pairs of positive integers (x, y) satisfy 3x + 4y = 50?</p><details><summary>Hint</summary>Test values of one variable.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: List</summary><p>The solutions are (2, 11), (6, 8), (10, 5), (14, 2), which is 4 pairs.</p></details>
+<details><summary>Method: Step pattern</summary><p>Solutions are spaced by (4, −3) since gcd(3, 4) = 1, so they form a short arithmetic list: 4 in total.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem x22.</b> In how many ways can 4 people be chosen from 15?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>1365</details>
+<details><summary>Method: Formula</summary><p>C(15, 4) = 1365.</p></details>
+<details><summary>Method: Pascal</summary><p>C(14, 3) + C(14, 4) = 364 + 1001 = 1365.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem x23.</b> How many pairs of positive integers (x, y) satisfy 5x + 7y = 100?</p><details><summary>Hint</summary>Test values of one variable.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: List</summary><p>The solutions are (6, 10), (13, 5), which is 2 pairs.</p></details>
+<details><summary>Method: Step pattern</summary><p>Solutions are spaced by (7, −5) since gcd(5, 7) = 1, so they form a short arithmetic list: 2 in total.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem x24.</b> In how many ways can 5 people be chosen from 16?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>4368</details>
+<details><summary>Method: Formula</summary><p>C(16, 5) = 4368.</p></details>
+<details><summary>Method: Pascal</summary><p>C(15, 4) + C(15, 5) = 1365 + 3003 = 4368.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>
+<div class=p><p><b>Problem x25.</b> How many pairs of positive integers (x, y) satisfy 4x + 9y = 80?</p><details><summary>Hint</summary>Test values of one variable.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: List</summary><p>The solutions are (2, 8), (11, 4), which is 2 pairs.</p></details>
+<details><summary>Method: Step pattern</summary><p>Solutions are spaced by (9, −4) since gcd(4, 9) = 1, so they form a short arithmetic list: 2 in total.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 3.1</p></div>

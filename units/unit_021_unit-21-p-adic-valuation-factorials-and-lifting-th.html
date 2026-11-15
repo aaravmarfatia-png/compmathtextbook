@@ -1,0 +1,111 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 21</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 21: Unit 21: p-adic valuation, factorials and lifting the exponent</h1><p class=ref>Book: Stevens, AoPS Olympiad Number Theory, ch. 3 (25 problems)<br>Stevens, AoPS Olympiad Number Theory article, chapter 3.</p>
+<h2>Reading</h2>
+<h3>1. Valuations: counting prime factors</h3><p>For a prime p and a non-zero integer n, the <b>p-adic valuation</b> vₚ(n) is the exponent of the largest power of p dividing n. So v₂(40) = 3 because 40 = 2³ · 5, v₃(40) = 0, and v₅(40) = 1. It converts divisibility into inequalities: p^k divides n exactly when vₚ(n) ≥ k.</p><p><b>Three basic rules.</b> (1) vₚ(ab) = vₚ(a) + vₚ(b): products add valuations. (2) vₚ(a + b) ≥ min(vₚ(a), vₚ(b)), with equality when the two valuations are different. (3) If a and b are both divisible by p^k then so is a ± b. Rule (2) is the engine behind many proofs: if you add a number divisible by a high power of 3 to one divisible by exactly one factor of 3, the sum has exactly one factor of 3. Compare gcd and lcm: vₚ(gcd(a, b)) = min and vₚ(lcm(a, b)) = max. For a = 2⁵ · 3² · 7 and b = 2³ · 3⁴ · 5, the gcd is 2³ · 3² = 72 and the lcm is 2⁵ · 3⁴ · 5 · 7.</p><p><b>Using valuations to solve problems.</b> Equations among integers become comparisons of exponents: compare v₂ on both sides, then v₃, and so on. This is the prime-by-prime thinking of Unit 9, but now with a name and a strategy.</p><details class="try"><summary>Try it</summary><p>Find v₂, v₃ and v₅ of 360 and of 1800.</p><p><b>Answer.</b> 360 = 2³ · 3² · 5: (3, 2, 1). 1800 = 2³ · 3² · 5²: (3, 2, 2).</p></details>
+<h3>2. Legendre's formula: valuations of factorials</h3><p>How many factors of 5 does 100! contain? Count multiples of 5 below 100: 20 numbers, each giving at least one factor; of those 4 are multiples of 25 and give a second factor. So v₅(100!) = 20 + 4 = 24. This is <b>Legendre's formula</b>: vₚ(n!) = ⌊n/p⌋ + ⌊n/p²⌋ + ⌊n/p³⌋ + … (the sum stops when p^k exceeds n). Similarly v₂(100!) = 50 + 25 + 12 + 6 + 3 + 1 = 97, and v₃(30!) = 10 + 3 + 1 = 14. All three values agree with direct computation.</p><p><b>Trailing zeros.</b> Each trailing zero in n! needs a factor 10 = 2 · 5, and factors of 2 are more plentiful than factors of 5, so the number of trailing zeros equals v₅(n!). For 100! it is 24; for 1000! it is 200 + 40 + 8 + 1 = 249; for 2023! it is ⌊2023/5⌋ + ⌊2023/25⌋ + ⌊2023/125⌋ + ⌊2023/625⌋ = 404 + 80 + 16 + 3 = 503.</p><p><b>Skipped values.</b> The number of trailing zeros jumps by more than 1 whenever n is a multiple of 25. The value 5 is never attained: 24! has 4 zeros and 25! has 6. In fact 6 is attained for n = 25, 26, 27, 28, 29, and a computer search confirms that no n has exactly 5 zeros.</p><p><b>The digit-sum form.</b> If sₚ(n) is the sum of the base-p digits of n, then vₚ(n!) = (n − sₚ(n))/(p − 1). For n = 100 in base 2 (1100100₂, digit sum 3): v₂(100!) = 100 − 3 = 97 ✓.</p><details class="try"><summary>Try it</summary><p>How many zeros does 150! end with?</p><p><b>Answer.</b> ⌊150/5⌋ + ⌊150/25⌋ + ⌊150/125⌋ = 30 + 6 + 1 = 37.</p></details>
+<h3>3. Binomial coefficients and Kummer</h3><p>Valuations of C(n, k) = n!/(k!(n − k)!) follow from Legendre's formula by subtracting. For p = 2: v₂(C(100, 50)) = v₂(100!) − 2 v₂(50!) = 97 − 2 × 47 = 3. Kummer's theorem says that vₚ(C(n, k)) equals the number of <b>carries</b> when adding k and n − k in base p. For C(10, 5) = 252 = 4 · 63 we have v₂ = 2, and indeed adding 5 + 5 in binary (101 + 101) produces two carries: the units digit 1 + 1 = 10 carries once, the middle digit 0 + 0 + 1 = 1 does not carry, and the leading digit 1 + 1 = 10 carries again.</p><p><b>Why it is useful.</b> It tells you at once that C(2ⁿ, k) is even for 0 < k < 2ⁿ, that C(p, k) is divisible by p for a prime p and 0 < k < p, and that C(n, k) is odd only when the binary digits of k are 'contained' in those of n. For instance C(9, 3) has v₃ = 1 (9 = 100₃ and adding 3 + 6 = 010₃ + 020₃ in base 3 produces one carry).</p><details class="try"><summary>Try it</summary><p>What is v₂(C(8, 4)) and how can you see it from Kummer's theorem?</p><p><b>Answer.</b> C(8, 4) = 70 = 2 · 35, so v₂ = 1. Adding 4 + 4 in binary (100 + 100) carries once.</p></details>
+<h3>4. Lifting the exponent</h3><p>The <b>Lifting the Exponent lemma</b> (LTE) computes vₚ(xⁿ − yⁿ). <b>For an odd prime p</b> dividing x − y, and p not dividing x or y: vₚ(xⁿ − yⁿ) = vₚ(x − y) + vₚ(n). <b>Example.</b> v₃(7³ − 1) = v₃(6) + v₃(3) = 1 + 1 = 2 (indeed 342 = 2 · 3² · 19). v₃(7⁹ − 1) = 1 + 2 = 3. v₅(6⁵ − 1) = v₅(5) + v₅(5) = 2 and v₅(11²⁵ − 1) = 1 + 2 = 3 (all verified by direct computation).</p><p><b>The sum version.</b> For odd n and p dividing x + y: vₚ(xⁿ + yⁿ) = vₚ(x + y) + vₚ(n). For example v₃(2⁹ + 1) = v₃(3) + v₃(9) = 3, and v₃(2²⁷ + 1) = 1 + 3 = 4.</p><p><b>The prime 2.</b> For even n and odd x, y: v₂(xⁿ − yⁿ) = v₂(x − y) + v₂(x + y) + v₂(n) − 1. For 3⁴ − 1 = 80: v₂(2) + v₂(4) + v₂(4) − 1 = 1 + 2 + 2 − 1 = 4 ✓ (80 = 16 · 5). For 5⁶ − 1 = 15 624: 2 + 1 + 1 − 1 = 3 ✓ (15 624 = 8 · 1953).</p><p><b>Warning.</b> The hypotheses matter: p must divide x − y and must not divide x or y. A very common error is to apply the lemma when p does not divide the difference. Test the lemma on a small case before trusting it.</p><details class="try"><summary>Try it</summary><p>Find v₃(10⁹ − 1).</p><p><b>Answer.</b> 3 divides 10 − 1 = 9 and v₃(9) = 2; v₃(9) = 2 again for the exponent n = 9. So v₃(10⁹ − 1) = 2 + 2 = 4, in agreement with 999 999 999 = 3⁴ · 37 · 333 667.</p></details>
+<h3>5. Using valuations in proofs</h3><p><b>The smallest exponent.</b> What is the smallest n with 3³ dividing 7ⁿ − 1? By LTE (since 3 | 7 − 1 and 3 does not divide 7), v₃(7ⁿ − 1) = 1 + v₃(n), so we need v₃(n) ≥ 2 and n = 9 is the smallest; a search confirms n = 9. In general 3^k divides 7ⁿ − 1 exactly when 3^(k − 1) divides n.</p><p><b>Is n! ever a perfect square?</b> For n > 1 there is a prime p between n/2 and n (Bertrand's postulate), and then vₚ(n!) = 1 is odd, so n! is not a square. A computer check confirms that no n! with 2 ≤ n < 60 is a square. A perfect square has even valuation at every prime, so a single odd valuation suffices to prove that a number is not a square.</p><p><b>Equal valuations.</b> To show that 2ⁿ + 1 is not a perfect cube for large n, or that two expressions cannot be equal, compare their valuations at a convenient prime. Strategy: pick a prime p, compute vₚ of each side, and show the values are different.</p><p><b>Divisibility of 2ⁿ + 1 by 3.</b> By the sum form (x = 2, y = 1, x + y = 3 and n odd) 3 divides 2ⁿ + 1 for every odd n, while for even n we have 2ⁿ ≡ 1 mod 3 so 2ⁿ + 1 ≡ 2: no. Both facts match a computer check for n up to 20.</p><details class="try"><summary>Try it</summary><p>What is the smallest n such that 2¹⁰ divides n!?</p><p><b>Answer.</b> v₂(n!) ≥ 10. v₂(11!) = 5 + 2 + 1 = 8 and v₂(12!) = 6 + 3 + 1 = 10, so n = 12.</p></details>
+<h3>6. A longer problem</h3><p><b>Problem.</b> Let N = 100!. (a) How many trailing zeros has N? (b) What is the largest power of 12 dividing N? (c) What is the largest k such that 6ᵏ divides N?</p><p><b>Solution.</b> (a) 24 (from v₅ = 24 and v₂ = 97). (b) 12 = 2² · 3, so 12ᵏ divides N if 2k ≤ 97 and k ≤ v₃(100!). v₃(100!) = 33 + 11 + 3 + 1 = 48. The binding constraint is 2k ≤ 97, k ≤ 48; so k = 48. (c) 6ᵏ = 2ᵏ 3ᵏ needs k ≤ 97 and k ≤ 48, so k = 48.</p><p><b>Reflection.</b> The general method: factor the base, compute the valuation of N at each prime of the base with Legendre's formula, and take the minimum of the ratios ⌊vₚ(N)/e⌋ over the primes p with exponent e in the base.</p>
+<h3>7. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> (1) Stopping Legendre's sum too early (forgetting ⌊n/p²⌋ and higher terms). (2) Using LTE when p does not divide x − y, or when p divides x or y. (3) Forgetting the −1 and the extra term in the p = 2 case. (4) Counting only multiples of 5 for trailing zeros and forgetting multiples of 25 and 125. (5) Assuming vₚ(a + b) = min when the valuations are equal (then it can be larger).</p><p><b>Checks.</b> Test every formula on a small case you can factor by hand. For trailing zeros, check that the answer jumps by 2 at multiples of 25.</p><p><b>How to practise.</b> Make a table of vₚ(n!) for p = 2, 3, 5, 7 and n up to 30 and verify it by factoring. In Unlimited practice, drill the valuation and trailing-zero families until the floor sums are automatic.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find v₃(17!).</p><details><summary>Hint</summary>⌊17/3⌋ + ⌊17/9⌋.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Legendre's formula</summary><p>⌊17/3⌋ = 5 and ⌊17/9⌋ = 1 (27 &gt; 17 adds nothing). 5 + 1 = 6.</p></details>
+<details><summary>Method: Look at the multiples</summary><p>Multiples of 3 up to 17: 3, 6, 9, 12, 15. Each gives one 3 except 9 which gives two: 5 + 1 = 6.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (example)</p></div>
+<div class=p><p><b>Problem p2.</b> Find v₅(100!).</p><details><summary>Hint</summary>20 multiples of 5.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Legendre</summary><p>⌊100/5⌋ + ⌊100/25⌋ = 20 + 4 = 24.</p></details>
+<details><summary>Method: Check by zeros</summary><p>This is the number of trailing zeros of 100!, a well-known 24.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (numbers chosen by me)</p></div>
+<div class=p><p><b>Problem p3.</b> Find v₇(100!).</p><details><summary>Hint</summary>⌊100/7⌋ + ⌊100/49⌋.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Legendre</summary><p>14 + 2 = 16 (343 &gt; 100).</p></details>
+<details><summary>Method: Computer check</summary><p>Dividing 100! by 7 repeatedly takes 16 divisions.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (numbers chosen by me)</p></div>
+<div class=p><p><b>Problem p4.</b> Find v₂(30!).</p><details><summary>Hint</summary>15 + 7 + 3 + 1.</details><details><summary>Answer</summary>26</details>
+<details><summary>Method: Legendre</summary><p>⌊30/2⌋ + ⌊30/4⌋ + ⌊30/8⌋ + ⌊30/16⌋ = 15 + 7 + 3 + 1 = 26.</p></details>
+<details><summary>Method: Binary shortcut</summary><p>v₂(n!) = n − (number of 1s in the binary form of n). 30 = 11110₂ has four 1s: 30 − 4 = 26.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (numbers chosen by me)</p></div>
+<div class=p><p><b>Problem p5.</b> How many zeros does 1000! end with?</p><details><summary>Hint</summary>Count factors of 5 (there are more 2s).</details><details><summary>Answer</summary>249</details>
+<details><summary>Method: Legendre for 5</summary><p>200 + 40 + 8 + 1 = 249 (1000/5, /25, /125, /625).</p></details>
+<details><summary>Method: Computer check</summary><p>Computing 1000! and counting trailing zeros gives 249.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (numbers chosen by me)</p></div>
+<div class=p><p><b>Problem p6.</b> How many integers n with 2 ≤ n ≤ 30 divide (n − 1)!?</p><details><summary>Hint</summary>Every composite except 4; primes never.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: Characterise</summary><p>n | (n − 1)! exactly for composite n other than 4. Between 2 and 30 there are 29 numbers, 10 are prime (2, 3, 5, 7, 11, 13, 17, 19, 23, 29), so 19 are composite; remove 4: 18.</p></details>
+<details><summary>Method: Computer check</summary><p>Testing each n directly gives 18.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, Example 3.2.2</p></div>
+<div class=p><p><b>Problem p7.</b> How many integers n with 1 ≤ n ≤ 100 satisfy 2ⁿ⁻¹ | n!? (Example 3.2.1 asks for all such n.)</p><details><summary>Hint</summary>v₂(n!) = n − (number of 1s in binary).</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Binary digits</summary><p>v₂(n!) = n − s(n), where s(n) counts the 1s in the binary form of n. We need n − s(n) ≥ n − 1, so s(n) ≤ 1: n must be a power of 2. In 1 to 100: 1, 2, 4, 8, 16, 32, 64: seven.</p></details>
+<details><summary>Method: Computer check</summary><p>Testing divisibility for n = 1 to 100 finds exactly those seven.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, Example 3.2.1 (Canada), counted up to 100</p></div>
+<div class=p><p><b>Problem p8.</b> Use lifting the exponent to find v₃(7⁶ − 1).</p><details><summary>Hint</summary>3 | 7 − 1.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: LTE</summary><p>v₃(7⁶ − 1⁶) = v₃(6) + v₃(6) = 1 + 1 = 2.</p></details>
+<details><summary>Method: Direct</summary><p>7⁶ − 1 = 117 648 = 9 · 13 072, and 13 072 is not divisible by 3 (digit sum 13).</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, Theorem 3.3.1 (numbers chosen by me)</p></div>
+<div class=p><p><b>Problem p9.</b> Find v₅(6²⁵ − 1).</p><details><summary>Hint</summary>5 | 6 − 1.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: LTE</summary><p>v₅(6 − 1) + v₅(25) = 1 + 2 = 3.</p></details>
+<details><summary>Method: Computer check</summary><p>Dividing 6²⁵ − 1 by 5 repeatedly gives three divisions.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, Theorem 3.3.1 (numbers chosen by me)</p></div>
+<div class=p><p><b>Problem p10.</b> Find v₃(2⁹ + 1).</p><details><summary>Hint</summary>3 | 2 + 1 and n = 9 is odd.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: LTE for sums</summary><p>v₃(2 + 1) + v₃(9) = 1 + 2 = 3.</p></details>
+<details><summary>Method: Direct</summary><p>2⁹ + 1 = 513 = 27 · 19, and 19 is not a multiple of 3.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, Corollary 3.3.1 (numbers chosen by me)</p></div>
+<div class=p><p><b>Problem p11.</b> Find v₇(8⁴⁹ − 1).</p><details><summary>Hint</summary>7 | 8 − 1.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: LTE</summary><p>v₇(8 − 1) + v₇(49) = 1 + 2 = 3.</p></details>
+<details><summary>Method: Computer check</summary><p>Repeated division of 8⁴⁹ − 1 by 7 gives three.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, Theorem 3.3.1 (numbers chosen by me)</p></div>
+<div class=p><p><b>Problem p12.</b> Find v₂(3⁸ − 1).</p><details><summary>Hint</summary>n = 8 is even and 4 | 3 + 1.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: LTE for 2</summary><p>v₂(3 + 1) + v₂(8) = 2 + 3 = 5.</p></details>
+<details><summary>Method: Direct</summary><p>3⁸ − 1 = 6560 = 2⁵ · 205.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, Theorem 3.3.2 (numbers chosen by me)</p></div>
+<div class=p><p><b>Problem p13.</b> Find v₂(5⁴ − 1).</p><details><summary>Hint</summary>n = 4 is even and 4 | 5 − 1.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: LTE for 2</summary><p>v₂(5 − 1) + v₂(4) = 2 + 2 = 4.</p></details>
+<details><summary>Method: Direct</summary><p>5⁴ − 1 = 624 = 16 · 39.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, Theorem 3.3.2 (numbers chosen by me)</p></div>
+<div class=p><p><b>Problem x14.</b> What is the exponent of 2 in 100! ?</p><details><summary>Hint</summary>Legendre's formula.</details><details><summary>Answer</summary>97</details>
+<details><summary>Method: Legendre</summary><p>50 + 25 + 12 + 6 + 3 + 1 = 97.</p></details>
+<details><summary>Method: Binary</summary><p>100 = 1100100 in binary has 3 ones, so the exponent is 100 − 3 = 97.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (example)</p></div>
+<div class=p><p><b>Problem x15.</b> What is the exponent of 3 in 50! ?</p><details><summary>Hint</summary>⌊50/3⌋ + ⌊50/9⌋ + …</details><details><summary>Answer</summary>22</details>
+<details><summary>Method: Legendre</summary><p>16 + 5 + 1 = 22.</p></details>
+<details><summary>Method: Base 3</summary><p>50 = 1212₃ has digit sum 6, and (50 − 6)/2 = 22.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (example)</p></div>
+<div class=p><p><b>Problem x16.</b> What is the exponent of 5 in 200! ?</p><details><summary>Hint</summary>Legendre.</details><details><summary>Answer</summary>49</details>
+<details><summary>Method: Legendre</summary><p>40 + 8 + 1 = 49.</p></details>
+<details><summary>Method: Base 5</summary><p>200 = 1300₅ has digit sum 4, and (200 − 4)/4 = 49.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (example)</p></div>
+<div class=p><p><b>Problem x17.</b> How many zeros does 500! end with?</p><details><summary>Hint</summary>Count the factors of 5.</details><details><summary>Answer</summary>124</details>
+<details><summary>Method: Legendre</summary><p>100 + 20 + 4 = 124.</p></details>
+<details><summary>Method: Check</summary><p>There are more than enough factors of 2.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (example)</p></div>
+<div class=p><p><b>Problem x18.</b> What is the exponent of 2 in 3⁸ − 1?</p><details><summary>Hint</summary>Lifting the exponent.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: LTE</summary><p>v₂(3⁸ − 1) = v₂(3 − 1) + v₂(3 + 1) + v₂(8) − 1 = 1 + 2 + 3 − 1 = 5.</p></details>
+<details><summary>Method: Direct</summary><p>3⁸ − 1 = 6560 = 32 · 205.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (example)</p></div>
+<div class=p><p><b>Problem x19.</b> What is the exponent of 3 in 2¹² − 1?</p><details><summary>Hint</summary>Lifting the exponent for an even exponent.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Factor</summary><p>2¹² − 1 = 4095 = 3² · 5 · 7 · 13, so the exponent is 2.</p></details>
+<details><summary>Method: LTE</summary><p>With 2⁶ = 64 ≡ 1 mod 9, the exponent of 3 in 4⁶ − 1 is v₃(4 − 1) + v₃(6) = 1 + 1 = 2.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (example)</p></div>
+<div class=p><p><b>Problem x20.</b> What is the largest k such that 6ᵏ divides 30! ?</p><details><summary>Hint</summary>The binding prime is the smaller exponent.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Exponents</summary><p>v₂(30!) = 26 and v₃(30!) = 14, so k = 14.</p></details>
+<details><summary>Method: Check</summary><p>6ᵏ needs both 2ᵏ and 3ᵏ.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (example)</p></div>
+<div class=p><p><b>Problem x21.</b> What is the exponent of 7 in 1000! ?</p><details><summary>Hint</summary>Legendre.</details><details><summary>Answer</summary>164</details>
+<details><summary>Method: Legendre</summary><p>142 + 20 + 2 = 164.</p></details>
+<details><summary>Method: Check</summary><p>7³ = 343 gives ⌊1000/343⌋ = 2.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (example)</p></div>
+<div class=p><p><b>Problem x22.</b> What is the exponent of the prime 5 in 100! ?</p><details><summary>Hint</summary>Legendre's formula: add ⌊n/p⌋ + ⌊n/p²⌋ + …</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Legendre</summary><p>20 + 4 = 24.</p></details>
+<details><summary>Method: Digit sum</summary><p>100 has base-5 digit sum 4, so the exponent is (100 − 4)/4 = 24.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (example)</p></div>
+<div class=p><p><b>Problem x23.</b> How many zeros does 75! end with?</p><details><summary>Hint</summary>Count the factors of 5; there are plenty of 2s.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: Legendre</summary><p>15 + 3 = 18.</p></details>
+<details><summary>Method: Digit sum</summary><p>75 has base-5 digit sum 3, so the exponent is (75 − 3)/4 = 18.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (example)</p></div>
+<div class=p><p><b>Problem x24.</b> Find σ(48), the sum of all positive divisors of 48.</p><details><summary>Hint</summary>Factor 48 into primes and use that σ is multiplicative.</details><details><summary>Answer</summary>124</details>
+<details><summary>Method: Multiplicative</summary><p>48 = 2^4 · 3. σ(p^k) = 1 + p + … + p^k, giving 31 and 4, whose product is 124.</p></details>
+<details><summary>Method: List the divisors</summary><p>The divisors are 1, 2, 3, 4, 6, 8, 12, 16, 24, 48, and their sum is 124.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (example)</p></div>
+<div class=p><p><b>Problem x25.</b> How many positive divisors does 72 have?</p><details><summary>Hint</summary>Factor first.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Exponent formula</summary><p>72 = 2^3 · 3^2, so the count is 4 · 3 = 12.</p></details>
+<details><summary>Method: Pairing</summary><p>Divisors pair as d and 72/d: 1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72. There are 12 of them.</p></details>
+<p class=ref>Source: Stevens, AoPS Olympiad Number Theory, §3.2 (example)</p></div>

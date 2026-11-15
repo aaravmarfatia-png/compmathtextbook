@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 133</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 133: Unit 133: Inequalities I: Schur&#x27;s inequality and sum-of-squares identities</h1><p class=ref>Book: Pham Kim Hung, Secrets in Inequalities vol. 1; Cîrtoaje, Algebraic Inequalities (25 problems)<br>Pham Kim Hung, Secrets in Inequalities vol. 1, ch. 8 (Theorems 10 and 11: Schur and general Schur); Cîrtoaje, Algebraic Inequalities, ch. 1 (warm-up set) and ch. 2 (fourth-degree inequalities).</p>
+<h2>Reading</h2>
+<h3>1. The SOS method</h3><p>A <b>sum of squares</b> certificate proves an inequality by writing the difference as a sum of squares. The basic identity is a² + b² + c² − ab − bc − ca = ½[(a − b)² + (b − c)² + (c − a)²]; for a = 3, b = 5, c = 8 it gives ½(4 + 9 + 25) = 19. It shows at once that the sum of squares is at least the sum of products, with equality only when a = b = c.</p><p><b>Nesbitt.</b> a/(b + c) + b/(c + a) + c/(a + b) − 3/2 = ½ Σ (a − b)²/((a + c)(b + c)) (checked with exact fractions), so the sum is at least 3/2 for positive a, b, c. The method: move everything to one side and look for the form Σ S·(a − b)² with non-negative weights S.</p><details class="try"><summary>Try it<p>Compute a² + b² + c² − ab − bc − ca for (a, b, c) = (1, 2, 4).</p><p><b>Answer.</b> ½(1 + 4 + 9) = 7.</p></details><details class="try"><summary>Try it<p>When does equality hold in a² + b² + c² ≥ ab + bc + ca?</p><p><b>Answer.</b> Exactly when a = b = c.</p></details>
+<h3>2. Schur's inequality</h3><p>For non-negative a, b, c and t = 1: a(a − b)(a − c) + b(b − a)(b − c) + c(c − a)(c − b) ≥ 0. Expanded, Σa³ + 3abc ≥ Σsym a²b. Equality holds when a = b = c or when two variables are equal and the third is 0. Proof idea: assume a ≥ b ≥ c; then a(a − b)(a − c) ≥ b(a − b)(b − c) and the last term c(c − a)(c − b) is non-negative.</p><p>For (a, b, c) = (1, 2, 3) the three terms are 2, −2 and 6, and the total 6 is positive, consistent with the inequality. Schur is the standard tool when AM-GM is too weak because the equality case is not only a = b = c.</p><details class="try"><summary>Try it<p>Evaluate Schur's expression for (a, b, c) = (2, 2, 0).</p><p><b>Answer.</b> 2·0·2 + 2·0·2 + 0 = 0 (equality case).</p></details><details class="try"><summary>Try it<p>Is Schur's inequality true for negative numbers?</p><p><b>Answer.</b> No: it needs a, b, c ≥ 0.</p></details>
+<h3>3. Mixing and a worked problem</h3><p><b>Mixing variables.</b> If a ≤ b − 2, replacing (a, b) by (a + 1, b − 1) keeps the sum and raises the product by b − a − 1 > 0. Repeating shows that three positive integers with sum 20 have largest product 6 · 7 · 7 = 294.</p><p><b>Problem.</b> Minimise (x + 4y)(1/x + 1/y) for x, y > 0. <b>Solution.</b> The product is 1 + 4 + x/y + 4y/x ≥ 5 + 2√4 = 9, attained when x/y = 4y/x, that is x = 2y. Cauchy–Schwarz gives the same minimum, (1 + 2)² = 9.</p><details class="try"><summary>Try it<p>Largest product of three positive integers with sum 12?</p><p><b>Answer.</b> 4 · 4 · 4 = 64.</p></details>
+<h3>4. In the books</h3><p><b>Pham Kim Hung, ch. 8 (&ldquo;A note on symmetric inequalities&rdquo;).</b> Section 8.1 proves Schur's inequality (Theorem 10) by assuming a ≥ b ≥ c, putting x = a − b and y = b − c, and noting that every term of the rewritten inequality is non-negative. It is equivalent to (a + b − c)(b + c − a)(c + a − b) ≤ abc. Theorem 11 (general Schur) replaces a, b, c by aᵏ, bᵏ, cᵏ for any positive k, and the book uses the fourth- and sixth-degree cases in later examples. Equality holds at a = b = c and at a = b, c = 0.</p><p><b>Cîrtoaje, ch. 1 and 2.</b> The warm-up set (ch. 1) contains several Schur-type problems, for example the one built from E(a,b,c) = Σ a(a − b)(a − c) (problem 12); ch. 2 starts from special fourth-degree inequalities.</p><p><b>Honest note.</b> Neither book has a chapter called &ldquo;SOS&rdquo;. The identity a² + b² + c² − ab − bc − ca = ½Σ(a − b)² used here is standard algebra, and the 25 problems are my own numbers, not the books' problems.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Compute a² + b² + c² − ab − bc − ca for a = 3, b = 5, c = 8.</p><details><summary>Hint</summary>Write the expression as half a sum of three squares.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: SOS form</summary><p>The expression equals ½[(a − b)² + (b − c)² + (c − a)²] = ½[4 + 9 + 25] = 19.</p></details>
+<details><summary>Method: Direct</summary><p>a² + b² + c² = 98 and ab + bc + ca = 79, so the difference is 19.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> Compute a² + b² + c² − ab − bc − ca for a = 2, b = 7, c = 4.</p><details><summary>Hint</summary>Write the expression as half a sum of three squares.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: SOS form</summary><p>The expression equals ½[(a − b)² + (b − c)² + (c − a)²] = ½[25 + 9 + 4] = 19.</p></details>
+<details><summary>Method: Direct</summary><p>a² + b² + c² = 69 and ab + bc + ca = 50, so the difference is 19.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> Compute a² + b² + c² − ab − bc − ca for a = 10, b = 6, c = 1.</p><details><summary>Hint</summary>Write the expression as half a sum of three squares.</details><details><summary>Answer</summary>61</details>
+<details><summary>Method: SOS form</summary><p>The expression equals ½[(a − b)² + (b − c)² + (c − a)²] = ½[16 + 25 + 81] = 61.</p></details>
+<details><summary>Method: Direct</summary><p>a² + b² + c² = 137 and ab + bc + ca = 76, so the difference is 61.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> Compute a² + b² + c² − ab − bc − ca for a = 9, b = 9, c = 4.</p><details><summary>Hint</summary>Write the expression as half a sum of three squares.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: SOS form</summary><p>The expression equals ½[(a − b)² + (b − c)² + (c − a)²] = ½[0 + 25 + 25] = 25.</p></details>
+<details><summary>Method: Direct</summary><p>a² + b² + c² = 178 and ab + bc + ca = 153, so the difference is 25.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> Compute a(a − b)(a − c) + b(b − a)(b − c) + c(c − a)(c − b) for a = 1, b = 2, c = 3.</p><details><summary>Hint</summary>This is Schur's expression for t = 1; it is never negative for non-negative a, b, c.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Term by term</summary><p>The three terms are 2, -2 and 6, which add to 6.</p></details>
+<details><summary>Method: Expanded form</summary><p>It equals Σa³ − Σsym a²b + 3abc = 36 − 48 + 18 = 6.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> Compute a(a − b)(a − c) + b(b − a)(b − c) + c(c − a)(c − b) for a = 2, b = 3, c = 7.</p><details><summary>Hint</summary>This is Schur's expression for t = 1; it is never negative for non-negative a, b, c.</details><details><summary>Answer</summary>138</details>
+<details><summary>Method: Term by term</summary><p>The three terms are 10, -12 and 140, which add to 138.</p></details>
+<details><summary>Method: Expanded form</summary><p>It equals Σa³ − Σsym a²b + 3abc = 378 − 366 + 126 = 138.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> Compute a(a − b)(a − c) + b(b − a)(b − c) + c(c − a)(c − b) for a = 4, b = 1, c = 6.</p><details><summary>Hint</summary>This is Schur's expression for t = 1; it is never negative for non-negative a, b, c.</details><details><summary>Answer</summary>51</details>
+<details><summary>Method: Term by term</summary><p>The three terms are -24, 15 and 60, which add to 51.</p></details>
+<details><summary>Method: Expanded form</summary><p>It equals Σa³ − Σsym a²b + 3abc = 281 − 302 + 72 = 51.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> Compute a(a − b)(a − c) + b(b − a)(b − c) + c(c − a)(c − b) for a = 5, b = 5, c = 2.</p><details><summary>Hint</summary>This is Schur's expression for t = 1; it is never negative for non-negative a, b, c.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: Term by term</summary><p>The three terms are 0, 0 and 18, which add to 18.</p></details>
+<details><summary>Method: Expanded form</summary><p>It equals Σa³ − Σsym a²b + 3abc = 258 − 390 + 150 = 18.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> For positive x, y find the minimum of (1x + 4y)(1/x + 1/y).</p><details><summary>Hint</summary>Expand and use AM-GM, or use Cauchy–Schwarz.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(1x + 4y)(1/x + 1/y) ≥ (1 + 2)² = 9, with equality when x/y = 1/2.</p></details>
+<details><summary>Method: Expand</summary><p>The product is 1 + 4 + 4y/x + 1x/y; the last two terms have product 4, so their sum is at least 2·2 = 4. Total at least 9.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> For positive x, y find the minimum of (1x + 9y)(1/x + 1/y).</p><details><summary>Hint</summary>Expand and use AM-GM, or use Cauchy–Schwarz.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(1x + 9y)(1/x + 1/y) ≥ (1 + 3)² = 16, with equality when x/y = 1/3.</p></details>
+<details><summary>Method: Expand</summary><p>The product is 1 + 9 + 9y/x + 1x/y; the last two terms have product 9, so their sum is at least 2·3 = 6. Total at least 16.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> For positive x, y find the minimum of (4x + 9y)(1/x + 1/y).</p><details><summary>Hint</summary>Expand and use AM-GM, or use Cauchy–Schwarz.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(4x + 9y)(1/x + 1/y) ≥ (2 + 3)² = 25, with equality when x/y = 2/3.</p></details>
+<details><summary>Method: Expand</summary><p>The product is 4 + 9 + 9y/x + 4x/y; the last two terms have product 36, so their sum is at least 2·6 = 12. Total at least 25.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> For positive x, y find the minimum of (9x + 16y)(1/x + 1/y).</p><details><summary>Hint</summary>Expand and use AM-GM, or use Cauchy–Schwarz.</details><details><summary>Answer</summary>49</details>
+<details><summary>Method: Cauchy–Schwarz</summary><p>(9x + 16y)(1/x + 1/y) ≥ (3 + 4)² = 49, with equality when x/y = 3/4.</p></details>
+<details><summary>Method: Expand</summary><p>The product is 9 + 16 + 16y/x + 9x/y; the last two terms have product 144, so their sum is at least 2·12 = 24. Total at least 49.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> Real numbers x, y, z satisfy x + y + z = 3. What is the minimum value of x² + y² + z²? (fraction if needed)</p><details><summary>Hint</summary>Compare with the sum of squares of the differences.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: SOS</summary><p>3(x² + y² + z²) − (x + y + z)² = (x − y)² + (y − z)² + (z − x)² ≥ 0, so x² + y² + z² ≥ 9/3 = 3.</p></details>
+<details><summary>Method: Equal split</summary><p>By symmetry the minimum is at x = y = z = 3/3, giving 3 · (3/3)² = 3.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> Real numbers x, y, z satisfy x + y + z = 6. What is the minimum value of x² + y² + z²? (fraction if needed)</p><details><summary>Hint</summary>Compare with the sum of squares of the differences.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: SOS</summary><p>3(x² + y² + z²) − (x + y + z)² = (x − y)² + (y − z)² + (z − x)² ≥ 0, so x² + y² + z² ≥ 36/3 = 12.</p></details>
+<details><summary>Method: Equal split</summary><p>By symmetry the minimum is at x = y = z = 6/3, giving 3 · (6/3)² = 12.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> Real numbers x, y, z satisfy x + y + z = 9. What is the minimum value of x² + y² + z²? (fraction if needed)</p><details><summary>Hint</summary>Compare with the sum of squares of the differences.</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: SOS</summary><p>3(x² + y² + z²) − (x + y + z)² = (x − y)² + (y − z)² + (z − x)² ≥ 0, so x² + y² + z² ≥ 81/3 = 27.</p></details>
+<details><summary>Method: Equal split</summary><p>By symmetry the minimum is at x = y = z = 9/3, giving 3 · (9/3)² = 27.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> Real numbers x, y, z satisfy x + y + z = 12. What is the minimum value of x² + y² + z²? (fraction if needed)</p><details><summary>Hint</summary>Compare with the sum of squares of the differences.</details><details><summary>Answer</summary>48</details>
+<details><summary>Method: SOS</summary><p>3(x² + y² + z²) − (x + y + z)² = (x − y)² + (y − z)² + (z − x)² ≥ 0, so x² + y² + z² ≥ 144/3 = 48.</p></details>
+<details><summary>Method: Equal split</summary><p>By symmetry the minimum is at x = y = z = 12/3, giving 3 · (12/3)² = 48.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> How many ordered triples (a, b, c) of integers with 0 ≤ a, b, c ≤ 3 make a(a − b)(a − c) + b(b − a)(b − c) + c(c − a)(c − b) equal to 0?</p><details><summary>Hint</summary>Schur's inequality has equality when a = b = c or when two are equal and the third is 0.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Equality cases</summary><p>All equal: 4 triples. Exactly one zero and the others equal and positive: 3 · 3 = 9 triples. Total 13.</p></details>
+<details><summary>Method: Listing</summary><p>The zero value occurs only for (k, k, k) with k = 0..3, and for the permutations of (k, k, 0) with k = 1..3; that is 4 + 9 = 13.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> How many ordered triples (a, b, c) of integers with 0 ≤ a, b, c ≤ 4 make a(a − b)(a − c) + b(b − a)(b − c) + c(c − a)(c − b) equal to 0?</p><details><summary>Hint</summary>Schur's inequality has equality when a = b = c or when two are equal and the third is 0.</details><details><summary>Answer</summary>17</details>
+<details><summary>Method: Equality cases</summary><p>All equal: 5 triples. Exactly one zero and the others equal and positive: 3 · 4 = 12 triples. Total 17.</p></details>
+<details><summary>Method: Listing</summary><p>The zero value occurs only for (k, k, k) with k = 0..4, and for the permutations of (k, k, 0) with k = 1..4; that is 5 + 12 = 17.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> How many ordered triples (a, b, c) of integers with 0 ≤ a, b, c ≤ 6 make a(a − b)(a − c) + b(b − a)(b − c) + c(c − a)(c − b) equal to 0?</p><details><summary>Hint</summary>Schur's inequality has equality when a = b = c or when two are equal and the third is 0.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Equality cases</summary><p>All equal: 7 triples. Exactly one zero and the others equal and positive: 3 · 6 = 18 triples. Total 25.</p></details>
+<details><summary>Method: Listing</summary><p>The zero value occurs only for (k, k, k) with k = 0..6, and for the permutations of (k, k, 0) with k = 1..6; that is 7 + 18 = 25.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> Three positive integers have sum 20. What is the largest possible product?</p><details><summary>Hint</summary>If two numbers differ by 2 or more, moving them closer increases the product.</details><details><summary>Answer</summary>294</details>
+<details><summary>Method: Mixing</summary><p>If a ≤ b − 2, replacing (a, b) by (a + 1, b − 1) changes ab to ab + b − a − 1 > ab. So the numbers differ by at most 1: 6, 7, 7, product 294.</p></details>
+<details><summary>Method: Divide</summary><p>20 = 3 · 6 + 2, so the numbers are 6, 7, 7 and the product is 294.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> Three positive integers have sum 25. What is the largest possible product?</p><details><summary>Hint</summary>If two numbers differ by 2 or more, moving them closer increases the product.</details><details><summary>Answer</summary>576</details>
+<details><summary>Method: Mixing</summary><p>If a ≤ b − 2, replacing (a, b) by (a + 1, b − 1) changes ab to ab + b − a − 1 > ab. So the numbers differ by at most 1: 8, 8, 9, product 576.</p></details>
+<details><summary>Method: Divide</summary><p>25 = 3 · 8 + 1, so the numbers are 8, 8, 9 and the product is 576.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> Three positive integers have sum 31. What is the largest possible product?</p><details><summary>Hint</summary>If two numbers differ by 2 or more, moving them closer increases the product.</details><details><summary>Answer</summary>1100</details>
+<details><summary>Method: Mixing</summary><p>If a ≤ b − 2, replacing (a, b) by (a + 1, b − 1) changes ab to ab + b − a − 1 > ab. So the numbers differ by at most 1: 10, 10, 11, product 1100.</p></details>
+<details><summary>Method: Divide</summary><p>31 = 3 · 10 + 1, so the numbers are 10, 10, 11 and the product is 1100.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> Compute a/(b + c) + b/(c + a) + c/(a + b) − 3/2 for a = 1, b = 2, c = 3. (fraction)</p><details><summary>Hint</summary>Nesbitt's inequality has an SOS form with three squared differences.</details><details><summary>Answer</summary>1/5</details>
+<details><summary>Method: SOS form</summary><p>The difference equals ½ Σ (a − b)²/((a + c)(b + c)); with the numbers this is 1/5.</p></details>
+<details><summary>Method: Direct</summary><p>The three fractions are 1/5, 1/2, 1, which add to 17/10; subtracting 3/2 gives 1/5.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> Compute a/(b + c) + b/(c + a) + c/(a + b) − 3/2 for a = 2, b = 3, c = 5. (fraction)</p><details><summary>Hint</summary>Nesbitt's inequality has an SOS form with three squared differences.</details><details><summary>Answer</summary>5/28</details>
+<details><summary>Method: SOS form</summary><p>The difference equals ½ Σ (a − b)²/((a + c)(b + c)); with the numbers this is 5/28.</p></details>
+<details><summary>Method: Direct</summary><p>The three fractions are 1/4, 3/7, 1, which add to 47/28; subtracting 3/2 gives 5/28.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> Compute a/(b + c) + b/(c + a) + c/(a + b) − 3/2 for a = 1, b = 4, c = 6. (fraction)</p><details><summary>Hint</summary>Nesbitt's inequality has an SOS form with three squared differences.</details><details><summary>Answer</summary>13/35</details>
+<details><summary>Method: SOS form</summary><p>The difference equals ½ Σ (a − b)²/((a + c)(b + c)); with the numbers this is 13/35.</p></details>
+<details><summary>Method: Direct</summary><p>The three fractions are 1/10, 4/7, 6/5, which add to 131/70; subtracting 3/2 gives 13/35.</p></details>
+<p class=ref>Source: Technique from Pham Kim Hung ch. 8 and Cîrtoaje ch. 1–2 (original problem)</p></div>

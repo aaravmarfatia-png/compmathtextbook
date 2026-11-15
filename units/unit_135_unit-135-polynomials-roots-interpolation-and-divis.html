@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 135</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 135: Unit 135: Polynomials: roots, interpolation and divisibility</h1><p class=ref>Book: Andreescu &amp; Dospinescu, Straight from the Book; Gelca &amp; Andreescu, Putnam and Beyond; Andreescu &amp; Enescu, Mathematical Olympiad Treasures (25 problems)<br>Andreescu &amp; Dospinescu, Straight from the Book, ch. 10 (arithmetic properties of polynomials) and ch. 11 (Lagrange interpolation); Gelca &amp; Andreescu 2.2 (polynomials); Andreescu &amp; Enescu 1.8 (Roots and Coefficients).</p>
+<h2>Reading</h2>
+<h3>1. Roots, coefficients and remainders</h3><p>If t³ − 6t² + 11t − 6 has roots a, b, c then a + b + c = 6, ab + bc + ca = 11 and abc = 6, so a² + b² + c² = 36 − 22 = 14. The Remainder Theorem says that P(x) divided by x − a leaves P(a). For a divisor (x − a)(x − b) the remainder is the linear polynomial through the points (a, P(a)) and (b, P(b)).</p><p><b>Interpolation.</b> A polynomial of degree at most n is determined by n + 1 values: the quadratic taking 1, 3, 7 at x = 0, 1, 2 is x² + x + 1, whose value at 4 is 21. <b>Newton sums.</b> pₖ = e₁pₖ₋₁ − e₂pₖ₋₂ + e₃pₖ₋₃ gives the power sums of the roots without finding them.</p><details class="try"><summary>Try it<p>Find the remainder when x⁵ − 1 is divided by x − 2.</p><p><b>Answer.</b> 31.</p></details><details class="try"><summary>Try it<p>If a, b are roots of t² − 5t + 3, find a² + b².</p><p><b>Answer.</b> 25 − 6 = 19.</p></details>
+<h3>2. Roots of unity and cyclotomic structure</h3><p>The polynomial xⁿ − 1 has the n-th roots of unity as its roots, so gcd(xᵐ − 1, xⁿ − 1) = x^gcd(m,n) − 1: for m = 12 and n = 18 the gcd has degree 6. For P(x) = (2x − 1)ⁿ the sum of the coefficients of even powers is (P(1) + P(−1))/2; for n = 5 that is (1 − 243)/2 = −121. Over the integers mod p, the number of monic irreducible quadratics is (p² − p)/2: 3 for p = 3, 10 for p = 5.</p><p><b>Rational root test.</b> A rational root u/v (lowest terms) of an integer polynomial has u dividing the constant term and v dividing the leading coefficient; x³ − 7x + 6 has the integer roots 1, 2, −3.</p><details class="try"><summary>Try it<p>Degree of gcd(x⁸ − 1, x¹² − 1)?</p><p><b>Answer.</b> 4.</p></details><details class="try"><summary>Try it<p>Roots of x³ − 7x + 6?</p><p><b>Answer.</b> 1, 2 and −3.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> A monic cubic P has P(1) = 1, P(2) = 2 and P(3) = 3. Find P(4). <b>Solution.</b> P(x) − x vanishes at 1, 2, 3 and is monic of degree 3, so P(x) − x = (x − 1)(x − 2)(x − 3) and P(4) = 4 + 6 = 10.</p><p><b>Check.</b> P(x) = x³ − 6x² + 12x − 6; P(1) = 1, P(2) = 8 − 24 + 24 − 6 = 2, P(3) = 27 − 54 + 36 − 6 = 3, P(4) = 64 − 96 + 48 − 6 = 10 ✓.</p>
+<h3>4. In the books</h3><p><b>Straight from the Book, ch. 10.</b> Section 10.1 builds on the fact that a − b divides f(a) − f(b) for an integer polynomial f; later sections use derivatives, p-adic Taylor expansions and Mahler expansions to study the arithmetic of polynomials. <b>Ch. 11</b> develops the Lagrange interpolation formula and applications, which is the tool behind my interpolation problems.</p><p><b>Putnam and Beyond, 2.2.</b> It covers Viète's relations (2.2.2), the derivative of a polynomial (2.2.3), the location of zeros (2.2.4), irreducible polynomials (2.2.5) and Chebyshev polynomials (2.2.6). <b>Olympiad Treasures 1.8</b> (&ldquo;Roots and Coefficients&rdquo;) is the closest match to the Vieta and power-sum problems here.</p><p><b>Honest note.</b> The Straight from the Book chapters are far deeper (p-adic methods, Mahler expansions) than this unit, which is a first step. My problems are original.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> The roots of t³ − 6t² + 11t − 6 are a, b, c. Find a² + b² + c².</p><details><summary>Hint</summary>Use Vieta: a² + b² + c² = (a + b + c)² − 2(ab + bc + ca).</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Vieta</summary><p>a + b + c = 6 and ab + bc + ca = 11, so a² + b² + c² = 36 − 22 = 14.</p></details>
+<details><summary>Method: Find the roots</summary><p>The roots are 1, 2, 3, and their squares add to 14.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> The roots of t³ − 9t² + 26t − 24 are a, b, c. Find a² + b² + c².</p><details><summary>Hint</summary>Use Vieta: a² + b² + c² = (a + b + c)² − 2(ab + bc + ca).</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Vieta</summary><p>a + b + c = 9 and ab + bc + ca = 26, so a² + b² + c² = 81 − 52 = 29.</p></details>
+<details><summary>Method: Find the roots</summary><p>The roots are 2, 3, 4, and their squares add to 29.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> The roots of t³ − 12t² + 41t − 30 are a, b, c. Find a² + b² + c².</p><details><summary>Hint</summary>Use Vieta: a² + b² + c² = (a + b + c)² − 2(ab + bc + ca).</details><details><summary>Answer</summary>62</details>
+<details><summary>Method: Vieta</summary><p>a + b + c = 12 and ab + bc + ca = 41, so a² + b² + c² = 144 − 82 = 62.</p></details>
+<details><summary>Method: Find the roots</summary><p>The roots are 1, 5, 6, and their squares add to 62.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> The roots of t³ − 5t² + 2t − -8 are a, b, c. Find a² + b² + c².</p><details><summary>Hint</summary>Use Vieta: a² + b² + c² = (a + b + c)² − 2(ab + bc + ca).</details><details><summary>Answer</summary>21</details>
+<details><summary>Method: Vieta</summary><p>a + b + c = 5 and ab + bc + ca = 2, so a² + b² + c² = 25 − 4 = 21.</p></details>
+<details><summary>Method: Find the roots</summary><p>The roots are -1, 2, 4, and their squares add to 21.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> Find the value at x = 10 of the remainder when x^5 + 3x² − x + 5 is divided by (x − 1)(x − 2).</p><details><summary>Hint</summary>The remainder is linear; find it from the values of the polynomial at x = 1 and x = 2.</details><details><summary>Answer</summary>359</details>
+<details><summary>Method: Interpolate</summary><p>P(1) = 8 and P(2) = 47, so the remainder is the line through these points; at x = 10 it equals 359.</p></details>
+<details><summary>Method: Division</summary><p>Writing the remainder as mx + k with m = 39 and k = -31 gives 359 at x = 10.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> Find the value at x = 10 of the remainder when x^6 + 3x² − x + 5 is divided by (x − 2)(x − 3).</p><details><summary>Hint</summary>The remainder is linear; find it from the values of the polynomial at x = 2 and x = 3.</details><details><summary>Answer</summary>5511</details>
+<details><summary>Method: Interpolate</summary><p>P(2) = 79 and P(3) = 758, so the remainder is the line through these points; at x = 10 it equals 5511.</p></details>
+<details><summary>Method: Division</summary><p>Writing the remainder as mx + k with m = 679 and k = -1279 gives 5511 at x = 10.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> Find the value at x = 10 of the remainder when x^7 + 3x² − x + 5 is divided by (x − 1)(x − 3).</p><details><summary>Hint</summary>The remainder is linear; find it from the values of the polynomial at x = 1 and x = 3.</details><details><summary>Answer</summary>9944</details>
+<details><summary>Method: Interpolate</summary><p>P(1) = 8 and P(3) = 2216, so the remainder is the line through these points; at x = 10 it equals 9944.</p></details>
+<details><summary>Method: Division</summary><p>Writing the remainder as mx + k with m = 1104 and k = -1096 gives 9944 at x = 10.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> Find the value at x = 10 of the remainder when x^8 + 3x² − x + 5 is divided by (x − 2)(x − 4).</p><details><summary>Hint</summary>The remainder is linear; find it from the values of the polynomial at x = 2 and x = 4.</details><details><summary>Answer</summary>261527</details>
+<details><summary>Method: Interpolate</summary><p>P(2) = 271 and P(4) = 65585, so the remainder is the line through these points; at x = 10 it equals 261527.</p></details>
+<details><summary>Method: Division</summary><p>Writing the remainder as mx + k with m = 32657 and k = -65043 gives 261527 at x = 10.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> A polynomial of degree at most 2 takes the values 1, 3, 7 at x = 0, 1, 2. What is its value at x = 4?</p><details><summary>Hint</summary>Use Lagrange interpolation or finite differences.</details><details><summary>Answer</summary>21</details>
+<details><summary>Method: Lagrange</summary><p>The unique quadratic is x**2 + x + 1, which equals 21 at x = 4.</p></details>
+<details><summary>Method: Finite differences</summary><p>The second difference is constant, so extending the table gives 21 at x = 4.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> A polynomial of degree at most 2 takes the values 2, 3, 6 at x = 0, 1, 2. What is its value at x = 4?</p><details><summary>Hint</summary>Use Lagrange interpolation or finite differences.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: Lagrange</summary><p>The unique quadratic is x**2 + 2, which equals 18 at x = 4.</p></details>
+<details><summary>Method: Finite differences</summary><p>The second difference is constant, so extending the table gives 18 at x = 4.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> A polynomial of degree at most 2 takes the values 2, 5, 10 at x = 1, 2, 3. What is its value at x = 4?</p><details><summary>Hint</summary>Use Lagrange interpolation or finite differences.</details><details><summary>Answer</summary>17</details>
+<details><summary>Method: Lagrange</summary><p>The unique quadratic is x**2 + 1, which equals 17 at x = 4.</p></details>
+<details><summary>Method: Finite differences</summary><p>The second difference is constant, so extending the table gives 17 at x = 4.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> What is the degree of the greatest common divisor of x^12 − 1 and x^18 − 1?</p><details><summary>Hint</summary>The common roots are the roots of unity whose order divides both 12 and 18.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Roots of unity</summary><p>A complex number is a root of both exactly when its order divides gcd(12, 18) = 6, so the gcd has degree 6.</p></details>
+<details><summary>Method: Euclid for polynomials</summary><p>Division of x^m − 1 by x^n − 1 leaves x^(m−n) − 1 behind, mirroring the Euclidean algorithm on exponents, so the final gcd is x^6 − 1.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> What is the degree of the greatest common divisor of x^15 − 1 and x^25 − 1?</p><details><summary>Hint</summary>The common roots are the roots of unity whose order divides both 15 and 25.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Roots of unity</summary><p>A complex number is a root of both exactly when its order divides gcd(15, 25) = 5, so the gcd has degree 5.</p></details>
+<details><summary>Method: Euclid for polynomials</summary><p>Division of x^m − 1 by x^n − 1 leaves x^(m−n) − 1 behind, mirroring the Euclidean algorithm on exponents, so the final gcd is x^5 − 1.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> What is the degree of the greatest common divisor of x^20 − 1 and x^30 − 1?</p><details><summary>Hint</summary>The common roots are the roots of unity whose order divides both 20 and 30.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Roots of unity</summary><p>A complex number is a root of both exactly when its order divides gcd(20, 30) = 10, so the gcd has degree 10.</p></details>
+<details><summary>Method: Euclid for polynomials</summary><p>Division of x^m − 1 by x^n − 1 leaves x^(m−n) − 1 behind, mirroring the Euclidean algorithm on exponents, so the final gcd is x^10 − 1.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> Find the sum of the coefficients of the even powers of x in (2x − 1)^5.</p><details><summary>Hint</summary>Evaluate the polynomial at x = 1 and x = −1.</details><details><summary>Answer</summary>-121</details>
+<details><summary>Method: Evaluate</summary><p>The even-power sum is (P(1) + P(−1))/2 = (1 + -243)/2 = -121.</p></details>
+<details><summary>Method: Expand</summary><p>Adding the coefficients of x^0, x², x⁴, … from the binomial expansion gives -121.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> Find the sum of the coefficients of the even powers of x in (2x − 1)^6.</p><details><summary>Hint</summary>Evaluate the polynomial at x = 1 and x = −1.</details><details><summary>Answer</summary>365</details>
+<details><summary>Method: Evaluate</summary><p>The even-power sum is (P(1) + P(−1))/2 = (1 + 729)/2 = 365.</p></details>
+<details><summary>Method: Expand</summary><p>Adding the coefficients of x^0, x², x⁴, … from the binomial expansion gives 365.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> Find the sum of the coefficients of the even powers of x in (2x − 1)^7.</p><details><summary>Hint</summary>Evaluate the polynomial at x = 1 and x = −1.</details><details><summary>Answer</summary>-1093</details>
+<details><summary>Method: Evaluate</summary><p>The even-power sum is (P(1) + P(−1))/2 = (1 + -2187)/2 = -1093.</p></details>
+<details><summary>Method: Expand</summary><p>Adding the coefficients of x^0, x², x⁴, … from the binomial expansion gives -1093.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> Find the sum of the coefficients of the even powers of x in (2x − 1)^8.</p><details><summary>Hint</summary>Evaluate the polynomial at x = 1 and x = −1.</details><details><summary>Answer</summary>3281</details>
+<details><summary>Method: Evaluate</summary><p>The even-power sum is (P(1) + P(−1))/2 = (1 + 6561)/2 = 3281.</p></details>
+<details><summary>Method: Expand</summary><p>Adding the coefficients of x^0, x², x⁴, … from the binomial expansion gives 3281.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> How many monic irreducible quadratics x² + ax + b are there over the integers modulo 3?</p><details><summary>Hint</summary>A monic quadratic is reducible exactly when it has a root.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Count reducibles</summary><p>There are 9 monic quadratics; reducible ones are (x − r)(x − s): 3 choices with r = s plus 3 with r ≠ s, total 6. So 3 irreducible.</p></details>
+<details><summary>Method: Direct</summary><p>Test every pair (a, b) for a root t in {0, …, 2}; exactly 3 pairs have none.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> How many monic irreducible quadratics x² + ax + b are there over the integers modulo 5?</p><details><summary>Hint</summary>A monic quadratic is reducible exactly when it has a root.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Count reducibles</summary><p>There are 25 monic quadratics; reducible ones are (x − r)(x − s): 5 choices with r = s plus 10 with r ≠ s, total 15. So 10 irreducible.</p></details>
+<details><summary>Method: Direct</summary><p>Test every pair (a, b) for a root t in {0, …, 4}; exactly 10 pairs have none.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> How many monic irreducible quadratics x² + ax + b are there over the integers modulo 7?</p><details><summary>Hint</summary>A monic quadratic is reducible exactly when it has a root.</details><details><summary>Answer</summary>21</details>
+<details><summary>Method: Count reducibles</summary><p>There are 49 monic quadratics; reducible ones are (x − r)(x − s): 7 choices with r = s plus 21 with r ≠ s, total 28. So 21 irreducible.</p></details>
+<details><summary>Method: Direct</summary><p>Test every pair (a, b) for a root t in {0, …, 6}; exactly 21 pairs have none.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> The roots of t³ − 6t² + 11t − 6 are a, b, c. Find a^5 + b^5 + c^5.</p><details><summary>Hint</summary>Use Newton's recurrence pₖ = e₁pₖ₋₁ − e₂pₖ₋₂ + e₃pₖ₋₃.</details><details><summary>Answer</summary>276</details>
+<details><summary>Method: Recurrence</summary><p>With p₁ = 6 and p₂ = 14, repeated use of pₖ = 6·pₖ₋₁ − (11)·pₖ₋₂ + (6)·pₖ₋₃ gives p5 = 276.</p></details>
+<details><summary>Method: Numerically</summary><p>Computing the three roots and adding their 5th powers gives 276.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> The roots of t³ − 3t² + (-1)t − (-3) are a, b, c. Find a^5 + b^5 + c^5.</p><details><summary>Hint</summary>Use Newton's recurrence pₖ = e₁pₖ₋₁ − e₂pₖ₋₂ + e₃pₖ₋₃.</details><details><summary>Answer</summary>243</details>
+<details><summary>Method: Recurrence</summary><p>With p₁ = 3 and p₂ = 11, repeated use of pₖ = 3·pₖ₋₁ − (-1)·pₖ₋₂ + (-3)·pₖ₋₃ gives p5 = 243.</p></details>
+<details><summary>Method: Numerically</summary><p>Computing the three roots and adding their 5th powers gives 243.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> The roots of t³ − 2t² + (-1)t − (-2) are a, b, c. Find a^6 + b^6 + c^6.</p><details><summary>Hint</summary>Use Newton's recurrence pₖ = e₁pₖ₋₁ − e₂pₖ₋₂ + e₃pₖ₋₃.</details><details><summary>Answer</summary>66</details>
+<details><summary>Method: Recurrence</summary><p>With p₁ = 2 and p₂ = 6, repeated use of pₖ = 2·pₖ₋₁ − (-1)·pₖ₋₂ + (-2)·pₖ₋₃ gives p6 = 66.</p></details>
+<details><summary>Method: Numerically</summary><p>Computing the three roots and adding their 6th powers gives 66.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> The roots of t³ − 4t² + 5t − 2 are a, b, c. Find a^5 + b^5 + c^5.</p><details><summary>Hint</summary>Use Newton's recurrence pₖ = e₁pₖ₋₁ − e₂pₖ₋₂ + e₃pₖ₋₃.</details><details><summary>Answer</summary>34</details>
+<details><summary>Method: Recurrence</summary><p>With p₁ = 4 and p₂ = 6, repeated use of pₖ = 4·pₖ₋₁ − (5)·pₖ₋₂ + (2)·pₖ₋₃ gives p5 = 34.</p></details>
+<details><summary>Method: Numerically</summary><p>Computing the three roots and adding their 5th powers gives 34.</p></details>
+<p class=ref>Source: Technique from Andreescu &amp; Dospinescu ch. 10–11, Gelca &amp; Andreescu 2.2 (original problem)</p></div>

@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 88</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 88: Unit 88: Trigonometry in triangles</h1><p class=ref>Book: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1 (25 problems)<br>AoPS Volume 1, chapters on trigonometry in triangles: law of sines and cosines.</p>
+<h2>Reading</h2>
+<h3>1. Trigonometric ratios and identities</h3><p>In a right triangle with acute angle θ, sin θ = opposite/hypotenuse, cos θ = adjacent/hypotenuse, tan θ = opposite/adjacent. Values worth knowing: sin 30° = 1/2, sin 45° = √2/2, sin 60° = √3/2; cos 30° = √3/2, cos 60° = 1/2; tan 45° = 1. The identity sin²θ + cos²θ = 1 follows from Pythagoras.</p><p><b>Sum formulas.</b> sin(A + B) = sin A cos B + cos A sin B; cos(A + B) = cos A cos B − sin A sin B; tan(A + B) = (tan A + tan B)/(1 − tan A tan B). Double angle: sin 2A = 2 sin A cos A, cos 2A = cos²A − sin²A = 1 − 2sin²A.</p><p><b>Worked example 1.</b> sin 75° = sin(45° + 30°) = (√2/2)(√3/2) + (√2/2)(1/2) = (√6 + √2)/4 ≈ 0.9659.</p><p><b>Worked example 2.</b> tan 75° = (1 + 1/√3)/(1 − 1/√3) = (√3 + 1)/(√3 − 1) = (√3 + 1)²/2 = 2 + √3.</p><p><b>Worked example 3.</b> cos 36° = (1 + √5)/4 ≈ 0.809. It comes from the regular pentagon (the diagonal–side ratio is the golden ratio).</p>
+<h3>2. Triangle laws</h3><p>The laws of sines and cosines (Unit 51) solve triangles. The area is ½ab sin C. In any triangle A + B + C = 180°, so sin C = sin(A + B) and tan A + tan B + tan C = tan A tan B tan C (for non-right triangles).</p><p><b>Worked example 1.</b> A triangle with angles 45° and 60° and the side opposite 45° equal to 10 has the side opposite 60° equal to 10 sin 60°/sin 45° = 10 × (√3/2)/(√2/2) = 5√6 ≈ 12.25.</p><p><b>Worked example 2.</b> In triangle ABC, sin A = 3/5 and cos B = 5/13 (acute angles). Then cos A = 4/5 and sin B = 12/13, so sin C = sin(A + B) = (3/5)(5/13) + (4/5)(12/13) = 15/65 + 48/65 = 63/65.</p><p><b>Heights and distances.</b> From a point 50 m from the base of a tower the angle of elevation of the top is 30°. The tower height is 50 tan 30° = 50/√3 ≈ 28.9 m.</p>
+<h3>3. Solving trigonometric equations</h3><p>To solve sin x = 1/2 for 0° ≤ x ≤ 360°: x = 30° or 150°. For cos 2x = 1/2: 2x = 60°, 300°, 420°, 660°, so x = 30°, 150°, 210°, 330°. Quadratic-type equations: 2sin²x − sin x − 1 = 0 gives (2 sin x + 1)(sin x − 1) = 0, so sin x = 1 or −1/2: x = 90°, 210°, 330°.</p><p><b>Bounds.</b> |sin x| ≤ 1 and |cos x| ≤ 1. The maximum of 3 sin x + 4 cos x is √(9 + 16) = 5 (Cauchy–Schwarz, Unit 14), attained when tan x = 3/4.</p><p><b>Worked example.</b> Is sin x + cos x ever equal to 2? No: its maximum is √2 (at x = 45°).</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Working in degrees on a radian calculator. Forgetting the second solution of sin x = k. Using sin(A + B) = sin A + sin B. Sign errors in cos(A + B).</p><p><b>Checks.</b> Test identities with simple angles like 30° and 60°.</p><p><b>Practice.</b> Memorise the special angle table.</p>
+<h3>Worked examples with Try-its: Sines, cosines and area</h3><p><b>Law of sines:</b> a/sin A = b/sin B = c/sin C = 2R. <b>Law of cosines:</b> c² = a² + b² − 2ab cos C. <b>Area:</b> ½ab sin C. A triangle with sides 5 and 8 enclosing 60° has third side √(25 + 64 − 40) = 7 and area ½ · 40 · (√3/2) = 10√3. In the 7-8-9 triangle cos A = (64 + 81 − 49)/144 = 2/3, and in the 13-14-15 triangle cos A = 33/65.</p><details class="try"><summary>Try it<p>Find the third side of a triangle with sides 3 and 5 enclosing 120°.</p><p><b>Answer.</b> √(9 + 25 + 15) = 7.</p></details>
+<h3>Worked examples with Try-its: Using the laws</h3><p>Use the law of sines when you know an angle and its opposite side; use the law of cosines when you know two sides and the included angle, or all three sides. The ambiguous case (two sides and a non-included angle) can give two triangles, one, or none. Always check that the three angles sum to 180°.</p><details class="try"><summary>Try it<p>In a triangle a = 10, A = 30° and B = 45°. Find b.</p><p><b>Answer.</b> b = 10 sin 45°/sin 30° = 10√2.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> In triangle ABC, a = 7, b = 8 and C = 60°. Find c and the circumradius. <b>Solution.</b> c² = 49 + 64 − 56 = 57, so c = √57. Then R = c/(2 sin 60°) = √57/√3 = √19.</p><p><b>Reflection.</b> The circumradius follows from any side and its opposite angle.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Area.</b> Sides 6 and 7 enclosing 30° give area ½ · 6 · 7 · ½ = 10.5. <b>Circumradius.</b> If a = 10 and A = 30° then R = a/(2 sin A) = 10. <b>Largest angle.</b> In the 4-5-6 triangle the angle opposite 6 has cosine (16 + 25 − 36)/(2 · 4 · 5) = 1/8, about 82.8°.</p><details class="try"><summary>Try it<p>Find the area of a triangle with sides 4, 5 and included angle 150°.</p><p><b>Answer.</b> ½ · 4 · 5 · ½ = 5.</p></details><details class="try"><summary>Try it<p>In a triangle with a = 7, b = 8, c = 9, find cos C.</p><p><b>Answer.</b> (49 + 64 − 81)/112 = 2/7.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Two ships leave a port at the same time, one going 12 km/h on a bearing of 0° and the other 16 km/h on a bearing of 60°. How far apart are they after 2 hours? <b>Solution.</b> The distances are 24 and 32 with 60° between them, so d² = 576 + 1024 − 2 · 24 · 32 · ½ = 832 and d = √832 = 8√13 ≈ 28.8 km.</p><p><b>Check.</b> √832 ≈ 28.84.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> A triangle has sides 5 and 8 with a 60° angle between them. Find the third side.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Cosines</summary><p>c² = 25 + 64 − 2·5·8·(1/2) = 49, so c = 7.</p></details>
+<details><summary>Method: Coordinates</summary><p>Place the 8-side along the x-axis and the 5-side at 60°: its end is (5/2, 5√3/2), whose distance from (8, 0) is √((11/2)² + (5√3/2)²) = √(121/4 + 75/4) = 7.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem p2.</b> In a triangle, side a = 10 is opposite angle A = 30°. Find the circumradius R.</p><details><summary>Hint</summary>a/sin A = 2R.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Sines</summary><p>10/(1/2) = 20 = 2R so R = 10.</p></details>
+<details><summary>Method: Central angle</summary><p>Side a subtends a central angle of 60°, forming an equilateral triangle with the radii, so R = a = 10.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem p3.</b> Find the area of a triangle with sides 6 and 10 and included angle 30°.</p><details><summary>Hint</summary>(1/2) ab sin C.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Formula</summary><p>(1/2)(6)(10)(1/2) = 15.</p></details>
+<details><summary>Method: Height</summary><p>The height on the side 10 is 6 sin 30° = 3, so the area is (1/2)(10)(3) = 15.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem p4.</b> x is an acute angle with sin x = 3/5. Find tan x as a fraction.</p><details><summary>Hint</summary>cos² = 1 − sin².</details><details><summary>Answer</summary>3/4</details>
+<details><summary>Method: Identity</summary><p>cos x = 4/5, so tan x = 3/4.</p></details>
+<details><summary>Method: Triangle</summary><p>Draw a right triangle with opposite 3 and hypotenuse 5; the adjacent side is 4.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem p5.</b> A triangle has sides 7, 8, 9. Find the cosine of its largest angle as a fraction.</p><details><summary>Hint</summary>The largest angle is opposite the longest side.</details><details><summary>Answer</summary>2/7</details>
+<details><summary>Method: Cosines</summary><p>cos C = (49 + 64 − 81)/(2·7·8) = 32/112 = 2/7.</p></details>
+<details><summary>Method: Check</summary><p>2/7 ≈ 0.286, so the angle is about 73°, plausible for the largest angle of a scalene triangle with perimeter 24.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem p6.</b> A 5-12-13 triangle: find the sine of its smallest angle as a fraction.</p><details><summary>Hint</summary>Opposite over hypotenuse.</details><details><summary>Answer</summary>5/13</details>
+<details><summary>Method: Right triangle</summary><p>The smallest angle is opposite 5, so sin = 5/13.</p></details>
+<details><summary>Method: Sines</summary><p>5/sin A = 13/sin 90° gives sin A = 5/13.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem p7.</b> From a point on level ground 50 m from the base of a tower, the angle of elevation of the top is 45°. How tall is the tower?</p><details><summary>Hint</summary>tan 45° = 1.</details><details><summary>Answer</summary>50</details>
+<details><summary>Method: Tangent</summary><p>h/50 = tan 45° = 1, so h = 50.</p></details>
+<details><summary>Method: Isosceles</summary><p>The right triangle has equal legs, so the height equals 50.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem p8.</b> Triangle with sides 13, 14, 15: find sin of the angle between the sides 14 and 15, as a fraction.</p><details><summary>Hint</summary>Area = (1/2)ab sin C and the area is 84.</details><details><summary>Answer</summary>4/5</details>
+<details><summary>Method: Area</summary><p>84 = (1/2)(14)(15) sin C gives sin C = 168/210 = 4/5.</p></details>
+<details><summary>Method: Cosines</summary><p>cos C = (196 + 225 − 169)/(2·14·15) = 252/420 = 3/5 and sin C = √(1 − 9/25) = 4/5.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem p9.</b> How many solutions does sin x = 1/2 have for x in [0°, 360°)?</p><details><summary>Hint</summary>Sine is positive in two quadrants.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Quadrants</summary><p>x = 30° and 150°, so 2.</p></details>
+<details><summary>Method: Symmetry</summary><p>sin(180° − x) = sin x, so the second solution is 180° − 30° = 150°.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem p10.</b> A triangle has sides 7 and 8 with an included angle of 30°. Find its area.</p><details><summary>Hint</summary>½ab sin C.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Formula</summary><p>½ · 7 · 8 · sin 30° = 28 · ½ = 14.</p></details>
+<details><summary>Method: Height</summary><p>The height onto the side 8 is 7 sin 30° = 3.5, and 8 · 3.5/2 = 14.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem p11.</b> A triangle has sides 7 and 8 with an included angle of 60°. Find the square of the third side.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>57</details>
+<details><summary>Method: Law of cosines</summary><p>c² = 49 + 64 − 2 · 7 · 8 · ½ = 113 − 56 = 57.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put the angle at the origin: (8, 0) and (7/2, 7√3/2). Then the squared distance is (9/2)² + 147/4 = 81/4 + 147/4 = 57.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem p12.</b> A triangle has sides 3 and 5 with an included angle of 120°. Find the third side.</p><details><summary>Hint</summary>cos 120° = −1/2.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Law of cosines</summary><p>c² = 9 + 25 + 15 = 49, so c = 7.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put (5, 0) and 3(−1/2, √3/2); the squared distance is (6.5)² + (3√3/2)² = 42.25 + 6.75 = 49.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem p13.</b> In a right triangle sin A = 3/5. Find tan A.</p><details><summary>Hint</summary>Draw the 3-4-5 triangle.</details><details><summary>Answer</summary>3/4</details>
+<details><summary>Method: Triangle</summary><p>Opposite 3, hypotenuse 5, adjacent 4, so tan A = 3/4.</p></details>
+<details><summary>Method: Identity</summary><p>cos A = 4/5, so tan A = (3/5)/(4/5) = 3/4.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem p14.</b> If sin x = 5/13 and x is acute, find cos x.</p><details><summary>Hint</summary>sin² + cos² = 1.</details><details><summary>Answer</summary>12/13</details>
+<details><summary>Method: Identity</summary><p>cos² x = 1 − 25/169 = 144/169, so cos x = 12/13.</p></details>
+<details><summary>Method: Triple</summary><p>5-12-13 is a Pythagorean triple.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem p15.</b> Find the circumradius of the triangle with sides 13, 14 and 15.</p><details><summary>Hint</summary>R = abc/(4K) with K = 84.</details><details><summary>Answer</summary>65/8</details>
+<details><summary>Method: Formula</summary><p>R = 13 · 14 · 15/(4 · 84) = 2730/336 = 65/8.</p></details>
+<details><summary>Method: Law of sines</summary><p>The altitude to side 14 is 12, so sin of the angle opposite 13 is 12/15 = 4/5. Then 2R = 13/(4/5) = 65/4, so R = 65/8.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem p16.</b> In triangle ABC, a = 8 is opposite A with sin A = 1/2, and sin B = 3/4. Find b.</p><details><summary>Hint</summary>Law of sines.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Law of sines</summary><p>b/sin B = a/sin A, so b = 8 · (3/4)/(1/2) = 12.</p></details>
+<details><summary>Method: Ratio</summary><p>sin B is 3/2 times sin A, so b is 3/2 times a.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem p17.</b> Evaluate sin 150° + cos 120°.</p><details><summary>Hint</summary>Reference angles.</details><details><summary>Answer</summary>0</details>
+<details><summary>Method: Values</summary><p>sin 150° = 1/2 and cos 120° = −1/2, so the sum is 0.</p></details>
+<details><summary>Method: Unit circle</summary><p>150° and 30° share the same height, and 120° and 60° have opposite x-coordinates in sign.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem x18.</b> A triangle has sides 7 and 9 with an included angle of 60°. Find the square of the third side.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>67</details>
+<details><summary>Method: Law of cosines</summary><p>c² = 49 + 81 − 2 · 7 · 9 · (1/2) = 67.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put the vertex at the origin, one side along the x-axis to (9, 0) and the other to 7(1/2, √3/2). The squared distance is 67.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem x19.</b> Find the area of the triangle with sides 11, 13 and 20.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>66</details>
+<details><summary>Method: Heron</summary><p>s = 22, so K = √(22 · 11 · 9 · 2) = 66.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 20 is 2K/20 = 33/5, so the area is ½ · 20 · 33/5 = 66.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem x20.</b> Find the circumradius of the triangle with sides 10, 17 and 21.</p><details><summary>Hint</summary>R = abc/(4K).</details><details><summary>Answer</summary>85/8</details>
+<details><summary>Method: Formula</summary><p>K = 84, so R = 3570/(4 · 84) = 85/8.</p></details>
+<details><summary>Method: Law of sines</summary><p>The altitude to side 21 is 8, so sin of the adjacent angle is 8/17; then 2R = 10/8/17 gives R = 85/8.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem x21.</b> Find the inradius of the triangle with sides 13, 20 and 21.</p><details><summary>Hint</summary>r = K/s.</details><details><summary>Answer</summary>14/3</details>
+<details><summary>Method: Formula</summary><p>The area is 126 and s = 27, so r = 14/3.</p></details>
+<details><summary>Method: Tangent lengths</summary><p>The tangent lengths from the vertices are 14, 7, 6; splitting the area into three triangles with height r gives K = r·s, so r = 14/3.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem x22.</b> Find the altitude to the side of length 20 in the triangle with sides 7, 15 and 20.</p><details><summary>Hint</summary>Use the area.</details><details><summary>Answer</summary>21/5</details>
+<details><summary>Method: Area</summary><p>K = 42, so the altitude is 2K/20 = 21/5.</p></details>
+<details><summary>Method: Check</summary><p>½ · 20 · 21/5 = 42, matching K.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem x23.</b> A triangle has sides 5 and 6 with an included angle of 120°. Find the square of the third side.</p><details><summary>Hint</summary>Law of cosines.</details><details><summary>Answer</summary>91</details>
+<details><summary>Method: Law of cosines</summary><p>c² = 25 + 36 − 2 · 5 · 6 · (−1/2) = 91.</p></details>
+<details><summary>Method: Coordinates</summary><p>Put the vertex at the origin, one side along the x-axis to (6, 0) and the other to 5(−1/2, √3/2). The squared distance is 91.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem x24.</b> Find the area of the triangle with sides 15, 15 and 24.</p><details><summary>Hint</summary>Heron's formula.</details><details><summary>Answer</summary>108</details>
+<details><summary>Method: Heron</summary><p>s = 27, so K = √(27 · 12 · 12 · 3) = 108.</p></details>
+<details><summary>Method: Altitude</summary><p>The altitude to the side 24 is 2K/24 = 9, so the area is ½ · 24 · 9 = 108.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>
+<div class=p><p><b>Problem x25.</b> Find the circumradius of the triangle with sides 9, 12 and 15.</p><details><summary>Hint</summary>R = abc/(4K).</details><details><summary>Answer</summary>15/2</details>
+<details><summary>Method: Formula</summary><p>K = 54, so R = 1620/(4 · 54) = 15/2.</p></details>
+<details><summary>Method: Law of sines</summary><p>The altitude to side 15 is 36/5, so sin of the adjacent angle is 3/5; then 2R = 9/3/5 gives R = 15/2.</p></details>
+<p class=ref>Source: AoPS Volume 1, trigonometry chapters; Coxeter &amp; Greitzer ch. 1</p></div>

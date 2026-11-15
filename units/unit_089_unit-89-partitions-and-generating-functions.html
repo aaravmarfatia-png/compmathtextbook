@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 89</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 89: Unit 89: Partitions and generating functions</h1><p class=ref>Book: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions (25 problems)<br>Sriram, Olympiad Combinatorics and AoPS Volume 2: counting partitions, compositions and polynomial products.</p>
+<h2>Reading</h2>
+<h3>1. Partitions of a number</h3><p>A <b>partition</b> of n writes n as a sum of positive integers, where order does not matter. The partitions of 5 are 5, 4 + 1, 3 + 2, 3 + 1 + 1, 2 + 2 + 1, 2 + 1 + 1 + 1, 1 + 1 + 1 + 1 + 1: seven of them. The numbers p(n) for n = 1, …, 7 are 1, 2, 3, 5, 7, 11, 15. There is no simple closed formula, but they can be computed by a table (coin-change style).</p><p><b>Conjugation.</b> Draw each partition as rows of dots (a Ferrers diagram) and reflect in the diagonal. This pairs partitions of n with largest part k with partitions of n into exactly k parts. So the number of partitions of 7 into at most 3 parts equals the number with largest part at most 3.</p><p><b>Euler's theorem.</b> The number of partitions of n into <i>distinct</i> parts equals the number into <i>odd</i> parts. For n = 6: distinct parts: 6, 5 + 1, 4 + 2, 3 + 2 + 1 (four); odd parts: 5 + 1, 3 + 3, 3 + 1 + 1 + 1, 1 + 1 + 1 + 1 + 1 + 1 (four) ✓.</p>
+<h3>2. Generating functions</h3><p>A <b>generating function</b> encodes a sequence a₀, a₁, a₂, … as the polynomial or power series a₀ + a₁x + a₂x² + …. Products of series count combinations: if you pick items from several groups, the coefficient of xⁿ in the product counts the ways to get total n.</p><p><b>Example: dice.</b> One die has generating function x + x² + … + x⁶. Three dice: (x + … + x⁶)³. The coefficient of x¹⁰ is the number of ways to roll a total of 10: 27 (and the probability is 27/216 = 1/8).</p><p><b>Example: coins.</b> Ways to make 5 with 1s, 2s and 5s: the generating function 1/((1 − x)(1 − x²)(1 − x⁵)). Counting directly: 5; 2 + 2 + 1; 2 + 1 + 1 + 1; 1 + 1 + 1 + 1 + 1: four ways.</p><p><b>The geometric series.</b> 1/(1 − x) = 1 + x + x² + …, so 1/(1 − x)³ = Σ C(n + 2, 2) xⁿ: the number of non-negative solutions to a + b + c = n (stars and bars).</p>
+<h3>3. Using generating functions</h3><p><b>Fibonacci.</b> If F(x) = Σ Fₙxⁿ with F₀ = 0, F₁ = 1, then F(x)(1 − x − x²) = x, so F(x) = x/(1 − x − x²). Partial fractions give Binet's formula.</p><p><b>Worked example.</b> How many ways to choose 4 fruits from apples, bananas and cherries, where at least one apple must be chosen and at most 2 cherries? Generating function: (x + x² + x³ + x⁴)(1 + x + x² + x³ + x⁴)(1 + x + x²). The coefficient of x⁴: apples a ∈ {1..4}, bananas b ≥ 0, cherries c ∈ {0, 1, 2}, with a + b + c = 4. Count: c = 0: a = 1..4 → 4; c = 1: a + b = 3, a = 1..3 → 3; c = 2: a + b = 2, a = 1, 2 → 2. Total 9.</p><p><b>Partition identity.</b> Π 1/(1 − xᵏ) = Σ p(n)xⁿ. Expand the first few factors to check p(4) = 5.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Counting ordered rather than unordered sums. Forgetting that the constant term counts n = 0. Missing the restriction on one group.</p><p><b>Checks.</b> Expand a few terms and compare to a direct count.</p><p><b>Practice.</b> Write the generating function for each group before multiplying.</p>
+<h3>Worked examples with Try-its: Counting partitions</h3><p>A <b>partition</b> of n writes n as an unordered sum of positive integers. p(5) = 7: 5, 4+1, 3+2, 3+1+1, 2+2+1, 2+1+1+1, 1+1+1+1+1. Also p(6) = 11. A famous fact: the number of partitions of n into distinct parts equals the number into odd parts; for n = 7 both are 5 (7, 6+1, 5+2, 4+3, 4+2+1 versus 7, 5+1+1, 3+3+1, 3+1+1+1+1, 1×7).</p><details class="try"><summary>Try it<p>List the partitions of 4.</p><p><b>Answer.</b> 4, 3+1, 2+2, 2+1+1, 1+1+1+1: p(4) = 5.</p></details>
+<h3>Worked examples with Try-its: Generating functions</h3><p>The product 1/((1 − x)(1 − x²)(1 − x⁵)) has coefficient of xⁿ equal to the number of ways to make n with coins of 1, 2 and 5. For n = 10 this is 10 (a table built coin by coin gives 1, 1, 2, 2, 3, 4, 5, 6, 7, 8, 10 for n = 0 to 10). The generating function for all partitions is ∏ 1/(1 − xᵏ).</p><details class="try"><summary>Try it<p>How many ways to make 6 cents using 1, 2 and 5 cent coins?</p><p><b>Answer.</b> 5.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> In how many ways can 12 identical sweets be shared among 3 children (each child may get none)? <b>Solution.</b> Stars and bars: C(14, 2) = 91.</p><p><b>Reflection.</b> Ordered distributions use stars and bars; unordered ones use partitions.</p>
+<h3>More worked examples: Worked examples</h3><p>p(7) = 15 (partitions of 7). The number of partitions of 8 into exactly 2 positive parts is 4: 7 + 1, 6 + 2, 5 + 3, 4 + 4. The number of non-negative solutions of x + y + z = 8 is C(10, 2) = 45, which counts <b>ordered</b> triples; unordered ones are partitions into at most 3 parts. Making 7 with coins of 1 and 3 can be done in 3 ways (seven 1s; one 3 and four 1s; two 3s and one 1).</p><details class="try"><summary>Try it<p>How many partitions of 6 into parts of size at most 2?</p><p><b>Answer.</b> 4: 2+2+2, 2+2+1+1, 2+1+1+1+1, 1×6.</p></details><details class="try"><summary>Try it<p>List the partitions of 5 into distinct parts.</p><p><b>Answer.</b> 5, 4+1, 3+2.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Show that the number of partitions of n into at most 3 parts equals the number into parts of size at most 3. <b>Check for n = 6.</b> At most 3 parts: 6, 5+1, 4+2, 3+3, 4+1+1, 3+2+1, 2+2+2 (7). Parts at most 3: 3+3, 3+2+1, 3+1+1+1, 2+2+2, 2+2+1+1, 2+1+1+1+1, 1×6 (7) ✓.</p><p><b>Reflection.</b> Conjugating the diagram (swapping rows and columns) turns one set into the other.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> How many partitions does 7 have?</p><details><summary>Hint</summary>List by largest part.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: List</summary><p>Count by the largest part. Largest part 7, 6, 5, 4, 3, 2, 1 give 1, 1, 2, 3, 4, 3, 1 partitions, for example largest part 3 leaves 4 to split into parts of size at most 3 (4 ways). The total is 1 + 1 + 2 + 3 + 4 + 3 + 1 = 15.</p></details>
+<details><summary>Method: Recurrence</summary><p>p(7) = 15 from the table p(1..7) = 1, 2, 3, 5, 7, 11, 15.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem p2.</b> In how many ways can 10 be written as a sum of distinct positive integers (order ignored)?</p><details><summary>Hint</summary>Count by number of parts.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: By parts</summary><p>1 part: 10 (1). 2 parts: 9+1, 8+2, 7+3, 6+4 (4). 3 parts: 7+2+1, 6+3+1, 5+4+1, 5+3+2 (4). 4 parts: 4+3+2+1 (1). Total 10.</p></details>
+<details><summary>Method: Euler</summary><p>The same number counts partitions of 10 into odd parts.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem p3.</b> Three fair dice are rolled. In how many of the 216 outcomes is the sum 10?</p><details><summary>Hint</summary>Coefficient of x¹⁰ in (x + … + x⁶)³.</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: Count</summary><p>The unordered triples are (1,3,6), (1,4,5), (2,2,6), (2,3,5), (2,4,4), (3,3,4): 6 + 6 + 3 + 6 + 3 + 3 = 27.</p></details>
+<details><summary>Method: Symmetry</summary><p>Sums 10 and 11 are equally likely and total 27 + 27 = 54 = 216/4.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem p4.</b> Find the coefficient of x⁶ in (1 + x)⁴(1 + x²).</p><details><summary>Hint</summary>Multiply out.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Terms</summary><p>x⁶ comes from x⁴ · x² (coefficient 1 · 1) and from x⁶ · 1 (no x⁶ in (1 + x)⁴), so it is 1.</p></details>
+<details><summary>Method: Expand</summary><p>(1 + x)⁴ = 1 + 4x + 6x² + 4x³ + x⁴, so x⁶ arises only as x⁴ · x²: coefficient 1.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem p5.</b> In how many ways can 12 be written as a sum of 1s, 2s and 3s (order ignored)?</p><details><summary>Hint</summary>Count by number of 3s.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: By threes</summary><p>With a threes the remaining 12 − 3a is split into 1s and 2s in ⌊(12 − 3a)/2⌋ + 1 ways: 7 + 5 + 4 + 2 + 1 = 19.</p></details>
+<details><summary>Method: Formula</summary><p>The number of such partitions is the coefficient of x¹² in 1/((1 − x)(1 − x²)(1 − x³)), which is 19.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem p6.</b> In how many ways can 50 cents be made from coins of 1, 2 and 5 cents (order ignored)?</p><details><summary>Hint</summary>Count by fives then twos.</details><details><summary>Answer</summary>146</details>
+<details><summary>Method: By fives</summary><p>With f fives the remaining 50 − 5f is made of 1s and 2s in ⌊(50 − 5f)/2⌋ + 1 ways. Summing over f = 0..10 gives 26 + 23 + 21 + 18 + 16 + 13 + 11 + 8 + 6 + 3 + 1 = 146.</p></details>
+<details><summary>Method: Check</summary><p>A direct count over all (f, t) with 5f + 2t ≤ 50 gives 146.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem p7.</b> How many partitions of 8 have only odd parts?</p><details><summary>Hint</summary>List them.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: List</summary><p>7+1, 5+3, 5+1+1+1, 3+3+1+1, 3+1+1+1+1+1, 1×8: 6.</p></details>
+<details><summary>Method: Euler</summary><p>Equal to the number of partitions of 8 into distinct parts: 8, 7+1, 6+2, 5+3, 5+2+1, 4+3+1: 6.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem p8.</b> How many ordered ways (compositions) are there to write 6 using parts 1 and 2?</p><details><summary>Hint</summary>Fibonacci.</details><details><summary>Answer</summary>13</details>
+<details><summary>Method: Count</summary><p>By number of 2s: C(6,0) + C(5,1) + C(4,2) + C(3,3) = 1 + 5 + 6 + 1 = 13.</p></details>
+<details><summary>Method: Recurrence</summary><p>c(n) = c(n − 1) + c(n − 2): 1, 2, 3, 5, 8, 13.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem p9.</b> What is the sum of the coefficients of (1 + x + x²)⁵?</p><details><summary>Hint</summary>Set x = 1.</details><details><summary>Answer</summary>243</details>
+<details><summary>Method: Evaluate</summary><p>3⁵ = 243.</p></details>
+<details><summary>Method: Count</summary><p>Each of the 5 factors contributes one of 3 terms, so the coefficients add up to 3⁵.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem p10.</b> How many ways can 6 be written as a sum of positive integers, ignoring order?</p><details><summary>Hint</summary>List by largest part.</details><details><summary>Answer</summary>11</details>
+<details><summary>Method: List</summary><p>6, 5+1, 4+2, 4+1+1, 3+3, 3+2+1, 3+1+1+1, 2+2+2, 2+2+1+1, 2+1+1+1+1, 1+1+1+1+1+1: 11.</p></details>
+<details><summary>Method: Recurrence</summary><p>p(n) counts: 1, 2, 3, 5, 7, 11 for n = 1 to 6.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem p11.</b> How many partitions of 7 are there?</p><details><summary>Hint</summary>Extend the list for 6.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: By largest part</summary><p>Largest part 7, 6, 5, 4, 3, 2, 1 give 1, 1, 2, 3, 4, 3, 1 partitions, totalling 15.</p></details>
+<details><summary>Method: Table</summary><p>p(1..7) = 1, 2, 3, 5, 7, 11, 15.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem p12.</b> In how many ways can 8 be written as a sum of distinct positive integers, ignoring order?</p><details><summary>Hint</summary>No repeats allowed.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: List</summary><p>8, 7+1, 6+2, 5+3, 5+2+1, 4+3+1: 6.</p></details>
+<details><summary>Method: Check</summary><p>By a classical result this equals the number of partitions of 8 into odd parts: 7+1, 5+3, 5+1+1+1, 3+3+1+1, 3+1+1+1+1+1, 1×8... which is 6.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem p13.</b> In how many ways can 25 cents be made from pennies, nickels and dimes?</p><details><summary>Hint</summary>Count by dimes then nickels.</details><details><summary>Answer</summary>12</details>
+<details><summary>Method: Cases</summary><p>0 dimes: 6 ways (0 to 5 nickels); 1 dime: 15 left, 4 ways; 2 dimes: 5 left, 2 ways. Total 12.</p></details>
+<details><summary>Method: Generating function</summary><p>It is the coefficient of x²⁵ in 1/((1−x)(1−x⁵)(1−x¹⁰)), which is 12.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem p14.</b> How many compositions (ordered sums) of 6 into positive integers are there?</p><details><summary>Hint</summary>Each of 5 gaps is a plus or a comma.</details><details><summary>Answer</summary>32</details>
+<details><summary>Method: Gaps</summary><p>Between the 6 ones there are 5 gaps, each cut or not: 2⁵ = 32.</p></details>
+<details><summary>Method: Recurrence</summary><p>c(n) = 2c(n − 1), starting from c(1) = 1, gives 32 for n = 6.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem p15.</b> In how many ways can 10 be written as a sum of exactly two positive integers, ignoring order?</p><details><summary>Hint</summary>Smaller part from 1 to 5.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: List</summary><p>1+9, 2+8, 3+7, 4+6, 5+5: 5.</p></details>
+<details><summary>Method: Formula</summary><p>⌊10/2⌋ = 5.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem p16.</b> How many partitions of 5 use parts of size at most 2?</p><details><summary>Hint</summary>a ones and b twos.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: List</summary><p>2+2+1, 2+1+1+1, 1+1+1+1+1: 3.</p></details>
+<details><summary>Method: Equation</summary><p>a + 2b = 5 with b = 0, 1, 2 gives 3.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem p17.</b> How many partitions of 8 have exactly 3 parts?</p><details><summary>Hint</summary>List by largest part.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: List</summary><p>6+1+1, 5+2+1, 4+3+1, 4+2+2, 3+3+2: 5.</p></details>
+<details><summary>Method: Subtract</summary><p>Subtracting 1 from each part gives partitions of 5 into at most 3 parts: 5, 4+1, 3+2, 3+1+1, 2+2+1: 5.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem x18.</b> In how many ways can 6 people be chosen from 14?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>3003</details>
+<details><summary>Method: Formula</summary><p>C(14, 6) = 3003.</p></details>
+<details><summary>Method: Pascal</summary><p>C(13, 5) + C(13, 6) = 1287 + 1716 = 3003.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem x19.</b> How many distinct arrangements are there of the letters of BALLOON?</p><details><summary>Hint</summary>n! divided by the factorials of repeated letters.</details><details><summary>Answer</summary>1260</details>
+<details><summary>Method: Formula</summary><p>7!/(2! · 2!) = 1260.</p></details>
+<details><summary>Method: Choose places</summary><p>Place the repeated letters one kind at a time with binomial coefficients, then arrange the rest: the total is 1260.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem x20.</b> How many nonnegative integer solutions does x₁ + x₂ + … + x5 = 9 have?</p><details><summary>Hint</summary>Stars and bars.</details><details><summary>Answer</summary>715</details>
+<details><summary>Method: Stars and bars</summary><p>C(13, 4) = 715.</p></details>
+<details><summary>Method: Fix the last variable</summary><p>If the last variable is t, the others sum to 9 − t; adding the counts over t = 0 to 9 gives 715.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem x21.</b> In how many ways can 4 people be chosen from 15?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>1365</details>
+<details><summary>Method: Formula</summary><p>C(15, 4) = 1365.</p></details>
+<details><summary>Method: Pascal</summary><p>C(14, 3) + C(14, 4) = 364 + 1001 = 1365.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem x22.</b> How many distinct arrangements are there of the letters of COMMITTEE?</p><details><summary>Hint</summary>n! divided by the factorials of repeated letters.</details><details><summary>Answer</summary>45360</details>
+<details><summary>Method: Formula</summary><p>9!/(2! · 2! · 2!) = 45360.</p></details>
+<details><summary>Method: Choose places</summary><p>Place the repeated letters one kind at a time with binomial coefficients, then arrange the rest: the total is 45360.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem x23.</b> How many nonnegative integer solutions does x₁ + x₂ + … + x4 = 7 have?</p><details><summary>Hint</summary>Stars and bars.</details><details><summary>Answer</summary>120</details>
+<details><summary>Method: Stars and bars</summary><p>C(10, 3) = 120.</p></details>
+<details><summary>Method: Fix the last variable</summary><p>If the last variable is t, the others sum to 7 − t; adding the counts over t = 0 to 7 gives 120.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem x24.</b> In how many ways can 5 people be chosen from 16?</p><details><summary>Hint</summary>C(n, k).</details><details><summary>Answer</summary>4368</details>
+<details><summary>Method: Formula</summary><p>C(16, 5) = 4368.</p></details>
+<details><summary>Method: Pascal</summary><p>C(15, 4) + C(15, 5) = 1365 + 3003 = 4368.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>
+<div class=p><p><b>Problem x25.</b> How many distinct arrangements are there of the letters of PEPPER?</p><details><summary>Hint</summary>n! divided by the factorials of repeated letters.</details><details><summary>Answer</summary>60</details>
+<details><summary>Method: Formula</summary><p>6!/(3! · 2!) = 60.</p></details>
+<details><summary>Method: Choose places</summary><p>Place the repeated letters one kind at a time with binomial coefficients, then arrange the rest: the total is 60.</p></details>
+<p class=ref>Source: Sriram, Olympiad Combinatorics; AoPS Volume 2 generating functions</p></div>

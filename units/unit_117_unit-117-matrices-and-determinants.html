@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 117</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 117: Unit 117: Matrices and determinants</h1><p class=ref>Book: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11 (25 problems)<br>Andreescu &amp; Gelca, Mathematical Olympiad Challenges, section 2.9 (Matrices) and AoPS Volume 2, chapters 10-11 (Vectors and Matrices; Cross Products and Determinants).</p>
+<h2>Reading</h2>
+<h3>1. Matrices and products</h3><p>A <b>matrix</b> is a rectangular array of numbers. Matrices of the same size add entry by entry. The product of an m × n matrix and an n × p matrix is m × p, with entry (i, j) equal to row i of the first times column j of the second. In general AB ≠ BA.</p><p><b>Worked example.</b> Let A = [[1, 1], [1, 0]]. Then A² = [[2, 1], [1, 1]], A³ = [[3, 2], [2, 1]], A⁴ = [[5, 3], [3, 2]], A⁵ = [[8, 5], [5, 3]]. The entries are Fibonacci numbers: Aⁿ = [[F_{n+1}, F_n], [F_n, F_{n−1}]].</p><p><b>Identity and inverse.</b> I has 1s on the diagonal. A matrix A has an inverse A⁻¹ with AA⁻¹ = I if and only if its determinant is not 0. For a 2 × 2 matrix [[a, b], [c, d]] the inverse is (1/(ad − bc)) [[d, −b], [−c, a]].</p>
+<h3>2. Determinants</h3><p>For a 2 × 2 matrix, det = ad − bc. For 3 × 3 expand along a row: det [[a, b, c], [d, e, f], [g, h, i]] = a(ei − fh) − b(di − fg) + c(dh − eg). The determinant is multiplicative: det(AB) = det A · det B.</p><p><b>Worked example.</b> det [[2, 0, 1], [1, 3, 2], [1, 1, 2]] = 2(6 − 2) − 0 + 1(1 − 3) = 8 − 2 = 6.</p><p><b>Geometry.</b> |det| is the factor by which the linear map multiplies areas. The triangle with vertices (0, 0), (4, 1), (1, 3) has area ½|4 × 3 − 1 × 1| = 5.5.</p><p><b>Properties.</b> Swapping two rows changes the sign; two equal rows give determinant 0; adding a multiple of one row to another changes nothing.</p>
+<h3>3. Linear systems and Cramer's rule</h3><p>For the system ax + by = e, cx + dy = f with D = ad − bc ≠ 0: x = (ed − bf)/D and y = (af − ec)/D.</p><p><b>Worked example.</b> 2x + 3y = 8, x − y = −1. Here D = 2(−1) − 3(1) = −5; x = (8 × (−1) − 3 × (−1))/(−5) = (−5)/(−5) = 1; y = (2 × (−1) − 1 × 8)/(−5) = (−10)/(−5) = 2. Check: 2 + 6 = 8 and 1 − 2 = −1 ✓.</p><p><b>When D = 0.</b> The equations are either contradictory (no solution) or dependent (infinitely many).</p><p><b>Powers and eigenvalues.</b> For B = [[2, 1], [1, 2]] the eigenvalues are 3 and 1, so Bⁿ = ½[[3ⁿ + 1, 3ⁿ − 1], [3ⁿ − 1, 3ⁿ + 1]]; B³ = [[14, 13], [13, 14]] ✓.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Multiplying matrices entry by entry. Assuming AB = BA. Forgetting the alternating signs in cofactor expansion.</p><p><b>Checks.</b> Multiply A by A⁻¹ to confirm you get I.</p><p><b>Practice.</b> Compute a few Fibonacci matrix powers by hand until the pattern is clear.</p>
+<h3>Worked examples with Try-its: Determinants and area</h3><p>For a 2 × 2 matrix the determinant is ad − bc. The area of the triangle with vertices (0, 0), (4, 0), (0, 3) is ½|det[[4, 0], [0, 3]]| = 6. A 3 × 3 determinant expands along a row: det[[1, 2, 3], [0, 1, 4], [5, 6, 0]] = 1(0 − 24) − 2(0 − 20) + 3(0 − 5) = 1. A matrix is invertible exactly when its determinant is non-zero.</p><details class="try"><summary>Try it<p>Find det[[3, 2], [5, 4]].</p><p><b>Answer.</b> 12 − 10 = 2.</p></details>
+<h3>Worked examples with Try-its: Systems and powers</h3><p><b>Cramer's rule.</b> For 2x + y = 5 and x + 3y = 10 the determinant is 5, x = (5 · 3 − 10 · 1)/5 = 1 and y = (2 · 10 − 1 · 5)/5 = 3. <b>Powers.</b> The matrix [[1, 1], [1, 0]]ⁿ has Fibonacci numbers as entries: its fifth power is [[8, 5], [5, 3]] (a computer check agrees).</p><details class="try"><summary>Try it<p>Solve x + 2y = 4 and 3x − y = 5 using determinants.</p><p><b>Answer.</b> D = 1·(−1) − 2·3 = −7; x = (4·(−1) − 2·5)/(−7) = 2; y = (1·5 − 4·3)/(−7) = 1.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> Is the matrix [[2, 4], [3, 6]] invertible? <b>Solution.</b> Its determinant is 12 − 12 = 0, so no: the rows are proportional and the matrix collapses the plane to a line.</p><p><b>Reflection.</b> A zero determinant means information is lost, so no inverse exists.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Determinant of a diagonal matrix.</b> diag(2, 3, 4) has determinant 24. <b>Rotation matrix.</b> The matrix [[0, −1], [1, 0]] rotates the plane by 90°, and its fourth power is the identity. <b>Inverse.</b> [[2, 1], [1, 1]] has determinant 1 and inverse [[1, −1], [−1, 2]]. det[[1, 2], [3, 4]] = −2.</p><details class="try"><summary>Try it<p>Find det[[2, 5], [1, 3]].</p><p><b>Answer.</b> 6 − 5 = 1.</p></details><details class="try"><summary>Try it<p>What is det(AB) if det A = 3 and det B = 4?</p><p><b>Answer.</b> 12.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> For what k is the matrix [[k, 2], [8, k]] singular? <b>Solution.</b> det = k² − 16 = 0 gives k = ±4.</p><p><b>Check.</b> For k = 4 the rows (4, 2) and (8, 4) are proportional.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find the determinant of ((3, 1), (4, 2)).</p><details><summary>Hint</summary>ad − bc.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Formula</summary><p>3 · 2 − 1 · 4 = 2.</p></details>
+<details><summary>Method: Area</summary><p>The columns (3, 4) and (1, 2) span a parallelogram of area 2.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem p2.</b> Let A = ((1, 2), (3, 4)). Find the trace (sum of the diagonal entries) of A².</p><details><summary>Hint</summary>Compute A².</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Multiply</summary><p>A² = ((7, 10), (15, 22)), so the trace is 29.</p></details>
+<details><summary>Method: Formula</summary><p>tr(A²) = (tr A)² − 2 det A = 25 − 2(−2) = 29.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem p3.</b> Let M = ((1, 1), (1, 0)). The top-right entry of M¹⁰ is which Fibonacci number? Give its value.</p><details><summary>Hint</summary>Mⁿ has entries F_{n+1}, F_n, F_n, F_{n−1}.</details><details><summary>Answer</summary>55</details>
+<details><summary>Method: Fibonacci</summary><p>The top-right entry is F₁₀ = 55.</p></details>
+<details><summary>Method: Squaring</summary><p>M² = ((2, 1), (1, 1)), M⁴ = ((5, 3), (3, 2)), M⁸ = ((34, 21), (21, 13)) and M¹⁰ = M⁸M² has top-right 34 + 21 = 55.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem p4.</b> Find the determinant of the matrix with rows (2, 0, 1), (1, 3, 2), (0, 1, 4).</p><details><summary>Hint</summary>Expand along the first row.</details><details><summary>Answer</summary>21</details>
+<details><summary>Method: Expansion</summary><p>2(3·4 − 2·1) − 0 + 1(1·1 − 3·0) = 2 · 10 + 1 = 21.</p></details>
+<details><summary>Method: Check</summary><p>The Sarrus products are 2·3·4 + 0 + 1·1·1 = 25 minus (0 + 2·2·1 + 0) = 4, giving 21.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem p5.</b> The matrix ((2, 1), (5, 3)) has determinant 1. Find the sum of the four entries of its inverse.</p><details><summary>Hint</summary>Swap the diagonal, negate the others.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Inverse</summary><p>The inverse is ((3, −1), (−5, 2)), with entry sum −1.</p></details>
+<details><summary>Method: Check</summary><p>((2, 1), (5, 3))((3, −1), (−5, 2)) = ((1, 0), (0, 1)).</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem p6.</b> Find the area of the triangle with vertices (0, 0), (4, 1), (2, 5).</p><details><summary>Hint</summary>Half the determinant of the two edge vectors.</details><details><summary>Answer</summary>9</details>
+<details><summary>Method: Determinant</summary><p>|4 · 5 − 1 · 2|/2 = 9.</p></details>
+<details><summary>Method: Shoelace</summary><p>(0·1 + 4·5 + 2·0) − (0·4 + 1·2 + 5·0) = 18, halved is 9.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem p7.</b> Solve 3x + 2y = 7 and x − y = 1 using Cramer's rule. Find x + y as a fraction.</p><details><summary>Hint</summary>x = det with column replaced / det.</details><details><summary>Answer</summary>13/5</details>
+<details><summary>Method: Cramer</summary><p>det = 3(−1) − 2(1) = −5; x = (7(−1) − 2(1))/(−5) = 9/5; y = (3 · 1 − 7 · 1)/(−5) = 4/5. So x + y = 13/5.</p></details>
+<details><summary>Method: Substitution</summary><p>y = x − 1 gives 5x − 2 = 7, so x = 9/5, y = 4/5.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem p8.</b> A 2 × 2 matrix has trace 5 and determinant 6. What is the larger of its two eigenvalues?</p><details><summary>Hint</summary>The eigenvalues satisfy λ² − 5λ + 6 = 0.</details><details><summary>Answer</summary>3</details>
+<details><summary>Method: Quadratic</summary><p>(λ − 2)(λ − 3) = 0, so the larger is 3.</p></details>
+<details><summary>Method: Check</summary><p>The sum 2 + 3 = 5 is the trace and the product 6 is the determinant.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem p9.</b> R is the 90° counterclockwise rotation matrix. R³ is applied to the point (1, 0), giving (a, b). Find a + b.</p><details><summary>Hint</summary>R³ is a 270° rotation.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Rotation</summary><p>Rotating (1, 0) by 270° counterclockwise gives (0, −1), so a + b = −1.</p></details>
+<details><summary>Method: Steps</summary><p>(1, 0) → (0, 1) → (−1, 0) → (0, −1).</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem p10.</b> Find the determinant of the matrix with rows (3, 2) and (1, 4).</p><details><summary>Hint</summary>ad − bc.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Formula</summary><p>3 · 4 − 2 · 1 = 10.</p></details>
+<details><summary>Method: Area</summary><p>It is the area of the parallelogram spanned by (3, 2) and (1, 4).</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem p11.</b> Find the determinant of the matrix with rows (2, 0, 1), (1, 3, 2) and (0, 1, 4).</p><details><summary>Hint</summary>Expand along the first row.</details><details><summary>Answer</summary>21</details>
+<details><summary>Method: Expansion</summary><p>2(12 − 2) − 0 + 1(1 − 0) = 20 + 1 = 21.</p></details>
+<details><summary>Method: Column expansion</summary><p>Expanding along the first column: 2(3 · 4 − 2 · 1) − 1(0 · 4 − 1 · 1) + 0 = 20 + 1 = 21.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem p12.</b> Let A have rows (1, 2) and (3, 4). Find the trace of A².</p><details><summary>Hint</summary>Multiply A by itself.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Multiply</summary><p>A² has rows (7, 10) and (15, 22), with trace 29.</p></details>
+<details><summary>Method: Identity</summary><p>tr(A²) = tr(A)² − 2 det A = 25 − 2(−2) = 29.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem p13.</b> The matrix with rows (2, 1) and (5, 3) has an inverse. Find the sum of the entries of the inverse.</p><details><summary>Hint</summary>Swap the diagonal, negate the others, divide by the determinant.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Formula</summary><p>The determinant is 1, so the inverse has rows (3, −1) and (−5, 2), with entry sum −1.</p></details>
+<details><summary>Method: Check</summary><p>(2, 1) · (3, −5) = 1 and (2, 1) · (−1, 2) = 0.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem p14.</b> Let A have rows (1, 1) and (0, 1). Find the top-right entry of A¹⁰.</p><details><summary>Hint</summary>Compute A², A³.</details><details><summary>Answer</summary>10</details>
+<details><summary>Method: Pattern</summary><p>Aⁿ has rows (1, n) and (0, 1), so the entry is 10.</p></details>
+<details><summary>Method: Induction</summary><p>Multiplying Aⁿ by A adds 1 to the top-right entry.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem p15.</b> Let M have rows (1, 1) and (1, 0). Find the top-left entry of M⁸.</p><details><summary>Hint</summary>Powers of the Fibonacci matrix.</details><details><summary>Answer</summary>34</details>
+<details><summary>Method: Fibonacci</summary><p>Mⁿ has top-left entry Fₙ₊₁, so M⁸ gives F₉ = 34.</p></details>
+<details><summary>Method: Squaring</summary><p>M² has rows (2, 1), (1, 1); M⁴ has (5, 3), (3, 2); M⁸ has top-left 5 · 5 + 3 · 3 = 34.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem p16.</b> A 3 × 3 matrix A has determinant 5. Find det(2A).</p><details><summary>Hint</summary>Each row is doubled.</details><details><summary>Answer</summary>40</details>
+<details><summary>Method: Scaling</summary><p>Doubling each of 3 rows multiplies the determinant by 2³ = 8, giving 40.</p></details>
+<details><summary>Method: Example</summary><p>For the identity matrix I the determinant of 2I is 8.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem p17.</b> Find the area of the triangle with vertices (0, 0), (3, 1) and (1, 4).</p><details><summary>Hint</summary>Half the absolute determinant of the two edge vectors.</details><details><summary>Answer</summary>11/2</details>
+<details><summary>Method: Determinant</summary><p>|3 · 4 − 1 · 1|/2 = 11/2.</p></details>
+<details><summary>Method: Shoelace</summary><p>|0 + 3 · 4 + 1 · 0 − (0 + 1 · 1 + 4 · 0)|/2 = 11/2.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem x18.</b> Find the area of the triangle with vertices (-2, 1), (4, -3) and (5, 6).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Shoelace</summary><p>|-2(-3 − 6) + 4(6 − 1) + 5(1 − -3)|/2 = 29.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (6, -4) and (7, 5); half the absolute value of 6 · 5 − -4 · 7 is 29.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem x19.</b> The roots of x² − 11x + 5 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>111</details>
+<details><summary>Method: Vieta</summary><p>r + s = 11 and rs = 5, so r² + s² = (r + s)² − 2rs = 121 − 10 = 111.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 11 and p₂ = 11 · p₁ − 5 · p₀ = 121 − 10 = 111.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem x20.</b> Find the area of the triangle with vertices (0, 0), (6, 2) and (2, 7).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: Shoelace</summary><p>|0(2 − 7) + 6(7 − 0) + 2(0 − 2)|/2 = 19.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (6, 2) and (2, 7); half the absolute value of 6 · 7 − 2 · 2 is 19.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem x21.</b> The roots of x² − 12x + 20 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>104</details>
+<details><summary>Method: Vieta</summary><p>r + s = 12 and rs = 20, so r² + s² = (r + s)² − 2rs = 144 − 40 = 104.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 12 and p₂ = 12 · p₁ − 20 · p₀ = 144 − 40 = 104.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem x22.</b> Find the area of the triangle with vertices (1, 1), (9, 3) and (4, 8).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Shoelace</summary><p>|1(3 − 8) + 9(8 − 1) + 4(1 − 3)|/2 = 25.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (8, 2) and (3, 7); half the absolute value of 8 · 7 − 2 · 3 is 25.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem x23.</b> The roots of x² − 7x + 10 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Vieta</summary><p>r + s = 7 and rs = 10, so r² + s² = (r + s)² − 2rs = 49 − 20 = 29.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 7 and p₂ = 7 · p₁ − 10 · p₀ = 49 − 20 = 29.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem x24.</b> Find the area of the triangle with vertices (2, -1), (8, 5) and (0, 6).</p><details><summary>Hint</summary>Shoelace formula.</details><details><summary>Answer</summary>27</details>
+<details><summary>Method: Shoelace</summary><p>|2(5 − 6) + 8(6 − -1) + 0(-1 − 5)|/2 = 27.</p></details>
+<details><summary>Method: Cross product</summary><p>The edge vectors are (6, 6) and (-2, 7); half the absolute value of 6 · 7 − 6 · -2 is 27.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>
+<div class=p><p><b>Problem x25.</b> The roots of x² − 9x + 14 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>53</details>
+<details><summary>Method: Vieta</summary><p>r + s = 9 and rs = 14, so r² + s² = (r + s)² − 2rs = 81 − 28 = 53.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 9 and p₂ = 9 · p₁ − 14 · p₀ = 81 − 28 = 53.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, 2.9; AoPS Volume 2 ch. 10-11</p></div>

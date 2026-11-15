@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 107</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 107: Unit 107: No square is negative; look at the endpoints</h1><p class=ref>Book: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2 (25 problems)<br>Andreescu &amp; Gelca, Mathematical Olympiad Challenges, sections 2.1 (No Square Is Negative) and 2.2 (Look at the Endpoints).</p>
+<h2>Reading</h2>
+<h3>1. No square is negative</h3><p>For real x, x² ≥ 0, with equality only at x = 0. So a sum of squares is zero only if every square is zero. This simple fact solves many problems: completing the square shows the minimum of an expression and the equality case.</p><p><b>Worked example 1.</b> Solve x² + y² − 4x + 6y + 13 = 0. Complete the squares: (x − 2)² + (y + 3)² = 0, because 4 + 9 = 13. So x = 2, y = −3, the only solution.</p><p><b>Worked example 2.</b> The minimum of x² − 6x + 11 is 2, at x = 3, since x² − 6x + 11 = (x − 3)² + 2.</p><p><b>Worked example 3.</b> For real a, b: a² + b² ≥ 2ab, since (a − b)² ≥ 0, with equality only when a = b. Hence a² + b² ≥ 2ab leads to AM-GM for two numbers.</p>
+<h3>2. Look at the endpoints</h3><p>A <b>linear</b> function on an interval attains its maximum and minimum at the endpoints. A <b>convex</b> function (for instance x²) attains its maximum on an interval at an endpoint, and a concave function attains its minimum at an endpoint. More generally, in an optimisation problem with several variables, the extreme often occurs when variables are pushed to their extreme values (a boundary).</p><p><b>Worked example.</b> For x + y = 10 with x, y ≥ 0 the product xy = x(10 − x) is concave, with maximum 25 at x = 5 and minimum 0 at the endpoints x = 0 or x = 10. The sum x² + y² = x² + (10 − x)² is convex: minimum 50 at x = 5, maximum 100 at the endpoints.</p><p><b>Worked example (a linear expression on a polygon).</b> To maximise 3x + 2y on the triangle with corners (0, 0), (4, 0), (0, 5): evaluate at corners: 0, 12, 10. The maximum is 12 at (4, 0).</p>
+<h3>3. Extreme choices and inequalities</h3><p>If a quantity is largest or smallest at some configuration, an <b>extremal argument</b> considers that configuration and derives a contradiction or a property. In inequality problems write the difference as a sum of squares: for instance a² + b² + c² − ab − bc − ca = ½[(a − b)² + (b − c)² + (c − a)²] ≥ 0.</p><p><b>Worked example.</b> Show a² + b² + c² ≥ ab + bc + ca. The identity above gives it immediately, with equality iff a = b = c. For a = 1, b = 2, c = 3: 14 ≥ 11, and the difference 3 = ½(1 + 1 + 4) = 3 ✓.</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Using real-number facts for complex numbers (squares can be negative there). Claiming a boundary maximum without checking that the function is convex. Forgetting to check the equality case is attainable.</p><p><b>Checks.</b> Substitute the claimed extremal point.</p><p><b>Practice.</b> Complete the square first, then ask where each square can be zero.</p>
+<h3>Worked examples with Try-its: Squares are never negative</h3><p>For real x, x² ≥ 0 with equality only at 0. This gives sharp inequalities quickly: x² − 6x + 13 = (x − 3)² + 4 ≥ 4, so its minimum is 4. For real a, b, c: a² + b² + c² − ab − bc − ca = ½[(a − b)² + (b − c)² + (c − a)²] ≥ 0, with equality only when a = b = c. Also a² + b² ≥ 2ab.</p><details class="try"><summary>Try it<p>Find the minimum of x² + 4x + 9.</p><p><b>Answer.</b> (x + 2)² + 5 ≥ 5, so the minimum is 5 at x = −2.</p></details>
+<h3>Worked examples with Try-its: Looking at the endpoints</h3><p>A continuous or linear expression on an interval takes its extreme values at endpoints. For f(x) = 3x − 5 on [1, 4] the range is [−2, 7]. For a convex expression such as a product xy with x + y fixed, the extremes are at the middle (maximum) and the ends (minimum). In integer problems check the smallest and largest allowed values first.</p><details class="try"><summary>Try it<p>What is the maximum of x(10 − x) for integers x from 0 to 10, and where is the minimum?</p><p><b>Answer.</b> 25 at x = 5; minimum 0 at x = 0 or 10.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> If x and y are real and x² + y² = 8, find the largest possible value of x + y. <b>Solution.</b> (x + y)² = 8 + 2xy ≤ 8 + (x² + y²) = 16 since 2xy ≤ x² + y², so x + y ≤ 4, attained at x = y = 2.</p><p><b>Reflection.</b> The inequality (x − y)² ≥ 0 does all the work.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Completing squares.</b> x² + y² − 2x + 4y = (x − 1)² + (y + 2)² − 5 ≥ −5, with equality at (1, −2). <b>Absolute values.</b> |x − 1| + |x − 5| is the sum of distances from x to 1 and to 5, so it is at least 4, with equality for 1 ≤ x ≤ 5. <b>Endpoints.</b> A linear function such as 2x − 3 on [0, 5] ranges from −3 to 7.</p><details class="try"><summary>Try it<p>Find the minimum of x² − 8x + 20.</p><p><b>Answer.</b> (x − 4)² + 4, so 4.</p></details><details class="try"><summary>Try it<p>Find the minimum of |x + 2| + |x − 3|.</p><p><b>Answer.</b> 5.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> Show that a² + b² + 1 ≥ ab + a + b for all real a, b. <b>Solution.</b> Twice the difference is (a − b)² + (a − 1)² + (b − 1)² ≥ 0, so the inequality holds, with equality when a = b = 1.</p><p><b>Check.</b> At a = b = 1: 3 ≥ 3 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find the minimum value of x² + y² − 4x + 6y + 20 over real x and y.</p><details><summary>Hint</summary>Complete the square in each variable.</details><details><summary>Answer</summary>7</details>
+<details><summary>Method: Completing squares</summary><p>(x − 2)² + (y + 3)² + 7, which is at least 7, with equality at (2, −3).</p></details>
+<details><summary>Method: Check</summary><p>At (2, −3): 4 + 9 − 8 − 18 + 20 = 7.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem p2.</b> What is the largest value of 10x − x² over real x?</p><details><summary>Hint</summary>Complete the square.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Square</summary><p>25 − (x − 5)² ≤ 25.</p></details>
+<details><summary>Method: Vertex</summary><p>The vertex is at x = 5, where the value is 50 − 25 = 25.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem p3.</b> Real numbers satisfy x² + y² + z² − 2x + 4y − 6z + 14 = 0. Find x + y + z.</p><details><summary>Hint</summary>Write it as a sum of squares equal to zero.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Squares</summary><p>(x − 1)² + (y + 2)² + (z − 3)² = 0, so x = 1, y = −2, z = 3 and x + y + z = 2.</p></details>
+<details><summary>Method: Check</summary><p>1 + 4 + 9 − 2 − 8 − 18 + 14 = 0.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem p4.</b> What is the minimum of x² + 1/x² for x > 0?</p><details><summary>Hint</summary>(x − 1/x)² ≥ 0.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Square</summary><p>x² + 1/x² = (x − 1/x)² + 2 ≥ 2, with equality at x = 1.</p></details>
+<details><summary>Method: AM-GM</summary><p>x² + 1/x² ≥ 2√(x² · 1/x²) = 2.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem p5.</b> What is the maximum of f(x) = x³ − 3x on the interval [0, 2]?</p><details><summary>Hint</summary>Compare the endpoints and the turning point x = 1.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Candidates</summary><p>f(0) = 0, f(1) = −2, f(2) = 2, so the maximum is 2 at the endpoint x = 2.</p></details>
+<details><summary>Method: Derivative</summary><p>f'(x) = 3x² − 3 is zero at x = 1, which is a minimum, so the maximum is at an endpoint.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem p6.</b> What is the minimum of |x − 1| + |x − 4| + |x − 9| over real x?</p><details><summary>Hint</summary>The minimum is at the median.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Median</summary><p>At x = 4: 3 + 0 + 5 = 8.</p></details>
+<details><summary>Method: Pieces</summary><p>The slope changes sign at x = 4, so the minimum is 8.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem p7.</b> What is the largest value of x(6 − x) for x between 4 and 6?</p><details><summary>Hint</summary>The parabola's vertex is at x = 3.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Endpoint</summary><p>The parabola is decreasing on [4, 6], so the maximum is at x = 4: 4 · 2 = 8.</p></details>
+<details><summary>Method: Check</summary><p>The vertex x = 3 is outside the interval.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem p8.</b> What is the minimum of x² − 6x + 10 on the interval [4, 6]?</p><details><summary>Hint</summary>The function is increasing there.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Endpoint</summary><p>(x − 3)² + 1 increases for x ≥ 3, so the minimum is at x = 4: 16 − 24 + 10 = 2.</p></details>
+<details><summary>Method: Check</summary><p>At x = 6 the value is 10.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem p9.</b> How many real pairs (x, y) satisfy x² + y² + 2x − 4y + 5 = 0?</p><details><summary>Hint</summary>Complete both squares.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Squares</summary><p>(x + 1)² + (y − 2)² = 0, so only (−1, 2): 1 pair.</p></details>
+<details><summary>Method: Check</summary><p>1 + 4 − 2 − 8 + 5 = 0.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem p10.</b> Find the minimum value of x² − 6x + 13.</p><details><summary>Hint</summary>Complete the square.</details><details><summary>Answer</summary>4</details>
+<details><summary>Method: Square</summary><p>(x − 3)² + 4 ≥ 4.</p></details>
+<details><summary>Method: Vertex</summary><p>The vertex is at x = 3 with value 9 − 18 + 13 = 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem p11.</b> Find the maximum value of 5 − (x − 2)².</p><details><summary>Hint</summary>A square is non-negative.</details><details><summary>Answer</summary>5</details>
+<details><summary>Method: Square</summary><p>(x − 2)² ≥ 0, so the expression is at most 5.</p></details>
+<details><summary>Method: Check</summary><p>Equality at x = 2.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem p12.</b> Real numbers satisfy x² + y² − 4x + 6y + 13 = 0. Find x + y.</p><details><summary>Hint</summary>Complete both squares.</details><details><summary>Answer</summary>-1</details>
+<details><summary>Method: Squares</summary><p>(x − 2)² + (y + 3)² = 0, so x = 2 and y = −3, giving x + y = −1.</p></details>
+<details><summary>Method: Check</summary><p>4 + 9 − 8 − 18 + 13 = 0.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem p13.</b> Find the minimum value of x² + y² − 2x − 4y + 7.</p><details><summary>Hint</summary>Complete the squares.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Squares</summary><p>(x − 1)² + (y − 2)² + 2 ≥ 2.</p></details>
+<details><summary>Method: Check</summary><p>At (1, 2): 1 + 4 − 2 − 8 + 7 = 2.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem p14.</b> If a² + b² = 50 for real numbers, what is the largest possible value of ab?</p><details><summary>Hint</summary>(a − b)² ≥ 0.</details><details><summary>Answer</summary>25</details>
+<details><summary>Method: Inequality</summary><p>2ab ≤ a² + b² = 50, so ab ≤ 25.</p></details>
+<details><summary>Method: Equality</summary><p>a = b = 5.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem p15.</b> How many real pairs (x, y) satisfy x² + 4y² − 4x + 8y + 8 = 0?</p><details><summary>Hint</summary>Complete the squares.</details><details><summary>Answer</summary>1</details>
+<details><summary>Method: Squares</summary><p>(x − 2)² + 4(y + 1)² = 0, so x = 2, y = −1 only.</p></details>
+<details><summary>Method: Check</summary><p>4 + 4 − 8 − 8 + 8 = 0.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem p16.</b> What is the minimum of x + 1/x for positive x?</p><details><summary>Hint</summary>(√x − 1/√x)² ≥ 0.</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Square</summary><p>x + 1/x − 2 = (√x − 1/√x)² ≥ 0.</p></details>
+<details><summary>Method: AM-GM</summary><p>x + 1/x ≥ 2√1 = 2.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem p17.</b> Find the minimum of |x − 1| + |x − 5| + |x − 9| over real x.</p><details><summary>Hint</summary>Median.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: Median</summary><p>The minimum is at the middle point x = 5: 4 + 0 + 4 = 8.</p></details>
+<details><summary>Method: Pairing</summary><p>|x − 1| + |x − 9| ≥ 8 and |x − 5| ≥ 0, with equality at x = 5.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem x18.</b> What is the smallest value of x + 81/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>18</details>
+<details><summary>Method: AM-GM</summary><p>x + 81/x ≥ 2√81 = 18, with equality when x = 9.</p></details>
+<details><summary>Method: Table</summary><p>x = 8, 9, 10 give 145/8, 18, 181/10; the minimum is 18 at x = 9.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem x19.</b> The roots of x² − 12x + 20 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>104</details>
+<details><summary>Method: Vieta</summary><p>r + s = 12 and rs = 20, so r² + s² = (r + s)² − 2rs = 144 − 40 = 104.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 12 and p₂ = 12 · p₁ − 20 · p₀ = 144 − 40 = 104.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem x20.</b> What is the smallest value of x + 100/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>20</details>
+<details><summary>Method: AM-GM</summary><p>x + 100/x ≥ 2√100 = 20, with equality when x = 10.</p></details>
+<details><summary>Method: Table</summary><p>x = 9, 10, 11 give 181/9, 20, 221/11; the minimum is 20 at x = 10.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem x21.</b> The roots of x² − 7x + 10 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Vieta</summary><p>r + s = 7 and rs = 10, so r² + s² = (r + s)² − 2rs = 49 − 20 = 29.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 7 and p₂ = 7 · p₁ − 10 · p₀ = 49 − 20 = 29.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem x22.</b> What is the smallest value of x + 9/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: AM-GM</summary><p>x + 9/x ≥ 2√9 = 6, with equality when x = 3.</p></details>
+<details><summary>Method: Table</summary><p>x = 2, 3, 4 give 13/2, 6, 25/4; the minimum is 6 at x = 3.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem x23.</b> The roots of x² − 9x + 14 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>53</details>
+<details><summary>Method: Vieta</summary><p>r + s = 9 and rs = 14, so r² + s² = (r + s)² − 2rs = 81 − 28 = 53.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 9 and p₂ = 9 · p₁ − 14 · p₀ = 81 − 28 = 53.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem x24.</b> What is the smallest value of x + 16/x for x > 0?</p><details><summary>Hint</summary>AM-GM.</details><details><summary>Answer</summary>8</details>
+<details><summary>Method: AM-GM</summary><p>x + 16/x ≥ 2√16 = 8, with equality when x = 4.</p></details>
+<details><summary>Method: Table</summary><p>x = 3, 4, 5 give 25/3, 8, 41/5; the minimum is 8 at x = 4.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>
+<div class=p><p><b>Problem x25.</b> The roots of x² − 5x + 3 = 0 are r and s. Find r² + s².</p><details><summary>Hint</summary>Use r + s and rs.</details><details><summary>Answer</summary>19</details>
+<details><summary>Method: Vieta</summary><p>r + s = 5 and rs = 3, so r² + s² = (r + s)² − 2rs = 25 − 6 = 19.</p></details>
+<details><summary>Method: Recurrence</summary><p>Let pₙ = rⁿ + sⁿ. Then p₀ = 2, p₁ = 5 and p₂ = 5 · p₁ − 3 · p₀ = 25 − 6 = 19.</p></details>
+<p class=ref>Source: Andreescu &amp; Gelca, Mathematical Olympiad Challenges, 2.1-2.2</p></div>

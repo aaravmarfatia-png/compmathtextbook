@@ -1,0 +1,108 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 144</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 144: Unit 144: Putnam toolbox: matrices, series and integrals</h1><p class=ref>Book: Gelca &amp; Andreescu, Putnam and Beyond (25 problems)<br>Gelca &amp; Andreescu, Putnam and Beyond, 2.3 (linear algebra: determinants 2.3.2, eigenvalues 2.3.6, Cayley–Hamilton 2.3.7), 3.1 (sequences and series) and 3.2.8–3.2.10 (integrals).</p>
+<h2>Reading</h2>
+<h3>1. Linear algebra tools</h3><p>For a 2×2 matrix the eigenvalues satisfy λ₁ + λ₂ = trace and λ₁λ₂ = determinant, so λ₁² + λ₂² = tr² − 2det: for [[3,1],[2,4]] that is 49 − 20 = 29. Powers of [[1,1],[1,0]] contain Fibonacci numbers: M⁵ = [[8,5],[5,3]]. The number of invertible 2×2 matrices mod p is (p² − 1)(p² − p); for p = 2 it is 3 · 2 = 6.</p><details class="try"><summary>Try it<p>tr and det of [[2,0],[1,3]]?</p><p><b>Answer.</b> 5 and 6.</p></details><details class="try"><summary>Try it<p>Top-left entry of M⁴?</p><p><b>Answer.</b> F₅ = 5.</p></details>
+<h3>2. Series, integrals and binomial sums</h3><p>Σ n xⁿ = x/(1 − x)²; at x = 1/2 this is 2. The Beta integral gives ∫₀¹ x²(1 − x) dx = 2!1!/4! = 1/12 (also 1/3 − 1/4 = 1/12 ✓). Σ k C(n,k) = n2ⁿ⁻¹ and Σ(−1)ᵏ C(n,k)(n − k)ⁿ = n!: for n = 3, 27 − 3·8 + 3·1 − 0 = 6 ✓.</p><details class="try"><summary>Try it<p>Σ n/3ⁿ?</p><p><b>Answer.</b> 3/4.</p></details><details class="try"><summary>Try it<p>Σ k C(4,k)?</p><p><b>Answer.</b> 32.</p></details>
+<h3>3. A worked problem</h3><p><b>Problem.</b> Find the determinant of [[2,1],[3,4]]³ without multiplying matrices. <b>Solution.</b> det(M³) = (det M)³ = 5³ = 125.</p><p><b>Check.</b> det M = 8 − 3 = 5 ✓; M² = [[7,6],[18,19]] has determinant 133 − 108 = 25 = 5² ✓.</p>
+<h3>4. In the books</h3><p><b>Chapter 2.3 (linear algebra).</b> Operations with matrices (2.3.1), determinants (2.3.2), the inverse of a matrix (2.3.3), systems of equations (2.3.4), vector spaces (2.3.5), linear transformations, eigenvalues and eigenvectors (2.3.6), the Cayley–Hamilton and Perron–Frobenius theorems (2.3.7).</p><p><b>Chapter 3.</b> 3.1.2 linear recursive sequences (the Fibonacci matrix is the standard example), 3.1.5 series, 3.1.6 telescopic series and products, 3.2.8 definite integrals, 3.2.10 inequalities for integrals. <b>Chapter 6.2.1</b> covers combinatorial identities such as Σ k·C(n,k).</p><p><b>Honest note.</b> The book targets undergraduate level and is much broader (abstract algebra, ODEs, multivariable calculus). My unit is a small sample.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> Find the determinant of the matrix with rows 2, 1, 3; 0, 4, 1; 5, 2, 6.</p><details><summary>Hint</summary>Expand along the first row.</details><details><summary>Answer</summary>-11</details>
+<details><summary>Method: Cofactors</summary><p>Expand along the first row: -11.</p></details>
+<details><summary>Method: Row reduction</summary><p>Reduce to triangular form using row operations (tracking row scaling): the determinant is -11.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p2.</b> Find the determinant of the matrix with rows 1, 2, 0; 3, 1, 4; 2, 5, 1.</p><details><summary>Hint</summary>Expand along the first row.</details><details><summary>Answer</summary>-9</details>
+<details><summary>Method: Cofactors</summary><p>Expand along the first row: -9.</p></details>
+<details><summary>Method: Row reduction</summary><p>Reduce to triangular form using row operations (tracking row scaling): the determinant is -9.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p3.</b> Find the determinant of the matrix with rows 4, 0, 1; 2, 3, 2; 1, 1, 5.</p><details><summary>Hint</summary>Expand along the first row.</details><details><summary>Answer</summary>51</details>
+<details><summary>Method: Cofactors</summary><p>Expand along the first row: 51.</p></details>
+<details><summary>Method: Row reduction</summary><p>Reduce to triangular form using row operations (tracking row scaling): the determinant is 51.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p4.</b> Find the determinant of the matrix with rows 3, 1, 2; 1, 4, 0; 2, 2, 3.</p><details><summary>Hint</summary>Expand along the first row.</details><details><summary>Answer</summary>21</details>
+<details><summary>Method: Cofactors</summary><p>Expand along the first row: 21.</p></details>
+<details><summary>Method: Row reduction</summary><p>Reduce to triangular form using row operations (tracking row scaling): the determinant is 21.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p5.</b> Let M = [[1,1],[1,0]]. Find the top-left entry of M^10.</p><details><summary>Hint</summary>The entries of Mⁿ are consecutive Fibonacci numbers.</details><details><summary>Answer</summary>89</details>
+<details><summary>Method: Fibonacci</summary><p>Mⁿ = [[F_(n+1), F_n],[F_n, F_(n−1)]], so the entry is F_11 = 89.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Compute M², M⁴, M⁸ and combine: the entry is 89.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p6.</b> Let M = [[1,1],[1,0]]. Find the top-left entry of M^15.</p><details><summary>Hint</summary>The entries of Mⁿ are consecutive Fibonacci numbers.</details><details><summary>Answer</summary>987</details>
+<details><summary>Method: Fibonacci</summary><p>Mⁿ = [[F_(n+1), F_n],[F_n, F_(n−1)]], so the entry is F_16 = 987.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Compute M², M⁴, M⁸ and combine: the entry is 987.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p7.</b> Let M = [[1,1],[1,0]]. Find the top-left entry of M^20.</p><details><summary>Hint</summary>The entries of Mⁿ are consecutive Fibonacci numbers.</details><details><summary>Answer</summary>10946</details>
+<details><summary>Method: Fibonacci</summary><p>Mⁿ = [[F_(n+1), F_n],[F_n, F_(n−1)]], so the entry is F_21 = 10946.</p></details>
+<details><summary>Method: Repeated squaring</summary><p>Compute M², M⁴, M⁸ and combine: the entry is 10946.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p8.</b> The matrix [[3,1],[2,4]] has eigenvalues λ₁ and λ₂. Find λ₁² + λ₂².</p><details><summary>Hint</summary>The sum of the eigenvalues is the trace and the product is the determinant.</details><details><summary>Answer</summary>29</details>
+<details><summary>Method: Trace and determinant</summary><p>λ₁ + λ₂ = 7 and λ₁λ₂ = 10, so λ₁² + λ₂² = 49 − 20 = 29.</p></details>
+<details><summary>Method: Solve the characteristic equation</summary><p>λ² − 7λ + 10 = 0 gives the two eigenvalues; their squares add to 29.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p9.</b> The matrix [[5,2],[1,3]] has eigenvalues λ₁ and λ₂. Find λ₁² + λ₂².</p><details><summary>Hint</summary>The sum of the eigenvalues is the trace and the product is the determinant.</details><details><summary>Answer</summary>38</details>
+<details><summary>Method: Trace and determinant</summary><p>λ₁ + λ₂ = 8 and λ₁λ₂ = 13, so λ₁² + λ₂² = 64 − 26 = 38.</p></details>
+<details><summary>Method: Solve the characteristic equation</summary><p>λ² − 8λ + 13 = 0 gives the two eigenvalues; their squares add to 38.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p10.</b> The matrix [[2,-1],[3,4]] has eigenvalues λ₁ and λ₂. Find λ₁² + λ₂².</p><details><summary>Hint</summary>The sum of the eigenvalues is the trace and the product is the determinant.</details><details><summary>Answer</summary>14</details>
+<details><summary>Method: Trace and determinant</summary><p>λ₁ + λ₂ = 6 and λ₁λ₂ = 11, so λ₁² + λ₂² = 36 − 22 = 14.</p></details>
+<details><summary>Method: Solve the characteristic equation</summary><p>λ² − 6λ + 11 = 0 gives the two eigenvalues; their squares add to 14.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p11.</b> Find Σ_{n=1}^∞ n/2^n. (fraction)</p><details><summary>Hint</summary>Differentiate the geometric series Σ xⁿ = x/(1 − x).</details><details><summary>Answer</summary>2</details>
+<details><summary>Method: Differentiate</summary><p>With x = 1/2: Σ n xⁿ = x/(1 − x)² = 2.</p></details>
+<details><summary>Method: Shift trick</summary><p>S = Σ n/2^n satisfies 2S − S = Σ 1/2^n·(…) ; solving gives S = 2.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p12.</b> Find Σ_{n=1}^∞ n/3^n. (fraction)</p><details><summary>Hint</summary>Differentiate the geometric series Σ xⁿ = x/(1 − x).</details><details><summary>Answer</summary>3/4</details>
+<details><summary>Method: Differentiate</summary><p>With x = 1/3: Σ n xⁿ = x/(1 − x)² = 3/4.</p></details>
+<details><summary>Method: Shift trick</summary><p>S = Σ n/3^n satisfies 3S − S = Σ 1/3^n·(…) ; solving gives S = 3/4.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p13.</b> Find Σ_{n=1}^∞ n/4^n. (fraction)</p><details><summary>Hint</summary>Differentiate the geometric series Σ xⁿ = x/(1 − x).</details><details><summary>Answer</summary>4/9</details>
+<details><summary>Method: Differentiate</summary><p>With x = 1/4: Σ n xⁿ = x/(1 − x)² = 4/9.</p></details>
+<details><summary>Method: Shift trick</summary><p>S = Σ n/4^n satisfies 4S − S = Σ 1/4^n·(…) ; solving gives S = 4/9.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p14.</b> Compute ∫₀¹ x^3 (1 − x)^2 dx. (fraction)</p><details><summary>Hint</summary>Beta integral: ∫ x^a(1 − x)^b = a!b!/(a + b + 1)!.</details><details><summary>Answer</summary>1/60</details>
+<details><summary>Method: Beta integral</summary><p>3!·2!/6! = 1/60.</p></details>
+<details><summary>Method: Expand</summary><p>Multiply out (1 − x)^2 and integrate term by term: 1/60.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p15.</b> Compute ∫₀¹ x^4 (1 − x)^3 dx. (fraction)</p><details><summary>Hint</summary>Beta integral: ∫ x^a(1 − x)^b = a!b!/(a + b + 1)!.</details><details><summary>Answer</summary>1/280</details>
+<details><summary>Method: Beta integral</summary><p>4!·3!/8! = 1/280.</p></details>
+<details><summary>Method: Expand</summary><p>Multiply out (1 − x)^3 and integrate term by term: 1/280.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p16.</b> Compute ∫₀¹ x^5 (1 − x)^2 dx. (fraction)</p><details><summary>Hint</summary>Beta integral: ∫ x^a(1 − x)^b = a!b!/(a + b + 1)!.</details><details><summary>Answer</summary>1/168</details>
+<details><summary>Method: Beta integral</summary><p>5!·2!/8! = 1/168.</p></details>
+<details><summary>Method: Expand</summary><p>Multiply out (1 − x)^2 and integrate term by term: 1/168.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p17.</b> How many 2×2 matrices with entries mod 2 have a non-zero determinant mod 2?</p><details><summary>Hint</summary>Count the possible rows one at a time.</details><details><summary>Answer</summary>6</details>
+<details><summary>Method: Rows</summary><p>The first row can be any non-zero vector (3 choices); the second any vector not in its span (2): 6.</p></details>
+<details><summary>Method: Brute force</summary><p>Check all 16 matrices: 6 are invertible.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p18.</b> How many 2×2 matrices with entries mod 3 have a non-zero determinant mod 3?</p><details><summary>Hint</summary>Count the possible rows one at a time.</details><details><summary>Answer</summary>48</details>
+<details><summary>Method: Rows</summary><p>The first row can be any non-zero vector (8 choices); the second any vector not in its span (6): 48.</p></details>
+<details><summary>Method: Brute force</summary><p>Check all 81 matrices: 48 are invertible.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p19.</b> How many 2×2 matrices with entries mod 5 have a non-zero determinant mod 5?</p><details><summary>Hint</summary>Count the possible rows one at a time.</details><details><summary>Answer</summary>480</details>
+<details><summary>Method: Rows</summary><p>The first row can be any non-zero vector (24 choices); the second any vector not in its span (20): 480.</p></details>
+<details><summary>Method: Brute force</summary><p>Check all 625 matrices: 480 are invertible.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p20.</b> Compute Σ k·C(8, k) for k = 0, …, 8.</p><details><summary>Hint</summary>Use k·C(n,k) = n·C(n − 1, k − 1), or differentiate (1 + x)^8.</details><details><summary>Answer</summary>1024</details>
+<details><summary>Method: Differentiate</summary><p>d/dx(1 + x)^8 at x = 1 is 8·2^7 = 1024.</p></details>
+<details><summary>Method: Symmetry</summary><p>k and n − k pair up with the same coefficient, so the average k is 8/2 and the total is 8·2^8/2 = 1024.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p21.</b> Compute Σ k·C(10, k) for k = 0, …, 10.</p><details><summary>Hint</summary>Use k·C(n,k) = n·C(n − 1, k − 1), or differentiate (1 + x)^10.</details><details><summary>Answer</summary>5120</details>
+<details><summary>Method: Differentiate</summary><p>d/dx(1 + x)^10 at x = 1 is 10·2^9 = 5120.</p></details>
+<details><summary>Method: Symmetry</summary><p>k and n − k pair up with the same coefficient, so the average k is 10/2 and the total is 10·2^10/2 = 5120.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p22.</b> Compute Σ k·C(12, k) for k = 0, …, 12.</p><details><summary>Hint</summary>Use k·C(n,k) = n·C(n − 1, k − 1), or differentiate (1 + x)^12.</details><details><summary>Answer</summary>24576</details>
+<details><summary>Method: Differentiate</summary><p>d/dx(1 + x)^12 at x = 1 is 12·2^11 = 24576.</p></details>
+<details><summary>Method: Symmetry</summary><p>k and n − k pair up with the same coefficient, so the average k is 12/2 and the total is 12·2^12/2 = 24576.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p23.</b> Compute Σ_{k=0}^4 (−1)^k C(4,k)(4 − k)^4.</p><details><summary>Hint</summary>Count surjections or take an n-th finite difference of xⁿ.</details><details><summary>Answer</summary>24</details>
+<details><summary>Method: Finite difference</summary><p>The n-th difference of xⁿ is n! = 24.</p></details>
+<details><summary>Method: Inclusion–exclusion</summary><p>The sum counts functions from an n-set onto itself, i.e. permutations: 24.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p24.</b> Compute Σ_{k=0}^5 (−1)^k C(5,k)(5 − k)^5.</p><details><summary>Hint</summary>Count surjections or take an n-th finite difference of xⁿ.</details><details><summary>Answer</summary>120</details>
+<details><summary>Method: Finite difference</summary><p>The n-th difference of xⁿ is n! = 120.</p></details>
+<details><summary>Method: Inclusion–exclusion</summary><p>The sum counts functions from an n-set onto itself, i.e. permutations: 120.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>
+<div class=p><p><b>Problem p25.</b> Compute Σ_{k=0}^6 (−1)^k C(6,k)(6 − k)^6.</p><details><summary>Hint</summary>Count surjections or take an n-th finite difference of xⁿ.</details><details><summary>Answer</summary>720</details>
+<details><summary>Method: Finite difference</summary><p>The n-th difference of xⁿ is n! = 720.</p></details>
+<details><summary>Method: Inclusion–exclusion</summary><p>The sum counts functions from an n-set onto itself, i.e. permutations: 720.</p></details>
+<p class=ref>Source: Technique from Gelca &amp; Andreescu 2.3 and 3.1–3.2 (original problem)</p></div>

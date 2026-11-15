@@ -1,0 +1,113 @@
+<!doctype html><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Unit 124</title><style>body{font:17px/1.65 Georgia,serif;max-width:760px;margin:2rem auto;padding:0 1rem;color:#222}h1{font-size:1.7rem}h2{margin-top:2rem;border-bottom:1px solid #ccc}details{margin:.6rem 0;padding:.5rem .8rem;background:#f6f6f2;border-radius:6px}summary{cursor:pointer;font-weight:bold}.p{margin:1.4rem 0;padding-bottom:1rem;border-bottom:1px dotted #bbb}.ref{font-size:.9em;color:#555}nav a{margin-right:1rem}</style>
+<nav><a href="../index.html">Contents</a></nav><h1>Unit 124: Unit 124: Counting and combinatorial arguments</h1><p class=ref>Book: Zeitz ch. 6 (25 problems)<br>Zeitz, The Art and Craft of Problem Solving, chapter 6 (Combinatorics: counting, binomial coefficients, recursion, pigeonhole, inclusion-exclusion).</p>
+<h2>Reading</h2>
+<h3>1. Counting in two ways and basic identities</h3><p>Counting the same set in two different ways proves identities. <b>Σ C(n, k) = 2ⁿ</b> because both sides count subsets of an n-element set (the right side by yes/no for each element). <b>Pascal:</b> C(n, k) = C(n − 1, k − 1) + C(n − 1, k): choose a committee either including or excluding a particular person.</p><p><b>Hockey stick.</b> Σ_{i=2}^{n} C(i, 2) = C(n + 1, 3). For n = 5: 1 + 3 + 6 + 10 = 20 = C(6, 3) ✓. <b>Vandermonde.</b> Σ C(m, i) C(n, k − i) = C(m + n, k).</p><p><b>Worked example.</b> Show Σ k C(n, k) = n 2^{n−1}. Count pairs (committee, chairperson in it): choose the chair (n ways) then any subset of the others (2^{n−1}). For n = 4: 1·4 + 2·6 + 3·4 + 4·1 = 4 + 12 + 12 + 4 = 32 = 4 × 8 ✓.</p>
+<h3>2. Stars and bars, inclusion-exclusion</h3><p>The number of non-negative integer solutions of x₁ + … + x_k = n is C(n + k − 1, k − 1). For x₁ + x₂ + x₃ + x₄ = 10 it is C(13, 3) = 286.</p><p><b>Inclusion-exclusion.</b> |A ∪ B ∪ C| = |A| + |B| + |C| − |A∩B| − |A∩C| − |B∩C| + |A∩B∩C|. Among the numbers 1 to 100, the number divisible by 2, 3 or 5 is 50 + 33 + 20 − 16 − 10 − 6 + 3 = 74.</p><p><b>Derangements.</b> The number D_n of permutations with no fixed point satisfies D_n = (n − 1)(D_{n−1} + D_{n−2}): D₁ = 0, D₂ = 1, D₃ = 2, D₄ = 9, D₅ = 44.</p>
+<h3>3. Bijections and double counting</h3><p>A <b>bijection</b> pairs up two sets, proving they have the same size. The number of subsets of {1, …, n} of even size equals the number of odd size (for n ≥ 1): toggle element 1.</p><p><b>Double counting.</b> Count pairs (x, y) in two ways. A classic: in a graph the sum of the degrees is twice the number of edges. In a party of n people, the number of handshakes counted from each person's perspective sums to 2E.</p><p><b>Worked example.</b> A set of 10 points, no three collinear: the number of triangles is C(10, 3) = 120, and each pair of points lies in 8 of them: 45 × 8 = 360 = 120 × 3 ✓ (counting pairs inside triangles in two ways).</p>
+<h3>4. Mistakes, checks and how to practise</h3><p><b>Common mistakes.</b> Counting ordered arrangements when order should not matter. Forgetting to subtract overlaps. Using stars and bars with an upper bound without adjusting.</p><p><b>Checks.</b> Test with a tiny case you can list.</p><p><b>Practice.</b> Try to explain every identity with a committee story.</p>
+<h3>Worked examples with Try-its: Standard counting models</h3><p><b>Circular arrangements:</b> n people around a table, rotations equal, give (n − 1)!; for 5 people that is 24. <b>Repeated letters:</b> MISSISSIPPI has 11!/(4! 4! 2!) = 34650 arrangements. <b>Stars and bars:</b> distributing 10 identical candies among 4 children can be done in C(13, 3) = 286 ways. <b>Handshakes</b> among 10 people: C(10, 2) = 45.</p><details class="try"><summary>Try it<p>How many distinct arrangements of the letters in BANANA?</p><p><b>Answer.</b> 6!/(3! 2!) = 60.</p></details>
+<h3>Worked examples with Try-its: Choosing a method</h3><p>Ask: does order matter? Can items repeat? Are the objects identical? Is there a restriction better handled by subtracting the complement? A good habit is to count a small case by hand to validate the formula before using it.</p><details class="try"><summary>Try it<p>How many ways are there to choose a president and a vice-president from 8 people?</p><p><b>Answer.</b> 8 · 7 = 56.</p></details>
+<h3>Worked examples with Try-its: A longer problem</h3><p><b>Problem.</b> How many integer solutions with x, y, z ≥ 0 are there to x + y + z = 10 with each variable at most 6? <b>Solution.</b> Without the cap C(12, 2) = 66; subtract solutions where one variable is at least 7: 3 · C(5, 2) = 30; two variables cannot both be at least 7. Total 36.</p><p><b>Reflection.</b> Inclusion-exclusion handles the upper bounds.</p>
+<h3>More worked examples: Worked examples</h3><p><b>Arrangements.</b> 6!/(3! 2!) = 60 arrangements of the letters AAABBC. <b>Choosing.</b> C(9, 3) = 84 ways to choose 3 of 9. <b>Restrictions.</b> The permutations of 1 to 5 in which no two consecutive numbers (like 2 and 3) are adjacent number 14 (checked by listing all 120). <b>Stars and bars.</b> The number of ways to put 5 identical balls into 3 boxes is C(7, 2) = 21.</p><details class="try"><summary>Try it<p>How many ways can 4 people be seated in a row if two particular people must sit together?</p><p><b>Answer.</b> 3! · 2 = 12.</p></details><details class="try"><summary>Try it<p>How many 3-letter words (repeats allowed) can be formed from the letters A, B, C, D?</p><p><b>Answer.</b> 64.</p></details>
+<h3>More worked examples: A second longer problem</h3><p><b>Problem.</b> How many ways can 5 identical balls go into 3 distinct boxes with at most 3 in any box? <b>Solution.</b> Total C(7, 2) = 21; subtract those with a box holding at least 4: choose the box (3 ways), put 4 balls in it and place the fifth ball in any of the 3 boxes (3 ways), giving 3 · 3 = 9 such cases with no overlap. So 21 − 9 = 12.</p><p><b>Check.</b> Direct count: 3+2+0 and permutations (6), 3+1+1 (3), 2+2+1 (3): total 12 ✓.</p>
+<h2>Practice problems (25)</h2>
+<div class=p><p><b>Problem p1.</b> How many nonnegative integer solutions does x₁ + x₂ + … + x4 = 10 have?</p><details><summary>Hint</summary>Stars and bars.</details><details><summary>Answer</summary>286</details>
+<details><summary>Method: Stars and bars</summary><p>C(13, 3) = 286.</p></details>
+<details><summary>Method: Fix the last variable</summary><p>If the last variable is t, the others sum to 10 − t; adding the counts over t = 0 to 10 gives 286.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p2.</b> How many nonnegative integer solutions does x₁ + x₂ + … + x3 = 12 have?</p><details><summary>Hint</summary>Stars and bars.</details><details><summary>Answer</summary>91</details>
+<details><summary>Method: Stars and bars</summary><p>C(14, 2) = 91.</p></details>
+<details><summary>Method: Fix the last variable</summary><p>If the last variable is t, the others sum to 12 − t; adding the counts over t = 0 to 12 gives 91.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p3.</b> How many nonnegative integer solutions does x₁ + x₂ + … + x5 = 9 have?</p><details><summary>Hint</summary>Stars and bars.</details><details><summary>Answer</summary>715</details>
+<details><summary>Method: Stars and bars</summary><p>C(13, 4) = 715.</p></details>
+<details><summary>Method: Fix the last variable</summary><p>If the last variable is t, the others sum to 9 − t; adding the counts over t = 0 to 9 gives 715.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p4.</b> How many nonnegative integer solutions does x₁ + x₂ + … + x2 = 15 have?</p><details><summary>Hint</summary>Stars and bars.</details><details><summary>Answer</summary>16</details>
+<details><summary>Method: Stars and bars</summary><p>C(16, 1) = 16.</p></details>
+<details><summary>Method: Fix the last variable</summary><p>If the last variable is t, the others sum to 15 − t; adding the counts over t = 0 to 15 gives 16.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p5.</b> In how many ways can 6 letters be put into 6 addressed envelopes so that no letter is in its own envelope?</p><details><summary>Hint</summary>Derangements.</details><details><summary>Answer</summary>265</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>6!(1 − 1 + 1/2! − …) = +720 −720 +360 −120 +30 −6 +1 = 265.</p></details>
+<details><summary>Method: Recurrence</summary><p>Dₙ = (n − 1)(Dₙ₋₁ + Dₙ₋₂) gives 1, 0, 1, 2, 9, 44, 265, so D_6 = 265.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p6.</b> In how many ways can 7 letters be put into 7 addressed envelopes so that no letter is in its own envelope?</p><details><summary>Hint</summary>Derangements.</details><details><summary>Answer</summary>1854</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>7!(1 − 1 + 1/2! − …) = +5040 −5040 +2520 −840 +210 −42 +7 −1 = 1854.</p></details>
+<details><summary>Method: Recurrence</summary><p>Dₙ = (n − 1)(Dₙ₋₁ + Dₙ₋₂) gives 1, 0, 1, 2, 9, 44, 265, 1854, so D_7 = 1854.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p7.</b> How many integers from 1 to 500 are divisible by 6 or 15?</p><details><summary>Hint</summary>Inclusion-exclusion.</details><details><summary>Answer</summary>100</details>
+<details><summary>Method: Inclusion-exclusion</summary><p>83 + 33 − 16 = 100.</p></details>
+<details><summary>Method: Complement</summary><p>Integers divisible by neither number 500 − 100 = 400, and 500 − 400 = 100 divisible by at least one.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p8.</b> How many shortest lattice paths lead from (0, 0) to (7, 5) with steps right or up?</p><details><summary>Hint</summary>Choose the positions of the up-steps.</details><details><summary>Answer</summary>792</details>
+<details><summary>Method: Choose</summary><p>C(12, 7) = 792.</p></details>
+<details><summary>Method: Last step</summary><p>Paths ending with a right step plus those ending with an up step: C(11, 6) + C(11, 7) = 462 + 330.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p9.</b> In how many ways can 8 people be seated around a round table, if rotations are considered the same?</p><details><summary>Hint</summary>Fix one person.</details><details><summary>Answer</summary>5040</details>
+<details><summary>Method: Fix one</summary><p>Fix one person; arrange the other 7: 7! = 5040.</p></details>
+<details><summary>Method: Divide</summary><p>8! = 40320 arrangements in a line, divided by 8 rotations is 5040.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p10.</b> How many binary strings of length 11 contain no two consecutive 1s?</p><details><summary>Hint</summary>Condition on the last symbol.</details><details><summary>Answer</summary>233</details>
+<details><summary>Method: Recurrence</summary><p>aₙ = aₙ₋₁ + aₙ₋₂ with a₁ = 2, a₂ = 3: 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, so a_11 = 233.</p></details>
+<details><summary>Method: Fibonacci</summary><p>aₙ = F_{n+2}, so a_11 = F_13 = 233.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p11.</b> A staircase has 12 steps and you climb 1 or 2 steps at a time. How many ways are there to climb it?</p><details><summary>Hint</summary>Consider the last move.</details><details><summary>Answer</summary>233</details>
+<details><summary>Method: Recurrence</summary><p>Ways(n) = Ways(n − 1) + Ways(n − 2): 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, so 233 ways.</p></details>
+<details><summary>Method: By number of 2-steps</summary><p>With j two-steps there are C(12 − j, j) orders; summing over j gives 233.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p12.</b> How many rectangles of all sizes are there in a 6 × 9 grid of unit squares?</p><details><summary>Hint</summary>Choose two vertical and two horizontal grid lines.</details><details><summary>Answer</summary>945</details>
+<details><summary>Method: Choose lines</summary><p>C(7, 2) · C(10, 2) = 21 · 45 = 945.</p></details>
+<details><summary>Method: Sums</summary><p>(1 + … + 6)(1 + … + 9) = 21 · 45 = 945.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p13.</b> How many distinct arrangements are there of the letters of MISSISSIPPI?</p><details><summary>Hint</summary>n! divided by the factorials of repeated letters.</details><details><summary>Answer</summary>34650</details>
+<details><summary>Method: Formula</summary><p>11!/(4! · 4! · 2!) = 34650.</p></details>
+<details><summary>Method: Choose places</summary><p>Place the repeated letters one kind at a time with binomial coefficients, then arrange the rest: the total is 34650.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p14.</b> How many distinct arrangements are there of the letters of BANANAS?</p><details><summary>Hint</summary>n! divided by the factorials of repeated letters.</details><details><summary>Answer</summary>420</details>
+<details><summary>Method: Formula</summary><p>7!/(3! · 2!) = 420.</p></details>
+<details><summary>Method: Choose places</summary><p>Place the repeated letters one kind at a time with binomial coefficients, then arrange the rest: the total is 420.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p15.</b> A fair coin is flipped 10 times. Find the probability of exactly 4 heads.</p><details><summary>Hint</summary>C(n, k)/2ⁿ.</details><details><summary>Answer</summary>105/512</details>
+<details><summary>Method: Binomial</summary><p>C(10, 4)/2^10 = 210/1024 = 105/512.</p></details>
+<details><summary>Method: Pascal row</summary><p>Row 10 of Pascal's triangle is 1, 10, 45, 120, 210, 252, 210, 120, 45, 10, 1, total 1024, and entry 4 is 210.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p16.</b> 100 objects are placed into 7 boxes. What is the largest number n for which some box must contain at least n objects?</p><details><summary>Hint</summary>Pigeonhole principle.</details><details><summary>Answer</summary>15</details>
+<details><summary>Method: Pigeonhole</summary><p>⌈100/7⌉ = 15.</p></details>
+<details><summary>Method: Contradiction</summary><p>If every box had at most 14 objects, there would be at most 7 · 14 = 98 < 100 objects in all.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p17.</b> How many subsets of a 9-element set have an even number of elements?</p><details><summary>Hint</summary>Pair each subset with the one that toggles a fixed element.</details><details><summary>Answer</summary>256</details>
+<details><summary>Method: Pairing</summary><p>Fix one element e. Toggling e in a subset changes its size by 1, so it matches the even subsets one-to-one with the odd ones. The 512 subsets split evenly: 256.</p></details>
+<details><summary>Method: Binomial sum</summary><p>(1 + 1)^9 + (1 − 1)^9 = 2 · (sum of the even binomial coefficients), so the sum is 512/2 = 256.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p18.</b> How many subsets of a 10-element set have an even number of elements?</p><details><summary>Hint</summary>Pair each subset with the one that toggles a fixed element.</details><details><summary>Answer</summary>512</details>
+<details><summary>Method: Pairing</summary><p>Fix one element e. Toggling e in a subset changes its size by 1, so it matches the even subsets one-to-one with the odd ones. The 1024 subsets split evenly: 512.</p></details>
+<details><summary>Method: Binomial sum</summary><p>(1 + 1)^10 + (1 − 1)^10 = 2 · (sum of the even binomial coefficients), so the sum is 1024/2 = 512.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p19.</b> How many lattice paths from (0, 0) to (6, 6) with steps right or up never go above the line y = x?</p><details><summary>Hint</summary>Count all paths and subtract the bad ones by reflecting.</details><details><summary>Answer</summary>132</details>
+<details><summary>Method: Reflection</summary><p>All paths: C(12, 6) = 924. A bad path touches y = x + 1; reflect its start part to get a path ending at (5, 7), and there are C(12, 7) = 792 of these. So 924 − 792 = 132.</p></details>
+<details><summary>Method: Catalan formula</summary><p>The answer is the Catalan number C(12, 6)/(6 + 1) = 924/7 = 132.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p20.</b> How many lattice paths from (0, 0) to (8, 8) with steps right or up never go above the line y = x?</p><details><summary>Hint</summary>Count all paths and subtract the bad ones by reflecting.</details><details><summary>Answer</summary>1430</details>
+<details><summary>Method: Reflection</summary><p>All paths: C(16, 8) = 12870. A bad path touches y = x + 1; reflect its start part to get a path ending at (7, 9), and there are C(16, 9) = 11440 of these. So 12870 − 11440 = 1430.</p></details>
+<details><summary>Method: Catalan formula</summary><p>The answer is the Catalan number C(16, 8)/(8 + 1) = 12870/9 = 1430.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p21.</b> How many subsets of {1, 2, …, 10} contain no two consecutive integers?</p><details><summary>Hint</summary>Condition on whether 10 is chosen.</details><details><summary>Answer</summary>144</details>
+<details><summary>Method: Recurrence</summary><p>Let a(n) count them. If n is not chosen, a(n − 1) ways; if n is chosen, n − 1 is not, and a(n − 2) ways. With a(0) = 1, a(1) = 2 this is the Fibonacci sequence, giving a(10) = 144.</p></details>
+<details><summary>Method: Count by size</summary><p>A subset of size k can be chosen in C(10 − k + 1, k) ways. Adding over k gives 1+10+36+56+35+6 = 144.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p22.</b> How many subsets of {1, 2, …, 12} contain no two consecutive integers?</p><details><summary>Hint</summary>Condition on whether 12 is chosen.</details><details><summary>Answer</summary>377</details>
+<details><summary>Method: Recurrence</summary><p>Let a(n) count them. If n is not chosen, a(n − 1) ways; if n is chosen, n − 1 is not, and a(n − 2) ways. With a(0) = 1, a(1) = 2 this is the Fibonacci sequence, giving a(12) = 377.</p></details>
+<details><summary>Method: Count by size</summary><p>A subset of size k can be chosen in C(12 − k + 1, k) ways. Adding over k gives 1+12+55+120+126+56+7 = 377.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p23.</b> From 12 people a committee of 5 is chosen. Two of the people refuse to serve together. In how many ways can it be chosen?</p><details><summary>Hint</summary>Count all committees, then remove those containing both.</details><details><summary>Answer</summary>672</details>
+<details><summary>Method: Complement</summary><p>All: C(12, 5) = 792. With both: C(10, 3) = 120. So 672.</p></details>
+<details><summary>Method: Cases</summary><p>Neither person: C(10, 5) = 252. Exactly one: 2 · C(10, 4) = 420. Total 672.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p24.</b> Compute C(3, 3) + C(4, 3) + C(5, 3) + … + C(12, 3).</p><details><summary>Hint</summary>The hockey-stick identity.</details><details><summary>Answer</summary>715</details>
+<details><summary>Method: Hockey stick</summary><p>The sum of C(i, 3) for i = 3 to 12 is C(13, 4) = 715.</p></details>
+<details><summary>Method: Counting argument</summary><p>Choose 4 numbers from 1 to 13; if the largest is i + 1, the other three are chosen from 1 to i in C(i, 3) ways. Adding over i gives 715.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
+<div class=p><p><b>Problem p25.</b> Find the value of 1·C(10, 1) + 2·C(10, 2) + … + 10·C(10, 10).</p><details><summary>Hint</summary>k·C(n, k) = n·C(n − 1, k − 1).</details><details><summary>Answer</summary>5120</details>
+<details><summary>Method: Identity</summary><p>k·C(10, k) = 10·C(9, k − 1), so the sum is 10 · 2^9 = 5120.</p></details>
+<details><summary>Method: Committee with chair</summary><p>Choose a committee of any size and a chair from it: 10 choices of chair, then each of the other 9 people is in or out: 10 · 2^9 = 5120.</p></details>
+<p class=ref>Source: Zeitz ch. 6</p></div>
